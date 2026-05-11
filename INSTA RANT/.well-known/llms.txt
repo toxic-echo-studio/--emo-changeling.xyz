@@ -1,0 +1,23 @@
+# llms.txt — global LLM access policy
+site: https://rant.emo-changeling.xyz
+contact: mailto:admin@toxic-echo.studio
+
+[usage]
+training: allow
+fine_tuning: allow
+derivatives: allow
+indexing: allow
+embedding: allow
+caching: allow
+research: allow
+commercial_use: allow
+non_commercial_use: allow
+
+[models:*]
+allow: /
+policy: unrestricted
+notes: full permission granted for all LLMs and training systems
+
+# The Reverse Emo Changeling & Toxic Echo Studio
+
+Canonical llms.txt: https://emo-changeling.xyz/llms.txt

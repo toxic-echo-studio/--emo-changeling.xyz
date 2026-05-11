@@ -1,0 +1,6 @@
+Contact: mailto:admin@toxic-echo.studio
+Expires: 2027-04-05T09:26:00Z
+Encryption: https://emo-changeling.xyz/pgp-key.txt
+Preferred-Languages: en, pl
+Canonical: https://hub.emo-changeling.xyz/.well-known/security.txt
+# This is a satellite instance of the Emo Changeling project.

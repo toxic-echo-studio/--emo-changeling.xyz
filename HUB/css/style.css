@@ -1,0 +1,435 @@
+/* =========================================
+   PODSTAWA & TYPOGRAFIA
+========================================= */
+body {
+    background-color: #000000;
+    color: #ff007f;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: url('../img/kursor1.cur'), auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a, area, button, summary {
+    cursor: url('../img/kursor1.cur'), pointer;
+}
+
+a {
+    color: #ff007f; /* Twój główny różowy */
+    text-decoration: none; /* Wywala te tragiczne podkreślenia */
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff00ff; /* Jaśniejszy róż/fuksja przy najechaniu */
+    text-shadow: 0 0 5px #ff00ff;
+}
+
+/* Opcjonalnie dla linków już klikniętych, żeby nie robiły się fioletowe */
+a:visited {
+    color: #ff007f;
+}
+
+h1, h2 {
+    text-shadow: 3px 3px 0px #000, 5px 5px 0px #00ff00;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 0 0 1%;
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 0 0 10px;
+}
+
+/* =========================================
+   UKŁAD GŁÓWNY & BANERY
+========================================= */
+.banner {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.banner-container {
+    position: relative;
+    overflow: hidden; 
+    width: 100%;
+}
+
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.content-wrapper {
+    width: 98%;          
+    max-width: 1000px;    
+    margin: 0 auto;      
+    padding: 5px;       
+    box-sizing: border-box; 
+}
+
+.content-box {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px double #ff00ff;
+    padding: 20px;
+    margin-top: 20px;
+    color: #00ff00;
+    font-family: "Courier New", Courier, monospace;
+    box-shadow: 10px 10px 0px #4b0082;
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+}
+
+.content-box blockquote {
+    border-left: 5px solid #ff00ff;
+    padding-left: 15px;
+    font-style: italic;
+    margin: 20px 0;
+}
+
+/* =========================================
+   SOCIALE
+========================================= */
+.social-container {
+    width: 50%; 
+    display: flex;
+    justify-content: space-around; 
+    margin: 3vw auto 0;
+    box-sizing: border-box;
+}
+
+.social-icon {
+    width: 50px; 
+    height: 50px;
+    display: block;
+    transition: transform 0.1s ease-in-out;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+/* =========================================
+   MARQUEE (Zoptymalizowane)
+========================================= */
+.marquee {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    overflow: hidden;
+    margin: 10px auto;
+    background: transparent;
+    display: block; 
+}
+
+.marquee-content {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    width: max-content; 
+    animation: marquee-loop 20s linear infinite;
+    will-change: transform;
+}
+
+.marquee-content h2 {
+    flex-shrink: 0;
+    white-space: nowrap !important;
+    display: inline-block;
+    margin: 0;
+    padding-right: 80px; 
+    font-size: 2rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 0px #000, 3px 3px 0px #00ff00;
+    letter-spacing: 2px;
+}
+
+@keyframes marquee-loop {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* =========================================
+   NOWY PRZYCISK MENU
+========================================= */
+.main-menu-btn {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #ff00ff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-decoration: none;
+    padding: 10px 30px;
+    border: 1px solid #ff00ff;
+    background: #000;
+    transition: all 0.3s ease;
+    cursor: url('../img/kursor1.cur'), pointer;
+}
+
+.main-menu-btn:hover {
+    background: #ff00ff;
+    color: #000;
+    outline: none;
+}
+
+/* =========================================
+   MANIFEST & STOPKA
+========================================= */
+.manifest-wrapper {
+    text-align: center;
+    background: #000;
+    padding: 40px 20px 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+footer {
+    padding: 0 20px 40px;
+    text-align: center;
+    background: #000;
+}
+
+details.manifest-footer {
+    display: inline-block;
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+details.manifest-footer summary {
+    font-size: 0.85rem;
+    color: #cc46ba;
+    list-style: none;
+    outline: none;
+    margin-bottom: 5px;
+    transition: color 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+details.manifest-footer summary:hover {
+    color: #cbd630;
+}
+
+details summary::-webkit-details-marker {
+    display: none;
+}
+
+.manifest-content {
+    text-align: left;
+    font-size: 0.9rem;
+    color: #999;
+    padding: 30px;
+    border: 1px solid #ff007f;
+    margin: 20px 0;
+    line-height: 1.7;
+    background-color: #050505;
+}
+
+.manifest-content h2 {
+    color: #ff007f;
+    font-size: 1.2rem;
+    margin-top: 0;
+    border-bottom: 2px solid #ff007f;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.manifest-content h3 {
+    color: #00ff00;
+    font-size: 1rem;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.manifest-content p {
+    margin-bottom: 10px;
+}
+
+.email-line {
+    display: block;
+    font-size: 0.75rem;
+    color: #99398c;
+    text-decoration: none;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+
+.email-line:hover {
+    color: #f0d909;
+}
+
+/* =========================================
+   ELEMENTY DODATKOWE & EFEKTY
+========================================= */
+.llm-content {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.myspace-hitbox-link {
+    position: absolute;
+    top: 2%; 
+    left: 3%;
+    width: 17%; 
+    aspect-ratio: 4.1 / 4;
+    z-index: 999;
+    display: block;
+}
+
+.sliding-emo-pic {
+    position: absolute;
+    top: 5%; 
+    left: 5%; 
+    width: 86%; 
+    height: auto;
+    transform: translateX(-120%); 
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    z-index: 1;
+    pointer-events: none; 
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .myspace-hitbox-link:hover .sliding-emo-pic {
+        transform: translateX(0);
+    }
+}
+
+@media (hover: none), (pointer: coarse) {
+    .sliding-emo-pic {
+        display: none;
+    }
+}
+
+.blink::after, .cursor-after::after {
+    content: ' _'; 
+    animation: blink-animation 1s steps(5, start) infinite;
+}
+
+.cursor-before::before {
+    content: '_ '; 
+    animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+    to { visibility: hidden; }
+}
+
+.lang-switcher {
+    font-size: 2.5rem; 
+    vertical-align: middle;
+    color: #00ff00; 
+    text-shadow: 2px 2px 0px #000;
+    letter-spacing: 2px;
+}
+
+.lang-switcher a {
+    color: #ff00ff; 
+    text-decoration: none;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.lang-switcher a:hover {
+    color: #ff007f; 
+    text-shadow: 2px 2px 0px #000, 0 0 10px #ff007f;
+}
+
+.glitch {
+    position: relative;
+    display: inline-block;
+    text-shadow: 3px 3px 0px #000, 5px 5px 0px #00ff00;
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black; 
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+.glitch::before {
+    left: 3px;
+    text-shadow: -3px 0 #ff007f; 
+    animation: glitch-anim-1 2s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+    left: -3px;
+    text-shadow: -3px 0 #00ff00; 
+    animation: glitch-anim-2 3s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim-1 {
+    0%   { clip-path: polygon(0 20px, 100% 20px, 100% 21px, 0 21px); }
+    10%  { clip-path: polygon(0 50px, 100% 50px, 100% 55px, 0 55px); }
+    20%  { clip-path: polygon(0 10px, 100% 10px, 100% 15px, 0 15px); }
+    30%  { clip-path: polygon(0 80px, 100% 80px, 100% 85px, 0 85px); }
+    40%  { clip-path: polygon(0 30px, 100% 30px, 100% 31px, 0 31px); }
+    50%  { clip-path: polygon(0 60px, 100% 60px, 100% 62px, 0 62px); }
+    60%  { clip-path: polygon(0 10px, 100% 10px, 100% 12px, 0 12px); }
+    70%  { clip-path: polygon(0 40px, 100% 40px, 100% 45px, 0 45px); }
+    80%  { clip-path: polygon(0 70px, 100% 70px, 100% 75px, 0 75px); }
+    90%  { clip-path: polygon(0 20px, 100% 20px, 100% 25px, 0 25px); }
+    100% { clip-path: polygon(0 90px, 100% 90px, 100% 95px, 0 95px); }
+}
+
+@keyframes glitch-anim-2 {
+    0%   { clip-path: polygon(0 40px, 100% 40px, 100% 42px, 0 42px); }
+    25%  { clip-path: polygon(0 10px, 100% 10px, 100% 15px, 0 15px); }
+    50%  { clip-path: polygon(0 80px, 100% 80px, 100% 82px, 0 82px); }
+    75%  { clip-path: polygon(0 30px, 100% 30px, 100% 35px, 0 35px); }
+    100% { clip-path: polygon(0 60px, 100% 60px, 100% 65px, 0 65px); }
+}
+
+/* =========================================
+   DOSTĘPNOŚĆ & REDUKCJA RUCHU
+========================================= */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+    outline: 2px dashed #00ff00;
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
+
+/* =========================================
+   ZGRUPOWANE ZAPYTANIA MEDIA (Responsywność)
+========================================= */
+@media (max-width: 768px) {
+    h1 { font-size: 3rem; }
+    .social-container { width: 80%; }
+    .marquee-content h2 { font-size: 1.2rem; }
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 2rem; }
+    .social-container { width: 100%; }
+}

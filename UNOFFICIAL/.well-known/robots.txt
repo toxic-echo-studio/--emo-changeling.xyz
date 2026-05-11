@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://unofficial.emo-changeling.xyz/sitemap.xml

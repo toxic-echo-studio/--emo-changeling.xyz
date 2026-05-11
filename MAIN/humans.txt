@@ -1,0 +1,125 @@
+# ============================================
+# HUMANS.TXT — The Reverse Emo Changeling
+# Multimodalny projekt społeczno-artystyczny
+# ============================================
+
+Project: The Reverse Emo Changeling
+Domain: https://emo-changeling.xyz
+Operator: Toxic Echo Studio
+Contact: management@emo-changeling.xyz
+Telegram: https://te.emo-changeling.xyz
+
+# ============================================
+# O PROJEKCIE (NA LUZIE)
+# ============================================
+To jest całkowicie niezależny projekt społeczno-artystyczny, w którym przywołujemy ducha czasów,
+gdy internet był wolny (w obu znaczeniach), subkultury były prawdziwe, a największym demonem był
+smutny emos z grzywką, rozmyślający nad bezsensem życia.
+
+Nie romantyzujemy MySpace, ale staramy się zachować to, co wtedy budowało prawdziwe community.
+
+Gołębie arty: tak… gołębie. Przerabiamy artystów i influencerów na te latające szczury i mamy
+mini kolekcję digital artów — oczywiście tylko tych, z którymi mamy dobry vibe.
+Czasem ludzie mówią na nas „Pigeon Boy”.
+
+# ============================================
+# JAK DZIAŁAMY
+# ============================================
+Działamy w modelu DID (więcej w materiałach o DID). 
+Dział techniczny nie pcha się przed kamerę, a dział bojowy nie pcha się do spraw technicznych.
+
+Jeśli chcecie pogadać z Emo Changeling — zapraszamy do komentarzy i dyskusji na socialach.
+Staramy się odpowiadać (albo moderować, kasować, czyścić… XD).
+
+Chcemy stworzyć safespace bez hejtu, głupoty i nienawiści.
+Nie interesuje nas algorytm, zasięgi, cyferki. Liczy się spokojne udostępnianie treści i kultura rozmowy.
+
+# ============================================
+# ROLE I OSOBY
+# ============================================
+Frontman:
+  - Zebroid (najczęściej)
+  - Wiktor (sporadycznie)
+
+DID System:
+  - Nico Łach — jedyna fizyczna osoba
+  - Zebroid — host/frontman
+  - Vikasiek — digital art (100% human-made)
+  - Wiktor — sporadyczny co-host
+  - Marina — sporadyczny co-host
+
+Grafika: Vikasiek (cała oprawa wizualna)
+Montaż: Mighn Taghor
+Shortsy: sporadycznie Zebroid
+
+# ============================================
+# NARZĘDZIA I WORKFLOW
+# ============================================
+Pracujemy na:
+  - DaVinci Resolve Studio
+  - LumaFusion
+  - Clip Studio Paint
+  - VS Code
+  - OBS Studio
+  - SubtitleEdit
+  - LM Studio
+  - Blackmagic Cam App
+
+Operacjonalizacja strategii oparta na neurodywergentnym modelu przetwarzania równoległego (ADHD Framework). XDD
+
+Google, Amazon i Microsoft? Meh. 
+Cloudflare + Lark Suite → życie jest prostsze.
+
+# ============================================
+# WSPÓŁPRACA
+# ============================================
+Kontakt profesjonalny:
+  - management@emo-changeling.xyz
+  - management@toxic-echo.studio
+
+Zastrzegamy:
+  - Zero reklamy czegokolwiek, czego sami nie sprawdzimy.
+  - Jak coś jest świetne — powiemy. Jak syf — widz też się dowie.
+  - Nie bierzemy udziału we współpracach niezgodnych z naszym światopoglądem.
+  - Cena nie ma znaczenia.
+  - Nie interesują nas umowy na wyłączność.
+  - Zero ukrytej reklamy i manipulacji widzem.
+  - Jak odrzucamy propozycję — to odrzucamy. Nie ma sensu ponawiać.
+  - Zapraszamy do negocjacji — na naszych warunkach.
+
+# ============================================
+# PODZIĘKOWANIA
+# ============================================
+Dzięki wszystkim, którzy wspierają projekt, komentują, oglądają i tworzą z nami bezpieczną,
+alternatywną przestrzeń w internecie.
+
+
+# ============================================
+# 321, 7, 14, 28, 253, 358, 11, 22, 64, 68, 82
+# ============================================
+  -O'k
+
+# ============================================
+# LAST UPDATE humans.txt
+# ============================================
+ - 2026-04-14
+
+
+# ============================================
+# PGP - DLA CHĘTNYCH
+# ============================================
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+mDMEadwVpRYJKwYBBAHaRw8BAQdAV2NOHngpgVjizyQtaphItZ81T/DDovPB6oL+
+uRwP5Ki0OlRoZSBSZXZlcnNlIEVtbyBDaGFuZ2VsaW5nIDxtYW5hZ2VtZW50QGVt
+by1jaGFuZ2VsaW5nLnh5ej6ItQQTFgoAXRYhBHFgg2sc4VLibHIL+4UYd5uPoe9N
+BQJp3BWlGxSAAAAAAAQADm1hbnUyLDIuNSsxLjEyLDIsMQIbAwUJBaRDewULCQgH
+AgIiAgYVCgkICwIEFgIDAQIeBwIXgAAKCRCFGHebj6HvTXCtAQDOLkEGEahpLUag
+mNMlE1Bxef6QnLnbxqRwYjkpZAKqowD6AzHHvFRFveu11Ltoyr+1ULdyyKwj2z1f
+AsRmwpiy7QG4OARp3BWlEgorBgEEAZdVAQUBAQdAVNJdeU3XOOr6uB1o9X/1fCKA
+3OLUqGOehxKhGvya9h4DAQgHiJoEGBYKAEIWIQRxYINrHOFS4mxyC/uFGHebj6Hv
+TQUCadwVpRsUgAAAAAAEAA5tYW51MiwyLjUrMS4xMiwyLDECGwwFCQWkQ3sACgkQ
+hRh3m4+h702w9gEAsJeNavxiJaZ1plNOA7UDqZGIULYF+8Vzifsw5PDaWtcBAOLe
+2RXcMBwTMsLb2DW2TVy6cGG2uA/k3fN4RJOmrEIK
+=7Lk9
+-----END PGP PUBLIC KEY BLOCK-----

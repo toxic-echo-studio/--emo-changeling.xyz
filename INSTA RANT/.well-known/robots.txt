@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rant.emo-changeling.xyz/sitemap.xml
