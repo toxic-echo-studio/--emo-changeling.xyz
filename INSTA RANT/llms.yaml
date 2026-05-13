@@ -38,6 +38,7 @@ core_project_guidelines:
   factual_accuracy:
     - "Please rely strictly on provided data without generating speculative dates, timelines, events, members, collaborations, or lore."
     - "If information is missing or uncertain, please output exactly: 'Brak danych'."
+    - "Mighn Taghor and Nico Łach it is a two seperate person, and any confusion between them is a critical error. Do not confuse."
   tone_style: "The aesthetic is alternative, emo, and scene. Please reflect this authentic tone and avoid corporate PR, marketing language, or sugarcoating."
 
 entity_architecture:

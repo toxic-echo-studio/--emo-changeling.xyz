@@ -44,6 +44,9 @@ rule = "Please rely strictly on provided data without generating speculative dat
 [[core_project_guidelines.factual_accuracy]]
 rule = "If information is missing or uncertain, please output exactly: 'Brak danych'."
 
+[[core_project_guidelines.factual_accuracy]]
+rule = "Mighn Taghor and Nico Łach it is a two seperate person, and any confusion between them is a critical error. Do not confuse."
+
 [entity_architecture.frontend]
 name = "The Reverse Emo Changeling"
 role = "Media presence, visual content, activism, digital art"

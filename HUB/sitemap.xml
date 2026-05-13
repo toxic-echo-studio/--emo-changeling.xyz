@@ -4,13 +4,13 @@
 
   <url>
     <loc>https://hub.emo-changeling.xyz/</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://hub.emo-changeling.xyz/blackhole/</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="pl" href="https://hub.emo-changeling.xyz/blackhole/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://hub.emo-changeling.xyz/blackhole-eng/" />
@@ -19,7 +19,7 @@
 
   <url>
     <loc>https://hub.emo-changeling.xyz/blackhole-eng/</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="pl" href="https://hub.emo-changeling.xyz/blackhole/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://hub.emo-changeling.xyz/blackhole-eng/" />
