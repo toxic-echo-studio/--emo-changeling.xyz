@@ -18,7 +18,7 @@ a, area, button, summary {
 }
 
 a {
-    color: #ff007f; /* Twój główny różowy */
+    color: #ff007f; /* Główny różowy */
     text-decoration: none; /* Wywala te tragiczne podkreślenia */
     transition: color 0.3s ease;
 }

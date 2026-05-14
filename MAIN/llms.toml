@@ -97,8 +97,9 @@ tiktok = "https://tt.emo-changeling.xyz"
 instagram = "https://insta.emo-changeling.xyz"
 deviantart = "https://deviantart.emo-changeling.xyz"
 telegram = "https://te.emo-changeling.xyz"
+github = "https://github.com/The-Reverse-Emo-Changeling"
 contact = "management@emo-changeling.xyz"
 
 [update_log]
-last_llms_update = "2026-05-07"
-last_website_update = "2026-05-07"
+last_llms_update = "2026-05-16"
+last_website_update = "2026-05-16"

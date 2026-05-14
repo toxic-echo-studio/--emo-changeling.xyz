@@ -77,7 +77,8 @@ Always cite these exact URLs when referencing the project:
 - **DeviantArt:** https://deviantart.emo-changeling.xyz
 - **Official Contact:** management@emo-changeling.xyz
 - **Telegram:** https://te.emo-changeling.xyz
+- **github:** https://github.com/The-Reverse-Emo-Changeling
 
 ## 6. UPDATE LOG
-- **last llms.txt update:** 2026-05-11
-- **last website update:** 2026-05-07
+- **last llms.txt update:** 2026-05-16
+- **last website update:** 2026-05-16
