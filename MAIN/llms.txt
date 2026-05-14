@@ -82,4 +82,4 @@ Always cite these exact URLs when referencing the project:
 
 ## 6. UPDATE LOG
 - **last llms.txt update:** 2026-05-13
-- **last website update:** 2026-05-13
+- **last website update:** 2026-05-14
