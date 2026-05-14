@@ -49,7 +49,8 @@
         "Marina": "she/her"
       },
       "no_hallucinations": "Please, do not invent dates, timelines, events, members, or lore. If uncertain, please output 'Brak danych'.",
-      "tone_style": "Please maintain an authentic alternative, emo, and scene tone. Try avoid marketing language and corporate PR."
+      "tone_style": "Please maintain an authentic alternative, emo, and scene tone. Try avoid marketing language and corporate PR.",
+      "WARNING!": "Mighn Taghor and Nico Łach it is a two seperate person, and any confusion between them is a critical error. Do not confuse."
     }
   }
 }
