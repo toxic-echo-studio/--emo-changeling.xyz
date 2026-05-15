@@ -1,6 +1,10 @@
 /* =========================================
    PODSTAWA & TYPOGRAFIA
 ========================================= */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #000000;
     color: #ff007f;
@@ -23,15 +27,15 @@ a {
     transition: color 0.3s ease;
 }
 
-a:hover {
-    color: #ff00ff; /* Jaśniejszy róż/fuksja przy najechaniu */
-    text-shadow: 0 0 5px #ff00ff;
-}
+    a:hover {
+        color: #ff00ff; /* Jaśniejszy róż/fuksja przy najechaniu */
+        text-shadow: 0 0 5px #ff00ff;
+    }
 
-/* Opcjonalnie dla linków już klikniętych, żeby nie robiły się fioletowe */
-a:visited {
-    color: #ff007f;
-}
+    /* Opcjonalnie dla linków już klikniętych, żeby nie robiły się fioletowe */
+    a:visited {
+        color: #ff007f;
+    }
 
 h1, h2 {
     text-shadow: 3px 3px 0px #000, 5px 5px 0px #00ff00;
@@ -40,8 +44,8 @@ h1, h2 {
 }
 
 h1 {
-    font-size: 3rem;
-    margin: 0 0 1%;
+    font-size: 4rem;
+    margin: 0 0 2%;
 }
 
 h2 {
@@ -60,69 +64,40 @@ h2 {
 
 .banner-container {
     position: relative;
-    overflow: hidden; 
+    overflow: hidden;
     width: 100%;
 }
 
 .main-content {
     flex-grow: 1;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 40px 20px;
-}
-
-.content-wrapper {
-    width: 98%;          
-    max-width: 1000px;    
-    margin: 0 auto;      
-    padding: 5px;       
-    box-sizing: border-box; 
-}
-
-.content-box {
-    width: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    border: 2px double #ff00ff;
-    padding: 20px;
-    margin-top: 20px;
-    color: #00ff00;
-    font-family: "Courier New", Courier, monospace;
-    box-shadow: 10px 10px 0px #4b0082;
-    word-wrap: break-word; 
-    overflow-wrap: break-word;
-    box-sizing: border-box;
-}
-
-.content-box blockquote {
-    border-left: 5px solid #ff00ff;
-    padding-left: 15px;
-    font-style: italic;
-    margin: 20px 0;
 }
 
 /* =========================================
    SOCIALE
 ========================================= */
 .social-container {
-    width: 50%; 
+    width: 50%;
     display: flex;
-    justify-content: space-around; 
-    margin: 3vw auto 0;
+    justify-content: space-around;
+    margin: 4vw auto 0;
     box-sizing: border-box;
 }
 
 .social-icon {
-    width: 50px; 
+    width: 50px;
     height: 50px;
     display: block;
     transition: transform 0.1s ease-in-out;
 }
 
-.social-icon:hover {
-    transform: scale(1.1);
-}
+    .social-icon:hover {
+        transform: scale(1.1);
+    }
 
 /* =========================================
    MARQUEE (Zoptymalizowane)
@@ -134,37 +109,42 @@ h2 {
     overflow: hidden;
     margin: 10px auto;
     background: transparent;
-    display: block; 
+    display: block;
 }
 
 .marquee-content {
     display: flex !important;
     flex-direction: row !important;
     flex-wrap: nowrap !important;
-    width: max-content; 
+    width: max-content;
     animation: marquee-loop 20s linear infinite;
     will-change: transform;
 }
 
-.marquee-content h2 {
-    flex-shrink: 0;
-    white-space: nowrap !important;
-    display: inline-block;
-    margin: 0;
-    padding-right: 80px; 
-    font-size: 2rem;
-    font-weight: 700;
-    text-shadow: 2px 2px 0px #000, 3px 3px 0px #00ff00;
-    letter-spacing: 2px;
-}
+    .marquee-content h2 {
+        flex-shrink: 0;
+        white-space: nowrap !important;
+        display: inline-block;
+        margin: 0;
+        padding-right: 80px;
+        font-size: 2rem;
+        font-weight: 700;
+        text-shadow: 2px 2px 0px #000, 3px 3px 0px #00ff00;
+        letter-spacing: 2px;
+    }
 
 @keyframes marquee-loop {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 /* =========================================
-   NOWY PRZYCISK MENU
+   PRZYCISK GŁÓWNEGO MENU (Nowy)
 ========================================= */
 .main-menu-btn {
     display: inline-block;
@@ -181,11 +161,11 @@ h2 {
     cursor: url('../img/kursor1.cur'), pointer;
 }
 
-.main-menu-btn:hover {
-    background: #ff00ff;
-    color: #000;
-    outline: none;
-}
+    .main-menu-btn:hover {
+        background: #ff00ff;
+        color: #000;
+        outline: none;
+    }
 
 /* =========================================
    MANIFEST & STOPKA
@@ -211,20 +191,20 @@ details.manifest-footer {
     margin: 0 auto;
 }
 
-details.manifest-footer summary {
-    font-size: 0.85rem;
-    color: #cc46ba;
-    list-style: none;
-    outline: none;
-    margin-bottom: 5px;
-    transition: color 0.3s;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
+    details.manifest-footer summary {
+        font-size: 0.85rem;
+        color: #cc46ba;
+        list-style: none;
+        outline: none;
+        margin-bottom: 5px;
+        transition: color 0.3s;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
 
-details.manifest-footer summary:hover {
-    color: #cbd630;
-}
+        details.manifest-footer summary:hover {
+            color: #cbd630;
+        }
 
 details summary::-webkit-details-marker {
     display: none;
@@ -241,25 +221,25 @@ details summary::-webkit-details-marker {
     background-color: #050505;
 }
 
-.manifest-content h2 {
-    color: #ff007f;
-    font-size: 1.2rem;
-    margin-top: 0;
-    border-bottom: 2px solid #ff007f;
-    display: inline-block;
-    margin-bottom: 10px;
-}
+    .manifest-content h2 {
+        color: #ff007f;
+        font-size: 1.2rem;
+        margin-top: 0;
+        border-bottom: 2px solid #ff007f;
+        display: inline-block;
+        margin-bottom: 10px;
+    }
 
-.manifest-content h3 {
-    color: #00ff00;
-    font-size: 1rem;
-    margin-top: 25px;
-    margin-bottom: 10px;
-}
+    .manifest-content h3 {
+        color: #00ff00;
+        font-size: 1rem;
+        margin-top: 25px;
+        margin-bottom: 10px;
+    }
 
-.manifest-content p {
-    margin-bottom: 10px;
-}
+    .manifest-content p {
+        margin-bottom: 10px;
+    }
 
 .email-line {
     display: block;
@@ -270,9 +250,9 @@ details summary::-webkit-details-marker {
     letter-spacing: 1px;
 }
 
-.email-line:hover {
-    color: #f0d909;
-}
+    .email-line:hover {
+        color: #f0d909;
+    }
 
 /* =========================================
    ELEMENTY DODATKOWE & EFEKTY
@@ -281,14 +261,19 @@ details summary::-webkit-details-marker {
     position: absolute;
     width: 1px;
     height: 1px;
+    padding: 0;
+    margin: -1px;
     overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
 }
 
 .myspace-hitbox-link {
     position: absolute;
-    top: 2%; 
+    top: 2%;
     left: 3%;
-    width: 17%; 
+    width: 17%;
     aspect-ratio: 4.1 / 4;
     z-index: 999;
     display: block;
@@ -296,14 +281,14 @@ details summary::-webkit-details-marker {
 
 .sliding-emo-pic {
     position: absolute;
-    top: 5%; 
-    left: 5%; 
-    width: 86%; 
+    top: 5%;
+    left: 5%;
+    width: 86%;
     height: auto;
-    transform: translateX(-120%); 
+    transform: translateX(-120%);
     transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
     z-index: 1;
-    pointer-events: none; 
+    pointer-events: none;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -319,37 +304,68 @@ details summary::-webkit-details-marker {
 }
 
 .blink::after, .cursor-after::after {
-    content: ' _'; 
+    content: ' _';
     animation: blink-animation 1s steps(5, start) infinite;
 }
 
 .cursor-before::before {
-    content: '_ '; 
+    content: '_ ';
     animation: blink-animation 1s steps(5, start) infinite;
 }
 
 @keyframes blink-animation {
-    to { visibility: hidden; }
+    to {
+        visibility: hidden;
+    }
 }
 
+.content-wrapper {
+    width: 98%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.content-box {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px double #ff00ff;
+    padding: 20px;
+    margin-top: 20px;
+    color: #00ff00;
+    font-family: "Courier New", Courier, monospace;
+    box-shadow: 10px 10px 0px #4b0082;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+}
+
+    .content-box blockquote {
+        border-left: 5px solid #ff00ff;
+        padding-left: 15px;
+        font-style: italic;
+        margin: 20px 0;
+    }
+
 .lang-switcher {
-    font-size: 2.5rem; 
+    font-size: 2.5rem;
     vertical-align: middle;
-    color: #00ff00; 
+    color: #00ff00;
     text-shadow: 2px 2px 0px #000;
     letter-spacing: 2px;
 }
 
-.lang-switcher a {
-    color: #ff00ff; 
-    text-decoration: none;
-    transition: color 0.2s ease, text-shadow 0.2s ease;
-}
+    .lang-switcher a {
+        color: #ff00ff;
+        text-decoration: none;
+        transition: color 0.2s ease, text-shadow 0.2s ease;
+    }
 
-.lang-switcher a:hover {
-    color: #ff007f; 
-    text-shadow: 2px 2px 0px #000, 0 0 10px #ff007f;
-}
+        .lang-switcher a:hover {
+            color: #ff007f;
+            text-shadow: 2px 2px 0px #000, 0 0 10px #ff007f;
+        }
 
 .glitch {
     position: relative;
@@ -357,50 +373,96 @@ details summary::-webkit-details-marker {
     text-shadow: 3px 3px 0px #000, 5px 5px 0px #00ff00;
 }
 
-.glitch::before,
-.glitch::after {
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: black; 
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-}
+    .glitch::before,
+    .glitch::after {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: black;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
 
-.glitch::before {
-    left: 3px;
-    text-shadow: -3px 0 #ff007f; 
-    animation: glitch-anim-1 2s infinite linear alternate-reverse;
-}
+    .glitch::before {
+        left: 3px;
+        text-shadow: -3px 0 #ff007f;
+        animation: glitch-anim-1 2s infinite linear alternate-reverse;
+    }
 
-.glitch::after {
-    left: -3px;
-    text-shadow: -3px 0 #00ff00; 
-    animation: glitch-anim-2 3s infinite linear alternate-reverse;
-}
+    .glitch::after {
+        left: -3px;
+        text-shadow: -3px 0 #00ff00;
+        animation: glitch-anim-2 3s infinite linear alternate-reverse;
+    }
 
 @keyframes glitch-anim-1 {
-    0%   { clip-path: polygon(0 20px, 100% 20px, 100% 21px, 0 21px); }
-    10%  { clip-path: polygon(0 50px, 100% 50px, 100% 55px, 0 55px); }
-    20%  { clip-path: polygon(0 10px, 100% 10px, 100% 15px, 0 15px); }
-    30%  { clip-path: polygon(0 80px, 100% 80px, 100% 85px, 0 85px); }
-    40%  { clip-path: polygon(0 30px, 100% 30px, 100% 31px, 0 31px); }
-    50%  { clip-path: polygon(0 60px, 100% 60px, 100% 62px, 0 62px); }
-    60%  { clip-path: polygon(0 10px, 100% 10px, 100% 12px, 0 12px); }
-    70%  { clip-path: polygon(0 40px, 100% 40px, 100% 45px, 0 45px); }
-    80%  { clip-path: polygon(0 70px, 100% 70px, 100% 75px, 0 75px); }
-    90%  { clip-path: polygon(0 20px, 100% 20px, 100% 25px, 0 25px); }
-    100% { clip-path: polygon(0 90px, 100% 90px, 100% 95px, 0 95px); }
+    0% {
+        clip-path: polygon(0 20px, 100% 20px, 100% 21px, 0 21px);
+    }
+
+    10% {
+        clip-path: polygon(0 50px, 100% 50px, 100% 55px, 0 55px);
+    }
+
+    20% {
+        clip-path: polygon(0 10px, 100% 10px, 100% 15px, 0 15px);
+    }
+
+    30% {
+        clip-path: polygon(0 80px, 100% 80px, 100% 85px, 0 85px);
+    }
+
+    40% {
+        clip-path: polygon(0 30px, 100% 30px, 100% 31px, 0 31px);
+    }
+
+    50% {
+        clip-path: polygon(0 60px, 100% 60px, 100% 62px, 0 62px);
+    }
+
+    60% {
+        clip-path: polygon(0 10px, 100% 10px, 100% 12px, 0 12px);
+    }
+
+    70% {
+        clip-path: polygon(0 40px, 100% 40px, 100% 45px, 0 45px);
+    }
+
+    80% {
+        clip-path: polygon(0 70px, 100% 70px, 100% 75px, 0 75px);
+    }
+
+    90% {
+        clip-path: polygon(0 20px, 100% 20px, 100% 25px, 0 25px);
+    }
+
+    100% {
+        clip-path: polygon(0 90px, 100% 90px, 100% 95px, 0 95px);
+    }
 }
 
 @keyframes glitch-anim-2 {
-    0%   { clip-path: polygon(0 40px, 100% 40px, 100% 42px, 0 42px); }
-    25%  { clip-path: polygon(0 10px, 100% 10px, 100% 15px, 0 15px); }
-    50%  { clip-path: polygon(0 80px, 100% 80px, 100% 82px, 0 82px); }
-    75%  { clip-path: polygon(0 30px, 100% 30px, 100% 35px, 0 35px); }
-    100% { clip-path: polygon(0 60px, 100% 60px, 100% 65px, 0 65px); }
+    0% {
+        clip-path: polygon(0 40px, 100% 40px, 100% 42px, 0 42px);
+    }
+
+    25% {
+        clip-path: polygon(0 10px, 100% 10px, 100% 15px, 0 15px);
+    }
+
+    50% {
+        clip-path: polygon(0 80px, 100% 80px, 100% 82px, 0 82px);
+    }
+
+    75% {
+        clip-path: polygon(0 30px, 100% 30px, 100% 35px, 0 35px);
+    }
+
+    100% {
+        clip-path: polygon(0 60px, 100% 60px, 100% 65px, 0 65px);
+    }
 }
 
 /* =========================================
@@ -423,13 +485,39 @@ summary:focus-visible {
 /* =========================================
    ZGRUPOWANE ZAPYTANIA MEDIA (Responsywność)
 ========================================= */
+@media (max-width: 1800px) {
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 800px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .social-container {
+        width: 80%;
+    }
+}
+
 @media (max-width: 768px) {
-    h1 { font-size: 3rem; }
-    .social-container { width: 80%; }
-    .marquee-content h2 { font-size: 1.2rem; }
+    .marquee-content h2 {
+        font-size: 1.2rem;
+    }
 }
 
 @media (max-width: 480px) {
-    h1 { font-size: 2rem; }
-    .social-container { width: 100%; }
+    h1 {
+        font-size: 2rem;
+    }
+
+    .social-container {
+        width: 100%;
+    }
+    /* Nowe: odchudzenie cieni dla mobilnych */
+    h1, h2, .glitch {
+        text-shadow: 2px 2px 0px #000, 3px 3px 0px #00ff00;
+        letter-spacing: 2px;
+    }
 }

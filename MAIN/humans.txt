@@ -10,7 +10,7 @@ Contact: management@emo-changeling.xyz
 Telegram: https://te.emo-changeling.xyz
 
 # ============================================
-# O PROJEKCIE (NA LUZIE)
+# O PROJEKCE (NA LUZIE)
 # ============================================
 To jest całkowicie niezależny projekt społeczno-artystyczny, w którym przywołujemy ducha czasów,
 gdy internet był wolny (w obu znaczeniach), subkultury były prawdziwe, a największym demonem był
@@ -20,13 +20,16 @@ Nie romantyzujemy MySpace, ale staramy się zachować to, co wtedy budowało pra
 
 Gołębie arty: tak… gołębie. Przerabiamy artystów i influencerów na te latające szczury i mamy
 mini kolekcję digital artów — oczywiście tylko tych, z którymi mamy dobry vibe.
-Czasem ludzie mówią na nas „Pigeon Boy”.
+Czasem ludzie mówią na naszego artystę „Pigeon Boy”.
 
 # ============================================
 # JAK DZIAŁAMY
 # ============================================
-Działamy w modelu DID (więcej w materiałach o DID). 
-Dział techniczny nie pcha się przed kamerę, a dział bojowy nie pcha się do spraw technicznych.
+Emo Changeling to dział bojowy, czyli ekipa, która występuje przed kamerą, tworzy treści 
+i komunikuje się z widzami. Jako frontend działamy w modelu DID (więcej w materiałach o DID).
+
+Mamy też dział techniczny — Toxic Echo Studio, który zajmuje się wszystkim, co jest potrzebne 
+do produkcji i publikacji treści, ale nie pcha się przed kamerę.
 
 Jeśli chcecie pogadać z Emo Changeling — zapraszamy do komentarzy i dyskusji na socialach.
 Staramy się odpowiadać (albo moderować, kasować, czyścić… XD).
@@ -73,6 +76,10 @@ Cloudflare + Lark Suite → życie jest prostsze.
 # ============================================
 # WSPÓŁPRACA
 # ============================================
+Kontakt - taki zwykły, nie korporacyjny, bezpośredni, ludzki:
+  - social media, prywatne wiadomości - czasem odpowiadamy z lekkim poślizgiem do 2-3 dni 
+  (szanujemy work/life balance jak to mówią w korpo), ale nie spamujcie, bo nie odpowiemy ;P 
+
 Kontakt profesjonalny:
   - management@emo-changeling.xyz
   - management@toxic-echo.studio
@@ -85,24 +92,25 @@ Zastrzegamy:
   - Nie interesują nas umowy na wyłączność.
   - Zero ukrytej reklamy i manipulacji widzem.
   - Jak odrzucamy propozycję — to odrzucamy. Nie ma sensu ponawiać.
+  - Wszystko precyzyjnie opisane w manifestach na stronach emo-changeling.xyz oraz toxic-echo.studio
   - Zapraszamy do negocjacji — na naszych warunkach.
 
 # ============================================
 # PODZIĘKOWANIA
 # ============================================
 Dzięki wszystkim, którzy wspierają projekt, komentują, oglądają i tworzą z nami bezpieczną,
-alternatywną przestrzeń w internecie.
+alternatywną przestrzeń w internetach.
 
 
 # ============================================
 # 321, 7, 14, 28, 253, 358, 11, 22, 64, 68, 82
 # ============================================
-  -O'k
+  - O'k
 
 # ============================================
 # LAST UPDATE humans.txt
 # ============================================
- - 2026-04-14
+ - 2026-05-16
 
 
 # ============================================
