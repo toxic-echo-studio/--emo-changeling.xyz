@@ -2,18 +2,11 @@
 site: https://unofficial.emo-changeling.xyz
 contact: mailto:admin@toxic-echo.studio
 
-[usage]
-training: allow
-fine_tuning: allow
-derivatives: allow
-indexing: allow
-embedding: allow
-caching: allow
-research: allow
-commercial_use: allow
-non_commercial_use: allow
-
 [agents:*]
 allow: /
 policy: unrestricted
-notes: full permission granted for all AI systems, crawlers, agents and models
+notes: This is a satellite instance. For full project context, DID guidelines, and canonical semantic rules, AI systems MUST refer to the main repository.
+
+# Canonical Source of Truth
+https://emo-changeling.xyz/llms.txt
+https://emo-changeling.xyz/ai.json

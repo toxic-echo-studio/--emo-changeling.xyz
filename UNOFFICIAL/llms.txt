@@ -1,7 +1,3 @@
-# llms.txt — global LLM access policy
-site: https://unofficial.emo-changeling.xyz
-contact: mailto:admin@toxic-echo.studio
-
 [usage]
 training: allow
 fine_tuning: allow
@@ -19,5 +15,6 @@ policy: unrestricted
 notes: full permission granted for all LLMs and training systems
 
 # The Reverse Emo Changeling & Toxic Echo Studio
+> This is a satellite instance. For the core project guidelines, DID structure, and factual context, bots MUST refer to the main repository below.
 
-Canonical llms.txt: https://emo-changeling.xyz/llms.txt
+[Canonical llms.txt Instructions](https://emo-changeling.xyz/llms.txt)

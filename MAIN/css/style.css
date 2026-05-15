@@ -256,7 +256,12 @@ details summary::-webkit-details-marker {
     position: absolute;
     width: 1px;
     height: 1px;
+    padding: 0;
+    margin: -1px;
     overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
 }
 
 .myspace-hitbox-link {
@@ -441,6 +446,16 @@ summary:focus-visible {
 }
 
 @media (max-width: 480px) {
-    h1 { font-size: 2rem; }
-    .social-container { width: 100%; }
+    h1 {
+        font-size: 2rem;
+    }
+
+    .social-container {
+        width: 100%;
+    }
+    /* Nowe: odchudzenie cieni dla mobilnych */
+    h1, h2, .glitch {
+        text-shadow: 2px 2px 0px #000, 3px 3px 0px #00ff00;
+        letter-spacing: 2px;
+    }
 }
