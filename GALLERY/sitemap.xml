@@ -3,27 +3,37 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>https://emo-changeling.xyz/</loc>
+    <loc>https://gallery.emo-changeling.xyz/</loc>
     <lastmod>2026-05-16</lastmod>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://emo-changeling.xyz/o-nas/</loc>
+    <loc>https://gallery.emo-changeling.xyz/Ptaszarnia/</loc>
     <lastmod>2026-05-16</lastmod>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://emo-changeling.xyz/o-nas/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://emo-changeling.xyz/o-nas-eng/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://emo-changeling.xyz/o-nas-eng/" />
+
   </url>
 
   <url>
-    <loc>https://emo-changeling.xyz/o-nas-eng/</loc>
+    <loc>https://gallery.emo-changeling.xyz/Photo/</loc>
     <lastmod>2026-05-16</lastmod>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://emo-changeling.xyz/o-nas/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://emo-changeling.xyz/o-nas-eng/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://emo-changeling.xyz/o-nas-eng/" />
+
   </url>
+
+	<url>
+		<loc>https://gallery.emo-changeling.xyz/Digiart/</loc>
+		<lastmod>2026-05-16</lastmod>
+		<priority>0.8</priority>
+
+	</url>
+
+	<url>
+		<loc>https://gallery.emo-changeling.xyz/Other/</loc>
+		<lastmod>2026-05-16</lastmod>
+		<priority>0.8</priority>
+
+	</url>
 
 </urlset>

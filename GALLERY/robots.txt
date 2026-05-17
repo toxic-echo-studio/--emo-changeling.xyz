@@ -5,4 +5,4 @@ Allow: /
 # Global AI & Search Preferences
 Content-Signal: ai-train=yes, search=yes, ai-input=yes
 
-Sitemap: https://emo-changeling.xyz/sitemap.xml
+Sitemap: https://gallery.emo-changeling.xyz/sitemap.xml
