@@ -340,22 +340,25 @@ details summary::-webkit-details-marker {
 
     /* Specjalny stan po kliknięciu "Obróć" na mobilkach */
     .modal-content.rotated {
-        flex-direction: row; /* Zmiana układu na poziomy, żeby opis nie wchodził na zdjęcie */
+        flex-direction: row;
         flex-wrap: wrap;
     }
 
         .modal-content.rotated .modal-image {
-            transform: rotate(90deg); /* Obrót w prawo - góra zdjęcia po prawej, dół po lewej */
+            transform: rotate(90deg);
         }
 
+/* POPRAWKA: Układ w kolumnę dla obrazu i przycisku, żeby na siebie nie wchodziły */
 .modal-image-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
     max-width: 95vw;
-    max-height: 70vh; /* Zmniejszone, by zostawić miejsce na opis */
+    max-height: 70vh;
     position: relative;
+    gap: 15px;
 }
 
 .modal-image {
@@ -369,9 +372,10 @@ details summary::-webkit-details-marker {
 }
 
 .modal-close {
-    position: fixed; /* Zmiana na fixed, żeby zawsze był w tym samym miejscu ekranu */
+    position: fixed;
     top: 20px;
     right: 20px;
+    z-index: 1010;
     font-size: 2rem;
     color: #ff007f;
     cursor: pointer;
@@ -383,7 +387,6 @@ details summary::-webkit-details-marker {
     align-items: center;
     justify-content: center;
     border: 2px solid #ff007f;
-    z-index: 1010;
 }
 
     .modal-close:hover {
@@ -391,10 +394,12 @@ details summary::-webkit-details-marker {
         box-shadow: 0 0 15px #ff00ff;
     }
 
+/* POPRAWKA: Usunięto absolute, dodano relative, weszło w układ pod zdjęcie */
 .modal-rotate-btn {
-    position: absolute;
-    bottom: -10px;
-    right: 20px;
+    display: none;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1005;
     background: #000;
     color: #ff007f;
     border: 1px solid #ff007f;
@@ -405,8 +410,6 @@ details summary::-webkit-details-marker {
     letter-spacing: 1px;
     font-weight: bold;
     transition: all 0.3s ease;
-    display: none;
-    z-index: 1005;
 }
 
     .modal-rotate-btn:hover {
@@ -819,7 +822,6 @@ summary:focus-visible {
         box-shadow: 5px 5px 0px #4b0082;
     }
 
-    /* MINIATURKI LINKÓW UKŁADANE PIONOWO JEDNA NAD DRUGĄ */
     .preview-links {
         flex-direction: column;
         align-items: center;

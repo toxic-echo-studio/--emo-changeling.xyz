@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl" data-version="P0.0.5" data-build="20260517" data-system="Toxic Echo Studio">
+<html lang="pl" data-version="P0.1.1" data-build="20260517" data-system="Toxic Echo Studio">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -89,7 +89,7 @@
     </main>
 
     <div class="gallery-modal" id="gallery-modal">
-        <div class="modal-close" id="modal-close" aria-label="Zamknij podgląd">✖</div>
+        <button class="modal-close" id="modal-close" aria-label="Zamknij podgląd">✖</button>
 
         <div class="modal-content">
             <div class="modal-image-container">
@@ -109,11 +109,6 @@
     </div>
 
     <script>
-        // Konfiguracja plików.
-        // thumb: plik miniatury (nie wpychaj tu plików po 5MB)
-        // full: plik w wysokiej rozdzielczości
-        // title: krótki tekst (do 20 znaków) na hover
-        // descUrl: ścieżka do pliku HTML z rozbudowanym opisem
         const galleryData = [
             {
                 id: 1,
@@ -129,17 +124,15 @@
                 title: 'Gołąb #02: Neon',
                 descUrl: '/Grafics/Photo/2/opis.html'
             }
-            // Tutaj dorzucasz kolejne obiekty
         ];
 
         const grid = document.getElementById('gallery-grid');
         const modal = document.getElementById('gallery-modal');
         const modalImg = document.getElementById('modal-image');
-        const modalClose = document.getElementById('modal-close');
         const descContent = document.getElementById('description-content');
         const modalDetails = document.getElementById('modal-details');
         const rotateBtn = document.getElementById('modal-rotate-btn');
-        const imgContainer = document.querySelector('.modal-image-container');
+        const modalContent = document.querySelector('.modal-content');
 
         // Renderowanie miniatur
         galleryData.forEach(item => {
@@ -161,38 +154,55 @@
             modalImg.src = item.full;
             modalImg.alt = item.title;
 
-            // Zwijamy details i czyścimy stary kontent na czas ładowania
+            // Zwijamy details, resetujemy obrót układu i czyścimy stary kontent
             modalDetails.removeAttribute('open');
+            modalContent.classList.remove('rotated');
             descContent.innerHTML = '<span class="blink">Wczytywanie danych z serwera...</span>';
-            imgContainer.classList.remove('rotate-mobile');
 
             try {
                 const response = await fetch(item.descUrl);
-                if (!response.ok) throw new Error('Nie znaleziono pliku opisu.');
+                if (!response.ok) throw new Error('Nie znaleziono pliku opisu (404).');
+
                 const htmlData = await response.text();
 
-                // Wstrzykujemy czysty HTML z pliku
+                // ZABEZPIECZENIE przed podmianą na stronę główną
+                if (htmlData.includes('id="gallery-grid"') || htmlData.includes('data-system="Toxic Echo Studio"')) {
+                    throw new Error('Serwer zwrócił stronę główną zamiast pliku opisu. Sprawdź ścieżkę!');
+                }
+
                 descContent.innerHTML = htmlData;
             } catch (error) {
-                descContent.innerHTML = `<span style="color: red;">[ERROR] Błąd wczytywania: ${error.message}</span>`;
+                descContent.innerHTML = `<span style="color: #ff0000; font-weight: bold;">[ERROR] Błąd wczytywania opisu:<br>${error.message}</span>`;
             }
         }
 
-        // Zamykanie modala
-        modalClose.addEventListener('click', () => {
-            modal.classList.remove('active');
-            modalImg.src = ''; // zwalnia pamięć po zamknięciu
-        });
+        // Obracanie układu na mobilkach
+        if (rotateBtn) {
+            rotateBtn.addEventListener('click', (e) => {
+                e.stopPropagation(); // Żeby kliknięcie w przycisk nie zamykało modala
+                modalContent.classList.toggle('rotated');
+            });
+        }
 
-        // Obracanie zdjęcia na mobilkach (funkcja z Twojego CSS)
-        rotateBtn.addEventListener('click', () => {
-            imgContainer.classList.toggle('rotate-mobile');
-        });
+        // POPRAWKA: Tego brakowało w Twoim pliku! Nasłuchiwanie na krzyżyk (X)
+        const modalCloseBtn = document.getElementById('modal-close');
+        if (modalCloseBtn) {
+            modalCloseBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation(); // Ten knebel ratuje sytuację
 
-        // Zamknięcie modala po kliknięciu poza obrazek i opis
+                modal.classList.remove('active');
+                modalImg.src = '';
+                modalContent.classList.remove('rotated');
+            });
+        }
+
+        // Zamknięcie modala po kliknięciu poza obrazek (w tło)
         modal.addEventListener('click', (e) => {
             if (e.target === modal || e.target.classList.contains('modal-content')) {
                 modal.classList.remove('active');
+                modalImg.src = '';
+                modalContent.classList.remove('rotated');
             }
         });
 
