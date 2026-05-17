@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Digiart</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="/favicon.png">
+</head>
+<body>
+    <header class="main-header">
+        <div class="banner-container">
+            <img src="/img/bannerM1.webp" alt="baner" class="banner">
+            <a href="/" class="myspace-hitbox-link"><img src="/img/emo1ss.webp" class="sliding-emo-pic" alt="logo"></a>
+        </div>
+    </header>
+    <div class="social-container left-bottom">
+        <a href="https://hub.emo-changeling.xyz/blackhole/">HUB</a>
+    </div>
+    <main class="content-wrapper">
+        <h1>Digiart</h1>
+        <div class="content-box">
+            <p>Krótki opis galerii pod miniaturkami.</p>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid"></div>
+
+        <div class="gallery-modal" id="galleryModal">
+            <div class="modal-content">
+                <button class="modal-close" id="modalClose">&times;</button>
+                <div class="modal-image-container" id="modalImageContainer">
+                    <img id="modalImage" src="" alt="">
+                </div>
+                <div class="modal-description">
+                    <div id="descriptionContent"></div>
+                </div>
+                <button id="backToGallery">← Powrót do miniaturek</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const galleryData = [
+            { id:'1', title:'1', image:'/Grafics/digiart/1/1.jpg', descriptionFile:'/Grafics/digiart/1/opis.html' },
+            { id:'2', title:'2', image:'/Grafics/digiart/2/1.jpg', descriptionFile:'/Grafics/digiart/2/opis.html' },
+            { id:'3', title:'3', image:'/Grafics/digiart/3/1.jpg', descriptionFile:'/Grafics/digiart/3/opis.html' },
+            { id:'4', title:'4', image:'/Grafics/digiart/4/1.jpg', descriptionFile:'/Grafics/digiart/4/opis.html' },
+            { id:'5', title:'5', image:'/Grafics/digiart/5/1.jpg', descriptionFile:'/Grafics/digiart/5/opis.html' },
+            { id:'6', title:'6', image:'/Grafics/digiart/6/1.jpg', descriptionFile:'/Grafics/digiart/6/opis.html' },
+            { id:'7', title:'7', image:'/Grafics/digiart/7/1.jpg', descriptionFile:'/Grafics/digiart/7/opis.html' },
+            { id:'8', title:'8', image:'/Grafics/digiart/8/1.jpg', descriptionFile:'/Grafics/digiart/8/opis.html' },
+            { id:'9', title:'9', image:'/Grafics/digiart/9/1.jpg', descriptionFile:'/Grafics/digiart/9/opis.html' }
+        ];
+
+        const galleryGrid = document.getElementById('galleryGrid');
+        const galleryModal = document.getElementById('galleryModal');
+        const modalImage = document.getElementById('modalImage');
+        const descriptionContent = document.getElementById('descriptionContent');
+
+        function initGallery(){
+            galleryData.forEach((it, idx)=>{
+                const el = document.createElement('div'); el.className='gallery-item';
+                el.innerHTML = `<img src="${it.image}" alt="${it.title}"><div class="caption">${it.title}</div>`;
+                el.addEventListener('click', ()=>openModal(idx));
+                galleryGrid.appendChild(el);
+            });
+        }
+
+        async function openModal(i){
+            const it = galleryData[i];
+            modalImage.src = it.image;
+            galleryModal.classList.add('active');
+            document.body.style.overflow='hidden';
+            try{
+                const resp = await fetch(it.descriptionFile);
+                if(resp.ok){
+                    const html = await resp.text();
+                    descriptionContent.innerHTML = html;
+                } else {
+                    descriptionContent.textContent = 'Brak dodatkowego opisu.';
+                }
+            }catch(e){ descriptionContent.textContent = 'Brak dodatkowego opisu.'; }
+        }
+
+        document.getElementById('modalClose').addEventListener('click', ()=>{ galleryModal.classList.remove('active'); document.body.style.overflow='auto'; });
+        document.getElementById('backToGallery').addEventListener('click', ()=>{ galleryModal.classList.remove('active'); document.body.style.overflow='auto'; });
+
+        initGallery();
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Comment: Identyfikator użytkownika:	The Reverse Emo Changeling <admin@toxic-echo.studio>
+Comment: a.k.a.:	Toxic Echo Studio <admin@toxic-echo.studio>
+Comment: Ważny od:	12.04.2026 23:49
+Comment: Ważny do:	12.04.2029 12:00
+Comment: Rodzaj:	255-bitowy EdDSA (dostępny klucz poufny)
+Comment: Używany do:	Podpisywanie, Szyfrowanie, Certyfikowanie ID użytkowników
+Comment: Odcisk certyfikatu:	55B1 F5E9 342F 388E 6F06  483C 34A8 5D45 4D1F D3BC
+
+
+mDMEadwTZxYJKwYBBAHaRw8BAQdAMIjWF7z5fIq0X0VGhEWq63UbuX952+tqh81r
+Zuw1u6i0K1RveGljIEVjaG8gU3R1ZGlvIDxhZG1pbkB0b3hpYy1lY2hvLnN0dWRp
+bz6ItQQTFgoAXRYhBFWx9ek0LziObwZIPDSoXUVNH9O8BQJp3BNnGxSAAAAAAAQA
+Dm1hbnUyLDIuNSsxLjEyLDIsMQIbAwUJBaRFuQULCQgHAgIiAgYVCgkICwIEFgID
+AQIeBwIXgAAKCRA0qF1FTR/TvDQnAP0eLMp7nZJima5xXmsaq/TyR1qpiJayjcrk
+/h4rxrFF2QD9FsWRvtgkKOclU05P+1SklJizXsaY6FJ4C+A7bpSrpQ+0NFRoZSBS
+ZXZlcnNlIEVtbyBDaGFuZ2VsaW5nIDxhZG1pbkB0b3hpYy1lY2hvLnN0dWRpbz6I
+tQQTFgoAXRYhBFWx9ek0LziObwZIPDSoXUVNH9O8BQJp3pyhGxSAAAAAAAQADm1h
+bnUyLDIuNSsxLjEyLDIsMQIbAwUJBaRFuQULCQgHAgIiAgYVCgkICwIEFgIDAQIe
+BwIXgAAKCRA0qF1FTR/TvKmhAP9jglSEdxPJoAfvu5xKKwzzAwJswZbnsbw3x+BT
+dcVS4QD9GUOlcVHKPoQlW7luWRiRlGgHgiNJ7RfvsXwQsuO/5g24OARp3BNnEgor
+BgEEAZdVAQUBAQdApmiaC071aPBu7TzalAuAwZV607Ju62CzXIiQH0uadnIDAQgH
+iJoEGBYKAEIWIQRVsfXpNC84jm8GSDw0qF1FTR/TvAUCadwTZxsUgAAAAAAEAA5t
+YW51MiwyLjUrMS4xMiwyLDECGwwFCQWkRbkACgkQNKhdRU0f07yDGQEA0CqwI0Bq
+xCQhTyBZUm/wgjBC1ZsPCH/zXtfd0fAS/PAA/jYc3t06hPEarqumVlkNdzo7gLgW
+A6XlLzDmng0qRdYD
+=Rkzc
+-----END PGP PUBLIC KEY BLOCK-----
