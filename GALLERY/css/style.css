@@ -535,21 +535,6 @@ details summary::-webkit-details-marker {
     }
 }
 
-.social-container {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    padding: 10px;
-}
-
-    .social-container.left-bottom {
-        position: fixed;
-        left: 10px;
-        bottom: 10px;
-        flex-direction: column;
-        z-index: 1100;
-    }
-
 .gallery-item-caption {
     padding: 8px;
     color: #ff007f;
