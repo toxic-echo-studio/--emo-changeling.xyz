@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl" data-version="P0.0.5" data-build="20260517" data-system="Toxic Echo Studio">
+<html lang="pl" data-version="P0.0.6" data-build="20260517" data-system="Toxic Echo Studio">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -155,39 +155,45 @@
             grid.appendChild(itemDiv);
         });
 
-        // Otwieranie Modala i Fetchowanie HTML
-        async function openModal(item) {
-            modal.classList.add('active');
-            modalImg.src = item.full;
-            modalImg.alt = item.title;
+        // Zmiana selektora z kontenera obrazka na główny kontent modala
+                const modalContent = document.querySelector('.modal-content');
 
-            // Zwijamy details i czyścimy stary kontent na czas ładowania
-            modalDetails.removeAttribute('open');
-            descContent.innerHTML = '<span class="blink">Wczytywanie danych z serwera...</span>';
-            imgContainer.classList.remove('rotate-mobile');
+                // Otwieranie Modala i Fetchowanie HTML
+                async function openModal(item) {
+                    modal.classList.add('active');
+                    modalImg.src = item.full;
+                    modalImg.alt = item.title;
+        
+                    // Zwijamy details, resetujemy obrót układu i czyścimy stary kontent
+                    modalDetails.removeAttribute('open');
+                    modalContent.classList.remove('rotated'); 
+                    descContent.innerHTML = '<span class="blink">Wczytywanie danych z serwera...</span>';
 
-            try {
-                const response = await fetch(item.descUrl);
-                if (!response.ok) throw new Error('Nie znaleziono pliku opisu.');
-                const htmlData = await response.text();
+                    try {
+                        const response = await fetch(item.descUrl);
+                        if (!response.ok) throw new Error('Nie znaleziono pliku opisu (404).');
+        
+                        const htmlData = await response.text();
+        
+                        // ZABEZPIECZENIE: Jeśli Cloudflare podrzuca stronę główną zamiast błędu, 
+                        // szukamy w niej charakterystycznego elementu galerii, np. "gallery-grid".
+                        // Jeśli go znajdziemy, to znaczy, że plik opisu NIE ISTNIEJE.
+                        if (htmlData.includes('id="gallery-grid"') || htmlData.includes('data-system="Toxic Echo Studio"')) {
+                            throw new Error('Serwer zwrócił stronę główną zamiast pliku opisu. Sprawdź ścieżkę pliku na serwerze i wielkość liter w nazwie katalogu Grafics!');
+                        }
+        
+                        // Wstrzykujemy czysty HTML, jeśli weryfikacja przeszła pomyślnie
+                        descContent.innerHTML = htmlData;
+                    } catch (error) {
+                        descContent.innerHTML = `<span style="color: #ff0000; font-weight: bold;">[ERROR] Błąd wczytywania opisu:<br>${error.message}</span>`;
+                    }
+                }
 
-                // Wstrzykujemy czysty HTML z pliku
-                descContent.innerHTML = htmlData;
-            } catch (error) {
-                descContent.innerHTML = `<span style="color: red;">[ERROR] Błąd wczytywania: ${error.message}</span>`;
-            }
-        }
-
-        // Zamykanie modala
-        modalClose.addEventListener('click', () => {
-            modal.classList.remove('active');
-            modalImg.src = ''; // zwalnia pamięć po zamknięciu
-        });
-
-        // Obracanie zdjęcia na mobilkach (funkcja z Twojego CSS)
-        rotateBtn.addEventListener('click', () => {
-            imgContainer.classList.toggle('rotate-mobile');
-        });
+                // Obracanie układu na mobilkach
+                rotateBtn.addEventListener('click', (e) => {
+                    e.stopPropagation(); // Żeby kliknięcie w przycisk nie zamykało modala
+                    modalContent.classList.toggle('rotated');
+                });
 
         // Zamknięcie modala po kliknięciu poza obrazek i opis
         modal.addEventListener('click', (e) => {
