@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pl" data-version="A2.0.0" data-build="20260516" data-system="Toxic Echo Studio">
+<html lang="pl" data-version="A3.0.0" data-build="20260517" data-system="Toxic Echo Studio">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="preload" as="image" href="img/bannerM1.webp" fetchpriority="high">
+    <link rel="preload" as="image" href="/img/bannerM1.webp" fetchpriority="high">
     <link rel="preload" href="/css/style.css" as="style">
 
     <meta name="theme-color" content="#000000">
@@ -14,19 +14,22 @@
     <link rel="author" type="text/plain" href="https://emo-changeling.xyz/humans.txt" title="Humans">
 
     <meta name="description" content="Gallery - Galeria prac artystycznych The Reverse Emo Changeling. Kolekcja grafik i zdjęć w estetyce emo/scene.">
-    <meta name="keywords" content="Gallery, Emo-changeling, galeria, art, digital art, zdjęcia, grafiki">
+    <meta name="keywords" content="Gallery, Emo-changeling, galeria, art, digital art, zdjęcia, grafiki, MySpace aesthetic">
 
-    <title>Emo art</title>
-    <meta name="application-name" content="Emo art - Gallery">
+    <title>Gallery | The Reverse Emo Changeling</title>
+    <meta name="application-name" content="Emo-Changeling Gallery">
 
     <link rel="icon" type="image/png" href="/favicon.png" sizes="192x192">
     <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/vnd.microsoft.icon" sizes="32x32" href="/favicon.ico">
 
     <meta property="og:title" content="Gallery | The Reverse Emo Changeling">
     <meta property="og:site_name" content="The Reverse Emo Changeling">
     <meta property="og:description" content="Galeria prac artystycznych i fotografii projektu The Reverse Emo Changeling.">
-    <meta property="og:image" content="/img/bannerM1.webp">
+    <meta property="og:image" content="https://gallery.emo-changeling.xyz/img/bannerM1.webp">
     <meta property="og:image:alt" content="Baner projektu The Reverse Emo Changeling">
     <meta property="og:url" content="https://gallery.emo-changeling.xyz/">
     <meta property="og:type" content="website">
@@ -34,7 +37,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Gallery | The Reverse Emo Changeling">
     <meta name="twitter:description" content="Galeria grafik i fotografii w estetyce emo/scene.">
-    <meta name="twitter:image" content="img/bannerM1.webp">
+    <meta name="twitter:image" content="https://gallery.emo-changeling.xyz/img/bannerM1.webp">
 
     <link rel="stylesheet" href="/css/style.css">
 
@@ -105,11 +108,12 @@
         <div class="banner-container">
             <img src="/img/bannerM1.webp" width="1920" height="1080" alt="Baner projektu The Reverse Emo Changeling w estetyce emo/scene" class="banner" fetchpriority="high">
 
-            <a href="/" class="myspace-hitbox-link" aria-label="Przejdź do stronie głównej">
+            <a href="/photo" class="myspace-hitbox-link" aria-label="Przejdź do sekcji Photo">
                 <img src="/img/emo1ss.webp" width="288" height="288" alt="Nico Łach - Emo Changeling Identity Photo" class="sliding-emo-pic">
             </a>
         </div>
     </header>
+
     <div class="social-container">
         <a href="https://insta.emo-changeling.xyz" rel="me">
             <img src="/img/instagram_link.svg" width="32" height="32" loading="lazy" alt="Instagram" class="social-icon">
@@ -129,7 +133,16 @@
     </div>
 
     <main class="main-content">
-        <h1>Emo art</h1>
+        <h1>Gallery</h1>
+
+        <h2 class="glitch" data-text="RAWR XD!!!">RAWR XD!!!</h2>
+
+        <div class="marquee">
+            <div class="marquee-content">
+                <h2 lang="en">Let’s resurrect the MySpace emo soul we all secretly miss. &nbsp;</h2>
+                <h2 lang="en" aria-hidden="true">Let’s resurrect the MySpace emo soul we all secretly miss. &nbsp;</h2>
+            </div>
+        </div>
 
         <div class="preview-links">
             <a class="mini-link" href="/ptaszarnia">
@@ -152,18 +165,18 @@
 
         <div class="content-box">
             <p>
-            Polski krótki opis strony.
-            -----
-            English short description of the gallery.
+                Polski krótki opis strony.
+                -----
+                English short description of the gallery.
             </p>
         </div>
 
-        <a href="https://hub.emo-changeling.xyz/blackhole/" 
-           class="main-menu-btn" 
-           aria-label="Link do centralnego huba infosfery" 
+        <a href="https://hub.emo-changeling.xyz/blackhole/"
+           class="main-menu-btn"
+           aria-label="Link do centralnego huba infosfery"
            title="Przejdź do centralnego huba"
            rel="index">
-           HUB
+            HUB
         </a>
     </main>
 
@@ -176,10 +189,15 @@
                 <p>Galeria dostępna jest pod adresem <strong>gallery.emo-changeling.xyz</strong> i stanowi część rozszerzonego ekosystemu projektu The Reverse Emo Changeling.</p>
                 <p>Wszystkie prace artystyczne i fotografie są własnością twórców i są chronione prawami autorskimi.</p>
                 <p>Wszelkie pytania dotyczące pracy twórczej kieruj na adres wskazany poniżej.</p>
-                <span class="email-line">contact: management@emo-changeling.xyz</span>
+                <a href="mailto:management@emo-changeling.xyz" class="email-line">management@emo-changeling.xyz</a>
             </div>
         </details>
     </footer>
 
+    <script>
+        console.log("%c The Reverse Emo Changeling Gallery - v.1.0.0 ", "color: #00ff00; background: #050505; font-size: 14px; font-weight: bold; border: 2px solid #ff007f; padding: 5px; font-family: monospace;");
+        console.log("%c Welcome to the visual backend. RAWR XD. ", "color: #ff007f; background: #000; font-size: 12px; font-family: monospace;");
+        console.log("Build: 20260517 | System: Toxic Echo Studio");
+    </script>
 </body>
 </html>

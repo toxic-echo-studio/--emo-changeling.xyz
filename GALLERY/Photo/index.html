@@ -1,91 +1,202 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl" data-version="P1.0.0" data-build="20260517" data-system="Toxic Echo Studio">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Photo</title>
+
+    <link rel="preload" as="image" href="/img/bannerM1.webp" fetchpriority="high">
+    <link rel="preload" href="/css/style.css" as="style">
+
+    <meta name="theme-color" content="#000000">
+
+    <link rel="canonical" href="https://gallery.emo-changeling.xyz/Photo/">
+
+    <title>Photo | Emo-Changeling Gallery</title>
+    <meta name="description" content="Photo - kolekcja digital artu The Reverse Emo Changeling. Przerabiamy artystów na latające szczury.">
+
+    <link rel="author" href="https://emo-changeling.xyz/humans.txt">
+    <link rel="alternate" type="text/plain" href="https://emo-changeling.xyz/llms.txt" title="LLM System Instructions">
+
+    <link rel="icon" type="image/png" href="/favicon.png" sizes="192x192">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <meta property="og:title" content="Photo | Emo-Changeling Gallery">
+    <meta property="og:site_name" content="The Reverse Emo Changeling">
+    <meta property="og:description" content="Kolekcja 'gołębich artów'. Przerabiamy artystów i influencerów na latające szczury.">
+    <meta property="og:image" content="https://gallery.emo-changeling.xyz/img/bannerM1.webp">
+    <meta property="og:url" content="https://gallery.emo-changeling.xyz/Photo/">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Photo | Emo-Changeling Gallery">
+    <meta name="twitter:description" content="Kolekcja 'gołębich artów'.">
+    <meta name="twitter:image" content="https://gallery.emo-changeling.xyz/img/bannerM1.webp">
+
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="icon" href="/favicon.png">
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": "Photo – Gallery",
+          "url": "https://gallery.emo-changeling.xyz/Photo/",
+          "isPartOf": { "@id": "https://gallery.emo-changeling.xyz/#webpage" },
+          "description": "Kolekcja 'gołębich artów' - cyfrowych przeróbek w estetyce projektu.",
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Gallery",
+                "item": "https://gallery.emo-changeling.xyz/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Photo",
+                "item": "https://gallery.emo-changeling.xyz/Photo/"
+              }
+            ]
+          }
+        }
+    </script>
 </head>
 <body>
+
     <header class="main-header">
         <div class="banner-container">
-            <img src="/img/bannerM1.webp" alt="baner" class="banner">
-            <a href="/" class="myspace-hitbox-link"><img src="/img/emo1ss.webp" class="sliding-emo-pic" alt="logo"></a>
+            <img src="/img/bannerM1.webp" width="1920" height="1080" alt="Baner" class="banner" fetchpriority="high">
+            <a href="/" class="myspace-hitbox-link" aria-label="Wróć do głównej strony galerii">
+                <img src="/img/emo1ss.webp" width="288" height="288" alt="Wróć" class="sliding-emo-pic">
+            </a>
         </div>
     </header>
-    <div class="social-container left-bottom">
-        <a href="https://hub.emo-changeling.xyz/blackhole/">HUB</a>
-    </div>
-    <main class="content-wrapper">
-        <h1>Photo</h1>
-        <div class="content-box">
-            <p>Krótki opis galerii pod miniaturkami.</p>
+
+    <main class="content-wrapper" style="text-align: center;">
+        <h1 class="glitch" data-text="Photo">Photo</h1>
+
+        <div class="content-box" style="margin-bottom: 30px;">
+            <p>Pigeon Boys w akcji. Kolekcja cyfrowych alter-ego. Kliknij w grafę, żeby rozwinąć pełen obraz i ukryty opis.</p>
         </div>
 
-        <div class="gallery-grid" id="galleryGrid"></div>
+        <div class="gallery-grid" id="gallery-grid"></div>
 
-        <div class="gallery-modal" id="galleryModal">
-            <div class="modal-content">
-                <button class="modal-close" id="modalClose">&times;</button>
-                <div class="modal-image-container" id="modalImageContainer">
-                    <img id="modalImage" src="" alt="">
-                </div>
-                <div class="modal-description">
-                    <div id="descriptionContent"></div>
-                </div>
-                <button id="backToGallery">← Powrót do miniaturek</button>
-            </div>
-        </div>
+        <a href="/" class="main-menu-btn" aria-label="Wróć do wyboru galerii">
+            ❮ WRÓĆ DO GALERII
+        </a>
     </main>
 
+    <div class="gallery-modal" id="gallery-modal">
+        <div class="modal-close" id="modal-close" aria-label="Zamknij podgląd">✖</div>
+
+        <div class="modal-content">
+            <div class="modal-image-container">
+                <img src="" alt="Pełny podgląd" class="modal-image" id="modal-image">
+                <button class="modal-rotate-btn" id="modal-rotate-btn">Obróć</button>
+            </div>
+
+            <div class="modal-description">
+                <details id="modal-details">
+                    <summary>❯ ROZWIŃ OPIS</summary>
+                    <div class="description-content" id="description-content">
+                        <span class="blink">Wczytywanie danych...</span>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </div>
+
     <script>
+        // Konfiguracja plików.
+        // thumb: plik miniatury (nie wpychaj tu plików po 5MB)
+        // full: plik w wysokiej rozdzielczości
+        // title: krótki tekst (do 20 znaków) na hover
+        // descUrl: ścieżka do pliku HTML z rozbudowanym opisem
         const galleryData = [
-            { id:'1', title:'1', image:'/Grafics/photo/1/1.jpg', descriptionFile:'/Grafics/photo/1/opis.html' },
-            { id:'2', title:'2', image:'/Grafics/photo/2/1.jpg', descriptionFile:'/Grafics/photo/2/opis.html' },
-            { id:'3', title:'3', image:'/Grafics/photo/3/1.jpg', descriptionFile:'/Grafics/photo/3/opis.html' },
-            { id:'4', title:'4', image:'/Grafics/photo/4/1.jpg', descriptionFile:'/Grafics/photo/4/opis.html' },
-            { id:'5', title:'5', image:'/Grafics/photo/5/1.jpg', descriptionFile:'/Grafics/photo/5/opis.html' },
-            { id:'6', title:'6', image:'/Grafics/photo/6/1.jpg', descriptionFile:'/Grafics/photo/6/opis.html' },
-            { id:'7', title:'7', image:'/Grafics/photo/7/1.jpg', descriptionFile:'/Grafics/photo/7/opis.html' },
-            { id:'8', title:'8', image:'/Grafics/photo/8/1.jpg', descriptionFile:'/Grafics/photo/8/opis.html' },
-            { id:'9', title:'9', image:'/Grafics/photo/9/1.jpg', descriptionFile:'/Grafics/photo/9/opis.html' }
+            {
+                id: 1,
+                thumb: '/Grafics/Photo/1/thumb.webp',
+                full: '/Grafics/Photo/1/full.webp',
+                title: 'Gołąb #01: Start',
+                descUrl: '/Grafics/Photo/1/opis.html'
+            },
+            {
+                id: 2,
+                thumb: '/Grafics/Photo/2/thumb.webp',
+                full: '/Grafics/Photo/2/full.webp',
+                title: 'Gołąb #02: Neon',
+                descUrl: '/Grafics/Photo/2/opis.html'
+            }
+            // Tutaj dorzucasz kolejne obiekty
         ];
 
-        const galleryGrid = document.getElementById('galleryGrid');
-        const galleryModal = document.getElementById('galleryModal');
-        const modalImage = document.getElementById('modalImage');
-        const descriptionContent = document.getElementById('descriptionContent');
+        const grid = document.getElementById('gallery-grid');
+        const modal = document.getElementById('gallery-modal');
+        const modalImg = document.getElementById('modal-image');
+        const modalClose = document.getElementById('modal-close');
+        const descContent = document.getElementById('description-content');
+        const modalDetails = document.getElementById('modal-details');
+        const rotateBtn = document.getElementById('modal-rotate-btn');
+        const imgContainer = document.querySelector('.modal-image-container');
 
-        function initGallery(){
-            galleryData.forEach((it, idx)=>{
-                const el = document.createElement('div'); el.className='gallery-item';
-                el.innerHTML = `<img src="${it.image}" alt="${it.title}"><div class="caption">${it.title}</div>`;
-                el.addEventListener('click', ()=>openModal(idx));
-                galleryGrid.appendChild(el);
-            });
+        // Renderowanie miniatur
+        galleryData.forEach(item => {
+            const itemDiv = document.createElement('div');
+            itemDiv.className = 'gallery-item';
+
+            itemDiv.innerHTML = `
+                <img src="${item.thumb}" alt="${item.title}" loading="lazy">
+                <div class="gallery-item-overlay">${item.title}</div>
+            `;
+
+            itemDiv.addEventListener('click', () => openModal(item));
+            grid.appendChild(itemDiv);
+        });
+
+        // Otwieranie Modala i Fetchowanie HTML
+        async function openModal(item) {
+            modal.classList.add('active');
+            modalImg.src = item.full;
+            modalImg.alt = item.title;
+
+            // Zwijamy details i czyścimy stary kontent na czas ładowania
+            modalDetails.removeAttribute('open');
+            descContent.innerHTML = '<span class="blink">Wczytywanie danych z serwera...</span>';
+            imgContainer.classList.remove('rotate-mobile');
+
+            try {
+                const response = await fetch(item.descUrl);
+                if (!response.ok) throw new Error('Nie znaleziono pliku opisu.');
+                const htmlData = await response.text();
+
+                // Wstrzykujemy czysty HTML z pliku
+                descContent.innerHTML = htmlData;
+            } catch (error) {
+                descContent.innerHTML = `<span style="color: red;">[ERROR] Błąd wczytywania: ${error.message}</span>`;
+            }
         }
 
-        async function openModal(i){
-            const it = galleryData[i];
-            modalImage.src = it.image;
-            galleryModal.classList.add('active');
-            document.body.style.overflow='hidden';
-            try{
-                const resp = await fetch(it.descriptionFile);
-                if(resp.ok){
-                    const html = await resp.text();
-                    descriptionContent.innerHTML = html;
-                } else {
-                    descriptionContent.textContent = 'Brak dodatkowego opisu.';
-                }
-            }catch(e){ descriptionContent.textContent = 'Brak dodatkowego opisu.'; }
-        }
+        // Zamykanie modala
+        modalClose.addEventListener('click', () => {
+            modal.classList.remove('active');
+            modalImg.src = ''; // zwalnia pamięć po zamknięciu
+        });
 
-        document.getElementById('modalClose').addEventListener('click', ()=>{ galleryModal.classList.remove('active'); document.body.style.overflow='auto'; });
-        document.getElementById('backToGallery').addEventListener('click', ()=>{ galleryModal.classList.remove('active'); document.body.style.overflow='auto'; });
+        // Obracanie zdjęcia na mobilkach (funkcja z Twojego CSS)
+        rotateBtn.addEventListener('click', () => {
+            imgContainer.classList.toggle('rotate-mobile');
+        });
 
-        initGallery();
+        // Zamknięcie modala po kliknięciu poza obrazek i opis
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal || e.target.classList.contains('modal-content')) {
+                modal.classList.remove('active');
+            }
+        });
+
+        console.log("%c Photo Initialized - RAWR XD ", "color: #00ff00; background: #000; font-family: monospace; border: 1px solid #ff007f;");
     </script>
 </body>
 </html>
