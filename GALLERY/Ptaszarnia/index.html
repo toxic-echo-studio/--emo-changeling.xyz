@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl" data-version="P0.1.3" data-build="20260517" data-system="Toxic Echo Studio">
+<html lang="pl" data-version="P0.2.0" data-build="20260520" data-system="Toxic Echo Studio">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -94,7 +94,6 @@
         <div class="modal-content">
             <div class="modal-image-container">
                 <img src="" alt="Pełny podgląd" class="modal-image" id="modal-image">
-
             </div>
 
             <div class="modal-description">
@@ -104,6 +103,7 @@
                         <span class="blink">Wczytywanie danych...</span>
                     </div>
                 </details>
+                <a href="" id="modal-download-btn" class="main-menu-btn" download style="display: none; margin-top: 15px; width: 100%; box-sizing: border-box; text-align: center;">DOWNLOAD MAX QUALITY (.TIF)</a>
             </div>
         </div>
     </div>
@@ -114,15 +114,65 @@
                 id: 1,
                 thumb: '/Grafics/ptaszarnia/1/thumb.webp',
                 full: '/Grafics/ptaszarnia/1/full.webp',
-                title: 'Gołąb #01: Start',
-                descUrl: '/Grafics/ptaszarnia/1/opis.html'
+                title: 'Gołąb #01: Nokill blue',
+                descUrl: '/Grafics/ptaszarnia/1/opis.html',
+                download_tif: '/Grafics/ptaszarnia/1/original.tif'
             },
             {
                 id: 2,
                 thumb: '/Grafics/ptaszarnia/2/thumb.webp',
                 full: '/Grafics/ptaszarnia/2/full.webp',
-                title: 'Gołąb #02: Neon',
-                descUrl: '/Grafics/ptaszarnia/2/opis.html'
+                title: 'Gołąb #02: Nokill red',
+                descUrl: '/Grafics/ptaszarnia/2/opis.html',
+                download_tif: '/Grafics/ptaszarnia/2/original.tif'
+            },
+            {
+                id: 3,
+                thumb: '/Grafics/ptaszarnia/3/thumb.webp',
+                full: '/Grafics/ptaszarnia/3/full.webp',
+                title: 'Gołąb #03: Nokill yellow',
+                descUrl: '/Grafics/ptaszarnia/3/opis.html',
+                download_tif: '/Grafics/ptaszarnia/3/original.tif'
+            },
+            {
+                id: 4,
+                thumb: '/Grafics/ptaszarnia/4/thumb.webp',
+                full: '/Grafics/ptaszarnia/4/full.webp',
+                title: 'Gołąb #04: Gerard Way',
+                descUrl: '/Grafics/ptaszarnia/4/opis.html',
+                download_tif: '/Grafics/ptaszarnia/4/original.tif'
+            },
+            {
+                id: 5,
+                thumb: '/Grafics/ptaszarnia/5/thumb.webp',
+                full: '/Grafics/ptaszarnia/5/full.webp',
+                title: 'Gołąb #05: Evan (TX2)',
+                descUrl: '/Grafics/ptaszarnia/5/opis.html',
+                download_tif: '/Grafics/ptaszarnia/5/original.tif'
+            },
+            {
+                id: 6,
+                thumb: '/Grafics/ptaszarnia/6/thumb.webp',
+                full: '/Grafics/ptaszarnia/6/full.webp',
+                title: 'Gołąb #06: TX2 V1',
+                descUrl: '/Grafics/ptaszarnia/6/opis.html',
+                download_tif: '/Grafics/ptaszarnia/6/original.tif'
+            },
+            {
+                id: 7,
+                thumb: '/Grafics/ptaszarnia/7/thumb.webp',
+                full: '/Grafics/ptaszarnia/7/full.webp',
+                title: 'Gołąb #07: TX2 V2',
+                descUrl: '/Grafics/ptaszarnia/7/opis.html',
+                download_tif: '/Grafics/ptaszarnia/7/original.tif'
+            },
+            {
+                id: 8,
+                thumb: '/Grafics/ptaszarnia/8/thumb.webp',
+                full: '/Grafics/ptaszarnia/8/full.webp',
+                title: 'Gołąb #08: Матвей',
+                descUrl: '/Grafics/ptaszarnia/8/opis.html',
+                download_tif: '/Grafics/ptaszarnia/8/original.tif'
             }
         ];
 
@@ -131,6 +181,7 @@
         const modalImg = document.getElementById('modal-image');
         const descContent = document.getElementById('description-content');
         const modalDetails = document.getElementById('modal-details');
+        const downloadBtn = document.getElementById('modal-download-btn');
         const rotateBtn = document.getElementById('modal-rotate-btn');
         const modalContent = document.querySelector('.modal-content');
 
@@ -159,6 +210,14 @@
             modalContent.classList.remove('rotated');
             descContent.innerHTML = '<span class="blink">Wczytywanie danych z serwera...</span>';
 
+            // Ustawienie przycisku download
+            if (item.download_tif) {
+                downloadBtn.href = item.download_tif;
+                downloadBtn.style.display = 'inline-block';
+            } else {
+                downloadBtn.style.display = 'none';
+            }
+
             try {
                 const response = await fetch(item.descUrl);
                 if (!response.ok) throw new Error('Nie znaleziono pliku opisu (404).');
@@ -184,25 +243,28 @@
             });
         }
 
-        // POPRAWKA: Tego brakowało w Twoim pliku! Nasłuchiwanie na krzyżyk (X)
+        // Funkcja zamykająca modal
+        function closeModal() {
+            modal.classList.remove('active');
+            modalImg.src = '';
+            modalContent.classList.remove('rotated');
+            downloadBtn.style.display = 'none';
+            downloadBtn.href = '';
+        }
+
         const modalCloseBtn = document.getElementById('modal-close');
         if (modalCloseBtn) {
             modalCloseBtn.addEventListener('click', (e) => {
                 e.preventDefault();
                 e.stopPropagation(); // Ten knebel ratuje sytuację
-
-                modal.classList.remove('active');
-                modalImg.src = '';
-                modalContent.classList.remove('rotated');
+                closeModal();
             });
         }
 
         // Zamknięcie modala po kliknięciu poza obrazek (w tło)
         modal.addEventListener('click', (e) => {
             if (e.target === modal || e.target.classList.contains('modal-content')) {
-                modal.classList.remove('active');
-                modalImg.src = '';
-                modalContent.classList.remove('rotated');
+                closeModal();
             }
         });
 

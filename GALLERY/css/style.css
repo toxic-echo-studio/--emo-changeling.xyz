@@ -937,3 +937,31 @@ summary:focus-visible {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+/* =========================================
+   CUSTOM OPIS & DOWNLOAD STYLES
+   ========================================= */
+.description-content img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    border: 2px solid #ff007f;
+    margin: 15px 0;
+    display: block;
+    box-sizing: border-box;
+}
+
+.description-content ul, .description-content ol {
+    margin: 10px 0;
+    padding-left: 20px;
+    color: #00ff00;
+}
+
+.description-content li {
+    margin-bottom: 5px;
+}
+
+.description-content p {
+    margin-bottom: 15px;
+}
+
