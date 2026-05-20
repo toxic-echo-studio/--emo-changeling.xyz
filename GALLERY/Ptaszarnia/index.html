@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="pl" data-version="P0.2.0" data-build="20260520" data-system="Toxic Echo Studio">
+<html lang="pl" data-version="P0.2.2" data-build="20260520" data-system="Toxic Echo Studio">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="preload" as="image" href="/img/bannerM1.webp" fetchpriority="high">
-    <link rel="preload" href="/css/style.css" as="style">
+    <link rel="preload" href="/css/style.css?v=0.3.2" as="style">
 
     <meta name="theme-color" content="#000000">
 
@@ -33,7 +33,7 @@
     <meta name="twitter:description" content="Kolekcja 'gołębich artów'.">
     <meta name="twitter:image" content="https://gallery.emo-changeling.xyz/img/bannerM1.webp">
 
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.css?v=0.3.2">
 
     <script type="application/ld+json">
         {
@@ -111,28 +111,10 @@
     <script>
         const galleryData = [
             {
-                id: 1,
+                id: 'nokill',
                 thumb: '/Grafics/ptaszarnia/1/thumb.webp',
-                full: '/Grafics/ptaszarnia/1/full.webp',
-                title: 'Gołąb #01: Nokill blue',
-                descUrl: '/Grafics/ptaszarnia/1/opis.html',
-                download_tif: '/Grafics/ptaszarnia/1/original.tif'
-            },
-            {
-                id: 2,
-                thumb: '/Grafics/ptaszarnia/2/thumb.webp',
-                full: '/Grafics/ptaszarnia/2/full.webp',
-                title: 'Gołąb #02: Nokill red',
-                descUrl: '/Grafics/ptaszarnia/2/opis.html',
-                download_tif: '/Grafics/ptaszarnia/2/original.tif'
-            },
-            {
-                id: 3,
-                thumb: '/Grafics/ptaszarnia/3/thumb.webp',
-                full: '/Grafics/ptaszarnia/3/full.webp',
-                title: 'Gołąb #03: Nokill yellow',
-                descUrl: '/Grafics/ptaszarnia/3/opis.html',
-                download_tif: '/Grafics/ptaszarnia/3/original.tif'
+                title: 'Nokill',
+                link: 'Nokill/'
             },
             {
                 id: 4,
@@ -187,16 +169,27 @@
 
         // Renderowanie miniatur
         galleryData.forEach(item => {
-            const itemDiv = document.createElement('div');
-            itemDiv.className = 'gallery-item';
+            const cardDiv = document.createElement('div');
+            cardDiv.className = 'gallery-card';
 
-            itemDiv.innerHTML = `
-                <img src="${item.thumb}" alt="${item.title}" loading="lazy">
-                <div class="gallery-item-overlay">${item.title}</div>
+            // Czyszczenie nazwy z prefiksu np. "Gołąb #01: "
+            const cleanTitle = item.title.replace(/^Gołąb\s+#\d+:\s*/i, '');
+
+            cardDiv.innerHTML = `
+                <div class="gallery-item">
+                    <img src="${item.thumb}" alt="${cleanTitle}" loading="lazy">
+                </div>
+                <div class="gallery-item-caption">${cleanTitle}</div>
             `;
 
-            itemDiv.addEventListener('click', () => openModal(item));
-            grid.appendChild(itemDiv);
+            cardDiv.addEventListener('click', () => {
+                if (item.link) {
+                    window.location.href = item.link;
+                } else {
+                    openModal(item);
+                }
+            });
+            grid.appendChild(cardDiv);
         });
 
         // Otwieranie Modala i Fetchowanie HTML

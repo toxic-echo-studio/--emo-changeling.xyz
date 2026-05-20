@@ -255,9 +255,15 @@ details summary::-webkit-details-marker {
     box-sizing: border-box;
 }
 
+.gallery-card {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 8px;
+}
+
 .gallery-item {
     position: relative;
-    cursor: pointer;
     overflow: hidden;
     aspect-ratio: 1 / 1;
     border: 2px solid #ff007f;
@@ -266,11 +272,11 @@ details summary::-webkit-details-marker {
     box-shadow: 0 0 0 #ff00ff;
 }
 
-    .gallery-item:hover {
-        border-color: #ff00ff;
-        box-shadow: 0 0 15px #ff00ff;
-        transform: scale(1.05);
-    }
+.gallery-card:hover .gallery-item {
+    border-color: #ff00ff;
+    box-shadow: 0 0 15px #ff00ff;
+    transform: scale(1.05);
+}
 
     .gallery-item img {
         width: 100%;
@@ -427,8 +433,10 @@ details summary::-webkit-details-marker {
 .modal-description {
     width: 100%;
     max-width: 600px;
+    min-width: 0;
     text-align: center;
     margin-top: 10px;
+    box-sizing: border-box;
 }
 
     .modal-description details {
@@ -436,6 +444,8 @@ details summary::-webkit-details-marker {
         border: 2px solid #ff007f;
         padding: 0;
         margin: 0 auto;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .modal-description summary {
@@ -464,6 +474,9 @@ details summary::-webkit-details-marker {
     border-top: 1px solid #ff007f;
     line-height: 1.6;
     text-align: left;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .back-to-gallery {
@@ -536,10 +549,16 @@ details summary::-webkit-details-marker {
 }
 
 .gallery-item-caption {
-    padding: 8px;
+    padding: 5px 2px;
     color: #ff007f;
     font-size: 0.9rem;
-    text-align: left;
+    text-align: center;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.gallery-card:hover .gallery-item-caption {
+    color: #ff00ff;
+    text-shadow: 0 0 5px #ff00ff;
 }
 
 /* Układ dla kafelków linków na desktopie */
@@ -943,7 +962,6 @@ summary:focus-visible {
    ========================================= */
 .description-content img {
     max-width: 100%;
-    width: 100%;
     height: auto;
     border: 2px solid #ff007f;
     margin: 15px 0;
