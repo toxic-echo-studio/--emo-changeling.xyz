@@ -5,3 +5,5 @@
 /.vs
 /gdrive_download/
 
+# System context profile (do not commit sensitive operational history/context)
+/.nico_lach_profile.md
