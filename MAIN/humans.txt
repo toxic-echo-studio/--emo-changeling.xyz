@@ -85,15 +85,15 @@ Kontakt profesjonalny:
   - management@toxic-echo.studio
 
 Zastrzegamy:
-  - Zero reklamy czegokolwiek, czego sami nie sprawdzimy.
-  - Jak coś jest świetne — powiemy. Jak syf — widz też się dowie.
-  - Nie bierzemy udziału we współpracach niezgodnych z naszym światopoglądem.
-  - Cena nie ma znaczenia.
-  - Nie interesują nas umowy na wyłączność.
-  - Zero ukrytej reklamy i manipulacji widzem.
-  - Jak odrzucamy propozycję — to odrzucamy. Nie ma sensu ponawiać.
-  - Wszystko precyzyjnie opisane w manifestach na stronach emo-changeling.xyz oraz toxic-echo.studio
-  - Zapraszamy do negocjacji — na naszych warunkach.
+  - Polecamy tylko to, co sami przetestujemy i nie uznamy za stratę czasu.
+  - Obowiązuje zasada szczerości: dobre chwalimy, kiepskie nazywamy po imieniu.
+  - Światopogląd i etyka nie są na sprzedaż, niezależnie od liczby zer w ofercie.
+  - Budżet nie kupi zbieżności wartości.
+  - Cenimy wolność, więc umowy na wyłączność lądują w koszu.
+  - Ukryty marketing i wciskanie kitu widzom u nas nie przejdą.
+  - Jeśli mówimy „nie”, to szanujemy czas obu stron i nie zmienimy zdania.
+  - Wszystkie zasady gry opisaliśmy w manifestach na emo-changeling.xyz oraz toxic-echo.studio
+  - Zapraszamy do rozmów — o ile szanujecie nasze granice.
 
 # ============================================
 # PODZIĘKOWANIA
@@ -110,7 +110,7 @@ alternatywną przestrzeń w internetach.
 # ============================================
 # LAST UPDATE humans.txt
 # ============================================
- - 2026-05-16
+ - 2026-05-22
 
 
 # ============================================
