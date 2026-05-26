@@ -552,6 +552,7 @@ details summary::-webkit-details-marker {
     position: absolute;
     top: 2%;
     right: 3%;
+    left: auto;
     width: 17%;
     aspect-ratio: 4.1 / 4;
     z-index: 999;
@@ -562,6 +563,7 @@ details summary::-webkit-details-marker {
     position: absolute;
     top: 5%;
     right: 5%;
+    left: auto;
     width: 86%;
     height: auto;
     transform: translateX(120%);
