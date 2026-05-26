@@ -12,8 +12,7 @@ body {
     color: #ff007f;
     margin: 0;
     padding: 0;
-    font-family: 'Roboto Mono', Menlo, Consolas, 'Courier New', Courier, monospace;
-    font-weight: 300;
+    font-family: 'Courier New', Courier, monospace;
     cursor: url('/img/kursor1.cur'), auto;
     display: flex;
     flex-direction: column;
@@ -662,8 +661,7 @@ details summary::-webkit-details-marker {
     padding: 20px;
     margin-top: 20px;
     color: #00ff00;
-    font-family: 'Roboto Mono', Menlo, Consolas, 'Courier New', Courier, monospace;
-    font-weight: 300;
+    font-family: "Courier New", Courier, monospace;
     box-shadow: 10px 10px 0px #4b0082;
     word-wrap: break-word;
     overflow-wrap: break-word;
@@ -1021,5 +1019,13 @@ summary:focus-visible {
 
 .description-content p {
     margin-bottom: 15px;
+}
+
+/* =========================================
+   RUSSIAN FONT SPECIFIC OVERRIDES (Thin & Monospaced)
+   ========================================= */
+[lang="ru"], [lang="ru"] * {
+    font-family: 'Roboto Mono', Menlo, Consolas, monospace !important;
+    font-weight: 300 !important;
 }
 

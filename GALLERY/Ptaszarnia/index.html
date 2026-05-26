@@ -177,12 +177,13 @@
 
             // Czyszczenie nazwy z prefiksu np. "Gołąb #01: "
             const cleanTitle = item.title.replace(/^Gołąb\s+#\d+:\s*/i, '');
+            const isCyrillic = /[\u0400-\u04FF]/.test(cleanTitle);
 
             cardDiv.innerHTML = `
                 <div class="gallery-item">
                     <img src="${item.thumb}" alt="${cleanTitle}" loading="lazy">
                 </div>
-                <div class="gallery-item-caption">${cleanTitle}</div>
+                <div class="gallery-item-caption"${isCyrillic ? ' lang="ru"' : ''}>${cleanTitle}</div>
             `;
 
             cardDiv.addEventListener('click', () => {
