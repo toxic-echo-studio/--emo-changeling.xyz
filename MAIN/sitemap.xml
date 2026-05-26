@@ -5,13 +5,15 @@
   <!-- MAIN domain (emo-changeling.xyz) -->
   <url>
     <loc>https://emo-changeling.xyz/</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-05-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://emo-changeling.xyz/o-nas/</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-05-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="pl" href="https://emo-changeling.xyz/o-nas/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://emo-changeling.xyz/o-nas-eng/" />
@@ -20,7 +22,8 @@
 
   <url>
     <loc>https://emo-changeling.xyz/o-nas-eng/</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-05-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="pl" href="https://emo-changeling.xyz/o-nas/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://emo-changeling.xyz/o-nas-eng/" />
@@ -30,13 +33,15 @@
   <!-- HUB subdomain (hub.emo-changeling.xyz) -->
   <url>
     <loc>https://hub.emo-changeling.xyz/</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-05-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://hub.emo-changeling.xyz/blackhole/</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-05-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="pl" href="https://hub.emo-changeling.xyz/blackhole/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://hub.emo-changeling.xyz/blackhole-eng/" />
@@ -45,7 +50,8 @@
 
   <url>
     <loc>https://hub.emo-changeling.xyz/blackhole-eng/</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-05-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="pl" href="https://hub.emo-changeling.xyz/blackhole/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://hub.emo-changeling.xyz/blackhole-eng/" />
@@ -55,13 +61,15 @@
   <!-- SPOTLIGHT subdomain (spotlight.emo-changeling.xyz) -->
   <url>
     <loc>https://spotlight.emo-changeling.xyz/</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-05-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://spotlight.emo-changeling.xyz/o-nas/</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-05-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="pl" href="https://spotlight.emo-changeling.xyz/o-nas/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://spotlight.emo-changeling.xyz/o-nas-eng/" />
@@ -70,7 +78,8 @@
 
   <url>
     <loc>https://spotlight.emo-changeling.xyz/o-nas-eng/</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-05-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="pl" href="https://spotlight.emo-changeling.xyz/o-nas/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://spotlight.emo-changeling.xyz/o-nas-eng/" />
@@ -80,38 +89,44 @@
   <!-- GALLERY subdomain (gallery.emo-changeling.xyz) -->
   <url>
     <loc>https://gallery.emo-changeling.xyz/</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-05-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://gallery.emo-changeling.xyz/Ptaszarnia/</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-05-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://gallery.emo-changeling.xyz/Photo/</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-05-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://gallery.emo-changeling.xyz/Digiart/</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-05-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://gallery.emo-changeling.xyz/Other/</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-05-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- RANT subdomain (rant.emo-changeling.xyz) -->
   <url>
     <loc>https://rant.emo-changeling.xyz/</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-05-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
