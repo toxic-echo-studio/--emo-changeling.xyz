@@ -1028,8 +1028,10 @@ summary:focus-visible {
 /* =========================================
    RUSSIAN FONT SPECIFIC OVERRIDES (Thin & Monospaced)
    ========================================= */
-[lang="ru"], [lang="ru"] * {
+:lang(ru) {
     font-family: 'Roboto Mono', Menlo, Consolas, monospace !important;
     font-weight: 300 !important;
+    font-synthesis: none;
+    -webkit-font-smoothing: antialiased;
 }
 
