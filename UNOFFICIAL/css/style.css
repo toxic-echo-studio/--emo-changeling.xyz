@@ -521,3 +521,43 @@ summary:focus-visible {
         letter-spacing: 2px;
     }
 }
+
+/* =========================================
+   HITBOX LINK RIGHT & SLIDING PTASZARNIA PIC
+========================================= */
+.myspace-hitbox-link-right {
+    position: absolute;
+    top: 2%;
+    right: 3%;
+    left: auto;
+    width: 17%;
+    aspect-ratio: 4.1 / 4;
+    z-index: 999;
+    display: block;
+}
+
+.sliding-ptaszarnia-pic {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    left: auto;
+    width: 86%;
+    height: auto;
+    transform: translateX(120%);
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    z-index: 1;
+    pointer-events: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .myspace-hitbox-link-right:hover .sliding-ptaszarnia-pic {
+        transform: translateX(0);
+    }
+}
+
+@media (hover: none), (pointer: coarse) {
+    .sliding-ptaszarnia-pic {
+        display: none;
+    }
+}
+

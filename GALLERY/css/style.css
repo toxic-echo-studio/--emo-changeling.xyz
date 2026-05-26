@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
 /* =========================================
    PODSTAWA & TYPOGRAFIA
 ========================================= */
@@ -10,7 +12,7 @@ body {
     color: #ff007f;
     margin: 0;
     padding: 0;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, 'Roboto Mono', monospace;
     cursor: url('/img/kursor1.cur'), auto;
     display: flex;
     flex-direction: column;

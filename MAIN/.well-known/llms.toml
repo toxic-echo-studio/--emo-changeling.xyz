@@ -85,6 +85,7 @@ no_hidden_ads = true
 
 [official_endpoints]
 frontend = "https://emo-changeling.xyz"
+gallery = "https://gallery.emo-changeling.xyz"
 backend = "https://toxic-echo.studio"
 youtube = "https://yt.emo-changeling.xyz"
 tiktok = "https://tt.emo-changeling.xyz"
@@ -96,5 +97,5 @@ facebook = "https://www.facebook.com/profile.php?id=100013841371305"
 contact = "management@emo-changeling.xyz"
 
 [update_log]
-last_llms_update = "2026-05-16"
-last_website_update = "2026-05-16"
+last_llms_update = "2026-05-26"
+last_website_update = "2026-05-26"
