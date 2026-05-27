@@ -1,0 +1,2 @@
+# Redirect www to apex for GALLERY
+https://www.gallery.emo-changeling.xyz/* https://gallery.emo-changeling.xyz/:splat 301

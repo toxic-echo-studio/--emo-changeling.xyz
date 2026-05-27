@@ -1,0 +1,2 @@
+# Redirect www to apex for INSTA RANT
+https://www.rant.emo-changeling.xyz/* https://rant.emo-changeling.xyz/:splat 301

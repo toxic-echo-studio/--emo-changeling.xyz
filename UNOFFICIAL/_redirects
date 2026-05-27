@@ -1,0 +1,2 @@
+# Redirect www to apex for UNOFFICIAL
+https://www.unofficial.emo-changeling.xyz/* https://unofficial.emo-changeling.xyz/:splat 301

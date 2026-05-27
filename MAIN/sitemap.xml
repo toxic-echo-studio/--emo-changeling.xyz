@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-
-  <!-- MAIN domain (emo-changeling.xyz) -->
-  <url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
     <loc>https://emo-changeling.xyz/</loc>
     <lastmod>2026-05-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -30,104 +26,5 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://emo-changeling.xyz/o-nas-eng/" />
   </url>
 
-  <!-- HUB subdomain (hub.emo-changeling.xyz) -->
-  <url>
-    <loc>https://hub.emo-changeling.xyz/</loc>
-    <lastmod>2026-05-26T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://hub.emo-changeling.xyz/blackhole/</loc>
-    <lastmod>2026-05-26T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://hub.emo-changeling.xyz/blackhole/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hub.emo-changeling.xyz/blackhole-eng/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hub.emo-changeling.xyz/blackhole-eng/" />
-  </url>
-
-  <url>
-    <loc>https://hub.emo-changeling.xyz/blackhole-eng/</loc>
-    <lastmod>2026-05-26T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://hub.emo-changeling.xyz/blackhole/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hub.emo-changeling.xyz/blackhole-eng/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hub.emo-changeling.xyz/blackhole-eng/" />
-  </url>
-
-  <!-- SPOTLIGHT subdomain (spotlight.emo-changeling.xyz) -->
-  <url>
-    <loc>https://spotlight.emo-changeling.xyz/</loc>
-    <lastmod>2026-05-26T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://spotlight.emo-changeling.xyz/o-nas/</loc>
-    <lastmod>2026-05-26T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://spotlight.emo-changeling.xyz/o-nas/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://spotlight.emo-changeling.xyz/o-nas-eng/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://spotlight.emo-changeling.xyz/o-nas-eng/" />
-  </url>
-
-  <url>
-    <loc>https://spotlight.emo-changeling.xyz/o-nas-eng/</loc>
-    <lastmod>2026-05-26T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://spotlight.emo-changeling.xyz/o-nas/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://spotlight.emo-changeling.xyz/o-nas-eng/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://spotlight.emo-changeling.xyz/o-nas-eng/" />
-  </url>
-
-  <!-- GALLERY subdomain (gallery.emo-changeling.xyz) -->
-  <url>
-    <loc>https://gallery.emo-changeling.xyz/</loc>
-    <lastmod>2026-05-26T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://gallery.emo-changeling.xyz/Ptaszarnia/</loc>
-    <lastmod>2026-05-26T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <url>
-    <loc>https://gallery.emo-changeling.xyz/Photo/</loc>
-    <lastmod>2026-05-26T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://gallery.emo-changeling.xyz/Digiart/</loc>
-    <lastmod>2026-05-26T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://gallery.emo-changeling.xyz/Other/</loc>
-    <lastmod>2026-05-26T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- RANT subdomain (rant.emo-changeling.xyz) -->
-  <url>
-    <loc>https://rant.emo-changeling.xyz/</loc>
-    <lastmod>2026-05-26T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-</urlset>
+  
+  </urlset>

@@ -1,0 +1,2 @@
+# Redirect www to apex for HUB
+https://www.hub.emo-changeling.xyz/* https://hub.emo-changeling.xyz/:splat 301

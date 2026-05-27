@@ -1,0 +1,2 @@
+# Redirect www to apex for SPOT
+https://www.spotlight.emo-changeling.xyz/* https://spotlight.emo-changeling.xyz/:splat 301

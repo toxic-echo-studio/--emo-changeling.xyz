@@ -1,17 +1,15 @@
-# Globalne zasady bezpieczeństwa i blokada modyfikacji kodu przez Cloudflare
 /*
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
+  Referrer-Policy: same-origin
   Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://*.emo-changeling.xyz https://toxic-echo.studio; connect-src 'self' https://*.emo-changeling.xyz;
 
-# Grafika i assety wizualne - agresywny cache, ale z absolutnym zakazem korporacyjnej kompresji (no-transform)
 /img/*
   Cache-Control: public, max-age=31536000, immutable, no-transform
 
 /css/*
   Cache-Control: public, max-age=2592000, stale-while-revalidate=604800, no-transform
 
-# Dynamiczne pliki tekstowe i sitemapy - całkowity zakaz cache'owania, boty zawsze mają ssać świeży stan
 /sitemap.xml
   Cache-Control: no-cache, no-store, must-revalidate
   Content-Type: application/xml; charset=utf-8
@@ -22,11 +20,40 @@
 
 /humans.txt
   Cache-Control: no-cache, no-store, must-revalidate
+  Content-Type: text/plain; charset=utf-8
 
-# Cały kram AI SEO - twarde no-cache, żeby guardraile aktualizowały się natychmiast po deployu
+/crossdomain.xml
+  Cache-Control: no-cache
+  Content-Type: application/xml; charset=utf-8
+
 /llms.txt
   Cache-Control: no-cache, no-store, must-revalidate
-/ai.json
-  Cache-Control: no-cache, no-store, must-revalidate
+  Content-Type: text/plain; charset=utf-8
+
 /llms.toml
   Cache-Control: no-cache, no-store, must-revalidate
+  Content-Type: application/toml; charset=utf-8
+
+/llms.yaml
+  Cache-Control: no-cache, no-store, must-revalidate
+  Content-Type: application/yaml; charset=utf-8
+
+/ai.json
+  Cache-Control: no-cache, no-store, must-revalidate
+  Content-Type: application/json; charset=utf-8
+
+/site.webmanifest
+  Cache-Control: public, max-age=86400
+  Content-Type: application/manifest+json; charset=utf-8
+
+/favicon.svg
+  Content-Type: image/svg+xml; charset=utf-8
+
+/EmoChangeling.svg
+  Content-Type: image/svg+xml; charset=utf-8
+
+/pgp-key.txt
+  Content-Type: text/plain; charset=utf-8
+
+/yandex_66898620a3c2b4d5.html
+  Content-Type: text/html; charset=utf-8

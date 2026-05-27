@@ -1,8 +1,7 @@
 User-agent: *
-Content-Signal: search=yes, ai-train=yes, ai-input=yes
 Allow: /
 
 # Global AI & Search Preferences
 Content-Signal: ai-train=yes, search=yes, ai-input=yes
 
-Sitemap: https://emo-changeling.xyz/sitemap.xml
+Sitemap: https://spotlight.emo-changeling.xyz/sitemap.xml

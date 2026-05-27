@@ -4,34 +4,34 @@
 
   <url>
     <loc>https://gallery.emo-changeling.xyz/</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-05-26T00:00:00+00:00</lastmod>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://gallery.emo-changeling.xyz/Ptaszarnia/</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-05-26T00:00:00+00:00</lastmod>
     <priority>0.8</priority>
 
   </url>
 
   <url>
     <loc>https://gallery.emo-changeling.xyz/Photo/</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-05-26T00:00:00+00:00</lastmod>
     <priority>0.8</priority>
 
   </url>
 
 	<url>
 		<loc>https://gallery.emo-changeling.xyz/Digiart/</loc>
-		<lastmod>2026-05-26</lastmod>
+		<lastmod>2026-05-26T00:00:00+00:00</lastmod>
 		<priority>0.8</priority>
 
 	</url>
 
 	<url>
 		<loc>https://gallery.emo-changeling.xyz/Other/</loc>
-		<lastmod>2026-05-26</lastmod>
+		<lastmod>2026-05-26T00:00:00+00:00</lastmod>
 		<priority>0.8</priority>
 
 	</url>

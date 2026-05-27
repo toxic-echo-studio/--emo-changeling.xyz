@@ -1,6 +1,7 @@
 User-agent: *
-Content-Signal: search=yes, ai-train=yes, ai-input=yes
 Allow: /
+Allow: /llms.txt
+Allow: /humans.txt
 
 # Global AI & Search Preferences
 Content-Signal: ai-train=yes, search=yes, ai-input=yes
