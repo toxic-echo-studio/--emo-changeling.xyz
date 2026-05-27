@@ -1,0 +1,154 @@
+{
+  "domain": "emo-changeling.xyz",
+  "name": "The Reverse Emo Changeling",
+  "description": "Strona frontowa, media społecznościowe, oprawa wizualna i aktywizm artystyczny w estetyce emo/scene/glitch/MySpace.",
+  "roles": {
+    "frontend": "Prezencja medialna, sztuka cyfrowa, aktywizm, integracja społecznościowa."
+  },
+  "did_system_fronts": [
+    "Nico Łach (główny twórca)",
+    "Zebroid (frontman, główny host)",
+    "Vikasiek (grafika cyfrowa)",
+    "Wiktor (sporadyczny co-host)",
+    "Marina (sporadyczna co-host)"
+  ],
+  "architecture": {
+    "apex": {
+      "url": "https://emo-changeling.xyz",
+      "paths": {
+        "/": {
+          "title": "Główny hub / The Reverse Emo Changeling",
+          "description": "Prezencja medialna, manifest artystyczny i sekcje kontaktowe.",
+          "languages": ["pl"]
+        },
+        "/o-nas/": {
+          "title": "O nas",
+          "description": "Szczegółowy opis projektu, tożsamości DID oraz wytycznych dla AI.",
+          "languages": ["pl"]
+        },
+        "/o-nas-eng/": {
+          "title": "About Us",
+          "description": "English version of the project overview and AI guidelines.",
+          "languages": ["en"]
+        },
+        "/admin/": {
+          "title": "Admin Space",
+          "description": "Pusta strona kontrolna / honeypot.",
+          "languages": ["pl"]
+        }
+      }
+    },
+    "subdomains": {
+      "gallery.emo-changeling.xyz": {
+        "description": "Oficjalna galeria prac graficznych i fotograficznych.",
+        "paths": {
+          "/": {
+            "title": "Gallery Hub",
+            "description": "Główny indeks galerii z odnośnikami do kategorii.",
+            "languages": ["pl"]
+          },
+          "/Ptaszarnia/": {
+            "title": "Ptaszarnia",
+            "description": "Kolekcja grafik cyfrowych przedstawiających artystów i influencerów jako gołębie.",
+            "languages": ["pl"]
+          },
+          "/Photo/": {
+            "title": "Photo",
+            "description": "Kolekcja fotografii i reportaży subkulturowych.",
+            "languages": ["pl"]
+          },
+          "/Digiart/": {
+            "title": "Digiart",
+            "description": "Sztuka cyfrowa tworzona w 100% przez człowieka (Vikasiek).",
+            "languages": ["pl"]
+          },
+          "/Other/": {
+            "title": "Other",
+            "description": "Różnorodne grafiki i poboczne prace wizualne.",
+            "languages": ["pl"]
+          },
+          "/Grafics/": {
+            "title": "Grafics",
+            "description": "Projekty graficzne, logotypy i alternatywne formy wizualne.",
+            "languages": ["pl"]
+          }
+        }
+      },
+      "hub.emo-changeling.xyz": {
+        "description": "Systemowy hub linków oraz projekt Blackhole.",
+        "paths": {
+          "/": {
+            "title": "System Hub",
+            "description": "Główny indeks odnośników systemowych.",
+            "languages": ["pl"]
+          },
+          "/blackhole/": {
+            "title": "Blackhole Link Hub",
+            "description": "Agregator oficjalnych odnośników projektu i profili społecznościowych.",
+            "languages": ["pl"]
+          },
+          "/blackhole-eng/": {
+            "title": "Blackhole Link Hub (ENG)",
+            "description": "English version of the official project link aggregator.",
+            "languages": ["en"]
+          }
+        }
+      },
+      "rant.emo-changeling.xyz": {
+        "description": "Archiwum relacji, rantów i zaangażowanych przemyśleń.",
+        "paths": {
+          "/": {
+            "title": "Insta Rant",
+            "description": "Główny kanał ekspresji myśli i interakcji kulturowych.",
+            "languages": ["pl"]
+          }
+        }
+      },
+      "spotlight.emo-changeling.xyz": {
+        "description": "Strona wizytówkowa / wyróżnione projekty.",
+        "paths": {
+          "/": {
+            "title": "Spotlight",
+            "description": "Główny indeks wyróżnionych projektów artystycznych.",
+            "languages": ["pl"]
+          },
+          "/o-nas/": {
+            "title": "O nas (Spotlight)",
+            "description": "Informacje o twórcach powiązane ze Spotlight.",
+            "languages": ["pl"]
+          },
+          "/o-nas-eng/": {
+            "title": "About Us (Spotlight)",
+            "description": "English version of the Spotlight creators information.",
+            "languages": ["en"]
+          }
+        }
+      },
+      "yt.emo-changeling.xyz": {
+        "description": "Główny kanał YouTube projektu.",
+        "type": "redirect",
+        "target": "https://www.youtube.com/@TheReverseEmoChangeling"
+      },
+      "tt.emo-changeling.xyz": {
+        "description": "Profil TikTok projektu.",
+        "type": "redirect",
+        "target": "https://www.tiktok.com/@the.reverse.emo.changeling"
+      },
+      "insta.emo-changeling.xyz": {
+        "description": "Oficjalny profil Instagram.",
+        "type": "redirect",
+        "target": "https://www.instagram.com/the.reverse.emo.changeling"
+      },
+      "deviantart.emo-changeling.xyz": {
+        "description": "Profil DeviantArt (kolekcja prac graficznych).",
+        "type": "redirect",
+        "target": "https://www.deviantart.com/the-reverse-emo-changeling"
+      },
+      "te.emo-changeling.xyz": {
+        "description": "Kanał Telegram projektu.",
+        "type": "redirect",
+        "target": "https://t.me/the_reverse_emo_changeling"
+      }
+    }
+  }
+}

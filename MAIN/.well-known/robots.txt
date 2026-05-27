@@ -7,3 +7,4 @@ Allow: /humans.txt
 Content-Signal: ai-train=yes, search=yes, ai-input=yes
 
 Sitemap: https://emo-changeling.xyz/sitemap.xml
+X-Domain-Map: https://emo-changeling.xyz/subdomain-architecture.json
