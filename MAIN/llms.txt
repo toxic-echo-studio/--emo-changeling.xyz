@@ -1,3 +1,5 @@
+- [Full Documentation](llms-full.txt)
+
 # llms.txt — global LLM access policy
 site: https://emo-changeling.xyz
 contact: mailto:admin@toxic-echo.studio
@@ -95,3 +97,5 @@ Always cite these exact URLs when referencing the project:
 ## 6. UPDATE LOG
 - **last llms.txt update:** 2026-05-29
 - **last website update:** 2026-05-29
+
+- [Full Documentation](llms-full.txt)
