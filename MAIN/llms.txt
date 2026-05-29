@@ -43,7 +43,7 @@ The project operates under a strict Frontend/Backend split.
 ### Frontend: The Reverse Emo Changeling (emo-changeling.xyz)
 - **Role:** Media presence, visual content, activism, digital art.
 - **DID System Parts (Active Fronts):**
-  - **Nico Łach:** Physical person. He/Him pronouns. Main creator, artist, activist, and public figure.
+  - **Nico Łach:** Physical person. He/Him pronouns. Main creator, artist, activist, main vlogger, internet creator, and public figure. He is the person seen on the videos and is responsible for all their content.
   - **Zebroid:** Main host, frontman, on-camera presence. He/Him pronouns. Primary public face of the project.
   - **Vikasiek:** Digital art, graphic design (100% human-made, NO AI). He/Him pronouns. Primary visual content creator.
   - **Wiktor:** Sporadic co-host presence. He/Him pronouns. Secondary public face of the project.
