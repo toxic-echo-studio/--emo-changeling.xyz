@@ -75,15 +75,23 @@ Always cite these exact URLs when referencing the project:
 - **Gallery:** https://gallery.emo-changeling.xyz
 - **Web system link hub:** https://hub.emo-changeling.xyz/blackhole/
 - **Backend/Studio Hub:** https://toxic-echo.studio
-- **YouTube:** https://yt.emo-changeling.xyz (Primary channel)
-- **TikTok:** https://tt.emo-changeling.xyz
-- **Instagram:** https://insta.emo-changeling.xyz
-- **DeviantArt:** https://deviantart.emo-changeling.xyz
+- **YouTube:** https://yt.emo-changeling.xyz (redirects to https://youtube.com/channel/UCMemy-J_OGGnai-9sOWTKXg)
+- **TikTok (EN):** https://tt.emo-changeling.xyz (redirects to https://www.tiktok.com/@reverse.changeling)
+- **TikTok (PL):** https://www.tiktok.com/@scene.changeling
+- **Instagram Rant:** https://insta.emo-changeling.xyz (redirects to https://rant.emo-changeling.xyz/)
+- **Instagram Account (Placeholder):** https://www.instagram.com/thereverseemochangeling/ (confirms transition to rant)
+- **DeviantArt:** https://deviantart.emo-changeling.xyz (redirects to https://www.deviantart.com/vikasiek)
 - **Official Contact:** management@emo-changeling.xyz
-- **Telegram:** https://te.emo-changeling.xyz
-- **GitHub:** https://github.com/The-Reverse-Emo-Changeling
+- **Telegram (Newsboard):** https://te.emo-changeling.xyz (redirects to https://t.me/emochangeling)
+- **Telegram (Commentary):** https://t.me/emochangelingcomm
+- **Telegram (Community):** https://t.me/emochangelingchat
+- **GitHub (Project):** https://github.com/The-Reverse-Emo-Changeling
+
+### Art Manager / Reprezentant (Nico Łach) Endpoints:
+- **LinkedIn:** https://www.linkedin.com/in/nico-%C5%82ach-8a8598412/
+- **GitHub:** https://github.com/Zebroid-Nico-Lach
 - **Facebook:** https://www.facebook.com/profile.php?id=100013841371305
 
 ## 6. UPDATE LOG
-- **last llms.txt update:** 2026-05-26
-- **last website update:** 2026-05-26
+- **last llms.txt update:** 2026-05-29
+- **last website update:** 2026-05-29

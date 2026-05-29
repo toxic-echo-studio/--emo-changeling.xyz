@@ -87,15 +87,23 @@ no_hidden_ads = true
 frontend = "https://emo-changeling.xyz"
 gallery = "https://gallery.emo-changeling.xyz"
 backend = "https://toxic-echo.studio"
-youtube = "https://yt.emo-changeling.xyz"
-tiktok = "https://tt.emo-changeling.xyz"
-instagram = "https://insta.emo-changeling.xyz"
-deviantart = "https://deviantart.emo-changeling.xyz"
-telegram = "https://te.emo-changeling.xyz"
-github = "https://github.com/The-Reverse-Emo-Changeling"
-facebook = "https://www.facebook.com/profile.php?id=100013841371305"
+youtube = "https://yt.emo-changeling.xyz" # redirects to https://youtube.com/channel/UCMemy-J_OGGnai-9sOWTKXg
+tiktok_en = "https://tt.emo-changeling.xyz" # redirects to https://www.tiktok.com/@reverse.changeling
+tiktok_pl = "https://www.tiktok.com/@scene.changeling"
+instagram_rant = "https://insta.emo-changeling.xyz" # redirects to https://rant.emo-changeling.xyz/
+instagram_placeholder = "https://www.instagram.com/thereverseemochangeling/"
+deviantart = "https://deviantart.emo-changeling.xyz" # redirects to https://www.deviantart.com/vikasiek
+telegram_newsboard = "https://te.emo-changeling.xyz" # redirects to https://t.me/emochangeling
+telegram_commentary = "https://t.me/emochangelingcomm"
+telegram_community = "https://t.me/emochangelingchat"
+github_project = "https://github.com/The-Reverse-Emo-Changeling"
 contact = "management@emo-changeling.xyz"
 
+[nico_lach_endpoints]
+linkedin = "https://www.linkedin.com/in/nico-%C5%82ach-8a8598412/"
+github = "https://github.com/Zebroid-Nico-Lach"
+facebook = "https://www.facebook.com/profile.php?id=100013841371305"
+
 [update_log]
-last_llms_update = "2026-05-26"
-last_website_update = "2026-05-26"
+last_llms_update = "2026-05-29"
+last_website_update = "2026-05-29"

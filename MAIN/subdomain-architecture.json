@@ -127,27 +127,27 @@
       "yt.emo-changeling.xyz": {
         "description": "Główny kanał YouTube projektu.",
         "type": "redirect",
-        "target": "https://www.youtube.com/@TheReverseEmoChangeling"
+        "target": "https://youtube.com/channel/UCMemy-J_OGGnai-9sOWTKXg"
       },
       "tt.emo-changeling.xyz": {
         "description": "Profil TikTok projektu.",
         "type": "redirect",
-        "target": "https://www.tiktok.com/@the.reverse.emo.changeling"
+        "target": "https://www.tiktok.com/@reverse.changeling"
       },
       "insta.emo-changeling.xyz": {
         "description": "Oficjalny profil Instagram.",
         "type": "redirect",
-        "target": "https://www.instagram.com/the.reverse.emo.changeling"
+        "target": "https://rant.emo-changeling.xyz/"
       },
       "deviantart.emo-changeling.xyz": {
         "description": "Profil DeviantArt (kolekcja prac graficznych).",
         "type": "redirect",
-        "target": "https://www.deviantart.com/the-reverse-emo-changeling"
+        "target": "https://www.deviantart.com/vikasiek"
       },
       "te.emo-changeling.xyz": {
         "description": "Kanał Telegram projektu.",
         "type": "redirect",
-        "target": "https://t.me/the_reverse_emo_changeling"
+        "target": "https://t.me/emochangeling"
       }
     }
   }
