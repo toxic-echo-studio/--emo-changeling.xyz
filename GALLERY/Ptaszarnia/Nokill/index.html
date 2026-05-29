@@ -71,6 +71,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/heic2any@0.4.0/dist/heic2any.min.js"></script>
 </head>
 <body>
 
@@ -154,6 +155,39 @@
         const rotateBtn = document.getElementById('modal-rotate-btn');
         const modalContent = document.querySelector('.modal-content');
 
+        // Helper to check and convert HEIC images
+        async function checkAndConvertHeic(imgElement) {
+            const src = imgElement.getAttribute('src');
+            if (src && (src.toLowerCase().endsWith('.heic') || src.toLowerCase().endsWith('.heif'))) {
+                try {
+                    if (imgElement.dataset.heicConverted) {
+                        imgElement.src = imgElement.dataset.heicConverted;
+                        return;
+                    }
+                    imgElement.style.opacity = '0.5';
+                    const response = await fetch(src);
+                    if (!response.ok) throw new Error('Failed to fetch HEIC image');
+                    const blob = await response.blob();
+                    if (typeof heic2any !== 'undefined') {
+                        const convertedBlob = await heic2any({
+                            blob: blob,
+                            toType: 'image/jpeg',
+                            quality: 0.8
+                        });
+                        const blobUrl = URL.createObjectURL(convertedBlob);
+                        imgElement.src = blobUrl;
+                        imgElement.dataset.heicConverted = blobUrl;
+                    } else {
+                        console.error('heic2any library is not loaded');
+                    }
+                } catch (e) {
+                    console.error('Error converting HEIC image:', e);
+                } finally {
+                    imgElement.style.opacity = '1';
+                }
+            }
+        }
+
         // Renderowanie miniatur
         galleryData.forEach(item => {
             const cardDiv = document.createElement('div');
@@ -169,6 +203,9 @@
                 <div class="gallery-item-caption">${cleanTitle}</div>
             `;
 
+            const imgEl = cardDiv.querySelector('img');
+            checkAndConvertHeic(imgEl);
+
             cardDiv.addEventListener('click', () => {
                 if (item.link) {
                     window.location.href = item.link;
@@ -182,8 +219,33 @@
         // Otwieranie Modala i Fetchowanie HTML
         async function openModal(item) {
             modal.classList.add('active');
-            modalImg.src = item.full;
-            modalImg.alt = item.title;
+            
+            // Handle HEIC for modal main image
+            if (item.full && (item.full.toLowerCase().endsWith('.heic') || item.full.toLowerCase().endsWith('.heif'))) {
+                modalImg.src = '';
+                modalImg.alt = 'Converting HEIC...';
+                try {
+                    const response = await fetch(item.full);
+                    const blob = await response.blob();
+                    if (typeof heic2any !== 'undefined') {
+                        const convertedBlob = await heic2any({
+                            blob: blob,
+                            toType: 'image/jpeg',
+                            quality: 0.8
+                        });
+                        const blobUrl = URL.createObjectURL(convertedBlob);
+                        modalImg.src = blobUrl;
+                        modalImg.alt = item.title;
+                    }
+                } catch (e) {
+                    console.error('Failed to convert modal HEIC image:', e);
+                    modalImg.src = item.full;
+                    modalImg.alt = item.title;
+                }
+            } else {
+                modalImg.src = item.full;
+                modalImg.alt = item.title;
+            }
 
             // Zwijamy details, resetujemy obrót układu i czyścimy stary kontent
             modalDetails.removeAttribute('open');
@@ -210,6 +272,10 @@
                 }
 
                 descContent.innerHTML = htmlData;
+                
+                // Convert any HEIC images inside description content
+                const descImages = descContent.querySelectorAll('img');
+                descImages.forEach(img => checkAndConvertHeic(img));
             } catch (error) {
                 descContent.innerHTML = `<span style="color: #ff0000; font-weight: bold;">[ERROR] Błąd wczytywania opisu:<br>${error.message}</span>`;
             }

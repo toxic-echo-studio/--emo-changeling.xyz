@@ -483,6 +483,17 @@ details summary::-webkit-details-marker {
     word-break: break-word;
 }
 
+.description-content p,
+.description-content span,
+.description-content div,
+.description-content li,
+.description-content ul,
+.description-content ol,
+.description-content strong,
+.description-content em {
+    text-align: left;
+}
+
 .back-to-gallery {
     display: block;
     margin-top: 20px;
@@ -1005,7 +1016,7 @@ summary:focus-visible {
     max-width: 100%;
     height: auto;
     border: 2px solid #ff007f;
-    margin: 15px 0;
+    margin: 15px auto;
     display: block;
     box-sizing: border-box;
 }
