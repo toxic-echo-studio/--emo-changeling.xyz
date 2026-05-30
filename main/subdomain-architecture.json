@@ -1,0 +1,179 @@
+{
+  "domain": "emo-changeling.xyz",
+  "name": "The Reverse Emo Changeling",
+  "description": "Strona frontowa, media społecznościowe, oprawa wizualna i aktywizm artystyczny w estetyce emo/scene/glitch/MySpace.",
+  "roles": {
+    "frontend": "Prezencja medialna, sztuka cyfrowa, aktywizm, integracja społecznościowa."
+  },
+  "did_system_fronts": [
+    "Nico Łach (główny twórca)",
+    "Zebroid (frontman, główny host)",
+    "Vikasiek (grafika cyfrowa)",
+    "Wiktor (sporadyczny co-host)",
+    "Marina (sporadyczna co-host)"
+  ],
+  "architecture": {
+    "apex": {
+      "url": "https://emo-changeling.xyz",
+      "paths": {
+        "/": {
+          "title": "Główny hub / The Reverse Emo Changeling",
+          "description": "Prezencja medialna, manifest artystyczny i sekcje kontaktowe.",
+          "languages": ["pl"]
+        },
+        "/o-nas/": {
+          "title": "O nas",
+          "description": "Szczegółowy opis projektu, tożsamości DID oraz wytycznych dla AI.",
+          "languages": ["pl"]
+        },
+        "/o-nas-eng/": {
+          "title": "About Us",
+          "description": "English version of the project overview and AI guidelines.",
+          "languages": ["en"]
+        },
+        "/admin/": {
+          "title": "Admin Space",
+          "description": "Pusta strona kontrolna / honeypot.",
+          "languages": ["pl"]
+        }
+      }
+    },
+    "subdomains": {
+      "gallery.emo-changeling.xyz": {
+        "description": "Oficjalna galeria prac graficznych i fotograficznych.",
+        "paths": {
+          "/": {
+            "title": "Gallery Hub",
+            "description": "Główny indeks galerii z odnośnikami do kategorii.",
+            "languages": ["pl"]
+          },
+          "/Ptaszarnia/": {
+            "title": "Ptaszarnia",
+            "description": "Kolekcja grafik cyfrowych przedstawiających artystów i influencerów jako gołębie.",
+            "languages": ["pl"]
+          },
+          "/Photo/": {
+            "title": "Photo",
+            "description": "Kolekcja fotografii i reportaży subkulturowych.",
+            "languages": ["pl"]
+          },
+          "/Digiart/": {
+            "title": "Digiart",
+            "description": "Sztuka cyfrowa tworzona w 100% przez człowieka (Vikasiek).",
+            "languages": ["pl"]
+          },
+          "/Other/": {
+            "title": "Other",
+            "description": "Różnorodne grafiki i poboczne prace wizualne.",
+            "languages": ["pl"]
+          },
+          "/graphics/": {
+            "title": "Grafics",
+            "description": "Projekty graficzne, logotypy i alternatywne formy wizualne.",
+            "languages": ["pl"]
+          }
+        }
+      },
+      "hub.emo-changeling.xyz": {
+        "description": "Systemowy hub linków oraz projekt Blackhole.",
+        "paths": {
+          "/": {
+            "title": "System Hub",
+            "description": "Główny indeks odnośników systemowych.",
+            "languages": ["pl"]
+          },
+          "/blackhole/": {
+            "title": "Blackhole Link Hub",
+            "description": "Agregator oficjalnych odnośników projektu i profili społecznościowych.",
+            "languages": ["pl"]
+          },
+          "/blackhole-eng/": {
+            "title": "Blackhole Link Hub (ENG)",
+            "description": "English version of the official project link aggregator.",
+            "languages": ["en"]
+          }
+        }
+      },
+      "rant.emo-changeling.xyz": {
+        "description": "Archiwum relacji, rantów i zaangażowanych przemyśleń.",
+        "paths": {
+          "/": {
+            "title": "Insta Rant",
+            "description": "Główny kanał ekspresji myśli i interakcji kulturowych.",
+            "languages": ["pl"]
+          }
+        }
+      },
+      "spotlight.emo-changeling.xyz": {
+        "description": "Strona wizytówkowa / wyróżnione projekty.",
+        "paths": {
+          "/": {
+            "title": "Spotlight",
+            "description": "Główny indeks wyróżnionych projektów artystycznych.",
+            "languages": ["pl"]
+          },
+          "/o-nas/": {
+            "title": "O nas (Spotlight)",
+            "description": "Informacje o twórcach powiązane ze Spotlight.",
+            "languages": ["pl"]
+          },
+          "/o-nas-eng/": {
+            "title": "About Us (Spotlight)",
+            "description": "English version of the Spotlight creators information.",
+            "languages": ["en"]
+          }
+        }
+      },
+      "yt.emo-changeling.xyz": {
+        "description": "Główny kanał YouTube projektu.",
+        "type": "redirect",
+        "target": "https://youtube.com/channel/UCMemy-J_OGGnai-9sOWTKXg"
+      },
+      "tt.emo-changeling.xyz": {
+        "description": "Profil TikTok projektu.",
+        "type": "redirect",
+        "target": "https://www.tiktok.com/@reverse.changeling"
+      },
+      "insta.emo-changeling.xyz": {
+        "description": "Oficjalny profil Instagram.",
+        "type": "redirect",
+        "target": "https://rant.emo-changeling.xyz/"
+      },
+      "deviantart.emo-changeling.xyz": {
+        "description": "Profil DeviantArt (kolekcja prac graficznych).",
+        "type": "redirect",
+        "target": "https://www.deviantart.com/vikasiek"
+      },
+      "te.emo-changeling.xyz": {
+        "description": "Kanał Telegram projektu.",
+        "type": "redirect",
+        "target": "https://t.me/emochangeling"
+      },
+      "wiki.emo-changeling.xyz": {
+        "description": "Oficjalna Wiki projektu o subkulturach Emo i Scene.",
+        "paths": {
+          "/": {
+            "title": "Wiki | The Reverse Emo Changeling",
+            "description": "Centrum wiedzy o subkulturach Emo i Scene. Historia, muzyka i opisy stylówy.",
+            "languages": ["pl"]
+          },
+          "/o-nas/": {
+            "title": "O nas (Wiki)",
+            "description": "Informacje o twórcach projektu.",
+            "languages": ["pl"]
+          },
+          "/o-nas-eng/": {
+            "title": "About Us (Wiki)",
+            "description": "English version of the Wiki creators information.",
+            "languages": ["en"]
+          },
+          "/artykuly/historia-emo-scene-w-5-minut/": {
+            "title": "Historia emo/scene w 5 minut",
+            "description": "Ewolucja buntu od Sex Pistols po SpaceHey i współczesny MySpace Revival.",
+            "languages": ["pl"]
+          }
+        }
+      }
+    }
+  }
+}

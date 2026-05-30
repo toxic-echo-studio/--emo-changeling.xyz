@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://gallery.emo-changeling.xyz/</loc>
+    <lastmod>2026-05-29T00:00:00+00:00</lastmod>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://gallery.emo-changeling.xyz/ptaszarnia/</loc>
+    <lastmod>2026-05-29T00:00:00+00:00</lastmod>
+    <priority>0.8</priority>
+
+  </url>
+
+  <url>
+    <loc>https://gallery.emo-changeling.xyz/photo/</loc>
+    <lastmod>2026-05-29T00:00:00+00:00</lastmod>
+    <priority>0.8</priority>
+
+  </url>
+
+  <url>
+    <loc>https://gallery.emo-changeling.xyz/digiart/</loc>
+    <lastmod>2026-05-29T00:00:00+00:00</lastmod>
+    <priority>0.8</priority>
+
+  </url>
+
+  <url>
+    <loc>https://gallery.emo-changeling.xyz/other/</loc>
+    <lastmod>2026-05-29T00:00:00+00:00</lastmod>
+    <priority>0.8</priority>
+
+  </url>
+
+</urlset>

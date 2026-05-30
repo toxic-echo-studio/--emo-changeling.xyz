@@ -1,4 +1,4 @@
  http://localhost:8001/index.html
  
  
- python -m http.server 8001 --directory "C:\Users\mighn\source\repos\toxic-echo-studio\--emo-changeling.xyz\GALLERY"
+ python -m http.server 8001 --directory "C:\Users\mighn\source\repos\toxic-echo-studio\--emo-changeling.xyz\gallery"

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pl" data-version="P0.1.6" data-build="20260529" data-system="Toxic Echo Studio">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preload" as="image" href="/img/bannerM1.webp" fetchpriority="high">
+    <link class="cache-bust" rel="preload" href="/css/style.css?v=20260529" as="style">
+
+    <meta name="theme-color" content="#000000">
+
+    <link rel="canonical" href="https://gallery.emo-changeling.xyz/digiart/">
+
+    <title>Digiart | Emo-Changeling Gallery</title>
+    <meta name="description" content="Digiart - kolekcja digital artu The Reverse Emo Changeling. Przerabiamy artystów na latające szczury.">
+
+    <link rel="author" href="https://emo-changeling.xyz/humans.txt">
+    <link rel="alternate" type="text/plain" href="https://emo-changeling.xyz/llms.txt" title="LLM System Instructions">
+
+    <link rel="icon" type="image/png" href="/favicon.png" sizes="192x192">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <meta property="og:title" content="Digiart | Emo-Changeling Gallery">
+    <meta property="og:site_name" content="The Reverse Emo Changeling">
+    <meta property="og:description" content="Kolekcja 'gołębich artów'. Przerabiamy artystów i influencerów na latające szczury.">
+    <meta property="og:image" content="https://gallery.emo-changeling.xyz/img/bannerM1.webp">
+    <meta property="og:url" content="https://gallery.emo-changeling.xyz/digiart/">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Digiart | Emo-Changeling Gallery">
+    <meta name="twitter:description" content="Kolekcja 'gołębich artów'.">
+    <meta name="twitter:image" content="https://gallery.emo-changeling.xyz/img/bannerM1.webp">
+
+    <link rel="stylesheet" href="/css/style.css?v=20260529">
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": "Digiart – Gallery",
+          "url": "https://gallery.emo-changeling.xyz/digiart/",
+          "isPartOf": { "@id": "https://gallery.emo-changeling.xyz/#webpage" },
+          "description": "Kolekcja 'gołębich artów' - cyfrowych przeróbek w estetyce projektu.",
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Gallery",
+                "item": "https://gallery.emo-changeling.xyz/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Digiart",
+                "item": "https://gallery.emo-changeling.xyz/digiart/"
+              }
+            ]
+          }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/heic2any@0.4.0/dist/heic2any.min.js"></script>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="banner-container">
+            <img src="/img/bannerM1.webp" width="1920" height="1080" alt="Baner" class="banner" fetchpriority="high">
+            <a href="/" class="myspace-hitbox-link" aria-label="Wróć do głównej strony galerii">
+                <img src="/img/emo1ss.webp" width="288" height="288" alt="Wróć" class="sliding-emo-pic">
+            </a>
+            <a href="/" class="myspace-hitbox-link-right" aria-label="Wróć do głównej strony galerii">
+                <img src="/img/ptaszarnia.webp" width="288" height="288" alt="Wróć" class="sliding-ptaszarnia-pic">
+            </a>
+        </div>
+    </header>
+
+    <main class="content-wrapper" style="text-align: center;">
+        <h1 class="glitch" data-text="Digiart">Digiart</h1>
+
+        <div class="content-box" style="margin-bottom: 30px;">
+            <p>Spokojnie, wkrótce coś tu wpadnie – selekcja w toku</p>
+            <p>--------------</p>
+            <p>Chill, something's dropping soon – selection in progress</p>
+            <p>--------------</p>
+            <p lang="ru">Спокойно, скоро тут что-то появится – отбор в процессе</p>
+        </div>
+
+        <div class="gallery-grid" id="gallery-grid"></div>
+
+        <a href="/" class="main-menu-btn" aria-label="Wróć do wyboru galerii">
+            ❮ WRÓĆ DO GALERII
+        </a>
+    </main>
+
+    <div class="gallery-modal" id="gallery-modal">
+        <button class="modal-close" id="modal-close" aria-label="Zamknij podgląd">✖</button>
+
+        <div class="modal-content">
+            <div class="modal-image-container">
+                <img src="" alt="Pełny podgląd" class="modal-image" id="modal-image">
+            </div>
+
+            <div class="modal-description">
+                <details id="modal-details">
+                    <summary>❯ ROZWIŃ OPIS</summary>
+                    <div class="description-content" id="description-content">
+                        <span class="blink">Wczytywanie danych...</span>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const galleryData = [
+            {
+                id: 1,
+                thumb: '/graphics/Digiart/1/thumb.webp',
+                full: '/graphics/Digiart/1/full.webp',
+                title: 'Gołąb #01: Start',
+                descUrl: '/graphics/Digiart/1/opis.html'
+            },
+            {
+                id: 2,
+                thumb: '/graphics/Digiart/2/thumb.webp',
+                full: '/graphics/Digiart/2/full.webp',
+                title: 'Gołąb #02: Neon',
+                descUrl: '/graphics/Digiart/2/opis.html'
+            }
+        ];
+
+        const grid = document.getElementById('gallery-grid');
+        const modal = document.getElementById('gallery-modal');
+        const modalImg = document.getElementById('modal-image');
+        const descContent = document.getElementById('description-content');
+        const modalDetails = document.getElementById('modal-details');
+        const rotateBtn = document.getElementById('modal-rotate-btn');
+        const modalContent = document.querySelector('.modal-content');
+
+        // Helper to check and convert HEIC images
+        async function checkAndConvertHeic(imgElement) {
+            const src = imgElement.getAttribute('src');
+            if (src && (src.toLowerCase().endsWith('.heic') || src.toLowerCase().endsWith('.heif'))) {
+                try {
+                    if (imgElement.dataset.heicConverted) {
+                        imgElement.src = imgElement.dataset.heicConverted;
+                        return;
+                    }
+                    imgElement.style.opacity = '0.5';
+                    const response = await fetch(src);
+                    if (!response.ok) throw new Error('Failed to fetch HEIC image');
+                    const blob = await response.blob();
+                    if (typeof heic2any !== 'undefined') {
+                        const convertedBlob = await heic2any({
+                            blob: blob,
+                            toType: 'image/jpeg',
+                            quality: 0.8
+                        });
+                        const blobUrl = URL.createObjectURL(convertedBlob);
+                        imgElement.src = blobUrl;
+                        imgElement.dataset.heicConverted = blobUrl;
+                    } else {
+                        console.error('heic2any library is not loaded');
+                    }
+                } catch (e) {
+                    console.error('Error converting HEIC image:', e);
+                } finally {
+                    imgElement.style.opacity = '1';
+                }
+            }
+        }
+
+        // Renderowanie miniatur
+        galleryData.forEach(item => {
+            const cardDiv = document.createElement('div');
+            cardDiv.className = 'gallery-card';
+
+            // Czyszczenie nazwy z prefiksu np. "Gołąb #01: "
+            const cleanTitle = item.title.replace(/^Gołąb\s+#\d+:\s*/i, '');
+
+            cardDiv.innerHTML = `
+                <div class="gallery-item">
+                    <img src="${item.thumb}" alt="${cleanTitle}" loading="lazy">
+                </div>
+                <div class="gallery-item-caption">${cleanTitle}</div>
+            `;
+
+            const imgEl = cardDiv.querySelector('img');
+            checkAndConvertHeic(imgEl);
+
+            cardDiv.addEventListener('click', () => openModal(item));
+            grid.appendChild(cardDiv);
+        });
+
+        // Otwieranie Modala i Fetchowanie HTML
+        async function openModal(item) {
+            modal.classList.add('active');
+            
+            // Handle HEIC for modal main image
+            if (item.full && (item.full.toLowerCase().endsWith('.heic') || item.full.toLowerCase().endsWith('.heif'))) {
+                modalImg.src = '';
+                modalImg.alt = 'Converting HEIC...';
+                try {
+                    const response = await fetch(item.full);
+                    const blob = await response.blob();
+                    if (typeof heic2any !== 'undefined') {
+                        const convertedBlob = await heic2any({
+                            blob: blob,
+                            toType: 'image/jpeg',
+                            quality: 0.8
+                        });
+                        const blobUrl = URL.createObjectURL(convertedBlob);
+                        modalImg.src = blobUrl;
+                        modalImg.alt = item.title;
+                    }
+                } catch (e) {
+                    console.error('Failed to convert modal HEIC image:', e);
+                    modalImg.src = item.full;
+                    modalImg.alt = item.title;
+                }
+            } else {
+                modalImg.src = item.full;
+                modalImg.alt = item.title;
+            }
+
+            // Zwijamy details, resetujemy obrót układu i czyścimy stary kontent
+            modalDetails.removeAttribute('open');
+            modalContent.classList.remove('rotated');
+            descContent.innerHTML = '<span class="blink">Wczytywanie danych z serwera...</span>';
+
+            try {
+                const response = await fetch(item.descUrl);
+                if (!response.ok) throw new Error('Nie znaleziono pliku opisu (404).');
+
+                const htmlData = await response.text();
+
+                // ZABEZPIECZENIE przed podmianą na stronę główną
+                if (htmlData.includes('id="gallery-grid"') || htmlData.includes('data-system="Toxic Echo Studio"')) {
+                    throw new Error('Serwer zwrócił stronę główną zamiach pliku opisu. Sprawdź ścieżkę!');
+                }
+
+                descContent.innerHTML = htmlData;
+                
+                // Convert any HEIC images inside description content
+                const descImages = descContent.querySelectorAll('img');
+                descImages.forEach(img => checkAndConvertHeic(img));
+            } catch (error) {
+                descContent.innerHTML = `<span style="color: #ff0000; font-weight: bold;">[ERROR] Błąd wczytywania opisu:<br>${error.message}</span>`;
+            }
+        }
+
+        // Obracanie układu na mobilkach
+        if (rotateBtn) {
+            rotateBtn.addEventListener('click', (e) => {
+                e.stopPropagation(); // Żeby kliknięcie w przycisk nie zamykało modala
+                modalContent.classList.toggle('rotated');
+            });
+        }
+
+        // POPRAWKA: Tego brakowało w Twoim pliku! Nasłuchiwanie na krzyżyk (X)
+        const modalCloseBtn = document.getElementById('modal-close');
+        if (modalCloseBtn) {
+            modalCloseBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation(); // Ten knebel ratuje sytuację
+
+                modal.classList.remove('active');
+                modalImg.src = '';
+                modalContent.classList.remove('rotated');
+            });
+        }
+
+        // Zamknięcie modala po kliknięciu poza obrazek (w tło)
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal || e.target.classList.contains('modal-content')) {
+                modal.classList.remove('active');
+                modalImg.src = '';
+                modalContent.classList.remove('rotated');
+            }
+        });
+
+        console.log("%c Digiart Initialized - RAWR XD ", "color: #00ff00; background: #000; font-family: monospace; border: 1px solid #ff007f;");
+    </script>
+</body>
+</html>
