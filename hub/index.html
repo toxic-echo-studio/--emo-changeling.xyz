@@ -200,5 +200,176 @@
         console.log("%c Welcome to the backend. RAWR XD. ", "color: #ff007f; background: #000; font-size: 12px; font-family: monospace;");
         console.log("Build: 20260526 | System: Toxic Echo Studio | Instance: HUB");
     </script>
+
+<!-- Floating Navigation Menu -->
+<nav class="floating-nav" aria-label="Menu nawigacyjne">
+    <div class="floating-nav-menu" id="floating-nav-menu" aria-hidden="true" style="display: none;">
+        <div class="floating-nav-section">
+            <div class="floating-nav-section-title">Główna strona</div>
+            <a href="https://emo-changeling.xyz/" class="floating-nav-link">Home Page</a>
+            <a href="https://emo-changeling.xyz/pl/main-o-nas/" class="floating-nav-link">O nas</a>
+            <a href="https://emo-changeling.xyz/en/main-about/" class="floating-nav-link">About Us</a>
+        </div>
+        <div class="floating-nav-section">
+            <div class="floating-nav-section-title">Wiki</div>
+            <a href="https://wiki.emo-changeling.xyz/" class="floating-nav-link">Wiki Home</a>
+            <a href="https://wiki.emo-changeling.xyz/pl/wiki-o-nas/" class="floating-nav-link">O nas (Wiki)</a>
+            <a href="https://wiki.emo-changeling.xyz/en/wiki-about/" class="floating-nav-link">About (Wiki)</a>
+            <a href="https://wiki.emo-changeling.xyz/artykuly/historia-emo-scene-w-5-minut/" class="floating-nav-link">Artykuł: Historia</a>
+        </div>
+        <div class="floating-nav-section">
+            <div class="floating-nav-section-title">Galeria</div>
+            <a href="https://gallery.emo-changeling.xyz/" class="floating-nav-link">Galeria Home</a>
+            <a href="https://gallery.emo-changeling.xyz/ptaszarnia/" class="floating-nav-link">Ptaszarnia</a>
+            <a href="https://gallery.emo-changeling.xyz/ptaszarnia/nokill/" class="floating-nav-link">Ptaszarnia NoKill</a>
+            <a href="https://gallery.emo-changeling.xyz/photo/" class="floating-nav-link">Zdjęcia (Photo)</a>
+            <a href="https://gallery.emo-changeling.xyz/digiart/" class="floating-nav-link">Digiart</a>
+            <a href="https://gallery.emo-changeling.xyz/other/" class="floating-nav-link">Monster Art</a>
+        </div>
+        <div class="floating-nav-section">
+            <div class="floating-nav-section-title">Hub & Spotlight</div>
+            <a href="https://hub.emo-changeling.xyz/" class="floating-nav-link">Hub Home</a>
+            <a href="https://hub.emo-changeling.xyz/blackhole/" class="floating-nav-link">Linkownia PL</a>
+            <a href="https://hub.emo-changeling.xyz/blackhole-eng/" class="floating-nav-link">Linkownia EN</a>
+            <a href="https://spotlight.emo-changeling.xyz/" class="floating-nav-link">Spotlight</a>
+            <a href="https://rant.emo-changeling.xyz/" class="floating-nav-link">Insta Rant</a>
+        </div>
+    </div>
+    <button class="floating-nav-trigger" id="floating-nav-trigger" aria-label="Otwórz menu nawigacyjne" aria-expanded="false" aria-controls="floating-nav-menu">
+        <img src="/img/navigation.png" alt="Nawigacja" width="48" height="48">
+    </button>
+</nav>
+
+<style>
+.floating-nav {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    font-family: 'Roboto Mono', monospace, sans-serif;
+    text-align: left;
+}
+.floating-nav-trigger {
+    width: 48px;
+    height: 48px;
+    background: #000;
+    border: 2px solid #ff007f;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    box-shadow: 0 0 10px #ff007f;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.floating-nav-trigger:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #00ff00;
+}
+.floating-nav-trigger img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: block;
+}
+.floating-nav-menu {
+    position: absolute;
+    bottom: 60px;
+    right: 0;
+    background: #050505;
+    border: 2px solid #ff007f;
+    box-shadow: 0 0 20px rgba(255, 0, 127, 0.5);
+    border-radius: 8px;
+    width: 250px;
+    max-height: 400px;
+    overflow-y: auto;
+    display: none;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s, transform 0.3s;
+}
+.floating-nav-menu.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+.floating-nav-section {
+    border-bottom: 1px dashed #333;
+    padding: 8px 12px;
+}
+.floating-nav-section:last-child {
+    border-bottom: none;
+}
+.floating-nav-section-title {
+    color: #00ff00;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+.floating-nav-link {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 13px;
+    display: block;
+    padding: 3px 0;
+    transition: color 0.15s;
+}
+.floating-nav-link:hover {
+    color: #ff007f;
+    text-decoration: underline;
+}
+</style>
+
+<script>
+(function() {
+    function initFloatingNav() {
+        const trigger = document.getElementById('floating-nav-trigger');
+        const menu = document.getElementById('floating-nav-menu');
+        if (!trigger || !menu) return;
+
+        trigger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const expanded = trigger.getAttribute('aria-expanded') === 'true';
+            trigger.setAttribute('aria-expanded', !expanded);
+            if (!expanded) {
+                menu.style.display = 'block';
+                setTimeout(() => menu.classList.add('active'), 10);
+                menu.setAttribute('aria-hidden', 'false');
+            } else {
+                menu.classList.remove('active');
+                const transitionHandler = () => {
+                    menu.style.display = 'none';
+                    menu.removeEventListener('transitionend', transitionHandler);
+                };
+                menu.addEventListener('transitionend', transitionHandler);
+                menu.setAttribute('aria-hidden', 'true');
+            }
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!menu.contains(e.target) && e.target !== trigger) {
+                if (menu.classList.contains('active')) {
+                    trigger.setAttribute('aria-expanded', 'false');
+                    menu.classList.remove('active');
+                    const transitionHandler = () => {
+                        menu.style.display = 'none';
+                        menu.removeEventListener('transitionend', transitionHandler);
+                    };
+                    menu.addEventListener('transitionend', transitionHandler);
+                    menu.setAttribute('aria-hidden', 'true');
+                }
+            }
+        });
+    }
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initFloatingNav);
+    } else {
+        initFloatingNav();
+    }
+})();
+</script>
+
 </body>
 </html>
