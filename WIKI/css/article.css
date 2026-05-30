@@ -62,6 +62,15 @@ body.article-page span {
     letter-spacing: normal !important;
 }
 
+.article-subtitle {
+    font-style: italic;
+    font-size: 1.05rem !important;
+    color: #ccc !important;
+    line-height: 1.6 !important;
+    margin-top: 15px !important;
+    margin-bottom: 5px !important;
+}
+
 .article-body {
     font-weight: 400;
 }
