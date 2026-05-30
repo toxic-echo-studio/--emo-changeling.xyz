@@ -21,12 +21,12 @@
           "description": "Prezencja medialna, manifest artystyczny i sekcje kontaktowe.",
           "languages": ["pl"]
         },
-        "/o-nas/": {
+        "/pl/main-o-nas/": {
           "title": "O nas",
           "description": "Szczegółowy opis projektu, tożsamości DID oraz wytycznych dla AI.",
           "languages": ["pl"]
         },
-        "/o-nas-eng/": {
+        "/en/main-about/": {
           "title": "About Us",
           "description": "English version of the project overview and AI guidelines.",
           "languages": ["en"]
@@ -47,28 +47,28 @@
             "description": "Główny indeks galerii z odnośnikami do kategorii.",
             "languages": ["pl"]
           },
-          "/Ptaszarnia/": {
+          "/ptaszarnia/": {
             "title": "Ptaszarnia",
             "description": "Kolekcja grafik cyfrowych przedstawiających artystów i influencerów jako gołębie.",
             "languages": ["pl"]
           },
-          "/Photo/": {
+          "/photo/": {
             "title": "Photo",
             "description": "Kolekcja fotografii i reportaży subkulturowych.",
             "languages": ["pl"]
           },
-          "/Digiart/": {
+          "/digiart/": {
             "title": "Digiart",
             "description": "Sztuka cyfrowa tworzona w 100% przez człowieka (Vikasiek).",
             "languages": ["pl"]
           },
-          "/Other/": {
+          "/other/": {
             "title": "Other",
             "description": "Różnorodne grafiki i poboczne prace wizualne.",
             "languages": ["pl"]
           },
           "/graphics/": {
-            "title": "Grafics",
+            "title": "graphics",
             "description": "Projekty graficzne, logotypy i alternatywne formy wizualne.",
             "languages": ["pl"]
           }
@@ -112,12 +112,12 @@
             "description": "Główny indeks wyróżnionych projektów artystycznych.",
             "languages": ["pl"]
           },
-          "/o-nas/": {
+          "/pl/main-o-nas/": {
             "title": "O nas (Spotlight)",
             "description": "Informacje o twórcach powiązane ze Spotlight.",
             "languages": ["pl"]
           },
-          "/o-nas-eng/": {
+          "/en/main-about/": {
             "title": "About Us (Spotlight)",
             "description": "English version of the Spotlight creators information.",
             "languages": ["en"]
@@ -157,12 +157,12 @@
             "description": "Centrum wiedzy o subkulturach Emo i Scene. Historia, muzyka i opisy stylówy.",
             "languages": ["pl"]
           },
-          "/o-nas/": {
+          "/pl/main-o-nas/": {
             "title": "O nas (Wiki)",
             "description": "Informacje o twórcach projektu.",
             "languages": ["pl"]
           },
-          "/o-nas-eng/": {
+          "/en/main-about/": {
             "title": "About Us (Wiki)",
             "description": "English version of the Wiki creators information.",
             "languages": ["en"]

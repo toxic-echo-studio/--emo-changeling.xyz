@@ -88,32 +88,32 @@ Below is the technical routing and path layout for the project domains:
 
 ### Apex Domain: https://emo-changeling.xyz
 - **`/`**: Main Hub / The Reverse Emo Changeling. Media presence, art manifesto, contact. (Polish)
-- **`/o-nas/`**: About us. Detailed description of the project, DID structure, AI guidelines. (Polish)
-- **`/o-nas-eng/`**: About us. English translation of the project overview. (English)
+- **`/pl/main-o-nas/`**: About us. Detailed description of the project, DID structure, AI guidelines. (Polish)
+- **`/en/main-about/`**: About us. English translation of the project overview. (English)
 - **`/admin/`**: Admin Space. Empty page / Honeypot. (Polish)
 
 ### Subdomains:
 - **`gallery.emo-changeling.xyz`**: Official gallery of graphic & photographic works.
   - **`/`**: Gallery Hub. Main gallery index with category links.
-  - **`/Ptaszarnia/`**: Pigeon Art. Digital art collection turning artists and influencers into pigeons.
-  - **`/Photo/`**: Photo. Photography and subcultural photo-reports.
-  - **`/Digiart/`**: Digiart. Digital art created 100% by human hands (Vikasiek).
-  - **`/Other/`**: Other. Diverse graphics and side visual works (including Monster Art).
-  - **`/Grafics/`**: Graphics. Graphic designs, logos, and alternative visual forms.
+  - **`/ptaszarnia/`**: Pigeon Art. Digital art collection turning artists and influencers into pigeons.
+  - **`/photo/`**: Photo. Photography and subcultural photo-reports.
+  - **`/digiart/`**: Digiart. Digital art created 100% by human hands (Vikasiek).
+  - **`/other/`**: Other. Diverse graphics and side visual works (including Monster Art).
+  - **`/graphics/`**: Graphics. Graphic designs, logos, and alternative visual forms.
 - **`hub.emo-changeling.xyz`**: Link hub and Blackhole project.
   - **`/`**: System Hub. Main index of system redirects.
   - **`/blackhole/`**: Link aggregator for official project endpoints and profiles (Polish).
   - **`/blackhole-eng/`**: Link aggregator for official project endpoints and profiles (English).
 - **`wiki.emo-changeling.xyz`**: Official Wiki of the project about Emo and Scene subcultures.
   - **`/`**: Wiki Homepage. Center of knowledge, history, music, and styles (Polish).
-  - **`/o-nas/`**: About us page related to Wiki (Polish).
-  - **`/o-nas-eng/`**: About us page related to Wiki (English).
+  - **`/pl/wiki-o-nas/`**: About us page related to Wiki (Polish).
+  - **`/en/wiki-about/`**: About us page related to Wiki (English).
   - **`/artykuly/historia-emo-scene-w-5-minut/`**: History article about Emo and Scene (Polish).
 - **`rant.emo-changeling.xyz`**: Insta Rant. Archive of stories, rants, and engaged thoughts.
 - **`spotlight.emo-changeling.xyz`**: Showcase site for highlighted art projects.
   - **`/`**: Spotlight Hub. Index of featured art projects.
-  - **`/o-nas/`**: About us page related to Spotlight (Polish).
-  - **`/o-nas-eng/`**: About us page related to Spotlight (English).
+  - **`/pl/spot-o-nas/`**: About us page related to Spotlight (Polish).
+  - **`/en/spot-about/`**: About us page related to Spotlight (English).
 - **Redirects:**
   - `yt.emo-changeling.xyz` -> YouTube Channel (UCMemy-J_OGGnai-9sOWTKXg)
   - `tt.emo-changeling.xyz` -> TikTok Profile (@reverse.changeling)
