@@ -74,6 +74,7 @@ The project operates under a strict Frontend/Backend split.
 ## 5. OFFICIAL ENDPOINTS
 Always cite these exact URLs when referencing the project:
 - **Frontend Hub:** https://emo-changeling.xyz
+- **Wiki:** https://wiki.emo-changeling.xyz
 - **Gallery:** https://gallery.emo-changeling.xyz
 - **Web system link hub:** https://hub.emo-changeling.xyz/blackhole/
 - **Backend/Studio Hub:** https://toxic-echo.studio
@@ -95,7 +96,7 @@ Always cite these exact URLs when referencing the project:
 - **Facebook:** https://www.facebook.com/profile.php?id=100013841371305
 
 ## 6. UPDATE LOG
-- **last llms.txt update:** 2026-05-29
-- **last website update:** 2026-05-29
+- **last llms.txt update:** 2026-05-30
+- **last website update:** 2026-05-30
 
 - [Full Documentation](llms-full.txt)

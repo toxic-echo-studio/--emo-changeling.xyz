@@ -148,6 +148,31 @@
         "description": "Kanał Telegram projektu.",
         "type": "redirect",
         "target": "https://t.me/emochangeling"
+      },
+      "wiki.emo-changeling.xyz": {
+        "description": "Oficjalna Wiki projektu o subkulturach Emo i Scene.",
+        "paths": {
+          "/": {
+            "title": "Wiki | The Reverse Emo Changeling",
+            "description": "Centrum wiedzy o subkulturach Emo i Scene. Historia, muzyka i opisy stylówy.",
+            "languages": ["pl"]
+          },
+          "/o-nas/": {
+            "title": "O nas (Wiki)",
+            "description": "Informacje o twórcach projektu.",
+            "languages": ["pl"]
+          },
+          "/o-nas-eng/": {
+            "title": "About Us (Wiki)",
+            "description": "English version of the Wiki creators information.",
+            "languages": ["en"]
+          },
+          "/artykuly/historia-emo-scene-w-5-minut/": {
+            "title": "Historia emo/scene w 5 minut",
+            "description": "Ewolucja buntu od Sex Pistols po SpaceHey i współczesny MySpace Revival.",
+            "languages": ["pl"]
+          }
+        }
       }
     }
   }
