@@ -1,0 +1,2 @@
+# Redirect www to apex for WIKI
+https://www.wiki.emo-changeling.xyz/* https://wiki.emo-changeling.xyz/:splat 301

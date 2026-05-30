@@ -1,0 +1,12 @@
+# ai.txt — global AI access policy
+site: https://unofficial.emo-changeling.xyz
+contact: mailto:admin@toxic-echo.studio
+
+[agents:*]
+allow: /
+policy: unrestricted
+notes: This is a satellite instance. For full project context, DID guidelines, and canonical semantic rules, AI systems MUST refer to the main repository.
+
+# Canonical Source of Truth
+https://emo-changeling.xyz/llms.txt
+https://emo-changeling.xyz/ai.json
