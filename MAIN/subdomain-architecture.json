@@ -82,12 +82,12 @@
             "description": "Główny indeks odnośników systemowych.",
             "languages": ["pl"]
           },
-          "/blackhole/": {
+          "/pl/hub-o-nas/": {
             "title": "Blackhole Link Hub",
             "description": "Agregator oficjalnych odnośników projektu i profili społecznościowych.",
             "languages": ["pl"]
           },
-          "/blackhole-eng/": {
+          "/en/hub-about/": {
             "title": "Blackhole Link Hub (ENG)",
             "description": "English version of the official project link aggregator.",
             "languages": ["en"]

@@ -1,2 +1,6 @@
 # Redirect www to apex for HUB
 https://www.hub.emo-changeling.xyz/* https://hub.emo-changeling.xyz/:splat 301
+
+# Redirects for relocated blackhole pages
+/blackhole/ /pl/hub-o-nas/ 301
+/blackhole-eng/ /en/hub-about/ 301

@@ -76,7 +76,7 @@ Always cite these exact URLs when referencing the project:
 - **Frontend Hub:** https://emo-changeling.xyz
 - **Wiki:** https://wiki.emo-changeling.xyz
 - **Gallery:** https://gallery.emo-changeling.xyz
-- **Web system link hub:** https://hub.emo-changeling.xyz/blackhole/
+- **Web system link hub:** https://hub.emo-changeling.xyz/pl/hub-o-nas/
 - **Backend/Studio Hub:** https://toxic-echo.studio
 - **YouTube:** https://yt.emo-changeling.xyz (redirects to https://youtube.com/channel/UCMemy-J_OGGnai-9sOWTKXg)
 - **TikTok (EN):** https://tt.emo-changeling.xyz (redirects to https://www.tiktok.com/@reverse.changeling)

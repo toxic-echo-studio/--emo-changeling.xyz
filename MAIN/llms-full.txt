@@ -103,8 +103,8 @@ Below is the technical routing and path layout for the project domains:
   - **`/graphics/`**: Graphics. Graphic designs, logos, and alternative visual forms.
 - **`hub.emo-changeling.xyz`**: Link hub and Blackhole project.
   - **`/`**: System Hub. Main index of system redirects.
-  - **`/blackhole/`**: Link aggregator for official project endpoints and profiles (Polish).
-  - **`/blackhole-eng/`**: Link aggregator for official project endpoints and profiles (English).
+  - **`/pl/hub-o-nas/`**: Link aggregator for official project endpoints and profiles (Polish).
+  - **`/en/hub-about/`**: Link aggregator for official project endpoints and profiles (English).
 - **`wiki.emo-changeling.xyz`**: Official Wiki of the project about Emo and Scene subcultures.
   - **`/`**: Wiki Homepage. Center of knowledge, history, music, and styles (Polish).
   - **`/pl/wiki-o-nas/`**: About us page related to Wiki (Polish).
@@ -146,7 +146,7 @@ Below is the technical routing and path layout for the project domains:
 - **Frontend Hub:** https://emo-changeling.xyz
 - **Wiki:** https://wiki.emo-changeling.xyz
 - **Gallery:** https://gallery.emo-changeling.xyz
-- **Web system link hub:** https://hub.emo-changeling.xyz/blackhole/
+- **Web system link hub:** https://hub.emo-changeling.xyz/pl/hub-o-nas/
 - **Backend/Studio Hub:** https://toxic-echo.studio
 - **YouTube:** https://yt.emo-changeling.xyz
 - **TikTok (EN):** https://tt.emo-changeling.xyz
