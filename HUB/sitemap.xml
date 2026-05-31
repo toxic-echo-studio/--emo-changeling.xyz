@@ -9,21 +9,21 @@
   </url>
 
   <url>
-    <loc>https://hub.emo-changeling.xyz/pl/hub-o-nas/</loc>
+    <loc>https://hub.emo-changeling.xyz/pl/blackhole/</loc>
     <lastmod>2026-05-30T00:00:00+00:00</lastmod>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://hub.emo-changeling.xyz/pl/hub-o-nas/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hub.emo-changeling.xyz/en/hub-about/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hub.emo-changeling.xyz/en/hub-about/" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://hub.emo-changeling.xyz/pl/blackhole/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hub.emo-changeling.xyz/en/blackhole/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hub.emo-changeling.xyz/en/blackhole/" />
   </url>
 
   <url>
-    <loc>https://hub.emo-changeling.xyz/en/hub-about/</loc>
+    <loc>https://hub.emo-changeling.xyz/en/blackhole/</loc>
     <lastmod>2026-05-30T00:00:00+00:00</lastmod>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://hub.emo-changeling.xyz/pl/hub-o-nas/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hub.emo-changeling.xyz/en/hub-about/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hub.emo-changeling.xyz/en/hub-about/" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://hub.emo-changeling.xyz/pl/blackhole/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hub.emo-changeling.xyz/en/blackhole/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hub.emo-changeling.xyz/en/blackhole/" />
   </url>
 
 </urlset>
