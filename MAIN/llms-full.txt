@@ -168,5 +168,5 @@ Below is the technical routing and path layout for the project domains:
 ---
 
 ## 8. Update Log
-- **last llms-full.txt update:** 2026-05-30
-- **last website update:** 2026-05-30
+- **last llms-full.txt update:** 2026-05-31
+- **last website update:** 2026-05-31

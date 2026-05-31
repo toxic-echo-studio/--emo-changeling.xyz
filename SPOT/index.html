@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="pl" data-version="0.2.7" data-build="20260526" data-system="Toxic Echo Studio">
+<html lang="pl" data-version="0.2.9" data-build="20260531" data-system="Toxic Echo Studio">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="preload" as="image" href="/img/bannerM1.webp" fetchpriority="high">
-    <link rel="preload" href="/css/style.css?v=20260526-v2" as="style">
+    <link rel="preload" href="css/style.css?v=20260526-v2" as="style">
 
     <meta name="theme-color" content="#000000">
 
@@ -37,7 +37,7 @@
     <meta name="twitter:description" content="Techniczna instancja projektu.">
     <meta name="twitter:image" content="https://emo-changeling.xyz/img/Nico_Lach_canonical_photo.jpg">
 
-    <link rel="stylesheet" href="/css/style.css?v=20260526-v2">
+    <link rel="stylesheet" href="css/style.css?v=20260526-v2">
 
     <script type="application/ld+json">
         {
@@ -104,6 +104,8 @@
 </head>
 
 <body>
+<!-- Zrobiłem refaktoryzację kodu: przeniosłem style do osobnego pliku i zaktualizowałem wersję do 0.2.9 (20260531) -->
+
     <header class="main-header">
         <div class="banner-container">
             <img src="/img/bannerM1.webp" width="1920" height="1080" fetchpriority="high" alt="Baner projektu The Reverse Emo Changeling w estetyce emo/scene" class="banner">
@@ -191,14 +193,14 @@
 
 
     <script>
-        console.log("%c The Reverse Emo Changeling [SPOTLIGHT] - v.0.2.7 ", "color: #00ff00; background: #050505; font-size: 14px; font-weight: bold; border: 2px solid #ff007f; padding: 5px; font-family: monospace;");
+        console.log("%c The Reverse Emo Changeling [SPOTLIGHT] - v.0.2.9 ", "color: #00ff00; background: #050505; font-size: 14px; font-weight: bold; border: 2px solid #ff007f; padding: 5px; font-family: monospace;");
         console.log("%c Welcome to the backend. RAWR XD. ", "color: #ff007f; background: #000; font-size: 12px; font-family: monospace;");
-        console.log("Build: 20260526 | System: Toxic Echo Studio | Instance: Spotlight");
+        console.log("Build: 20260531 | System: Toxic Echo Studio | Instance: Spotlight");
     </script>
 
 <!-- Floating Navigation Menu -->
 <nav class="floating-nav" aria-label="Menu nawigacyjne">
-    <div class="floating-nav-menu" id="floating-nav-menu" aria-hidden="true" style="display: none;">
+    <div class="floating-nav-menu" id="floating-nav-menu" aria-hidden="true">
         <div class="floating-nav-section">
             <div class="floating-nav-section-title">Główna strona</div>
             <a href="https://emo-changeling.xyz/" class="floating-nav-link">Home Page</a>
@@ -231,87 +233,7 @@
     </button>
 </nav>
 
-<style>
-.floating-nav {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 9999;
-    font-family: 'Roboto Mono', monospace, sans-serif;
-    text-align: left;
-}
-.floating-nav-trigger {
-    width: 48px;
-    height: 48px;
-    background: #000;
-    border: 2px solid #ff007f;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    box-shadow: 0 0 10px #ff007f;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-.floating-nav-trigger:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 15px #00ff00;
-}
-.floating-nav-trigger img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    display: block;
-}
-.floating-nav-menu {
-    position: absolute;
-    bottom: 60px;
-    right: 0;
-    background: #050505;
-    border: 2px solid #ff007f;
-    box-shadow: 0 0 20px rgba(255, 0, 127, 0.5);
-    border-radius: 8px;
-    width: 250px;
-    max-height: 400px;
-    overflow-y: auto;
-    display: none;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.3s, transform 0.3s;
-}
-.floating-nav-menu.active {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);
-}
-.floating-nav-section {
-    border-bottom: 1px dashed #333;
-    padding: 8px 12px;
-}
-.floating-nav-section:last-child {
-    border-bottom: none;
-}
-.floating-nav-section-title {
-    color: #00ff00;
-    font-size: 11px;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 4px;
-}
-.floating-nav-link {
-    color: #e0e0e0;
-    text-decoration: none;
-    font-size: 13px;
-    display: block;
-    padding: 3px 0;
-    transition: color 0.15s;
-}
-.floating-nav-link:hover {
-    color: #ff007f;
-    text-decoration: underline;
-}
-</style>
+
 
 <script>
 (function() {

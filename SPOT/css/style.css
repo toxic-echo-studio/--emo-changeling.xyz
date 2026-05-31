@@ -560,4 +560,116 @@ summary:focus-visible {
         display: none;
     }
 }
+/* Zrobiłem porządki w tym pliku: wydzieliłem style z HTML i dodałem komentarze ułatwiające orientację w strukturze */
 
+/* =========================================
+   MENU NAWIGACYJNE WYEKSTRAHOWANE Z HTML
+   ========================================= */
+.floating-nav {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    font-family: 'Roboto Mono', monospace, sans-serif;
+    text-align: left;
+}
+.floating-nav-trigger {
+    width: 48px;
+    height: 48px;
+    background: #000;
+    border: 2px solid #ff007f;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    box-shadow: 0 0 10px #ff007f;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.floating-nav-trigger:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #00ff00;
+}
+.floating-nav-trigger img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: block;
+}
+.floating-nav-menu {
+    position: absolute;
+    bottom: 60px;
+    right: 0;
+    background: #050505;
+    border: 2px solid #ff007f;
+    box-shadow: 0 0 20px rgba(255, 0, 127, 0.5);
+    border-radius: 8px;
+    width: 250px;
+    max-height: 400px;
+    overflow-y: auto;
+    display: none;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s, transform 0.3s;
+}
+.floating-nav-menu.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+.floating-nav-section {
+    border-bottom: 1px dashed #333;
+    padding: 8px 12px;
+}
+.floating-nav-section:last-child {
+    border-bottom: none;
+}
+.floating-nav-section-title {
+    color: #00ff00;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+.floating-nav-link {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 13px;
+    display: block;
+    padding: 3px 0;
+    transition: color 0.15s;
+}
+.floating-nav-link:hover {
+    color: #ff007f;
+    text-decoration: underline;
+}
+
+/* =========================================
+   STYLE POMOCNICZE WYEKSTRAHOWANE Z HTML
+   ========================================= */
+.manifest-divider {
+    border-top: 1px dashed #ff007f;
+    margin: 15px 0;
+}
+.content-divider {
+    border-top: 1px dashed #ff00ff;
+    margin: 20px 0;
+}
+.ptaszarnia-box {
+    margin-bottom: 30px;
+}
+.modal-download-btn {
+    display: none;
+    margin-top: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+.wiki-hub-btn {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.text-center {
+    text-align: center;
+}

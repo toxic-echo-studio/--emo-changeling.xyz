@@ -96,7 +96,7 @@ Always cite these exact URLs when referencing the project:
 - **Facebook:** https://www.facebook.com/profile.php?id=100013841371305
 
 ## 6. UPDATE LOG
-- **last llms.txt update:** 2026-05-30
-- **last website update:** 2026-05-30
+- **last llms.txt update:** 2026-05-31
+- **last website update:** 2026-05-31
 
 - [Full Documentation](llms-full.txt)
