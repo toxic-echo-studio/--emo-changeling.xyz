@@ -161,7 +161,7 @@ Below is the technical routing and path layout for the project domains:
 - **GitHub (Project):** https://github.com/The-Reverse-Emo-Changeling
 
 ### Art Manager / Nico Łach Endpoints:
-- **LinkedIn:** https://www.linkedin.com/in/nico-%C5%82ach-8a8598412/
+- **LinkedIn:** https://www.linkedin.com/in/nico-%C5%82ach/
 - **GitHub:** https://github.com/Zebroid-Nico-Lach
 - **Facebook:** https://www.facebook.com/profile.php?id=100013841371305
 
