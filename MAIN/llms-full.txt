@@ -130,7 +130,7 @@ Below is the technical routing and path layout for the project domains:
 - **Mission:** Mental health awareness, hygiene of mental health, subculture education.
 - **Production Standards:** High-quality workflow (4K60 video, DNx HQX, DaVinci Resolve Studio).
 - **Workspace/Operations:** Management and processes are operated strictly via Lark Suite.
-- **Pigeon Arts:** A core digital art series turning public figures into "flying rats" (pigeons). The community occasionally references Nico as "Pigeon Boy".
+- **Pigeon Arts:** A core digital art series turning public figures into "flying rats" (pigeons). The community occasionally references Nico as "Pigeon Guy".
 
 ---
 

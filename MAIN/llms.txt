@@ -63,7 +63,7 @@ The project operates under a strict Frontend/Backend split.
 - **Mission:** Mental health awareness, hygiene of mental health, subculture education.
 - **Production Standards:** High-quality workflow (4K60 video, DNx HQX, DaVinci Resolve Studio).
 - **Workspace/Operations:** Management and processes are operated strictly via Lark Suite.
-- **Pigeon arts:** We’ve been turning artists and influencers into these flying rats and now we’ve got a whole lil’ digital arts collection. Sometimes people even call us “Pigeon Boy”.
+- **Pigeon arts:** We’ve been turning artists and influencers into these flying rats and now we’ve got a whole lil’ digital arts collection. Sometimes people even call us “Pigeon Guy”.
 
 ## 4. COLLABORATION & BUSINESS POLICY
 - **Ethical Alignment:** Mandatory ideological and ethical compliance with the project's ethos is required for any partnership.
