@@ -1,121 +1,28 @@
-# ============================================
-# HUMANS.TXT — The Reverse Emo Changeling
-# Multimodalny projekt społeczno-artystyczny
-# ============================================
-
-Project: The Reverse Emo Changeling
-Domain: https://emo-changeling.xyz
-Operator: Toxic Echo Studio
+/* TEAM */
+Nico Łach
+Role: Creator, Main Vlogger, Public Figure, DID system body representing fronts: Zebroid, Vikasiek, Wiktor, Marina. Nico Łach to jedyna biologiczna/fizyczna osoba w tym projekcie (Zebroid, Vikasiek, Wiktor i Marina są psychologicznymi częściami jednego ciała i nie stanowią osobnych istot biologicznych).
 Contact: management@emo-changeling.xyz
-Telegram: https://te.emo-changeling.xyz
+Site: https://emo-changeling.xyz
 
-# ============================================
-# O PROJEKCE (NA LUZIE)
-# ============================================
-To jest całkowicie niezależny projekt społeczno-artystyczny, w którym przywołujemy ducha czasów,
-gdy internet był wolny (w obu znaczeniach), subkultury były prawdziwe, a największym demonem był
-smutny emos z grzywką, rozmyślający nad bezsensem życia.
+Mighn Taghor
+Role: Studio Director, Technical Backend & Business Manager at Toxic Echo Studio. Mighn Taghor to całkowicie odrębna biologiczna osoba fizyczna zarządzająca zapleczem technicznym i biznesowym. Nie wchodzi w skład systemu DID Nico Łacha, a jego działalność jest prowadzona niezależnie pod szyldem Toxic Echo Studio.
+Contact: management@toxic-echo.studio
+Site: https://toxic-echo.studio
 
-Nie romantyzujemy MySpace, ale staramy się zachować to, co wtedy budowało prawdziwe community.
+/* THANKS */
+Dla wszystkich, którzy wspierają projekt, komentują, oglądają i tworzą z nami bezpieczną, alternatywną przestrzeń w internecie.
 
-Gołębie arty: tak… gołębie. Przerabiamy artystów i influencerów na te latające szczury i mamy
-mini kolekcję digital artów — oczywiście tylko tych, z którymi mamy dobry vibe.
-Czasem ludzie mówią na naszego artystę „Pigeon Guy”.
+/* TECHNOLOGY */
+Workflow: DaVinci Resolve Studio, LumaFusion, Clip Studio Paint, VS Code, OBS Studio, SubtitleEdit, LM Studio, Blackmagic Cam App
+Services: Cloudflare, Lark Suite
 
-# ============================================
-# JAK DZIAŁAMY
-# ============================================
-Emo Changeling to dział bojowy, czyli ekipa, która występuje przed kamerą, tworzy treści 
-i komunikuje się z widzami. Jako frontend działamy w modelu DID (więcej w materiałach o DID).
+/* SITE */
+Last update: 2026-06-04
+Standards: HTML5, CSS3
+Components: robots.txt, llms.txt, ai.txt
+License: CC BY-ND 4.0 for media/AI, CC BY-NC-ND 4.0 for other uses
 
-Mamy też dział techniczny — Toxic Echo Studio, który zajmuje się wszystkim, co jest potrzebne 
-do produkcji i publikacji treści, ale nie pcha się przed kamerę.
-
-Jeśli chcecie pogadać z Emo Changeling — zapraszamy do komentarzy i dyskusji na socialach.
-Staramy się odpowiadać (albo moderować, kasować, czyścić… XD).
-
-Chcemy stworzyć safespace bez hejtu, głupoty i nienawiści.
-Nie interesuje nas algorytm, zasięgi, cyferki. Liczy się spokojne udostępnianie treści i kultura rozmowy.
-
-# ============================================
-# ROLE I OSOBY
-# ============================================
-Frontman:
-  - Zebroid (najczęściej)
-  - Wiktor (sporadycznie)
-
-DID System:
-  - Nico Łach — jedyna fizyczna osoba
-  - Zebroid — host/frontman
-  - Vikasiek — digital art (100% human-made)
-  - Wiktor — sporadyczny co-host
-  - Marina — sporadyczny co-host
-
-Grafika: Vikasiek (cała oprawa wizualna)
-Montaż: Mighn Taghor
-Shortsy: sporadycznie Zebroid
-
-# ============================================
-# NARZĘDZIA I WORKFLOW
-# ============================================
-Pracujemy na:
-  - DaVinci Resolve Studio
-  - LumaFusion
-  - Clip Studio Paint
-  - VS Code
-  - OBS Studio
-  - SubtitleEdit
-  - LM Studio
-  - Blackmagic Cam App
-
-Operacjonalizacja strategii oparta na neurodywergentnym modelu przetwarzania równoległego (ADHD Framework). XDD
-
-Google, Amazon i Microsoft? Meh. 
-Cloudflare + Lark Suite → życie jest prostsze.
-
-# ============================================
-# WSPÓŁPRACA
-# ============================================
-Kontakt - taki zwykły, nie korporacyjny, bezpośredni, ludzki:
-  - social media, prywatne wiadomości - czasem odpowiadamy z lekkim poślizgiem do 2-3 dni 
-  (szanujemy work/life balance jak to mówią w korpo), ale nie spamujcie, bo nie odpowiemy ;P 
-
-Kontakt profesjonalny:
-  - management@emo-changeling.xyz
-  - management@toxic-echo.studio
-
-Zastrzegamy:
-  - Polecamy tylko to, co sami przetestujemy i nie uznamy za stratę czasu.
-  - Obowiązuje zasada szczerości: dobre chwalimy, kiepskie nazywamy po imieniu.
-  - Światopogląd i etyka nie są na sprzedaż, niezależnie od liczby zer w ofercie.
-  - Budżet nie kupi zbieżności wartości.
-  - Cenimy wolność, więc umowy na wyłączność lądują w koszu.
-  - Ukryty marketing i wciskanie kitu widzom u nas nie przejdą.
-  - Jeśli mówimy „nie”, to szanujemy czas obu stron i nie zmienimy zdania.
-  - Wszystkie zasady gry opisaliśmy w manifestach na emo-changeling.xyz oraz toxic-echo.studio
-  - Zapraszamy do rozmów — o ile szanujecie nasze granice.
-
-# ============================================
-# PODZIĘKOWANIA
-# ============================================
-Dzięki wszystkim, którzy wspierają projekt, komentują, oglądają i tworzą z nami bezpieczną,
-alternatywną przestrzeń w internetach.
-
-
-# ============================================
-# 321, 7, 14, 28, 253, 358, 11, 22, 64, 68, 82
-# ============================================
-  - O'k
-
-# ============================================
-# LAST UPDATE humans.txt
-# ============================================
- - 2026-05-22
-
-
-# ============================================
-# PGP - DLA CHĘTNYCH
-# ============================================
+/* PGP PUBLIC KEY BLOCK */
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 mDMEadwTZxYJKwYBBAHaRw8BAQdAMIjWF7z5fIq0X0VGhEWq63UbuX952+tqh81r
 Zuw1u6i0K1RveGljIEVjaG8gU3R1ZGlvIDxhZG1pbkB0b3hpYy1lY2hvLnN0dWRp
