@@ -38,16 +38,22 @@
 
   <url>
     <loc>https://gallery.emo-changeling.xyz/digiart/</loc>
-    <lastmod>2026-06-04T00:00:00+00:00</lastmod>
+    <lastmod>2026-06-07T00:00:00+00:00</lastmod>
     <priority>0.8</priority>
 
   </url>
 
   <url>
     <loc>https://gallery.emo-changeling.xyz/other/</loc>
-    <lastmod>2026-06-04T00:00:00+00:00</lastmod>
+    <lastmod>2026-06-07T00:00:00+00:00</lastmod>
     <priority>0.8</priority>
 
+  </url>
+
+  <url>
+    <loc>https://gallery.emo-changeling.xyz/digiart/cindy/</loc>
+    <lastmod>2026-06-07T00:00:00+00:00</lastmod>
+    <priority>0.8</priority>
   </url>
 
 </urlset>

@@ -1157,3 +1157,12 @@ summary:focus-visible {
 .text-center {
     text-align: center;
 }
+
+/* =========================================
+   COMIC SANS OVERRIDE FOR DESCRIPTIONS
+   ========================================= */
+.description-content:not([style*="font-family" i]),
+.description-content :not([style*="font-family" i]) {
+    font-family: "Comic Sans MS", "Comic Sans", cursive !important;
+}
+

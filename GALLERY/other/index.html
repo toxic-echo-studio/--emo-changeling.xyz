@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="pl" data-version="P0.1.8" data-build="20260531" data-system="Toxic Echo Studio">
+<html lang="pl" data-version="P0.1.9" data-build="20260607" data-system="Toxic Echo Studio">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="preload" as="image" href="/img/bannerM1.webp" fetchpriority="high">
-    <link rel="preload" href="../css/style.css?v=20260529" as="style">
+    <link rel="preload" href="../css/style.css?v=20260607" as="style">
 
     <meta name="theme-color" content="#000000">
 
@@ -33,7 +33,7 @@
     <meta name="twitter:description" content="Kolekcja 'gołębich artów'.">
     <meta name="twitter:image" content="https://gallery.emo-changeling.xyz/img/bannerM1.webp">
 
-    <link rel="stylesheet" href="../css/style.css?v=20260529">
+    <link rel="stylesheet" href="../css/style.css?v=20260607">
 
     <script type="application/ld+json">
         {
@@ -116,6 +116,7 @@
                         <span class="blink">Wczytywanie danych...</span>
                     </div>
                 </details>
+                <a href="" id="modal-download-btn" class="main-menu-btn modal-download-btn" download>DOWNLOAD MAX QUALITY (.TIF)</a>
             </div>
         </div>
     </div>
@@ -126,15 +127,30 @@
                 id: 1,
                 thumb: '/graphics/other/1/thumb.webp',
                 full: '/graphics/other/1/full.webp',
-                title: 'Gołąb #01: Start',
-                descUrl: '/graphics/other/1/opis.html'
+                title: 'Lando Norris',
+                download_tif: '/graphics/other/1/original.png'
             },
             {
                 id: 2,
                 thumb: '/graphics/other/2/thumb.webp',
                 full: '/graphics/other/2/full.webp',
-                title: 'Gołąb #02: Neon',
-                descUrl: '/graphics/other/2/opis.html'
+                title: 'Aussie Lemonade',
+                descUrl: '/graphics/other/2/opis.html',
+                download_tif: '/graphics/other/2/original.png'
+            },
+            {
+                id: 3,
+                thumb: '/graphics/other/3/thumb.webp',
+                full: '/graphics/other/3/full.webp',
+                title: 'Classic Flavor',
+                download_tif: '/graphics/other/3/original.png'
+            },
+            {
+                id: 4,
+                thumb: '/graphics/other/4/thumb.webp',
+                full: '/graphics/other/4/full.webp',
+                title: 'Ultra Strawberry Dreams',
+                download_tif: '/graphics/other/4/original.png'
             }
         ];
 
@@ -143,6 +159,7 @@
         const modalImg = document.getElementById('modal-image');
         const descContent = document.getElementById('description-content');
         const modalDetails = document.getElementById('modal-details');
+        const downloadBtn = document.getElementById('modal-download-btn');
         const rotateBtn = document.getElementById('modal-rotate-btn');
         const modalContent = document.querySelector('.modal-content');
 
@@ -197,68 +214,72 @@
             const imgEl = cardDiv.querySelector('img');
             checkAndConvertHeic(imgEl);
 
-            cardDiv.addEventListener('click', () => openModal(item));
+            cardDiv.addEventListener('click', () => {
+                if (item.link) {
+                    window.location.href = item.link;
+                } else {
+                    openModal(item);
+                }
+            });
             grid.appendChild(cardDiv);
         });
 
         // Otwieranie Modala i Fetchowanie HTML
         async function openModal(item) {
             modal.classList.add('active');
-            
-            // Handle HEIC for modal main image
-            if (item.full && (item.full.toLowerCase().endsWith('.heic') || item.full.toLowerCase().endsWith('.heif'))) {
-                modalImg.src = '';
-                modalImg.alt = 'Converting HEIC...';
-                try {
-                    const response = await fetch(item.full);
-                    const blob = await response.blob();
-                    if (typeof heic2any !== 'undefined') {
-                        const convertedBlob = await heic2any({
-                            blob: blob,
-                            toType: 'image/jpeg',
-                            quality: 0.8
-                        });
-                        const blobUrl = URL.createObjectURL(convertedBlob);
-                        modalImg.src = blobUrl;
-                        modalImg.alt = item.title;
+            modalImg.src = item.full;
+            modalImg.alt = item.title;
+
+            if (item.descUrl) {
+                modalDetails.style.display = 'block';
+                modalDetails.removeAttribute('open');
+                modalContent.classList.remove('rotated');
+                descContent.innerHTML = '<span class="blink">Wczytywanie danych z serwera...</span>';
+                
+                if (item.download_tif) {
+                    downloadBtn.href = item.download_tif;
+                    downloadBtn.style.display = 'inline-block';
+                    if (item.download_tif.toLowerCase().endsWith('.png')) {
+                        downloadBtn.textContent = 'DOWNLOAD MAX QUALITY (.PNG)';
+                    } else {
+                        downloadBtn.textContent = 'DOWNLOAD MAX QUALITY (.TIF)';
                     }
-                } catch (e) {
-                    console.error('Failed to convert modal HEIC image:', e);
-                    modalImg.src = item.full;
-                    modalImg.alt = item.title;
+                } else {
+                    downloadBtn.style.display = 'none';
+                }
+
+                try {
+                    const response = await fetch(item.descUrl);
+                    if (!response.ok) throw new Error('Nie znaleziono pliku opisu (404).');
+
+                    const htmlData = await response.text();
+
+                    if (htmlData.includes('id="gallery-grid"') || htmlData.includes('data-system="Toxic Echo Studio"')) {
+                        throw new Error('Serwer zwrócił stronę główną zamiast pliku opisu. Sprawdź ścieżkę!');
+                    }
+
+                    descContent.innerHTML = htmlData;
+                    
+                    const descImages = descContent.querySelectorAll('img');
+                    descImages.forEach(img => checkAndConvertHeic(img));
+                } catch (error) {
+                    descContent.innerHTML = `<span style="color: #ff0000; font-weight: bold;">[ERROR] Błąd wczytywania opisu:<br>${error.message}</span>`;
                 }
             } else {
-                modalImg.src = item.full;
-                modalImg.alt = item.title;
-            }
-
-            // Zwijamy details, resetujemy obrót układu i czyścimy stary kontent
-            modalDetails.removeAttribute('open');
-            modalContent.classList.remove('rotated');
-            descContent.innerHTML = '<span class="blink">Wczytywanie danych z serwera...</span>';
-
-            try {
-                const response = await fetch(item.descUrl);
-                if (!response.ok) throw new Error('Nie znaleziono pliku opisu (404).');
-
-                const htmlData = await response.text();
-
-                // ZABEZPIECZENIE przed podmianą na stronę główną
-                if (htmlData.includes('id="gallery-grid"') || htmlData.includes('data-system="Toxic Echo Studio"')) {
-                    throw new Error('Serwer zwrócił stronę główną zamiast pliku opisu. Sprawdź ścieżkę!');
+                modalDetails.style.display = 'none';
+                if (item.download_tif) {
+                    downloadBtn.href = item.download_tif;
+                    downloadBtn.style.display = 'inline-block';
+                    if (item.download_tif.toLowerCase().endsWith('.png')) {
+                        downloadBtn.textContent = 'DOWNLOAD MAX QUALITY (.PNG)';
+                    } else {
+                        downloadBtn.textContent = 'DOWNLOAD MAX QUALITY (.TIF)';
+                    }
+                } else {
+                    downloadBtn.style.display = 'none';
                 }
-
-                descContent.innerHTML = htmlData;
-                
-                // Convert any HEIC images inside description content
-                const descImages = descContent.querySelectorAll('img');
-                descImages.forEach(img => checkAndConvertHeic(img));
-            } catch (error) {
-                descContent.innerHTML = `<span style="color: #ff0000; font-weight: bold;">[ERROR] Błąd wczytywania opisu:<br>${error.message}</span>`;
             }
-        }
-
-        // Obracanie układu na mobilkach
+        }// Obracanie układu na mobilkach
         if (rotateBtn) {
             rotateBtn.addEventListener('click', (e) => {
                 e.stopPropagation(); // Żeby kliknięcie w przycisk nie zamykało modala
