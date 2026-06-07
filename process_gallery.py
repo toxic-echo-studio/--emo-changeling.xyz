@@ -87,6 +87,19 @@ def clean_description(html_content, target_img_dir_url):
         return f'{match.group(1)}="{target_img_dir_url}/{src_val}"'
         
     html_content = re.sub(r'(src|href)\s*=\s*["\']([^"\']+)["\']', replace_src, html_content)
+    
+    # Strip borders and border-radius around sketch images in style attributes (for future descriptions)
+    def clean_sketch_styles(match):
+        img_tag = match.group(0)
+        if 'sketch' in img_tag.lower():
+            # Remove border/border-radius properties from style attribute
+            img_tag = re.sub(r'border\s*:\s*[^;"]+;?', '', img_tag)
+            img_tag = re.sub(r'border-radius\s*:\s*[^;"]+;?', '', img_tag)
+            # Clean up empty style attributes if any remain
+            img_tag = re.sub(r'style\s*=\s*["\']\s*["\']', '', img_tag)
+        return img_tag
+        
+    html_content = re.sub(r'<img[^>]+>', clean_sketch_styles, html_content)
     return html_content
 
 def process_folder(folder_name, next_ids):
