@@ -332,21 +332,25 @@ def create_subgallery_page(category, slug, title, items):
     with open(template_path, 'r', encoding='utf-8') as f:
         html = f.read()
         
+    # Map category names to display names
+    cat_display = "Monster Art" if category == "other" else category.capitalize()
+    cat_upper = cat_display.upper()
+        
     # Replace metadata
-    html = re.sub(r'<title>.*?</title>', f'<title>{title} | {category.capitalize()} | Emo-Changeling Gallery</title>', html)
-    html = re.sub(r'<meta name="description" content=".*?">', f'<meta name="description" content="{title} - podgaleria w dziale {category.capitalize()}.">', html)
+    html = re.sub(r'<title>.*?</title>', f'<title>{title} | {cat_display} | Emo-Changeling Gallery</title>', html)
+    html = re.sub(r'<meta name="description" content=".*?">', f'<meta name="description" content="{title} - podgaleria w dziale {cat_display}.">', html)
     html = re.sub(r'<link rel="canonical" href=".*?">', f'<link rel="canonical" href="https://gallery.emo-changeling.xyz/{category}/{slug}/">', html)
     
     # OG and Twitter
-    html = re.sub(r'<meta property="og:title" content=".*?">', f'<meta property="og:title" content="{title} | {category.capitalize()} | Emo-Changeling Gallery">', html)
+    html = re.sub(r'<meta property="og:title" content=".*?">', f'<meta property="og:title" content="{title} | {cat_display} | Emo-Changeling Gallery">', html)
     html = re.sub(r'<meta property="og:url" content=".*?">', f'<meta property="og:url" content="https://gallery.emo-changeling.xyz/{category}/{slug}/">', html)
-    html = re.sub(r'<meta name="twitter:title" content=".*?">', f'<meta name="twitter:title" content="{title} | {category.capitalize()} | Emo-Changeling Gallery">', html)
+    html = re.sub(r'<meta name="twitter:title" content=".*?">', f'<meta name="twitter:title" content="{title} | {cat_display} | Emo-Changeling Gallery">', html)
     
     # Breadcrumbs
     breadcrumb_match = re.search(r'(<script type="application/ld\+json">[\s\S]*?</script>)', html)
     if breadcrumb_match:
         bc_block = breadcrumb_match.group(1)
-        bc_block_new = bc_block.replace("Ptaszarnia", category.capitalize())
+        bc_block_new = bc_block.replace("Ptaszarnia", cat_display)
         bc_block_new = bc_block_new.replace("ptaszarnia", category)
         bc_block_new = bc_block_new.replace("NoKill", title)
         bc_block_new = bc_block_new.replace("nokill", slug)
@@ -361,7 +365,7 @@ def create_subgallery_page(category, slug, title, items):
                   
     # Replace back button
     html = re.sub(r'<a href="\.\./" class="main-menu-btn" aria-label=".*?">.*?</a>',
-                  f'<a href="../" class="main-menu-btn" aria-label="Wróć do {category.capitalize()}">❮ WRÓĆ DO {category.upper()}</a>', html)
+                  f'<a href="../" class="main-menu-btn" aria-label="Wróć do {cat_display}">❮ WRÓĆ DO {cat_upper}</a>', html)
                   
     # Replace galleryData
     js_items = []
