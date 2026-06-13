@@ -142,8 +142,13 @@ def process_folder(folder_name, next_ids):
     all_files = os.listdir(folder_path)
     image_jpg = os.path.join(folder_path, "image.jpg")
     
-    # PNGs (exclude sketch.png)
-    png_files = [f for f in all_files if f.lower().endswith('.png') and f.lower() != 'sketch.png']
+    # PNGs (exclude draft sketches and inline images)
+    png_files = [
+        f for f in all_files 
+        if f.lower().endswith('.png') 
+        and not f.lower().startswith('sketch') 
+        and not f.lower().startswith('img_inline')
+    ]
     # TIFs
     tif_files = [f for f in all_files if f.lower().endswith('.tif') or f.lower().endswith('.tiff')]
     
@@ -221,11 +226,15 @@ def process_folder(folder_name, next_ids):
         shutil.copy(src_media, original_dest)
         gpg_sign_file(original_dest)
         
-        # 4. Copy sketch.png if exists and sign it
-        if "sketch.png" in all_files:
-            sketch_dest = os.path.join(target_dir, "sketch.png")
-            shutil.copy(os.path.join(folder_path, "sketch.png"), sketch_dest)
-            gpg_sign_file(sketch_dest)
+        # 4. Copy and sign all other draft/extra files (sketches, inline images)
+        for f in all_files:
+            f_lower = f.lower()
+            if f_lower in ["galeria.txt", "miniaturka.txt", "opis.html", "image.jpg", "image.png"] or f in media_files:
+                continue
+            if f_lower.startswith("sketch") or f_lower.startswith("img_inline"):
+                extra_dest = os.path.join(target_dir, f)
+                shutil.copy(os.path.join(folder_path, f), extra_dest)
+                gpg_sign_file(extra_dest)
             
         desc_url = None
         if has_description:
@@ -285,11 +294,15 @@ def process_folder(folder_name, next_ids):
             shutil.copy(src_media, original_dest)
             gpg_sign_file(original_dest)
             
-            # Copy sketch.png if exists
-            if "sketch.png" in all_files:
-                sketch_dest = os.path.join(target_dir, "sketch.png")
-                shutil.copy(os.path.join(folder_path, "sketch.png"), sketch_dest)
-                gpg_sign_file(sketch_dest)
+            # Copy and sign all other draft/extra files (sketches, inline images)
+            for f in all_files:
+                f_lower = f.lower()
+                if f_lower in ["galeria.txt", "miniaturka.txt", "opis.html", "image.jpg", "image.png"] or f in media_files:
+                    continue
+                if f_lower.startswith("sketch") or f_lower.startswith("img_inline"):
+                    extra_dest = os.path.join(target_dir, f)
+                    shutil.copy(os.path.join(folder_path, f), extra_dest)
+                    gpg_sign_file(extra_dest)
                 
             # Variation name
             prefix_match = re.match(r'^([a-zA-Z0-9]+)', media_name)
@@ -398,8 +411,9 @@ def create_subgallery_page(category, slug, title, items):
     
     # Versioning & Cache Busting
     html = re.sub(r'data-version="P[\d\.]+-nokill"', f'data-version="P0.2.5-{slug}"', html)
-    html = re.sub(r'data-build="\d+"', 'data-build="20260607"', html)
-    html = html.replace('style.css?v=20260529', 'style.css?v=20260607')
+    html = re.sub(r'data-build="\d+"', 'data-build="20260613"', html)
+    html = html.replace('style.css?v=20260529', 'style.css?v=20260613')
+    html = html.replace('style.css?v=20260607', 'style.css?v=20260613')
     
     # Handle description hiding logic in JS (openModal function)
     js_details_show = """            if (item.descUrl) {
@@ -510,14 +524,42 @@ def update_category_index(category, new_items):
         new_ver = f"P{maj}.{min_v}.{pat+1}"
         html = html.replace(version_match.group(0), f'data-version="{new_ver}"')
         
-    html = re.sub(r'data-build="\d+"', 'data-build="20260607"', html)
-    html = html.replace('style.css?v=20260529', 'style.css?v=20260607')
+    html = re.sub(r'data-build="\d+"', 'data-build="20260613"', html)
+    html = html.replace('style.css?v=20260529', 'style.css?v=20260613')
+    html = html.replace('style.css?v=20260607', 'style.css?v=20260613')
     
     replace_mockups = "Gołąb #01: Start" in html or "Gołąb #02: Neon" in html
     
     existing_items = []
     if not replace_mockups:
-        pass
+        match = re.search(r'const galleryData\s*=\s*\[([\s\S]*?)\];', html)
+        if match:
+            js_array_content = match.group(1)
+            obj_matches = re.findall(r'\{([\s\S]*?)\}', js_array_content)
+            for obj_str in obj_matches:
+                item = {}
+                id_match = re.search(r'id:\s*([\'"]?)(.*?)\1\s*,', obj_str)
+                if id_match:
+                    val = id_match.group(2)
+                    item["id"] = int(val) if val.isdigit() and not id_match.group(1) else val
+                
+                title_match = re.search(r'title:\s*([\'"])(.*?)\1\s*,?', obj_str)
+                if title_match:
+                    item["title"] = title_match.group(2)
+                    
+                for field in ["thumb", "full", "descUrl", "download_tif", "link"]:
+                    field_match = re.search(r'' + field + r':\s*([\'"])(.*?)\1\s*,?', obj_str)
+                    if field_match:
+                        item[field] = field_match.group(2)
+                    else:
+                        item[field] = None
+                        
+                if item.get("link"):
+                    item["type"] = "subgallery"
+                else:
+                    item["type"] = "single"
+                item["category"] = category
+                existing_items.append(item)
         
     all_items = existing_items + new_items
     
@@ -620,7 +662,7 @@ def update_sitemap(new_urls):
     with open(SITEMAP_PATH, 'r', encoding='utf-8') as f:
         xml = f.read()
         
-    today = "2026-06-07T00:00:00+00:00"
+    today = "2026-06-13T00:00:00+00:00"
     
     # Update modified date for other/ and digiart/
     for loc_name in ["other/", "digiart/"]:
