@@ -1016,9 +1016,15 @@ summary:focus-visible {
     max-width: 100%;
     height: auto;
     border: 2px solid #ff007f;
+    box-shadow: 0 0 30px #ff00ff;
     margin: 15px auto;
     display: block;
     box-sizing: border-box;
+}
+
+.description-content img[src*="/sketch"] {
+    border: none;
+    box-shadow: none;
 }
 
 .description-content ul, .description-content ol {
