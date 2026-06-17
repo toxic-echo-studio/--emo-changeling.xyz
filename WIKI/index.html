@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl" data-version="0.2.12-wiki" data-build="20260531" data-system="Toxic Echo Studio">
+<html lang="pl" data-version="0.2.13-wiki" data-build="20260617" data-system="Toxic Echo Studio">
 <head>  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -107,7 +107,7 @@
 </head>
 
 <body>
-<!-- Zrobiłem refaktoryzację kodu: przeniosłem style do osobnego pliku i zaktualizowałem wersję do 0.2.12-wiki (20260531) -->
+<!-- Dodałem artykuł Polskie proto-emo w sekcji Muzyka i zaktualizowałem wersję do 0.2.13-wiki (20260617) -->
 
     <header class="main-header">
         <div class="banner-container">
@@ -164,7 +164,7 @@
     <div class="menu-item">
         <button class="menu-btn" onclick="toggleMenu('muzyka')" aria-expanded="false" aria-controls="panel-muzyka">Muzyka</button>
         <div id="panel-muzyka" class="menu-panel" role="region" aria-label="Panel Muzyka">
-            <p>Uff, daj chwilkę, zaraz tu coś będzie</p>
+            <a href="/artykuly/polskie-proto-emo/" class="panel-link">Polskie proto-emo: Jak rodzimy punk zaliczył ten sam emocjonalny zjazd co Zachód (tylko po swojemu)</a>
         </div>
     </div>
     <div class="menu-item">
@@ -233,9 +233,9 @@
 
 
     <script>
-        console.log("%c The Reverse Emo Changeling [Wiki] - v.0.2.12 ", "color: #00ff00; background: #050505; font-size: 14px; font-weight: bold; border: 2px solid #ff007f; padding: 5px; font-family: monospace;");
+        console.log("%c The Reverse Emo Changeling [Wiki] - v.0.2.13 ", "color: #00ff00; background: #050505; font-size: 14px; font-weight: bold; border: 2px solid #ff007f; padding: 5px; font-family: monospace;");
         console.log("%c Welcome to the backend. RAWR XD. ", "color: #ff007f; background: #000; font-size: 12px; font-family: monospace;");
-        console.log("Build: 20260531 | System: Toxic Echo Studio | Instance: Wiki");
+        console.log("Build: 20260617 | System: Toxic Echo Studio | Instance: Wiki");
 
         // Skrypt obsługi wysuwanego menu kategorii
         function toggleMenu(menuId) {
