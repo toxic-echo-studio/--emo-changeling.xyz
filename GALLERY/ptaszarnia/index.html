@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="pl" data-version="P0.3.5" data-build="20260531" data-system="Toxic Echo Studio">
+<html lang="pl" data-version="P0.3.6" data-build="20260625" data-system="Toxic Echo Studio">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="preload" as="image" href="/img/bannerM1.webp" fetchpriority="high">
-    <link rel="preload" href="../css/style.css?v=20260529" as="style">
+    <link rel="preload" href="../css/style.css?v=20260625" as="style">
 
     <meta name="theme-color" content="#000000">
 
@@ -33,7 +33,7 @@
     <meta name="twitter:description" content="Kolekcja 'gołębich artów'.">
     <meta name="twitter:image" content="https://gallery.emo-changeling.xyz/img/bannerM1.webp">
 
-    <link rel="stylesheet" href="../css/style.css?v=20260529">
+    <link rel="stylesheet" href="../css/style.css?v=20260625">
 
     <script type="application/ld+json">
         {
@@ -164,6 +164,12 @@
                 title: 'Gołąb #08: Матвей',
                 descUrl: '/graphics/ptaszarnia/8/opis.html',
                 download_tif: '/graphics/ptaszarnia/8/original.tif'
+            },
+            {
+                id: 'ronnie',
+                thumb: '/graphics/ptaszarnia/9/thumb.webp',
+                title: 'Ronnie Radke',
+                link: 'ronnie/'
             }
         ];
 
@@ -241,69 +247,59 @@
         // Otwieranie Modala i Fetchowanie HTML
         async function openModal(item) {
             modal.classList.add('active');
-            
-            // Handle HEIC for modal main image
-            if (item.full && (item.full.toLowerCase().endsWith('.heic') || item.full.toLowerCase().endsWith('.heif'))) {
-                modalImg.src = '';
-                modalImg.alt = 'Converting HEIC...';
-                try {
-                    const response = await fetch(item.full);
-                    const blob = await response.blob();
-                    if (typeof heic2any !== 'undefined') {
-                        const convertedBlob = await heic2any({
-                            blob: blob,
-                            toType: 'image/jpeg',
-                            quality: 0.8
-                        });
-                        const blobUrl = URL.createObjectURL(convertedBlob);
-                        modalImg.src = blobUrl;
-                        modalImg.alt = item.title;
-                    }
-                } catch (e) {
-                    console.error('Failed to convert modal HEIC image:', e);
-                    modalImg.src = item.full;
-                    modalImg.alt = item.title;
-                }
-            } else {
-                modalImg.src = item.full;
-                modalImg.alt = item.title;
-            }
+            modalImg.src = item.full;
+            modalImg.alt = item.title;
 
-            // Zwijamy details, resetujemy obrót układu i czyścimy stary kontent
-            modalDetails.removeAttribute('open');
-            modalContent.classList.remove('rotated');
-            descContent.innerHTML = '<span class="blink">Wczytywanie danych z serwera...</span>';
-
-            // Ustawienie przycisku download
-            if (item.download_tif) {
-                downloadBtn.href = item.download_tif;
-                downloadBtn.style.display = 'inline-block';
-            } else {
-                downloadBtn.style.display = 'none';
-            }
-
-            try {
-                const response = await fetch(item.descUrl);
-                if (!response.ok) throw new Error('Nie znaleziono pliku opisu (404).');
-
-                const htmlData = await response.text();
-
-                // ZABEZPIECZENIE przed podmianą na stronę główną
-                if (htmlData.includes('id="gallery-grid"') || htmlData.includes('data-system="Toxic Echo Studio"')) {
-                    throw new Error('Serwer zwrócił stronę główną zamiast pliku opisu. Sprawdź ścieżkę!');
-                }
-
-                descContent.innerHTML = htmlData;
+            if (item.descUrl) {
+                modalDetails.style.display = 'block';
+                modalDetails.removeAttribute('open');
+                modalContent.classList.remove('rotated');
+                descContent.innerHTML = '<span class="blink">Wczytywanie danych z serwera...</span>';
                 
-                // Convert any HEIC images inside description content
-                const descImages = descContent.querySelectorAll('img');
-                descImages.forEach(img => checkAndConvertHeic(img));
-            } catch (error) {
-                descContent.innerHTML = `<span style="color: #ff0000; font-weight: bold;">[ERROR] Błąd wczytywania opisu:<br>${error.message}</span>`;
-            }
-        }
+                if (item.download_tif) {
+                    downloadBtn.href = item.download_tif;
+                    downloadBtn.style.display = 'inline-block';
+                    if (item.download_tif.toLowerCase().endsWith('.png')) {
+                        downloadBtn.textContent = 'DOWNLOAD MAX QUALITY (.PNG)';
+                    } else {
+                        downloadBtn.textContent = 'DOWNLOAD MAX QUALITY (.TIF)';
+                    }
+                } else {
+                    downloadBtn.style.display = 'none';
+                }
 
-        // Obracanie układu na mobilkach
+                try {
+                    const response = await fetch(item.descUrl);
+                    if (!response.ok) throw new Error('Nie znaleziono pliku opisu (404).');
+
+                    const htmlData = await response.text();
+
+                    if (htmlData.includes('id="gallery-grid"') || htmlData.includes('data-system="Toxic Echo Studio"')) {
+                        throw new Error('Serwer zwrócił stronę główną zamiast pliku opisu. Sprawdź ścieżkę!');
+                    }
+
+                    descContent.innerHTML = htmlData;
+                    
+                    const descImages = descContent.querySelectorAll('img');
+                    descImages.forEach(img => checkAndConvertHeic(img));
+                } catch (error) {
+                    descContent.innerHTML = `<span style="color: #ff0000; font-weight: bold;">[ERROR] Błąd wczytywania opisu:<br>${error.message}</span>`;
+                }
+            } else {
+                modalDetails.style.display = 'none';
+                if (item.download_tif) {
+                    downloadBtn.href = item.download_tif;
+                    downloadBtn.style.display = 'inline-block';
+                    if (item.download_tif.toLowerCase().endsWith('.png')) {
+                        downloadBtn.textContent = 'DOWNLOAD MAX QUALITY (.PNG)';
+                    } else {
+                        downloadBtn.textContent = 'DOWNLOAD MAX QUALITY (.TIF)';
+                    }
+                } else {
+                    downloadBtn.style.display = 'none';
+                }
+            }
+        }// Obracanie układu na mobilkach
         if (rotateBtn) {
             rotateBtn.addEventListener('click', (e) => {
                 e.stopPropagation(); // Żeby kliknięcie w przycisk nie zamykało modala

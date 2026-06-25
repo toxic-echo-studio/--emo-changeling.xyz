@@ -18,7 +18,8 @@ SITEMAP_PATH = os.path.join(OUTPUT_DIR, "sitemap.xml")
 CAT_MAP = {
     "inne": "other",
     "art": "digiart",
-    "ptaszarnia": "ptaszarnia"
+    "ptaszarnia": "ptaszarnia",
+    "ptaki": "ptaszarnia"
 }
 
 def load_registry():
@@ -304,14 +305,22 @@ def process_folder(folder_name, next_ids):
                     shutil.copy(os.path.join(folder_path, f), extra_dest)
                     gpg_sign_file(extra_dest)
                 
-            # Variation name
-            prefix_match = re.match(r'^([a-zA-Z0-9]+)', media_name)
-            prefix = prefix_match.group(1) if prefix_match else ""
-            var_name = os.path.splitext(media_name)[0]
-            if prefix and var_name.lower().startswith(prefix.lower()):
-                var_name = var_name[len(prefix):].strip()
-                
-            sub_title = f"{title} ({var_name})" if var_name else title
+            # Custom title mapping for shrimp_20260624_133609
+            if folder_name == "shrimp_20260624_133609":
+                if media_name == "image.png":
+                    sub_title = "Ronnie Radkie (noise)"
+                elif media_name == "ronie-radkie-clear.png":
+                    sub_title = "Ronie Radkie no noise"
+                else:
+                    sub_title = f"{title} ({media_name})"
+            else:
+                # Variation name
+                prefix_match = re.match(r'^([a-zA-Z0-9]+)', media_name)
+                prefix = prefix_match.group(1) if prefix_match else ""
+                var_name = os.path.splitext(media_name)[0]
+                if prefix and var_name.lower().startswith(prefix.lower()):
+                    var_name = var_name[len(prefix):].strip()
+                sub_title = f"{title} ({var_name})" if var_name else title
             
             desc_url = None
             if has_description:
@@ -410,10 +419,11 @@ def create_subgallery_page(category, slug, title, items):
     html = re.sub(r'const galleryData\s*=\s*\[[\s\S]*?\];', js_array, html)
     
     # Versioning & Cache Busting
-    html = re.sub(r'data-version="P[\d\.]+-nokill"', f'data-version="P0.2.5-{slug}"', html)
-    html = re.sub(r'data-build="\d+"', 'data-build="20260613"', html)
-    html = html.replace('style.css?v=20260529', 'style.css?v=20260613')
-    html = html.replace('style.css?v=20260607', 'style.css?v=20260613')
+    html = re.sub(r'data-version="P[\d\.]+-nokill"', f'data-version="P0.2.6-{slug}"', html)
+    html = re.sub(r'data-build="\d+"', 'data-build="20260625"', html)
+    html = html.replace('style.css?v=20260529', 'style.css?v=20260625')
+    html = html.replace('style.css?v=20260607', 'style.css?v=20260625')
+    html = html.replace('style.css?v=20260613', 'style.css?v=20260625')
     
     # Handle description hiding logic in JS (openModal function)
     js_details_show = """            if (item.descUrl) {
@@ -524,9 +534,10 @@ def update_category_index(category, new_items):
         new_ver = f"P{maj}.{min_v}.{pat+1}"
         html = html.replace(version_match.group(0), f'data-version="{new_ver}"')
         
-    html = re.sub(r'data-build="\d+"', 'data-build="20260613"', html)
-    html = html.replace('style.css?v=20260529', 'style.css?v=20260613')
-    html = html.replace('style.css?v=20260607', 'style.css?v=20260613')
+    html = re.sub(r'data-build="\d+"', 'data-build="20260625"', html)
+    html = html.replace('style.css?v=20260529', 'style.css?v=20260625')
+    html = html.replace('style.css?v=20260607', 'style.css?v=20260625')
+    html = html.replace('style.css?v=20260613', 'style.css?v=20260625')
     
     replace_mockups = "Gołąb #01: Start" in html or "Gołąb #02: Neon" in html
     
@@ -662,10 +673,10 @@ def update_sitemap(new_urls):
     with open(SITEMAP_PATH, 'r', encoding='utf-8') as f:
         xml = f.read()
         
-    today = "2026-06-13T00:00:00+00:00"
+    today = "2026-06-25T00:00:00+00:00"
     
-    # Update modified date for other/ and digiart/
-    for loc_name in ["other/", "digiart/"]:
+    # Update modified date for other/, digiart/, and ptaszarnia/
+    for loc_name in ["other/", "digiart/", "ptaszarnia/"]:
         pattern = r'(<loc>https://gallery\.emo-changeling\.xyz/' + loc_name + r'</loc>\s*<lastmod>).*?(</lastmod>)'
         xml = re.sub(pattern, r'\g<1>' + today + r'\g<2>', xml)
         
@@ -696,13 +707,15 @@ def main():
     
     category_items = {
         "other": [],
-        "digiart": []
+        "digiart": [],
+        "ptaszarnia": []
     }
     
     # Initialize next ID counters to prevent duplication in the same run
     next_ids = {
         "other": get_next_id("other"),
-        "digiart": get_next_id("digiart")
+        "digiart": get_next_id("digiart"),
+        "ptaszarnia": get_next_id("ptaszarnia")
     }
     
     sitemap_additions = []
