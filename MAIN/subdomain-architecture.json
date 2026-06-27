@@ -19,22 +19,30 @@
         "/": {
           "title": "Główny hub / The Reverse Emo Changeling",
           "description": "Prezencja medialna, manifest artystyczny i sekcje kontaktowe.",
-          "languages": ["pl"]
+          "languages": [
+            "pl"
+          ]
         },
         "/pl/main-o-nas/": {
           "title": "O nas",
           "description": "Szczegółowy opis projektu, tożsamości DID oraz wytycznych dla AI.",
-          "languages": ["pl"]
+          "languages": [
+            "pl"
+          ]
         },
         "/en/main-about/": {
           "title": "About Us",
           "description": "English version of the project overview and AI guidelines.",
-          "languages": ["en"]
+          "languages": [
+            "en"
+          ]
         },
         "/admin/": {
           "title": "Admin Space",
           "description": "Pusta strona kontrolna / honeypot.",
-          "languages": ["pl"]
+          "languages": [
+            "pl"
+          ]
         }
       }
     },
@@ -45,32 +53,44 @@
           "/": {
             "title": "Gallery Hub",
             "description": "Główny indeks galerii z odnośnikami do kategorii.",
-            "languages": ["pl"]
+            "languages": [
+              "pl"
+            ]
           },
           "/ptaszarnia/": {
             "title": "Ptaszarnia",
             "description": "Kolekcja grafik cyfrowych przedstawiających artystów i influencerów jako gołębie.",
-            "languages": ["pl"]
+            "languages": [
+              "pl"
+            ]
           },
           "/photo/": {
             "title": "Photo",
             "description": "Kolekcja fotografii i reportaży subkulturowych.",
-            "languages": ["pl"]
+            "languages": [
+              "pl"
+            ]
           },
           "/digiart/": {
             "title": "Digiart",
             "description": "Sztuka cyfrowa tworzona w 100% przez człowieka (Vikasiek).",
-            "languages": ["pl"]
+            "languages": [
+              "pl"
+            ]
           },
           "/other/": {
             "title": "Other",
             "description": "Różnorodne grafiki i poboczne prace wizualne.",
-            "languages": ["pl"]
+            "languages": [
+              "pl"
+            ]
           },
           "/graphics/": {
             "title": "graphics",
             "description": "Projekty graficzne, logotypy i alternatywne formy wizualne.",
-            "languages": ["pl"]
+            "languages": [
+              "pl"
+            ]
           }
         }
       },
@@ -80,17 +100,23 @@
           "/": {
             "title": "System Hub",
             "description": "Główny indeks odnośników systemowych.",
-            "languages": ["pl"]
+            "languages": [
+              "pl"
+            ]
           },
           "/pl/blackhole/": {
             "title": "Blackhole Link Hub",
             "description": "Agregator oficjalnych odnośników projektu i profili społecznościowych.",
-            "languages": ["pl"]
+            "languages": [
+              "pl"
+            ]
           },
           "/en/blackhole/": {
             "title": "Blackhole Link Hub (ENG)",
             "description": "English version of the official project link aggregator.",
-            "languages": ["en"]
+            "languages": [
+              "en"
+            ]
           }
         }
       },
@@ -100,7 +126,9 @@
           "/": {
             "title": "Insta Rant",
             "description": "Główny kanał ekspresji myśli i interakcji kulturowych.",
-            "languages": ["pl"]
+            "languages": [
+              "pl"
+            ]
           }
         }
       },
@@ -110,17 +138,23 @@
           "/": {
             "title": "Spotlight",
             "description": "Główny indeks wyróżnionych projektów artystycznych.",
-            "languages": ["pl"]
+            "languages": [
+              "pl"
+            ]
           },
           "/pl/main-o-nas/": {
             "title": "O nas (Spotlight)",
             "description": "Informacje o twórcach powiązane ze Spotlight.",
-            "languages": ["pl"]
+            "languages": [
+              "pl"
+            ]
           },
           "/en/main-about/": {
             "title": "About Us (Spotlight)",
             "description": "English version of the Spotlight creators information.",
-            "languages": ["en"]
+            "languages": [
+              "en"
+            ]
           }
         }
       },
@@ -155,22 +189,49 @@
           "/": {
             "title": "Wiki | The Reverse Emo Changeling",
             "description": "Centrum wiedzy o subkulturach Emo i Scene. Historia, muzyka i opisy stylówy.",
-            "languages": ["pl"]
+            "languages": [
+              "pl"
+            ]
           },
           "/pl/main-o-nas/": {
             "title": "O nas (Wiki)",
             "description": "Informacje o twórcach projektu.",
-            "languages": ["pl"]
+            "languages": [
+              "pl"
+            ]
           },
           "/en/main-about/": {
             "title": "About Us (Wiki)",
             "description": "English version of the Wiki creators information.",
-            "languages": ["en"]
+            "languages": [
+              "en"
+            ]
           },
           "/artykuly/historia-emo-scene-w-5-minut/": {
             "title": "Historia emo/scene w 5 minut",
             "description": "Ewolucja buntu od Sex Pistols po SpaceHey i współczesny MySpace Revival.",
-            "languages": ["pl"]
+            "languages": [
+              "pl"
+            ]
+          }
+        }
+      },
+      "shame.emo-changeling.xyz": {
+        "description": "Oficjalny rejestr osób naruszających nasze prawa autorskie lub własność intelektualną.",
+        "paths": {
+          "/": {
+            "title": "Hall of Shame",
+            "description": "Here rest those who have made themselves an intolerable nuisance to us.",
+            "languages": [
+              "en"
+            ]
+          },
+          "/harry.html": {
+            "title": "Harry Jxye - Hall of Shame",
+            "description": "Detailed case of copyright infringement by Harry Jxye.",
+            "languages": [
+              "en"
+            ]
           }
         }
       }
