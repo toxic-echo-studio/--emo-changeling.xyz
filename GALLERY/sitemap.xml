@@ -3,7 +3,7 @@
 
   <url>
     <loc>https://gallery.emo-changeling.xyz/</loc>
-    <lastmod>2026-06-27T00:00:00+00:00</lastmod>
+    <lastmod>2026-07-01T00:00:00+00:00</lastmod>
     <priority>1.0</priority>
   </url>
 
@@ -38,7 +38,7 @@
 
   <url>
     <loc>https://gallery.emo-changeling.xyz/digiart/</loc>
-    <lastmod>2026-06-27T00:00:00+00:00</lastmod>
+    <lastmod>2026-07-01T00:00:00+00:00</lastmod>
     <priority>0.8</priority>
 
   </url>
@@ -65,6 +65,12 @@
   <url>
     <loc>https://gallery.emo-changeling.xyz/ptaszarnia/ronnie/</loc>
     <lastmod>2026-06-27T00:00:00+00:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://gallery.emo-changeling.xyz/digiart/shrimp/</loc>
+    <lastmod>2026-07-01T00:00:00+00:00</lastmod>
     <priority>0.8</priority>
   </url>
 
