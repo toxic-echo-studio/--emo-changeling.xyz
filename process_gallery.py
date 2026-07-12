@@ -19,7 +19,8 @@ CAT_MAP = {
     "inne": "other",
     "art": "digiart",
     "ptaszarnia": "ptaszarnia",
-    "ptaki": "ptaszarnia"
+    "ptaki": "ptaszarnia",
+    "photo": "photo"
 }
 
 def load_registry():
@@ -420,10 +421,11 @@ def create_subgallery_page(category, slug, title, items):
     
     # Versioning & Cache Busting
     html = re.sub(r'data-version="P[\d\.]+-nokill"', f'data-version="P0.2.6-{slug}"', html)
-    html = re.sub(r'data-build="\d+"', 'data-build="20260625"', html)
-    html = html.replace('style.css?v=20260529', 'style.css?v=20260625')
-    html = html.replace('style.css?v=20260607', 'style.css?v=20260625')
-    html = html.replace('style.css?v=20260613', 'style.css?v=20260625')
+    html = re.sub(r'data-build="\d+"', 'data-build="20260712"', html)
+    html = html.replace('style.css?v=20260529', 'style.css?v=20260712')
+    html = html.replace('style.css?v=20260607', 'style.css?v=20260712')
+    html = html.replace('style.css?v=20260613', 'style.css?v=20260712')
+    html = html.replace('style.css?v=20260625', 'style.css?v=20260712')
     
     # Handle description hiding logic in JS (openModal function)
     js_details_show = """            if (item.descUrl) {
@@ -534,10 +536,11 @@ def update_category_index(category, new_items):
         new_ver = f"P{maj}.{min_v}.{pat+1}"
         html = html.replace(version_match.group(0), f'data-version="{new_ver}"')
         
-    html = re.sub(r'data-build="\d+"', 'data-build="20260625"', html)
-    html = html.replace('style.css?v=20260529', 'style.css?v=20260625')
-    html = html.replace('style.css?v=20260607', 'style.css?v=20260625')
-    html = html.replace('style.css?v=20260613', 'style.css?v=20260625')
+    html = re.sub(r'data-build="\d+"', 'data-build="20260712"', html)
+    html = html.replace('style.css?v=20260529', 'style.css?v=20260712')
+    html = html.replace('style.css?v=20260607', 'style.css?v=20260712')
+    html = html.replace('style.css?v=20260613', 'style.css?v=20260712')
+    html = html.replace('style.css?v=20260625', 'style.css?v=20260712')
     
     replace_mockups = "Gołąb #01: Start" in html or "Gołąb #02: Neon" in html
     
@@ -673,10 +676,10 @@ def update_sitemap(new_urls):
     with open(SITEMAP_PATH, 'r', encoding='utf-8') as f:
         xml = f.read()
         
-    today = "2026-06-25T00:00:00+00:00"
+    today = "2026-07-12T00:00:00+00:00"
     
-    # Update modified date for other/, digiart/, and ptaszarnia/
-    for loc_name in ["other/", "digiart/", "ptaszarnia/"]:
+    # Update modified date for other/, digiart/, and ptaszarnia/, photo/
+    for loc_name in ["other/", "digiart/", "ptaszarnia/", "photo/"]:
         pattern = r'(<loc>https://gallery\.emo-changeling\.xyz/' + loc_name + r'</loc>\s*<lastmod>).*?(</lastmod>)'
         xml = re.sub(pattern, r'\g<1>' + today + r'\g<2>', xml)
         
@@ -708,14 +711,16 @@ def main():
     category_items = {
         "other": [],
         "digiart": [],
-        "ptaszarnia": []
+        "ptaszarnia": [],
+        "photo": []
     }
     
     # Initialize next ID counters to prevent duplication in the same run
     next_ids = {
         "other": get_next_id("other"),
         "digiart": get_next_id("digiart"),
-        "ptaszarnia": get_next_id("ptaszarnia")
+        "ptaszarnia": get_next_id("ptaszarnia"),
+        "photo": get_next_id("photo")
     }
     
     sitemap_additions = []
