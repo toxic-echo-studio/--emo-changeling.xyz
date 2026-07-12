@@ -105,6 +105,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <style>
+        @media (min-width: 769px) {
+            .mobile-break {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
 <!-- Zrobiłem refaktoryzację kodu: przeniosłem style do osobnego pliku i zaktualizowałem wersję do v0.4.5 (20260531) -->
@@ -130,7 +137,7 @@
         <h1>Emo gallery</h1>
 
         <h2 class="glitch" data-text="RAWR XD!!!">RAWR XD!!!</h2>
-        <h3>!!! PRE RELEASE VERSION !!!</h3>
+        <h3><span style="white-space: nowrap;">Pure MySpace TOS.</span> <br class="mobile-break"><span style="white-space: nowrap;">Zero corporate PC.</span></h3>
         <div class="marquee">
             <div class="marquee-content">
                 <h2 lang="en">Let’s resurrect the MySpace emo soul we all secretly miss. &nbsp;</h2>
