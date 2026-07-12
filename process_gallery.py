@@ -144,17 +144,17 @@ def process_folder(folder_name, next_ids):
     all_files = os.listdir(folder_path)
     image_jpg = os.path.join(folder_path, "image.jpg")
     
-    # PNGs (exclude draft sketches and inline images)
-    png_files = [
+    # PNGs, JPGs (exclude draft sketches and inline images)
+    main_files = [
         f for f in all_files 
-        if f.lower().endswith('.png') 
+        if (f.lower().endswith('.png') or f.lower().endswith('.jpg') or f.lower().endswith('.jpeg')) 
         and not f.lower().startswith('sketch') 
         and not f.lower().startswith('img_inline')
     ]
     # TIFs
     tif_files = [f for f in all_files if f.lower().endswith('.tif') or f.lower().endswith('.tiff')]
     
-    media_files = png_files + tif_files
+    media_files = main_files + tif_files
     media_count = len(media_files)
     
     print(f"Processing folder: {folder_name} | Category: {category} | Title: {title} | Media Count: {media_count}")

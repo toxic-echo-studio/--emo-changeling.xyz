@@ -74,4 +74,16 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://gallery.emo-changeling.xyz/photo/ultimate/</loc>
+    <lastmod>2026-07-12T00:00:00+00:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://gallery.emo-changeling.xyz/photo/25072025/</loc>
+    <lastmod>2026-07-12T00:00:00+00:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
