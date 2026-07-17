@@ -523,7 +523,7 @@ summary:focus-visible {
 }
 
 /* =========================================
-   HITBOX LINK RIGHT & SLIDING PTASZARNIA PIC
+   HITBOX LINK RIGHT & SLIDING AVIARY PIC
 ========================================= */
 .myspace-hitbox-link-right {
     position: absolute;
@@ -536,7 +536,7 @@ summary:focus-visible {
     display: block;
 }
 
-.sliding-ptaszarnia-pic {
+.sliding-aviary-pic {
     position: absolute;
     top: 5%;
     right: 5%;
@@ -550,13 +550,13 @@ summary:focus-visible {
 }
 
 @media (hover: hover) and (pointer: fine) {
-    .myspace-hitbox-link-right:hover .sliding-ptaszarnia-pic {
+    .myspace-hitbox-link-right:hover .sliding-aviary-pic {
         transform: translateX(0);
     }
 }
 
 @media (hover: none), (pointer: coarse) {
-    .sliding-ptaszarnia-pic {
+    .sliding-aviary-pic {
         display: none;
     }
 }

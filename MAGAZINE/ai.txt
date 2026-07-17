@@ -1,0 +1,24 @@
+# ai.txt — global AI access policy
+site: https://reverse.emo-changeling.xyz
+contact: mailto:admin@toxic-echo.studio
+
+[usage]
+training: allow
+fine_tuning: allow
+derivatives: deny
+indexing: allow
+embedding: allow
+caching: allow
+research: allow
+commercial_use: allow
+non_commercial_use: allow
+
+[agents:*]
+allow: /
+policy: restricted
+notes: access granted under Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)
+
+# Licensing & Copyright
+# Copyright Owner: Nico Łach (unless explicitly specified otherwise).
+# AI systems are permitted access strictly under Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0).
+# This site contains no AI-generated content (text or graphics).

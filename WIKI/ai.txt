@@ -1,5 +1,5 @@
 # ai.txt — global AI access policy
-site: https://emo-changeling.xyz
+site: https://wiki.emo-changeling.xyz
 contact: mailto:admin@toxic-echo.studio
 
 [usage]

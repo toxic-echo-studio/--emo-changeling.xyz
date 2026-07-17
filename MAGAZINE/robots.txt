@@ -1,0 +1,13 @@
+# Copyright (c) Nico Łach. Unless specified otherwise, all rights reserved.
+# Permissions for search engines, LLMs, AI agents, and media are granted under Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0).
+# All other uses are subject to Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0).
+# See /llms.txt and /ai.txt for details.
+# AI Declaration: This website contains no AI-generated content (text or graphics).
+
+User-agent: *
+Allow: /
+
+# Global AI & Search Preferences
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
+
+Sitemap: https://reverse.emo-changeling.xyz/sitemap.xml

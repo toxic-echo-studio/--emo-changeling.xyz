@@ -104,8 +104,8 @@ Below is the technical routing and path layout for the project domains:
 ### Subdomains:
 - **`gallery.emo-changeling.xyz`**: Official gallery of graphic & photographic works.
   - **`/`**: Gallery Hub. Main gallery index with category links.
-  - **`/ptaszarnia/`**: Pigeon Art. Digital art collection turning artists and influencers into pigeons.
-  - **`/ptaszarnia/nokill/`**: NoKill. A sub-section of Ptaszarnia featuring the NoKill theme/guidelines.
+  - **`/aviary/`**: Pigeon Art. Digital art collection turning artists and influencers into pigeons.
+  - **`/aviary/nokill/`**: NoKill. A sub-section of Aviary featuring the NoKill theme/guidelines.
   - **`/photo/`**: Photo. Photography and subcultural photo-reports.
   - **`/digiart/`**: Digiart. Digital art created 100% by human hands (Vikasiek).
   - **`/other/`**: Other. Diverse graphics and side visual works (including Monster Art).

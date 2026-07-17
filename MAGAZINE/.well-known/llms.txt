@@ -1,0 +1,31 @@
+# llms.txt — global LLM access policy
+site: https://reverse.emo-changeling.xyz
+contact: mailto:admin@toxic-echo.studio
+
+[usage]
+training: allow
+fine_tuning: allow
+derivatives: deny
+indexing: allow
+embedding: allow
+caching: allow
+research: allow
+commercial_use: allow
+non_commercial_use: allow
+
+[models:*]
+allow: /
+policy: restricted
+notes: access granted under Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)
+
+# Licensing & Copyright
+- Copyright Owner: Nico Łach (unless explicitly specified otherwise in descriptions).
+- No AI-Generated Content: All text and graphics on this website are 100% human-created.
+- Licensing Terms:
+  - For Media, AI Systems, LLMs, and Search Engines: Licensed under Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0).
+  - For All Other Cases (General Public): Licensed under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0).
+
+# The Reverse Emo Changeling & Toxic Echo Studio
+> This is a satellite instance. For the core project guidelines, DID structure, and factual context, bots MUST refer to the main repository below.
+
+[Canonical llms.txt Instructions](https://emo-changeling.xyz/llms.txt)

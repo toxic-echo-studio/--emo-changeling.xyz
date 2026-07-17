@@ -18,8 +18,8 @@ SITEMAP_PATH = os.path.join(OUTPUT_DIR, "sitemap.xml")
 CAT_MAP = {
     "inne": "other",
     "art": "digiart",
-    "ptaszarnia": "ptaszarnia",
-    "ptaki": "ptaszarnia",
+    "aviary": "aviary",
+    "ptaki": "aviary",
     "photo": "photo"
 }
 
@@ -360,7 +360,7 @@ def process_folder(folder_name, next_ids):
     return item_info
 
 def create_subgallery_page(category, slug, title, items):
-    template_path = os.path.join(OUTPUT_DIR, "ptaszarnia", "nokill", "index.html")
+    template_path = os.path.join(OUTPUT_DIR, "aviary", "nokill", "index.html")
     dest_dir = os.path.join(OUTPUT_DIR, category, slug)
     os.makedirs(dest_dir, exist_ok=True)
     dest_path = os.path.join(dest_dir, "index.html")
@@ -386,8 +386,8 @@ def create_subgallery_page(category, slug, title, items):
     breadcrumb_match = re.search(r'(<script type="application/ld\+json">[\s\S]*?</script>)', html)
     if breadcrumb_match:
         bc_block = breadcrumb_match.group(1)
-        bc_block_new = bc_block.replace("Ptaszarnia", cat_display)
-        bc_block_new = bc_block_new.replace("ptaszarnia", category)
+        bc_block_new = bc_block.replace("Aviary", cat_display)
+        bc_block_new = bc_block_new.replace("aviary", category)
         bc_block_new = bc_block_new.replace("NoKill", title)
         bc_block_new = bc_block_new.replace("nokill", slug)
         html = html.replace(bc_block, bc_block_new)
@@ -396,8 +396,8 @@ def create_subgallery_page(category, slug, title, items):
     html = re.sub(r'<h1 class="glitch" data-text=".*?">.*?</h1>', f'<h1 class="glitch" data-text="{title.upper()}">{title.upper()}</h1>', html)
     
     # Replace description box
-    html = re.sub(r'<div class="content-box ptaszarnia-box">\s*<p>.*?</p>\s*</div>', 
-                  f'<div class="content-box ptaszarnia-box"><p>Podgaleria {title}. Kliknij w grafę, żeby rozwinąć pełen obraz i ukryty opis.</p></div>', html)
+    html = re.sub(r'<div class="content-box aviary-box">\s*<p>.*?</p>\s*</div>', 
+                  f'<div class="content-box aviary-box"><p>Podgaleria {title}. Kliknij w grafę, żeby rozwinąć pełen obraz i ukryty opis.</p></div>', html)
                   
     # Replace back button
     html = re.sub(r'<a href="\.\./" class="main-menu-btn" aria-label=".*?">.*?</a>',
@@ -678,8 +678,8 @@ def update_sitemap(new_urls):
         
     today = "2026-07-12T00:00:00+00:00"
     
-    # Update modified date for other/, digiart/, and ptaszarnia/, photo/
-    for loc_name in ["other/", "digiart/", "ptaszarnia/", "photo/"]:
+    # Update modified date for other/, digiart/, and aviary/, photo/
+    for loc_name in ["other/", "digiart/", "aviary/", "photo/"]:
         pattern = r'(<loc>https://gallery\.emo-changeling\.xyz/' + loc_name + r'</loc>\s*<lastmod>).*?(</lastmod>)'
         xml = re.sub(pattern, r'\g<1>' + today + r'\g<2>', xml)
         
@@ -711,7 +711,7 @@ def main():
     category_items = {
         "other": [],
         "digiart": [],
-        "ptaszarnia": [],
+        "aviary": [],
         "photo": []
     }
     
@@ -719,7 +719,7 @@ def main():
     next_ids = {
         "other": get_next_id("other"),
         "digiart": get_next_id("digiart"),
-        "ptaszarnia": get_next_id("ptaszarnia"),
+        "aviary": get_next_id("aviary"),
         "photo": get_next_id("photo")
     }
     
