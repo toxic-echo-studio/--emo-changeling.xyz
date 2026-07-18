@@ -7,3 +7,11 @@
 
 # System context profile (do not commit sensitive operational history/context)
 /.nico_lach_profile.md
+
+# Local build / environment files
+/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+/.agents/
+/.vscode/
