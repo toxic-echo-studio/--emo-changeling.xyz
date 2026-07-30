@@ -1,0 +1,13 @@
+# ==========================================================================
+# TX2 Pigeonification Ritual - Unofficial TX2 Funpage & Fan Project
+# Website: https://tx2.emo-changeling.xyz
+# Project Email: tx2pigeon@emo-changeling.xyz
+# Technical Support: Toxic Echo Studio (admin@toxic-echo.studio)
+# Co-created by Nico "Zebroid" Łach (Emo Changeling) & Mighn Taghor
+# ==========================================================================
+
+# Full crawling, archiving, indexing, and scanning permissions are granted to all bots.
+User-agent: *
+Allow: /
+
+Sitemap: https://tx2.emo-changeling.xyz/sitemap.xml

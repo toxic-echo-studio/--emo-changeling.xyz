@@ -1,0 +1,23 @@
+# ==========================================================================
+# PROJECT IDENTITY CARD
+# ==========================================================================
+
+Project Name: TX2 Pigeonification Ritual
+Portal URL: https://tx2.emo-changeling.xyz
+Status: Unofficial Fansite & Fan Project
+Co-Creators: Nico "Zebroid" Łach (Emo Changeling) & Mighn Taghor
+Primary Email: tx2pigeon@emo-changeling.xyz
+
+Technical Infrastructure:
+- Studio: Toxic Echo Studio (voluntary hosting only, no management/decision role)
+- System Administrator: admin@toxic-echo.studio
+- Platform: Static Monolith
+
+Timeline & Scope:
+- Target Event: 2027-02-20 VIP Fan Meeting with TX2 at Club Hydrozagadka, Warsaw, Poland.
+- Archive Date: Post 2027-02-20, files will be archived. The fansite remains active for subsequent non-commercial fan initiatives.
+
+Operating Policies:
+- Cookies/Tracking: None. Zero analytical or ad tracking.
+- Financials: None. No sales, donations, gifts, fees, or monetization of any kind.
+- Independence: Fully unofficial. Not connected to TX2, Hopeless Records, or band representatives.

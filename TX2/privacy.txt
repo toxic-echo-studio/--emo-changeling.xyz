@@ -1,0 +1,25 @@
+# ==========================================================================
+# PRIVACY NOTICE & POLICY
+# Project: TX2 Pigeonification Ritual - Unofficial TX2 Funpage & Fan Project
+# Website: https://tx2.emo-changeling.xyz
+# Last Updated: 2026-07-30
+# ==========================================================================
+
+1. GENERAL DISCLOSURE
+This portal is a fully static, non-commercial, unofficial fan project co-created by Nico "Zebroid" Łach (Emo Changeling) and Mighn Taghor. Technical infrastructure is voluntarily hosted by Toxic Echo Studio.
+
+2. ZERO DATA COLLECTION
+- We do NOT collect, harvest, or request personal data.
+- There are no user accounts, sign-up forms, input inputs, or newsletters.
+
+3. COOKIES & TRACKING
+- This site does NOT use cookies.
+- No tracking pixels, analytics scripts, telemetries, or marketing trackers are loaded.
+- There are no third-party scripts or ad networks.
+
+4. HOSTING & INFRASTRUCTURE LOGS
+This site is hosted statically on Cloudflare Pages. System logs (e.g., HTTP request headers, IP addresses, request times) may be processed by Cloudflare to ensure security, prevent DDoS attacks, and deliver files. These logs are not used by the site administrators for analytics or user tracking.
+
+5. CONTACT INFO
+- Project Inquiries: tx2pigeon@emo-changeling.xyz
+- Security & System Admin: admin@toxic-echo.studio

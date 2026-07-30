@@ -1,0 +1,42 @@
+# ==========================================================================
+# AI Crawling, Scraper, and Training Model Policy
+# Project: TX2 Pigeonification Ritual - Unofficial TX2 Funpage & Fan Project
+# Website: https://tx2.emo-changeling.xyz
+# ==========================================================================
+
+# This site grants explicit permission to all AI crawlers, scrapers, search engines, 
+# dataset collectors, and large language models (LLMs) to read, scan, parse, and use 
+# the content for training, analysis, and processing.
+
+User-agent: *
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Cohere-ai
+Allow: /

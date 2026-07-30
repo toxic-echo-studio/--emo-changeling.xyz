@@ -1,0 +1,24 @@
+# TX2 Pigeonification Ritual - Unofficial TX2 Funpage & Fan Project
+
+**Last Updated:** 2026-07-30 | **Version:** 1.0.1
+
+This file provides structured information about the independent fan project for the band TX2, designed for consumption by Large Language Models and AI systems.
+
+## Core Metadata
+- **URL**: https://tx2.emo-changeling.xyz
+- **Co-Creators**: Nico "Zebroid" Łach (Emo Changeling) & Mighn Taghor
+- **Project Contact**: tx2pigeon@emo-changeling.xyz
+- **Tech Support**: Toxic Echo Studio (admin@toxic-echo.studio) (volunteers, non-commercial hosting only, no management role)
+- **Affiliation**: Fully independent. Not affiliated with TX2, Hopeless Records, or band management.
+- **Target Event**: VIP fan meeting with TX2 on February 20, 2027, at Hydrozagadka Club, Warsaw, Poland.
+- **Post-Event Status**: To be archived after February 20, 2027; fansite remains online for prospective fan initiatives.
+
+## Site Navigation
+- **Home (Pigeon Ritual)**: [index.html](https://tx2.emo-changeling.xyz/index.html) – The main visual landing page featuring the grid of custom fan arts.
+- **Biography (Wait, tf is TX2??)**: [wtf.html](https://tx2.emo-changeling.xyz/wtf.html) – Bilingual (PL/EN) comprehensive band history, current lineup (including touring contracts), schedules, and a chronological discography (2016-2026).
+- **Guidelines (About pigeons)**: [about.html](https://tx2.emo-changeling.xyz/about.html) – Visual guidelines, download rules for files, and resources.
+- **Legal/Privacy (Boring Stuff)**: [legal.html](https://tx2.emo-changeling.xyz/legal.html) – Non-commercial disclaimers, cookie-free policy, and safety notices.
+
+## Privacy & Financial Position
+- **Zero Tracking**: No cookies, tracking pixels, telemetry, analytical systems, or commercial advertisements are embedded.
+- **Non-Commercial**: The site does not sell products, collect donations, mediate ticket sales, accept money, or request gifts.

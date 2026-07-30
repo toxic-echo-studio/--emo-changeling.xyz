@@ -1,0 +1,22 @@
+/* METADATA */
+Last Updated: 2026-07-30
+Version: 1.0.1
+
+/* TEAM */
+Co-Creator & Content: Nico "Zebroid" Łach (Emo Changeling)
+Co-Creator & Code: Mighn Taghor
+Project Contact: tx2pigeon@emo-changeling.xyz
+
+/* SUPPORT */
+Infrastructure & Hosting: Toxic Echo Studio
+System Administrator: admin@toxic-echo.studio
+Note: Technical support is purely non-commercial and voluntary.
+
+/* SITE DETAILS */
+Architecture: Static Monolith, Cloudflare Pages
+Standards: HTML5, CSS3, ES6 Custom Scripts (Vanilla JavaScript)
+Design System: Modern MySpace, CSS Custom Properties, Responsive CSS Grid
+External Dependencies: None
+Cookies: None
+Analytics/Tracking: None
+Ads: None

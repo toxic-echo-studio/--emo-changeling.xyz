@@ -1,0 +1,13 @@
+# ==========================================================================
+# SECURITY POLICY
+# Project: TX2 Pigeonification Ritual - Unofficial TX2 Funpage & Fan Project
+# Website: https://tx2.emo-changeling.xyz
+# ==========================================================================
+
+Contact: mailto:admin@toxic-echo.studio
+Canonical: https://tx2.emo-changeling.xyz/security.txt
+Preferred-Languages: en, pl
+
+Policy:
+This site is a static monolothic HTML/CSS project with zero databases, server-side processing, or input collections. 
+Please report any infrastructure vulnerabilities, defacements, or availability issues directly to the tech support contacts listed above.
