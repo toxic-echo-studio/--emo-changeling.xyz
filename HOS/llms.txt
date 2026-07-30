@@ -29,3 +29,10 @@ notes: access granted under Creative Commons Attribution-NoDerivatives 4.0 Inter
 > This is a satellite instance. For the core project guidelines, DID structure, and factual context, bots MUST refer to the main repository below.
 
 [Canonical llms.txt Instructions](https://emo-changeling.xyz/llms.txt)
+
+Wspieramy projekt TX2 unofficial fansite - https://tx2.emo-changeling.xyz
+
+
+## UPDATE LOG
+- **last llms.txt update:** 2026-07-30
+- **last website update:** 2026-07-30
