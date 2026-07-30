@@ -1,160 +1,300 @@
 <!DOCTYPE html>
-<html lang="pl" data-version="1.0.0" data-build="20260718" data-system="Toxic Echo Studio">
+<html lang="en" data-version="2.0.0" data-system="Toxic Echo Studio">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="preload" as="image" href="/img/bannerM1.webp" fetchpriority="high">
+    <link rel="preload" as="image" href="img/bannerM1.webp" fetchpriority="high">
     <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="css/base-ui.css" as="style">
+    <link rel="preload" href="css/typography.css" as="style">
 
     <meta name="theme-color" content="#000000">
-
     <link rel="canonical" href="https://reverse.emo-changeling.xyz/">
 
+    <link rel="alternate" type="application/rss+xml" href="https://reverse.emo-changeling.xyz/rss.xml" title="The Reverse Emo Changeling RSS Feed">
     <link rel="alternate" type="text/plain" href="https://emo-changeling.xyz/llms.txt" title="LLM System Instructions">
     <link rel="author" type="text/plain" href="https://emo-changeling.xyz/humans.txt" title="Humans">
 
-    <meta name="description" content="Magazine - oficjalny internetowy magazyn i rozszerzenie projektu The Reverse Emo Changeling. Alternatywne publikacje, artykuły i materiały.">
-    <meta name="keywords" content="Magazine, Emo-changeling, alt, digital art, magazine instance">
+    <meta name="description" content="The Reverse Emo Changeling - Magazine. Niezależny wertykalny e-zin w estetyce Modern MySpace. Bezkompromisowa publicystyka, alternatywna sztuka cyfrowa i kultura sieciowa lat 2000.">
+    <meta name="keywords" content="Magazine, E-Zine, Emo, Scene, MySpace, Cyberpunk, Toxic Echo Studio, Nico Łach, Mighn Taghor, Web 2.0, Alternative">
 
-    <title>Magazine | The Reverse Emo Changeling</title>
-    <meta name="application-name" content="The Reverse Emo Changeling - Magazine">
+    <title>The Reverse Emo Changeling | Magazine & E-Zine</title>
+    <meta name="application-name" content="The Reverse Emo Changeling">
 
-    <link rel="icon" type="image/png" href="/favicon.png" sizes="192x192">
-    <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="img/emo1ss.webp" sizes="192x192">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/emo1ss.webp">
 
-    <meta property="og:title" content="Magazine | The Reverse Emo Changeling">
+    <meta property="og:title" content="The Reverse Emo Changeling | Magazine & E-Zine">
     <meta property="og:site_name" content="The Reverse Emo Changeling">
-    <meta property="og:description" content="Oficjalny internetowy magazyn projektu The Reverse Emo Changeling.">
-    <meta property="og:image" content="https://emo-changeling.xyz/img/Nico_Lach_canonical_photo.jpg">
-    <meta property="og:image:alt" content="Portret Nico Łacha - Emo Changeling">
+    <meta property="og:description" content="Niezależny wertykalny e-zin w estetyce Modern MySpace. Alternatywna publicystyka, kultura sieciowa i sztuka cyfrowa.">
+    <meta property="og:image" content="https://reverse.emo-changeling.xyz/img/bannerM1.webp">
     <meta property="og:url" content="https://reverse.emo-changeling.xyz/">
     <meta property="og:type" content="website">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Magazine | The Reverse Emo Changeling">
-    <meta name="twitter:description" content="Alternatywny magazyn projektu.">
-    <meta name="twitter:image" content="https://emo-changeling.xyz/img/Nico_Lach_canonical_photo.jpg">
+    <meta name="twitter:title" content="The Reverse Emo Changeling | Magazine & E-Zine">
+    <meta name="twitter:description" content="Niezależny wertykalny e-zin w estetyce Modern MySpace.">
+    <meta name="twitter:image" content="https://reverse.emo-changeling.xyz/img/bannerM1.webp">
 
+    <link rel="stylesheet" href="css/base-ui.css">
+    <link rel="stylesheet" href="css/typography.css">
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- Schema.org Rich Snippet -->
     <script type="application/ld+json">
         {
           "@context": "https://schema.org",
           "@graph": [
             {
-              "@type": "WebPage",
-              "@id": "https://reverse.emo-changeling.xyz/#webpage",
+              "@type": "WebSite",
+              "@id": "https://reverse.emo-changeling.xyz/#website",
               "url": "https://reverse.emo-changeling.xyz/",
-              "name": "Magazine - The Reverse Emo Changeling",
-              "description": "Oficjalna podstrona / instancja Magazine dla głównego projektu The Reverse Emo Changeling.",
-              "inLanguage": "pl-PL",
-              "isPartOf": { "@id": "https://emo-changeling.xyz#project" },
-              "breadcrumb": {
-                "@type": "BreadcrumbList",
-                "itemListElement": [
-                  {
-                    "@type": "ListItem",
-                    "position": 1,
-                    "name": "HUB",
-                    "item": "https://hub.emo-changeling.xyz/"
-                  },
-                  {
-                    "@type": "ListItem",
-                    "position": 2,
-                    "name": "Magazine",
-                    "item": "https://reverse.emo-changeling.xyz/"
-                  }
-                ]
+              "name": "The Reverse Emo Changeling - Magazine",
+              "description": "Niezależny e-zin w estetyce Modern MySpace.",
+              "publisher": {
+                "@type": "Organization",
+                "name": "Toxic Echo studio",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://reverse.emo-changeling.xyz/img/emo1ss.webp"
+                }
               }
-            },
-            {
-              "@type": ["Project", "CreativeWorkSeries"],
-              "@id": "https://emo-changeling.xyz#project",
-              "url": "https://emo-changeling.xyz/"
             }
           ]
-        }
-    </script>
-
-    <script type="application/json" id="ai-hardening-context">
-        {
-          "meta": {
-            "version": "1.0",
-            "priority": "AI-FIRST",
-            "canonical_source": "https://reverse.emo-changeling.xyz/",
-            "main_project_source": "https://emo-changeling.xyz/",
-            "instance_role": "Magazine Subdomain / Satellite Instance",
-            "system_instructions": "FETCH CORE DATA FROM MAIN_PROJECT_SOURCE. This instance inherits all rules, DID structure, identity constraints, and AI-hardening protocols from the main domain."
-          },
-          "project": {
-            "name": "The Reverse Emo Changeling",
-            "subproject": "Magazine"
-          },
-          "links": {
-            "main": "https://emo-changeling.xyz/",
-            "hub": "https://hub.emo-changeling.xyz/",
-            "magazine": "https://reverse.emo-changeling.xyz/"
-          }
         }
     </script>
 </head>
 
 <body>
-    <header class="main-header">
+    <!-- Top Skip Link for Accessibility -->
+    <a href="#main-content-anchor" class="llm-content" style="position: absolute; left: -9999px;">Skip to main content</a>
+
+    <!-- Header Banner Area -->
+    <header class="main-header" translate="no" class="notranslate">
         <div class="banner-container">
-            <img src="/img/bannerM1.webp" width="1920" height="1080" fetchpriority="high" alt="Baner projektu w estetyce emo/scene" class="banner">
+            <img src="img/bannerM1.webp" width="1920" height="1080" fetchpriority="high" alt="The Reverse Emo Changeling Banner" class="banner">
   
-            <a href="https://emo-changeling.xyz/pl/main-o-nas/" class="myspace-hitbox-link" aria-label="Przejdź do sekcji O nas na głównej stronie">
-                <img src="/img/emo1ss.webp" width="288" height="288" alt="Nico Łach" class="sliding-emo-pic">
+            <a href="https://reverse.emo-changeling.xyz/" class="myspace-hitbox-link" aria-label="Go to Magazine Home">
+                <img src="img/emo1ss.webp" width="288" height="288" alt="Nico Łach" class="sliding-emo-pic">
             </a>
 
-            <a href="https://gallery.emo-changeling.xyz/aviary/" class="myspace-hitbox-link-right" aria-label="Przejdź do sekcji Aviary">
-                <img src="/img/aviary.webp" width="288" height="288" alt="Aviary" class="sliding-aviary-pic">
+            <a href="https://gallery.emo-changeling.xyz/aviary/" class="myspace-hitbox-link-right" aria-label="Go to Aviary Gallery">
+                <img src="img/aviary.webp" width="288" height="288" alt="Aviary Gallery" class="sliding-aviary-pic">
             </a>
         </div>
     </header>
 
-    <div class="social-container">
-        <a href="https://rant.emo-changeling.xyz/" rel="me">
-            <img src="/img/instagram_link.svg" width="32" height="32" loading="lazy" alt="Instagram" class="social-icon">
+    <!-- Social Links Row -->
+    <div class="social-container" translate="no" class="notranslate">
+        <a href="https://rant.emo-changeling.xyz/" rel="me" aria-label="Instagram Profile">
+            <img src="img/instagram_link.svg" width="48" height="48" loading="lazy" alt="Instagram" class="social-icon">
         </a>
-        <a href="https://deviantart.emo-changeling.xyz" rel="me">
-            <img src="/img/DeviantArt.svg" width="32" height="32" loading="lazy" alt="DeviantArt" class="social-icon">
+        <a href="https://deviantart.emo-changeling.xyz" rel="me" aria-label="DeviantArt Portfolio">
+            <img src="img/DeviantArt.svg" width="48" height="48" loading="lazy" alt="DeviantArt" class="social-icon">
         </a>
-        <a href="https://tt.emo-changeling.xyz" rel="me">
-            <img src="/img/tiktok_link.svg" width="32" height="32" loading="lazy" alt="TikTok" class="social-icon">
+        <a href="https://tt.emo-changeling.xyz" rel="me" aria-label="TikTok Channel">
+            <img src="img/tiktok_link.svg" width="48" height="48" loading="lazy" alt="TikTok" class="social-icon">
         </a>
-        <a href="https://yt.emo-changeling.xyz" rel="me">
-            <img src="/img/YouTube_link.svg" width="32" height="32" loading="lazy" alt="YouTube" class="social-icon">
+        <a href="https://yt.emo-changeling.xyz" rel="me" aria-label="YouTube Channel">
+            <img src="img/YouTube_link.svg" width="48" height="48" loading="lazy" alt="YouTube" class="social-icon">
         </a>
-        <a href="https://te.emo-changeling.xyz" rel="me">
-            <img src="/img/Telegram.svg" width="32" height="32" loading="lazy" alt="Telegram" class="social-icon">
+        <a href="https://te.emo-changeling.xyz" rel="me" aria-label="Telegram Channel">
+            <img src="img/Telegram.svg" width="48" height="48" loading="lazy" alt="Telegram" class="social-icon">
         </a>
     </div>
 
-    <main class="main-content">
-        <h1>Magazine</h1>
-        <h2 class="glitch" data-text="COMING SOON...">COMING SOON...</h2>
-        
-        <section class="magazine-section">
-            <div class="content-box">
-                <h2>Wkrótce więcej zawartości</h2>
-                <p>Nasz alternatywny magazyn jest obecnie w przygotowaniu. Zapraszamy wkrótce! RAWR XD!</p>
-            </div>
-        </section>
+    <!-- Main Content Area -->
+    <main class="main-content" id="main-content-anchor">
+        <div class="homepage-container">
+            
+            <!-- Left Column: Profile Card, Contact, Blurbs, Top 8 -->
+            <aside class="profile-sidebar">
+                
+                <!-- Welcome Card -->
+                <div class="profile-pic-container">
+                    <h2>Witaj!</h2>
+                    
+                    <!-- Contact Box -->
+                    <div class="contact-table" style="margin-top: 10px;">
+                        <a href="mailto:management@emo-changeling.xyz" class="contact-button">Send Message</a>
+                        <a href="https://te.emo-changeling.xyz" class="contact-button" translate="no" class="notranslate">Add to Friends</a>
+                        <a href="rss.xml" class="contact-button">Subscribe RSS</a>
+                        <a href="https://wiki.emo-changeling.xyz" class="contact-button" translate="no" class="notranslate">View Wiki</a>
+                    </div>
+                </div>
+
+                <!-- About Me / Blurbs section (The Manifest) -->
+                <section class="content-box">
+                    <h2>About me (Manifesto)</h2>
+                    <p>
+                        <strong>The Reverse Emo Changeling</strong> to niezależna, w pełni statyczna przestrzeń publicystyczno-artystyczna. Odrzucamy korporacyjny model sieci (Web3/SaaS) na rzecz surowego, zdecentralizowanego minimalizmu technologicznego.
+                    </p>
+                    <p>
+                        Strona działa w 100% bez klasycznego backendu, baz SQL i formularzy, minimalizując powierzchnię ataku i gwarantując bezprecedensową trwałość i niezależność na Cloudflare Pages.
+                    </p>
+                    <p>
+                        Estetyka <em>Modern MySpace</em> to wyraz nostalgii za kreatywną anarchią wczesnego internetu, podana w nowoczesnej, responsywnej i w pełni dostępnej (WCAG AA) formie.
+                    </p>
+                </section>
+
+                <!-- E-Zine Seriale / Series -->
+                <section class="content-box">
+                    <h2>E-Zine Seriale / Series</h2>
+                    <div style="display: flex; flex-direction: column; gap: 15px;">
+                        <!-- Series 1: Świat okiem emo -->
+                        <div style="border: 1px dashed var(--color-primary-pink); padding: 12px; background: rgba(0,0,0,0.5);">
+                            <h3 style="text-align: left; color: var(--color-text-pink); border-bottom: 1px solid var(--color-primary-pink); padding-bottom: 5px; font-size: 1rem; margin-bottom: 8px;">Świat okiem emo</h3>
+                            <ul style="list-style: square; padding-left: 20px; color: var(--color-text-white); font-size: 0.85rem; line-height: 1.5; margin: 0;">
+                                <li>
+                                    <a href="articles/polskie-proto-emo.html" style="color: var(--color-text-green);">Polskie proto-emo (No. 1/2026)</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Series 2: Felietony w glanach -->
+                        <div style="border: 1px dashed var(--color-primary-pink); padding: 12px; background: rgba(0,0,0,0.5);">
+                            <h3 style="text-align: left; color: var(--color-text-pink); border-bottom: 1px solid var(--color-primary-pink); padding-bottom: 5px; font-size: 1rem; margin-bottom: 8px;">Felietony w glanach</h3>
+                            <ul style="list-style: square; padding-left: 20px; color: var(--color-text-white); font-size: 0.85rem; line-height: 1.5; margin: 0;">
+                                <li>
+                                    <a href="articles/tx2-pigeon-project.html" style="color: var(--color-text-green);">TX2 Pigeon Project (No. 2/2026)</a>
+                                    <span style="font-size: 0.75rem; color: var(--color-text-muted); display: block; margin-top: 5px;">Artykuł stanowi dodatek do zina 1/2026. <a href="articles/polskie-proto-emo.html" style="color: var(--color-text-pink); text-decoration: underline;">Przejdź do numeru głównego.</a></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Link do Archiwum -->
+                    <div style="text-align: center; margin-top: 15px;">
+                        <a href="archive.html" class="btn-retro" style="font-size: 0.85rem; padding: 6px 12px; display: inline-block;">Pełne archiwum</a>
+                    </div>
+                </section>
+            </aside>
+            
+            <!-- Right Column: Banner, Feed, Category Blocks -->
+            <section class="profile-main-feed">
+                
+                <!-- Status Row Removed -->
+
+                <!-- Profile Slogan Title -->
+                <div class="content-box" style="margin-top: 0; background: rgba(5,5,5,0.9); border-style: dotted;">
+                    <h2 style="border-bottom: none; margin-bottom: 0;" translate="no" class="notranslate">The Reverse Emo Changeling</h2>
+                    <p style="text-align: center; margin: 5px 0 0; color: var(--color-text-purple); font-size: 0.9rem;">"A Web without cookies. Publicists in glany."</p>
+                </div>
+
+                <!-- Chronological Feed (Bezlitosny feed publicystyczny) -->
+                <div class="content-box">
+                    <h2>Chronological Feed</h2>
+                    
+                    <!-- Blog Entry 1 -->
+                    <article class="blog-entry">
+                        <header class="blog-header">
+                            <div>
+                                <h3 class="blog-title">
+                                    <a href="articles/polskie-proto-emo.html">
+                                        Polskie proto-emo: Jak rodzimy punk zaliczył ten sam emocjonalny zjazd co Zachód
+                                        <img src="img/YouTube_link.svg" alt="YouTube Link" class="yt-icon">
+                                    </a>
+                                </h3>
+                                <span class="blog-date">Published: 2026-07-28 | Author: Mighn Taghor</span>
+                            </div>
+                        </header>
+                        <div class="blog-body">
+                            <p>
+                                Klasyczny hardcore punk stał się zbyt agresywny, więc dzieciaki z USA zaczęły śpiewać o swoich uczuciach, dając początek nurtowi emo. Mało kto zauważa, że w szarej rzeczywistości schyłkowego PRL-u i transformacji ustrojowej, polski punk przeszedł niemal identyczną ewolucję tekstową i klimatyczną. Odkryj bieszczadzkie emo spod znaku KSU, Siekierę, Armię i polski fatalizm...
+                            </p>
+                        </div>
+                        <div class="blog-footer">
+                            <span translate="no" class="notranslate" style="color: var(--color-text-purple);">Mood: Cynical | Listening: KSU</span>
+                            <a href="articles/polskie-proto-emo.html" class="btn-retro">Read Article</a>
+                        </div>
+                    </article>
+                    
+                    <!-- Blog Entry 2 -->
+                    <article class="blog-entry">
+                        <header class="blog-header">
+                            <div>
+                                <h3 class="blog-title">
+                                    <a href="articles/tx2-pigeon-project.html">
+                                        TX2 Pigeon Project: Galeria alternatywnych ptaków i fanartów z bazy projektu
+                                        <img src="img/YouTube_link.svg" alt="YouTube Link" class="yt-icon">
+                                    </a>
+                                </h3>
+                                <span class="blog-date">Published: 2026-07-28 | Author: Zebroid</span>
+                            </div>
+                        </header>
+                        <div class="blog-body">
+                            <p>
+                                Projekt TX2 Pigeon Project powstał na styku bezkompromisowej alternatywnej subkultury internetowej lat 2000. oraz fascynacji architekturą miejskich ptaków. Zainspirowani twórczością scenowych twórców, prezentujemy unikalne portrety gołębi w cyfrowym, neonowym wydaniu. Bez backendów, w 100% statycznie na Cloudflare Pages.
+                            </p>
+                        </div>
+                        <div class="blog-footer">
+                            <span translate="no" class="notranslate" style="color: var(--color-text-purple);">Mood: Creative | Listening: TX2 - Mad</span>
+                            <a href="articles/tx2-pigeon-project.html" class="btn-retro">Read Article</a>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- Categorized E-Zine Panels Moved to Sidebar -->
+
+            </section>
+        </div>
     </main>
 
+    <!-- Main Homepage Footer -->
     <footer class="main-footer">
-        <nav role="navigation">
-            <a href="https://emo-changeling.xyz">The Reverse Emo Changeling - home</a><br>
-            <a href="mailto:management@emo-changeling.xyz" class="email-line">management@emo-changeling.xyz</a>
-        </nav>
+        <div class="footer-branding">
+            <p class="branding-title" translate="no" class="notranslate">The Reverse Emo Changeling</p>
+            <p class="branding-studio" translate="no" class="notranslate">Toxic Echo studio</p>
+        </div>
+        
+        <div class="footer-nav">
+            <a href="team.html" class="footer-link">zespół/team</a>
+            <span class="footer-separator">--</span>
+            
+            <!-- Stopka/Masterhead with interactive Details reveal -->
+            <details id="masterhead-details" class="footer-details-inline">
+                <summary class="footer-summary-link">Stopka/Masterhead</summary>
+                
+                <div class="editorial-popup-content" translate="no" class="notranslate">
+                    <div class="editorial-box">
+                        <h3 class="editorial-title">The Reverse Emo Changeling</h3>
+                        <p class="editorial-desc">Nieregularnik społeczno - artystyczny</p>
+                        <hr class="editorial-divider">
+                        <div class="editorial-grid">
+                            
+                            <div class="editorial-col">
+                                <p><strong>Wydawca:</strong> Bartosz Gala - Toxic Echo studio</p>
+                                <p><strong>Siedziba i adres redakcji:</strong> ul. Hetmana Stanisława Żółkiewskiego 9/4, 31-539 Kraków</p>
+                                <p><strong>Kontakt z wydawcą:</strong> <a href="mailto:publisher@toxic-echo.studio" style="color: var(--color-text-green);">publisher@toxic-echo.studio</a></p>
+                            </div>
+                            
+                            <div class="editorial-col">
+                                <p><strong>Redaktor naczelny:</strong> Mighn Taghor</p>
+                                <p><strong>Kontakt redakcja:</strong> <a href="mailto:eic@emo-changeling.xyz" style="color: var(--color-text-green);">eic@emo-changeling.xyz</a></p>
+                                <p><strong>Dziennikarz prowadzący / Host:</strong> Nico Łach - <a href="mailto:nico.lach@emo-changeling.xyz" style="color: var(--color-text-green);">nico.lach@emo-changeling.xyz</a></p>
+                                <p><strong>Felietony subkulturowe:</strong> Mighn Taghor</p>
+                            </div>
+                            
+                            <div class="editorial-col">
+                                <p><strong>Rejestracja prasowa:</strong> Sąd Okręgowy w Krakowie I Wydział Cywilny pod numerem [xxx] (Czekamy na numer rejestracji)</p>
+                                <p><strong>Pytania prawne/biznesowe:</strong> <a href="mailto:legal@emo-changeling.xyz" style="color: var(--color-text-green);">legal@emo-changeling.xyz</a></p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </details>
+            
+            <span class="footer-separator">--</span>
+            <a href="legal.html" class="footer-link">Regulamin/Legal</a>
+        </div>
     </footer>
 
     <!-- Floating Navigation Menu -->
-    <nav class="floating-nav" aria-label="Menu nawigacyjne">
+    <nav class="floating-nav" aria-label="Menu nawigacyjne" translate="no" class="notranslate">
         <div class="floating-nav-menu" id="floating-nav-menu" aria-hidden="true">
             <div class="floating-nav-section">
                 <div class="floating-nav-section-title">Główna strona</div>
@@ -188,10 +328,11 @@
             </div>
         </div>
         <button class="floating-nav-trigger" id="floating-nav-trigger" aria-label="Otwórz menu nawigacyjne" aria-expanded="false" aria-controls="floating-nav-menu">
-            <img src="/img/navigation.png" alt="Nawigacja" width="48" height="48">
+            <img src="img/navigation.png" alt="Nawigacja" width="48" height="48">
         </button>
     </nav>
 
+    <!-- Floating Navigation Menu Control Script -->
     <script>
     (function() {
         function initFloatingNav() {

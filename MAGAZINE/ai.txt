@@ -1,6 +1,6 @@
 # ai.txt — global AI access policy
 site: https://reverse.emo-changeling.xyz
-contact: mailto:admin@toxic-echo.studio
+contact: mailto: admin@toxic-echo.studio
 
 [usage]
 training: allow

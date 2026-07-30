@@ -1,0 +1,2 @@
+# Exclude local environment secrets from git
+.env

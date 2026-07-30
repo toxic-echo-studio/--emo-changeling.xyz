@@ -1,0 +1,131 @@
+/* ==========================================================================
+   BASE UI STYLESHEET
+   Declares variables (design system tokens) and common layout elements.
+   ========================================================================== */
+
+:root {
+    /* Color Palette */
+    --color-primary-pink: #ff007f;
+    --color-primary-green: #00ff00;
+    --color-primary-indigo: #4b0082;
+    --color-bg-dark: #000000;
+    --color-bg-panel: #050505;
+    --color-bg-subtle: #080808;
+    
+    /* Text Colors */
+    --color-text-pink: #ff007f;
+    --color-text-green: #00ff00;
+    --color-text-purple: #cc46ba;
+    --color-text-white: #ffffff;
+    --color-text-muted: #888888;
+    --color-article-text: #faf6ee; /* Cream high-contrast reader text */
+    
+    /* Borders and Shadows */
+    --border-pink: 2px double #ff00ff;
+    --border-green: 1px dashed #00ff00;
+    --shadow-retro: 8px 8px 0px var(--color-primary-indigo);
+    --shadow-neon: 0 0 8px #ff00ff;
+    
+    /* Interactive cursor fallback */
+    --cursor-pointer: url('../img/kursor1.cur'), pointer;
+    --cursor-default: url('../img/kursor1.cur'), auto;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-track {
+    background: var(--color-bg-dark);
+    border-left: 1px solid var(--color-primary-pink);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--color-primary-pink);
+    border: 2px solid var(--color-bg-dark);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #ff00ff;
+}
+
+/* Common UI Widgets */
+.content-box {
+    background: rgba(0, 0, 0, 0.9);
+    border: var(--border-pink);
+    padding: 15px 20px;
+    margin-bottom: 25px;
+    color: var(--color-text-green);
+    box-shadow: var(--shadow-retro);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+}
+
+.content-box h2 {
+    color: var(--color-text-pink);
+    font-size: 1.25rem;
+    margin-top: 0;
+    border-bottom: 2px solid var(--color-primary-pink);
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Buttons */
+.btn-retro {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 1px solid var(--color-text-purple);
+    background: var(--color-bg-dark);
+    color: var(--color-text-purple);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: var(--cursor-pointer);
+}
+
+.btn-retro:hover {
+    background: var(--color-text-purple);
+    color: var(--color-bg-dark);
+    box-shadow: 0 0 8px var(--color-text-purple);
+}
+
+/* Accessibility Focus States (WCAG AA Compliant) */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+input:focus-visible {
+    outline: 2px dashed var(--color-primary-green);
+    outline-offset: 3px;
+}
+
+/* Motion Reduction rules */
+@media (prefers-reduced-motion: reduce) {
+    *, ::before, ::after {
+        animation-delay: -1ms !important;
+        animation-duration: 1ms !important;
+        animation-iteration-count: 1 !important;
+        background-attachment: scroll !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0s !important;
+        transition-delay: 0s !important;
+    }
+}
+
+/* Animation utilities */
+.blink::after {
+    content: ' _';
+    animation: blink-loop 1s steps(2, start) infinite;
+}
+
+@keyframes blink-loop {
+    to { visibility: hidden; }
+}
+
+/* Auto-Translate Safeguard */
+.notranslate, [translate="no"] {
+    unicode-bidi: isolate;
+}

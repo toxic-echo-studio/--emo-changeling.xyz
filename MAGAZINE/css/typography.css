@@ -1,0 +1,114 @@
+/* ==========================================================================
+   TYPOGRAPHY STYLESHEET
+   Defines the typographic hierarchy, font families, and text scaling.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Base Font Rules */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+}
+
+/* Headings with Modern MySpace Aesthetic */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    text-shadow: 2px 2px 0px var(--color-bg-dark), 4px 4px 0px var(--color-primary-green);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: clamp(1.4rem, 4vw, 2.2rem);
+    text-shadow: 2px 2px 0px var(--color-bg-dark), 3px 3px 0px var(--color-primary-green);
+    letter-spacing: 2px;
+}
+
+h3 {
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
+    letter-spacing: 1px;
+}
+
+/* High Readability Layout Override for Articles */
+.article-container {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--color-article-text);
+}
+
+.article-container p, 
+.article-container li, 
+.article-container blockquote, 
+.article-container span, 
+.article-container strong, 
+.article-container h1, 
+.article-container h2, 
+.article-container h3, 
+.article-container h4 {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.article-container h1.article-title {
+    font-size: clamp(2rem, 4.5vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--color-text-white);
+    text-shadow: none;
+    text-align: left;
+    letter-spacing: normal;
+    text-transform: none;
+    margin: 10px 0 20px;
+}
+
+.article-container h2 {
+    font-size: clamp(1.35rem, 3.5vw, 1.7rem);
+    color: var(--color-text-white);
+    margin-top: 45px;
+    margin-bottom: 20px;
+    border-left: 4px solid var(--color-primary-pink);
+    padding-left: 15px;
+    text-shadow: none;
+    text-align: left;
+    letter-spacing: normal;
+    text-transform: none;
+}
+
+.article-container h3 {
+    font-size: clamp(1.15rem, 3vw, 1.35rem);
+    color: var(--color-primary-green);
+    margin-top: 35px;
+    margin-bottom: 15px;
+    text-shadow: none;
+    text-align: left;
+    letter-spacing: normal;
+    text-transform: none;
+}
+
+.article-container p {
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+/* Metadata and Microtext */
+.meta-text {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Retro Code Blocks */
+pre, code {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.95rem;
+}
