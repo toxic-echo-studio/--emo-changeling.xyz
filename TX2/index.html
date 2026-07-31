@@ -19,7 +19,7 @@
     <meta property="og:title" content="TX2 Pigeonification Ritual - Unofficial TX2 Funpage">
     <meta property="og:description"
         content="Join the independent TX2 fan campaign for their first-ever European headliner tour! Explore the Pigeonification Ritual, fan arts, history, and official schedules.">
-    <meta property="og:image" content="https://tx2.emo-changeling.xyz/img/banner.webp">
+    <meta property="og:image" content="https://tx2.emo-changeling.xyz/img/banner-16x9.jpg">
     <meta property="og:locale" content="en_US">
     <meta property="og:locale:alternate" content="pl_PL">
 
@@ -29,7 +29,7 @@
     <meta name="twitter:title" content="TX2 Pigeonification Ritual - Unofficial TX2 Funpage">
     <meta name="twitter:description"
         content="Join the independent TX2 fan campaign for their first-ever European headliner tour! Explore the Pigeonification Ritual, fan arts, history, and official schedules.">
-    <meta name="twitter:image" content="https://tx2.emo-changeling.xyz/img/banner.webp">
+    <meta name="twitter:image" content="https://tx2.emo-changeling.xyz/img/banner-16x9.jpg">
 
     <!-- Stylesheets & Resources -->
     <link rel="stylesheet" href="css/style.css">
@@ -50,18 +50,21 @@
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "CreativeWork",
+          "@type": "WebSite",
           "@id": "https://tx2.emo-changeling.xyz/#website",
           "url": "https://tx2.emo-changeling.xyz/",
           "name": "TX2 Pigeonification Ritual - Unofficial TX2 Funpage & Fan Project",
           "description": "An independent, non-commercial fan portal celebrating the alternative rock band TX2, co-created by Nico 'Zebroid' Łach and Mighn Taghor.",
           "inLanguage": ["en", "pl"],
+          "about": {
+            "@id": "https://tx2.emo-changeling.xyz/#event"
+          },
           "creator": [
             {
               "@type": "Person",
               "name": "Nico 'Zebroid' Łach",
               "alternateName": "Emo Changeling",
-			  "url": "https://emo-changeling.xyz/"
+              "url": "https://emo-changeling.xyz/"
             },
             {
               "@type": "Person",
@@ -78,12 +81,17 @@
         {
           "@type": "Event",
           "@id": "https://tx2.emo-changeling.xyz/#event",
-          "name": "TX2 VIP Fan Meeting - Warsaw",
-          "description": "Final target point of the TX2 Pigeonification Ritual campaign - VIP meeting with fans at Hydrozagadka Club, Warsaw.",
+          "name": "TX2 VIP Fan Meeting - Warsaw (Unofficial Fan Event)",
+          "description": "Final target point of the TX2 Pigeonification Ritual campaign - fan meeting and action at Hydrozagadka Club, Warsaw. Organized by the unofficial fansite team.",
           "startDate": "2027-02-20T19:00:00+01:00",
           "endDate": "2027-02-20T23:30:00+01:00",
           "eventStatus": "https://schema.org/EventScheduled",
           "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "image": [
+            "https://tx2.emo-changeling.xyz/img/banner-16x9.jpg",
+            "https://tx2.emo-changeling.xyz/img/banner-4x3.jpg",
+            "https://tx2.emo-changeling.xyz/img/banner-1x1.jpg"
+          ],
           "location": {
             "@type": "Place",
             "name": "Klub Hydrozagadka",
@@ -95,10 +103,25 @@
               "addressCountry": "PL"
             }
           },
+          "performer": {
+            "@type": "MusicGroup",
+            "name": "TX2",
+            "sameAs": "https://www.tx2official.com/"
+          },
           "organizer": {
             "@type": "Organization",
             "name": "TX2 Unofficial Fansite Team",
+            "url": "https://tx2.emo-changeling.xyz/",
             "email": "tx2pigeon@emo-changeling.xyz"
+          },
+          "offers": {
+            "@type": "Offer",
+            "url": "https://tx2.emo-changeling.xyz/#event",
+            "price": "0",
+            "priceCurrency": "PLN",
+            "availability": "https://schema.org/InStock",
+            "validFrom": "2026-01-01T00:00:00+01:00",
+            "description": "Unofficial fan initiative / meeting. Tickets for the concert itself must be purchased via official vendors."
           }
         }
       ]
@@ -342,7 +365,7 @@
 
     <!-- Footer Area (Always in English, locked from translations) -->
     <footer class="notranslate" translate="no">
-        TX2 funsite created by Zebroid &amp; Mighn - Version 1.0.1 (July 30, 2026)
+        TX2 funsite created by Zebroid &amp; Mighn - Version 1.0.2 (July 31, 2026)
     </footer>
 
     <!-- Native HTML5 <dialog> Lightbox Modal -->
