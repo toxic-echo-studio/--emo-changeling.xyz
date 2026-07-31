@@ -85,6 +85,10 @@
 </head>
 
 <body>
+    <!-- Language Triggers -->
+    <input type="radio" id="lang-pl-radio" name="page-lang" class="lang-toggle-radio" checked>
+    <input type="radio" id="lang-en-radio" name="page-lang" class="lang-toggle-radio">
+
     <!-- Skip link for accessibility -->
     <a href="#team-content-anchor" class="llm-content" style="position: absolute; left: -9999px;">Skip to main content</a>
 
@@ -105,9 +109,6 @@
 
     <!-- Social Links Row -->
     <div class="social-container" translate="no" class="notranslate">
-        <a href="https://rant.emo-changeling.xyz/" aria-label="Instagram">
-            <img src="img/instagram_link.svg" width="48" height="48" alt="Instagram" class="social-icon">
-        </a>
         <a href="https://deviantart.emo-changeling.xyz" aria-label="DeviantArt">
             <img src="img/DeviantArt.svg" width="48" height="48" alt="DeviantArt" class="social-icon">
         </a>
@@ -125,7 +126,16 @@
     <!-- Main Content Area -->
     <main class="main-content" id="team-content-anchor">
         <div class="article-wrapper" style="width: 90%; max-width: 1200px;">
-            <h1 style="border-bottom: 2px solid var(--color-primary-pink); padding-bottom: 10px; margin-bottom: 30px;">Editorial Team</h1>
+            
+            <!-- Language Switcher Widget -->
+            <div class="lang-switcher-widget" translate="no" class="notranslate">
+                <label for="lang-pl-radio" class="lang-btn lang-btn-pl">PL</label>
+                <span class="lang-sep">|</span>
+                <label for="lang-en-radio" class="lang-btn lang-btn-en">EN</label>
+            </div>
+
+            <h1 class="lang-pl-content" style="border-bottom: 2px solid var(--color-primary-pink); padding-bottom: 10px; margin-bottom: 30px;">Zespół Redakcyjny</h1>
+            <h1 class="lang-en-content" style="border-bottom: 2px solid var(--color-primary-pink); padding-bottom: 10px; margin-bottom: 30px;">Editorial Team</h1>
             
             <div class="team-grid">
                 
@@ -135,8 +145,11 @@
                     <div class="team-info">
                         <h3 translate="no" class="notranslate">Mighn Taghor</h3>
                         <div class="team-role">Editor-in-Chief / Publicist</div>
-                        <p class="team-bio">
+                        <p class="team-bio lang-pl-content">
                             Główny publicysta i założyciel e-zina. Zajmuje się felietonami subkulturowymi, analizą historyczną sceny niezależnej oraz dbaniem o to, by słowo pisane miało odpowiedni ciężar.
+                        </p>
+                        <p class="team-bio lang-en-content">
+                            Editor-in-Chief and founder of the e-zine. Focuses on subcultural essays, historical analysis of the underground scene, and ensuring written words carry true weight.
                         </p>
                         <p style="margin: 5px 0 0; font-size: 0.8rem; color: var(--color-text-purple);" translate="no" class="notranslate">
                             Contact: <a href="mailto:eic@emo-changeling.xyz">eic@emo-changeling.xyz</a>
@@ -150,8 +163,11 @@
                     <div class="team-info">
                         <h3 translate="no" class="notranslate">Nico Łach</h3>
                         <div class="team-role">Lead Journalist / Host / Art</div>
-                        <p class="team-bio">
+                        <p class="team-bio lang-pl-content">
                             Twarz projektu, gospodarz wywiadów i koordynator graficzny. Łączy światy cyfrowego artu (Digiart, Monster Art) z publicystyką i muzyczną sceną emo/scene.
+                        </p>
+                        <p class="team-bio lang-en-content">
+                            Face of the project, interview host, and art coordinator. Bridges digital art (Digiart, Monster Art) with journalism and the emo/scene music community.
                         </p>
                         <p style="margin: 5px 0 0; font-size: 0.8rem; color: var(--color-text-purple);" translate="no" class="notranslate">
                             Contact: <a href="mailto:nico.lach@emo-changeling.xyz">nico.lach@emo-changeling.xyz</a>
@@ -159,14 +175,17 @@
                     </div>
                 </div>
 
-                <!-- Card 3: Bartosz Gala -->
+                <!-- Card 3: Bartosz Gala (Tymczasowa templatka zamiast zdjęcia) -->
                 <div class="team-card">
-                    <img src="img/Mighn Taghor.jpg" style="filter: hue-rotate(90deg);" alt="Bartosz Gala Avatar" class="team-avatar">
+                    <div class="team-avatar-placeholder" aria-label="Bartosz Gala Avatar Template">BG</div>
                     <div class="team-info">
                         <h3 translate="no" class="notranslate">Bartosz Gala</h3>
                         <div class="team-role">Publisher / Toxic Echo Studio</div>
-                        <p class="team-bio">
+                        <p class="team-bio lang-pl-content">
                             Wydawca e-zina i koordynator techniczny. Odpowiada za finansowanie, infrastrukturę statyczną na Cloudflare Pages oraz wsparcie prawne całego projektu.
+                        </p>
+                        <p class="team-bio lang-en-content">
+                            E-zine publisher and technical coordinator. Responsible for funding, static infrastructure on Cloudflare Pages, and legal backing for the ecosystem.
                         </p>
                         <p style="margin: 5px 0 0; font-size: 0.8rem; color: var(--color-text-purple);" translate="no" class="notranslate">
                             Contact: <a href="mailto:publisher@toxic-echo.studio">publisher@toxic-echo.studio</a>
@@ -174,18 +193,12 @@
                     </div>
                 </div>
 
-                <!-- Card 4: Zebroid -->
+                <!-- Card 4: Placeholder z pytajnikiem (bez opisu) -->
                 <div class="team-card">
-                    <img src="img/emo1ss.webp" style="filter: saturate(0.2);" alt="Zebroid Avatar" class="team-avatar">
+                    <div class="team-avatar-placeholder" aria-label="Question Mark Template">?</div>
                     <div class="team-info">
-                        <h3 translate="no" class="notranslate">Zebroid</h3>
-                        <div class="team-role">Pipeline Engineer / Code</div>
-                        <p class="team-bio">
-                            Architekt lokalnej automatyzacji, twórca skryptu pushującego Antigravity oraz generatora kanału RSS 2.0. Zapewnia spójność kodu bez baz danych.
-                        </p>
-                        <p style="margin: 5px 0 0; font-size: 0.8rem; color: var(--color-text-purple);" translate="no" class="notranslate">
-                            Contact: <a href="https://github.com/toxic-echo-studio">GitHub Profile</a>
-                        </p>
+                        <h3 style="color: var(--color-text-muted);">[ ? ]</h3>
+                        <div class="team-role" style="color: var(--color-text-muted);">TBA / Reserved</div>
                     </div>
                 </div>
 
@@ -193,9 +206,10 @@
 
             <!-- Back navigation button -->
             <div style="text-align: center; margin-top: 40px; border-top: 1px dashed var(--color-primary-pink); padding-top: 20px;" translate="no" class="notranslate">
-                <a href="https://reverse.emo-changeling.xyz/" class="btn-retro">Back to Magazine</a>
-                <a href="https://wiki.emo-changeling.xyz/" class="btn-retro">Wiki Home</a>
-                <a href="https://hub.emo-changeling.xyz/" class="btn-retro">Hub Home</a>
+                <a href="index.html" class="btn-retro">
+                    <span class="lang-pl-content">« Powrót do strony głównej</span>
+                    <span class="lang-en-content">« Back to Homepage</span>
+                </a>
             </div>
         </div>
     </main>

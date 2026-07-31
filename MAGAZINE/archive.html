@@ -28,6 +28,10 @@
 </head>
 
 <body>
+    <!-- Language Triggers -->
+    <input type="radio" id="lang-pl-radio" name="page-lang" class="lang-toggle-radio" checked>
+    <input type="radio" id="lang-en-radio" name="page-lang" class="lang-toggle-radio">
+
     <!-- Skip link for accessibility -->
     <a href="#archive-content-anchor" class="llm-content" style="position: absolute; left: -9999px;">Skip to main content</a>
 
@@ -48,9 +52,6 @@
 
     <!-- Social Links Row -->
     <div class="social-container" translate="no" class="notranslate">
-        <a href="https://rant.emo-changeling.xyz/" aria-label="Instagram">
-            <img src="img/instagram_link.svg" width="48" height="48" alt="Instagram" class="social-icon">
-        </a>
         <a href="https://deviantart.emo-changeling.xyz" aria-label="DeviantArt">
             <img src="img/DeviantArt.svg" width="48" height="48" alt="DeviantArt" class="social-icon">
         </a>
@@ -68,59 +69,74 @@
     <!-- Main Content Reader Area -->
     <main class="main-content" id="archive-content-anchor">
         <div class="article-wrapper" style="width: 90%; max-width: 1200px;">
-            <h1 style="border-bottom: 2px solid var(--color-primary-pink); padding-bottom: 10px; margin-bottom: 30px;">E-Zine Archive</h1>
             
-            <div class="archive-grid">
-                <!-- Column 1: Świat okiem emo -->
-                <section class="archive-column">
-                    <h2 class="archive-column-title">Świat okiem emo</h2>
-                    <div class="archive-list">
-                        
-                        <article class="archive-item">
-                            <a href="articles/polskie-proto-emo.html" class="archive-item-title">Polskie proto-emo: Jak rodzimy punk zaliczył ten sam emocjonalny zjazd co Zachód (tylko po swojemu)</a>
-                            <div class="archive-item-meta">Author: Mighn Taghor | No. 1/2026 | Date: 2026-07-28</div>
-                            <div class="archive-item-desc">
-                                Jak rodzimy punk zaliczył ten sam emocjonalny zjazd co Zachód (tylko po swojemu). Odkryj bieszczadzkie emo, polskie kapele proto-emo i słowiański fatalizm.
-                            </div>
-                        </article>
-
-                    </div>
-                </section>
-
-                <!-- Column 2: Felietony w glanach -->
-                <section class="archive-column">
-                    <h2 class="archive-column-title">Felietony w glanach</h2>
-                    <div class="archive-list">
-                        
-                        <div class="archive-item" style="border: none; text-align: center; color: var(--color-text-muted); padding: 30px 0;">
-                            Brak wpisów w tym cyklu.
-                        </div>
-
-                    </div>
-                </section>
-
-                <!-- Column 3: Zapowiedzi i relacje -->
-                <section class="archive-column">
-                    <h2 class="archive-column-title">Zapowiedzi i relacje</h2>
-                    <div class="archive-list">
-                        
-                        <article class="archive-item">
-                            <a href="articles/tx2-pigeon-project.html" class="archive-item-title">TX2 Pigeon Project: Galeria alternatywnych ptaków i fanartów z bazy projektu</a>
-                            <div class="archive-item-meta">Author: Zebroid | No. 2/2026 | Date: 2026-07-28</div>
-                            <div class="archive-item-desc">
-                                Galeria alternatywnych ptaków i fanartów z bazy projektu. Poznaj połączenie subkultury emo/scene z cyfrową sztuką miejskich gołębi.
-                            </div>
-                        </article>
-
-                    </div>
-                </section>
+            <!-- Language Switcher Widget -->
+            <div class="lang-switcher-widget" translate="no" class="notranslate">
+                <label for="lang-pl-radio" class="lang-btn lang-btn-pl">PL</label>
+                <span class="lang-sep">|</span>
+                <label for="lang-en-radio" class="lang-btn lang-btn-en">EN</label>
             </div>
+
+            <h1 class="lang-pl-content" style="border-bottom: 2px solid var(--color-primary-pink); padding-bottom: 10px; margin-bottom: 30px;">Archiwum Wydań i Artykułów</h1>
+            <h1 class="lang-en-content" style="border-bottom: 2px solid var(--color-primary-pink); padding-bottom: 10px; margin-bottom: 30px;">Chronological E-Zine Archive</h1>
+            
+            <!-- Spis chronologiczny od najnowszego do najstarszego -->
+            <section class="content-box" style="background: rgba(5,5,5,0.95);">
+                <div class="archive-list">
+                    
+                    <!-- Item 1: Numer 4/2026 -->
+                    <article class="archive-item">
+                        <a href="articles/manifest-publicystyki.html" class="archive-item-title" style="color: var(--color-text-pink);">
+                            [Numer 4/2026] Manifest bezkompromisowej publicystyki: Dlaczego tworzymy bez cookies i backendu
+                        </a>
+                        <div class="archive-item-meta">Author: Mighn Taghor | Date: 2026-07-30 | Issue: 4/2026</div>
+                        <div class="archive-item-desc" style="color: #ffffff;">
+                            Dlaczego odrzucamy bazodanową infrastrukturę, skrypty śledzące oraz korporacyjne platformy blogowe? Analiza technologiczna statycznego e-zina zbudowanego z myślą o trwałości, dostępności WCAG AA oraz całkowitym bezpieczeństwie czytelników.
+                        </div>
+                    </article>
+
+                    <!-- Item 2: Numer 3/2026 -->
+                    <article class="archive-item">
+                        <a href="articles/scenowe-myspace.html" class="archive-item-title" style="color: var(--color-text-pink);">
+                            [Numer 3/2026] Scenowe MySpace i kultura DIY: Powrót do korzeni sieciowej niezależności
+                        </a>
+                        <div class="archive-item-meta">Author: Nico Łach | Date: 2026-07-29 | Issue: 3/2026</div>
+                        <div class="archive-item-desc" style="color: #ffffff;">
+                            Współczesne sieci społecznościowe zamieniły podmiotowość użytkownika w towar algorytmiczny. Wracamy do estetyki MySpace lat 2005-2008, analizując architekturę własnych profili, surowy kod HTML i kultową wolność ekspresji subkulturowej.
+                        </div>
+                    </article>
+
+                    <!-- Item 3: Numer 2/2026 -->
+                    <article class="archive-item">
+                        <a href="articles/tx2-pigeon-project.html" class="archive-item-title" style="color: var(--color-text-pink);">
+                            [Numer 2/2026] TX2 Pigeon Project: Galeria alternatywnych ptaków i fanartów z bazy projektu
+                        </a>
+                        <div class="archive-item-meta">Author: Zebroid | Date: 2026-07-28 | Issue: 2/2026</div>
+                        <div class="archive-item-desc" style="color: #ffffff;">
+                            Projekt TX2 Pigeon Project powstał na styku bezkompromisowej alternatywnej subkultury internetowej lat 2000. oraz fascynacji architekturą miejskich ptaków. Poznaj połączenie subkultury emo/scene z cyfrową sztuką miejskich gołębi.
+                        </div>
+                    </article>
+
+                    <!-- Item 4: Numer 1/2026 -->
+                    <article class="archive-item">
+                        <a href="articles/polskie-proto-emo.html" class="archive-item-title" style="color: var(--color-text-pink);">
+                            [Numer 1/2026] Polskie proto-emo: Jak rodzimy punk zaliczył ten sam emocjonalny zjazd co Zachód (tylko po swojemu)
+                        </a>
+                        <div class="archive-item-meta">Author: Mighn Taghor | Date: 2026-07-28 | Issue: 1/2026</div>
+                        <div class="archive-item-desc" style="color: #ffffff;">
+                            Klasyczny hardcore punk stał się zbyt agresywny, więc dzieciaki z USA zaczęły śpiewać o swoich uczuciach, dając początek nurtowi emo. Jak rodzimy punk zaliczył ten sam emocjonalny zjazd co Zachód? Odkryj bieszczadzkie emo, polskie kapele proto-emo i słowiański fatalizm.
+                        </div>
+                    </article>
+
+                </div>
+            </section>
 
             <!-- Back navigation button -->
             <div style="text-align: center; margin-top: 40px; border-top: 1px dashed var(--color-primary-pink); padding-top: 20px;" translate="no" class="notranslate">
-                <a href="https://reverse.emo-changeling.xyz/" class="btn-retro">Back to Magazine</a>
-                <a href="https://wiki.emo-changeling.xyz/" class="btn-retro">Wiki Home</a>
-                <a href="https://hub.emo-changeling.xyz/" class="btn-retro">Hub Home</a>
+                <a href="index.html" class="btn-retro">
+                    <span class="lang-pl-content">« Powrót do strony głównej</span>
+                    <span class="lang-en-content">« Back to Homepage</span>
+                </a>
             </div>
         </div>
     </main>

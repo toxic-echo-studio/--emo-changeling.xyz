@@ -68,6 +68,17 @@
 </head>
 
 <body>
+    <!-- Language & Sidebar Triggers -->
+    <input type="radio" id="lang-pl-radio" name="page-lang" class="lang-toggle-radio" checked>
+    <input type="radio" id="lang-en-radio" name="page-lang" class="lang-toggle-radio">
+    <input type="checkbox" id="sidebar-toggle-checkbox" class="sidebar-toggle-checkbox">
+
+    <!-- Issue Selector Inputs -->
+    <input type="radio" id="issue-select-1" name="issue-filter" class="issue-radio-input">
+    <input type="radio" id="issue-select-2" name="issue-filter" class="issue-radio-input">
+    <input type="radio" id="issue-select-3" name="issue-filter" class="issue-radio-input">
+    <input type="radio" id="issue-select-4" name="issue-filter" class="issue-radio-input" checked>
+
     <!-- Top Skip Link for Accessibility -->
     <a href="#main-content-anchor" class="llm-content" style="position: absolute; left: -9999px;">Skip to main content</a>
 
@@ -88,9 +99,6 @@
 
     <!-- Social Links Row -->
     <div class="social-container" translate="no" class="notranslate">
-        <a href="https://rant.emo-changeling.xyz/" rel="me" aria-label="Instagram Profile">
-            <img src="img/instagram_link.svg" width="48" height="48" loading="lazy" alt="Instagram" class="social-icon">
-        </a>
         <a href="https://deviantart.emo-changeling.xyz" rel="me" aria-label="DeviantArt Portfolio">
             <img src="img/DeviantArt.svg" width="48" height="48" loading="lazy" alt="DeviantArt" class="social-icon">
         </a>
@@ -108,13 +116,20 @@
     <!-- Main Content Area -->
     <main class="main-content" id="main-content-anchor">
         <div class="homepage-container">
-            
-            <!-- Left Column: Profile Card, Contact, Blurbs, Top 8 -->
+                   <!-- Left Column: Profile Card, Contact, Blurbs, Top 8 -->
             <aside class="profile-sidebar">
                 
+                <!-- Language Switcher Widget -->
+                <div class="lang-switcher-widget" translate="no" class="notranslate">
+                    <label for="lang-pl-radio" class="lang-btn lang-btn-pl">PL</label>
+                    <span class="lang-sep">|</span>
+                    <label for="lang-en-radio" class="lang-btn lang-btn-en">EN</label>
+                </div>
+
                 <!-- Welcome Card -->
                 <div class="profile-pic-container">
-                    <h2>Witaj!</h2>
+                    <h2 class="lang-pl-content">Witaj!</h2>
+                    <h2 class="lang-en-content">Welcome!</h2>
                     
                     <!-- Contact Box -->
                     <div class="contact-table" style="margin-top: 10px;">
@@ -125,49 +140,57 @@
                     </div>
                 </div>
 
-                <!-- About Me / Blurbs section (The Manifest) -->
+                <!-- About Us / Blurbs section (The Manifesto) -->
                 <section class="content-box">
-                    <h2>About me (Manifesto)</h2>
-                    <p>
-                        <strong>The Reverse Emo Changeling</strong> to niezależna, w pełni statyczna przestrzeń publicystyczno-artystyczna. Odrzucamy korporacyjny model sieci (Web3/SaaS) na rzecz surowego, zdecentralizowanego minimalizmu technologicznego.
+                    <h2 class="lang-pl-content">O nas (Manifest)</h2>
+                    <h2 class="lang-en-content">About us (Manifesto)</h2>
+                    <p class="lang-pl-content" style="color: var(--color-text-white); font-family: 'Inter', sans-serif; line-height: 1.5; font-size: 0.9rem;">
+                        Niezależna kultura bez cenzury i dyktatu zysku – bezpieczny port dla każdego, kto nie boi się czuć i myśleć po swojemu.
                     </p>
-                    <p>
-                        Strona działa w 100% bez klasycznego backendu, baz SQL i formularzy, minimalizując powierzchnię ataku i gwarantując bezprecedensową trwałość i niezależność na Cloudflare Pages.
-                    </p>
-                    <p>
-                        Estetyka <em>Modern MySpace</em> to wyraz nostalgii za kreatywną anarchią wczesnego internetu, podana w nowoczesnej, responsywnej i w pełni dostępnej (WCAG AA) formie.
+                    <p class="lang-en-content" style="color: var(--color-text-white); font-family: 'Inter', sans-serif; line-height: 1.5; font-size: 0.9rem;">
+                        Underground culture, zero corporate greed—a true safe haven for anyone who feels too much and thinks for themselves.
                     </p>
                 </section>
 
-                <!-- E-Zine Seriale / Series -->
+                <!-- Katalog numerów -->
                 <section class="content-box">
-                    <h2>E-Zine Seriale / Series</h2>
+                    <h2 class="lang-pl-content">Katalog numerów</h2>
+                    <h2 class="lang-en-content">Issue Catalog</h2>
                     <div style="display: flex; flex-direction: column; gap: 15px;">
-                        <!-- Series 1: Świat okiem emo -->
+                        
+                        <!-- Ramka 1: Aktualny numer -->
                         <div style="border: 1px dashed var(--color-primary-pink); padding: 12px; background: rgba(0,0,0,0.5);">
-                            <h3 style="text-align: left; color: var(--color-text-pink); border-bottom: 1px solid var(--color-primary-pink); padding-bottom: 5px; font-size: 1rem; margin-bottom: 8px;">Świat okiem emo</h3>
+                            <h3 class="lang-pl-content" style="text-align: left; color: var(--color-text-pink); border-bottom: 1px solid var(--color-primary-pink); padding-bottom: 5px; font-size: 0.95rem; margin-bottom: 8px;">Aktualny numer: Wydanie 4/2026</h3>
+                            <h3 class="lang-en-content" style="text-align: left; color: var(--color-text-pink); border-bottom: 1px solid var(--color-primary-pink); padding-bottom: 5px; font-size: 0.95rem; margin-bottom: 8px;">Current Issue: Release 4/2026</h3>
                             <ul style="list-style: square; padding-left: 20px; color: var(--color-text-white); font-size: 0.85rem; line-height: 1.5; margin: 0;">
                                 <li>
-                                    <a href="articles/polskie-proto-emo.html" style="color: var(--color-text-green);">Polskie proto-emo (No. 1/2026)</a>
+                                    <label for="issue-select-4" class="issue-catalog-label issue-label-4" style="color: var(--color-text-green);">Manifest bezkompromisowej publicystyki: Dlaczego tworzymy bez cookies i backendu</label>
                                 </li>
                             </ul>
                         </div>
 
-                        <!-- Series 2: Felietony w glanach -->
+                        <!-- Ramka 2: Archiwum numerów -->
                         <div style="border: 1px dashed var(--color-primary-pink); padding: 12px; background: rgba(0,0,0,0.5);">
-                            <h3 style="text-align: left; color: var(--color-text-pink); border-bottom: 1px solid var(--color-primary-pink); padding-bottom: 5px; font-size: 1rem; margin-bottom: 8px;">Felietony w glanach</h3>
+                            <h3 class="lang-pl-content" style="text-align: left; color: var(--color-text-pink); border-bottom: 1px solid var(--color-primary-pink); padding-bottom: 5px; font-size: 0.95rem; margin-bottom: 8px;">Archiwum numerów</h3>
+                            <h3 class="lang-en-content" style="text-align: left; color: var(--color-text-pink); border-bottom: 1px solid var(--color-primary-pink); padding-bottom: 5px; font-size: 0.95rem; margin-bottom: 8px;">Issue Archive</h3>
                             <ul style="list-style: square; padding-left: 20px; color: var(--color-text-white); font-size: 0.85rem; line-height: 1.5; margin: 0;">
-                                <li>
-                                    <a href="articles/tx2-pigeon-project.html" style="color: var(--color-text-green);">TX2 Pigeon Project (No. 2/2026)</a>
-                                    <span style="font-size: 0.75rem; color: var(--color-text-muted); display: block; margin-top: 5px;">Artykuł stanowi dodatek do zina 1/2026. <a href="articles/polskie-proto-emo.html" style="color: var(--color-text-pink); text-decoration: underline;">Przejdź do numeru głównego.</a></span>
+                                <li style="margin-bottom: 6px;">
+                                    <label for="issue-select-3" class="issue-catalog-label issue-label-3" style="color: var(--color-text-green);">Wydanie 3/2026: Scenowe MySpace &amp; DIY</label>
+                                </li>
+                                <li style="margin-bottom: 6px;">
+                                    <label for="issue-select-2" class="issue-catalog-label issue-label-2" style="color: var(--color-text-green);">Wydanie 2/2026: TX2 Pigeon Project</label>
+                                </li>
+                                <li style="margin-bottom: 6px;">
+                                    <label for="issue-select-1" class="issue-catalog-label issue-label-1" style="color: var(--color-text-green);">Wydanie 1/2026: Polskie proto-emo</label>
                                 </li>
                             </ul>
+                            <div style="margin-top: 10px; text-align: right;">
+                                <a href="archive.html" style="color: var(--color-text-pink); font-size: 0.85rem; text-decoration: underline;">
+                                    <span class="lang-pl-content">Wszystkie numery »</span>
+                                    <span class="lang-en-content">All issues »</span>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-
-                    <!-- Link do Archiwum -->
-                    <div style="text-align: center; margin-top: 15px;">
-                        <a href="archive.html" class="btn-retro" style="font-size: 0.85rem; padding: 6px 12px; display: inline-block;">Pełne archiwum</a>
                     </div>
                 </section>
             </aside>
@@ -175,69 +198,153 @@
             <!-- Right Column: Banner, Feed, Category Blocks -->
             <section class="profile-main-feed">
                 
-                <!-- Status Row Removed -->
-
                 <!-- Profile Slogan Title -->
                 <div class="content-box" style="margin-top: 0; background: rgba(5,5,5,0.9); border-style: dotted;">
                     <h2 style="border-bottom: none; margin-bottom: 0;" translate="no" class="notranslate">The Reverse Emo Changeling</h2>
-                    <p style="text-align: center; margin: 5px 0 0; color: var(--color-text-purple); font-size: 0.9rem;">"A Web without cookies. Publicists in glany."</p>
+                    <p style="text-align: center; margin: 5px 0 0; color: var(--color-text-purple); font-size: 0.95rem; font-weight: bold;">
+                        <span class="lang-pl-content">nieregularnik społeczno-artystyczny</span>
+                        <span class="lang-en-content">social-artistic irregular zine</span>
+                    </p>
                 </div>
 
-                <!-- Chronological Feed (Bezlitosny feed publicystyczny) -->
+                <!-- Dynamic Main Feed Header & Selected Issue Feed -->
                 <div class="content-box">
-                    <h2>Chronological Feed</h2>
+                    <!-- Issue 1 Header -->
+                    <h2 class="issue-title-header issue-header-1">
+                        <span class="lang-pl-content">** Wydanie 1/2026 | 28.07.2026 **</span>
+                        <span class="lang-en-content">** Release 1/2026 | 2026-07-28 **</span>
+                    </h2>
+                    <!-- Issue 2 Header -->
+                    <h2 class="issue-title-header issue-header-2">
+                        <span class="lang-pl-content">** Wydanie 2/2026 | 28.07.2026 **</span>
+                        <span class="lang-en-content">** Release 2/2026 | 2026-07-28 **</span>
+                    </h2>
+                    <!-- Issue 3 Header -->
+                    <h2 class="issue-title-header issue-header-3">
+                        <span class="lang-pl-content">** Wydanie 3/2026 | 29.07.2026 **</span>
+                        <span class="lang-en-content">** Release 3/2026 | 2026-07-29 **</span>
+                    </h2>
+                    <!-- Issue 4 Header -->
+                    <h2 class="issue-title-header issue-header-4">
+                        <span class="lang-pl-content">** Wydanie 4/2026 | 30.07.2026 **</span>
+                        <span class="lang-en-content">** Release 4/2026 | 2026-07-30 **</span>
+                    </h2>
                     
-                    <!-- Blog Entry 1 -->
-                    <article class="blog-entry">
-                        <header class="blog-header">
-                            <div>
-                                <h3 class="blog-title">
-                                    <a href="articles/polskie-proto-emo.html">
-                                        Polskie proto-emo: Jak rodzimy punk zaliczył ten sam emocjonalny zjazd co Zachód
-                                        <img src="img/YouTube_link.svg" alt="YouTube Link" class="yt-icon">
-                                    </a>
-                                </h3>
-                                <span class="blog-date">Published: 2026-07-28 | Author: Mighn Taghor</span>
+                    <!-- Issue Feed 1 (Numer 1/2026) -->
+                    <div class="feed-issue-container feed-issue-1">
+                        <article class="blog-entry" id="issue-1">
+                            <header class="blog-header">
+                                <div>
+                                    <h3 class="blog-title">
+                                        <a href="articles/polskie-proto-emo.html" style="color: var(--color-text-white);">
+                                            [Numer 1/2026] Polskie proto-emo: Jak rodzimy punk zaliczył ten sam emocjonalny zjazd co Zachód
+                                            <img src="img/YouTube_link.svg" alt="YouTube Link" class="yt-icon">
+                                        </a>
+                                    </h3>
+                                    <span class="blog-date">Published: 2026-07-28 | Author: Mighn Taghor</span>
+                                </div>
+                            </header>
+                            <div class="blog-body" style="color: #ffffff;">
+                                <p>
+                                    Klasyczny hardcore punk stał się zbyt agresywny, więc dzieciaki z USA zaczęły śpiewać o swoich uczuciach, dając początek nurtowi emo. Mało kto zauważa, że w szarej rzeczywistości schyłkowego PRL-u i transformacji ustrojowej, polski punk przeszedł niemal identyczną ewolucję tekstową i klimatyczną. Odkryj bieszczadzkie emo spod znaku KSU, Siekierę, Armię i polski fatalizm...
+                                </p>
                             </div>
-                        </header>
-                        <div class="blog-body">
-                            <p>
-                                Klasyczny hardcore punk stał się zbyt agresywny, więc dzieciaki z USA zaczęły śpiewać o swoich uczuciach, dając początek nurtowi emo. Mało kto zauważa, że w szarej rzeczywistości schyłkowego PRL-u i transformacji ustrojowej, polski punk przeszedł niemal identyczną ewolucję tekstową i klimatyczną. Odkryj bieszczadzkie emo spod znaku KSU, Siekierę, Armię i polski fatalizm...
-                            </p>
-                        </div>
-                        <div class="blog-footer">
-                            <span translate="no" class="notranslate" style="color: var(--color-text-purple);">Mood: Cynical | Listening: KSU</span>
-                            <a href="articles/polskie-proto-emo.html" class="btn-retro">Read Article</a>
-                        </div>
-                    </article>
+                            <div class="blog-footer">
+                                <span translate="no" class="notranslate" style="color: var(--color-text-purple);">Mood: Cynical | Listening: KSU</span>
+                                <a href="articles/polskie-proto-emo.html" class="btn-retro">
+                                    <span class="lang-pl-content">Czytaj artykuł</span>
+                                    <span class="lang-en-content">Read Article</span>
+                                </a>
+                            </div>
+                        </article>
+                    </div>
                     
-                    <!-- Blog Entry 2 -->
-                    <article class="blog-entry">
-                        <header class="blog-header">
-                            <div>
-                                <h3 class="blog-title">
-                                    <a href="articles/tx2-pigeon-project.html">
-                                        TX2 Pigeon Project: Galeria alternatywnych ptaków i fanartów z bazy projektu
-                                        <img src="img/YouTube_link.svg" alt="YouTube Link" class="yt-icon">
-                                    </a>
-                                </h3>
-                                <span class="blog-date">Published: 2026-07-28 | Author: Zebroid</span>
+                    <!-- Issue Feed 2 (Numer 2/2026) -->
+                    <div class="feed-issue-container feed-issue-2">
+                        <article class="blog-entry" id="issue-2">
+                            <header class="blog-header">
+                                <div>
+                                    <h3 class="blog-title">
+                                        <a href="articles/tx2-pigeon-project.html" style="color: var(--color-text-white);">
+                                            [Numer 2/2026] TX2 Pigeon Project: Galeria alternatywnych ptaków i fanartów z bazy projektu
+                                            <img src="img/YouTube_link.svg" alt="YouTube Link" class="yt-icon">
+                                        </a>
+                                    </h3>
+                                    <span class="blog-date">Published: 2026-07-28 | Author: Zebroid</span>
+                                </div>
+                            </header>
+                            <div class="blog-body" style="color: #ffffff;">
+                                <p>
+                                    Projekt TX2 Pigeon Project powstał na styku bezkompromisowej alternatywnej subkultury internetowej lat 2000. oraz fascynacji architekturą miejskich ptaków. Zainspirowani twórczością scenowych twórców, prezentujemy unikalne portrety gołębi w cyfrowym, neonowym wydaniu. Bez backendów, w 100% statycznie na Cloudflare Pages.
+                                </p>
                             </div>
-                        </header>
-                        <div class="blog-body">
-                            <p>
-                                Projekt TX2 Pigeon Project powstał na styku bezkompromisowej alternatywnej subkultury internetowej lat 2000. oraz fascynacji architekturą miejskich ptaków. Zainspirowani twórczością scenowych twórców, prezentujemy unikalne portrety gołębi w cyfrowym, neonowym wydaniu. Bez backendów, w 100% statycznie na Cloudflare Pages.
-                            </p>
-                        </div>
-                        <div class="blog-footer">
-                            <span translate="no" class="notranslate" style="color: var(--color-text-purple);">Mood: Creative | Listening: TX2 - Mad</span>
-                            <a href="articles/tx2-pigeon-project.html" class="btn-retro">Read Article</a>
-                        </div>
-                    </article>
+                            <div class="blog-footer">
+                                <span translate="no" class="notranslate" style="color: var(--color-text-purple);">Mood: Creative | Listening: TX2 - Mad</span>
+                                <a href="articles/tx2-pigeon-project.html" class="btn-retro">
+                                    <span class="lang-pl-content">Czytaj artykuł</span>
+                                    <span class="lang-en-content">Read Article</span>
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Issue Feed 3 (Numer 3/2026) -->
+                    <div class="feed-issue-container feed-issue-3">
+                        <article class="blog-entry" id="issue-3">
+                            <header class="blog-header">
+                                <div>
+                                    <h3 class="blog-title">
+                                        <a href="articles/scenowe-myspace.html" style="color: var(--color-text-white);">
+                                            [Numer 3/2026] Scenowe MySpace i kultura DIY: Powrót do korzeni sieciowej niezależności
+                                        </a>
+                                    </h3>
+                                    <span class="blog-date">Published: 2026-07-29 | Author: Nico Łach</span>
+                                </div>
+                            </header>
+                            <div class="blog-body" style="color: #ffffff;">
+                                <p>
+                                    Współczesne sieci społecznościowe zamieniły podmiotowość użytkownika w towar algorytmiczny. Wracamy do estetyki MySpace lat 2005-2008, analizując architekturę własnych profili, surowy kod HTML i kultową wolność ekspresji subkulturowej...
+                                </p>
+                            </div>
+                            <div class="blog-footer">
+                                <span translate="no" class="notranslate" style="color: var(--color-text-purple);">Mood: Nostalgic | Listening: From First to Last</span>
+                                <a href="articles/scenowe-myspace.html" class="btn-retro">
+                                    <span class="lang-pl-content">Czytaj artykuł</span>
+                                    <span class="lang-en-content">Read Article</span>
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Issue Feed 4 (Numer 4/2026) -->
+                    <div class="feed-issue-container feed-issue-4">
+                        <article class="blog-entry" id="issue-4">
+                            <header class="blog-header">
+                                <div>
+                                    <h3 class="blog-title">
+                                        <a href="articles/manifest-publicystyki.html" style="color: var(--color-text-white);">
+                                            [Numer 4/2026] Manifest bezkompromisowej publicystyki: Dlaczego tworzymy bez cookies i backendu
+                                        </a>
+                                    </h3>
+                                    <span class="blog-date">Published: 2026-07-30 | Author: Mighn Taghor</span>
+                                </div>
+                            </header>
+                            <div class="blog-body" style="color: #ffffff;">
+                                <p>
+                                    Dlaczego odrzucamy bazodanową infrastrukturę, skrypty śledzące oraz korporacyjne platformy blogowe? Analiza technologiczna statycznego e-zina zbudowanego z myślą o trwałości, dostępności WCAG AA oraz całkowitym bezpieczeństwie czytelników...
+                                </p>
+                            </div>
+                            <div class="blog-footer">
+                                <span translate="no" class="notranslate" style="color: var(--color-text-purple);">Mood: Resolute | Listening: Rites of Spring</span>
+                                <a href="articles/manifest-publicystyki.html" class="btn-retro">
+                                    <span class="lang-pl-content">Czytaj artykuł</span>
+                                    <span class="lang-en-content">Read Article</span>
+                                </a>
+                            </div>
+                        </article>
+                    </div>
 
                 </div>
-
-                <!-- Categorized E-Zine Panels Moved to Sidebar -->
 
             </section>
         </div>
@@ -385,5 +492,23 @@
         }
     })();
     </script>
+    <!-- Hash Sync Script for Direct Anchor Links -->
+    <script>
+    (function() {
+        function syncIssueFromHash() {
+            var hash = window.location.hash;
+            if (hash && hash.startsWith('#issue-')) {
+                var num = hash.replace('#issue-', '');
+                var radio = document.getElementById('issue-select-' + num);
+                if (radio) radio.checked = true;
+            }
+        }
+        window.addEventListener('hashchange', syncIssueFromHash);
+        document.addEventListener('DOMContentLoaded', syncIssueFromHash);
+    })();
+    </script>
+
+    <!-- Persistent Mobile Bottom-Left Sidebar Toggle Button -->
+    <label for="sidebar-toggle-checkbox" class="sidebar-toggle-btn" aria-label="Przełącz panel boczny">☰</label>
 </body>
 </html>

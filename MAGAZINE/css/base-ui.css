@@ -7,10 +7,11 @@
     /* Color Palette */
     --color-primary-pink: #ff007f;
     --color-primary-green: #00ff00;
+    --color-dark-green: #006600;
     --color-primary-indigo: #4b0082;
-    --color-bg-dark: #000000;
-    --color-bg-panel: #050505;
-    --color-bg-subtle: #080808;
+    --color-bg-dark: #040914;
+    --color-bg-panel: #080e20;
+    --color-bg-subtle: #0c142b;
     
     /* Text Colors */
     --color-text-pink: #ff007f;
@@ -18,7 +19,7 @@
     --color-text-purple: #cc46ba;
     --color-text-white: #ffffff;
     --color-text-muted: #888888;
-    --color-article-text: #faf6ee; /* Cream high-contrast reader text */
+    --color-article-text: #ffffff; /* Pure white reader text */
     
     /* Borders and Shadows */
     --border-pink: 2px double #ff00ff;
@@ -75,22 +76,24 @@
 .btn-retro {
     display: inline-block;
     padding: 8px 16px;
-    border: 1px solid var(--color-text-purple);
-    background: var(--color-bg-dark);
-    color: var(--color-text-purple);
+    border: 1px solid var(--color-primary-pink);
+    background: rgba(255, 0, 127, 0.15);
+    color: #ffffff;
     font-family: 'Courier New', Courier, monospace;
     font-size: 0.9rem;
+    font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
     text-decoration: none;
     transition: all 0.3s ease;
     cursor: var(--cursor-pointer);
+    box-shadow: 0 0 8px rgba(255, 0, 127, 0.4);
 }
 
 .btn-retro:hover {
-    background: var(--color-text-purple);
-    color: var(--color-bg-dark);
-    box-shadow: 0 0 8px var(--color-text-purple);
+    background: var(--color-primary-pink);
+    color: #040914;
+    box-shadow: 0 0 15px #ff00ff;
 }
 
 /* Accessibility Focus States (WCAG AA Compliant) */
