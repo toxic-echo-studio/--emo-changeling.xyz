@@ -1,11 +1,15 @@
 /* METADATA */
-Last Updated: 2026-07-30
-Version: 1.0.1
+/* Dokumentacja autorstwa i struktury zasobów serwisu */
+Last Updated: 2026-07-31
+Version: 1.0.3
 
 /* TEAM */
 Co-Creator & Content: Nico "Zebroid" Łach (Emo Changeling)
 Co-Creator & Code: Mighn Taghor
 Project Contact: tx2pigeon@emo-changeling.xyz
+
+/* CREDITS & ATTRIBUTION */
+Favicon Artwork: kalashnyk (https://aticon.com/authors/kalashnyk)
 
 /* SUPPORT */
 Infrastructure & Hosting: Toxic Echo Studio
@@ -20,3 +24,4 @@ External Dependencies: None
 Cookies: None
 Analytics/Tracking: None
 Ads: None
+
