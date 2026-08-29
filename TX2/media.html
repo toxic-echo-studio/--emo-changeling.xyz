@@ -16,7 +16,7 @@
     <meta property="og:url" content="https://tx2.emo-changeling.xyz/media.html">
     <meta property="og:title" content="Media - TX2 Unofficial Fansite">
     <meta property="og:description" content="Watch official videos, shorts, and TikTok broadcasts documenting the TX2 Pigeonification Ritual and European tour preparations.">
-    <meta property="og:image" content="https://tx2.emo-changeling.xyz/img/media-bg.webp">
+    <meta property="og:image" content="https://tx2.emo-changeling.xyz/img/banner.webp">
     <meta property="og:locale" content="en_US">
     <meta property="og:locale:alternate" content="pl_PL">
 
@@ -25,7 +25,7 @@
     <meta name="twitter:url" content="https://tx2.emo-changeling.xyz/media.html">
     <meta name="twitter:title" content="Media - TX2 Unofficial Fansite">
     <meta name="twitter:description" content="Watch official videos, shorts, and TikTok broadcasts documenting the TX2 Pigeonification Ritual and European tour preparations.">
-    <meta name="twitter:image" content="https://tx2.emo-changeling.xyz/img/media-bg.webp">
+    <meta name="twitter:image" content="https://tx2.emo-changeling.xyz/img/banner.webp">
 
     <!-- Stylesheets & Resources -->
     <link rel="stylesheet" href="css/style.css">
@@ -78,7 +78,7 @@
     }
     </script>
 </head>
-<body class="media-page">
+<body class="subpage">
 
     <!-- Language Selector Inputs -->
     <input type="radio" id="lang-toggle-en" name="lang-select" checked style="display:none;">
@@ -139,12 +139,7 @@
             </div>
         </div>
 
-        <!-- Poster Showcase (Framed graphic ensuring complete visibility of background typography) -->
-        <div class="media-poster-hero">
-            <img class="media-poster-img" src="img/media-bg.webp" alt="TX2 Join The Flock - European Tour '27 Poster">
-        </div>
-
-        <!-- Featured Media Players Section -->
+        <!-- Featured Media Players Section (Positioned above posters) -->
         <div class="media-grid-featured">
 
             <!-- 1. YouTube Featured Video (16:9 Landscape Player) -->
@@ -166,10 +161,11 @@
 
                 <div class="media-video-container-16-9">
                     <iframe 
-                        src="https://www.youtube-nocookie.com/embed/x9ilXcp8lzc?autoplay=0" 
+                        src="https://www.youtube.com/embed/x9ilXcp8lzc" 
                         title="TX2 Video Player" 
                         loading="lazy" 
-                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
                         allowfullscreen>
                     </iframe>
                 </div>
@@ -202,10 +198,11 @@
 
                     <div class="media-video-container-9-16">
                         <iframe 
-                            src="https://www.youtube-nocookie.com/embed/5dtN9WcUf4g?autoplay=0" 
+                            src="https://www.youtube.com/embed/5dtN9WcUf4g" 
                             title="TX2 YouTube Short" 
                             loading="lazy" 
-                            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
                             allowfullscreen>
                         </iframe>
                     </div>
@@ -239,6 +236,7 @@
                             title="TX2 TikTok Clip" 
                             loading="lazy" 
                             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
                             allowfullscreen>
                         </iframe>
                     </div>
@@ -252,6 +250,36 @@
             </div>
 
         </div>
+
+        <!-- Campaign Posters Showcase Section (At the end) -->
+        <section class="media-posters-section">
+            <div class="content-en" lang="en">
+                <h2 class="legal-section-title" style="text-align: center; margin-bottom: 5px;">🎨 CAMPAIGN POSTERS</h2>
+                <p class="content-para" style="text-align: center; color: var(--text-dimmed);">Official and alternative promotional poster graphics for the European Tour '27 Ritual.</p>
+            </div>
+            <div class="content-pl" lang="pl">
+                <h2 class="legal-section-title" style="text-align: center; margin-bottom: 5px;">🎨 PLAKATY KAMPANII</h2>
+                <p class="content-para" style="text-align: center; color: var(--text-dimmed);">Oficjalny oraz alternatywny plakat promocyjny Rytuału na europejską trasę 2027.</p>
+            </div>
+
+            <div class="media-posters-grid">
+                <!-- Poster 1: Primary Poster -->
+                <div class="media-poster-card">
+                    <div class="media-poster-hero">
+                        <img class="media-poster-img" src="img/media-bg.webp" alt="TX2 Join The Flock - European Tour '27 Poster">
+                    </div>
+                    <div class="media-poster-label notranslate" translate="no">Primary Poster</div>
+                </div>
+
+                <!-- Poster 2: Alternate Poster -->
+                <div class="media-poster-card">
+                    <div class="media-poster-hero">
+                        <img class="media-poster-img" src="img/poster-alt.webp" alt="TX2 Join The Flock - European Tour '27 Alternate Poster">
+                    </div>
+                    <div class="media-poster-label notranslate" translate="no">Alternate Poster</div>
+                </div>
+            </div>
+        </section>
 
     </main>
 
