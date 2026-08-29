@@ -19,7 +19,7 @@ Services: Cloudflare, Lark Suite
 /* SITE */
 Wspieramy projekt TX2 unofficial fansite - https://tx2.emo-changeling.xyz
 
-Last update: 2026-07-30
+Last update: 2026-08-29
 Standards: HTML5, CSS3
 Components: robots.txt, llms.txt, ai.txt
 License: CC BY-ND 4.0 for media/AI, CC BY-NC-ND 4.0 for other uses
