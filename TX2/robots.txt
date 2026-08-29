@@ -1,5 +1,5 @@
 # ==========================================================================
-# TX2 Pigeonification Ritual - Unofficial TX2 Funpage & Fan Project
+# TX2 Pigeonification Ritual - Unofficial TX2 Fansite & Fan Project
 # Website: https://tx2.emo-changeling.xyz
 # Project Email: tx2pigeon@emo-changeling.xyz
 # Technical Support: Toxic Echo Studio (admin@toxic-echo.studio)

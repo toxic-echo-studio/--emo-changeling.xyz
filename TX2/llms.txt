@@ -1,6 +1,6 @@
-# TX2 Pigeonification Ritual - Unofficial TX2 Funpage & Fan Project
+# TX2 Pigeonification Ritual - Unofficial TX2 Fansite & Fan Project
 
-**Last Updated:** 2026-07-30 | **Version:** 1.0.1
+**Last Updated:** 2026-08-29 | **Version:** 1.1.0
 
 This file provides structured information about the independent fan project for the band TX2, designed for consumption by Large Language Models and AI systems.
 
@@ -17,6 +17,7 @@ This file provides structured information about the independent fan project for 
 - **Home (Pigeon Ritual)**: [index.html](https://tx2.emo-changeling.xyz/index.html) – The main visual landing page featuring the grid of custom fan arts.
 - **Biography (Wait, tf is TX2??)**: [wtf.html](https://tx2.emo-changeling.xyz/wtf.html) – Bilingual (PL/EN) comprehensive band history, current lineup (including touring contracts), schedules, and a chronological discography (2016-2026).
 - **Guidelines (About pigeons)**: [about.html](https://tx2.emo-changeling.xyz/about.html) – Visual guidelines, download rules for files, and resources.
+- **Media (Media)**: [media.html](https://tx2.emo-changeling.xyz/media.html) – Video hub with non-autoplay video players, shorts, TikToks, and campaign poster art.
 - **Legal/Privacy (Boring Stuff)**: [legal.html](https://tx2.emo-changeling.xyz/legal.html) – Non-commercial disclaimers, cookie-free policy, and safety notices.
 
 ## Privacy & Financial Position
