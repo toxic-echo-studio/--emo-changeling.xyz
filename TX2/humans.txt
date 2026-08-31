@@ -1,7 +1,7 @@
 /* METADATA */
 /* Dokumentacja autorstwa i struktury zasobów serwisu */
-Last Updated: 2026-08-29
-Version: 1.1.0
+Last Updated: 2026-08-31
+Version: 1.1.1
 
 /* TEAM */
 Co-Creator & Content: Nico "Zebroid" Łach (Emo Changeling)
