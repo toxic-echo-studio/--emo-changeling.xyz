@@ -49,6 +49,13 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/team.html"/>
   </url>
   <url>
+    <loc>https://reverse.emo-changeling.xyz/impressum.html</loc>
+    <lastmod>2026-09-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reverse.emo-changeling.xyz/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/impressum.html"/>
+  </url>
+  <url>
     <loc>https://reverse.emo-changeling.xyz/pl/impressum.html</loc>
     <lastmod>2026-08-27</lastmod>
     <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/impressum.html"/>
