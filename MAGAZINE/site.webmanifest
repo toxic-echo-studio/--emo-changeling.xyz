@@ -1,7 +1,7 @@
 {
-  "name": "The Reverse Emo Changeling",
-  "short_name": "EMO",
-  "description": "Projekt społeczno-artystyczny. Alternatywa, Emo, Scene w estetyce MySpace 2005-2015.",
+  "name": "The Reverse Emo Changeling - Magazine",
+  "short_name": "Magazine",
+  "description": "Niezależne czasopismo społeczno-artystyczne w estetyce Modern MySpace.",
   "lang": "pl",
   "icons": [
     {
@@ -20,5 +20,5 @@
   "theme_color": "#000000",
   "background_color": "#000000",
   "display": "standalone",
-  "start_url": "https://emo-changeling.xyz/"
+  "start_url": "https://reverse.emo-changeling.xyz/"
 }

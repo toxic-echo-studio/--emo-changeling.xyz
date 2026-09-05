@@ -1,10 +1,412 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Neutral Root Selector (x-default) -->
   <url>
     <loc>https://reverse.emo-changeling.xyz/</loc>
-    <lastmod>2026-07-30T00:00:00+00:00</lastmod>
-    <priority>1.0</priority>
+    <lastmod>2026-08-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://reverse.emo-changeling.xyz/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/"/>
   </url>
-
+  <!-- Polish Edition Home -->
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/pl/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/"/>
+  </url>
+  <!-- English Edition Home -->
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/en/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/"/>
+  </url>
+  <!-- Subpages (PL & EN) -->
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/pl/archive.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/archive.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/archive.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/en/archive.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/archive.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/archive.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/pl/team.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/team.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/team.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/en/team.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/team.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/team.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/pl/impressum.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/impressum.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/en/impressum.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/impressum.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/pl/legal.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/legal.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/en/legal.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/legal.html"/>
+  </url>
+  <!-- Articles (PL & EN) -->
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/pl/19-2026/myslisz-ze-go-ratujesz-o-falszywym.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/19-2026/myslisz-ze-go-ratujesz-o-falszywym.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/19-2026/myslisz-ze-go-ratujesz-o-falszywym.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/en/19-2026/myslisz-ze-go-ratujesz-o-falszywym.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/19-2026/myslisz-ze-go-ratujesz-o-falszywym.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/19-2026/myslisz-ze-go-ratujesz-o-falszywym.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/pl/18-2026/od-ragebaitu-do-sztuki-dlaczego.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/18-2026/od-ragebaitu-do-sztuki-dlaczego.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/18-2026/od-ragebaitu-do-sztuki-dlaczego.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/en/18-2026/od-ragebaitu-do-sztuki-dlaczego.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/18-2026/od-ragebaitu-do-sztuki-dlaczego.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/18-2026/od-ragebaitu-do-sztuki-dlaczego.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/pl/18-2026/rytual-pigeonification-zmienmy-tx2.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/18-2026/rytual-pigeonification-zmienmy-tx2.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/18-2026/rytual-pigeonification-zmienmy-tx2.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/en/18-2026/rytual-pigeonification-zmienmy-tx2.html</loc>
+    <lastmod>2026-08-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/18-2026/rytual-pigeonification-zmienmy-tx2.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/18-2026/rytual-pigeonification-zmienmy-tx2.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/pl/17-2026/od-ucieczki-w-piksele-do-walki-z.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/17-2026/od-ucieczki-w-piksele-do-walki-z.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/17-2026/od-ucieczki-w-piksele-do-walki-z.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/en/17-2026/od-ucieczki-w-piksele-do-walki-z.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/17-2026/od-ucieczki-w-piksele-do-walki-z.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/17-2026/od-ucieczki-w-piksele-do-walki-z.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/pl/16-2026/noz-z-papieru-czyli-dlaczego-mam-w.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/16-2026/noz-z-papieru-czyli-dlaczego-mam-w.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/16-2026/noz-z-papieru-czyli-dlaczego-mam-w.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/en/16-2026/noz-z-papieru-czyli-dlaczego-mam-w.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/16-2026/noz-z-papieru-czyli-dlaczego-mam-w.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/16-2026/noz-z-papieru-czyli-dlaczego-mam-w.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/pl/15-2026/zwierzak-to-nie-twoj-niewolnik.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/15-2026/zwierzak-to-nie-twoj-niewolnik.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/15-2026/zwierzak-to-nie-twoj-niewolnik.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/en/15-2026/zwierzak-to-nie-twoj-niewolnik.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/15-2026/zwierzak-to-nie-twoj-niewolnik.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/15-2026/zwierzak-to-nie-twoj-niewolnik.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/pl/14-2026/rysuje-chore-rzeczy-zeby-nie.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/14-2026/rysuje-chore-rzeczy-zeby-nie.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/14-2026/rysuje-chore-rzeczy-zeby-nie.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/en/14-2026/rysuje-chore-rzeczy-zeby-nie.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/14-2026/rysuje-chore-rzeczy-zeby-nie.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/14-2026/rysuje-chore-rzeczy-zeby-nie.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/pl/14-2026/sztuka-to-nie-korpo-produkt.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/14-2026/sztuka-to-nie-korpo-produkt.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/14-2026/sztuka-to-nie-korpo-produkt.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/en/14-2026/sztuka-to-nie-korpo-produkt.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/14-2026/sztuka-to-nie-korpo-produkt.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/14-2026/sztuka-to-nie-korpo-produkt.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/pl/13-2026/agent-federalny-atak-paniki-i-zjazd.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/13-2026/agent-federalny-atak-paniki-i-zjazd.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/13-2026/agent-federalny-atak-paniki-i-zjazd.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/en/13-2026/agent-federalny-atak-paniki-i-zjazd.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/13-2026/agent-federalny-atak-paniki-i-zjazd.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/13-2026/agent-federalny-atak-paniki-i-zjazd.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/pl/12-2026/pogo-z-ksiezmi-patologia-na.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/12-2026/pogo-z-ksiezmi-patologia-na.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/12-2026/pogo-z-ksiezmi-patologia-na.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/en/12-2026/pogo-z-ksiezmi-patologia-na.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/12-2026/pogo-z-ksiezmi-patologia-na.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/12-2026/pogo-z-ksiezmi-patologia-na.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/pl/12-2026/szycie-szczury-i-poli-radar-moj.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/12-2026/szycie-szczury-i-poli-radar-moj.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/12-2026/szycie-szczury-i-poli-radar-moj.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/en/12-2026/szycie-szczury-i-poli-radar-moj.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/12-2026/szycie-szczury-i-poli-radar-moj.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/12-2026/szycie-szczury-i-poli-radar-moj.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/pl/11-2026/jestem-tym-zlym-queerem.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/11-2026/jestem-tym-zlym-queerem.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/11-2026/jestem-tym-zlym-queerem.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/en/11-2026/jestem-tym-zlym-queerem.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/11-2026/jestem-tym-zlym-queerem.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/11-2026/jestem-tym-zlym-queerem.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/pl/10-2026/bmth-w-krakowie-i-powrot-do-blota.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/10-2026/bmth-w-krakowie-i-powrot-do-blota.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/10-2026/bmth-w-krakowie-i-powrot-do-blota.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/en/10-2026/bmth-w-krakowie-i-powrot-do-blota.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/10-2026/bmth-w-krakowie-i-powrot-do-blota.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/10-2026/bmth-w-krakowie-i-powrot-do-blota.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/pl/10-2026/friendly-fire-chronienie-labelek-i.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/10-2026/friendly-fire-chronienie-labelek-i.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/10-2026/friendly-fire-chronienie-labelek-i.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/en/10-2026/friendly-fire-chronienie-labelek-i.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/10-2026/friendly-fire-chronienie-labelek-i.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/10-2026/friendly-fire-chronienie-labelek-i.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/pl/9-2026/magia-otherkin-i-ghosting-dlaczego.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/9-2026/magia-otherkin-i-ghosting-dlaczego.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/9-2026/magia-otherkin-i-ghosting-dlaczego.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/en/9-2026/magia-otherkin-i-ghosting-dlaczego.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/9-2026/magia-otherkin-i-ghosting-dlaczego.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/9-2026/magia-otherkin-i-ghosting-dlaczego.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/pl/8-2026/idziemy-na-marsz-rownosci.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/8-2026/idziemy-na-marsz-rownosci.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/8-2026/idziemy-na-marsz-rownosci.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/en/8-2026/idziemy-na-marsz-rownosci.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/8-2026/idziemy-na-marsz-rownosci.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/8-2026/idziemy-na-marsz-rownosci.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/pl/8-2026/toksyczni-przyjaciele-patologia-nfz.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/8-2026/toksyczni-przyjaciele-patologia-nfz.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/8-2026/toksyczni-przyjaciele-patologia-nfz.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/en/8-2026/toksyczni-przyjaciele-patologia-nfz.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/8-2026/toksyczni-przyjaciele-patologia-nfz.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/8-2026/toksyczni-przyjaciele-patologia-nfz.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/pl/7-2026/w-samotnosci---kosmita.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/7-2026/w-samotnosci---kosmita.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/7-2026/w-samotnosci---kosmita.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/en/7-2026/w-samotnosci---kosmita.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/7-2026/w-samotnosci---kosmita.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/7-2026/w-samotnosci---kosmita.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/pl/6-2026/smutna-historia---cindy-tx2-moment.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/6-2026/smutna-historia---cindy-tx2-moment.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/6-2026/smutna-historia---cindy-tx2-moment.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/en/6-2026/smutna-historia---cindy-tx2-moment.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/6-2026/smutna-historia---cindy-tx2-moment.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/6-2026/smutna-historia---cindy-tx2-moment.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/pl/5-2026/emocjonalny-flatline-pekniety-kubek.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/5-2026/emocjonalny-flatline-pekniety-kubek.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/5-2026/emocjonalny-flatline-pekniety-kubek.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/en/5-2026/emocjonalny-flatline-pekniety-kubek.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/5-2026/emocjonalny-flatline-pekniety-kubek.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/5-2026/emocjonalny-flatline-pekniety-kubek.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/pl/5-2026/larp-owanie-platnych-wspolprac.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/5-2026/larp-owanie-platnych-wspolprac.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/5-2026/larp-owanie-platnych-wspolprac.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/en/5-2026/larp-owanie-platnych-wspolprac.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/5-2026/larp-owanie-platnych-wspolprac.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/5-2026/larp-owanie-platnych-wspolprac.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/pl/4-2026/emo-touching-grass-zgubiony-telefon.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/4-2026/emo-touching-grass-zgubiony-telefon.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/4-2026/emo-touching-grass-zgubiony-telefon.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/en/4-2026/emo-touching-grass-zgubiony-telefon.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/4-2026/emo-touching-grass-zgubiony-telefon.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/4-2026/emo-touching-grass-zgubiony-telefon.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/pl/4-2026/transplciowe-pawie-kubus-znoszacy.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/4-2026/transplciowe-pawie-kubus-znoszacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/4-2026/transplciowe-pawie-kubus-znoszacy.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/en/4-2026/transplciowe-pawie-kubus-znoszacy.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/4-2026/transplciowe-pawie-kubus-znoszacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/4-2026/transplciowe-pawie-kubus-znoszacy.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/pl/3-2026/wybierasz-bycie-npc-socjologia.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/3-2026/wybierasz-bycie-npc-socjologia.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/3-2026/wybierasz-bycie-npc-socjologia.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/en/3-2026/wybierasz-bycie-npc-socjologia.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/3-2026/wybierasz-bycie-npc-socjologia.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/3-2026/wybierasz-bycie-npc-socjologia.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/pl/2-2026/anarcho-komunizm-silver-w-lol-u-i.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/2-2026/anarcho-komunizm-silver-w-lol-u-i.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/2-2026/anarcho-komunizm-silver-w-lol-u-i.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/en/2-2026/anarcho-komunizm-silver-w-lol-u-i.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/2-2026/anarcho-komunizm-silver-w-lol-u-i.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/2-2026/anarcho-komunizm-silver-w-lol-u-i.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/pl/2-2026/twitch-chat-w-glowie-i.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/2-2026/twitch-chat-w-glowie-i.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/2-2026/twitch-chat-w-glowie-i.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/en/2-2026/twitch-chat-w-glowie-i.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/2-2026/twitch-chat-w-glowie-i.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/2-2026/twitch-chat-w-glowie-i.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/pl/1-2026/czarna-farba-plaska-grzywka-i.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/1-2026/czarna-farba-plaska-grzywka-i.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/1-2026/czarna-farba-plaska-grzywka-i.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/en/1-2026/czarna-farba-plaska-grzywka-i.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/1-2026/czarna-farba-plaska-grzywka-i.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/1-2026/czarna-farba-plaska-grzywka-i.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/pl/1-2026/eyeliner-w-oku-gender-chaos-i.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/1-2026/eyeliner-w-oku-gender-chaos-i.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/1-2026/eyeliner-w-oku-gender-chaos-i.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/en/1-2026/eyeliner-w-oku-gender-chaos-i.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/1-2026/eyeliner-w-oku-gender-chaos-i.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/1-2026/eyeliner-w-oku-gender-chaos-i.html"/>
+  </url>
 </urlset>

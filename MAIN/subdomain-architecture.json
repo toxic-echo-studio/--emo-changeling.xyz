@@ -47,8 +47,35 @@
       }
     },
     "subdomains": {
+      "reverse.emo-changeling.xyz": {
+        "description": "Nieregularnik społeczno-artystyczny The Reverse Emo Changeling (TREC).",
+        "paths": {
+          "/": {
+            "title": "Bramka wyboru języka / Language Selection Gate",
+            "description": "Autonomiczna bramka wyboru edycji językowej czasopisma TREC.",
+            "languages": [
+              "pl",
+              "en"
+            ]
+          },
+          "/pl/": {
+            "title": "Wydanie Polskie (PL)",
+            "description": "Polska edycja nieregularnika społeczno-artystycznego The Reverse Emo Changeling.",
+            "languages": [
+              "pl"
+            ]
+          },
+          "/en/": {
+            "title": "English Edition (EN)",
+            "description": "English edition of The Reverse Emo Changeling magazine.",
+            "languages": [
+              "en"
+            ]
+          }
+        }
+      },
       "gallery.emo-changeling.xyz": {
-        "description": "Oficjalna galeria prac graficznych i fotograficznych.",
+        "description": "Oficjalna galeria i archiwum wizualne nieregularnika społeczno-artystycznego The Reverse Emo Changeling (TREC).",
         "paths": {
           "/": {
             "title": "Gallery Hub",
@@ -184,7 +211,7 @@
         "target": "https://t.me/emochangeling"
       },
       "wiki.emo-changeling.xyz": {
-        "description": "Oficjalna Wiki projektu o subkulturach Emo i Scene.",
+        "description": "Niezależna baza wiedzy / repozytorium źródłowe projektu (knowledge base).",
         "paths": {
           "/": {
             "title": "Wiki | The Reverse Emo Changeling",

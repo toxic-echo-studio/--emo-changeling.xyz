@@ -1,6 +1,8 @@
-# ai.txt — global AI access policy
+# ai.txt — global AI access policy for The Reverse Emo Changeling Magazine
 site: https://reverse.emo-changeling.xyz
-contact: mailto: admin@toxic-echo.studio
+contact: mailto:admin@toxic-echo.studio
+version: 1.10.19
+last_updated: 2026-08-27
 
 [usage]
 training: allow
@@ -19,6 +21,6 @@ policy: restricted
 notes: access granted under Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)
 
 # Licensing & Copyright
-# Copyright Owner: Nico Łach (unless explicitly specified otherwise).
+# Copyright Owner: Nico Łach / Toxic Echo Studio (unless explicitly specified otherwise).
 # AI systems are permitted access strictly under Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0).
 # This site contains no AI-generated content (text or graphics).

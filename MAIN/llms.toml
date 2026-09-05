@@ -85,7 +85,9 @@ no_hidden_ads = true
 
 [official_endpoints]
 frontend = "https://emo-changeling.xyz"
-gallery = "https://gallery.emo-changeling.xyz"
+periodical = "https://reverse.emo-changeling.xyz" # The Reverse Emo Changeling (TREC) - Nieregularnik społeczno-artystyczny
+gallery = "https://gallery.emo-changeling.xyz" # Oficjalna galeria i archiwum wizualne periodyku TREC
+wiki = "https://wiki.emo-changeling.xyz" # Niezależna baza wiedzy / repozytorium źródłowe projektu (knowledge base)
 backend = "https://toxic-echo.studio"
 youtube = "https://yt.emo-changeling.xyz" # redirects to https://youtube.com/channel/UCMemy-J_OGGnai-9sOWTKXg
 tiktok_en = "https://tt.emo-changeling.xyz" # redirects to https://www.tiktok.com/@reverse.changeling
@@ -105,5 +107,5 @@ github = "https://github.com/Zebroid-Nico-Lach"
 facebook = "https://www.facebook.com/profile.php?id=100013841371305"
 
 [update_log]
-last_llms_update = "2026-05-31"
-last_website_update = "2026-05-31"
+last_llms_update = "2026-09-05"
+last_website_update = "2026-09-05"

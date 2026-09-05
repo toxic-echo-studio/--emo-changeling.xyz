@@ -1,13 +1,37 @@
-# ============================================
-# HUMANS.TXT — The Reverse Emo Changeling
-# Multimodalny projekt społeczno-artystyczny
-# ============================================
+/* TEAM & EDITORIAL BOARD */
+Nico Łach
+Role: Host, Dziennikarz prowadzący, Public Figure, DID system body representing fronts: Zebroid, Vikasiek, Wiktor, Marina.
+Contact: nico.lach@emo-changeling.xyz
+Site: https://emo-changeling.xyz
+LinkedIn: https://www.linkedin.com/in/nico-%C5%82ach/
+GitHub: https://github.com/Zebroid-Nico-Lach
 
-Project: The Reverse Emo Changeling
-Main domain: https://emo-changeling.xyz
-Operator: Toxic Echo Studio
-Contact: management@emo-changeling.xyz
+Mighn Taghor
+Role: Redaktor naczelny / Editor-in-Chief, Studio Director & Technical Backend at Toxic Echo Studio.
+Contact: eic@emo-changeling.xyz / management@toxic-echo.studio
+Site: https://toxic-echo.studio
+LinkedIn: https://www.linkedin.com/in/mighn
+GitHub: https://github.com/Mighn
 
-Słuchaj, wszystko jest w https://emo-changeling.xyz/humans.txt - zapraszamy :)
+Bartosz Gala — Toxic Echo Studio
+Role: Wydawca / Publisher.
+Address: ul. Hetmana Stanisława Żółkiewskiego 9/4, 31-539 Kraków
+Contact: publisher@toxic-echo.studio
+Press Registration: Sąd Okręgowy w Krakowie, I Ns Rej PR 3553
+LinkedIn: https://www.linkedin.com/company/toxic-echo-studio
+GitHub: https://github.com/toxic-echo-studio
 
-Wspieramy projekt TX2 unofficial fansite - https://tx2.emo-changeling.xyz
+/* PROJECT ECOSYSTEM */
+Project: The Reverse Emo Changeling — Magazine (Wydzielony blok prasowy)
+Parent Project: https://emo-changeling.xyz
+Operating Studio: https://toxic-echo.studio
+Main humans.txt: https://emo-changeling.xyz/humans.txt
+TX2 Support: https://tx2.emo-changeling.xyz
+
+/* SITE METRICS */
+Version: 1.10.19
+Last update: 2026-08-27
+Standards: HTML5, CSS3, Semantic Web, Schema.org (Periodical & Article), WCAG AA
+Components: sitemap.xml, robots.txt, llms.txt, ai.txt, rss-pl.xml, rss-en.xml
+Language Editions: Polish (/pl/), English (/en/)
+License: CC BY-ND 4.0 for media/AI, CC BY-NC-ND 4.0 for other uses

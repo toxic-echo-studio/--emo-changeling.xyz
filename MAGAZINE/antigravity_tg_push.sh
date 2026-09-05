@@ -190,51 +190,55 @@ def format_rfc822(date_str):
 def make_absolute(html_content):
     html_content = re.sub(r'src="(?:\.\./)*img/', f'src="{domain}/img/', html_content)
     html_content = re.sub(r'src="/img/', f'src="{domain}/img/', html_content)
+    html_content = re.sub(r'href="(?:\.\./)*(\d+-\d{4}/)', f'href="{domain}/\\1', html_content)
+    html_content = re.sub(r'href="/(\d+-\d{4}/)', f'href="{domain}/\\1', html_content)
     html_content = re.sub(r'href="(?:\.\./)*articles/', f'href="{domain}/articles/', html_content)
     html_content = re.sub(r'href="/articles/', f'href="{domain}/articles/', html_content)
     return html_content
 
 articles = []
-if os.path.exists(articles_dir):
-    for filename in os.listdir(articles_dir):
-        if filename.endswith(".html") and filename != "article.html":
-            filepath = os.path.join(articles_dir, filename)
-            with open(filepath, 'r', encoding='utf-8') as f:
-                content = f.read()
-            
-            title_match = re.search(r'<title>(.*?)</title>', content, re.IGNORECASE | re.DOTALL)
-            title = title_match.group(1).strip() if title_match else "New Article"
-            title_clean = re.sub(r'\s*\|\s*.*', '', title)
-            
-            desc_match = re.search(r'<meta\s+name="description"\s+content="([^"]*)"', content, re.IGNORECASE)
-            description = desc_match.group(1).strip() if desc_match else ""
-            
-            author_match = re.search(r'<meta\s+name="author"\s+content="([^"]*)"', content, re.IGNORECASE)
-            author = author_match.group(1).strip() if author_match else "Nico Łach"
-            
-            date_match = re.search(r'<meta\s+name="publish-date"\s+content="([^"]*)"', content, re.IGNORECASE)
-            if date_match:
-                date_str = date_match.group(1).strip()
-            else:
-                mtime = os.path.getmtime(filepath)
-                date_str = datetime.date.fromtimestamp(mtime).isoformat()
-            
-            body_match = re.search(r'<section\s+class="[^\"]*article-body[^\"]*">(.*?)</section>', content, re.DOTALL | re.IGNORECASE)
-            if not body_match:
-                body_match = re.search(r'<section\s+class="[^\"]*article-container[^\"]*">(.*?)</section>', content, re.DOTALL | re.IGNORECASE)
-            
-            body_content = body_match.group(1).strip() if body_match else ""
-            body_absolute = make_absolute(body_content)
-            
-            articles.append({
-                "title": title_clean,
-                "link": f"{domain}/articles/{filename}",
-                "description": description,
-                "author": author,
-                "date_str": date_str,
-                "pubDate": format_rfc822(date_str),
-                "content": body_absolute
-            })
+for entry in sorted(os.listdir(magazine_dir)):
+    entry_path = os.path.join(magazine_dir, entry)
+    if os.path.isdir(entry_path) and (re.match(r'^\d+-\d{4}$', entry) or entry == "articles"):
+        for filename in sorted(os.listdir(entry_path)):
+            if filename.endswith(".html") and filename != "article.html":
+                filepath = os.path.join(entry_path, filename)
+                with open(filepath, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                
+                title_match = re.search(r'<title>(.*?)</title>', content, re.IGNORECASE | re.DOTALL)
+                title = title_match.group(1).strip() if title_match else "New Article"
+                title_clean = re.sub(r'\s*\|\s*.*', '', title)
+                
+                desc_match = re.search(r'<meta\s+name="description"\s+content="([^"]*)"', content, re.IGNORECASE)
+                description = desc_match.group(1).strip() if desc_match else ""
+                
+                author_match = re.search(r'<meta\s+name="author"\s+content="([^"]*)"', content, re.IGNORECASE)
+                author = author_match.group(1).strip() if author_match else "Nico Łach"
+                
+                date_match = re.search(r'<meta\s+name="publish-date"\s+content="([^"]*)"', content, re.IGNORECASE)
+                if date_match:
+                    date_str = date_match.group(1).strip()
+                else:
+                    mtime = os.path.getmtime(filepath)
+                    date_str = datetime.date.fromtimestamp(mtime).isoformat()
+                
+                body_match = re.search(r'<section\s+class="[^\"]*article-body[^\"]*">(.*?)</section>', content, re.DOTALL | re.IGNORECASE)
+                if not body_match:
+                    body_match = re.search(r'<section\s+class="[^\"]*article-container[^\"]*">(.*?)</section>', content, re.DOTALL | re.IGNORECASE)
+                
+                body_content = body_match.group(1).strip() if body_match else ""
+                body_absolute = make_absolute(body_content)
+                
+                articles.append({
+                    "title": title_clean,
+                    "link": f"{domain}/{entry}/{filename}",
+                    "description": description,
+                    "author": author,
+                    "date_str": date_str,
+                    "pubDate": format_rfc822(date_str),
+                    "content": body_absolute
+                })
 
 articles.sort(key=lambda x: x["date_str"], reverse=True)
 

@@ -17,9 +17,12 @@ Workflow: DaVinci Resolve Studio, LumaFusion, Clip Studio Paint, VS Code, OBS St
 Services: Cloudflare, Lark Suite
 
 /* SITE */
+The Reverse Emo Changeling (TREC) - Nieregularnik społeczno-artystyczny: https://reverse.emo-changeling.xyz
+Oficjalna galeria i archiwum wizualne periodyku: https://gallery.emo-changeling.xyz
+Niezależna baza wiedzy (Wiki): https://wiki.emo-changeling.xyz
 Wspieramy projekt TX2 unofficial fansite - https://tx2.emo-changeling.xyz
 
-Last update: 2026-07-30
+Last update: 2026-09-05
 Standards: HTML5, CSS3
 Components: robots.txt, llms.txt, ai.txt
 License: CC BY-ND 4.0 for media/AI, CC BY-NC-ND 4.0 for other uses

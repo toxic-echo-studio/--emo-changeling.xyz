@@ -34,5 +34,5 @@ Wspieramy projekt TX2 unofficial fansite - https://tx2.emo-changeling.xyz
 
 
 ## UPDATE LOG
-- **last llms.txt update:** 2026-07-30
-- **last website update:** 2026-07-30
+- **last llms.txt update:** 2026-09-05
+- **last website update:** 2026-09-05

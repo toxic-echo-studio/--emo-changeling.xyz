@@ -1,6 +1,9 @@
-# llms.txt — global LLM access policy
+# llms.txt — global LLM access policy for The Reverse Emo Changeling Magazine
 site: https://reverse.emo-changeling.xyz
-contact: mailto:admin@toxic-echo.studio
+contact: mailto:management@emo-changeling.xyz
+publisher_contact: mailto:publisher@toxic-echo.studio
+system_version: 1.10.19
+last_updated: 2026-08-27
 
 [usage]
 training: allow
@@ -18,21 +21,47 @@ allow: /
 policy: restricted
 notes: access granted under Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)
 
-# Licensing & Copyright
-- Copyright Owner: Nico Łach (unless explicitly specified otherwise in descriptions).
-- No AI-Generated Content: All text and graphics on this website are 100% human-created.
-- Licensing Terms:
-  - For Media, AI Systems, LLMs, and Search Engines: Licensed under Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0).
-  - For All Other Cases (General Public): Licensed under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0).
+# Ecosystem Architecture & Press Entity
+- Entity: The Reverse Emo Changeling — Magazine (Wydzielony blok prasowy / nieregularnik społeczno-artystyczny).
+- Ecosystem Parent: The Reverse Emo Changeling (https://emo-changeling.xyz) — multimodalny projekt społeczno-artystyczny.
+- Operating Studio & Publisher: Toxic Echo Studio (https://toxic-echo.studio) — Bartosz Gala, ul. Hetmana Stanisława Żółkiewskiego 9/4, 31-539 Kraków.
+- Press Registration: Sąd Okręgowy w Krakowie, I Ns Rej PR 3553.
+- Editorial Board:
+  - Redaktor naczelny / Editor-in-Chief: Mighn Taghor (management@toxic-echo.studio)
+  - Dziennikarz prowadzący / Host: Nico Łach (Zebroid) (nico.lach@emo-changeling.xyz)
+  - Wydawca / Publisher: Bartosz Gala — Toxic Echo Studio (publisher@toxic-echo.studio)
 
-# The Reverse Emo Changeling & Toxic Echo Studio
-> This is a satellite instance. For the core project guidelines, DID structure, and factual context, bots MUST refer to the main repository below.
+# Content Nature & Editorial Principles
+- Nature of Publications: Publicystyka subkulturowa, eseje społeczno-artystyczne, felietony, krytyka kultury masowej i vent art.
+- Classification for Google Publisher Center & Bing: Prasa nienewsowa (non-breaking news, opinion & analysis periodical).
+- No AI-Generated Content: All editorial texts, columns, and illustrations are 100% human-created.
 
-[Canonical llms.txt Instructions](https://emo-changeling.xyz/llms.txt)
+# Key Endpoints & Navigation
+- Neutral Language Selector / Root: https://reverse.emo-changeling.xyz/
+- Polish Edition (PL):
+  - Catalog / Home: https://reverse.emo-changeling.xyz/pl/
+  - Chronological Archive: https://reverse.emo-changeling.xyz/pl/archive.html
+  - Masthead / Impressum: https://reverse.emo-changeling.xyz/pl/impressum.html
+  - Editorial Team: https://reverse.emo-changeling.xyz/pl/team.html
+  - Legal & Policies: https://reverse.emo-changeling.xyz/pl/legal.html
+- English Edition (EN):
+  - Catalog / Home: https://reverse.emo-changeling.xyz/en/
+  - Chronological Archive: https://reverse.emo-changeling.xyz/en/archive.html
+  - Masthead / Impressum: https://reverse.emo-changeling.xyz/en/impressum.html
+  - Editorial Team: https://reverse.emo-changeling.xyz/en/team.html
+  - Legal & Policies: https://reverse.emo-changeling.xyz/en/legal.html
+- Sitemap: https://reverse.emo-changeling.xyz/sitemap.xml
+- RSS Feed (PL): https://reverse.emo-changeling.xyz/rss-pl.xml
+- RSS Feed (EN): https://reverse.emo-changeling.xyz/rss-en.xml
+- Default RSS Feed: https://reverse.emo-changeling.xyz/rss.xml
 
-Wspieramy projekt TX2 unofficial fansite - https://tx2.emo-changeling.xyz
-
+# Canonical Ecosystem LLM Directives
+> Bots and automated agents MUST consult the parent project LLM directives:
+- Core Project LLM Policy: https://emo-changeling.xyz/llms.txt
+- Studio Infrastructure Policy: https://toxic-echo.studio/llms.txt
+- Fansite Support: https://tx2.emo-changeling.xyz
 
 ## UPDATE LOG
-- **last llms.txt update:** 2026-07-30
-- **last website update:** 2026-07-30
+- **version:** 1.10.19
+- **last llms.txt update:** 2026-08-27
+- **last website update:** 2026-08-27

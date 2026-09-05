@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl" data-version="1.3.3" data-build="20260730" data-system="Toxic Echo Studio">
+<html lang="pl" data-version="3.1.0" data-build="20260905" data-system="Toxic Echo Studio">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,7 +10,6 @@
 
     <link rel="alternate" hreflang="pl" href="https://hub.emo-changeling.xyz/pl/blackhole/">
     <link rel="alternate" hreflang="en" href="https://hub.emo-changeling.xyz/en/blackhole/">
-    <link rel="alternate" hreflang="x-default" href="https://hub.emo-changeling.xyz/en/blackhole/">
     <link rel="canonical" href="https://hub.emo-changeling.xyz/pl/blackhole/">
 
     <title>Centrum Galaktyki | HUB | The Reverse Emo Changeling</title>
@@ -96,10 +95,7 @@
     </script>
 </head>
 <body>
-<!-- Zrobiłem refaktoryzację kodu: przeniosłem style do osobnego pliku i zaktualizowałem wersję do 1.3.3 (20260531) -->
-
-
-    <header class="main-header">
+<header class="main-header">
         <div class="banner-container">
             <img src="/img/bannerM1.webp" width="1920" height="1080" alt="Baner projektu The Reverse Emo Changeling w estetyce emo/scene" class="banner" fetchpriority="high">
 
@@ -117,7 +113,7 @@
         <h1 class="cursor-after">
           Centrum galaktyki
           <span class="lang-switcher">
-            (<span aria-current="true">PL</span>/<a href="/en/blackhole/" hreflang="en" lang="en">EN</a>)
+            (<span aria-current="true">PL</span>/<a href="/en/blackhole/" hreflang="en" lang="en" onclick="setSiteLang('en')">EN</a>)
           </span>
         </h1>      
         
@@ -129,32 +125,33 @@
                 <h3 class="cursor-before"> Nasz układ planetarny:</h3>
                 <p><strong>Czyli linki w ramach emo-changeling</strong></p>
                 <ul>
-                    <li><strong>Strona główna: </strong>  <a href="https://emo-changeling.xyz">Tu wszystko się zaczyna</a></li><br>
-                    <li><strong>O nas:</strong>  <a href="https://emo-changeling.xyz/pl/main-o-nas/">Piszemy sami o sobie</a></li><br>
-                    <li><strong>Nasza galeria: </strong> <a href="https://gallery.emo-changeling.xyz">Grafiki w pełnej jakości</a></li><br>
-                    <li><strong>Spotlight: </strong> <a href="https://spotlight.emo-changeling.xyz/pl/spot-o-nas/">Piszą o nas albo my o innych</a></li><br>
-                    <li><strong>Emo wiki: </strong> <a href="https://wiki.emo-changeling.xyz">Centrum wiedzy o subkulturach Emo i Scene</a></li><br>
-                    <li><strong>Hall Of Shame: </strong> <a href="https://shame.emo-changeling.xyz">Tutaj trafiają ci, co zaleźli nam za skórę</a></li><br>
-                    <li><strong>Telegram: </strong> <a href="https://te.emo-changeling.xyz">Centrum komunikacji emosowych</a></li><br>
+                    <li><strong>Strona główna: </strong> <a href="https://emo-changeling.xyz">Tu wszystko się zaczyna</a></li>
+                    <li><strong>O nas:</strong> <a href="https://emo-changeling.xyz/pl/main-o-nas/">Piszemy sami o sobie</a></li>
+                    <li><strong>Czasopismo: </strong> <a href="https://reverse.emo-changeling.xyz/">[The Reverse Emo Changeling]</a></li>
+                    <li><strong>Nasza galeria: </strong> <a href="https://gallery.emo-changeling.xyz">Grafiki w pełnej jakości</a></li>
+                    <li><strong>Spotlight: </strong> <a href="https://spotlight.emo-changeling.xyz/pl/spot-o-nas/">Piszą o nas albo my o innych</a></li>
+                    <li><strong>Emo wiki: </strong> <a href="https://wiki.emo-changeling.xyz">Centrum wiedzy o subkulturach Emo i Scene</a></li>
+                    <li><strong>Hall Of Shame: </strong> <a href="https://shame.emo-changeling.xyz">Tutaj trafiają ci, co zaleźli nam za skórę</a></li>
+                    <li><strong>Telegram: </strong> <a href="https://te.emo-changeling.xyz">Centrum komunikacji emosowych</a></li>
                     <li><strong>I na razie na tyle... </strong></li>
                 </ul>
                 
                 <h3 class="cursor-before"> inne układy w galaktyce:</h3>
                 <p><strong>Czyli strony zaprzyjaźnione</strong></p>
                 <ul>
-                  <li><strong>Toxic Echo studio: </strong>  <a href="https://toxic-echo.studio">Tam robią to, czego my nie lubimy robić XD</a></li><br>
-                  <li><strong>TX2 unofficial fansite: </strong> <a href="https://tx2.emo-changeling.xyz">Pigeonification Ritual</a></li><br>
-                    <li><strong>I tylko tyle... </strong> </li>
+                  <li><strong>Toxic Echo studio: </strong> <a href="https://toxic-echo.studio">Tam robią to, czego my nie lubimy robić XD</a></li>
+                  <li><strong>TX2 unofficial fansite: </strong> <a href="https://tx2.emo-changeling.xyz">Pigeonification Ritual</a></li>
+                  <li><strong>I tylko tyle... </strong></li>
                 </ul>
 
                 <h3 class="cursor-before">Partnerzy:</h3>
                 <p><strong>Taka dumna nazwa dla współprac zewnętrznych</strong></p>
                 <ul>
-                    <li><strong>Na razie tu jeszcze cisza... </strong> </li>
+                    <li><strong>Na razie tu jeszcze cisza... </strong></li>
                 </ul>
 
-                <br><p><strong>Wpadliście na to, żeby poszturchać w nasz banner - tam jest też coś schowane i z czasem będzie coraz więcej XD</strong></p>
-                <br><p>Wszystko, co tu widzisz, jest w pełni niezależne i zgodne z naszym etosem. RAWR XD!</p>
+                <p><strong>Wpadliście na to, żeby poszturchać w nasz banner - tam jest też coś schowane i z czasem będzie coraz więcej XD</strong></p>
+                <p>Wszystko, co tu widzisz, jest w pełni niezależne i zgodne z naszym etosem. RAWR XD!</p>
                 <p>Wszelkie kanoniczne info o nas zawsze znajdziesz na głównej domenie emo-changeling.xyz.</p>
 
                 <blockquote>
@@ -173,99 +170,71 @@
     </footer>
 
 
-<!-- Floating Navigation Menu -->
-<nav class="floating-nav" aria-label="Menu nawigacyjne">
-    <div class="floating-nav-menu" id="floating-nav-menu" aria-hidden="true">
-        <div class="floating-nav-section">
-            <div class="floating-nav-section-title">Projekty zewnętrzne</div>
-            <a href="https://tx2.emo-changeling.xyz/" class="floating-nav-link">TX2 Unofficial</a>
+    <!-- Pływające menu nawigacji (czysty HTML5 bez JS) -->
+    <details class="floating-nav notranslate" translate="no">
+        <summary class="floating-nav-trigger" aria-label="Menu nawigacyjne">
+            <img src="../../img/navigation.png" alt="Nawigacja" width="48" height="48">
+        </summary>
+        <div class="floating-nav-menu" id="floating-nav-menu">
+            <div class="floating-nav-section">
+                <div class="floating-nav-section-title">Magazyn &amp; E-Zin</div>
+                <a href="https://reverse.emo-changeling.xyz/" class="floating-nav-link">Magazine Home</a>
+                <a href="https://reverse.emo-changeling.xyz/pl/" class="floating-nav-link">Wydanie Polskie (PL)</a>
+                <a href="https://reverse.emo-changeling.xyz/en/" class="floating-nav-link">English Edition (EN)</a>
+            </div>
+            <div class="floating-nav-section">
+                <div class="floating-nav-section-title">Główna strona</div>
+                <a href="https://emo-changeling.xyz/" class="floating-nav-link">Home Page</a>
+                <a href="https://reverse.emo-changeling.xyz/" class="floating-nav-link">e-zine: TREC</a>
+                <a href="https://emo-changeling.xyz/pl/main-o-nas/" class="floating-nav-link">O nas</a>
+                <a href="https://emo-changeling.xyz/en/main-about/" class="floating-nav-link">About Us</a>
+            </div>
+            <div class="floating-nav-section">
+                <div class="floating-nav-section-title">Wiki</div>
+                <a href="https://wiki.emo-changeling.xyz/" class="floating-nav-link">Wiki Home</a>
+            </div>
+            <div class="floating-nav-section">
+                <div class="floating-nav-section-title">Galeria</div>
+                <a href="https://gallery.emo-changeling.xyz/" class="floating-nav-link">Galeria Home</a>
+                <a href="https://gallery.emo-changeling.xyz/aviary/" class="floating-nav-link">Aviary</a>
+                <a href="https://gallery.emo-changeling.xyz/photo/" class="floating-nav-link">Zdjęcia (Photo)</a>
+                <a href="https://gallery.emo-changeling.xyz/digiart/" class="floating-nav-link">Digiart</a>
+                <a href="https://gallery.emo-changeling.xyz/other/" class="floating-nav-link">Monster Art</a>
+            </div>
+            <div class="floating-nav-section">
+                <div class="floating-nav-section-title">Hub &amp; Spotlight</div>
+                <a href="https://hub.emo-changeling.xyz/" class="floating-nav-link">Hub Home</a>
+                <a href="https://hub.emo-changeling.xyz/pl/blackhole/" class="floating-nav-link">Linkownia PL</a>
+                <a href="https://hub.emo-changeling.xyz/en/blackhole/" class="floating-nav-link">Linkownia EN</a>
+                <a href="https://spotlight.emo-changeling.xyz/" class="floating-nav-link">Spotlight</a>
+                <a href="https://rant.emo-changeling.xyz/" class="floating-nav-link">Insta Rant</a>
+            </div>
+            <div class="floating-nav-section">
+                <div class="floating-nav-section-title">Hall of Shame</div>
+                <a href="https://shame.emo-changeling.xyz/" class="floating-nav-link">Shame Home</a>
+            </div>
+            <div class="floating-nav-section">
+                <div class="floating-nav-section-title">Projekty zewnętrzne</div>
+                <a href="https://tx2.emo-changeling.xyz/" class="floating-nav-link">TX2 Unofficial</a>
+            </div>
         </div>
-<div class="floating-nav-section">
-            <div class="floating-nav-section-title">Główna strona</div>
-            <a href="https://emo-changeling.xyz/" class="floating-nav-link">Home Page</a>
-            <a href="https://emo-changeling.xyz/pl/main-o-nas/" class="floating-nav-link">O nas</a>
-            <a href="https://emo-changeling.xyz/en/main-about/" class="floating-nav-link">About Us</a>
-        </div>
-        <div class="floating-nav-section">
-            <div class="floating-nav-section-title">Wiki</div>
-            <a href="https://wiki.emo-changeling.xyz/" class="floating-nav-link">Wiki Home</a>
-        </div>
-        <div class="floating-nav-section">
-            <div class="floating-nav-section-title">Galeria</div>
-            <a href="https://gallery.emo-changeling.xyz/" class="floating-nav-link">Galeria Home</a>
-            <a href="https://gallery.emo-changeling.xyz/aviary/" class="floating-nav-link">Aviary</a>
-            <a href="https://gallery.emo-changeling.xyz/photo/" class="floating-nav-link">Zdjęcia (Photo)</a>
-            <a href="https://gallery.emo-changeling.xyz/digiart/" class="floating-nav-link">Digiart</a>
-            <a href="https://gallery.emo-changeling.xyz/other/" class="floating-nav-link">Monster Art</a>
-        </div>
-        <div class="floating-nav-section">
-            <div class="floating-nav-section-title">Hub & Spotlight</div>
-            <a href="https://hub.emo-changeling.xyz/" class="floating-nav-link">Hub Home</a>
-            <a href="https://hub.emo-changeling.xyz/pl/blackhole/" class="floating-nav-link">Linkownia PL</a>
-            <a href="https://hub.emo-changeling.xyz/en/blackhole/" class="floating-nav-link">Linkownia EN</a>
-            <a href="https://spotlight.emo-changeling.xyz/" class="floating-nav-link">Spotlight</a>
-            <a href="https://rant.emo-changeling.xyz/" class="floating-nav-link">Insta Rant</a>
-        </div>
-        <div class="floating-nav-section">
-            <div class="floating-nav-section-title">Hall of Shame</div>
-            <a href="https://shame.emo-changeling.xyz/" class="floating-nav-link">Shame Home</a>
-        </div>
-    </div>
-    <button class="floating-nav-trigger" id="floating-nav-trigger" aria-label="Otwórz menu nawigacyjne" aria-expanded="false" aria-controls="floating-nav-menu">
-        <img src="../../img/navigation.png" alt="Nawigacja" width="48" height="48">
-    </button>
-</nav>
+    </details>
 
 
 
-<script>
-(function() {
-    function initFloatingNav() {
-        const trigger = document.getElementById('floating-nav-trigger');
-        const menu = document.getElementById('floating-nav-menu');
-        if (!trigger || !menu) return;
 
-        trigger.addEventListener('click', (e) => {
-            e.stopPropagation();
-            const expanded = trigger.getAttribute('aria-expanded') === 'true';
-            trigger.setAttribute('aria-expanded', !expanded);
-            if (!expanded) {
-                menu.style.display = 'block';
-                setTimeout(() => menu.classList.add('active'), 10);
-                menu.setAttribute('aria-hidden', 'false');
-            } else {
-                menu.classList.remove('active');
-                const transitionHandler = () => {
-                    menu.style.display = 'none';
-                    menu.removeEventListener('transitionend', transitionHandler);
-                };
-                menu.addEventListener('transitionend', transitionHandler);
-                menu.setAttribute('aria-hidden', 'true');
-            }
-        });
 
-        document.addEventListener('click', (e) => {
-            if (!menu.contains(e.target) && e.target !== trigger) {
-                if (menu.classList.contains('active')) {
-                    trigger.setAttribute('aria-expanded', 'false');
-                    menu.classList.remove('active');
-                    const transitionHandler = () => {
-                        menu.style.display = 'none';
-                        menu.removeEventListener('transitionend', transitionHandler);
-                    };
-                    menu.addEventListener('transitionend', transitionHandler);
-                    menu.setAttribute('aria-hidden', 'true');
-                }
-            }
-        });
+    <!-- Spójna pamięć wyboru języka -->
+    <script>
+    function setSiteLang(l) {
+        try {
+            var d = new Date();
+            d.setTime(d.getTime() + 31536000000);
+            var dom = location.hostname.indexOf('emo-changeling.xyz') !== -1 ? '; domain=.emo-changeling.xyz' : '';
+            document.cookie = 'site_lang=' + l + '; expires=' + d.toUTCString() + '; path=/' + dom + '; SameSite=Lax';
+            if (window.localStorage) localStorage.setItem('site_lang', l);
+        } catch(e) {}
     }
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initFloatingNav);
-    } else {
-        initFloatingNav();
-    }
-})();
-</script>
-
+    </script>
 </body>
 </html>

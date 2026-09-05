@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en" data-version="1.10.19" data-build="20260803" data-system="Toxic Echo Studio">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preload" as="image" href="../img/bannerM1.webp" fetchpriority="high">
+    <link rel="preload" href="../css/style.css" as="style">
+    <link rel="preload" href="../css/base-ui.css" as="style">
+    <link rel="preload" href="../css/typography.css" as="style">
+
+    <meta name="theme-color" content="#000000">
+    <link rel="canonical" href="https://reverse.emo-changeling.xyz/en/">
+    <link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/">
+    <link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/">
+
+    <link rel="alternate" type="application/rss+xml" href="https://reverse.emo-changeling.xyz/rss-pl.xml" title="The Reverse Emo Changeling (PL) RSS Feed">
+    <link rel="alternate" type="application/rss+xml" href="https://reverse.emo-changeling.xyz/rss-en.xml" title="The Reverse Emo Changeling (EN) RSS Feed">
+    <link rel="alternate" type="application/rss+xml" href="https://reverse.emo-changeling.xyz/rss.xml" title="The Reverse Emo Changeling RSS Feed">
+    <link rel="alternate" type="text/plain" href="https://reverse.emo-changeling.xyz/llms.txt" title="LLM System Instructions">
+    <link rel="author" type="text/plain" href="https://reverse.emo-changeling.xyz/humans.txt" title="Humans">
+
+    <meta name="description" content="The Reverse Emo Changeling - Magazine. Independent social-artistic web publication in Modern MySpace aesthetic.">
+    <meta name="keywords" content="Magazine, E-Zine, Emo, Scene, MySpace, Cyberpunk, Toxic Echo Studio, Nico Łach, Mighn Taghor, Web 2.0, Alternative">
+    <meta name="author" content="Nico Łach (Zebroid) - Lead Journalist">
+    <meta name="version" content="1.10.19">
+    <meta name="revision-date" content="2026-08-27">
+    <meta name="dcterms.rightsHolder" content="Bartosz Gala - Toxic Echo studio / Nico Łach">
+    <meta name="dcterms.issued" content="2026-03-13">
+    <meta name="dcterms.modified" content="2026-08-27">
+    <meta name="ai-content-declaration" content="no-ai-generated-content">
+
+    <title>The Reverse Emo Changeling | Magazine & E-Zine</title>
+    <meta name="application-name" content="The Reverse Emo Changeling">
+
+    <link rel="icon" type="image/png" href="../img/emo1ss.webp" sizes="192x192">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/emo1ss.webp">
+
+    <meta property="og:title" content="The Reverse Emo Changeling | Magazine & E-Zine">
+    <meta property="og:site_name" content="The Reverse Emo Changeling">
+    <meta property="og:description" content="Independent social-artistic web publication in Modern MySpace aesthetic. Alternative journalism, net culture, and digital art.">
+    <meta property="og:image" content="https://reverse.emo-changeling.xyz/img/bannerM1.webp">
+    <meta property="og:url" content="https://reverse.emo-changeling.xyz/en/">
+    <meta property="og:type" content="website">
+    <meta property="og:updated_time" content="2026-08-27T12:00:00+02:00">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Reverse Emo Changeling | Magazine & E-Zine">
+    <meta name="twitter:description" content="The Reverse Emo Changeling - Magazine. Independent social-artistic web publication in Modern MySpace aesthetic.">
+    <meta name="twitter:image" content="https://reverse.emo-changeling.xyz/img/bannerM1.webp">
+
+    <link rel="stylesheet" href="../css/base-ui.css">
+    <link rel="stylesheet" href="../css/typography.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Schema.org Rich Snippet -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "Periodical",
+        "WebSite"
+      ],
+      "@id": "https://reverse.emo-changeling.xyz/#periodical",
+      "url": "https://reverse.emo-changeling.xyz/en/",
+      "name": "The Reverse Emo Changeling",
+      "alternateName": [
+        "The Reverse Emo Changeling - Magazyn & E-Zin",
+        "Nieregularnik społeczno - artystyczny"
+      ],
+      "description": "The Reverse Emo Changeling - Magazine. Independent social-artistic web publication in Modern MySpace aesthetic.",
+      "inLanguage": "en-US",
+      "genre": [
+        "Subcultural journalism",
+        "Essays",
+        "Alt culture",
+        "Scene/Emo art"
+      ],
+      "keywords": "Magazine, E-Zine, Emo, Scene, MySpace, Cyberpunk, Toxic Echo Studio, Nico Łach, Mighn Taghor",
+      "isPartOf": {
+        "@type": [
+          "Project",
+          "CreativeWorkSeries"
+        ],
+        "@id": "https://emo-changeling.xyz#project",
+        "name": "The Reverse Emo Changeling",
+        "url": "https://emo-changeling.xyz"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://toxic-echo.studio#org",
+        "name": "Toxic Echo studio",
+        "legalName": "Toxic Echo studio - Bartosz Gala",
+        "url": "https://toxic-echo.studio",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "ul. Hetmana Stanisława Żółkiewskiego 9/4",
+          "postalCode": "31-539",
+          "addressLocality": "Kraków",
+          "addressCountry": "PL"
+        },
+        "identifier": "SO w Krakowie I Ns Rej PR 3553",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://reverse.emo-changeling.xyz/img/emo1ss.webp"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/toxic-echo-studio",
+          "https://github.com/toxic-echo-studio"
+        ]
+      },
+      "editor": {
+        "@type": "Person",
+        "@id": "https://toxic-echo.studio#mighn",
+        "name": "Mighn Taghor",
+        "jobTitle": "Redaktor naczelny / Editor-in-Chief",
+        "url": "https://toxic-echo.studio",
+        "sameAs": [
+          "https://www.linkedin.com/in/mighn",
+          "https://github.com/Mighn"
+        ]
+      },
+      "author": {
+        "@type": "Person",
+        "@id": "https://emo-changeling.xyz#nico",
+        "name": "Nico Łach",
+        "alternateName": "Zebroid",
+        "jobTitle": "Lead Journalist / Dziennikarz prowadzący",
+        "url": "https://reverse.emo-changeling.xyz/team.html",
+        "sameAs": [
+          "https://www.linkedin.com/in/nico-%C5%82ach/",
+          "https://github.com/Zebroid-Nico-Lach",
+          "https://emo-changeling.xyz",
+          "https://www.youtube.com/channel/UCMemy-J_OGGnai-9sOWTKXg"
+        ]
+      },
+      "masthead": "https://reverse.emo-changeling.xyz/impressum.html",
+      "publishingPrinciples": "https://reverse.emo-changeling.xyz/legal.html",
+      "license": "https://creativecommons.org/licenses/by-nd/4.0/",
+      "isAccessibleForFree": true
+    }
+  ]
+}
+    </script>
+</head>
+
+<body>
+    <!-- Issue Selector Inputs (Pure CSS tabs) -->
+    <input type="radio" id="issue-select-19" name="issue-filter" class="issue-radio-input" checked>
+    <input type="radio" id="issue-select-18" name="issue-filter" class="issue-radio-input">
+    <input type="radio" id="issue-select-17" name="issue-filter" class="issue-radio-input">
+    <input type="radio" id="issue-select-16" name="issue-filter" class="issue-radio-input">
+    <input type="radio" id="issue-select-1" name="issue-filter" class="issue-radio-input">
+    <input type="checkbox" id="sidebar-toggle-checkbox" class="sidebar-toggle-checkbox">
+
+    <!-- Top Skip Link for Accessibility -->
+    <a href="#main-content-anchor" class="llm-content" style="position: absolute; left: -9999px;">Skip to main content</a>
+
+    <!-- Header Banner Area -->
+    <header class="main-header notranslate" translate="no">
+        <div class="banner-container">
+            <img src="../img/bannerM1.webp" width="1920" height="1080" fetchpriority="high" alt="The Reverse Emo Changeling Banner" class="banner">
+  
+            <a href="https://reverse.emo-changeling.xyz/en/" class="myspace-hitbox-link" aria-label="Go to Magazine Home">
+                <img src="../img/emo1ss.webp" width="288" height="288" alt="Nico Łach" class="sliding-emo-pic">
+            </a>
+
+            <a href="https://gallery.emo-changeling.xyz/aviary/" class="myspace-hitbox-link-right" aria-label="Go to Aviary Gallery">
+                <img src="../img/aviary.webp" width="288" height="288" alt="Aviary Gallery" class="sliding-aviary-pic">
+            </a>
+        </div>
+    </header>
+
+    <!-- Social Links Row -->
+    <div class="social-container notranslate" translate="no">
+        <a href="https://deviantart.emo-changeling.xyz" rel="me" aria-label="DeviantArt Portfolio">
+            <img src="../img/DeviantArt.svg" width="48" height="48" loading="lazy" alt="DeviantArt" class="social-icon">
+        </a>
+        <a href="https://tt.emo-changeling.xyz" rel="me" aria-label="TikTok Channel">
+            <img src="../img/tiktok_link.svg" width="48" height="48" loading="lazy" alt="TikTok" class="social-icon">
+        </a>
+        <a href="https://yt.emo-changeling.xyz" rel="me" aria-label="YouTube Channel">
+            <img src="../img/YouTube_link.svg" width="48" height="48" loading="lazy" alt="YouTube" class="social-icon">
+        </a>
+        <a href="https://te.emo-changeling.xyz" rel="me" aria-label="Telegram Channel">
+            <img src="../img/Telegram.svg" width="48" height="48" loading="lazy" alt="Telegram" class="social-icon">
+        </a>
+    </div>
+
+    <!-- Main Content Area -->
+    <main class="main-content" id="main-content-anchor">
+<div class="homepage-container">
+                   <!-- Left Column: Profile Card, Contact, Blurbs, Top 8 -->
+            <aside class="profile-sidebar">
+                
+                <!-- Language Switcher Widget -->
+                <div class="lang-switcher-widget notranslate" translate="no"><a href="../pl/" class="lang-btn lang-btn-pl" hreflang="pl" lang="pl" onclick="setSiteLang(\'pl\')">PL</a><span class="lang-sep">|</span><span class="lang-btn lang-btn-en active" aria-current="page">EN</span></div>
+
+                <!-- Welcome Card -->
+                <div class="profile-pic-container">
+                    
+                    <h2>Welcome!</h2>
+                    
+                    <!-- Contact Box -->
+                    <div class="contact-table" style="margin-top: 10px;">
+                        <a href="mailto:management@emo-changeling.xyz" class="contact-button">Send Message</a>
+                        <a href="https://te.emo-changeling.xyz" class="contact-button notranslate" translate="no">Add to Friends</a>
+                        
+                        <a href="../rss-en.xml" class="contact-button ">Subscribe RSS</a>
+                        <a href="https://wiki.emo-changeling.xyz" class="contact-button notranslate" translate="no">View Wiki</a>
+                    </div>
+                </div>
+
+                <!-- About Us / Blurbs section (The Manifesto) -->
+                <section class="content-box">
+                    
+                    <h2>About us (Manifesto)</h2>
+                    
+                    <p style="color: var(--color-text-white); font-family: 'Inter', sans-serif; line-height: 1.5; font-size: 0.9rem;">
+                        Underground culture, zero corporate greed—a true safe haven for anyone who feels too much and thinks for themselves.
+                    </p>
+                </section>
+
+                <!-- Katalog numerów -->
+                <section class="content-box">
+                    
+                    <h2>Issue Catalog</h2>
+                    <div style="display: flex; flex-direction: column; gap: 15px;">
+                        
+                        <!-- Ramka 1: Aktualny numer -->
+                        <div style="border: 1px dashed var(--color-primary-pink); padding: 12px; background: rgba(0,0,0,0.5);">
+                            
+                            <h3 style="text-align: left; color: var(--color-text-pink); border-bottom: 1px solid var(--color-primary-pink); padding-bottom: 5px; font-size: 0.95rem; margin-bottom: 8px;">Current Issue: Release 19/2026</h3>
+                            <ul style="list-style: square; padding-left: 20px; color: var(--color-text-white); font-size: 0.85rem; line-height: 1.5; margin: 0;">
+                                <li>
+                                    <label for="issue-select-19" class="issue-catalog-label issue-label-19" style="color: var(--color-text-green);">
+                                        
+                                        <span>You Think You&#x27;re Saving It? On Fake Mercy, Backyard Mills, and the Pet Store Machine</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Ramka 2: Wybrane numery -->
+                        <div style="border: 1px dashed var(--color-primary-pink); padding: 12px; background: rgba(0,0,0,0.5);">
+                            
+                            <h3 style="text-align: left; color: var(--color-text-pink); border-bottom: 1px solid var(--color-primary-pink); padding-bottom: 5px; font-size: 0.95rem; margin-bottom: 8px;">Recent &amp; Key Issues</h3>
+                            <ul style="list-style: square; padding-left: 20px; color: var(--color-text-white); font-size: 0.85rem; line-height: 1.5; margin: 0;">
+                                <li style="margin-bottom: 6px;">
+                                    <label for="issue-select-18" class="issue-catalog-label issue-label-18" style="color: var(--color-text-green);">
+                                        
+                                        <span>Release 18/2026: Głośniej Niż Hejt</span>
+                                    </label>
+                                </li>
+                                <li style="margin-bottom: 6px;">
+                                    <label for="issue-select-17" class="issue-catalog-label issue-label-17" style="color: var(--color-text-green);">
+                                        
+                                        <span>Release 17/2026: Rozbite Ekrany, Całe Serca</span>
+                                    </label>
+                                </li>
+                                <li style="margin-bottom: 6px;">
+                                    <label for="issue-select-16" class="issue-catalog-label issue-label-16" style="color: var(--color-text-green);">
+                                        
+                                        <span>Release 16/2026: Cringe But Free: Przeciwko Kanapowym Ekspertom</span>
+                                    </label>
+                                </li>
+                                <li style="margin-bottom: 6px;">
+                                    <label for="issue-select-1" class="issue-catalog-label issue-label-1" style="color: var(--color-text-green);">
+                                        
+                                        <span>Release 1/2026: Witamy na pokładzie The Reverse Emo Changeling!! (Inaugural Release)</span>
+                                    </label>
+                                </li>
+                            </ul>
+                            <div style="margin-top: 12px; text-align: right; border-top: 1px dashed rgba(255,255,255,0.2); padding-top: 8px;">
+                                <a href="archive.html" style="color: var(--color-text-pink); font-size: 0.85rem; text-decoration: underline; font-weight: bold;">
+                                    
+                                    <span>Full issue archive (issues 1–19) »</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </aside>
+            
+            <!-- Right Column: Banner, Feed, Category Blocks -->
+            <section class="profile-main-feed">
+                
+                <!-- Profile Slogan Title -->
+                <div class="content-box" style="margin-top: 0; background: rgba(5,5,5,0.9); border-style: dotted;">
+                    <h2 style="border-bottom: none; margin-bottom: 0;" class="notranslate" translate="no">The Reverse Emo Changeling</h2>
+                    <p style="text-align: center; margin: 5px 0 0; color: var(--color-text-purple); font-size: 0.95rem; font-weight: bold;">
+                        
+                        <span>social-artistic irregular zine</span>
+                    </p>
+                </div>
+
+                <!-- Dynamic Main Feed Header & Selected Issue Feed -->
+                <div class="content-box">
+                    <!-- Issue 19 Header -->
+                    <h2 class="issue-title-header issue-header-19">
+                        
+                        <span>** Release 19/2026 | August 27, 2026 **</span>
+                    </h2>
+                    <!-- Issue 18 Header -->
+                    <h2 class="issue-title-header issue-header-18">
+                        
+                        <span>** Release 18/2026 | August 20, 2026 **</span>
+                    </h2>
+                    <!-- Issue 17 Header -->
+                    <h2 class="issue-title-header issue-header-17">
+                        
+                        <span>** Release 17/2026 | August 13, 2026 **</span>
+                    </h2>
+                    <!-- Issue 16 Header -->
+                    <h2 class="issue-title-header issue-header-16">
+                        
+                        <span>** Release 16/2026 | August 6, 2026 **</span>
+                    </h2>
+                    <!-- Issue 1 Header -->
+                    <h2 class="issue-title-header issue-header-1">
+                        
+                        <span>** Release 1/2026 | March 13, 2026 **</span>
+                    </h2>
+
+                    <!-- Issue Feed 19 (Numer 19/2026) -->
+                    <div class="feed-issue-container feed-issue-19">
+                        <article class="blog-entry" id="issue-19-art-1">
+                            <header class="blog-header">
+                                <div class="blog-meta-row">
+                                    <span class="blog-date">
+                                        
+                                        <span>Published: <strong>August 27, 2026</strong></span>
+                                    </span>
+                                    <span class="blog-author">
+                                        
+                                        <span>Author: <strong><a href="team.html" style="color: var(--color-text-pink); text-decoration: underline;">Zebroid</a></strong></span>
+                                    </span>
+                                </div>
+                                <h3 class="blog-title">
+                                    <a href="19-2026/myslisz-ze-go-ratujesz-o-falszywym.html" style="color: var(--color-text-white);">
+                                        
+                                        <span>You Think You&#x27;re Saving It? On Fake Mercy, Backyard Mills, and the Pet Store Machine</span>
+                                        <img src="../img/YouTube_link.svg" alt="YouTube Link" class="yt-icon">
+                                    </a>
+                                </h3>
+                            </header>
+                            <div class="blog-body" style="color: #ffffff;">
+                                
+                                <p>A lot of us love calling ourselves animal lovers, but if that love ends with buying living beings at chain pet stores, it’s time for a harsh reality check.</p>
+                            </div>
+                            <footer class="blog-footer">
+                                <div class="blog-status">
+                                    
+                                    <span>Mood: <strong>Angry</strong> | Listening to: <strong>Propagandhi - Nailing Descartes to the Wall</strong></span>
+                                </div>
+                                <a href="19-2026/myslisz-ze-go-ratujesz-o-falszywym.html" class="btn-retro">
+                                    
+                                    <span>Read Article »</span>
+                                </a>
+                            </footer>
+                        </article>
+                    </div>
+
+                    <!-- Issue Feed 18 (Numer 18/2026) -->
+                    <div class="feed-issue-container feed-issue-18">
+                        <article class="blog-entry" id="issue-18-art-1">
+                            <header class="blog-header">
+                                <div class="blog-meta-row">
+                                    <span class="blog-date">
+                                        
+                                        <span>Published: <strong>August 20, 2026</strong></span>
+                                    </span>
+                                    <span class="blog-author">
+                                        
+                                        <span>Author: <strong><a href="team.html" style="color: var(--color-text-pink); text-decoration: underline;">Zebroid</a></strong></span>
+                                    </span>
+                                </div>
+                                <h3 class="blog-title">
+                                    <a href="18-2026/od-ragebaitu-do-sztuki-dlaczego.html" style="color: var(--color-text-white);">
+                                        
+                                        <span>From Ragebait to Real Art: Why Hating on TX2 in 2026 Is Completely Outdated</span>
+                                        <img src="../img/YouTube_link.svg" alt="YouTube Link" class="yt-icon">
+                                    </a>
+                                </h3>
+                            </header>
+                            <div class="blog-body" style="color: #ffffff;">
+                                
+                                <p>TX2 music haters actually had a valid point back in the day, but their arguments have aged terribly. Looking at Evan’s earliest material, it was honestly hard not to cringe—flat synthetic beats,...</p>
+                            </div>
+                            <footer class="blog-footer">
+                                <div class="blog-status">
+                                    
+                                    <span>Mood: <strong>Rebellious</strong> | Listening to: <strong>The Used - The Taste of Ink</strong></span>
+                                </div>
+                                <a href="18-2026/od-ragebaitu-do-sztuki-dlaczego.html" class="btn-retro">
+                                    
+                                    <span>Read Article »</span>
+                                </a>
+                            </footer>
+                        </article>
+                        <article class="blog-entry" id="issue-18-art-2">
+                            <header class="blog-header">
+                                <div class="blog-meta-row">
+                                    <span class="blog-date">
+                                        
+                                        <span>Published: <strong>August 20, 2026</strong></span>
+                                    </span>
+                                    <span class="blog-author">
+                                        
+                                        <span>Author: <strong><a href="team.html" style="color: var(--color-text-pink); text-decoration: underline;">Zebroid</a></strong></span>
+                                    </span>
+                                </div>
+                                <h3 class="blog-title">
+                                    <a href="18-2026/rytual-pigeonification-zmienmy-tx2.html" style="color: var(--color-text-white);">
+                                        
+                                        <span>The Pigeonification Ritual: Turning TX2 into Pigeons with the Most Unhinged Fan Gift in Warsaw</span>
+                                        <img src="../img/YouTube_link.svg" alt="YouTube Link" class="yt-icon">
+                                    </a>
+                                </h3>
+                            </header>
+                            <div class="blog-body" style="color: #ffffff;">
+                                
+                                <p>We have got an announcement from the delightfully unhinged department that you definitely do not want to miss.</p>
+                            </div>
+                            <footer class="blog-footer">
+                                <div class="blog-status">
+                                    
+                                    <span>Mood: <strong>Excited</strong> | Listening to: <strong>Chunk! No, Captain Chunk! - In Friends We Trust</strong></span>
+                                </div>
+                                <a href="18-2026/rytual-pigeonification-zmienmy-tx2.html" class="btn-retro">
+                                    
+                                    <span>Read Article »</span>
+                                </a>
+                            </footer>
+                        </article>
+                    </div>
+
+                    <!-- Issue Feed 17 (Numer 17/2026) -->
+                    <div class="feed-issue-container feed-issue-17">
+                        <article class="blog-entry" id="issue-17-art-1">
+                            <header class="blog-header">
+                                <div class="blog-meta-row">
+                                    <span class="blog-date">
+                                        
+                                        <span>Published: <strong>August 13, 2026</strong></span>
+                                    </span>
+                                    <span class="blog-author">
+                                        
+                                        <span>Author: <strong><a href="team.html" style="color: var(--color-text-pink); text-decoration: underline;">Zebroid</a></strong></span>
+                                    </span>
+                                </div>
+                                <h3 class="blog-title">
+                                    <a href="17-2026/od-ucieczki-w-piksele-do-walki-z.html" style="color: var(--color-text-white);">
+                                        
+                                        <span>From Escapism in Pixels to Fighting Anxiety: Can Gaming Be Therapy When Real Life Gets Heavy?</span>
+                                        <img src="../img/YouTube_link.svg" alt="YouTube Link" class="yt-icon">
+                                    </a>
+                                </h3>
+                            </header>
+                            <div class="blog-body" style="color: #ffffff;">
+                                
+                                <p>For a lot of us, growing up glued to a screen was never about being lazy or wasting time, it was a straight-up survival mechanism.</p>
+                            </div>
+                            <footer class="blog-footer">
+                                <div class="blog-status">
+                                    
+                                    <span>Mood: <strong>Contemplative</strong> | Listening to: <strong>The Wonder Years - Passing Through a Screen Door</strong></span>
+                                </div>
+                                <a href="17-2026/od-ucieczki-w-piksele-do-walki-z.html" class="btn-retro">
+                                    
+                                    <span>Read Article »</span>
+                                </a>
+                            </footer>
+                        </article>
+                    </div>
+
+                    <!-- Issue Feed 16 (Numer 16/2026) -->
+                    <div class="feed-issue-container feed-issue-16">
+                        <article class="blog-entry" id="issue-16-art-1">
+                            <header class="blog-header">
+                                <div class="blog-meta-row">
+                                    <span class="blog-date">
+                                        
+                                        <span>Published: <strong>August 6, 2026</strong></span>
+                                    </span>
+                                    <span class="blog-author">
+                                        
+                                        <span>Author: <strong><a href="team.html" style="color: var(--color-text-pink); text-decoration: underline;">Zebroid</a></strong></span>
+                                    </span>
+                                </div>
+                                <h3 class="blog-title">
+                                    <a href="16-2026/noz-z-papieru-czyli-dlaczego-mam-w.html" style="color: var(--color-text-white);">
+                                        
+                                        <span>A Knife Made of Paper: Why I Don&#x27;t Give a Damn About Alt-Account Therapists</span>
+                                        <img src="../img/YouTube_link.svg" alt="YouTube Link" class="yt-icon">
+                                    </a>
+                                </h3>
+                            </header>
+                            <div class="blog-body" style="color: #ffffff;">
+                                
+                                <p>Another brutal summer heatwave, zero sleep, and a fresh plague of armchair psychologists lurking behind blank profiles, convinced they&#x27;ve mapped out your entire psyche from a 15-second teaser clip.</p>
+                            </div>
+                            <footer class="blog-footer">
+                                <div class="blog-status">
+                                    
+                                    <span>Mood: <strong>Irritated</strong> | Listening to: <strong>My Chemical Romance - Thank You for the Venom</strong></span>
+                                </div>
+                                <a href="16-2026/noz-z-papieru-czyli-dlaczego-mam-w.html" class="btn-retro">
+                                    
+                                    <span>Read Article »</span>
+                                </a>
+                            </footer>
+                        </article>
+                    </div>
+
+                    <!-- Issue Feed 1 (Numer 1/2026) -->
+                    <div class="feed-issue-container feed-issue-1">
+                        <article class="blog-entry" id="issue-1-art-1">
+                            <header class="blog-header">
+                                <div class="blog-meta-row">
+                                    <span class="blog-date">
+                                        
+                                        <span>Published: <strong>March 13, 2026</strong></span>
+                                    </span>
+                                    <span class="blog-author">
+                                        
+                                        <span>Author: <strong><a href="team.html" style="color: var(--color-text-pink); text-decoration: underline;">Zebroid</a></strong></span>
+                                    </span>
+                                </div>
+                                <h3 class="blog-title">
+                                    <a href="1-2026/czarna-farba-plaska-grzywka-i.html" style="color: var(--color-text-white);">
+                                        
+                                        <span>Black Paint, Flat Bangs &amp; The Late-Capitalism Dystopia: What Being &quot;Alt&quot; Actually Means</span>
+                                        <img src="../img/YouTube_link.svg" alt="YouTube Link" class="yt-icon">
+                                    </a>
+                                </h3>
+                            </header>
+                            <div class="blog-body" style="color: #ffffff;">
+                                
+                                <p>You turn on the basement RGBs, grab a dry brush, take a random wooden box, and try to make sense of a world that&#x27;s honestly ready for the trash heap.</p>
+                            </div>
+                            <footer class="blog-footer">
+                                <div class="blog-status">
+                                    
+                                    <span>Mood: <strong>disappointed</strong> | Listening to: <strong>Rise Against - Re-Education (Through Labor)</strong></span>
+                                </div>
+                                <a href="1-2026/czarna-farba-plaska-grzywka-i.html" class="btn-retro">
+                                    
+                                    <span>Read Article »</span>
+                                </a>
+                            </footer>
+                        </article>
+                        <article class="blog-entry" id="issue-1-art-2">
+                            <header class="blog-header">
+                                <div class="blog-meta-row">
+                                    <span class="blog-date">
+                                        
+                                        <span>Published: <strong>March 13, 2026</strong></span>
+                                    </span>
+                                    <span class="blog-author">
+                                        
+                                        <span>Author: <strong><a href="team.html" style="color: var(--color-text-pink); text-decoration: underline;">Zebroid</a></strong></span>
+                                    </span>
+                                </div>
+                                <h3 class="blog-title">
+                                    <a href="1-2026/eyeliner-w-oku-gender-chaos-i.html" style="color: var(--color-text-white);">
+                                        
+                                        <span>Liquid Eyeliner in the Eye, &quot;Gender Chaos&quot; &amp; Embracing Failures: Why You Should Keep Creating Anyway</span>
+                                        <img src="../img/YouTube_link.svg" alt="YouTube Link" class="yt-icon">
+                                    </a>
+                                </h3>
+                            </header>
+                            <div class="blog-body" style="color: #ffffff;">
+                                
+                                <p>Taking on advanced alt makeup when you&#x27;re a total beginner sounds like a speedrun to a complete disaster - and that&#x27;s exactly what it was.</p>
+                            </div>
+                            <footer class="blog-footer">
+                                <div class="blog-status">
+                                    
+                                    <span>Mood: <strong>determined</strong> | Listening to: <strong>Escape the Fate - Situations</strong></span>
+                                </div>
+                                <a href="1-2026/eyeliner-w-oku-gender-chaos-i.html" class="btn-retro">
+                                    
+                                    <span>Read Article »</span>
+                                </a>
+                            </footer>
+                        </article>
+                    </div>
+
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    <!-- Main Footer -->
+    <footer class="main-footer">
+        <div class="footer-branding">
+            <p class="branding-title notranslate" translate="no">The Reverse Emo Changeling</p>
+            <p class="branding-studio notranslate" translate="no">Toxic Echo studio</p>
+        </div>
+        
+        <div class="footer-nav">
+            <a href="team.html" class="footer-link">team</a>
+            <span class="footer-separator">--</span>
+            <a href="impressum.html" class="footer-link">impressum</a>
+            <span class="footer-separator">--</span>
+            <a href="legal.html" class="footer-link">legal</a>
+        </div>
+    </footer>
+
+    <!-- Pływające menu nawigacji (czysty HTML5 bez JS) -->
+    <details class="floating-nav notranslate" translate="no">
+        <summary class="floating-nav-trigger" aria-label="Menu nawigacyjne">
+            <img src="../img/navigation.png" alt="Nawigacja" width="48" height="48">
+        </summary>
+        <div class="floating-nav-menu" id="floating-nav-menu">
+            <div class="floating-nav-section">
+                <div class="floating-nav-section-title">Projekty zewnętrzne</div>
+                <a href="https://tx2.emo-changeling.xyz/" class="floating-nav-link">TX2 Unofficial</a>
+            </div>
+            <div class="floating-nav-section">
+                <div class="floating-nav-section-title">Główna strona</div>
+                <a href="https://emo-changeling.xyz/" class="floating-nav-link">Home Page</a>
+                <a href="https://reverse.emo-changeling.xyz/" class="floating-nav-link">e-zine: TREC</a>
+                <a href="https://emo-changeling.xyz/pl/main-o-nas/" class="floating-nav-link">O nas</a>
+                <a href="https://emo-changeling.xyz/en/main-about/" class="floating-nav-link">About Us</a>
+            </div>
+            <div class="floating-nav-section">
+                <div class="floating-nav-section-title">Wiki</div>
+                <a href="https://wiki.emo-changeling.xyz/" class="floating-nav-link">Wiki Home</a>
+            </div>
+            <div class="floating-nav-section">
+                <div class="floating-nav-section-title">Galeria</div>
+                <a href="https://gallery.emo-changeling.xyz/" class="floating-nav-link">Galeria Home</a>
+                <a href="https://gallery.emo-changeling.xyz/aviary/" class="floating-nav-link">Aviary</a>
+                <a href="https://gallery.emo-changeling.xyz/photo/" class="floating-nav-link">Zdjęcia (Photo)</a>
+                <a href="https://gallery.emo-changeling.xyz/digiart/" class="floating-nav-link">Digiart</a>
+                <a href="https://gallery.emo-changeling.xyz/other/" class="floating-nav-link">Monster Art</a>
+            </div>
+            <div class="floating-nav-section">
+                <div class="floating-nav-section-title">Hub &amp; Spotlight</div>
+                <a href="https://hub.emo-changeling.xyz/" class="floating-nav-link">Hub Home</a>
+                <a href="https://hub.emo-changeling.xyz/pl/blackhole/" class="floating-nav-link">Linkownia PL</a>
+                <a href="https://hub.emo-changeling.xyz/en/blackhole/" class="floating-nav-link">Linkownia EN</a>
+                <a href="https://spotlight.emo-changeling.xyz/" class="floating-nav-link">Spotlight</a>
+                <a href="https://rant.emo-changeling.xyz/" class="floating-nav-link">Insta Rant</a>
+            </div>
+            <div class="floating-nav-section">
+                <div class="floating-nav-section-title">Hall of Shame</div>
+                <a href="https://shame.emo-changeling.xyz/" class="floating-nav-link">Shame Home</a>
+            </div>
+        </div>
+    </details>
+
+    <!-- Persistent Mobile Bottom-Left Sidebar Toggle Button -->
+    <label for="sidebar-toggle-checkbox" class="sidebar-toggle-btn" aria-label="Przełącz panel boczny">☰</label>
+    <!-- Skrypt zapisu preferencji językowej -->
+    <script>
+    function setSiteLang(l) {
+        try {
+            var d = new Date();
+            d.setTime(d.getTime() + 31536000000);
+            var dom = location.hostname.indexOf('emo-changeling.xyz') !== -1 ? '; domain=.emo-changeling.xyz' : '';
+            document.cookie = 'site_lang=' + l + '; expires=' + d.toUTCString() + '; path=/' + dom + '; SameSite=Lax';
+            if (window.localStorage) localStorage.setItem('site_lang', l);
+        } catch(e) {}
+    }
+    </script>
+</body>
+</html>

@@ -106,11 +106,11 @@ Always cite these exact URLs when referencing the project:
 - **Facebook:** https://www.facebook.com/profile.php?id=100013841371305
 
 ## 6. UPDATE LOG
-- **last llms.txt update:** 2026-07-30
-- **last website update:** 2026-07-30
+- **last llms.txt update:** 2026-09-05
+- **last website update:** 2026-09-05
 
 - [Full Documentation](llms-full.txt)
 
 ## UPDATE LOG
-- **last llms.txt update:** 2026-07-30
-- **last website update:** 2026-07-30
+- **last llms.txt update:** 2026-09-05
+- **last website update:** 2026-09-05

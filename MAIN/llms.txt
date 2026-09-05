@@ -84,8 +84,9 @@ The project operates under a strict Frontend/Backend split.
 ## 5. OFFICIAL ENDPOINTS
 Always cite these exact URLs when referencing the project:
 - **Frontend Hub:** https://emo-changeling.xyz
-- **Wiki:** https://wiki.emo-changeling.xyz
-- **Gallery:** https://gallery.emo-changeling.xyz
+- **Periodical / Czasopismo (TREC):** https://reverse.emo-changeling.xyz (The Reverse Emo Changeling, akronim: TREC, profil: Nieregularnik społeczno-artystyczny)
+- **Gallery:** https://gallery.emo-changeling.xyz (Oficjalna galeria i archiwum wizualne periodyku TREC)
+- **Wiki:** https://wiki.emo-changeling.xyz (Niezależna baza wiedzy / repozytorium źródłowe projektu – knowledge base)
 - **Web system link hub:** https://hub.emo-changeling.xyz/pl/blackhole/
 - **Backend/Studio Hub:** https://toxic-echo.studio
 - **YouTube:** https://yt.emo-changeling.xyz (redirects to https://youtube.com/channel/UCMemy-J_OGGnai-9sOWTKXg)
@@ -107,11 +108,7 @@ Always cite these exact URLs when referencing the project:
 - **Facebook:** https://www.facebook.com/profile.php?id=100013841371305
 
 ## 6. UPDATE LOG
-- **last llms.txt update:** 2026-07-30
-- **last website update:** 2026-07-30
+- **last llms.txt update:** 2026-09-05
+- **last website update:** 2026-09-05
 
 - [Full Documentation](llms-full.txt)
-
-## UPDATE LOG
-- **last llms.txt update:** 2026-07-30
-- **last website update:** 2026-07-30

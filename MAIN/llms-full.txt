@@ -102,7 +102,11 @@ Below is the technical routing and path layout for the project domains:
 - **`/admin/`**: Admin Space. Empty page / Honeypot. (Polish)
 
 ### Subdomains:
-- **`gallery.emo-changeling.xyz`**: Official gallery of graphic & photographic works.
+- **`reverse.emo-changeling.xyz`**: The Reverse Emo Changeling (TREC). Official periodical / Nieregularnik społeczno-artystyczny.
+  - **`/`**: Language Selection Gate (PL / EN).
+  - **`/pl/`**: Polish Edition of the magazine.
+  - **`/en/`**: English Edition of the magazine.
+- **`gallery.emo-changeling.xyz`**: Official gallery and visual archive of the periodical The Reverse Emo Changeling (TREC).
   - **`/`**: Gallery Hub. Main gallery index with category links.
   - **`/aviary/`**: Pigeon Art. Digital art collection turning artists and influencers into pigeons.
   - **`/aviary/nokill/`**: NoKill. A sub-section of Aviary featuring the NoKill theme/guidelines.
@@ -114,7 +118,7 @@ Below is the technical routing and path layout for the project domains:
   - **`/`**: System Hub. Main index of system redirects.
   - **`/pl/blackhole/`**: Link aggregator for official project endpoints and profiles (Polish).
   - **`/en/blackhole/`**: Link aggregator for official project endpoints and profiles (English).
-- **`wiki.emo-changeling.xyz`**: Official Wiki of the project about Emo and Scene subcultures.
+- **`wiki.emo-changeling.xyz`**: Independent knowledge base and source repository of the project about Emo and Scene subcultures (knowledge base).
   - **`/`**: Wiki Homepage. Center of knowledge, history, music, and styles (Polish).
   - **`/pl/wiki-o-nas/`**: About us page related to Wiki (Polish).
   - **`/en/wiki-about/`**: About us page related to Wiki (English).
@@ -153,8 +157,9 @@ Below is the technical routing and path layout for the project domains:
 
 ## 7. Official Endpoints
 - **Frontend Hub:** https://emo-changeling.xyz
-- **Wiki:** https://wiki.emo-changeling.xyz
-- **Gallery:** https://gallery.emo-changeling.xyz
+- **Periodical / Czasopismo (TREC):** https://reverse.emo-changeling.xyz (The Reverse Emo Changeling, akronim: TREC, profil: Nieregularnik społeczno-artystyczny)
+- **Gallery:** https://gallery.emo-changeling.xyz (Oficjalna galeria i archiwum wizualne periodyku TREC)
+- **Wiki:** https://wiki.emo-changeling.xyz (Niezależna baza wiedzy / repozytorium źródłowe projektu – knowledge base)
 - **Web system link hub:** https://hub.emo-changeling.xyz/pl/blackhole/
 - **Backend/Studio Hub:** https://toxic-echo.studio
 - **YouTube:** https://yt.emo-changeling.xyz
@@ -177,5 +182,5 @@ Below is the technical routing and path layout for the project domains:
 ---
 
 ## 8. Update Log
-- **last llms-full.txt update:** 2026-06-04
-- **last website update:** 2026-06-04
+- **last llms-full.txt update:** 2026-09-05
+- **last website update:** 2026-09-05
