@@ -1190,13 +1190,85 @@ summary:focus-visible {
     display: block;
 }
 
-html[lang="pl"] .opis-lang-block[data-lang="en"],
-html[lang="pl"] .opis-lang-block[data-lang="ru"] {
+/* Przełącznik języka w opisach grafik (identyczny jak w /MAGAZINE) */
+.lang-switcher-widget {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    border-bottom: 1px dashed #ff007f;
+    padding-bottom: 12px;
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-family: inherit;
+    font-size: 1.1rem;
+    color: #888888;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.2s, text-shadow 0.2s;
+    line-height: 1;
+}
+
+.lang-btn:hover {
+    color: #ff007f;
+    text-shadow: 0 0 5px #ff007f;
+}
+
+.lang-btn.active,
+.lang-btn[aria-current="page"],
+.lang-btn[aria-current="true"] {
+    color: #00ff00;
+    font-weight: bold;
+    text-shadow: 0 0 5px #00ff00;
+    cursor: default;
+}
+
+.lang-sep {
+    color: #bf00ff;
+    font-size: 1rem;
+    user-select: none;
+}
+
+/* Domyślne sterowanie widocznością bloków opisu (gdy brak lokalnego wymuszenia) */
+html[lang="pl"] .description-content:not([data-active-lang]) .opis-lang-block[data-lang="en"],
+html[lang="pl"] .description-content:not([data-active-lang]) .opis-lang-block[data-lang="ru"] {
     display: none !important;
 }
 
-html[lang="en"] .opis-lang-block[data-lang="pl"],
-html[lang="en"] .opis-lang-block[data-lang="ru"] {
+html[lang="en"] .description-content:not([data-active-lang]) .opis-lang-block[data-lang="pl"],
+html[lang="en"] .description-content:not([data-active-lang]) .opis-lang-block[data-lang="ru"] {
+    display: none !important;
+}
+
+/* Lokalne wymuszenie języka opisu w modalu (nie wpływa na ciasteczka ani stan serwisu) */
+.description-content[data-active-lang="pl"] .opis-lang-block[data-lang="pl"] {
+    display: block !important;
+}
+.description-content[data-active-lang="pl"] .opis-lang-block[data-lang="en"],
+.description-content[data-active-lang="pl"] .opis-lang-block[data-lang="ru"] {
+    display: none !important;
+}
+
+.description-content[data-active-lang="en"] .opis-lang-block[data-lang="en"] {
+    display: block !important;
+}
+.description-content[data-active-lang="en"] .opis-lang-block[data-lang="pl"],
+.description-content[data-active-lang="en"] .opis-lang-block[data-lang="ru"] {
+    display: none !important;
+}
+
+.description-content[data-active-lang="ru"] .opis-lang-block[data-lang="ru"] {
+    display: block !important;
+}
+.description-content[data-active-lang="ru"] .opis-lang-block[data-lang="pl"],
+.description-content[data-active-lang="ru"] .opis-lang-block[data-lang="en"] {
     display: none !important;
 }
 

@@ -242,6 +242,25 @@
         }
         syncGalleryLanguage();
 
+        // Lokalny przełącznik języka opisu grafiki (bez modyfikacji ciasteczek i preferencji serwisu)
+        function switchOpisLang(lang, event) {
+            if (event && event.stopPropagation) event.stopPropagation();
+            var dc = document.getElementById('description-content');
+            if (!dc) return;
+            dc.setAttribute('data-active-lang', lang);
+            var btns = dc.querySelectorAll('.lang-btn, .opis-lang-btn');
+            btns.forEach(function(b) {
+                if (b.getAttribute('data-lang') === lang) {
+                    b.classList.add('active');
+                    b.setAttribute('aria-current', 'true');
+                } else {
+                    b.classList.remove('active');
+                    b.removeAttribute('aria-current');
+                }
+            });
+        }
+        window.switchOpisLang = switchOpisLang;
+
         async function openModal(item) {
             syncGalleryLanguage();
             modal.classList.add('active');
@@ -277,6 +296,20 @@
                     }
 
                     descContent.innerHTML = htmlData;
+                    descContent.removeAttribute('data-active-lang');
+
+                    // Synchronizacja aktywnego przycisku w przełączniku opisu z aktualnym językiem strony
+                    var curLang = document.documentElement.lang === 'en' ? 'en' : 'pl';
+                    var langBtns = descContent.querySelectorAll('.lang-btn, .opis-lang-btn');
+                    langBtns.forEach(function(b) {
+                        if (b.getAttribute('data-lang') === curLang) {
+                            b.classList.add('active');
+                            b.setAttribute('aria-current', 'true');
+                        } else {
+                            b.classList.remove('active');
+                            b.removeAttribute('aria-current');
+                        }
+                    });
                     
                     const descImages = descContent.querySelectorAll('img');
                     descImages.forEach(img => checkAndConvertHeic(img));
