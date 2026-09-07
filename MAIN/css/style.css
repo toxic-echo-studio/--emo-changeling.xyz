@@ -171,6 +171,28 @@ h2 {
     outline: none;
 }
 
+/* Przełącznik języka */
+.lang-switcher {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    color: #00ff00;
+    text-shadow: 2px 2px 0px #000;
+    letter-spacing: 2px;
+}
+
+.lang-switcher a {
+    color: #ff00ff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.lang-switcher a:hover {
+    color: #00ff00;
+    text-decoration: underline;
+}
+
 /* =========================================
    MANIFEST & STOPKA
 ========================================= */
