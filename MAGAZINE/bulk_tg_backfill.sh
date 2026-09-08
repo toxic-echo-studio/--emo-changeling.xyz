@@ -266,10 +266,10 @@ def inspect_file_read_only(path):
     with open(path, "r", encoding="utf-8") as f:
         content = f.read()
 
-    # Rygorystyczne dopasowanie widgetu t.me (script data-telegram-post, data-telegram-discussion lub fallback iframe)
-    widget_pattern = rf"""(?:data-telegram-post=[\"\x27](?:{re.escape(channel)}|emochangeling)/([0-9]+)[\"\x27]|data-telegram-discussion=[\"\x27](?:{re.escape(channel)}|emochangeling)/([0-9]+)[\"\x27]|<iframe[^>]+src=[\"\x27]https://t\.me/(?:{re.escape(channel)}|emochangeling)/([0-9]+))"""
+    # Rygorystyczne dopasowanie widgetu/linku dyskusji t.me (link t.me/.../?comment=1, script data-telegram-post, data-telegram-discussion lub fallback iframe)
+    widget_pattern = rf"""(?:https://t\.me/(?:{re.escape(channel)}|emochangeling)/([0-9]+)\?comment=1|data-telegram-post=[\"\x27](?:{re.escape(channel)}|emochangeling)/([0-9]+)[\"\x27]|data-telegram-discussion=[\"\x27](?:{re.escape(channel)}|emochangeling)/([0-9]+)[\"\x27]|<iframe[^>]+src=[\"\x27]https://t\.me/(?:{re.escape(channel)}|emochangeling)/([0-9]+))"""
     widget_m = re.search(widget_pattern, content, re.IGNORECASE)
-    existing_id = (widget_m.group(1) or widget_m.group(2) or widget_m.group(3)) if widget_m else ""
+    existing_id = (widget_m.group(1) or widget_m.group(2) or widget_m.group(3) or widget_m.group(4)) if widget_m else ""
     has_widget = bool(widget_m)
 
     if has_widget:
@@ -715,27 +715,18 @@ anchor = sys.argv[6]
 
 is_en = (lang == "en")
 title = "Comments / Discussion" if is_en else "Komentarze / Dyskusja"
+desc_text = "Join the conversation and share your thoughts directly in our Telegram discussion thread." if is_en else "Dołącz do rozmowy i podziel się swoją opinią bezpośrednio na naszym kanale dyskusyjnym."
 btn_text = "💬 Open Discussion in Telegram" if is_en else "💬 Otwórz dyskusję w Telegramie"
 
 widget_html = (
-    f"<section class=\"telegram-comments-wrapper\" style=\"margin: 2rem 0; padding: 1.5rem; background: rgba(10, 10, 10, 0.85); border: 1px solid #FF007F; border-radius: 8px; text-align: center;\">\n"
-    f"  <h3 style=\"color: #FF007F; font-size: 1.2rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 1px;\">{title}</h3>\n"
-    f"  \n"
-    f"  <!-- Oficjalny kompaktowy Post Widget -->\n"
-    f"  <div class=\"tg-post-box\" style=\"display: flex; justify-content: center; margin-bottom: 1.25rem;\">\n"
-    f"    <script async src=\"https://telegram.org/js/telegram-widget.js?22\" \n"
-    f"            data-telegram-post=\"{channel}/{msg_id}\" \n"
-    f"            data-width=\"100%\" \n"
-    f"            data-color=\"FF007F\" \n"
-    f"            data-dark=\"1\"></script>\n"
-    f"  </div>\n"
-    f"\n"
-    f"  <!-- Przycisk CTA do przejścia bezpośrednio do komentarzy -->\n"
+    f"<section class=\"telegram-comments-wrapper\" style=\"margin: 2.5rem 0; padding: 1.5rem; background: rgba(10, 10, 10, 0.85); border: 1px dashed #FF007F; border-radius: 8px; text-align: center;\">\n"
+    f"  <h3 style=\"color: #FF007F; font-size: 1.1rem; margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 1px;\">{title}</h3>\n"
+    f"  <p style=\"color: #cccccc; font-size: 0.95rem; margin-bottom: 1.25rem; line-height: 1.5;\">{desc_text}</p>\n"
     f"  <div class=\"tg-action-box\">\n"
     f"    <a href=\"https://t.me/{channel}/{msg_id}?comment=1\" \n"
     f"       target=\"_blank\" \n"
     f"       rel=\"noopener noreferrer\" \n"
-    f"       style=\"display: inline-block; padding: 0.75rem 1.75rem; background-color: #FF007F; color: #ffffff; font-weight: 700; text-decoration: none; border-radius: 4px; box-shadow: 0 0 10px rgba(255, 0, 127, 0.4); transition: transform 0.2s ease, box-shadow 0.2s ease;\">\n"
+    f"       style=\"display: inline-block; padding: 0.75rem 1.75rem; background-color: #FF007F; color: #ffffff; font-weight: 700; text-decoration: none; border-radius: 4px; box-shadow: 0 0 12px rgba(255, 0, 127, 0.4); transition: transform 0.2s ease, box-shadow 0.2s ease;\">\n"
     f"      {btn_text}\n"
     f"    </a>\n"
     f"  </div>\n"
@@ -750,7 +741,7 @@ if re.search(r"<article\b", data, re.IGNORECASE) and not re.search(r"<article[^>
     data = re.sub(r"<article([ >])", rf"<article lang=\"{lang}\"\1", data, count=1, flags=re.IGNORECASE)
 
 # Sprawdzenie obecności widgetu z tym message_id
-if re.search(rf"""(?:data-telegram-post=[\"\x27](?:{re.escape(channel)}|emochangeling)/{re.escape(msg_id)}[\"\x27]|data-telegram-discussion=[\"\x27](?:{re.escape(channel)}|emochangeling)/{re.escape(msg_id)}[\"\x27]|<iframe[^>]+src=[\"\x27]https://t\.me/(?:{re.escape(channel)}|emochangeling)/{re.escape(msg_id)})""", data, re.IGNORECASE):
+if re.search(rf"""(?:https://t\.me/(?:{re.escape(channel)}|emochangeling)/{re.escape(msg_id)}\?comment=1|data-telegram-post=[\"\x27](?:{re.escape(channel)}|emochangeling)/{re.escape(msg_id)}[\"\x27]|data-telegram-discussion=[\"\x27](?:{re.escape(channel)}|emochangeling)/{re.escape(msg_id)}[\"\x27]|<iframe[^>]+src=[\"\x27]https://t\.me/(?:{re.escape(channel)}|emochangeling)/{re.escape(msg_id)})""", data, re.IGNORECASE):
     pass
 elif placeholder in data:
     data = data.replace(placeholder, widget_html, 1)
