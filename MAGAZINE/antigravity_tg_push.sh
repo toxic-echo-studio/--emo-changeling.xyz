@@ -531,13 +531,35 @@ path = sys.argv[1]
 placeholder = sys.argv[2]
 channel = sys.argv[3]
 msg_id = sys.argv[4]
+lang = sys.argv[5]
+
+is_en = (lang == "en")
+title = "Comments / Discussion" if is_en else "Komentarze / Dyskusja"
+btn_text = "💬 Open Discussion in Telegram" if is_en else "💬 Otwórz dyskusję w Telegramie"
 
 widget_html = (
-    f"<div translate=\"no\" class=\"notranslate\" style=\"margin-top: 35px; width: 100%; "
-    f"border: var(--border-pink, 1px dashed #ff007f); background: #000; padding: 10px; min-height: 200px;\">\n"
-    f"  <script async src=\"https://telegram.org/js/telegram-widget.js?22\" "
-    f"data-telegram-discussion=\"{channel}/{msg_id}\" data-comments-limit=\"10\" data-color=\"FF007F\" data-dark=\"1\" data-telegram-login=\"Emosyfybot\"></script>\n"
-    f"</div>"
+    f"<section class=\"telegram-comments-wrapper\" style=\"margin: 2rem 0; padding: 1.5rem; background: rgba(10, 10, 10, 0.85); border: 1px solid #FF007F; border-radius: 8px; text-align: center;\">\n"
+    f"  <h3 style=\"color: #FF007F; font-size: 1.2rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 1px;\">{title}</h3>\n"
+    f"  \n"
+    f"  <!-- Oficjalny kompaktowy Post Widget -->\n"
+    f"  <div class=\"tg-post-box\" style=\"display: flex; justify-content: center; margin-bottom: 1.25rem;\">\n"
+    f"    <script async src=\"https://telegram.org/js/telegram-widget.js?22\" \n"
+    f"            data-telegram-post=\"{channel}/{msg_id}\" \n"
+    f"            data-width=\"100%\" \n"
+    f"            data-color=\"FF007F\" \n"
+    f"            data-dark=\"1\"></script>\n"
+    f"  </div>\n"
+    f"\n"
+    f"  <!-- Przycisk CTA do przejścia bezpośrednio do komentarzy -->\n"
+    f"  <div class=\"tg-action-box\">\n"
+    f"    <a href=\"https://t.me/{channel}/{msg_id}?comment=1\" \n"
+    f"       target=\"_blank\" \n"
+    f"       rel=\"noopener noreferrer\" \n"
+    f"       style=\"display: inline-block; padding: 0.75rem 1.75rem; background-color: #FF007F; color: #ffffff; font-weight: 700; text-decoration: none; border-radius: 4px; box-shadow: 0 0 10px rgba(255, 0, 127, 0.4); transition: transform 0.2s ease, box-shadow 0.2s ease;\">\n"
+    f"      {btn_text}\n"
+    f"    </a>\n"
+    f"  </div>\n"
+    f"</section>"
 )
 
 with open(path, "r", encoding="utf-8") as f:
@@ -547,16 +569,17 @@ data = data.replace(placeholder, widget_html, 1)
 
 with open(path, "w", encoding="utf-8") as f:
     f.write(data)
-' "$ARTICLE_ABS" "$WIDGET_PLACEHOLDER" "$TG_CHANNEL_NAME" "$MESSAGE_ID"
+' "$ARTICLE_ABS" "$WIDGET_PLACEHOLDER" "$TG_CHANNEL_NAME" "$MESSAGE_ID" "$LANG_DETECTED"
     echo "    Wstrzyknięto widget dyskusyjny dla message_id $MESSAGE_ID."
 else
-    if grep -q -E "(data-telegram-discussion=[\"']${TG_CHANNEL_NAME}/${MESSAGE_ID}[\"']|t.me/${TG_CHANNEL_NAME}/${MESSAGE_ID})" "$ARTICLE_ABS"; then
+    if grep -q -E "(data-telegram-post=[\"']${TG_CHANNEL_NAME}/${MESSAGE_ID}[\"']|data-telegram-discussion=[\"']${TG_CHANNEL_NAME}/${MESSAGE_ID}[\"']|t.me/${TG_CHANNEL_NAME}/${MESSAGE_ID})" "$ARTICLE_ABS"; then
         echo "    Widget dyskusyjny dla message_id $MESSAGE_ID jest już obecny w pliku."
     else
         echo >&2 "[BŁĄD] Nie znaleziono znacznika '$WIDGET_PLACEHOLDER' ani widgetu dla wiadomości $MESSAGE_ID."
         exit 1
     fi
 fi
+
 
 
 # ==============================================================================

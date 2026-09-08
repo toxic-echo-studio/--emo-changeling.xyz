@@ -1,2 +1,5 @@
 # Exclude local environment secrets from git
 .env
+
+# Exclude temporary publication state files
+.state_*.json
