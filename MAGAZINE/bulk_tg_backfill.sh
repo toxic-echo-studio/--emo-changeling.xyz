@@ -266,14 +266,15 @@ def inspect_file_read_only(path):
     with open(path, "r", encoding="utf-8") as f:
         content = f.read()
 
-    # Rygorystyczne dopasowanie znacznika <iframe> t.me (ochrona przed <a> w treści)
-    iframe_pattern = rf"<iframe[^>]+src=[\"\x27]https://t\.me/(?:{re.escape(channel)}|emochangeling)/([0-9]+)"
-    iframe_m = re.search(iframe_pattern, content, re.IGNORECASE)
-    existing_id = iframe_m.group(1) if iframe_m else ""
-    has_iframe = bool(iframe_m)
+    # Rygorystyczne dopasowanie widgetu t.me (script telegram-widget.js lub fallback iframe)
+    widget_pattern = rf"""(?:data-telegram-discussion=[\"\x27](?:{re.escape(channel)}|emochangeling)/([0-9]+)[\"\x27]|<iframe[^>]+src=[\"\x27]https://t\.me/(?:{re.escape(channel)}|emochangeling)/([0-9]+))"""
+    widget_m = re.search(widget_pattern, content, re.IGNORECASE)
+    existing_id = (widget_m.group(1) or widget_m.group(2)) if widget_m else ""
+    has_widget = bool(widget_m)
 
-    if has_iframe:
+    if has_widget:
         return True, existing_id, True
+
 
     if placeholder in content:
         return False, "", True
@@ -711,12 +712,11 @@ msg_id = sys.argv[4]
 lang = sys.argv[5]
 anchor = sys.argv[6]
 
-iframe_html = (
+widget_html = (
     f"<div translate=\"no\" class=\"notranslate\" style=\"margin-top: 35px; width: 100%; "
-    f"border: var(--border-pink, 1px dashed #ff007f); background: #000; padding: 10px;\">\n"
-    f"  <iframe src=\"https://t.me/{channel}/{msg_id}?embed=1&discussion=1&comments_limit=10&dark=1\" "
-    f"translate=\"no\" class=\"notranslate\" style=\"border: none; width: 100%; min-height: 420px; background: #000;\" "
-    f"frameborder=\"0\" loading=\"lazy\" referrerpolicy=\"no-referrer\"></iframe>\n"
+    f"border: var(--border-pink, 1px dashed #ff007f); background: #000; padding: 10px; min-height: 200px;\">\n"
+    f"  <script async src=\"https://telegram.org/js/telegram-widget.js?22\" "
+    f"data-telegram-discussion=\"{channel}/{msg_id}\" data-comments-limit=\"10\" data-color=\"FF007F\" data-dark=\"1\"></script>\n"
     f"</div>"
 )
 
@@ -727,11 +727,11 @@ with open(path, "r", encoding="utf-8") as f:
 if re.search(r"<article\b", data, re.IGNORECASE) and not re.search(r"<article[^>]*\blang=", data, re.IGNORECASE):
     data = re.sub(r"<article([ >])", rf"<article lang=\"{lang}\"\1", data, count=1, flags=re.IGNORECASE)
 
-# Sprawdzenie obecności iframe z tym message_id
-if re.search(rf"<iframe[^>]+src=[\"\x27]https://t\.me/(?:{re.escape(channel)}|emochangeling)/{re.escape(msg_id)}", data, re.IGNORECASE):
+# Sprawdzenie obecności widgetu z tym message_id
+if re.search(rf"""(?:data-telegram-discussion=[\"\x27](?:{re.escape(channel)}|emochangeling)/{re.escape(msg_id)}[\"\x27]|<iframe[^>]+src=[\"\x27]https://t\.me/(?:{re.escape(channel)}|emochangeling)/{re.escape(msg_id)})""", data, re.IGNORECASE):
     pass
 elif placeholder in data:
-    data = data.replace(placeholder, iframe_html, 1)
+    data = data.replace(placeholder, widget_html, 1)
 else:
     pattern = re.compile(rf"^([ \t]*){re.escape(anchor)}", re.MULTILINE)
     m = pattern.search(data)
@@ -739,7 +739,7 @@ else:
         sys.stderr.write(f"[BŁĄD KRYTYCZNY] Nie odnaleziono kotwicy ani markera w {path}.\n")
         sys.exit(1)
     indent = m.group(1)
-    replacement = f"{indent}{iframe_html}\n\n{indent}{anchor}"
+    replacement = f"{indent}{widget_html}\n\n{indent}{anchor}"
     data = data[:m.start()] + replacement + data[m.end():]
 
 with open(path, "w", encoding="utf-8", newline="\n") as f:

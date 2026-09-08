@@ -532,32 +532,32 @@ placeholder = sys.argv[2]
 channel = sys.argv[3]
 msg_id = sys.argv[4]
 
-iframe_html = (
+widget_html = (
     f"<div translate=\"no\" class=\"notranslate\" style=\"margin-top: 35px; width: 100%; "
-    f"border: var(--border-pink, 1px dashed #ff007f); background: #000; padding: 10px;\">\n"
-    f"  <iframe src=\"https://t.me/{channel}/{msg_id}?embed=1&discussion=1&comments_limit=10&dark=1\" "
-    f"translate=\"no\" class=\"notranslate\" style=\"border: none; width: 100%; min-height: 420px; background: #000;\" "
-    f"frameborder=\"0\" loading=\"lazy\" referrerpolicy=\"no-referrer\"></iframe>\n"
+    f"border: var(--border-pink, 1px dashed #ff007f); background: #000; padding: 10px; min-height: 200px;\">\n"
+    f"  <script async src=\"https://telegram.org/js/telegram-widget.js?22\" "
+    f"data-telegram-discussion=\"{channel}/{msg_id}\" data-comments-limit=\"10\" data-color=\"FF007F\" data-dark=\"1\"></script>\n"
     f"</div>"
 )
 
 with open(path, "r", encoding="utf-8") as f:
     data = f.read()
 
-data = data.replace(placeholder, iframe_html, 1)
+data = data.replace(placeholder, widget_html, 1)
 
 with open(path, "w", encoding="utf-8") as f:
     f.write(data)
 ' "$ARTICLE_ABS" "$WIDGET_PLACEHOLDER" "$TG_CHANNEL_NAME" "$MESSAGE_ID"
-    echo "    Wstrzyknięto ramkę dyskusyjną dla message_id $MESSAGE_ID."
+    echo "    Wstrzyknięto widget dyskusyjny dla message_id $MESSAGE_ID."
 else
-    if grep -q "t.me/${TG_CHANNEL_NAME}/${MESSAGE_ID}" "$ARTICLE_ABS"; then
-        echo "    Ramka dyskusyjna dla message_id $MESSAGE_ID jest już obecna w pliku."
+    if grep -q -E "(data-telegram-discussion=[\"']${TG_CHANNEL_NAME}/${MESSAGE_ID}[\"']|t.me/${TG_CHANNEL_NAME}/${MESSAGE_ID})" "$ARTICLE_ABS"; then
+        echo "    Widget dyskusyjny dla message_id $MESSAGE_ID jest już obecny w pliku."
     else
-        echo >&2 "[BŁĄD] Nie znaleziono znacznika '$WIDGET_PLACEHOLDER' ani ramki dla wiadomości $MESSAGE_ID."
+        echo >&2 "[BŁĄD] Nie znaleziono znacznika '$WIDGET_PLACEHOLDER' ani widgetu dla wiadomości $MESSAGE_ID."
         exit 1
     fi
 fi
+
 
 # ==============================================================================
 # 6. REGENERACJA RSS, FINALNY COMMIT I WERYFIKACJA KOŃCOWA
