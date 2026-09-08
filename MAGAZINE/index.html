@@ -27,7 +27,7 @@
     <meta name="keywords" content="Magazine, E-Zine, Emo, Scene, MySpace, DID, Press, Toxic Echo Studio, Nico Łach, Mighn Taghor, Language Selection">
     <meta name="author" content="Nico Łach (Zebroid) - Lead Journalist">
     <meta name="version" content="1.10.19">
-    <meta name="revision-date" content="2026-08-27">
+    <meta name="revision-date" content="2026-09-08">
 
     <title>The Reverse Emo Changeling | Magazine &amp; E-Zine</title>
     <meta name="application-name" content="The Reverse Emo Changeling">
@@ -51,7 +51,7 @@
     }
     </script>
 
-    <!-- Spójna pamięć wyboru języka oraz detekcja navigator.language -->
+    <!-- Logika wyboru języka oraz neutralizacja automatycznego przekierowania dla botów (Bot-Shield) -->
     <script>
     function setSiteLang(l) {
         try {
@@ -63,6 +63,14 @@
         } catch(e) {}
     }
     (function() {
+        /* Weryfikacja User-Agenta przed jakąkolwiek logiką przekierowań (ochrona indeksowania Bingbot/Googlebot) */
+        var ua = (navigator.userAgent || '').toLowerCase();
+        var botPattern = /bingbot|googlebot|slurp|duckduckbot|yandex|baiduspider|facebookexternalhit|twitterbot|rogerbot|linkedinbot|embedly|quora link preview|showyoubot|outbrain|pinterest|applebot|semrushbot|ahrefsbot|bytespider|msnbot|crawler|spider|robot|crawling/i;
+        if (botPattern.test(ua)) {
+            /* Crawler pozostaje na stronie głównej (brama x-default), indeksując statyczną treść */
+            return;
+        }
+
         var s = null;
         try {
             var m = document.cookie.match(/(?:^|;\s*)site_lang=([^;]+)/);
@@ -116,39 +124,110 @@
         </a>
     </div>
 
-    <!-- Main Content Area: Language Selection Gate (100% accessible fallback without JS) -->
+    <!-- Główna sekcja treści: brama językowa x-default oraz indeksowalna charakterystyka magazynu -->
     <main class="main-content" id="lang-select-main" style="min-height: 50vh; display: flex; align-items: center; justify-content: center; padding: 40px 20px;">
-        <div style="max-width: 650px; width: 100%; text-align: center;">
-            <div class="content-box" style="background: rgba(5,5,5,0.95); padding: 35px 25px; border: var(--border-pink); box-shadow: var(--shadow-retro);">
-                <h1 style="color: var(--color-primary-green); font-size: 1.8rem; margin-bottom: 8px;" class="notranslate" translate="no">The Reverse Emo Changeling</h1>
-                <p style="color: var(--color-text-purple); font-weight: bold; font-size: 1rem; margin-bottom: 25px;">
-                    Magazyn &amp; E-Zin &nbsp;|&nbsp; Magazine &amp; E-Zine
-                </p>
-                <hr style="border: 0; border-top: 1px dashed var(--color-primary-pink); margin-bottom: 25px;">
-                
-                <p style="color: var(--color-text-white); font-family: 'Inter', sans-serif; font-size: 0.95rem; margin-bottom: 30px; line-height: 1.6;">
-                    Wybierz edycję językową, aby wejść do serwisu:<br>
-                    Select your language edition to enter the magazine:
-                </p>
-
-                <noscript>
-                    <p style="font-size: 0.85rem; color: var(--color-primary-pink); text-align: center; margin-bottom: 15px; font-family: 'Inter', sans-serif;">
-                        Wybierz wersję językową poniżej / Select your language edition below:
+        <div style="max-width: 780px; width: 100%;">
+            <div class="content-box" style="background: rgba(5,5,5,0.95); padding: 35px 30px; border: var(--border-pink); box-shadow: var(--shadow-retro);">
+                <header style="text-align: center; margin-bottom: 25px;">
+                    <h1 style="color: var(--color-primary-green); font-size: clamp(1.6rem, 4vw, 2.2rem); margin-bottom: 8px;" class="notranslate" translate="no">The Reverse Emo Changeling</h1>
+                    <p style="color: var(--color-text-purple); font-weight: bold; font-size: 1.05rem; margin-bottom: 15px;">
+                        Magazyn &amp; E-Zin &nbsp;|&nbsp; Magazine &amp; E-Zine
                     </p>
-                </noscript>
+                    <p style="color: var(--color-text-muted); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px;">
+                        Autonomiczna brama publikacji &bull; Autonomous Gateway &bull; x-default
+                    </p>
+                </header>
 
-                <div style="display: flex; flex-direction: column; gap: 15px; max-width: 360px; margin: 0 auto;">
-                    <a href="pl/" class="btn-retro" style="font-size: 1.1rem; padding: 14px 20px; text-align: center; text-decoration: none; display: block;" hreflang="pl" lang="pl" onclick="setSiteLang('pl')">
-                        🇵🇱 &nbsp;Polski (PL) &raquo;
-                    </a>
-                    <a href="en/" class="btn-retro" style="font-size: 1.1rem; padding: 14px 20px; text-align: center; text-decoration: none; display: block;" hreflang="en" lang="en" onclick="setSiteLang('en')">
-                        🇬🇧 &nbsp;English (EN) &raquo;
-                    </a>
-                </div>
+                <hr style="border: 0; border-top: 1px dashed var(--color-primary-pink); margin-bottom: 25px;">
 
-                <p style="margin-top: 30px; font-size: 0.8rem; color: var(--color-text-muted); font-family: 'Inter', sans-serif;">
-                    Autonomiczny blok prasowy ekosystemu emo-changeling.xyz &bull; Toxic Echo Studio
-                </p>
+                <!-- Przyciski bezpośredniego wyboru wydania językowego -->
+                <section aria-label="Language selection" style="margin-bottom: 30px; text-align: center;">
+                    <p style="color: var(--color-text-white); font-family: 'Inter', sans-serif; font-size: 1rem; margin-bottom: 20px; line-height: 1.6;">
+                        Wybierz edycję językową, aby przejść do artykułów i numerów pisma:<br>
+                        Select your language edition to access magazine issues and articles:
+                    </p>
+
+                    <noscript>
+                        <p style="font-size: 0.85rem; color: var(--color-primary-pink); margin-bottom: 15px; font-family: 'Inter', sans-serif;">
+                            Przeglądarka ma wyłączony JavaScript. Użyj poniższych łączy bezpośrednich:
+                        </p>
+                    </noscript>
+
+                    <div style="display: flex; flex-direction: column; gap: 15px; max-width: 440px; margin: 0 auto;">
+                        <a href="pl/" class="btn-retro" style="font-size: 1.1rem; padding: 14px 20px; text-align: center; text-decoration: none; display: block;" hreflang="pl" lang="pl" onclick="setSiteLang('pl')">
+                            🇵🇱 &nbsp;Wydanie Polskie (PL) &raquo;
+                        </a>
+                        <a href="en/" class="btn-retro" style="font-size: 1.1rem; padding: 14px 20px; text-align: center; text-decoration: none; display: block;" hreflang="en" lang="en" onclick="setSiteLang('en')">
+                            🇬🇧 &nbsp;English Edition (EN) &raquo;
+                        </a>
+                    </div>
+                </section>
+
+                <hr style="border: 0; border-top: 1px dashed rgba(255, 0, 255, 0.4); margin: 30px 0;">
+
+                <!-- Indeksowalna treść statyczna dla robotów indeksujących i czytelników (profil czasopisma) -->
+                <section class="editorial-manifest-summary" style="font-family: 'Inter', sans-serif; color: var(--color-text-white); font-size: 0.92rem; line-height: 1.7; text-align: left;">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 25px; margin-bottom: 25px;">
+                        <!-- Kolumna PL -->
+                        <article lang="pl" style="background: rgba(0,0,0,0.4); border: 1px dashed var(--color-primary-pink); padding: 18px;">
+                            <h2 style="color: var(--color-text-pink); font-size: 1.15rem; margin-bottom: 10px; font-family: 'Courier New', Courier, monospace; letter-spacing: 1px; border-bottom: 1px solid var(--color-primary-pink); padding-bottom: 5px;">
+                                Profil Magazynu (PL)
+                            </h2>
+                            <p style="margin-bottom: 12px;">
+                                <strong>The Reverse Emo Changeling</strong> to niezależne, niekomercyjne czasopismo społeczno-artystyczne (e-zin) tworzone w duchu undergroundu, wolności ekspresji i estetyki wczesnej sieci. Publikacja stanowi autonomiczną przestrzeń publicystyczną ekosystemu <em>emo-changeling.xyz</em>.
+                            </p>
+                            <p style="margin-bottom: 12px;">
+                                <strong>Tematyka i działy:</strong>
+                            </p>
+                            <ul style="list-style: square; padding-left: 20px; margin-bottom: 14px; color: var(--color-text-green);">
+                                <li><span style="color: var(--color-text-white);">Kultura alternatywna, ruch scene/emo, estetyka cyberpunk oraz Web 2.0 / Modern MySpace.</span></li>
+                                <li><span style="color: var(--color-text-white);">Zaangażowana publicystyka, felietony bez kompromisów i cenzury.</span></li>
+                                <li><span style="color: var(--color-text-white);">Tożsamość, neuroróżnorodność, pluralizm psychiczny (DID) oraz prawa istot żywych.</span></li>
+                                <li><span style="color: var(--color-text-white);">Cyfrowa sztuka autorska, poezja oraz niezależne galerie multimedialne.</span></li>
+                            </ul>
+                            <p style="margin-bottom: 0;">
+                                Bezpośrednie wejście do artykułów i bieżącego numeru: 
+                                <a href="pl/" style="color: var(--color-text-pink); font-weight: bold; text-decoration: underline;" hreflang="pl">Przejdź do wydania polskiego &raquo;</a>
+                            </p>
+                        </article>
+
+                        <!-- Kolumna EN -->
+                        <article lang="en" style="background: rgba(0,0,0,0.4); border: 1px dashed var(--color-primary-green); padding: 18px;">
+                            <h2 style="color: var(--color-text-green); font-size: 1.15rem; margin-bottom: 10px; font-family: 'Courier New', Courier, monospace; letter-spacing: 1px; border-bottom: 1px solid var(--color-primary-green); padding-bottom: 5px;">
+                                Magazine Profile (EN)
+                            </h2>
+                            <p style="margin-bottom: 12px;">
+                                <strong>The Reverse Emo Changeling</strong> is an independent, non-profit socio-artistic e-zine dedicated to authentic self-expression, underground critique, and digital autonomy. Operating within the <em>emo-changeling.xyz</em> network, it provides uncompromising cultural discourse.
+                            </p>
+                            <p style="margin-bottom: 12px;">
+                                <strong>Key Coverage Areas:</strong>
+                            </p>
+                            <ul style="list-style: square; padding-left: 20px; margin-bottom: 14px; color: var(--color-text-pink);">
+                                <li><span style="color: var(--color-text-white);">Alternative counterculture, scene/emo revival, cyberpunk, and Modern MySpace web design.</span></li>
+                                <li><span style="color: var(--color-text-white);">Independent journalism, cultural critique, and unfiltered personal essays.</span></li>
+                                <li><span style="color: var(--color-text-white);">Plural identity, neurodiversity (DID awareness), and ethical advocacy.</span></li>
+                                <li><span style="color: var(--color-text-white);">Original digital artwork, visual poetry, and multimedia archives.</span></li>
+                            </ul>
+                            <p style="margin-bottom: 0;">
+                                Direct access to English articles and current issue: 
+                                <a href="en/" style="color: var(--color-text-green); font-weight: bold; text-decoration: underline;" hreflang="en">Enter English Edition &raquo;</a>
+                            </p>
+                        </article>
+                    </div>
+
+                    <!-- Informacja o strukturze wydań i archiwum -->
+                    <div style="background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.15); padding: 14px 18px; border-radius: 2px;">
+                        <p style="margin: 0; font-size: 0.85rem; color: var(--color-text-purple); line-height: 1.6;">
+                            <strong>Katalog wydań i archiwum / Issues &amp; Archive:</strong> Magazyn ukazuje się w edycji dwujęzycznej. Bieżące wydanie (Numer 19/2026), numery archiwalne (1–18/2026), kanały RSS (<a href="rss-pl.xml" style="color: var(--color-primary-pink);">RSS PL</a>, <a href="rss-en.xml" style="color: var(--color-primary-green);">RSS EN</a>) oraz instrukcje maszynowe (<a href="llms.txt" style="color: var(--color-text-white);">llms.txt</a>) są w pełni dostępne w odpowiednich sekcjach językowych.
+                        </p>
+                    </div>
+                </section>
+
+                <footer style="margin-top: 25px; text-align: center;">
+                    <p style="margin: 0; font-size: 0.8rem; color: var(--color-text-muted); font-family: 'Inter', sans-serif;">
+                        Autonomiczny blok prasowy ekosystemu emo-changeling.xyz &bull; Toxic Echo Studio
+                    </p>
+                </footer>
             </div>
         </div>
     </main>
