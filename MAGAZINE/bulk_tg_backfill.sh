@@ -716,7 +716,7 @@ widget_html = (
     f"<div translate=\"no\" class=\"notranslate\" style=\"margin-top: 35px; width: 100%; "
     f"border: var(--border-pink, 1px dashed #ff007f); background: #000; padding: 10px; min-height: 200px;\">\n"
     f"  <script async src=\"https://telegram.org/js/telegram-widget.js?22\" "
-    f"data-telegram-discussion=\"{channel}/{msg_id}\" data-comments-limit=\"10\" data-color=\"FF007F\" data-dark=\"1\"></script>\n"
+    f"data-telegram-discussion=\"{channel}/{msg_id}\" data-comments-limit=\"10\" data-color=\"FF007F\" data-dark=\"1\" data-telegram-login=\"Emosyfybot\"></script>\n"
     f"</div>"
 )
 
