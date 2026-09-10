@@ -860,8 +860,8 @@ fi
 poll_http_endpoint() {
     local url="$1"
     local expected_text="$2"
-    local max_attempts=15
-    local delay=5
+    local max_attempts=40
+    local delay=10
     local attempt=1
 
     echo "==> Rozpoczynam HTTP Polling weryfikujący wdrożenie na produkcji: $url"
