@@ -1043,6 +1043,16 @@ article h3,
     font-weight: bold;
     text-shadow: 0 0 4px var(--color-primary-pink);
 }
+#issue-select-20:checked ~ * .issue-header-20,
+#issue-select-20:checked ~ * .feed-issue-20 {
+    display: block;
+}
+#issue-select-20:checked ~ * .issue-label-20 {
+    color: var(--color-primary-pink) !important;
+    font-weight: bold;
+    text-shadow: 0 0 4px var(--color-primary-pink);
+}
+
 #issue-select-2:checked ~ * .issue-header-2,
 #issue-select-2:checked ~ * .feed-issue-2 {
     display: block;
@@ -1205,6 +1215,16 @@ article h3,
     font-weight: bold;
     text-shadow: 0 0 4px var(--color-primary-pink);
 }
+#issue-select-20:checked ~ * .issue-header-20,
+#issue-select-20:checked ~ * .feed-issue-20 {
+    display: block;
+}
+#issue-select-20:checked ~ * .issue-label-20 {
+    color: var(--color-primary-pink) !important;
+    font-weight: bold;
+    text-shadow: 0 0 4px var(--color-primary-pink);
+}
+
 #issue-select-2:checked ~ * .issue-header-2,
 #issue-select-2:checked ~ * .feed-issue-2 {
     display: block;
@@ -1367,6 +1387,16 @@ article h3,
     font-weight: bold;
     text-shadow: 0 0 4px var(--color-primary-pink);
 }
+#issue-select-20:checked ~ * .issue-header-20,
+#issue-select-20:checked ~ * .feed-issue-20 {
+    display: block;
+}
+#issue-select-20:checked ~ * .issue-label-20 {
+    color: var(--color-primary-pink) !important;
+    font-weight: bold;
+    text-shadow: 0 0 4px var(--color-primary-pink);
+}
+
 #issue-select-2:checked ~ * .issue-header-2,
 #issue-select-2:checked ~ * .feed-issue-2 {
     display: block;
@@ -1529,6 +1559,16 @@ article h3,
     font-weight: bold;
     text-shadow: 0 0 4px var(--color-primary-pink);
 }
+#issue-select-20:checked ~ * .issue-header-20,
+#issue-select-20:checked ~ * .feed-issue-20 {
+    display: block;
+}
+#issue-select-20:checked ~ * .issue-label-20 {
+    color: var(--color-primary-pink) !important;
+    font-weight: bold;
+    text-shadow: 0 0 4px var(--color-primary-pink);
+}
+
 #issue-select-2:checked ~ * .issue-header-2,
 #issue-select-2:checked ~ * .feed-issue-2 {
     display: block;
@@ -1691,6 +1731,16 @@ article h3,
     font-weight: bold;
     text-shadow: 0 0 4px var(--color-primary-pink);
 }
+#issue-select-20:checked ~ * .issue-header-20,
+#issue-select-20:checked ~ * .feed-issue-20 {
+    display: block;
+}
+#issue-select-20:checked ~ * .issue-label-20 {
+    color: var(--color-primary-pink) !important;
+    font-weight: bold;
+    text-shadow: 0 0 4px var(--color-primary-pink);
+}
+
 #issue-select-2:checked ~ * .issue-header-2,
 #issue-select-2:checked ~ * .feed-issue-2 {
     display: block;
@@ -1853,6 +1903,16 @@ article h3,
     font-weight: bold;
     text-shadow: 0 0 4px var(--color-primary-pink);
 }
+#issue-select-20:checked ~ * .issue-header-20,
+#issue-select-20:checked ~ * .feed-issue-20 {
+    display: block;
+}
+#issue-select-20:checked ~ * .issue-label-20 {
+    color: var(--color-primary-pink) !important;
+    font-weight: bold;
+    text-shadow: 0 0 4px var(--color-primary-pink);
+}
+
 #issue-select-2:checked ~ * .issue-header-2,
 #issue-select-2:checked ~ * .feed-issue-2 {
     display: block;
@@ -2015,6 +2075,16 @@ article h3,
     font-weight: bold;
     text-shadow: 0 0 4px var(--color-primary-pink);
 }
+#issue-select-20:checked ~ * .issue-header-20,
+#issue-select-20:checked ~ * .feed-issue-20 {
+    display: block;
+}
+#issue-select-20:checked ~ * .issue-label-20 {
+    color: var(--color-primary-pink) !important;
+    font-weight: bold;
+    text-shadow: 0 0 4px var(--color-primary-pink);
+}
+
 #issue-select-2:checked ~ * .issue-header-2,
 #issue-select-2:checked ~ * .feed-issue-2 {
     display: block;
@@ -2177,6 +2247,16 @@ article h3,
     font-weight: bold;
     text-shadow: 0 0 4px var(--color-primary-pink);
 }
+#issue-select-20:checked ~ * .issue-header-20,
+#issue-select-20:checked ~ * .feed-issue-20 {
+    display: block;
+}
+#issue-select-20:checked ~ * .issue-label-20 {
+    color: var(--color-primary-pink) !important;
+    font-weight: bold;
+    text-shadow: 0 0 4px var(--color-primary-pink);
+}
+
 #issue-select-2:checked ~ * .issue-header-2,
 #issue-select-2:checked ~ * .feed-issue-2 {
     display: block;
@@ -2339,6 +2419,16 @@ article h3,
     font-weight: bold;
     text-shadow: 0 0 4px var(--color-primary-pink);
 }
+#issue-select-20:checked ~ * .issue-header-20,
+#issue-select-20:checked ~ * .feed-issue-20 {
+    display: block;
+}
+#issue-select-20:checked ~ * .issue-label-20 {
+    color: var(--color-primary-pink) !important;
+    font-weight: bold;
+    text-shadow: 0 0 4px var(--color-primary-pink);
+}
+
 #issue-select-2:checked ~ * .issue-header-2,
 #issue-select-2:checked ~ * .feed-issue-2 {
     display: block;
@@ -2501,6 +2591,16 @@ article h3,
     font-weight: bold;
     text-shadow: 0 0 4px var(--color-primary-pink);
 }
+#issue-select-20:checked ~ * .issue-header-20,
+#issue-select-20:checked ~ * .feed-issue-20 {
+    display: block;
+}
+#issue-select-20:checked ~ * .issue-label-20 {
+    color: var(--color-primary-pink) !important;
+    font-weight: bold;
+    text-shadow: 0 0 4px var(--color-primary-pink);
+}
+
 #issue-select-2:checked ~ * .issue-header-2,
 #issue-select-2:checked ~ * .feed-issue-2 {
     display: block;
@@ -2663,6 +2763,16 @@ article h3,
     font-weight: bold;
     text-shadow: 0 0 4px var(--color-primary-pink);
 }
+#issue-select-20:checked ~ * .issue-header-20,
+#issue-select-20:checked ~ * .feed-issue-20 {
+    display: block;
+}
+#issue-select-20:checked ~ * .issue-label-20 {
+    color: var(--color-primary-pink) !important;
+    font-weight: bold;
+    text-shadow: 0 0 4px var(--color-primary-pink);
+}
+
 
 .issue-catalog-label {
     cursor: pointer;

@@ -4,7 +4,7 @@
   <!-- Neutral Root Selector (x-default) -->
   <url>
     <loc>https://reverse.emo-changeling.xyz/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-09-09</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://reverse.emo-changeling.xyz/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/"/>
@@ -12,27 +12,27 @@
   <!-- Polish Edition Home -->
   <url>
     <loc>https://reverse.emo-changeling.xyz/pl/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-09-09</lastmod>
     <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/"/>
   </url>
   <!-- English Edition Home -->
   <url>
     <loc>https://reverse.emo-changeling.xyz/en/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-09-09</lastmod>
     <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/"/>
   </url>
   <!-- Subpages (PL & EN) -->
   <url>
     <loc>https://reverse.emo-changeling.xyz/pl/archive.html</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-09-09</lastmod>
     <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/archive.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/archive.html"/>
   </url>
   <url>
     <loc>https://reverse.emo-changeling.xyz/en/archive.html</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-09-09</lastmod>
     <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/archive.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/archive.html"/>
   </url>
@@ -79,7 +79,19 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/legal.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/legal.html"/>
   </url>
-  <!-- Articles (PL & EN) -->
+    <!-- Articles (PL & EN) -->
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/pl/20-2026/gaming-z-did-dlaczego-plurality-i.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/20-2026/gaming-z-did-dlaczego-plurality-i.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/20-2026/gaming-z-did-dlaczego-plurality-i.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/en/20-2026/gaming-z-did-dlaczego-plurality-i.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/20-2026/gaming-z-did-dlaczego-plurality-i.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/20-2026/gaming-z-did-dlaczego-plurality-i.html"/>
+  </url>
   <url>
     <loc>https://reverse.emo-changeling.xyz/pl/19-2026/myslisz-ze-go-ratujesz-o-falszywym.html</loc>
     <lastmod>2026-08-27</lastmod>
