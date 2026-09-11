@@ -869,3 +869,40 @@ footer {
     }
 }
 
+/* ==========================================================================
+   New Item Badge, Strikethrough & Tracklist Components
+   ========================================================================== */
+.badge-new {
+    display: inline-block;
+    background-color: var(--accent-red);
+    color: #ffffff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 1px 6px;
+    border-radius: 3px;
+    margin-left: 6px;
+    vertical-align: middle;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    box-shadow: 0 0 6px var(--accent-red-glow);
+}
+
+s, del {
+    text-decoration: line-through;
+    opacity: 0.65;
+}
+
+.tracklist-container {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding-left: 15px;
+    border-left: 2px solid var(--border-color);
+}
+
+.tracklist {
+    margin-top: 6px;
+    padding-left: 20px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
