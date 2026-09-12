@@ -3004,6 +3004,95 @@ details.floating-nav[open] .floating-nav-menu {
 }
 
 /* =========================================
+   KOMPONENT REKLAMOWY: TX2 PIGEONIFICATION PROJECT
+   ========================================= */
+.pigeonification-promo {
+    background: rgba(0, 0, 0, 0.9);
+    border: var(--border-pink);
+    padding: 15px 20px;
+    margin-bottom: 25px;
+    box-shadow: var(--shadow-retro);
+    box-sizing: border-box;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.pigeonification-promo .promo-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: var(--color-text-muted);
+    border: 1px solid var(--color-text-muted);
+    padding: 2px 8px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.pigeonification-promo .promo-title {
+    color: var(--color-text-pink);
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    margin: 0 0 15px 0;
+    text-align: left;
+    border-bottom: 1px dashed var(--color-primary-pink);
+    padding-bottom: 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 0px #000, 3px 3px 0px var(--color-primary-indigo);
+}
+
+.pigeonification-promo .promo-banner-link {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    border: 1px solid var(--color-primary-pink);
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pigeonification-promo .promo-banner-link:hover {
+    transform: scale(1.005);
+    box-shadow: 0 0 12px var(--color-primary-pink);
+}
+
+.pigeonification-promo .promo-image-wrapper {
+    width: 100%;
+    aspect-ratio: 20 / 7;
+    background: #000;
+    overflow: hidden;
+}
+
+.pigeonification-promo .promo-banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.pigeonification-promo .promo-text {
+    color: var(--color-text-white);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0 0 18px 0;
+    text-align: justify;
+}
+
+.pigeonification-promo .promo-cta-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.pigeonification-promo .promo-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* =========================================
    ZGRUPOWANE ZAPYTANIA MEDIA (Responsywność)
    ========================================= */
 @media (max-width: 1024px) {
@@ -3069,6 +3158,18 @@ details.floating-nav[open] .floating-nav-menu {
     }
     .editorial-grid {
         grid-template-columns: 1fr;
+    }
+    .pigeonification-promo {
+        padding: 12px 15px;
+    }
+    .pigeonification-promo .promo-cta-container {
+        justify-content: stretch;
+    }
+    .pigeonification-promo .promo-cta-btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        box-sizing: border-box;
     }
 }
 
