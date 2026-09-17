@@ -2600,6 +2600,15 @@ article h3,
     font-weight: bold;
     text-shadow: 0 0 4px var(--color-primary-pink);
 }
+#issue-select-21:checked ~ * .issue-header-21,
+#issue-select-21:checked ~ * .feed-issue-21 {
+    display: block;
+}
+#issue-select-21:checked ~ * .issue-label-21 {
+    color: var(--color-primary-pink) !important;
+    font-weight: bold;
+    text-shadow: 0 0 4px var(--color-primary-pink);
+}
 
 #issue-select-2:checked ~ * .issue-header-2,
 #issue-select-2:checked ~ * .feed-issue-2 {
@@ -2768,6 +2777,15 @@ article h3,
     display: block;
 }
 #issue-select-20:checked ~ * .issue-label-20 {
+    color: var(--color-primary-pink) !important;
+    font-weight: bold;
+    text-shadow: 0 0 4px var(--color-primary-pink);
+}
+#issue-select-21:checked ~ * .issue-header-21,
+#issue-select-21:checked ~ * .feed-issue-21 {
+    display: block;
+}
+#issue-select-21:checked ~ * .issue-label-21 {
     color: var(--color-primary-pink) !important;
     font-weight: bold;
     text-shadow: 0 0 4px var(--color-primary-pink);

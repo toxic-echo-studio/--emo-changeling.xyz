@@ -39,6 +39,7 @@ trap cleanup_temp EXIT
 # ==============================================================================
 
 AUTO_CONFIRM=false
+NO_COMMIT=false
 
 show_help() {
     cat << 'EOF'
@@ -49,8 +50,9 @@ dwujęzycznych par publikacyjnych (Bilingual Thread Pairing). Artykuły PL i EN
 dzielą dokładnie jeden wspólny wątek dyskusji na kanale Telegram.
 
 Opcje:
-  --yes, -y    Pominięcie pytania o potwierdzenie [t/N] przed startem przetwarzania.
-  --help, -h   Wyświetlenie niniejszego komunikatu pomocy.
+  --yes, -y       Pominięcie pytania o potwierdzenie [t/N] przed startem przetwarzania.
+  --no-commit     Pominięcie fazy git commit, git push oraz HTTP polling.
+  --help, -h      Wyświetlenie niniejszego komunikatu pomocy.
 EOF
 }
 
@@ -58,6 +60,9 @@ for arg in "$@"; do
     case "$arg" in
         --yes|-y)
             AUTO_CONFIRM=true
+            ;;
+        --no-commit)
+            NO_COMMIT=true
             ;;
         --help|-h)
             show_help
@@ -821,87 +826,92 @@ for r_file in "$RSS_FILE_DEFAULT" "$RSS_FILE_PL" "$RSS_FILE_EN"; do
     fi
 done
 
-CURRENT_STAGE="Pojedynczy zbiorczy commit Git"
-echo "==> Staging zmodyfikowanych artykułów oraz kanałów RSS..."
-
-for p_file in "${MODIFIED_ARTICLES[@]}"; do
-    git -C "$REPO_ROOT" add "$p_file"
-    if [ -f "${p_file}.asc" ]; then
-        git -C "$REPO_ROOT" add "${p_file}.asc"
-    fi
-done
-
-for r_file in "$RSS_FILE_DEFAULT" "$RSS_FILE_PL" "$RSS_FILE_EN"; do
-    if [ -f "$r_file" ]; then
-        git -C "$REPO_ROOT" add "$r_file"
-        if [ -f "${r_file}.asc" ]; then
-            git -C "$REPO_ROOT" add "${r_file}.asc"
-        fi
-    fi
-done
-
-if ! git -C "$REPO_ROOT" diff --staged --quiet; then
-    COMMIT_MSG="chore(discussion): masowe powiązanie dyskusji Telegram dla ${TOTAL_MODIFIED} artykułów [backfill]"
-    echo "==> Tworzenie pojedynczego zbiorczego commita Git:"
-    echo "    $COMMIT_MSG"
-    git -C "$REPO_ROOT" commit -m "$COMMIT_MSG"
-
-    CURRENT_STAGE="Wypchnięcie zmian do repozytorium zdalnego (git push)"
-    echo "==> Wypychanie zmian do aktywnej gałęzi $CURRENT_BRANCH..."
-    git -C "$REPO_ROOT" push origin "$CURRENT_BRANCH"
+if [ "$NO_COMMIT" = true ]; then
+    echo "==> Tryb --no-commit aktywny: pominięto fazę stagingu Git, commita, pusha i pollingu."
+    echo "    Wątek Telegram został pomyślnie osadzony, kanały RSS zregenerowane i podpisane kluczem GPG."
 else
-    echo "    Informacja: Brak zmian w indeksie Git (nothing to commit)."
-fi
+    CURRENT_STAGE="Pojedynczy zbiorczy commit Git"
+    echo "==> Staging zmodyfikowanych artykułów oraz kanałów RSS..."
 
-# ==============================================================================
-# 6. ASYNCHRONICZNY HTTP POLLING KOŃCOWY
-# ==============================================================================
-
-poll_http_endpoint() {
-    local url="$1"
-    local expected_text="$2"
-    local max_attempts=40
-    local delay=10
-    local attempt=1
-
-    echo "==> Rozpoczynam HTTP Polling weryfikujący wdrożenie na produkcji: $url"
-    while [ "$attempt" -le "$max_attempts" ]; do
-        echo "    [Próba $attempt/$max_attempts] Sprawdzanie dostępności ramki dyskusji w sieci..."
-        
-        local response_body
-        local http_code
-        response_body=$(curl -sSL --max-time 10 "$url" 2>/dev/null || true)
-        http_code=$(curl -sSL -o /dev/null -w "%{http_code}" --max-time 10 "$url" 2>/dev/null || true)
-
-        if [ "$http_code" = "200" ]; then
-            if [ -n "$expected_text" ]; then
-                if echo "$response_body" | grep -q -F "$expected_text"; then
-                    echo "    -> Sukces: Kod 200 OK oraz odnaleziono sygnaturę ramki dyskusji w sieci."
-                    return 0
-                else
-                    echo "    -> Kod 200 OK, oczekiwanie na odświeżenie cache Cloudflare..."
-                fi
-            else
-                echo "    -> Sukces: Kod 200 OK."
-                return 0
-            fi
-        else
-            echo "    -> Kod odpowiedzi HTTP: $http_code (oczekiwano 200)."
+    for p_file in "${MODIFIED_ARTICLES[@]}"; do
+        git -C "$REPO_ROOT" add "$p_file"
+        if [ -f "${p_file}.asc" ]; then
+            git -C "$REPO_ROOT" add "${p_file}.asc"
         fi
-
-        sleep "$delay"
-        attempt=$((attempt + 1))
     done
 
-    echo >&2 "[BŁĄD] Przekroczono limit czasu oczekiwania na synchronizację ramki pod adresem: $url"
-    return 1
-}
+    for r_file in "$RSS_FILE_DEFAULT" "$RSS_FILE_PL" "$RSS_FILE_EN"; do
+        if [ -f "$r_file" ]; then
+            git -C "$REPO_ROOT" add "$r_file"
+            if [ -f "${r_file}.asc" ]; then
+                git -C "$REPO_ROOT" add "${r_file}.asc"
+            fi
+        fi
+    done
 
-CURRENT_STAGE="Końcowy HTTP Polling dla ostatniego przetworzonego artykułu"
-if [ -n "$LAST_CANONICAL_URL" ] && [ -n "$LAST_MESSAGE_ID" ]; then
-    EXPECTED_IFRAME_SIGNATURE="t.me/${TG_CHANNEL_NAME}/${LAST_MESSAGE_ID}"
-    echo "==> Weryfikacja końcowa wdrożenia ramki dyskusyjnej dla ostatniego artykułu..."
-    poll_http_endpoint "$LAST_CANONICAL_URL" "$EXPECTED_IFRAME_SIGNATURE"
+    if ! git -C "$REPO_ROOT" diff --staged --quiet; then
+        COMMIT_MSG="chore(discussion): masowe powiązanie dyskusji Telegram dla ${TOTAL_MODIFIED} artykułów [backfill]"
+        echo "==> Tworzenie pojedynczego zbiorczego commita Git:"
+        echo "    $COMMIT_MSG"
+        git -C "$REPO_ROOT" commit -m "$COMMIT_MSG"
+
+        CURRENT_STAGE="Wypchnięcie zmian do repozytorium zdalnego (git push)"
+        echo "==> Wypychanie zmian do aktywnej gałęzi $CURRENT_BRANCH..."
+        git -C "$REPO_ROOT" push origin "$CURRENT_BRANCH"
+    else
+        echo "    Informacja: Brak zmian w indeksie Git (nothing to commit)."
+    fi
+
+    # ==============================================================================
+    # 6. ASYNCHRONICZNY HTTP POLLING KOŃCOWY
+    # ==============================================================================
+
+    poll_http_endpoint() {
+        local url="$1"
+        local expected_text="$2"
+        local max_attempts=40
+        local delay=10
+        local attempt=1
+
+        echo "==> Rozpoczynam HTTP Polling weryfikujący wdrożenie na produkcji: $url"
+        while [ "$attempt" -le "$max_attempts" ]; do
+            echo "    [Próba $attempt/$max_attempts] Sprawdzanie dostępności ramki dyskusji w sieci..."
+            
+            local response_body
+            local http_code
+            response_body=$(curl -sSL --max-time 10 "$url" 2>/dev/null || true)
+            http_code=$(curl -sSL -o /dev/null -w "%{http_code}" --max-time 10 "$url" 2>/dev/null || true)
+
+            if [ "$http_code" = "200" ]; then
+                if [ -n "$expected_text" ]; then
+                    if echo "$response_body" | grep -q -F "$expected_text"; then
+                        echo "    -> Sukces: Kod 200 OK oraz odnaleziono sygnaturę ramki dyskusji w sieci."
+                        return 0
+                    else
+                        echo "    -> Kod 200 OK, oczekiwanie na odświeżenie cache Cloudflare..."
+                    fi
+                else
+                    echo "    -> Sukces: Kod 200 OK."
+                    return 0
+                fi
+            else
+                echo "    -> Kod odpowiedzi HTTP: $http_code (oczekiwano 200)."
+            fi
+
+            sleep "$delay"
+            attempt=$((attempt + 1))
+        done
+
+        echo >&2 "[BŁĄD] Przekroczono limit czasu oczekiwania na synchronizację ramki pod adresem: $url"
+        return 1
+    }
+
+    CURRENT_STAGE="Końcowy HTTP Polling dla ostatniego przetworzonego artykułu"
+    if [ -n "$LAST_CANONICAL_URL" ] && [ -n "$LAST_MESSAGE_ID" ]; then
+        EXPECTED_IFRAME_SIGNATURE="t.me/${TG_CHANNEL_NAME}/${LAST_MESSAGE_ID}"
+        echo "==> Weryfikacja końcowa wdrożenia ramki dyskusyjnej dla ostatniego artykułu..."
+        poll_http_endpoint "$LAST_CANONICAL_URL" "$EXPECTED_IFRAME_SIGNATURE"
+    fi
 fi
 
 echo "=============================================================================="

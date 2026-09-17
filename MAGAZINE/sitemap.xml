@@ -4,7 +4,7 @@
   <!-- Neutral Root Selector (x-default) -->
   <url>
     <loc>https://reverse.emo-changeling.xyz/</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://reverse.emo-changeling.xyz/"/>
     <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/"/>
@@ -12,14 +12,14 @@
   <!-- Polish Edition Home -->
   <url>
     <loc>https://reverse.emo-changeling.xyz/pl/</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/"/>
   </url>
   <!-- English Edition Home -->
   <url>
     <loc>https://reverse.emo-changeling.xyz/en/</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/"/>
   </url>
@@ -80,6 +80,18 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/legal.html"/>
   </url>
     <!-- Articles (PL & EN) -->
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/pl/21-2026/cancel-culture-poszlo-za-daleko.html</loc>
+    <lastmod>2026-09-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/21-2026/cancel-culture-poszlo-za-daleko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/21-2026/cancel-culture-poszlo-za-daleko.html"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/en/21-2026/cancel-culture-poszlo-za-daleko.html</loc>
+    <lastmod>2026-09-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/21-2026/cancel-culture-poszlo-za-daleko.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/21-2026/cancel-culture-poszlo-za-daleko.html"/>
+  </url>
   <url>
     <loc>https://reverse.emo-changeling.xyz/pl/20-2026/gaming-z-did-dlaczego-plurality-i.html</loc>
     <lastmod>2026-09-09</lastmod>
