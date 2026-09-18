@@ -377,8 +377,8 @@ details summary::-webkit-details-marker {
     max-height: 100%;
     width: auto;
     height: auto;
-    border: 2px solid #ff007f;
-    box-shadow: 0 0 30px #ff00ff;
+    border: 2px solid #000000;
+    box-shadow: 0 0 30px #000000;
     transition: transform 0.3s ease;
 }
 

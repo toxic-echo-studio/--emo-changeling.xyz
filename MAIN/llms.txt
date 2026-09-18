@@ -8,6 +8,8 @@ contact: mailto:admin@toxic-echo.studio
 training: allow
 fine_tuning: allow
 derivatives: deny
+human_derivatives: deny
+ai_derivatives: deny
 indexing: allow
 embedding: allow
 caching: allow

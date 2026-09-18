@@ -5,10 +5,5 @@
 # AI Declaration: This website contains no AI-generated content (text or graphics).
 
 User-agent: *
-Content-Signal: search=yes, ai-train=yes, ai-input=yes
-Allow: /
-
-# Global AI & Search Preferences
-Content-Signal: ai-train=yes, search=yes, ai-input=yes
-
-Sitemap: https://unofficial.emo-changeling.xyz/sitemap.xml
+Content-Signal: search=no, ai-train=no, ai-input=no
+Disallow: /
