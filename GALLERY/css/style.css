@@ -1322,3 +1322,60 @@ details.floating-nav[open] .floating-nav-menu {
     transform: translateY(0);
 }
 
+
+/* ==========================================================================
+   Bilingual Content Support (PL / EN)
+   ========================================================================== */
+.content-en, .content-pl {
+    display: none;
+}
+
+html[lang="pl"] .content-pl,
+html:not([lang="en"]) .content-pl {
+    display: block;
+}
+
+html[lang="en"] .content-en {
+    display: block;
+}
+
+html[lang="en"] .content-pl {
+    display: none !important;
+}
+
+html[lang="pl"] .content-en,
+html:not([lang="en"]) .content-en {
+    display: none !important;
+}
+
+/* Inline bilingual elements */
+span.content-pl, a.content-pl {
+    display: none;
+}
+span.content-en, a.content-en {
+    display: none;
+}
+
+html[lang="pl"] span.content-pl,
+html[lang="pl"] a.content-pl,
+html:not([lang="en"]) span.content-pl,
+html:not([lang="en"]) a.content-pl {
+    display: inline;
+}
+
+html[lang="en"] span.content-en,
+html[lang="en"] a.content-en {
+    display: inline;
+}
+
+html[lang="en"] span.content-pl,
+html[lang="en"] a.content-pl {
+    display: none !important;
+}
+
+html[lang="pl"] span.content-en,
+html[lang="pl"] a.content-en,
+html:not([lang="en"]) span.content-en,
+html:not([lang="en"]) a.content-en {
+    display: none !important;
+}

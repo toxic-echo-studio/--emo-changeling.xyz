@@ -72,6 +72,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
     <script src="/js/heic2any.min.js"></script>
+    <!-- Wczesna inicjalizacja preferencji językowej (PL jeśli przeglądarka zgłasza PL, inaczej EN) -->
+    <script>
+    (function() {
+        var s = null;
+        try {
+            var m = document.cookie.match(/(?:^|;\s*)site_lang=([^;]+)/);
+            if (m && m[1]) { s = m[1].toLowerCase(); }
+            else if (window.localStorage) { s = (localStorage.getItem('site_lang') || '').toLowerCase(); }
+        } catch(e) {}
+        if (!s) {
+            var l = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+            s = l.toLowerCase().startsWith('pl') ? 'pl' : 'en';
+        }
+        document.documentElement.lang = s === 'pl' ? 'pl' : 'en';
+    })();
+    </script>
 </head>
 <body>
 <header class="main-header">
@@ -86,14 +102,17 @@
     <main class="content-wrapper text-center">
         <h1 class="glitch" data-text="BITTERSWEET SELF LOVE-HATE">BITTERSWEET SELF LOVE-HATE</h1>
 
-        <div class="content-box aviary-box"><p>Podgaleria Bittersweet Self Love-Hate. Kliknij w grafę, żeby rozwinąć pełen obraz i ukryty opis.</p></div>
+        <div class="content-box aviary-box">
+            <p class="content-pl" lang="pl">Podgaleria Bittersweet Self Love-Hate. Kliknij w grafę, żeby rozwinąć pełen obraz i ukryty opis.</p>
+            <p class="content-en" lang="en">Bittersweet Self Love-Hate subgallery. Click an artwork to view full image and hidden description.</p>
+        </div>
 
         <div class="gallery-grid" id="gallery-grid" style="justify-content: center; grid-template-columns: repeat(auto-fit, minmax(200px, 250px)); max-width: 900px; margin: 30px auto;"></div>
 
         <a href="../" class="main-menu-btn" aria-label="Wróć do Digiart">
-            ❮ WRÓĆ DO DIGIART
-        </a>
-    </main>
+            <span class="content-pl">❮ WRÓĆ DO DIGIART</span>
+            <span class="content-en">❮ BACK TO DIGIART</span>
+        </a></main>
 
     <div class="gallery-modal" id="gallery-modal">
         <button class="modal-close" id="modal-close" aria-label="Zamknij podgląd">✖</button>
@@ -105,7 +124,7 @@
 
             <div class="modal-description">
                 <details id="modal-details">
-                    <summary>❯ ROZWIŃ OPIS</summary>
+                    <summary><span class="content-pl">❯ ROZWIŃ OPIS</span><span class="content-en">❯ EXPAND DESCRIPTION</span></summary>
                     <div class="description-content" id="description-content">
                         <span class="blink">Wczytywanie danych...</span>
                     </div>
@@ -217,11 +236,7 @@
                     var l = (navigator.languages && navigator.languages[0]) || navigator.language || '';
                     s = l.toLowerCase().startsWith('pl') ? 'pl' : 'en';
                 }
-                if (s === 'en') {
-                    document.documentElement.lang = 'en';
-                } else {
-                    document.documentElement.lang = 'pl';
-                }
+                document.documentElement.lang = s === 'pl' ? 'pl' : 'en';
             } catch(e) {}
         }
         syncGalleryLanguage();
@@ -255,7 +270,7 @@
                 modalDetails.style.display = 'block';
                 modalDetails.removeAttribute('open');
                 modalContent.classList.remove('rotated');
-                descContent.innerHTML = '<span class="blink">Wczytywanie danych z serwera...</span>';
+                descContent.innerHTML = document.documentElement.lang === 'en' ? '<span class="blink">Loading data from server...</span>' : '<span class="blink">Wczytywanie danych z serwera...</span>';
                 
                 if (item.download_tif) {
                     downloadBtn.href = item.download_tif;
