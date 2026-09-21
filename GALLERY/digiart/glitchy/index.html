@@ -131,7 +131,7 @@
                 full: '/graphics/digiart/15/full.webp',
                 title: 'Glitchy boi',
                 descUrl: '/graphics/digiart/15/opis.html',
-                download_tif: '/graphics/digiart/15/original.png'
+                download_tif: '/graphics/digiart/15/original.jpg'
             }
         ];
 
@@ -262,6 +262,8 @@
                     downloadBtn.style.display = 'inline-block';
                     if (item.download_tif.toLowerCase().endsWith('.png')) {
                         downloadBtn.textContent = 'DOWNLOAD MAX QUALITY (.PNG)';
+                    } else if (item.download_tif.toLowerCase().endsWith('.jpg') || item.download_tif.toLowerCase().endsWith('.jpeg')) {
+                        downloadBtn.textContent = 'DOWNLOAD MAX QUALITY (.JPG)';
                     } else {
                         downloadBtn.textContent = 'DOWNLOAD MAX QUALITY (.TIF)';
                     }
@@ -307,6 +309,8 @@
                     downloadBtn.style.display = 'inline-block';
                     if (item.download_tif.toLowerCase().endsWith('.png')) {
                         downloadBtn.textContent = 'DOWNLOAD MAX QUALITY (.PNG)';
+                    } else if (item.download_tif.toLowerCase().endsWith('.jpg') || item.download_tif.toLowerCase().endsWith('.jpeg')) {
+                        downloadBtn.textContent = 'DOWNLOAD MAX QUALITY (.JPG)';
                     } else {
                         downloadBtn.textContent = 'DOWNLOAD MAX QUALITY (.TIF)';
                     }
