@@ -45,8 +45,8 @@ Utwórz pliki:
 
 Wymagane elementy w obu plikach:
 - Tag `<html>` z `lang="pl"` lub `lang="en"`, odpowiednie `data-version` i `data-build`.
-- **[AUDIT RULE - LINKOWANIE]** Zewnętrzny link kierujący do TX2 Unofficial (https://tx2.emo-changeling.xyz/) w nawigacji lub treści MUSI bezwzględnie posiadać atrybuty 
-el="sponsored nofollow".
+- **Deterministyczny Cache-Busting CSS**: Wszystkie linki `rel="preload"` oraz `rel="stylesheet"` odwołujące się do `style.css`, `base-ui.css`, `typography.css` muszą obligatoryjnie posiadać parametr `?v={data-build}` (np. `../../css/style.css?v=20260924`). Adresy w preload i stylesheet muszą być w 100% identyczne co do znaku.
+- **[AUDIT RULE - LINKOWANIE]** Zewnętrzny link kierujący do TX2 Unofficial (https://tx2.emo-changeling.xyz/) w nawigacji lub treści MUSI bezwzględnie posiadać atrybuty `rel="sponsored nofollow"`.
 - Canonical i hreflang wskazujące obie wersje językowe:
   ```html
   <link rel="canonical" href="https://reverse.emo-changeling.xyz/pl/<nr>-<rok>/<slug>.html">
@@ -55,6 +55,7 @@ el="sponsored nofollow".
   ```
 - Kompletne metatagi Open Graph i Twitter Card.
 - Dane strukturalne Schema.org (`@type: Article`, `isPartOf: PublicationIssue`, `author: Person`, `publisher: Organization`). W przypadku materiału wideo dodaj powiązany obiekt `video: VideoObject`.
+- W treści artykułów prezentowanej czytelnikowi nie korzystaj z długiej pauzy ani półpauzy - zamiast nich stosuj zawsze wyłącznie znak minus "-".
 - Treść artykułu wewnątrz `<article id="article" class="article-reader"><section class="article-body">`.
 - Stopka redakcyjna w elemencie `<details class="editorial-details notranslate" translate="no">`.
 - Pływające menu nawigacyjne (`<details class="floating-nav notranslate" translate="no">`), w którym zewnętrzny link do TX2 Unofficial posiada obowiązkowo atrybut `rel="sponsored nofollow"`:
@@ -65,23 +66,34 @@ el="sponsored nofollow".
 ### Krok 3: Dodanie reguł Pure CSS dla nowego wydania
 W pliku `MAGAZINE/css/style.css`:
 - Sprawdź, czy numer wydania ma już zdefiniowane reguły selektora radio buttonów.
-- Jeśli to nowe wydanie, dopisz reguły dla nagłówka i feedu:
+- Jeśli to nowe wydanie, dopisz na samym końcu zestawu wydań (bez powielania starych bloków):
   ```css
-  #issue-select-<nr>:checked ~ .magazine-content .issue-header-<nr>,
-  #issue-select-<nr>:checked ~ * .issue-feed-<nr> {
+  #issue-select-<nr>:checked ~ * .issue-header-<nr>,
+  #issue-select-<nr>:checked ~ * .feed-issue-<nr> {
       display: block;
   }
+  #issue-select-<nr>:checked ~ * .issue-label-<nr> {
+      color: var(--color-primary-pink) !important;
+      font-weight: bold;
+      text-shadow: 0 0 4px var(--color-primary-pink);
+  }
   ```
+- Bezwzględnie zachowaj nienaruszony bazowy graceful fallback (`:first-of-type` i `:has()`), który gwarantuje poprawne wyświetlanie najświeższego numeru nawet przy opóźnionej aktualizacji pamięci podręcznej przeglądarki.
 
 ### Krok 4: Aktualizacja katalogu i archiwów magazynu
 1. **`MAGAZINE/pl/index.html` oraz `MAGAZINE/en/index.html`**:
    - Ustaw radio button nowego numeru jako domyślnie zaznaczony (`checked`).
-   - W sekcji nagłówków dodaj blok `<div class="issue-header issue-header-<nr>">` z metadanymi i tytułem numeru.
-   - W sekcji feedu dodaj `<div class="issue-feed issue-feed-<nr>">` z kartą nowego artykułu.
+   - W sekcji nagłówków dodaj blok `<h2 class="issue-title-header issue-header-<nr>">` z metadanymi i tytułem numeru.
+   - W sekcji feedu dodaj `<div class="feed-issue-container feed-issue-<nr>">` z kartą nowego artykułu.
+   - **Konfiguracja ramki wydań**:
+     - W ramce "Aktualny numer" (`Current Issue`): umieść wyłącznie numer najnowszy.
+     - W ramce "Ostatnie i kluczowe wydania" (`Recent & Key Issues`): pozostaw wyłącznie wydanie pierwsze (`1/2026`) oraz dokładnie trzy wydania bezpośrednio poprzedzające nowy numer (np. dla wydania 22 są to 21, 20, 19). Starsze wydania usuń z tego widoku.
+   - Zsynchronizuj linki CSS z parametrem `?v={data-build}` w `<head>`.
 2. **`MAGAZINE/pl/archive.html` oraz `MAGAZINE/en/archive.html`**:
    - Dodaj wpis nowego numeru na samej górze listy archiwalnej (`<li class="archive-item">`).
+   - Zsynchronizuj linki CSS z parametrem `?v={data-build}`.
 3. **`MAGAZINE/index.html`**:
-   - Zaktualizuj opis i numer bieżącego wydania, podbij wersję e-zinu (np. z `1.10.19` do `1.10.20`).
+   - Zaktualizuj opis i numer bieżącego wydania, podbij wersję e-zinu (np. `1.10.24`) oraz zsynchronizuj linki CSS `?v={data-build}`.
 4. **Metadane serwisu**:
    - `MAGAZINE/sitemap.xml`: dodaj wpisy `<url>` dla wersji PL i EN.
    - `MAGAZINE/llms.txt`: podbij `system_version` oraz `revision_date`.

@@ -451,6 +451,7 @@ Moduł `/MAGAZINE` (serwis magazynu i e-zinu projektu *The Reverse Emo Changelin
 ### 2. Standard semantyki HTML5 i metadanych
 - Czysty semantyczny HTML5 z pełnym oznakowaniem dostępności i metadanych.
 - Nagłówki linkujące zasoby (`rel="canonical"`, `rel="alternate" hreflang="pl"` i `hreflang="en"`).
+- **Deterministyczny Cache-Busting CSS**: W nagłówku `<head>` każdego dokumentu HTML odwołania do arkuszy stylów (`style.css`, `base-ui.css`, `typography.css`) zarówno w `<link rel="preload">`, jak i `<link rel="stylesheet">`, muszą obligatoryjnie posiadać parametr query string `?v={data-build}` zgodny z atrybutem `data-build` w tagu `<html>` (np. `href="../../css/style.css?v=20260924"`). URL w `rel="preload"` i `rel="stylesheet"` musi być co do znaku identyczny.
 - Pełny blok Open Graph (`og:title`, `og:description`, `og:image`, `og:url`, `og:type="article"`, `article:published_time`, `article:modified_time`, `article:section`, `article:author`, `article:publisher`).
 - Karta Twitter (`twitter:card="summary_large_image"`).
 - Znaczniki Schema.org w formacie JSON-LD (`@type: Article`, `isPartOf: PublicationIssue`, `author: Person`, `publisher: Organization`, a w przypadku obecności wideo - powiązany `video: VideoObject`).
@@ -460,13 +461,25 @@ Moduł `/MAGAZINE` (serwis magazynu i e-zinu projektu *The Reverse Emo Changelin
 
 ### 3. Nawigacja Pure CSS i rejestracja wydania
 - Zgodnie z filozofią braku zbędnego JavaScriptu, przełączanie wydań i zakładek w katalogu magazynu (`pl/index.html`, `en/index.html`) jest realizowane w Pure CSS w oparciu o radio buttony (np. `#issue-select-<nr>`).
-- Wprowadzenie nowego numeru wymaga dodania odpowiednich selektorów w `MAGAZINE/css/style.css`:
-  `#issue-select-<nr>:checked ~ * .issue-header-<nr>`,
-  `#issue-select-<nr>:checked ~ * .issue-feed-<nr>`.
+- W arkuszu `MAGAZINE/css/style.css`:
+  - Nienaruszalny pozostaje bazowy **Graceful Fallback** Pure CSS (`.issue-title-header:first-of-type, .feed-issue-container:first-of-type { display: block; }` oraz reguła ukrywająca `body:has(.issue-radio-input:not(:first-of-type):checked)`), który chroni stronę przed wyświetleniem pustej przestrzeni przy desynchronizacji pamięci podręcznej przeglądarki.
+  - Wprowadzenie nowego numeru wymaga dopisania wyłącznie pojedynczego zestawu reguł na końcu listy wydań (bez duplikowania wcześniejszych numerów):
+    ```css
+    #issue-select-<nr>:checked ~ * .issue-header-<nr>,
+    #issue-select-<nr>:checked ~ * .feed-issue-<nr> {
+        display: block;
+    }
+    #issue-select-<nr>:checked ~ * .issue-label-<nr> {
+        color: var(--color-primary-pink) !important;
+        font-weight: bold;
+        text-shadow: 0 0 4px var(--color-primary-pink);
+    }
+    ```
 - W katalogach głównych (`pl/index.html`, `en/index.html`):
   - Ustawienie nowego wydania jako domyślnie zaznaczonego (`checked`),
   - Dodanie karty wydania do sekcji nagłówków i spisu artykułów,
-  - Aktualizacja listy radio buttonów.
+  - Aktualizacja listy radio buttonów,
+  - **Ramka wydań**: W ramce "Aktualny numer" (`Current Issue`) znajduje się wyłącznie bieżący numer, natomiast w ramce "Ostatnie i kluczowe wydania" (`Recent & Key Issues`) pozostawia się wyłącznie: wydanie pierwsze (`1/2026`) oraz dokładnie trzy wydania bezpośrednio poprzedzające aktualny numer (np. dla numeru 22 są to 21, 20, 19). Starsze wydania są usuwane z tego widoku i pozostają dostępne w archiwum.
 - W archiwach (`pl/archive.html`, `en/archive.html`): dodanie wpisu wydania na szczycie listy chronologicznej.
 - Na stronie wejściowej magazynu (`MAGAZINE/index.html`): podbicie wersji magazynu i aktualizacja opisu bieżącego wydania.
 - Aktualizacja metadanych projektu: `MAGAZINE/sitemap.xml` (dodanie wpisów PL i EN) oraz `MAGAZINE/llms.txt` (podbicie `system_version` i daty).
