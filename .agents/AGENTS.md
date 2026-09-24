@@ -334,6 +334,17 @@ Znaczniki językowe powinny być zgodne z ISO 639-1.
 
 ---
 
+## Typografia i warstwa tekstowa artykułów
+
+W tekście artykułów oraz wszelkich treściach widocznych dla odbiorcy:
+
+- nie korzystaj z długiej pauzy ani półpauzy,
+- zamiast niej używaj zawsze wyłącznie znaku minus "-".
+
+Obostrzenie to dotyczy wyłącznie warstwy tekstowej prezentowanej odbiorcy (artykuły, opisy, nagłówki, podpisy), a nie kodu wykonywalnego, parametrów technicznych czy logiki skryptów.
+
+---
+
 ## Warstwa wizualna
 
 Projekt wykorzystuje estetykę Modern MySpace.
@@ -422,6 +433,8 @@ Każdą decyzję architektoniczną podejmuj z perspektywy wieloletniego utrzyman
 
 Wszystkie pliki tekstowe zapisuj jako UTF-8 bez BOM z zakończeniami linii LF.
 
+W warstwie tekstowej artykułów widocznej dla odbiorcy nie korzystaj z długiej pauzy ani półpauzy - zamiast niej używaj zawsze wyłącznie znaku minus "-".
+
 Nazwy plików, katalogów, klas CSS, identyfikatorów HTML oraz zmiennych powinny być jednoznaczne, opisowe i zgodne z konwencją kebab-case lub snake_case odpowiednią dla danego języka.
 
 ---
@@ -440,7 +453,8 @@ Moduł `/MAGAZINE` (serwis magazynu i e-zinu projektu *The Reverse Emo Changelin
 - Nagłówki linkujące zasoby (`rel="canonical"`, `rel="alternate" hreflang="pl"` i `hreflang="en"`).
 - Pełny blok Open Graph (`og:title`, `og:description`, `og:image`, `og:url`, `og:type="article"`, `article:published_time`, `article:modified_time`, `article:section`, `article:author`, `article:publisher`).
 - Karta Twitter (`twitter:card="summary_large_image"`).
-- Znaczniki Schema.org w formacie JSON-LD (`@type: Article`, `isPartOf: PublicationIssue`, `author: Person`, `publisher: Organization`, a w przypadku obecności wideo – powiązany `video: VideoObject`).
+- Znaczniki Schema.org w formacie JSON-LD (`@type: Article`, `isPartOf: PublicationIssue`, `author: Person`, `publisher: Organization`, a w przypadku obecności wideo - powiązany `video: VideoObject`).
+- W treści artykułów prezentowanej czytelnikowi nie korzystaj z długiej pauzy ani półpauzy - zamiast nich stosuj zawsze wyłącznie znak minus "-".
 - Blok stopki redakcyjnej w elemencie `<details class="editorial-details notranslate" translate="no">` z danymi wydawcy.
 - W pływającym menu nawigacyjnym (`details.floating-nav`), link do projektu zewnętrznego TX2 Unofficial obligatoryjnie posiada atrybut `rel="sponsored nofollow"`: `<a href="https://tx2.emo-changeling.xyz/" class="floating-nav-link" rel="sponsored nofollow">TX2 Unofficial</a>`.
 

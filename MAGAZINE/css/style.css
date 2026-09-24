@@ -2790,6 +2790,15 @@ article h3,
     font-weight: bold;
     text-shadow: 0 0 4px var(--color-primary-pink);
 }
+#issue-select-22:checked ~ * .issue-header-22,
+#issue-select-22:checked ~ * .feed-issue-22 {
+    display: block;
+}
+#issue-select-22:checked ~ * .issue-label-22 {
+    color: var(--color-primary-pink) !important;
+    font-weight: bold;
+    text-shadow: 0 0 4px var(--color-primary-pink);
+}
 
 
 .issue-catalog-label {
