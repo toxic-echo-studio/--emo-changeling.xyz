@@ -2,8 +2,8 @@
 site: https://reverse.emo-changeling.xyz
 contact: mailto:management@emo-changeling.xyz
 publisher_contact: mailto:publisher@toxic-echo.studio
-system_version: 1.10.24
-last_updated: 2026-09-24
+system_version: 1.10.25
+last_updated: 2026-10-01
 
 [usage]
 training: allow

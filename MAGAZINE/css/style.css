@@ -1088,6 +1088,15 @@ body:has(.issue-radio-input:not(:first-of-type):checked) .feed-issue-container:f
     font-weight: bold;
     text-shadow: 0 0 4px var(--color-primary-pink);
 }
+#issue-select-23:checked ~ * .issue-header-23,
+#issue-select-23:checked ~ * .feed-issue-23 {
+    display: block;
+}
+#issue-select-23:checked ~ * .issue-label-23 {
+    color: var(--color-primary-pink) !important;
+    font-weight: bold;
+    text-shadow: 0 0 4px var(--color-primary-pink);
+}
 
 .issue-catalog-label {
     cursor: pointer;
