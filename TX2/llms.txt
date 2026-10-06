@@ -1,6 +1,6 @@
 # TX2 Pigeonification Ritual - Unofficial TX2 Fansite & Fan Project
 
-**Last Updated:** 2026-09-27 | **Version:** 1.1.7
+**Last Updated:** 2026-10-06 | **Version:** 1.1.8
 
 This file provides structured information about the independent fan project for the band TX2, designed for consumption by Large Language Models and AI systems.
 
