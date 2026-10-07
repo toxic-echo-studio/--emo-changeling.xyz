@@ -1,16 +1,18 @@
 {
-  "version": "1.0",
-  "catalog": {
-    "site": "https://wiki.emo-changeling.xyz",
-    "resources": [
-      {
-        "type": "text/markdown",
-        "url": "/llms.txt"
-      },
-      {
-        "type": "application/json",
-        "url": "/ai.json"
-      }
-    ]
-  }
+  "specVersion": "1.0",
+  "host": "https://wiki.emo-changeling.xyz",
+  "entries": [
+    {
+      "identifier": "urn:ai:resource:llms",
+      "name": "LLMs Context",
+      "type": "text/markdown",
+      "url": "/llms.txt"
+    },
+    {
+      "identifier": "urn:ai:resource:policy",
+      "name": "AI Policy",
+      "type": "application/json",
+      "url": "/ai.json"
+    }
+  ]
 }
