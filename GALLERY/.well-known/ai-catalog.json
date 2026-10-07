@@ -8,7 +8,7 @@
       "identifier": "urn:air:toxic-echo:knowledge:llms-context",
       "displayName": "LLMs Context & Knowledge Base",
       "type": "text/markdown; profile=\"urn:air:agent-skills\"",
-      "url": "/llms.txt",
+      "url": "https://gallery.emo-changeling.xyz/llms.txt",
       "representativeQueries": [
         "what is emo changeling project",
         "toxic echo studio information"
@@ -18,7 +18,7 @@
       "identifier": "urn:air:toxic-echo:policy:ai-manifest",
       "displayName": "AI Usage Policy and Permissions",
       "type": "application/agent-card+json",
-      "url": "/ai.json",
+      "url": "https://gallery.emo-changeling.xyz/ai.json",
       "representativeQueries": [
         "content licensing and ai permissions",
         "creative commons cc by-nd"
