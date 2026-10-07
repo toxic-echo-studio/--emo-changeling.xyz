@@ -1,18 +1,29 @@
 {
   "specVersion": "1.0",
-  "host": "https://wiki.emo-changeling.xyz",
+  "host": {
+    "name": "The Reverse Emo Changeling",
+    "url": "https://wiki.emo-changeling.xyz"
+  },
   "entries": [
     {
-      "identifier": "urn:ai:resource:llms",
-      "name": "LLMs Context",
-      "type": "text/markdown",
-      "url": "/llms.txt"
+      "identifier": "urn:air:toxic-echo:knowledge:llms-context",
+      "displayName": "LLMs Context & Knowledge Base",
+      "type": "text/markdown; profile=\"urn:air:agent-skills\"",
+      "url": "/llms.txt",
+      "representativeQueries": [
+        "what is emo changeling project",
+        "toxic echo studio information"
+      ]
     },
     {
-      "identifier": "urn:ai:resource:policy",
-      "name": "AI Policy",
-      "type": "application/json",
-      "url": "/ai.json"
+      "identifier": "urn:air:toxic-echo:policy:ai-manifest",
+      "displayName": "AI Usage Policy and Permissions",
+      "type": "application/agent-card+json",
+      "url": "/ai.json",
+      "representativeQueries": [
+        "content licensing and ai permissions",
+        "creative commons cc by-nd"
+      ]
     }
   ]
 }
