@@ -1,7 +1,7 @@
 {
   "specVersion": "1.0",
   "host": {
-    "name": "The Reverse Emo Changeling",
+    "displayName": "The Reverse Emo Changeling",
     "url": "https://unofficial.emo-changeling.xyz"
   },
   "entries": [
