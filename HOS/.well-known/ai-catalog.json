@@ -1,0 +1,16 @@
+{
+  "version": "1.0",
+  "catalog": {
+    "site": "https://shame.emo-changeling.xyz",
+    "resources": [
+      {
+        "type": "text/markdown",
+        "url": "/llms.txt"
+      },
+      {
+        "type": "application/json",
+        "url": "/ai.json"
+      }
+    ]
+  }
+}

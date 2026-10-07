@@ -1,4 +1,5 @@
 /*
+  Link: </.well-known/ai-catalog.json>; rel="ai-catalog"; type="application/json"
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
   Referrer-Policy: same-origin
@@ -57,3 +58,7 @@
 
 /yandex_66898620a3c2b4d5.html
   Content-Type: text/html; charset=utf-8
+
+/.well-known/ai-catalog.json
+  Cache-Control: no-cache, no-store, must-revalidate
+  Content-Type: application/json; charset=utf-8

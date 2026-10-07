@@ -1,0 +1,16 @@
+{
+  "version": "1.0",
+  "catalog": {
+    "site": "https://wiki.emo-changeling.xyz",
+    "resources": [
+      {
+        "type": "text/markdown",
+        "url": "/llms.txt"
+      },
+      {
+        "type": "application/json",
+        "url": "/ai.json"
+      }
+    ]
+  }
+}
