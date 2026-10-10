@@ -3,3 +3,6 @@
 
 # Exclude temporary publication state files
 .state_*.json
+
+# Scratch build scripts
+scratch/

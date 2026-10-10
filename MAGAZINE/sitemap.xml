@@ -23,7 +23,7 @@
 <!-- Neutral Root Selector (x-default) -->
 <url>
 <loc>https://reverse.emo-changeling.xyz/</loc>
-<lastmod>2026-10-04</lastmod>
+<lastmod>2026-10-10</lastmod>
 <xhtml:link href="https://reverse.emo-changeling.xyz/" hreflang="x-default" rel="alternate"/>
 <xhtml:link href="https://reverse.emo-changeling.xyz/pl/" hreflang="pl" rel="alternate"/>
 <xhtml:link href="https://reverse.emo-changeling.xyz/en/" hreflang="en" rel="alternate"/>
@@ -31,14 +31,14 @@
 <!-- Polish Edition Home -->
 <url>
 <loc>https://reverse.emo-changeling.xyz/pl/</loc>
-<lastmod>2026-10-04</lastmod>
+<lastmod>2026-10-10</lastmod>
 <xhtml:link href="https://reverse.emo-changeling.xyz/pl/" hreflang="pl" rel="alternate"/>
 <xhtml:link href="https://reverse.emo-changeling.xyz/en/" hreflang="en" rel="alternate"/>
 <xhtml:link href="https://reverse.emo-changeling.xyz/pl/" hreflang="x-default" rel="alternate"/></url>
 <!-- English Edition Home -->
 <url>
 <loc>https://reverse.emo-changeling.xyz/en/</loc>
-<lastmod>2026-10-04</lastmod>
+<lastmod>2026-10-10</lastmod>
 <xhtml:link href="https://reverse.emo-changeling.xyz/pl/" hreflang="pl" rel="alternate"/>
 <xhtml:link href="https://reverse.emo-changeling.xyz/en/" hreflang="en" rel="alternate"/>
 <xhtml:link href="https://reverse.emo-changeling.xyz/pl/" hreflang="x-default" rel="alternate"/></url>
