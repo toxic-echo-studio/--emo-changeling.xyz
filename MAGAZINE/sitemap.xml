@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/pl/24-2026/jestesmy-prasa-jak-emo-kid.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/en/24-2026/we-are-the-press-how-an-emo-kid.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/pl/24-2026/nikt-nie-rysuje-tx2-jako-golebi.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/en/24-2026/nobody-draws-tx2-as-pigeons.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>yearly</changefreq>
+  </url>
 <!-- Neutral Root Selector (x-default) -->
 <url>
 <loc>https://reverse.emo-changeling.xyz/</loc>
@@ -25,13 +45,13 @@
 <!-- Subpages (PL & EN) -->
 <url>
 <loc>https://reverse.emo-changeling.xyz/pl/archive.html</loc>
-<lastmod>2026-10-04</lastmod>
+<lastmod>2026-10-10</lastmod>
 <xhtml:link href="https://reverse.emo-changeling.xyz/pl/archive.html" hreflang="pl" rel="alternate"/>
 <xhtml:link href="https://reverse.emo-changeling.xyz/en/archive.html" hreflang="en" rel="alternate"/>
 <xhtml:link href="https://reverse.emo-changeling.xyz/pl/archive.html" hreflang="x-default" rel="alternate"/></url>
 <url>
 <loc>https://reverse.emo-changeling.xyz/en/archive.html</loc>
-<lastmod>2026-10-04</lastmod>
+<lastmod>2026-10-10</lastmod>
 <xhtml:link href="https://reverse.emo-changeling.xyz/pl/archive.html" hreflang="pl" rel="alternate"/>
 <xhtml:link href="https://reverse.emo-changeling.xyz/en/archive.html" hreflang="en" rel="alternate"/>
 <xhtml:link href="https://reverse.emo-changeling.xyz/pl/archive.html" hreflang="x-default" rel="alternate"/></url>
