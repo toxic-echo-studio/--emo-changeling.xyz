@@ -243,6 +243,26 @@
           }
         }
       },
+      "github.emo-changeling.xyz": {
+        "description": "Techniczny one-pager, manifest architektoniczny i hub specyfikacji maszynowych projektu hostowany na GitHub Pages.",
+        "role": "Architecture Hub / Technical Specification / Repository Nexus",
+        "paths": {
+          "/": {
+            "title": "Technical Architecture & System Manifest",
+            "description": "Technical overview, hub-and-spoke topology, zero-bloat standards, and GitHub Pages repository.",
+            "languages": [
+              "en"
+            ]
+          },
+          "/pl.html": {
+            "title": "Specyfikacja i architektura techniczna",
+            "description": "Manifest techniczny, topologia gwiazdy, zasady zero-bloat i repozytorium GitHub Pages.",
+            "languages": [
+              "pl"
+            ]
+          }
+        }
+      },
       "shame.emo-changeling.xyz": {
         "description": "Oficjalny rejestr osób naruszających nasze prawa autorskie lub własność intelektualną.",
         "paths": {

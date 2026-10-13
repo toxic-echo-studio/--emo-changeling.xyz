@@ -23,6 +23,17 @@
         "content licensing and ai permissions",
         "creative commons cc by-nd"
       ]
+    },
+    {
+      "identifier": "urn:air:toxic-echo:architecture:technical-specification",
+      "displayName": "Architecture Hub & Technical Specification",
+      "type": "text/html",
+      "url": "https://github.emo-changeling.xyz/",
+      "representativeQueries": [
+        "the reverse emo changeling architecture",
+        "technical specification and zero-bloat standards",
+        "repository nexus and star topology"
+      ]
     }
   ]
 }

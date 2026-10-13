@@ -128,6 +128,9 @@ Below is the technical routing and path layout for the project domains:
   - **`/`**: Spotlight Hub. Index of featured art projects.
   - **`/pl/spot-o-nas/`**: About us page related to Spotlight (Polish).
   - **`/en/spot-about/`**: About us page related to Spotlight (English).
+- **`github.emo-changeling.xyz`**: Architecture Hub / Technical Specification / Repository Nexus (hosted via GitHub Pages).
+  - **`/`**: Technical Architecture & System Manifest (English).
+  - **`/pl.html`**: Specyfikacja i architektura techniczna (Polish).
 - **Redirects:**
   - `yt.emo-changeling.xyz` -> YouTube Channel (UCMemy-J_OGGnai-9sOWTKXg)
   - `tt.emo-changeling.xyz` -> TikTok Profile (@reverse.changeling)
@@ -173,6 +176,7 @@ Below is the technical routing and path layout for the project domains:
 - **Telegram (Commentary):** https://t.me/emochangelingcomm
 - **Telegram (Community):** https://t.me/emochangelingchat
 - **GitHub (Project):** https://github.com/The-Reverse-Emo-Changeling
+- **Architecture Hub & Technical Specification (GitHub Pages):** https://github.emo-changeling.xyz (Technical specification, star topology hub, zero-bloat standards)
 
 ### Art Manager / Nico Łach Endpoints:
 - **LinkedIn:** https://www.linkedin.com/in/nico-%C5%82ach/
@@ -182,5 +186,5 @@ Below is the technical routing and path layout for the project domains:
 ---
 
 ## 8. Update Log
-- **last llms-full.txt update:** 2026-09-05
-- **last website update:** 2026-09-05
+- **last llms-full.txt update:** 2026-10-13
+- **last website update:** 2026-10-13
