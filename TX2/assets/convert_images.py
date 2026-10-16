@@ -1,12 +1,15 @@
 import os
+from pathlib import Path
 from PIL import Image
 
+root_dir = Path(__file__).resolve().parents[2]
+
 # Source directories
-src_main_dir = r"C:\Users\mighn\source\repos\toxic-echo-studio\TX2 Pigeon Project -\Grafiki głowne"
-src_fanart_dir = r"C:\Users\mighn\source\repos\toxic-echo-studio\TX2 Pigeon Project -\fanarty"
+src_main_dir = root_dir / "TX2 Pigeon Project -" / "Grafiki głowne"
+src_fanart_dir = root_dir / "TX2 Pigeon Project -" / "fanarty"
 
 # Destination directory
-dest_dir = r"c:\Users\mighn\source\repos\toxic-echo-studio\--emo-changeling.xyz\TX2\img"
+dest_dir = Path(__file__).resolve().parent.parent / "img"
 os.makedirs(dest_dir, exist_ok=True)
 
 print("Starting image conversion to WebP...")

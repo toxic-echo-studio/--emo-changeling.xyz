@@ -11,7 +11,7 @@ description: >-
 
 Moduł e-zinu / magazynu funkcjonuje w ramach zdecentralizowanego ekosystemu *The Reverse Emo Changeling* pod domeną `https://reverse.emo-changeling.xyz` i jest wdrażany statycznie na Cloudflare Pages.
 
-Repozytorium modułu: `c:\Users\mighn\source\repos\toxic-echo-studio\--emo-changeling.xyz\MAGAZINE`
+Repozytorium modułu: `./MAGAZINE`
 
 ---
 

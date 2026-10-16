@@ -3,11 +3,12 @@ import re
 import json
 import shutil
 import subprocess
+from pathlib import Path
 from PIL import Image
 
 # Setup Paths
-WORKSPACE_DIR = r"c:\Users\mighn\source\repos\toxic-echo-studio\--emo-changeling.xyz"
-INPUT_DIR = r"c:\Users\mighn\source\repos\toxic-echo-studio\temp_gallery\GALLERY"
+WORKSPACE_DIR = str(Path(__file__).resolve().parent)
+INPUT_DIR = str(Path(__file__).resolve().parent.parent / "temp_gallery" / "GALLERY")
 OUTPUT_DIR = os.path.join(WORKSPACE_DIR, "GALLERY")
 GRAPHICS_DIR = os.path.join(OUTPUT_DIR, "graphics")
 
