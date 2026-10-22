@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-
-
-
+<url>
+<loc>https://unofficial.emo-changeling.xyz/</loc>
+<lastmod>2026-10-22</lastmod>
+<xhtml:link href="https://unofficial.emo-changeling.xyz/" hreflang="x-default" rel="alternate"/>
+<xhtml:link href="https://unofficial.emo-changeling.xyz/" hreflang="pl" rel="alternate"/>
+<xhtml:link href="https://unofficial.emo-changeling.xyz/en/" hreflang="en" rel="alternate"/>
+</url>
+<url>
+<loc>https://unofficial.emo-changeling.xyz/en/</loc>
+<lastmod>2026-10-22</lastmod>
+<xhtml:link href="https://unofficial.emo-changeling.xyz/" hreflang="x-default" rel="alternate"/>
+<xhtml:link href="https://unofficial.emo-changeling.xyz/" hreflang="pl" rel="alternate"/>
+<xhtml:link href="https://unofficial.emo-changeling.xyz/en/" hreflang="en" rel="alternate"/>
+</url>
+<url>
+<loc>https://unofficial.emo-changeling.xyz/pl/unofficial-o-nas/</loc>
+<lastmod>2026-10-22</lastmod>
+<xhtml:link href="https://unofficial.emo-changeling.xyz/pl/unofficial-o-nas/" hreflang="x-default" rel="alternate"/>
+<xhtml:link href="https://unofficial.emo-changeling.xyz/pl/unofficial-o-nas/" hreflang="pl" rel="alternate"/>
+<xhtml:link href="https://unofficial.emo-changeling.xyz/en/unofficial-about/" hreflang="en" rel="alternate"/>
+</url>
+<url>
+<loc>https://unofficial.emo-changeling.xyz/en/unofficial-about/</loc>
+<lastmod>2026-10-22</lastmod>
+<xhtml:link href="https://unofficial.emo-changeling.xyz/pl/unofficial-o-nas/" hreflang="x-default" rel="alternate"/>
+<xhtml:link href="https://unofficial.emo-changeling.xyz/pl/unofficial-o-nas/" hreflang="pl" rel="alternate"/>
+<xhtml:link href="https://unofficial.emo-changeling.xyz/en/unofficial-about/" hreflang="en" rel="alternate"/>
+</url>
 </urlset>

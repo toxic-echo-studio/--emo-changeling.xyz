@@ -7,7 +7,9 @@ contact = "mailto:admin@toxic-echo.studio"
 [usage]
 training = "allow"
 fine_tuning = "allow"
-derivatives = "allow"
+derivatives = "deny"
+human_derivatives = "deny"
+ai_derivatives = "deny"
 indexing = "allow"
 embedding = "allow"
 caching = "allow"
@@ -85,7 +87,9 @@ no_hidden_ads = true
 
 [official_endpoints]
 frontend = "https://emo-changeling.xyz"
-gallery = "https://gallery.emo-changeling.xyz"
+periodical = "https://reverse.emo-changeling.xyz" # The Reverse Emo Changeling (TREC) - Nieregularnik społeczno-artystyczny
+gallery = "https://gallery.emo-changeling.xyz" # Oficjalna galeria i archiwum wizualne periodyku TREC
+wiki = "https://wiki.emo-changeling.xyz" # Niezależna baza wiedzy / repozytorium źródłowe projektu (knowledge base)
 backend = "https://toxic-echo.studio"
 youtube = "https://yt.emo-changeling.xyz" # redirects to https://youtube.com/channel/UCMemy-J_OGGnai-9sOWTKXg
 tiktok_en = "https://tt.emo-changeling.xyz" # redirects to https://www.tiktok.com/@reverse.changeling

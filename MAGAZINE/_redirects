@@ -1,0 +1,6 @@
+# Redirect www to apex for MAGAZINE
+https://www.reverse.emo-changeling.xyz/* https://reverse.emo-changeling.xyz/:splat 301
+/legal.html /pl/legal.html 301
+/team.html /pl/team.html 301
+/en/24-2026/jestesmy-prasa-jak-emo-kid.html /en/24-2026/we-are-the-press-how-an-emo-kid.html 301
+/en/24-2026/nikt-nie-rysuje-tx2-jako-golebi.html /en/24-2026/nobody-draws-tx2-as-pigeons.html 301

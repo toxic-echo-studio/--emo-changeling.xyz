@@ -2,39 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 <url>
 <loc>https://wiki.emo-changeling.xyz/</loc>
-<lastmod>2026-09-05</lastmod>
-
-
+<lastmod>2026-10-22</lastmod>
+<xhtml:link href="https://wiki.emo-changeling.xyz/" hreflang="x-default" rel="alternate"/>
+<xhtml:link href="https://wiki.emo-changeling.xyz/" hreflang="pl" rel="alternate"/>
+<xhtml:link href="https://wiki.emo-changeling.xyz/en/" hreflang="en" rel="alternate"/>
+</url>
+<url>
+<loc>https://wiki.emo-changeling.xyz/en/</loc>
+<lastmod>2026-10-22</lastmod>
 <xhtml:link href="https://wiki.emo-changeling.xyz/" hreflang="x-default" rel="alternate"/>
 <xhtml:link href="https://wiki.emo-changeling.xyz/" hreflang="pl" rel="alternate"/>
 <xhtml:link href="https://wiki.emo-changeling.xyz/en/" hreflang="en" rel="alternate"/>
 </url>
 <url>
 <loc>https://wiki.emo-changeling.xyz/pl/wiki-o-nas/</loc>
-<lastmod>2026-09-05</lastmod>
-
-
+<lastmod>2026-10-22</lastmod>
+<xhtml:link href="https://wiki.emo-changeling.xyz/pl/wiki-o-nas/" hreflang="x-default" rel="alternate"/>
 <xhtml:link href="https://wiki.emo-changeling.xyz/pl/wiki-o-nas/" hreflang="pl" rel="alternate"/>
 <xhtml:link href="https://wiki.emo-changeling.xyz/en/wiki-about/" hreflang="en" rel="alternate"/>
-<xhtml:link href="https://wiki.emo-changeling.xyz/pl/wiki-o-nas/" hreflang="x-default" rel="alternate"/></url>
+</url>
 <url>
 <loc>https://wiki.emo-changeling.xyz/en/wiki-about/</loc>
-<lastmod>2026-09-05</lastmod>
-
-
+<lastmod>2026-10-22</lastmod>
+<xhtml:link href="https://wiki.emo-changeling.xyz/pl/wiki-o-nas/" hreflang="x-default" rel="alternate"/>
 <xhtml:link href="https://wiki.emo-changeling.xyz/pl/wiki-o-nas/" hreflang="pl" rel="alternate"/>
 <xhtml:link href="https://wiki.emo-changeling.xyz/en/wiki-about/" hreflang="en" rel="alternate"/>
-<xhtml:link href="https://wiki.emo-changeling.xyz/pl/wiki-o-nas/" hreflang="x-default" rel="alternate"/></url>
+</url>
 <url>
 <loc>https://wiki.emo-changeling.xyz/artykuly/historia-emo-scene-w-5-minut/</loc>
-<lastmod>2026-09-05</lastmod>
-
-
+<lastmod>2026-10-22</lastmod>
+<xhtml:link href="https://wiki.emo-changeling.xyz/artykuly/historia-emo-scene-w-5-minut/" hreflang="x-default" rel="alternate"/>
+<xhtml:link href="https://wiki.emo-changeling.xyz/artykuly/historia-emo-scene-w-5-minut/" hreflang="pl" rel="alternate"/>
+<xhtml:link href="https://wiki.emo-changeling.xyz/en/artykuly/historia-emo-scene-w-5-minut/" hreflang="en" rel="alternate"/>
+</url>
+<url>
+<loc>https://wiki.emo-changeling.xyz/en/artykuly/historia-emo-scene-w-5-minut/</loc>
+<lastmod>2026-10-22</lastmod>
+<xhtml:link href="https://wiki.emo-changeling.xyz/artykuly/historia-emo-scene-w-5-minut/" hreflang="x-default" rel="alternate"/>
+<xhtml:link href="https://wiki.emo-changeling.xyz/artykuly/historia-emo-scene-w-5-minut/" hreflang="pl" rel="alternate"/>
+<xhtml:link href="https://wiki.emo-changeling.xyz/en/artykuly/historia-emo-scene-w-5-minut/" hreflang="en" rel="alternate"/>
 </url>
 <url>
 <loc>https://wiki.emo-changeling.xyz/artykuly/polskie-proto-emo/</loc>
-<lastmod>2026-09-05</lastmod>
-
-
+<lastmod>2026-10-22</lastmod>
+<xhtml:link href="https://wiki.emo-changeling.xyz/artykuly/polskie-proto-emo/" hreflang="x-default" rel="alternate"/>
+<xhtml:link href="https://wiki.emo-changeling.xyz/artykuly/polskie-proto-emo/" hreflang="pl" rel="alternate"/>
+<xhtml:link href="https://wiki.emo-changeling.xyz/en/artykuly/polskie-proto-emo/" hreflang="en" rel="alternate"/>
 </url>
-<url><loc>https://wiki.emo-changeling.xyz/en/</loc><lastmod>2026-09-17</lastmod><xhtml:link href="https://wiki.emo-changeling.xyz/" hreflang="x-default" rel="alternate"/><xhtml:link href="https://wiki.emo-changeling.xyz/" hreflang="pl" rel="alternate"/><xhtml:link href="https://wiki.emo-changeling.xyz/en/" hreflang="en" rel="alternate"/></url></urlset>
+<url>
+<loc>https://wiki.emo-changeling.xyz/en/artykuly/polskie-proto-emo/</loc>
+<lastmod>2026-10-22</lastmod>
+<xhtml:link href="https://wiki.emo-changeling.xyz/artykuly/polskie-proto-emo/" hreflang="x-default" rel="alternate"/>
+<xhtml:link href="https://wiki.emo-changeling.xyz/artykuly/polskie-proto-emo/" hreflang="pl" rel="alternate"/>
+<xhtml:link href="https://wiki.emo-changeling.xyz/en/artykuly/polskie-proto-emo/" hreflang="en" rel="alternate"/>
+</url>
+</urlset>

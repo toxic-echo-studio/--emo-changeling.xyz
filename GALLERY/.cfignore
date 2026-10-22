@@ -1,0 +1,7 @@
+# Cloudflare Pages ignore rules
+processed_folders.json
+processed_folders.json.asc
+.env
+.env.*
+*.py
+*.sh

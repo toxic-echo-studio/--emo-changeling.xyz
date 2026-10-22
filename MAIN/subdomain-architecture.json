@@ -169,14 +169,21 @@
               "pl"
             ]
           },
-          "/pl/main-o-nas/": {
+          "/en/": {
+            "title": "Spotlight (EN)",
+            "description": "English index of featured artistic projects.",
+            "languages": [
+              "en"
+            ]
+          },
+          "/pl/spot-o-nas/": {
             "title": "O nas (Spotlight)",
             "description": "Informacje o twórcach powiązane ze Spotlight.",
             "languages": [
               "pl"
             ]
           },
-          "/en/main-about/": {
+          "/en/spot-about/": {
             "title": "About Us (Spotlight)",
             "description": "English version of the Spotlight creators information.",
             "languages": [
@@ -220,14 +227,21 @@
               "pl"
             ]
           },
-          "/pl/main-o-nas/": {
+          "/en/": {
+            "title": "Wiki (EN) | The Reverse Emo Changeling",
+            "description": "Knowledge base on Emo and Scene subcultures.",
+            "languages": [
+              "en"
+            ]
+          },
+          "/pl/wiki-o-nas/": {
             "title": "O nas (Wiki)",
             "description": "Informacje o twórcach projektu.",
             "languages": [
               "pl"
             ]
           },
-          "/en/main-about/": {
+          "/en/wiki-about/": {
             "title": "About Us (Wiki)",
             "description": "English version of the Wiki creators information.",
             "languages": [
@@ -239,6 +253,27 @@
             "description": "Ewolucja buntu od Sex Pistols po SpaceHey i współczesny MySpace Revival.",
             "languages": [
               "pl"
+            ]
+          },
+          "/en/artykuly/historia-emo-scene-w-5-minut/": {
+            "title": "History of Emo/Scene in 5 Minutes",
+            "description": "Evolution of rebellion from Sex Pistols to SpaceHey and modern MySpace Revival.",
+            "languages": [
+              "en"
+            ]
+          },
+          "/artykuly/polskie-proto-emo/": {
+            "title": "Polskie proto-emo",
+            "description": "Historia polskiego grania emocjonalnego i alternatywnego lat 90. i 2000.",
+            "languages": [
+              "pl"
+            ]
+          },
+          "/en/artykuly/polskie-proto-emo/": {
+            "title": "Polish Proto-Emo",
+            "description": "History of Polish emotional and alternative underground music of the 90s and 2000s.",
+            "languages": [
+              "en"
             ]
           }
         }

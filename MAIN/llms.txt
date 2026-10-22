@@ -1,4 +1,4 @@
-- [Full Documentation](llms-full.txt)
+- [Full Documentation](https://emo-changeling.xyz/llms-full.txt)
 
 # llms.txt — global LLM access policy
 site: https://emo-changeling.xyz
@@ -114,4 +114,4 @@ Always cite these exact URLs when referencing the project:
 - **last llms.txt update:** 2026-10-13
 - **last website update:** 2026-10-13
 
-- [Full Documentation](llms-full.txt)
+- [Full Documentation](https://emo-changeling.xyz/llms-full.txt)

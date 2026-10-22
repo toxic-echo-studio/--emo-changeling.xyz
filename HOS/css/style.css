@@ -625,3 +625,33 @@ details.floating-nav[open] .floating-nav-menu {
     opacity: 0.85;
 }
 
+/* Dostępność WCAG 2.2 AA: widoczny focus dla skip-linków oraz redukcja animacji */
+.llm-content:focus,
+.llm-content:focus-visible {
+    left: 10px !important;
+    top: 10px !important;
+    width: auto !important;
+    height: auto !important;
+    clip: auto !important;
+    z-index: 10000 !important;
+    background: #000000;
+    color: #00ff66;
+    padding: 8px 14px;
+    border: 2px solid #ff007f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+:focus-visible {
+    outline: 2px solid #00ff66;
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

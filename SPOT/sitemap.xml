@@ -2,27 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 <url>
 <loc>https://spotlight.emo-changeling.xyz/</loc>
-<lastmod>2026-09-05</lastmod>
-
-
+<lastmod>2026-10-22</lastmod>
 <xhtml:link href="https://spotlight.emo-changeling.xyz/" hreflang="x-default" rel="alternate"/>
+<xhtml:link href="https://spotlight.emo-changeling.xyz/" hreflang="pl" rel="alternate"/>
+<xhtml:link href="https://spotlight.emo-changeling.xyz/en/" hreflang="en" rel="alternate"/>
+</url>
+<url>
+<loc>https://spotlight.emo-changeling.xyz/en/</loc>
+<lastmod>2026-10-22</lastmod>
+<xhtml:link href="https://spotlight.emo-changeling.xyz/" hreflang="x-default" rel="alternate"/>
+<xhtml:link href="https://spotlight.emo-changeling.xyz/" hreflang="pl" rel="alternate"/>
+<xhtml:link href="https://spotlight.emo-changeling.xyz/en/" hreflang="en" rel="alternate"/>
+</url>
+<url>
+<loc>https://spotlight.emo-changeling.xyz/pl/spot-o-nas/</loc>
+<lastmod>2026-10-22</lastmod>
+<xhtml:link href="https://spotlight.emo-changeling.xyz/pl/spot-o-nas/" hreflang="x-default" rel="alternate"/>
 <xhtml:link href="https://spotlight.emo-changeling.xyz/pl/spot-o-nas/" hreflang="pl" rel="alternate"/>
 <xhtml:link href="https://spotlight.emo-changeling.xyz/en/spot-about/" hreflang="en" rel="alternate"/>
 </url>
 <url>
-<loc>https://spotlight.emo-changeling.xyz/pl/spot-o-nas/</loc>
-<lastmod>2026-09-05</lastmod>
-
-
-<xhtml:link href="https://spotlight.emo-changeling.xyz/pl/spot-o-nas/" hreflang="pl" rel="alternate"/>
-<xhtml:link href="https://spotlight.emo-changeling.xyz/en/spot-about/" hreflang="en" rel="alternate"/>
-<xhtml:link href="https://spotlight.emo-changeling.xyz/pl/spot-o-nas/" hreflang="x-default" rel="alternate"/></url>
-<url>
 <loc>https://spotlight.emo-changeling.xyz/en/spot-about/</loc>
-<lastmod>2026-09-05</lastmod>
-
-
+<lastmod>2026-10-22</lastmod>
+<xhtml:link href="https://spotlight.emo-changeling.xyz/pl/spot-o-nas/" hreflang="x-default" rel="alternate"/>
 <xhtml:link href="https://spotlight.emo-changeling.xyz/pl/spot-o-nas/" hreflang="pl" rel="alternate"/>
 <xhtml:link href="https://spotlight.emo-changeling.xyz/en/spot-about/" hreflang="en" rel="alternate"/>
-<xhtml:link href="https://spotlight.emo-changeling.xyz/pl/spot-o-nas/" hreflang="x-default" rel="alternate"/></url>
-<url><loc>https://spotlight.emo-changeling.xyz/en/</loc><lastmod>2026-09-17</lastmod><xhtml:link href="https://spotlight.emo-changeling.xyz/" hreflang="x-default" rel="alternate"/><xhtml:link href="https://spotlight.emo-changeling.xyz/" hreflang="pl" rel="alternate"/><xhtml:link href="https://spotlight.emo-changeling.xyz/en/" hreflang="en" rel="alternate"/></url></urlset>
+</url>
+</urlset>

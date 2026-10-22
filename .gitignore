@@ -16,3 +16,9 @@
 /.agents/
 /.vscode/
 .aider*
+.env
+**/.env
+.state_*.json
+**/.state_*.json
+scratch/
+**/scratch/
