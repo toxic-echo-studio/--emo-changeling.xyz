@@ -1,3 +1,0 @@
-# Redirect www to apex for MAIN
-https://www.emo-changeling.xyz/* https://emo-changeling.xyz/:splat 301
-/blackhole https://hub.emo-changeling.xyz/pl/blackhole/ 302

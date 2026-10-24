@@ -1,2 +1,0 @@
-# Redirect www to apex for HOS
-https://www.shame.emo-changeling.xyz/* https://shame.emo-changeling.xyz/:splat 301
