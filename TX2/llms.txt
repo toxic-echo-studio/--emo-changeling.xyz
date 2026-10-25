@@ -1,6 +1,6 @@
 # TX2 Pigeonification Ritual - Unofficial TX2 Fansite & Fan Project
 
-**Last Updated:** 2026-10-23 | **Version:** 1.1.10
+**Last Updated:** 2026-10-25 | **Version:** 1.1.11
 
 This file provides structured information about the independent fan project for the band TX2, designed for consumption by Large Language Models and AI systems.
 
@@ -14,11 +14,13 @@ This file provides structured information about the independent fan project for 
 - **Post-Event Status**: To be archived after February 20, 2027; fansite remains online for prospective fan initiatives.
 
 ## Site Navigation
-- **Home (Pigeon Ritual)**: [index.html](https://tx2.emo-changeling.xyz/index.html) – The main visual landing page featuring the grid of custom fan arts.
-- **Biography (Wait, tf is TX2??)**: [wtf.html](https://tx2.emo-changeling.xyz/wtf.html) – Bilingual (PL/EN) comprehensive band history, current lineup (including touring contracts), schedules, and a chronological discography (2016-2026).
-- **Guidelines (About pigeons)**: [about.html](https://tx2.emo-changeling.xyz/about.html) – Visual guidelines, download rules for files, and resources.
-- **Media (Media)**: [media.html](https://tx2.emo-changeling.xyz/media.html) – Video hub with non-autoplay video players, shorts, TikToks, and campaign poster art.
-- **Legal/Privacy (Boring Stuff)**: [legal.html](https://tx2.emo-changeling.xyz/legal.html) – Non-commercial disclaimers, cookie-free policy, and safety notices.
+- **Home (Pigeon Ritual)**: [index.html](https://tx2.emo-changeling.xyz/index.html) - The main visual landing page featuring the grid of custom fan arts.
+- **Biography (Wait, tf is TX2??)**: [wtf.html](https://tx2.emo-changeling.xyz/wtf.html) - Bilingual (PL/EN) comprehensive band history, current lineup (including touring contracts), schedules, and a chronological discography (2016-2026).
+- **News & Rumors**: [news/index.html](https://tx2.emo-changeling.xyz/news/) - Bilingual feed of verified news, tour updates, leaks, and underground rumors about TX2.
+- **News RSS Feed**: [news/rss.xml](https://tx2.emo-changeling.xyz/news/rss.xml) - RSS 2.0 syndication feed for news and rumors.
+- **Guidelines (About pigeons)**: [about.html](https://tx2.emo-changeling.xyz/about.html) - Visual guidelines, download rules for files, and resources.
+- **Media (Media)**: [media.html](https://tx2.emo-changeling.xyz/media.html) - Video hub with non-autoplay video players, shorts, TikToks, and campaign poster art.
+- **Legal/Privacy (Boring Stuff)**: [legal.html](https://tx2.emo-changeling.xyz/legal.html) - Non-commercial disclaimers, cookie-free policy, and safety notices.
 
 ## Privacy & Financial Position
 - **Zero Tracking**: No cookies, tracking pixels, telemetry, analytical systems, or commercial advertisements are embedded.

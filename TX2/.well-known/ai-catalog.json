@@ -15,6 +15,17 @@
       ]
     },
     {
+      "identifier": "urn:air:tx2:feed:news-rss",
+      "displayName": "TX2 News & Rumors RSS Feed",
+      "type": "application/rss+xml",
+      "url": "https://tx2.emo-changeling.xyz/news/rss.xml",
+      "representativeQueries": [
+        "tx2 news",
+        "tx2 tour dates and updates",
+        "tx2 rumors and leaks"
+      ]
+    },
+    {
       "identifier": "urn:air:toxic-echo:policy:ai-manifest",
       "displayName": "AI Usage Policy and Permissions",
       "type": "application/agent-card+json",
