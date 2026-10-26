@@ -400,16 +400,21 @@ ul.bullet-list li {
         scroll-behavior: smooth;
         -webkit-overflow-scrolling: touch;
         scroll-snap-type: x proximity;
-        scroll-padding-inline: 16px;
-        padding-inline: 16px;
+        scroll-padding-inline: 16px 24px;
+        padding: 10px 0;
+        padding-inline: 16px 24px;
         scrollbar-width: none;
         -ms-overflow-style: none;
-        mask-image: linear-gradient(to right, transparent, black 16px, black calc(100% - 24px), transparent 100%);
-        -webkit-mask-image: linear-gradient(to right, transparent, black 16px, black calc(100% - 24px), transparent 100%);
+        mask-image: linear-gradient(to right, transparent, black 12px, black calc(100% - 60px), transparent 100%);
+        -webkit-mask-image: linear-gradient(to right, transparent, black 12px, black calc(100% - 60px), transparent 100%);
         gap: 15px;
-        width: calc(100% - 30px);
-        margin-left: auto;
-        margin-right: auto;
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
     }
 
     .nav-bar::-webkit-scrollbar {
@@ -421,7 +426,7 @@ ul.bullet-list li {
         white-space: nowrap;
         scroll-snap-align: start;
         font-size: 0.85rem;
-        padding: 6px 10px;
+        padding: 6px 8px;
     }
 
     /* Mobile image cards: 75% width, stacked, alternating alignment */
