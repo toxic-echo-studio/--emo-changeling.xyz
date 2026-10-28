@@ -1091,6 +1091,20 @@ s, del {
     flex-grow: 1;
 }
 
+.news-card-text a,
+.news-card-text a:visited {
+    color: var(--accent-red);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    font-weight: 500;
+    transition: text-shadow 0.2s ease, color 0.2s ease;
+}
+
+.news-card-text a:hover {
+    color: #ff6b6b;
+    text-shadow: 0 0 8px var(--accent-red-glow);
+}
+
 .news-card-footer {
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     padding-top: 10px;
