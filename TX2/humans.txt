@@ -1,7 +1,7 @@
 /* METADATA */
-/* Dokumentacja autorstwa i struktury zasobów serwisu */
-Last Updated: 2026-09-11
-Version: 1.1.6
+/* Dokumentacja autorstwa i struktury zasobow serwisu */
+Last Updated: 2026-10-29
+Version: 1.1.13
 
 /* TEAM */
 Co-Creator & Content: Nico "Zebroid" Łach (Emo Changeling)
@@ -20,8 +20,7 @@ Note: Technical support is purely non-commercial and voluntary.
 Architecture: Static Monolith, Cloudflare Pages
 Standards: HTML5, CSS3, ES6 Custom Scripts (Vanilla JavaScript)
 Design System: Modern MySpace, CSS Custom Properties, Responsive CSS Grid
-External Dependencies: None
-Cookies: None
-Analytics/Tracking: None
+External Resources: Google Fonts (Inter); optional YouTube (youtube-nocookie.com) & TikTok embeds on media.html
+Cookies: None (session language state stored only in browser sessionStorage)
+Analytics/Tracking: No ad/marketing trackers; temporary cookieless Cloudflare RUM may be enabled during deployment verification (see legal.html)
 Ads: None
-

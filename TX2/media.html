@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Primary Metadata -->
     <title>Media - TX2 Unofficial Fansite</title>
     <meta name="title" content="Media - TX2 Unofficial Fansite">
@@ -16,7 +16,10 @@
     <meta property="og:url" content="https://tx2.emo-changeling.xyz/media.html">
     <meta property="og:title" content="Media - TX2 Unofficial Fansite">
     <meta property="og:description" content="Watch official videos, shorts, and TikTok broadcasts documenting the TX2 Pigeonification Ritual and European tour preparations.">
-    <meta property="og:image" content="https://tx2.emo-changeling.xyz/img/banner.webp">
+    <meta property="og:image" content="https://tx2.emo-changeling.xyz/img/banner-16x9.jpg">
+    <meta property="og:image:width" content="1920">
+    <meta property="og:image:height" content="1080">
+    <meta property="og:image:type" content="image/jpeg">
     <meta property="og:locale" content="en_US">
     <meta property="og:locale:alternate" content="pl_PL">
 
@@ -25,11 +28,14 @@
     <meta name="twitter:url" content="https://tx2.emo-changeling.xyz/media.html">
     <meta name="twitter:title" content="Media - TX2 Unofficial Fansite">
     <meta name="twitter:description" content="Watch official videos, shorts, and TikTok broadcasts documenting the TX2 Pigeonification Ritual and European tour preparations.">
-    <meta name="twitter:image" content="https://tx2.emo-changeling.xyz/img/banner.webp">
+    <meta name="twitter:image" content="https://tx2.emo-changeling.xyz/img/banner-16x9.jpg">
 
     <!-- Stylesheets & Resources -->
-    <link rel="stylesheet" href="css/style.css">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap">
+    <link rel="stylesheet" href="css/style.css?v=1.1.13">
+
     <!-- Authors and Policies -->
     <link rel="author" href="humans.txt">
 
@@ -50,10 +56,17 @@
       "@graph": [
         {
           "@type": "CreativeWork",
-          "@id": "https://tx2.emo-changeling.xyz/media.html#website",
+          "@id": "https://tx2.emo-changeling.xyz/media.html#webpage",
           "url": "https://tx2.emo-changeling.xyz/media.html",
           "name": "Media - TX2 Unofficial Fansite",
           "description": "Watch official videos, shorts, and TikTok broadcasts documenting the TX2 Pigeonification Ritual and European tour preparations.",
+          "dateModified": "2026-10-29",
+          "isPartOf": {
+            "@type": "WebSite",
+            "@id": "https://tx2.emo-changeling.xyz/#website",
+            "url": "https://tx2.emo-changeling.xyz/",
+            "name": "TX2 Pigeonification Ritual - Unofficial TX2 Fansite & Fan Project"
+          },
           "inLanguage": ["en", "pl"],
           "creator": [
             {
@@ -82,14 +95,14 @@
 <body class="subpage">
 
     <!-- Language Selector Inputs -->
-    <input type="radio" id="lang-toggle-en" name="lang-select" checked style="display:none;">
-    <input type="radio" id="lang-toggle-pl" name="lang-select" style="display:none;">
+    <input type="radio" id="lang-toggle-en" name="lang-select" class="sr-only" checked>
+    <input type="radio" id="lang-toggle-pl" name="lang-select" class="sr-only">
 
     <!-- Top Navigation and Branding -->
     <header>
         <div class="top-label notranslate" translate="no">TX2 Unofficial Fansite</div>
         <div class="banner-container">
-            <img class="banner-image" src="img/banner.webp" alt="TX2 Banner Image" width="2000" height="700">
+            <img class="banner-image" src="img/banner.webp" alt="TX2 Banner Image" width="2000" height="700" fetchpriority="high" decoding="async">
         </div>
         <nav class="nav-bar notranslate" translate="no">
             <a href="index.html" class="nav-link">
@@ -162,12 +175,12 @@
                 </div>
 
                 <div class="media-video-container-16-9">
-                    <iframe 
-                        src="https://www.youtube.com/embed/x9ilXcp8lzc" 
-                        title="TX2 Video Player" 
-                        loading="lazy" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
+                    <iframe
+                        src="https://www.youtube-nocookie.com/embed/x9ilXcp8lzc"
+                        title="TX2 Video Player"
+                        loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
                         allowfullscreen>
                     </iframe>
                 </div>
@@ -196,12 +209,12 @@
                 </div>
 
                 <div class="media-video-container-16-9">
-                    <iframe 
-                        src="https://www.youtube.com/embed/GBKUQMYqQUU" 
-                        title="TX2 Video Player" 
-                        loading="lazy" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
+                    <iframe
+                        src="https://www.youtube-nocookie.com/embed/GBKUQMYqQUU"
+                        title="TX2 Video Player"
+                        loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
                         allowfullscreen>
                     </iframe>
                 </div>
@@ -233,12 +246,12 @@
                     </div>
 
                     <div class="media-video-container-9-16">
-                        <iframe 
-                            src="https://www.youtube.com/embed/5dtN9WcUf4g" 
-                            title="TX2 YouTube Short" 
-                            loading="lazy" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            referrerpolicy="strict-origin-when-cross-origin" 
+                        <iframe
+                            src="https://www.youtube-nocookie.com/embed/5dtN9WcUf4g"
+                            title="TX2 YouTube Short"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
                             allowfullscreen>
                         </iframe>
                     </div>
@@ -267,12 +280,12 @@
                     </div>
 
                     <div class="media-video-container-9-16">
-                        <iframe 
-                            src="https://www.tiktok.com/embed/v2/7672005237149895969" 
-                            title="TX2 TikTok Clip" 
-                            loading="lazy" 
-                            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            referrerpolicy="strict-origin-when-cross-origin" 
+                        <iframe
+                            src="https://www.tiktok.com/embed/v2/7672005237149895969"
+                            title="TX2 TikTok Clip"
+                            loading="lazy"
+                            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
                             allowfullscreen>
                         </iframe>
                     </div>
@@ -302,7 +315,7 @@
                 <!-- Poster 1: Primary Poster -->
                 <div class="media-poster-card">
                     <div class="media-poster-hero">
-                        <img class="media-poster-img" src="img/media-bg.webp" alt="TX2 Join The Flock - European Tour '27 Poster" width="724" height="1024">
+                        <img class="media-poster-img" src="img/media-bg.webp" alt="TX2 Join The Flock - European Tour '27 Poster" width="724" height="1024" loading="lazy" decoding="async">
                     </div>
                     <div class="media-poster-label notranslate" translate="no">Primary Poster</div>
                 </div>
@@ -310,7 +323,7 @@
                 <!-- Poster 2: Alternate Poster -->
                 <div class="media-poster-card">
                     <div class="media-poster-hero">
-                        <img class="media-poster-img" src="img/poster-alt.webp" alt="TX2 Join The Flock - European Tour '27 Alternate Poster" width="724" height="1024">
+                        <img class="media-poster-img" src="img/poster-alt.webp" alt="TX2 Join The Flock - European Tour '27 Alternate Poster" width="724" height="1024" loading="lazy" decoding="async">
                     </div>
                     <div class="media-poster-label notranslate" translate="no">Alternate Poster</div>
                 </div>
@@ -321,10 +334,10 @@
 
     <!-- Footer Area -->
     <footer class="notranslate" translate="no">
-        TX2 fansite created by Zebroid &amp; Mighn - Version 1.1.12 (October 28, 2026)
+        TX2 fansite created by Zebroid &amp; Mighn - Version 1.1.13 (October 29, 2026)
     </footer>
 
     <!-- Progressive Interaction Script -->
-    <script src="assets/lang.js"></script>
+    <script src="assets/lang.js?v=1.1.13"></script>
 </body>
 </html>

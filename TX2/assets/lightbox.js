@@ -28,16 +28,27 @@ document.addEventListener("DOMContentLoaded", () => {
         img.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
     };
 
-    // Open lightbox on card click
+    const openCardLightbox = (cardImg) => {
+        img.src = cardImg.src;
+        img.alt = cardImg.alt;
+        resetZoom();
+        dialog.showModal();
+    };
+
+    // Open lightbox on card click or keydown
     cards.forEach(card => {
         const cardImg = card.querySelector("img");
         if (!cardImg) return;
 
         card.addEventListener("click", () => {
-            img.src = cardImg.src;
-            img.alt = cardImg.alt;
-            resetZoom();
-            dialog.showModal();
+            openCardLightbox(cardImg);
+        });
+
+        card.addEventListener("keydown", (e) => {
+            if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                openCardLightbox(cardImg);
+            }
         });
     });
 

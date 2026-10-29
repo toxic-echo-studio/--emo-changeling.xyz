@@ -1,8 +1,6 @@
 /* ==========================================================================
    Design Tokens & Global Variables
    ========================================================================== */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700;900&display=swap');
-
 :root {
     --bg-color: #020612;
     --text-color: #e2e8f0;
@@ -91,10 +89,10 @@ body.subpage {
 .nav-bar {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: clamp(6px, 1.5vw, 18px);
     margin: 15px auto 30px auto;
-    padding: 10px 20px;
-    max-width: 800px;
+    padding: 10px clamp(10px, 2vw, 20px);
+    max-width: 1000px;
     background-color: rgba(5, 11, 26, 0.5);
     border-radius: 4px;
     border: 1px solid rgba(255, 255, 255, 0.05);
@@ -104,10 +102,11 @@ body.subpage {
     color: var(--text-color);
     text-decoration: none;
     font-weight: 600;
-    font-size: 1.05rem;
+    font-size: clamp(0.82rem, 1.15vw, 1.05rem);
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    padding: 8px 16px;
+    padding: 8px clamp(6px, 1.2vw, 12px);
+    white-space: nowrap;
     border-bottom: 2px solid transparent;
     transition: all 0.3s ease;
 }
@@ -173,6 +172,13 @@ body.subpage {
     color: var(--accent-red);
     font-weight: bold;
     text-shadow: 0 0 5px var(--accent-red-glow);
+}
+
+#lang-toggle-en:focus-visible ~ .lang-selector-container .btn-en,
+#lang-toggle-pl:focus-visible ~ .lang-selector-container .btn-pl {
+    outline: 2px solid var(--accent-red);
+    outline-offset: 2px;
+    border-radius: 2px;
 }
 
 #lang-toggle-en:checked ~ * .content-en {
@@ -356,6 +362,13 @@ ul.bullet-list li {
     box-shadow: 0 0 15px var(--accent-red-glow);
 }
 
+.fanart-card:focus-visible {
+    outline: 2px solid var(--accent-red);
+    outline-offset: 3px;
+    border-color: var(--accent-red);
+    box-shadow: 0 0 15px var(--accent-red-glow);
+}
+
 .row-upper .card-1:hover,
 .row-upper .card-3:hover {
     transform: translateY(35px) scale(1.04);
@@ -377,6 +390,10 @@ ul.bullet-list li {
    Mobile Linear Flow Gallery
    ========================================================================== */
 @media (max-width: 768px) {
+    body {
+        background-attachment: scroll;
+    }
+
     .desktop-layout {
         display: none;
     }
@@ -644,6 +661,8 @@ footer {
     transition: all 0.2s ease;
     display: block;
     line-height: 1.4;
+    padding: 4px 0;
+    min-height: 24px;
 }
 
 .sidebar-link:hover {
@@ -702,7 +721,12 @@ footer {
         cursor: pointer;
         text-transform: uppercase;
         font-size: 0.95rem;
-        outline: none;
+    }
+
+    .mobile-toc-summary:focus-visible {
+        outline: 2px solid var(--accent-red);
+        outline-offset: 4px;
+        border-radius: 2px;
     }
     
     .mobile-toc-list {
@@ -722,6 +746,9 @@ footer {
         text-decoration: none;
         font-size: 0.9rem;
         font-weight: 300;
+        display: inline-block;
+        padding: 4px 0;
+        min-height: 24px;
     }
     
     .mobile-toc-link:hover {
@@ -795,11 +822,6 @@ footer {
         grid-template-columns: 1fr;
         gap: 25px;
     }
-}
-
-.media-section-header {
-    text-align: center;
-    margin-bottom: 25px;
 }
 
 .media-grid-featured {
@@ -908,6 +930,8 @@ footer {
     color: var(--text-dimmed);
     text-decoration: none;
     transition: color 0.2s ease;
+    padding: 4px 0;
+    min-height: 24px;
 }
 
 .media-direct-link:hover {
@@ -935,7 +959,7 @@ footer {
 .badge-new {
     display: inline-block;
     background-color: var(--accent-red);
-    color: #ffffff;
+    color: #020612;
     font-size: 0.7rem;
     font-weight: 700;
     padding: 1px 6px;
@@ -1119,6 +1143,9 @@ s, del {
     text-transform: uppercase;
     letter-spacing: 0.05em;
     transition: text-shadow 0.2s ease, color 0.2s ease;
+    display: inline-block;
+    padding: 4px 0;
+    min-height: 24px;
 }
 
 .news-source-link:hover {
@@ -1134,6 +1161,42 @@ s, del {
 
     .news-drop {
         padding: 16px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .cta-link:hover,
+    .media-poster-card:hover,
+    .news-card:hover {
+        transform: none !important;
+    }
+
+    .row-upper .card-1:hover,
+    .row-upper .card-3:hover {
+        transform: translateY(35px) !important;
+    }
+
+    .row-upper .card-2:hover {
+        transform: translateY(-5px) !important;
+    }
+
+    .row-lower .card-4:hover {
+        transform: translate(75px, -35px) !important;
+    }
+
+    .row-lower .card-5:hover {
+        transform: translate(-75px, -35px) !important;
     }
 }
 

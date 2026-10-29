@@ -2,23 +2,25 @@
 # PRIVACY NOTICE & POLICY
 # Project: TX2 Pigeonification Ritual - Unofficial TX2 Fansite & Fan Project
 # Website: https://tx2.emo-changeling.xyz
-# Last Updated: 2026-09-11
+# Last Updated: 2026-10-29
+# Version: 1.1.13
 # ==========================================================================
 
 1. GENERAL DISCLOSURE
 This portal is a fully static, non-commercial, unofficial fan project co-created by Nico "Zebroid" Łach (Emo Changeling) and Mighn Taghor. Technical infrastructure is voluntarily hosted by Toxic Echo Studio.
 
-2. ZERO DATA COLLECTION
-- We do NOT collect, harvest, or request personal data.
-- There are no user accounts, sign-up forms, input inputs, or newsletters.
+2. WEBSITE BROWSING & EMAIL SUBMISSIONS
+- The website itself does NOT contain sign-up forms, user accounts, or newsletters.
+- If you voluntarily submit fanart via email to tx2pigeon@emo-changeling.xyz, your email address and provided handle/signature are processed solely to organize the project and print the physical fan gift, and by default shared with TX2 for copyright/attribution purposes (with an opt-out option until January 1, 2027), as detailed in §5 and §6 of https://tx2.emo-changeling.xyz/legal.html. All participant data stored on project resources is deleted after February 21, 2027.
 
-3. COOKIES & TRACKING
-- This site does NOT use cookies.
-- No tracking pixels, analytics scripts, telemetries, or marketing trackers are loaded.
-- There are no third-party scripts or ad networks.
+3. COOKIES, EMBEDS & TECHNICAL MONITORING
+- This website does NOT set first-party tracking cookies (language preference is kept only in browser sessionStorage).
+- No commercial ad networks or marketing pixels are used.
+- Following major codebase updates, cookieless Cloudflare Real User Measurement (RUM / Web Analytics) may be temporarily enabled under legitimate interest (Art. 6(1)(f) GDPR) strictly to verify deployment stability.
+- The site loads the Inter typeface from Google Fonts, and the /media.html subpage embeds non-autoplay players from YouTube (youtube-nocookie.com) and TikTok.
 
 4. HOSTING & INFRASTRUCTURE LOGS
-This site is hosted statically on Cloudflare Pages. System logs (e.g., HTTP request headers, IP addresses, request times) may be processed by Cloudflare to ensure security, prevent DDoS attacks, and deliver files. These logs are not used by the site administrators for analytics or user tracking.
+This site is hosted statically on Cloudflare Pages. System logs (e.g., HTTP request headers, IP addresses, request times) may be processed by Cloudflare to ensure security, prevent DDoS attacks, and deliver files.
 
 5. CONTACT INFO
 - Project Inquiries: tx2pigeon@emo-changeling.xyz

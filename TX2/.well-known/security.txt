@@ -1,5 +1,6 @@
 Contact: mailto:admin@toxic-echo.studio
 Expires: 2027-04-05T09:26:00Z
-Encryption: https://tx2.emo-changeling.xyz/pgp-key.txt
+Encryption: https://tx2.emo-changeling.xyz/public_key.asc
 Preferred-Languages: en, pl
 Canonical: https://tx2.emo-changeling.xyz/.well-known/security.txt
+Policy: https://tx2.emo-changeling.xyz/legal.html

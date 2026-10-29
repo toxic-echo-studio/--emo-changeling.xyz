@@ -20,6 +20,9 @@
     <meta property="og:description"
         content="Latest news, tour updates, leaks, and verified rumors regarding TX2 and Evan Thomas. Independent fan coverage.">
     <meta property="og:image" content="https://tx2.emo-changeling.xyz/img/banner-16x9.jpg">
+    <meta property="og:image:width" content="1920">
+    <meta property="og:image:height" content="1080">
+    <meta property="og:image:type" content="image/jpeg">
     <meta property="og:locale" content="en_US">
     <meta property="og:locale:alternate" content="pl_PL">
 
@@ -32,7 +35,10 @@
     <meta name="twitter:image" content="https://tx2.emo-changeling.xyz/img/banner-16x9.jpg">
 
     <!-- Stylesheets & Resources -->
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap">
+    <link rel="stylesheet" href="../css/style.css?v=1.1.13">
 
     <!-- Authors and Policies -->
     <link rel="author" href="../humans.txt">
@@ -59,7 +65,7 @@
           "name": "TX2 News & Rumors - Unofficial TX2 Fansite",
           "description": "Latest news, tour updates, leaks, and verified rumors regarding TX2 and Evan Thomas.",
           "datePublished": "2026-10-25",
-          "dateModified": "2026-10-28",
+          "dateModified": "2026-10-29",
           "isPartOf": {
             "@type": "WebSite",
             "@id": "https://tx2.emo-changeling.xyz/#website",
@@ -99,14 +105,14 @@
 <body class="subpage">
 
     <!-- Language Selector Inputs -->
-    <input type="radio" id="lang-toggle-en" name="lang-select" checked style="display:none;">
-    <input type="radio" id="lang-toggle-pl" name="lang-select" style="display:none;">
+    <input type="radio" id="lang-toggle-en" name="lang-select" class="sr-only" checked>
+    <input type="radio" id="lang-toggle-pl" name="lang-select" class="sr-only">
 
     <!-- Top Navigation and Branding -->
     <header>
         <div class="top-label notranslate" translate="no">TX2 Unofficial Fansite</div>
         <div class="banner-container">
-            <img class="banner-image" src="../img/banner.webp" alt="TX2 Banner Image" width="2000" height="700">
+            <img class="banner-image" src="../img/banner.webp" alt="TX2 Banner Image" width="2000" height="700" fetchpriority="high" decoding="async">
         </div>
         <nav class="nav-bar notranslate" translate="no">
             <a href="../index.html" class="nav-link">
@@ -227,7 +233,7 @@
                                 <p class="news-card-text">Evan Thomas i zespół oficjalnie wypuścili singiel i teledysk 'Witch Hunt'. Utwór to bezkompromisowa odpowiedź na sieciowy hejt i cyberbullying, kładąca nacisk na psychiczną odporność. Za produkcję i gitary odpowiada Joey Barba, gitary dograł Cameron Rostami, a bębny Ethan Church.</p>
                             </div>
                             <div class="news-card-footer notranslate" translate="no">
-                                <a href="https://recklesspress.com/tx2-witch-hunt-single-review/" class="news-source-link" target="_blank" rel="noopener noreferrer">Source: Reckless Press / Rock 'N' Load &rarr;</a>
+                                <a href="https://rocknloadmag.com/tx2-release-defiant-new-single-witch-hunt/" class="news-source-link" target="_blank" rel="noopener noreferrer">Source: Reckless Press / Rock 'N' Load &rarr;</a>
                             </div>
                         </article>
                         <article class="news-card type-news" id="uk-headline-tour-electric-ballroom">
@@ -245,7 +251,7 @@
                                 <p class="news-card-text">Po intensywnym sezonie letnich festiwali i przed zimową trasą z Ice Nine Kills, TX2 ogłosił solową trasę koncertową po Wielkiej Brytanii na marzec 2027. Flagowy występ w prestiżowym londyńskim Electric Ballroom (4 marca 2027) wywołał lawinę zamówień i oficjalne ostrzeżenie o wyczerpywaniu się puli biletów.</p>
                             </div>
                             <div class="news-card-footer notranslate" translate="no">
-                                <a href="https://rocknloadmag.com/news/tx2-announces-uk-headline-tour-2027/" class="news-source-link" target="_blank" rel="noopener noreferrer">Source: Rock 'N' Load Magazine &rarr;</a>
+                                <a href="https://rocknloadmag.com/tx2-announce-uk-headline-tour-for-march-2027/" class="news-source-link" target="_blank" rel="noopener noreferrer">Source: Rock 'N' Load Magazine &rarr;</a>
                             </div>
                         </article>
                         <article class="news-card type-rumor" id="witch-hunt-concept-album-theory">
@@ -276,22 +282,11 @@
 
     <!-- Footer Area -->
     <footer class="notranslate" translate="no">
-        TX2 fansite created by Zebroid &amp; Mighn - Version 1.1.12 (October 28, 2026)
+        TX2 fansite created by Zebroid &amp; Mighn - Version 1.1.13 (October 29, 2026)
     </footer>
 
-    <!-- Native HTML5 <dialog> Lightbox Modal -->
-    <dialog id="lightbox-dialog" class="lightbox-modal notranslate" translate="no">
-        <div class="lightbox-wrapper">
-            <button id="lightbox-close" class="lightbox-close-btn" aria-label="Close lightbox">&times;</button>
-            <div class="lightbox-content">
-                <img id="lightbox-img" src="" alt="Zoomed View">
-            </div>
-        </div>
-    </dialog>
-
     <!-- Progressive Interaction Scripts -->
-    <script src="../assets/lang.js"></script>
-    <script src="../assets/lightbox.js"></script>
+    <script src="../assets/lang.js?v=1.1.13"></script>
 </body>
 
 </html>

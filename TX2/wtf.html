@@ -16,7 +16,10 @@
     <meta property="og:url" content="https://tx2.emo-changeling.xyz/wtf.html">
     <meta property="og:title" content="Wait, tf is TX2?? - TX2 Unofficial Fansite">
     <meta property="og:description" content="Uncensored biography, history, timeline, lineup details, and full chronological discography of alternative rock band TX2.">
-    <meta property="og:image" content="https://tx2.emo-changeling.xyz/img/banner.webp">
+    <meta property="og:image" content="https://tx2.emo-changeling.xyz/img/banner-16x9.jpg">
+    <meta property="og:image:width" content="1920">
+    <meta property="og:image:height" content="1080">
+    <meta property="og:image:type" content="image/jpeg">
     <meta property="og:locale" content="en_US">
     <meta property="og:locale:alternate" content="pl_PL">
 
@@ -25,10 +28,13 @@
     <meta name="twitter:url" content="https://tx2.emo-changeling.xyz/wtf.html">
     <meta name="twitter:title" content="Wait, tf is TX2?? - TX2 Unofficial Fansite">
     <meta name="twitter:description" content="Uncensored biography, history, timeline, lineup details, and full chronological discography of alternative rock band TX2.">
-    <meta name="twitter:image" content="https://tx2.emo-changeling.xyz/img/banner.webp">
+    <meta name="twitter:image" content="https://tx2.emo-changeling.xyz/img/banner-16x9.jpg">
 
     <!-- Stylesheets & Resources -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap">
+    <link rel="stylesheet" href="css/style.css?v=1.1.13">
     
     <!-- Authors and Policies -->
     <link rel="author" href="humans.txt">
@@ -50,10 +56,17 @@
       "@graph": [
         {
           "@type": "CreativeWork",
-          "@id": "https://tx2.emo-changeling.xyz/wtf.html#website",
+          "@id": "https://tx2.emo-changeling.xyz/wtf.html#webpage",
           "url": "https://tx2.emo-changeling.xyz/wtf.html",
           "name": "Wait, tf is TX2?? - TX2 Unofficial Fansite",
           "description": "Uncensored biography, history, timeline, lineup details, and full chronological discography of alternative rock band TX2.",
+          "dateModified": "2026-10-29",
+          "isPartOf": {
+            "@type": "WebSite",
+            "@id": "https://tx2.emo-changeling.xyz/#website",
+            "url": "https://tx2.emo-changeling.xyz/",
+            "name": "TX2 Pigeonification Ritual - Unofficial TX2 Fansite & Fan Project"
+          },
           "inLanguage": ["en", "pl"],
           "creator": [
             {
@@ -82,14 +95,14 @@
 <body class="subpage">
 
     <!-- Language Selector Inputs -->
-    <input type="radio" id="lang-toggle-en" name="lang-select" checked style="display:none;">
-    <input type="radio" id="lang-toggle-pl" name="lang-select" style="display:none;">
+    <input type="radio" id="lang-toggle-en" name="lang-select" class="sr-only" checked>
+    <input type="radio" id="lang-toggle-pl" name="lang-select" class="sr-only">
 
     <!-- Top Navigation and Branding -->
     <header>
         <div class="top-label notranslate" translate="no">TX2 Unofficial Fansite</div>
         <div class="banner-container">
-            <img class="banner-image" src="img/banner.webp" alt="TX2 Banner Image" width="2000" height="700">
+            <img class="banner-image" src="img/banner.webp" alt="TX2 Banner Image" width="2000" height="700" fetchpriority="high" decoding="async">
         </div>
         <nav class="nav-bar notranslate" translate="no">
             <a href="index.html" class="nav-link">
@@ -314,11 +327,11 @@
                             <li><s>Oct 18 - Minneapolis, MN (The Fillmore)</s></li>
                             <li><s>Oct 20 - St. Louis, MO (The Hawthorn)</s></li>
                             <li><s>Oct 21 - Lawrence, KS (The Granada)</s></li>
-                            <li>Oct 23 - Denver, CO (Summit Music Hall)</li>
-                            <li>Oct 24 - Salt Lake City, UT (The Depot)</li>
-                            <li>Oct 25 - Boise, ID (Knitting Factory)</li>
-                            <li>Oct 27 - Portland, OR (Roseland Theater)</li>
-                            <li>Oct 28 - Seattle, WA (Showbox SoDo)</li>
+                            <li><s>Oct 23 - Denver, CO (Summit Music Hall)</s></li>
+                            <li><s>Oct 24 - Salt Lake City, UT (The Depot)</s></li>
+                            <li><s>Oct 25 - Boise, ID (Knitting Factory)</s></li>
+                            <li><s>Oct 27 - Portland, OR (Roseland Theater)</s></li>
+                            <li><s>Oct 28 - Seattle, WA (Showbox SoDo)</s></li>
                             <li>Oct 30 - Sacramento, CA (Channel 24)</li>
                             <li>Oct 31 - Santa Ana, CA (The Observatory)</li>
                             <li>Nov 01 - Tempe, AZ (Marquee Theatre)</li>
@@ -623,7 +636,7 @@
                         <ul class="bullet-list">
                             <li><strong>3 kwietnia 2026:</strong> Singlowy pakiet <em>„Eat My Heart / Prescription For Love”</em>.</li>
                             <li><strong>28 maja 2026:</strong> Singiel <em>„Confession”</em>.</li>
-                            <li><strong>Połowa 2026:</strong> Zapowiedź nowej eras przez wydawniczy pakiet zawierający utwory <em>„Pickup Truck”</em>, <em>„Murder Scene”</em> oraz liryczny motyw przewodni <em>„We’re Going To Hell For This”</em>.</li>
+                            <li><strong>Połowa 2026:</strong> Zapowiedź nowej ery przez wydawniczy pakiet zawierający utwory <em>„Pickup Truck”</em>, <em>„Murder Scene”</em> oraz liryczny motyw przewodni <em>„We’re Going To Hell For This”</em>.</li>
                         </ul>
                         <p class="content-para">Po zaliczeniu potężnych europejskich festiwali (m.in. Rock am Ring, Download, Rock for People, Jera on Air, Vainstream) w pierwszej połowie roku, Evan oficjalnie ogłosił ze sceny i w socialach, że TX2 ma obecnie znacznie większy i głośniejszy fanbase w Europie niż w rodzimych Stanach. Ta chłodna kalkulacja pchnęła ich do podjęcia kluczowej decyzji: czas na własną trasę klubową jako główna gwiazda.</p>
                     </div>
@@ -668,11 +681,11 @@
                             <li><s>18 października - Minneapolis, MN (The Fillmore)</s></li>
                             <li><s>20 października - St. Louis, MO (The Hawthorn)</s></li>
                             <li><s>21 października - Lawrence, KS (The Granada)</s></li>
-                            <li>23 października - Denver, CO (Summit Music Hall)</li>
-                            <li>24 października - Salt Lake City, UT (The Depot)</li>
-                            <li>25 października - Boise, ID (Knitting Factory)</li>
-                            <li>27 października - Portland, OR (Roseland Theater)</li>
-                            <li>28 października - Seattle, WA (Showbox SoDo)</li>
+                            <li><s>23 października - Denver, CO (Summit Music Hall)</s></li>
+                            <li><s>24 października - Salt Lake City, UT (The Depot)</s></li>
+                            <li><s>25 października - Boise, ID (Knitting Factory)</s></li>
+                            <li><s>27 października - Portland, OR (Roseland Theater)</s></li>
+                            <li><s>28 października - Seattle, WA (Showbox SoDo)</s></li>
                             <li>30 października - Sacramento, CA (Channel 24)</li>
                             <li>31 października - Santa Ana, CA (The Observatory)</li>
                             <li>01 listopada - Tempe, AZ (Marquee Theatre)</li>
@@ -913,10 +926,10 @@
 
     <!-- Footer Area -->
     <footer class="notranslate" translate="no">
-        TX2 fansite created by Zebroid &amp; Mighn - Version 1.1.12 (October 28, 2026)
+        TX2 fansite created by Zebroid &amp; Mighn - Version 1.1.13 (October 29, 2026)
     </footer>
 
     <!-- Progressive Interaction Script -->
-    <script src="assets/lang.js"></script>
+    <script src="assets/lang.js?v=1.1.13"></script>
 </body>
 </html>

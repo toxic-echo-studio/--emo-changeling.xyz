@@ -11,9 +11,16 @@
 /css/*
   Cache-Control: public, max-age=2592000, stale-while-revalidate=604800, no-transform
 
+/assets/*
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=604800, no-transform
+
 /sitemap.xml
   Cache-Control: public, max-age=3600, must-revalidate
   Content-Type: application/xml; charset=utf-8
+
+/news/rss.xml
+  Cache-Control: public, max-age=3600, must-revalidate
+  Content-Type: application/rss+xml; charset=utf-8
 
 /robots.txt
   Cache-Control: no-cache
@@ -23,41 +30,37 @@
   Cache-Control: no-cache, no-store, must-revalidate
   Content-Type: text/plain; charset=utf-8
 
-/crossdomain.xml
-  Cache-Control: no-cache
-  Content-Type: application/xml; charset=utf-8
-
 /llms.txt
   Cache-Control: no-cache, no-store, must-revalidate
   Content-Type: text/plain; charset=utf-8
 
-/llms.toml
+/ai.txt
   Cache-Control: no-cache, no-store, must-revalidate
-  Content-Type: application/toml; charset=utf-8
+  Content-Type: text/plain; charset=utf-8
 
-/llms.yaml
+/privacy.txt
   Cache-Control: no-cache, no-store, must-revalidate
-  Content-Type: application/yaml; charset=utf-8
+  Content-Type: text/plain; charset=utf-8
 
-/ai.json
+/project.txt
   Cache-Control: no-cache, no-store, must-revalidate
-  Content-Type: application/json; charset=utf-8
+  Content-Type: text/plain; charset=utf-8
+
+/security.txt
+  Cache-Control: no-cache, no-store, must-revalidate
+  Content-Type: text/plain; charset=utf-8
+
+/.well-known/security.txt
+  Cache-Control: no-cache, no-store, must-revalidate
+  Content-Type: text/plain; charset=utf-8
+
+/public_key.asc
+  Cache-Control: public, max-age=86400
+  Content-Type: text/plain; charset=utf-8
 
 /site.webmanifest
   Cache-Control: public, max-age=86400
   Content-Type: application/manifest+json; charset=utf-8
-
-/favicon.svg
-  Content-Type: image/svg+xml; charset=utf-8
-
-/EmoChangeling.svg
-  Content-Type: image/svg+xml; charset=utf-8
-
-/pgp-key.txt
-  Content-Type: text/plain; charset=utf-8
-
-/yandex_66898620a3c2b4d5.html
-  Content-Type: text/html; charset=utf-8
 
 /.well-known/ai-catalog.json
   Cache-Control: no-cache, no-store, must-revalidate

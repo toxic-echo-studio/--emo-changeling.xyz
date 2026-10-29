@@ -1,17 +1,18 @@
 {
   "specVersion": "1.0",
   "host": {
-    "displayName": "The Reverse Emo Changeling"
+    "displayName": "TX2 Pigeonification Ritual - Unofficial TX2 Fansite"
   },
   "entries": [
     {
-      "identifier": "urn:air:toxic-echo:knowledge:llms-context",
-      "displayName": "LLMs Context & Knowledge Base",
+      "identifier": "urn:air:tx2:knowledge:llms-context",
+      "displayName": "TX2 Pigeonification Ritual Context & Knowledge Base",
       "type": "text/markdown; profile=\"urn:air:agent-skills\"",
       "url": "https://tx2.emo-changeling.xyz/llms.txt",
       "representativeQueries": [
-        "what is emo changeling project",
-        "toxic echo studio information"
+        "what is tx2 pigeonification ritual fan project",
+        "tx2 warsaw hydrozagadka 2027 concert fan action",
+        "who is tx2 band history lineup and discography"
       ]
     },
     {
@@ -26,10 +27,10 @@
       ]
     },
     {
-      "identifier": "urn:air:toxic-echo:policy:ai-manifest",
+      "identifier": "urn:air:tx2:policy:ai-manifest",
       "displayName": "AI Usage Policy and Permissions",
-      "type": "application/agent-card+json",
-      "url": "https://tx2.emo-changeling.xyz/ai.json",
+      "type": "text/plain",
+      "url": "https://tx2.emo-changeling.xyz/ai.txt",
       "representativeQueries": [
         "content licensing and ai permissions",
         "creative commons cc by-nd"

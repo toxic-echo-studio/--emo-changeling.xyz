@@ -16,7 +16,10 @@
     <meta property="og:url" content="https://tx2.emo-changeling.xyz/about.html">
     <meta property="og:title" content="About pigeons - TX2 Unofficial Fansite">
     <meta property="og:description" content="Visual guide, asset package download guidelines, and fan campaign materials for the TX2 Pigeonification Ritual.">
-    <meta property="og:image" content="https://tx2.emo-changeling.xyz/img/banner.webp">
+    <meta property="og:image" content="https://tx2.emo-changeling.xyz/img/banner-16x9.jpg">
+    <meta property="og:image:width" content="1920">
+    <meta property="og:image:height" content="1080">
+    <meta property="og:image:type" content="image/jpeg">
     <meta property="og:locale" content="en_US">
     <meta property="og:locale:alternate" content="pl_PL">
 
@@ -25,10 +28,13 @@
     <meta name="twitter:url" content="https://tx2.emo-changeling.xyz/about.html">
     <meta name="twitter:title" content="About pigeons - TX2 Unofficial Fansite">
     <meta name="twitter:description" content="Visual guide, asset package download guidelines, and fan campaign materials for the TX2 Pigeonification Ritual.">
-    <meta name="twitter:image" content="https://tx2.emo-changeling.xyz/img/banner.webp">
+    <meta name="twitter:image" content="https://tx2.emo-changeling.xyz/img/banner-16x9.jpg">
 
     <!-- Stylesheets & Resources -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap">
+    <link rel="stylesheet" href="css/style.css?v=1.1.13">
     
     <!-- Authors and Policies -->
     <link rel="author" href="humans.txt">
@@ -50,11 +56,17 @@
       "@graph": [
         {
           "@type": "CreativeWork",
-          "@id": "https://tx2.emo-changeling.xyz/about.html#website",
+          "@id": "https://tx2.emo-changeling.xyz/about.html#webpage",
           "url": "https://tx2.emo-changeling.xyz/about.html",
           "name": "About pigeons - TX2 Unofficial Fansite",
           "description": "Visual guide, asset package download guidelines, and fan campaign materials for the TX2 Pigeonification Ritual.",
-          "dateModified": "2026-10-23T14:40:00+02:00",
+          "dateModified": "2026-10-29",
+          "isPartOf": {
+            "@type": "WebSite",
+            "@id": "https://tx2.emo-changeling.xyz/#website",
+            "url": "https://tx2.emo-changeling.xyz/",
+            "name": "TX2 Pigeonification Ritual - Unofficial TX2 Fansite & Fan Project"
+          },
           "inLanguage": ["en", "pl"],
           "creator": [
             {
@@ -83,14 +95,14 @@
 <body class="subpage">
 
     <!-- Language Selector Inputs -->
-    <input type="radio" id="lang-toggle-en" name="lang-select" checked style="display:none;">
-    <input type="radio" id="lang-toggle-pl" name="lang-select" style="display:none;">
+    <input type="radio" id="lang-toggle-en" name="lang-select" class="sr-only" checked>
+    <input type="radio" id="lang-toggle-pl" name="lang-select" class="sr-only">
 
     <!-- Top Navigation and Branding -->
     <header>
         <div class="top-label notranslate" translate="no">TX2 Unofficial Fansite</div>
         <div class="banner-container">
-            <img class="banner-image" src="img/banner.webp" alt="TX2 Banner Image" width="2000" height="700">
+            <img class="banner-image" src="img/banner.webp" alt="TX2 Banner Image" width="2000" height="700" fetchpriority="high" decoding="async">
         </div>
         <nav class="nav-bar notranslate" translate="no">
             <a href="index.html" class="nav-link">
@@ -186,7 +198,7 @@
                 </ins>
                 <p class="content-para"><strong>Termin:</strong> 30 listopada 2026 r. (z możliwością przedłużenia w razie potrzeby).</p>
                 
-                <p class="content-para" style="margin-top: 20px;">Gdy nadejdzie czas, połączymy wszystkie Wasze zaklęcia w fizyczne wydruki oraz ogromny, wspaniały plakat grupowy, który wręczymy TX2 Podczas spotkania VIP które odbędzie się 20.02.2027 w Klubie Hydrozagadka w ramach ich trasy po europie.</p>
+                <p class="content-para" style="margin-top: 20px;">Gdy nadejdzie czas, połączymy wszystkie Wasze zaklęcia w fizyczne wydruki oraz ogromny, wspaniały plakat grupowy, który wręczymy TX2 podczas spotkania VIP, które odbędzie się 20.02.2027 w Klubie Hydrozagadka w ramach ich trasy po Europie.</p>
                 <p class="content-para" style="font-weight: 600; color: var(--accent-red);">Niech moc kreatywności i nasza wspólna duma przypieczętują ich los jako majestatycznych ptaków. 🕊️</p>
             </div>
 
@@ -195,10 +207,10 @@
 
     <!-- Footer Area -->
     <footer class="notranslate" translate="no">
-        TX2 fansite created by Zebroid &amp; Mighn - Version 1.1.12 (October 28, 2026)
+        TX2 fansite created by Zebroid &amp; Mighn - Version 1.1.13 (October 29, 2026)
     </footer>
 
     <!-- Progressive Interaction Script -->
-    <script src="assets/lang.js"></script>
+    <script src="assets/lang.js?v=1.1.13"></script>
 </body>
 </html>
