@@ -71,14 +71,14 @@ h3 {
 
 .banner-container {
     position: relative;
-    overflow: hidden; 
+    overflow: hidden;
     width: 100%;
 }
 
 .main-content {
     flex-grow: 1;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     padding: 20px 0;
     box-sizing: border-box;
 }
@@ -111,15 +111,15 @@ h3 {
    SOCIALE
    ========================================= */
 .social-container {
-    width: 50%; 
+    width: 50%;
     display: flex;
-    justify-content: space-around; 
+    justify-content: space-around;
     margin: 2vw auto;
     box-sizing: border-box;
 }
 
 .social-icon {
-    width: 48px; 
+    width: 48px;
     height: 48px;
     display: block;
     transition: transform 0.1s ease-in-out;
@@ -139,14 +139,14 @@ h3 {
     overflow: hidden;
     margin: 10px auto;
     background: transparent;
-    display: block; 
+    display: block;
 }
 
 .marquee-content {
     display: flex !important;
     flex-direction: row !important;
     flex-wrap: nowrap !important;
-    width: max-content; 
+    width: max-content;
     animation: marquee-loop 20s linear infinite;
     will-change: transform;
 }
@@ -156,7 +156,7 @@ h3 {
     white-space: nowrap !important;
     display: inline-block;
     margin: 0;
-    padding-right: 80px; 
+    padding-right: 80px;
     font-size: 2rem;
     font-weight: 700;
     text-shadow: 2px 2px 0px #000, 3px 3px 0px var(--color-dark-green);
@@ -751,6 +751,51 @@ article h3,
     line-height: 1.4;
 }
 
+.archive-issues {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.issue-block {
+    border: 1px solid var(--color-primary-green);
+    background: #080e20;
+    padding: 10px;
+}
+
+.issue-summary {
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: var(--color-primary-pink);
+    list-style: none;
+    outline: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.issue-summary::-webkit-details-marker {
+    display: none;
+}
+
+.issue-summary:hover {
+    color: #ffffff;
+    text-shadow: 0 0 5px var(--color-primary-pink);
+}
+
+.issue-articles {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed var(--color-primary-green);
+}
+
 /* =========================================
    LEGAL PAGE (legal.html)
    ========================================= */
@@ -1175,9 +1220,9 @@ body:has(.issue-radio-input:not(:first-of-type):checked) .feed-issue-container:f
    ========================================= */
 .myspace-hitbox-link {
     position: absolute;
-    top: 2%; 
+    top: 2%;
     left: 3%;
-    width: 17%; 
+    width: 17%;
     aspect-ratio: 4.1 / 4;
     z-index: 999;
     display: block;
@@ -1185,14 +1230,14 @@ body:has(.issue-radio-input:not(:first-of-type):checked) .feed-issue-container:f
 
 .sliding-emo-pic {
     position: absolute;
-    top: 5%; 
-    left: 5%; 
-    width: 86%; 
+    top: 5%;
+    left: 5%;
+    width: 86%;
     height: auto;
-    transform: translateX(-120%); 
+    transform: translateX(-120%);
     transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
     z-index: 1;
-    pointer-events: none; 
+    pointer-events: none;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -1462,7 +1507,7 @@ details.floating-nav[open] .floating-nav-menu {
     .sidebar-toggle-btn {
         display: flex;
     }
-    
+
     .homepage-container .profile-sidebar {
         display: none;
     }
