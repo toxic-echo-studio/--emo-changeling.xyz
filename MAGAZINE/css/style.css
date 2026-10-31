@@ -498,7 +498,7 @@ article h3,
     text-shadow: 0 0 8px #ff00ff;
 }
 
-/* Dolna nawigacja artykułów i przyciski retro – WYRÓŻNIONE I PODŚWIETLONE DOMYŚLNIE (w tym :visited) */
+/* Dolna nawigacja artykułów i przyciski retro - WYRÓŻNIONE I PODŚWIETLONE DOMYŚLNIE (w tym :visited) */
 .article-bottom-nav {
     display: flex !important;
     justify-content: center !important;
@@ -1102,6 +1102,15 @@ body:has(.issue-radio-input:not(:first-of-type):checked) .feed-issue-container:f
     display: block;
 }
 #issue-select-24:checked ~ * .issue-label-24 {
+    color: var(--color-primary-pink) !important;
+    font-weight: bold;
+    text-shadow: 0 0 4px var(--color-primary-pink);
+}
+#issue-select-25:checked ~ * .issue-header-25,
+#issue-select-25:checked ~ * .feed-issue-25 {
+    display: block;
+}
+#issue-select-25:checked ~ * .issue-label-25 {
     color: var(--color-primary-pink) !important;
     font-weight: bold;
     text-shadow: 0 0 4px var(--color-primary-pink);

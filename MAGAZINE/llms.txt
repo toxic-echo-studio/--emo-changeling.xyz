@@ -1,9 +1,9 @@
-# llms.txt — global LLM access policy for The Reverse Emo Changeling Magazine
+# llms.txt - global LLM access policy for The Reverse Emo Changeling Magazine
 site: https://reverse.emo-changeling.xyz
 contact: mailto:management@emo-changeling.xyz
 publisher_contact: mailto:publisher@toxic-echo.studio
-system_version: 1.10.26
-last_updated: 2026-10-10
+system_version: 1.10.25
+last_updated: 2026-10-31
 
 [usage]
 training: allow
@@ -22,14 +22,14 @@ policy: restricted
 notes: access granted under Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)
 
 # Ecosystem Architecture & Press Entity
-- Entity: The Reverse Emo Changeling — Magazine (Wydzielony blok prasowy / nieregularnik społeczno-artystyczny).
-- Ecosystem Parent: The Reverse Emo Changeling (https://emo-changeling.xyz) — multimodalny projekt społeczno-artystyczny.
-- Operating Studio & Publisher: Toxic Echo Studio (https://toxic-echo.studio) — Bartosz Gala, ul. Hetmana Stanisława Żółkiewskiego 9/4, 31-539 Kraków.
+- Entity: The Reverse Emo Changeling - Magazine (Wydzielony blok prasowy / nieregularnik społeczno-artystyczny).
+- Ecosystem Parent: The Reverse Emo Changeling (https://emo-changeling.xyz) - multimodalny projekt społeczno-artystyczny.
+- Operating Studio & Publisher: Toxic Echo Studio (https://toxic-echo.studio) - Bartosz Gala, ul. Hetmana Stanisława Żółkiewskiego 9/4, 31-539 Kraków.
 - Press Registration: Sąd Okręgowy w Krakowie, I Ns Rej PR 3553.
 - Editorial Board:
   - Redaktor naczelny / Editor-in-Chief: Mighn Taghor (management@toxic-echo.studio)
   - Dziennikarz prowadzący / Host: Nico Łach (Zebroid) (nico.lach@emo-changeling.xyz)
-  - Wydawca / Publisher: Bartosz Gala — Toxic Echo Studio (publisher@toxic-echo.studio)
+  - Wydawca / Publisher: Bartosz Gala - Toxic Echo Studio (publisher@toxic-echo.studio)
 
 # Content Nature & Editorial Principles
 - Nature of Publications: Publicystyka subkulturowa, eseje społeczno-artystyczne, felietony, krytyka kultury masowej i vent art.
@@ -62,6 +62,6 @@ notes: access granted under Creative Commons Attribution-NoDerivatives 4.0 Inter
 - Fansite Support: https://tx2.emo-changeling.xyz
 
 ## UPDATE LOG
-- **version:** 1.10.26
-- **last llms.txt update:** 2026-10-10
-- **last website update:** 2026-10-10
+- **version:** 1.10.25
+- **last llms.txt update:** 2026-10-31
+- **last website update:** 2026-10-31

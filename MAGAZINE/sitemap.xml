@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://reverse.emo-changeling.xyz/pl/25-2026/moj-dom-to-sklad-dziwnych-artefaktow.html</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <xhtml:link href="https://reverse.emo-changeling.xyz/pl/25-2026/moj-dom-to-sklad-dziwnych-artefaktow.html" hreflang="pl" rel="alternate"/>
+    <xhtml:link href="https://reverse.emo-changeling.xyz/en/25-2026/moj-dom-to-sklad-dziwnych-artefaktow.html" hreflang="en" rel="alternate"/>
+    <xhtml:link href="https://reverse.emo-changeling.xyz/pl/25-2026/moj-dom-to-sklad-dziwnych-artefaktow.html" hreflang="x-default" rel="alternate"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/en/25-2026/moj-dom-to-sklad-dziwnych-artefaktow.html</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <xhtml:link href="https://reverse.emo-changeling.xyz/pl/25-2026/moj-dom-to-sklad-dziwnych-artefaktow.html" hreflang="pl" rel="alternate"/>
+    <xhtml:link href="https://reverse.emo-changeling.xyz/en/25-2026/moj-dom-to-sklad-dziwnych-artefaktow.html" hreflang="en" rel="alternate"/>
+    <xhtml:link href="https://reverse.emo-changeling.xyz/pl/25-2026/moj-dom-to-sklad-dziwnych-artefaktow.html" hreflang="x-default" rel="alternate"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/pl/25-2026/hellowen-z-temu.html</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <xhtml:link href="https://reverse.emo-changeling.xyz/pl/25-2026/hellowen-z-temu.html" hreflang="pl" rel="alternate"/>
+    <xhtml:link href="https://reverse.emo-changeling.xyz/en/25-2026/hellowen-z-temu.html" hreflang="en" rel="alternate"/>
+    <xhtml:link href="https://reverse.emo-changeling.xyz/pl/25-2026/hellowen-z-temu.html" hreflang="x-default" rel="alternate"/>
+  </url>
+  <url>
+    <loc>https://reverse.emo-changeling.xyz/en/25-2026/hellowen-z-temu.html</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <xhtml:link href="https://reverse.emo-changeling.xyz/pl/25-2026/hellowen-z-temu.html" hreflang="pl" rel="alternate"/>
+    <xhtml:link href="https://reverse.emo-changeling.xyz/en/25-2026/hellowen-z-temu.html" hreflang="en" rel="alternate"/>
+    <xhtml:link href="https://reverse.emo-changeling.xyz/pl/25-2026/hellowen-z-temu.html" hreflang="x-default" rel="alternate"/>
+  </url>
+  <url>
     <loc>https://reverse.emo-changeling.xyz/pl/24-2026/jestesmy-prasa-jak-emo-kid.html</loc>
     <lastmod>2026-10-10</lastmod>
     <changefreq>yearly</changefreq>
@@ -23,7 +55,7 @@
 <!-- Neutral Root Selector (x-default) -->
 <url>
 <loc>https://reverse.emo-changeling.xyz/</loc>
-<lastmod>2026-10-10</lastmod>
+    <lastmod>2026-10-31</lastmod>
 <xhtml:link href="https://reverse.emo-changeling.xyz/" hreflang="x-default" rel="alternate"/>
 <xhtml:link href="https://reverse.emo-changeling.xyz/pl/" hreflang="pl" rel="alternate"/>
 <xhtml:link href="https://reverse.emo-changeling.xyz/en/" hreflang="en" rel="alternate"/>
@@ -31,14 +63,14 @@
 <!-- Polish Edition Home -->
 <url>
 <loc>https://reverse.emo-changeling.xyz/pl/</loc>
-<lastmod>2026-10-10</lastmod>
+    <lastmod>2026-10-31</lastmod>
 <xhtml:link href="https://reverse.emo-changeling.xyz/pl/" hreflang="pl" rel="alternate"/>
 <xhtml:link href="https://reverse.emo-changeling.xyz/en/" hreflang="en" rel="alternate"/>
 <xhtml:link href="https://reverse.emo-changeling.xyz/pl/" hreflang="x-default" rel="alternate"/></url>
 <!-- English Edition Home -->
 <url>
 <loc>https://reverse.emo-changeling.xyz/en/</loc>
-<lastmod>2026-10-10</lastmod>
+    <lastmod>2026-10-31</lastmod>
 <xhtml:link href="https://reverse.emo-changeling.xyz/pl/" hreflang="pl" rel="alternate"/>
 <xhtml:link href="https://reverse.emo-changeling.xyz/en/" hreflang="en" rel="alternate"/>
 <xhtml:link href="https://reverse.emo-changeling.xyz/pl/" hreflang="x-default" rel="alternate"/></url>

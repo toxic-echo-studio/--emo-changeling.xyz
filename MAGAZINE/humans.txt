@@ -13,7 +13,7 @@ Site: https://toxic-echo.studio
 LinkedIn: https://www.linkedin.com/in/mighn
 GitHub: https://github.com/Mighn
 
-Bartosz Gala — Toxic Echo Studio
+Bartosz Gala - Toxic Echo Studio
 Role: Wydawca / Publisher.
 Address: ul. Hetmana Stanisława Żółkiewskiego 9/4, 31-539 Kraków
 Contact: publisher@toxic-echo.studio
@@ -22,15 +22,15 @@ LinkedIn: https://www.linkedin.com/company/toxic-echo-studio
 GitHub: https://github.com/toxic-echo-studio
 
 /* PROJECT ECOSYSTEM */
-Project: The Reverse Emo Changeling — Magazine (Wydzielony blok prasowy)
+Project: The Reverse Emo Changeling - Magazine (Wydzielony blok prasowy)
 Parent Project: https://emo-changeling.xyz
 Operating Studio: https://toxic-echo.studio
 Main humans.txt: https://emo-changeling.xyz/humans.txt
 TX2 Support: https://tx2.emo-changeling.xyz
 
 /* SITE METRICS */
-Version: 1.10.23
-Last update: 2026-09-17
+Version: 1.10.25
+Last update: 2026-10-31
 Standards: HTML5, CSS3, Semantic Web, Schema.org (Periodical & Article), WCAG AA
 Components: sitemap.xml, robots.txt, llms.txt, ai.txt, rss-pl.xml, rss-en.xml
 Language Editions: Polish (/pl/), English (/en/)
