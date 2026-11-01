@@ -1,0 +1,17 @@
+# Reguly ignorowania plikow dla Cloudflare Workers Static Assets
+.env
+.env.*
+.gitignore
+.gitignore.asc
+.cfignore
+.cfignore.asc
+.assetsignore
+.assetsignore.asc
+wrangler.jsonc
+wrangler.jsonc.asc
+.state_*.json
+processed_folders.json
+processed_folders.json.asc
+*.py
+*.sh
+scratch/
