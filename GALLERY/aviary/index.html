@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="pl" data-version="3.1.2" data-build="20261022" data-system="Toxic Echo Studio">
+<html lang="pl" data-version="3.1.3" data-build="20261111" data-system="Toxic Echo Studio">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="preload" as="image" href="/img/bannerM1.webp" fetchpriority="high">
-    <link rel="preload" href="../css/style.css?v=20260625" as="style">
+    <link rel="preload" href="../css/style.css?v=20261111" as="style">
 
     <meta name="theme-color" content="#000000">
 
@@ -36,7 +36,7 @@
     <meta name="twitter:description" content="Kolekcja 'gołębich artów'.">
     <meta name="twitter:image" content="https://gallery.emo-changeling.xyz/img/bannerM1.webp">
 
-    <link rel="stylesheet" href="../css/style.css?v=20260625">
+    <link rel="stylesheet" href="../css/style.css?v=20261111">
 
     <script type="application/ld+json">
         {
@@ -119,8 +119,28 @@
         <button class="modal-close" id="modal-close" aria-label="Zamknij podgląd">✖</button>
 
         <div class="modal-content">
-            <div class="modal-image-container">
-                <img src="" alt="Pełny podgląd" class="modal-image" id="modal-image">
+                                                <div class="modal-image-container" id="modal-image-container">
+                <div class="modal-slide-title" id="modal-slide-title"></div>
+                <div class="modal-slider-row" id="modal-slider-row">
+                    <button type="button" class="tape-nav-btn tape-prev is-hidden" id="modal-prev-btn" aria-label="Poprzednia grafika">
+                        <svg viewBox="0 0 36 24" width="28" height="18" aria-hidden="true">
+                            <polygon points="18,3 4,12 18,21" fill="currentColor"></polygon>
+                            <polygon points="32,3 18,12 32,21" fill="currentColor"></polygon>
+                        </svg>
+                    </button>
+                    <div class="modal-slider-viewport" id="modal-slider-viewport">
+                        <div class="modal-slider-track" id="modal-slider-track">
+                            <div class="modal-slide"><img src="" alt="Pełny podgląd" class="modal-image" id="modal-image"></div>
+                        </div>
+                    </div>
+                    <div class="modal-slide-counter is-hidden" id="modal-slide-counter" aria-live="polite">[ 1 / 1 ]</div>
+                    <button type="button" class="tape-nav-btn tape-next is-hidden" id="modal-next-btn" aria-label="Następna grafika">
+                        <svg viewBox="0 0 36 24" width="28" height="18" aria-hidden="true">
+                            <polygon points="4,3 18,12 4,21" fill="currentColor"></polygon>
+                            <polygon points="18,3 32,12 18,21" fill="currentColor"></polygon>
+                        </svg>
+                    </button>
+                </div>
             </div>
 
             <div class="modal-description">
@@ -135,13 +155,18 @@
         </div>
     </div>
 
-    <script>
+                <script>
         const galleryData = [
             {
-                id: 'nokill',
+                id: 1,
                 thumb: '/graphics/aviary/2/thumb.webp',
                 title: 'NoKill',
-                link: 'nokill/'
+                descUrl: '/graphics/aviary/1/opis.html',
+                images: [
+                    { id: 1, full: '/graphics/aviary/1/full.webp', title: 'Gołąb #01: NoKill blue', download_tif: '/graphics/aviary/1/original.tif' },
+                    { id: 2, full: '/graphics/aviary/2/full.webp', title: 'Gołąb #02: NoKill red', download_tif: '/graphics/aviary/2/original.tif' },
+                    { id: 3, full: '/graphics/aviary/3/full.webp', title: 'Gołąb #03: NoKill yellow', download_tif: '/graphics/aviary/3/original.tif' }
+                ]
             },
             {
                 id: 4,
@@ -184,17 +209,24 @@
                 download_tif: '/graphics/aviary/8/original.tif'
             },
             {
-                id: 'ronnie',
+                id: 9,
                 thumb: '/graphics/aviary/9/thumb.webp',
                 title: 'Ronnie Radke',
-                link: 'ronnie/'
-            }
-        ,
+                descUrl: '/graphics/aviary/9/opis.html',
+                images: [
+                    { id: 9, full: '/graphics/aviary/9/full.webp', title: 'Ronnie Radkie (noise)', download_tif: '/graphics/aviary/9/original.png' },
+                    { id: 10, full: '/graphics/aviary/10/full.webp', title: 'Ronie Radkie no noise', download_tif: '/graphics/aviary/10/original.png' }
+                ]
+            },
             {
-                id: 'corky',
+                id: 11,
                 thumb: '/graphics/aviary/11/thumb.webp',
                 title: 'TX2 - Corky',
-                link: 'corky/'
+                descUrl: '/graphics/aviary/11/opis.html',
+                images: [
+                    { id: 11, full: '/graphics/aviary/11/full.webp', title: 'TX2 - Corky', download_tif: '/graphics/aviary/11/original.png' },
+                    { id: 12, full: '/graphics/aviary/12/full.webp', title: 'TX2 - Corky', download_tif: '/graphics/aviary/12/original.png' }
+                ]
             },
             {
                 id: 13,
@@ -208,12 +240,24 @@
 
         const grid = document.getElementById('gallery-grid');
         const modal = document.getElementById('gallery-modal');
-        const modalImg = document.getElementById('modal-image');
         const descContent = document.getElementById('description-content');
         const modalDetails = document.getElementById('modal-details');
         const downloadBtn = document.getElementById('modal-download-btn');
         const rotateBtn = document.getElementById('modal-rotate-btn');
         const modalContent = document.querySelector('.modal-content');
+        const slideTitleEl = document.getElementById('modal-slide-title');
+        const sliderViewport = document.getElementById('modal-slider-viewport');
+        const sliderTrack = document.getElementById('modal-slider-track');
+        const prevBtn = document.getElementById('modal-prev-btn');
+        const nextBtn = document.getElementById('modal-next-btn');
+        const slideCounter = document.getElementById('modal-slide-counter');
+
+        let currentSlides = [];
+        let currentSlideIndex = 0;
+        let isDragging = false;
+        let dragStartX = 0;
+        let dragDeltaX = 0;
+        let didDragMove = false;
 
         // Helper to check and convert HEIC images
         async function checkAndConvertHeic(imgElement) {
@@ -268,16 +312,11 @@
             checkAndConvertHeic(imgEl);
 
             cardDiv.addEventListener('click', () => {
-                if (item.link) {
-                    window.location.href = item.link;
-                } else {
-                    openModal(item);
-                }
+                openModal(item);
             });
             grid.appendChild(cardDiv);
         });
 
-        // Otwieranie Modala i Fetchowanie HTML
         // Synchronizacja języka galerii z preferencją użytkownika
         function syncGalleryLanguage() {
             try {
@@ -313,29 +352,144 @@
         }
         window.switchOpisLang = switchOpisLang;
 
+        function updateDownloadButton(slide) {
+            if (slide && slide.download_tif) {
+                downloadBtn.href = slide.download_tif;
+                downloadBtn.setAttribute('data-asc', slide.download_tif + '.asc');
+                downloadBtn.style.display = 'inline-block';
+                const lower = slide.download_tif.toLowerCase();
+                if (lower.endsWith('.png')) {
+                    downloadBtn.textContent = 'DOWNLOAD MAX QUALITY (.PNG)';
+                } else if (lower.endsWith('.jpg') || lower.endsWith('.jpeg')) {
+                    downloadBtn.textContent = 'DOWNLOAD MAX QUALITY (.JPG)';
+                } else {
+                    downloadBtn.textContent = 'DOWNLOAD MAX QUALITY (.TIF)';
+                }
+            } else {
+                downloadBtn.style.display = 'none';
+            }
+        }
+
+        function updateSlide(newIndex) {
+            if (!currentSlides.length) return;
+            currentSlideIndex = Math.max(0, Math.min(currentSlides.length - 1, newIndex));
+            sliderTrack.style.transition = '';
+            sliderTrack.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+
+            const activeSlide = currentSlides[currentSlideIndex];
+            if (slideTitleEl) {
+                slideTitleEl.textContent = (activeSlide.title || '').replace(/^Gołąb\s+#\d+:\s*/i, '');
+            }
+
+            updateDownloadButton(activeSlide);
+
+            if (currentSlides.length > 1) {
+                prevBtn.classList.remove('is-hidden');
+                nextBtn.classList.remove('is-hidden');
+                slideCounter.classList.remove('is-hidden');
+                prevBtn.disabled = (currentSlideIndex === 0);
+                nextBtn.disabled = (currentSlideIndex === currentSlides.length - 1);
+                slideCounter.textContent = `[ ${currentSlideIndex + 1} / ${currentSlides.length} ]`;
+                sliderViewport.classList.add('is-draggable');
+            } else {
+                prevBtn.classList.add('is-hidden');
+                nextBtn.classList.add('is-hidden');
+                slideCounter.classList.add('is-hidden');
+                sliderViewport.classList.remove('is-draggable');
+            }
+        }
+
+        prevBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (currentSlideIndex > 0) {
+                updateSlide(currentSlideIndex - 1);
+            }
+        });
+
+        nextBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (currentSlideIndex < currentSlides.length - 1) {
+                updateSlide(currentSlideIndex + 1);
+            }
+        });
+
+        // Obsługa przeciągania myszką i dotykiem na #modal-slider-viewport
+        sliderViewport.addEventListener('mousedown', (e) => {
+            if (currentSlides.length <= 1) return;
+            isDragging = true;
+            didDragMove = false;
+            dragStartX = e.clientX;
+            dragDeltaX = 0;
+            sliderTrack.style.transition = 'none';
+            e.preventDefault();
+        });
+
+        window.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            dragDeltaX = e.clientX - dragStartX;
+            if (Math.abs(dragDeltaX) > 5) {
+                didDragMove = true;
+            }
+            sliderTrack.style.transform = `translateX(calc(-${currentSlideIndex * 100}% + ${dragDeltaX}px))`;
+        });
+
+        function finishDrag() {
+            if (!isDragging) return;
+            isDragging = false;
+            sliderTrack.style.transition = '';
+            if (dragDeltaX < -40 && currentSlideIndex < currentSlides.length - 1) {
+                updateSlide(currentSlideIndex + 1);
+            } else if (dragDeltaX > 40 && currentSlideIndex > 0) {
+                updateSlide(currentSlideIndex - 1);
+            } else {
+                updateSlide(currentSlideIndex);
+            }
+            dragDeltaX = 0;
+            setTimeout(() => { didDragMove = false; }, 50);
+        }
+
+        window.addEventListener('mouseup', finishDrag);
+        sliderViewport.addEventListener('mouseleave', finishDrag);
+
+        sliderViewport.addEventListener('touchstart', (e) => {
+            if (currentSlides.length <= 1 || !e.touches.length) return;
+            isDragging = true;
+            didDragMove = false;
+            dragStartX = e.touches[0].clientX;
+            dragDeltaX = 0;
+            sliderTrack.style.transition = 'none';
+        }, { passive: true });
+
+        sliderViewport.addEventListener('touchmove', (e) => {
+            if (!isDragging || !e.touches.length) return;
+            dragDeltaX = e.touches[0].clientX - dragStartX;
+            if (Math.abs(dragDeltaX) > 5) {
+                didDragMove = true;
+            }
+            sliderTrack.style.transform = `translateX(calc(-${currentSlideIndex * 100}% + ${dragDeltaX}px))`;
+        }, { passive: true });
+
+        sliderViewport.addEventListener('touchend', finishDrag);
+
         async function openModal(item) {
             syncGalleryLanguage();
             modal.classList.add('active');
-            modalImg.src = item.full;
-            modalImg.alt = item.title;
+            currentSlides = (item.images && item.images.length > 0)
+                ? item.images
+                : [{ id: item.id, full: item.full, title: item.title, download_tif: item.download_tif }];
+
+            sliderTrack.innerHTML = currentSlides.map((s, idx) =>
+                `<div class="modal-slide" style="transform: translateX(${idx * 100}%)"><img src="${s.full}" alt="${(s.title || '').replace(/"/g, '&quot;')}" class="modal-image"></div>`
+            ).join('');
+
+            sliderTrack.querySelectorAll('img').forEach(img => checkAndConvertHeic(img));
+            updateSlide(0);
 
             if (item.descUrl) {
                 modalDetails.style.display = 'block';
                 modalDetails.removeAttribute('open');
                 modalContent.classList.remove('rotated');
                 descContent.innerHTML = document.documentElement.lang === 'en' ? '<span class="blink">Loading data from server...</span>' : '<span class="blink">Wczytywanie danych z serwera...</span>';
-                
-                if (item.download_tif) {
-                    downloadBtn.href = item.download_tif;
-                    downloadBtn.style.display = 'inline-block';
-                    if (item.download_tif.toLowerCase().endsWith('.png')) {
-                        downloadBtn.textContent = 'DOWNLOAD MAX QUALITY (.PNG)';
-                    } else {
-                        downloadBtn.textContent = 'DOWNLOAD MAX QUALITY (.TIF)';
-                    }
-                } else {
-                    downloadBtn.style.display = 'none';
-                }
 
                 try {
                     const response = await fetch(item.descUrl);
@@ -362,7 +516,7 @@
                             b.removeAttribute('aria-current');
                         }
                     });
-                    
+
                     const descImages = descContent.querySelectorAll('img');
                     descImages.forEach(img => checkAndConvertHeic(img));
                 } catch (error) {
@@ -370,22 +524,15 @@
                 }
             } else {
                 modalDetails.style.display = 'none';
-                if (item.download_tif) {
-                    downloadBtn.href = item.download_tif;
-                    downloadBtn.style.display = 'inline-block';
-                    if (item.download_tif.toLowerCase().endsWith('.png')) {
-                        downloadBtn.textContent = 'DOWNLOAD MAX QUALITY (.PNG)';
-                    } else {
-                        downloadBtn.textContent = 'DOWNLOAD MAX QUALITY (.TIF)';
-                    }
-                } else {
-                    downloadBtn.style.display = 'none';
-                }
+                modalDetails.removeAttribute('open');
+                modalContent.classList.remove('rotated');
             }
-        }// Obracanie układu na mobilkach
+        }
+
+        // Obracanie układu na mobilkach
         if (rotateBtn) {
             rotateBtn.addEventListener('click', (e) => {
-                e.stopPropagation(); // Żeby kliknięcie w przycisk nie zamykało modala
+                e.stopPropagation();
                 modalContent.classList.toggle('rotated');
             });
         }
@@ -393,25 +540,39 @@
         // Funkcja zamykająca modal
         function closeModal() {
             modal.classList.remove('active');
-            modalImg.src = '';
+            sliderTrack.innerHTML = '';
             modalContent.classList.remove('rotated');
             downloadBtn.style.display = 'none';
             downloadBtn.href = '';
+            downloadBtn.removeAttribute('data-asc');
         }
 
         const modalCloseBtn = document.getElementById('modal-close');
         if (modalCloseBtn) {
             modalCloseBtn.addEventListener('click', (e) => {
                 e.preventDefault();
-                e.stopPropagation(); // Ten knebel ratuje sytuację
+                e.stopPropagation();
                 closeModal();
             });
         }
 
         // Zamknięcie modala po kliknięciu poza obrazek (w tło)
         modal.addEventListener('click', (e) => {
-            if (e.target === modal || e.target.classList.contains('modal-content')) {
+            if (didDragMove) return;
+            if (e.target === modal || e.target.classList.contains('modal-content') || e.target.classList.contains('modal-slider-row')) {
                 closeModal();
+            }
+        });
+
+        // Obsługa klawiatury (ArrowLeft, ArrowRight, Escape)
+        document.addEventListener('keydown', (e) => {
+            if (!modal.classList.contains('active')) return;
+            if (e.key === 'Escape') {
+                closeModal();
+            } else if (e.key === 'ArrowLeft' && currentSlides.length > 1) {
+                if (currentSlideIndex > 0) updateSlide(currentSlideIndex - 1);
+            } else if (e.key === 'ArrowRight' && currentSlides.length > 1) {
+                if (currentSlideIndex < currentSlides.length - 1) updateSlide(currentSlideIndex + 1);
             }
         });
 

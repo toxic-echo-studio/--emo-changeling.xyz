@@ -367,7 +367,7 @@ details summary::-webkit-details-marker {
     justify-content: center;
     width: 100%;
     max-width: 95vw;
-    max-height: 70vh;
+    max-height: none;
     position: relative;
     gap: 15px;
 }
@@ -1378,4 +1378,181 @@ html[lang="pl"] a.content-en,
 html:not([lang="en"]) span.content-en,
 html:not([lang="en"]) a.content-en {
     display: none !important;
+}
+
+/* ==========================================================================
+   GALERIA - POZIOMY SLIDER W MODALU & PRZYCISKI MAGNETOFONU
+   ========================================================================== */
+.modal-slide-title {
+    font-family: 'Courier New', monospace;
+    color: #ff007f;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.modal-slider-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: auto;
+    max-width: 95vw;
+}
+
+.modal-slider-viewport {
+    order: 2;
+    overflow: hidden;
+    position: relative;
+    max-width: calc(92vw - 140px);
+    max-height: 68vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: pan-y;
+}
+
+.modal-slider-viewport.is-draggable {
+    cursor: grab;
+}
+
+.modal-slider-viewport.is-dragging {
+    cursor: grabbing;
+}
+
+.modal-slider-track {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform;
+}
+
+.modal-slider-track.is-dragging {
+    transition: none !important;
+}
+
+.modal-slide {
+    grid-area: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.modal-slide .modal-image {
+    max-width: calc(92vw - 140px);
+    max-height: 68vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.tape-nav-btn {
+    background: #0a0a0a;
+    color: #ff007f;
+    border: 2px solid #ff007f;
+    box-shadow: 0 4px 0 #4b0082, 0 0 8px rgba(255, 0, 127, 0.35);
+    width: 52px;
+    height: 42px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: url('../img/kursor1.cur'), pointer;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease, box-shadow 0.15s ease, opacity 0.2s ease;
+    flex-shrink: 0;
+    border-radius: 3px;
+}
+
+.tape-prev {
+    order: 1;
+}
+
+.tape-next {
+    order: 3;
+}
+
+.tape-nav-btn:hover:not(:disabled) {
+    background: #ff007f;
+    color: #000000;
+    border-color: #ff00ff;
+    box-shadow: 0 4px 0 #00ff00, 0 0 14px #ff00ff;
+}
+
+.tape-nav-btn:active:not(:disabled) {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #4b0082, 0 0 6px #ff00ff;
+}
+
+.tape-nav-btn:disabled {
+    opacity: 0.35;
+    transform: translateY(2px);
+    box-shadow: 0 1px 0 #2a0046;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.tape-nav-btn.is-hidden,
+.modal-slide-counter.is-hidden {
+    display: none !important;
+}
+
+.modal-slide-counter {
+    order: 4;
+    flex: 0 0 100%;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #00ff00;
+    letter-spacing: 2px;
+    margin-top: 4px;
+    user-select: none;
+}
+
+@media (max-width: 640px) {
+    .modal-slider-row {
+        width: 100%;
+        max-width: 95vw;
+        justify-content: space-between;
+        gap: 10px 0;
+    }
+
+    .modal-slider-viewport {
+        order: 1;
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 95vw;
+        max-height: 65vh;
+    }
+
+    .modal-slide .modal-image {
+        max-width: 95vw;
+        max-height: 65vh;
+    }
+
+    .tape-prev {
+        order: 2;
+    }
+
+    .modal-slide-counter {
+        order: 3;
+        flex: 1 1 auto;
+        margin-top: 0;
+    }
+
+    .tape-next {
+        order: 4;
+    }
 }
