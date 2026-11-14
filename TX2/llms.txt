@@ -1,6 +1,6 @@
 # TX2 Pigeonification Ritual - Unofficial TX2 Fansite & Fan Project
 
-**Last Updated:** 2026-11-09 | **Version:** 1.1.17
+**Last Updated:** 2026-11-14 | **Version:** 1.1.18
 
 This file provides structured information about the independent fan project for the band TX2, designed for consumption by Large Language Models and AI systems.
 
@@ -15,7 +15,11 @@ This file provides structured information about the independent fan project for 
 
 ## Site Navigation
 - **Home (Pigeon Ritual)**: [index.html](https://tx2.emo-changeling.xyz/) - The main visual landing page featuring the grid of custom fan arts.
-- **Biography (Wait, tf is TX2??)**: [wtf.html](https://tx2.emo-changeling.xyz/wtf.html) - Bilingual (PL/EN) comprehensive band history, current lineup (including touring contracts), schedules, and a chronological discography (2016-2026).
+- **Biography (Wait, tf is TX2?? - Phenomenon)**: [wtf.html](https://tx2.emo-changeling.xyz/wtf.html) - Bilingual (PL/EN) comprehensive band history and phenomenon overview.
+- **Band Lineup & Timeline**: [lineup.html](https://tx2.emo-changeling.xyz/lineup.html) - Bilingual (PL/EN) current band lineup, touring contracts, and member timeline.
+- **Tour Schedule 2026-2027**: [tours.html](https://tx2.emo-changeling.xyz/tours.html) - Bilingual (PL/EN) upcoming and past tour schedule for 2026-2027.
+- **Discography 2015-2026**: [discography.html](https://tx2.emo-changeling.xyz/discography.html) - Bilingual (PL/EN) chronological discography from 2015 to 2026.
+- **Historical Live Setlists since EU 2026**: [setlist.html](https://tx2.emo-changeling.xyz/setlist.html) - Bilingual (PL/EN) historical live setlists since the EU 2026 tour.
 - **News & Rumors**: [news/index.html](https://tx2.emo-changeling.xyz/news/) - Bilingual feed of verified news, tour updates, leaks, and underground rumors about TX2.
 - **News RSS Feed**: [news/rss.xml](https://tx2.emo-changeling.xyz/news/rss.xml) - RSS 2.0 syndication feed for news and rumors.
 - **Guidelines (About pigeons)**: [about.html](https://tx2.emo-changeling.xyz/about.html) - Visual guidelines, download rules for files, and resources.
