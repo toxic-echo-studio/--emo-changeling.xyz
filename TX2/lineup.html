@@ -55,19 +55,124 @@
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "CreativeWork",
+          "@type": "WebSite",
+          "@id": "https://tx2.emo-changeling.xyz/#website",
+          "url": "https://tx2.emo-changeling.xyz/",
+          "name": "TX2 Pigeonification Ritual - Unofficial TX2 Fansite & Fan Project"
+        },
+        {
+          "@type": "MusicGroup",
+          "@id": "https://tx2.emo-changeling.xyz/#musicgroup",
+          "name": "TX2",
+          "foundingDate": "2015",
+          "foundingLocation": {
+            "@type": "Place",
+            "name": "Fort Collins, Colorado, USA"
+          },
+          "genre": [
+            "Alternative Rock",
+            "Pop-Punk",
+            "Emo"
+          ],
+          "sameAs": [
+            "https://tx2merch.com/",
+            "https://www.hopelessrecords.com/artist-tx2",
+            "https://www.youtube.com/@TX2OFFICIAL",
+            "https://musicbrainz.org/artist/066d482d-1ea9-42da-9fc7-c87cb7ca2626"
+          ],
+          "member": [
+            {
+              "@type": "OrganizationRole",
+              "member": {
+                "@type": "Person",
+                "name": "Timothy Evan Thomas (Evan)"
+              },
+              "roleName": "Vocals / Founder",
+              "startDate": "2015"
+            },
+            {
+              "@type": "OrganizationRole",
+              "member": {
+                "@type": "Person",
+                "name": "Cameron \"Cam\" Rostami"
+              },
+              "roleName": "Guitar / Backing Vocals / Co-Director",
+              "startDate": "2022"
+            },
+            {
+              "@type": "OrganizationRole",
+              "member": {
+                "@type": "Person",
+                "name": "Courtney \"Corky\" Howard"
+              },
+              "roleName": "Bass / Co-Vocals",
+              "startDate": "2023"
+            },
+            {
+              "@type": "OrganizationRole",
+              "member": {
+                "@type": "Person",
+                "name": "Ethan Church Vaillancourt (Ethan Church)"
+              },
+              "roleName": "Main Touring Drummer",
+              "startDate": "2025"
+            },
+            {
+              "@type": "OrganizationRole",
+              "member": {
+                "@type": "Person",
+                "name": "Sam Palombo"
+              },
+              "roleName": "Session / Touring Drummer"
+            },
+            {
+              "@type": "OrganizationRole",
+              "member": {
+                "@type": "Person",
+                "name": "Joey Barba"
+              },
+              "roleName": "Contract Studio Producer / Mixer / Session Guitarist"
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://tx2.emo-changeling.xyz/lineup.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Pigeon Ritual",
+              "item": "https://tx2.emo-changeling.xyz/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Wait, tf is TX2??",
+              "item": "https://tx2.emo-changeling.xyz/wtf.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Band Lineup",
+              "item": "https://tx2.emo-changeling.xyz/lineup.html"
+            }
+          ]
+        },
+        {
+          "@type": "WebPage",
           "@id": "https://tx2.emo-changeling.xyz/lineup.html#webpage",
           "url": "https://tx2.emo-changeling.xyz/lineup.html",
           "name": "Band Lineup - Wait, tf is TX2?? - TX2 Unofficial Fansite",
           "description": "Official core members, touring and studio musicians, and lineup timeline of the alternative rock band TX2.",
           "dateModified": "2026-11-14",
           "isPartOf": {
-            "@type": "WebSite",
-            "@id": "https://tx2.emo-changeling.xyz/#website",
-            "url": "https://tx2.emo-changeling.xyz/",
-            "name": "TX2 Pigeonification Ritual - Unofficial TX2 Fansite & Fan Project"
+            "@id": "https://tx2.emo-changeling.xyz/#website"
           },
-          "inLanguage": ["en", "pl"],
+          "inLanguage": [
+            "en",
+            "pl"
+          ],
           "creator": [
             {
               "@type": "Person",
@@ -85,7 +190,22 @@
             "name": "Toxic Echo Studio",
             "url": "https://toxic-echo.studio/",
             "description": "Technical infrastructure and voluntary non-commercial support."
-          }
+          },
+          "mainEntity": {
+            "@id": "https://tx2.emo-changeling.xyz/#musicgroup"
+          },
+          "breadcrumb": {
+            "@id": "https://tx2.emo-changeling.xyz/lineup.html#breadcrumb"
+          },
+          "citation": [
+            "https://303magazine.com/2022/02/tx2-makes-music-for-lonely-people-to-feel-heard/",
+            "https://thering.vip/",
+            "https://www.hopelessrecords.com/artist-tx2",
+            "https://www.discogs.com/artist/4289153-TX2",
+            "https://musicbrainz.org/artist/066d482d-1ea9-42da-9fc7-c87cb7ca2626",
+            "https://rocknloadmag.com/tx2-release-defiant-new-single-witch-hunt/",
+            "https://www.youtube.com/@TX2OFFICIAL"
+          ]
         }
       ]
     }

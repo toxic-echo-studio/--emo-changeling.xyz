@@ -55,19 +55,70 @@
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "CreativeWork",
+          "@type": "WebSite",
+          "@id": "https://tx2.emo-changeling.xyz/#website",
+          "url": "https://tx2.emo-changeling.xyz/",
+          "name": "TX2 Pigeonification Ritual - Unofficial TX2 Fansite & Fan Project"
+        },
+        {
+          "@type": "MusicGroup",
+          "@id": "https://tx2.emo-changeling.xyz/#musicgroup",
+          "name": "TX2",
+          "foundingDate": "2015",
+          "foundingLocation": {
+            "@type": "Place",
+            "name": "Fort Collins, Colorado, USA"
+          },
+          "genre": [
+            "Alternative Rock",
+            "Pop-Punk",
+            "Emo"
+          ],
+          "sameAs": [
+            "https://tx2merch.com/",
+            "https://www.hopelessrecords.com/artist-tx2",
+            "https://www.youtube.com/@TX2OFFICIAL",
+            "https://musicbrainz.org/artist/066d482d-1ea9-42da-9fc7-c87cb7ca2626"
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://tx2.emo-changeling.xyz/discography.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Pigeon Ritual",
+              "item": "https://tx2.emo-changeling.xyz/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Wait, tf is TX2??",
+              "item": "https://tx2.emo-changeling.xyz/wtf.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Discography",
+              "item": "https://tx2.emo-changeling.xyz/discography.html"
+            }
+          ]
+        },
+        {
+          "@type": "CollectionPage",
           "@id": "https://tx2.emo-changeling.xyz/discography.html#webpage",
           "url": "https://tx2.emo-changeling.xyz/discography.html",
           "name": "Discography - Wait, tf is TX2?? - TX2 Unofficial Fansite",
           "description": "Complete TX2 discography from 2015 to 2026: studio albums, EPs, mixtapes, singles, guest appearances, compilations, and social media demos.",
           "dateModified": "2026-11-14",
           "isPartOf": {
-            "@type": "WebSite",
-            "@id": "https://tx2.emo-changeling.xyz/#website",
-            "url": "https://tx2.emo-changeling.xyz/",
-            "name": "TX2 Pigeonification Ritual - Unofficial TX2 Fansite & Fan Project"
+            "@id": "https://tx2.emo-changeling.xyz/#website"
           },
-          "inLanguage": ["en", "pl"],
+          "inLanguage": [
+            "en",
+            "pl"
+          ],
           "creator": [
             {
               "@type": "Person",
@@ -85,7 +136,134 @@
             "name": "Toxic Echo Studio",
             "url": "https://toxic-echo.studio/",
             "description": "Technical infrastructure and voluntary non-commercial support."
-          }
+          },
+          "about": {
+            "@id": "https://tx2.emo-changeling.xyz/#musicgroup"
+          },
+          "mainEntity": {
+            "@id": "https://tx2.emo-changeling.xyz/discography.html#releases"
+          },
+          "breadcrumb": {
+            "@id": "https://tx2.emo-changeling.xyz/discography.html#breadcrumb"
+          },
+          "citation": [
+            "https://www.discogs.com/artist/4289153-TX2",
+            "https://musicbrainz.org/artist/066d482d-1ea9-42da-9fc7-c87cb7ca2626",
+            "https://www.hopelessrecords.com/artist-tx2",
+            "https://www.kerrang.com/tx2-celebrate-self-empowerment-on-new-single-i-am-the-enemy",
+            "https://rocknloadmag.com/news/tx2-release-new-single-i-am-the-enemy/",
+            "https://rocknloadmag.com/tx2-release-defiant-new-single-witch-hunt/",
+            "https://www.youtube.com/@TX2OFFICIAL"
+          ]
+        },
+        {
+          "@type": "ItemList",
+          "@id": "https://tx2.emo-changeling.xyz/discography.html#releases",
+          "name": "TX2 Discography",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@type": "MusicAlbum",
+                "name": "DROP DEAD - EP",
+                "datePublished": "2022",
+                "byArtist": {
+                  "@id": "https://tx2.emo-changeling.xyz/#musicgroup"
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@type": "MusicAlbum",
+                "name": "Ghost Of LA - EP",
+                "datePublished": "2023",
+                "byArtist": {
+                  "@id": "https://tx2.emo-changeling.xyz/#musicgroup"
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "item": {
+                "@type": "MusicAlbum",
+                "name": "Cruel World - EP",
+                "datePublished": "2024-10-30",
+                "byArtist": {
+                  "@id": "https://tx2.emo-changeling.xyz/#musicgroup"
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "item": {
+                "@type": "MusicAlbum",
+                "name": "End Of Us",
+                "datePublished": "2026-02-13",
+                "recordLabel": {
+                  "@type": "Organization",
+                  "name": "Hopeless Records"
+                },
+                "numTracks": 13,
+                "byArtist": {
+                  "@id": "https://tx2.emo-changeling.xyz/#musicgroup"
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
+              "item": {
+                "@type": "MusicRecording",
+                "name": "Eat My Heart / Prescription For Love",
+                "datePublished": "2026-04-03",
+                "byArtist": {
+                  "@id": "https://tx2.emo-changeling.xyz/#musicgroup"
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 6,
+              "item": {
+                "@type": "MusicAlbum",
+                "name": "We're Going To Hell For This... EP",
+                "datePublished": "2026-07-30",
+                "numTracks": 5,
+                "byArtist": {
+                  "@id": "https://tx2.emo-changeling.xyz/#musicgroup"
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 7,
+              "item": {
+                "@type": "MusicRecording",
+                "name": "Witch Hunt",
+                "datePublished": "2026-10-08",
+                "byArtist": {
+                  "@id": "https://tx2.emo-changeling.xyz/#musicgroup"
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 8,
+              "item": {
+                "@type": "MusicRecording",
+                "name": "I AM THE ENEMY",
+                "datePublished": "2026-11-12",
+                "byArtist": {
+                  "@id": "https://tx2.emo-changeling.xyz/#musicgroup"
+                }
+              }
+            }
+          ]
         }
       ]
     }
