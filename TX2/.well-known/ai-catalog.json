@@ -27,6 +27,17 @@
       ]
     },
     {
+      "identifier": "urn:air:tx2:archive:tours-pre-2026",
+      "displayName": "TX2 Concert Archive (2018 - Pre-June 2026)",
+      "type": "text/html",
+      "url": "https://tx2.emo-changeling.xyz/tours_archive.html",
+      "representativeQueries": [
+        "tx2 concert archive before june 2026",
+        "tx2 past tour dates 2022 2023 2024 2025",
+        "tx2 touring history and setlist certainty"
+      ]
+    },
+    {
       "identifier": "urn:air:tx2:policy:ai-manifest",
       "displayName": "AI Usage Policy and Permissions",
       "type": "text/plain",

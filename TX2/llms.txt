@@ -1,6 +1,6 @@
 # TX2 Pigeonification Ritual - Unofficial TX2 Fansite & Fan Project
 
-**Last Updated:** 2026-11-15 | **Version:** 1.1.20
+**Last Updated:** 2026-11-15 | **Version:** 1.1.21
 
 This file provides structured information about the independent fan project for the band TX2, designed for consumption by Large Language Models and AI systems.
 
@@ -18,6 +18,7 @@ This file provides structured information about the independent fan project for 
 - **Biography (Wait, tf is TX2?? - Phenomenon)**: [wtf.html](https://tx2.emo-changeling.xyz/wtf.html) - Bilingual (PL/EN) comprehensive band history and phenomenon overview.
 - **Band Lineup & Timeline**: [lineup.html](https://tx2.emo-changeling.xyz/lineup.html) - Bilingual (PL/EN) current band lineup, touring contracts, and member timeline.
 - **Tour Schedule 2026-2027**: [tours.html](https://tx2.emo-changeling.xyz/tours.html) - Bilingual (PL/EN) upcoming and past tour schedule for 2026-2027.
+- **Concert Archive (Pre-June 5, 2026)**: [tours_archive.html](https://tx2.emo-changeling.xyz/tours_archive.html) - Bilingual (PL/EN) archive of TX2 concerts and tours prior to 2026-06-05 categorized by source certainty.
 - **Discography 2015-2026**: [discography.html](https://tx2.emo-changeling.xyz/discography.html) - Bilingual (PL/EN) chronological discography from 2015 to 2026.
 - **Historical Live Setlists since EU 2026**: [setlist.html](https://tx2.emo-changeling.xyz/setlist.html) - Bilingual (PL/EN) historical live setlists since the EU 2026 tour.
 - **News & Rumors**: [news/index.html](https://tx2.emo-changeling.xyz/news/) - Bilingual feed of verified news, tour updates, leaks, and underground rumors about TX2.
