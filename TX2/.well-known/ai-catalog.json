@@ -38,6 +38,17 @@
       ]
     },
     {
+      "identifier": "urn:air:tx2:archive:live-setlists",
+      "displayName": "TX2 Historical Live Setlists (2018-2026)",
+      "type": "text/html",
+      "url": "https://tx2.emo-changeling.xyz/setlist.html",
+      "representativeQueries": [
+        "tx2 live setlists 2018 2024 2025 2026",
+        "tx2 tour setlist songs black veil brides ice nine kills",
+        "tx2 end of us tour setlist"
+      ]
+    },
+    {
       "identifier": "urn:air:tx2:policy:ai-manifest",
       "displayName": "AI Usage Policy and Permissions",
       "type": "text/plain",

@@ -1,6 +1,6 @@
 # TX2 Pigeonification Ritual - Unofficial TX2 Fansite & Fan Project
 
-**Last Updated:** 2026-11-15 | **Version:** 1.1.21
+**Last Updated:** 2026-11-15 | **Version:** 1.1.22
 
 This file provides structured information about the independent fan project for the band TX2, designed for consumption by Large Language Models and AI systems.
 
@@ -20,7 +20,7 @@ This file provides structured information about the independent fan project for 
 - **Tour Schedule 2026-2027**: [tours.html](https://tx2.emo-changeling.xyz/tours.html) - Bilingual (PL/EN) upcoming and past tour schedule for 2026-2027.
 - **Concert Archive (Pre-June 5, 2026)**: [tours_archive.html](https://tx2.emo-changeling.xyz/tours_archive.html) - Bilingual (PL/EN) archive of TX2 concerts and tours prior to 2026-06-05 categorized by source certainty.
 - **Discography 2015-2026**: [discography.html](https://tx2.emo-changeling.xyz/discography.html) - Bilingual (PL/EN) chronological discography from 2015 to 2026.
-- **Historical Live Setlists since EU 2026**: [setlist.html](https://tx2.emo-changeling.xyz/setlist.html) - Bilingual (PL/EN) historical live setlists since the EU 2026 tour.
+- **Historical Live Setlists (2018-2026)**: [setlist.html](https://tx2.emo-changeling.xyz/setlist.html) - Bilingual (PL/EN) archive of TX2 live setlists, source quality notes, aggregator contamination caveats, and missing-setlist logs from 2018 through late 2026.
 - **News & Rumors**: [news/index.html](https://tx2.emo-changeling.xyz/news/) - Bilingual feed of verified news, tour updates, leaks, and underground rumors about TX2.
 - **News RSS Feed**: [news/rss.xml](https://tx2.emo-changeling.xyz/news/rss.xml) - RSS 2.0 syndication feed for news and rumors.
 - **Guidelines (About pigeons)**: [about.html](https://tx2.emo-changeling.xyz/about.html) - Visual guidelines, download rules for files, and resources.
