@@ -41,6 +41,7 @@ def save_registry(registry):
     try:
         with open(REGISTRY_PATH, 'w', encoding='utf-8') as f:
             json.dump(registry, f, indent=2, ensure_ascii=False)
+        gpg_sign_file(REGISTRY_PATH)
     except Exception as e:
         print(f"Error saving registry: {e}")
 
@@ -657,11 +658,15 @@ def build_modal_and_script_html(category, gallery_data_js_str):
             updateDownloadButton(activeSlide);
 
             if (currentSlides.length > 1) {{
+                const isAtStart = (currentSlideIndex === 0);
+                const isAtEnd = (currentSlideIndex === currentSlides.length - 1);
                 prevBtn.classList.remove('is-hidden');
                 nextBtn.classList.remove('is-hidden');
                 slideCounter.classList.remove('is-hidden');
-                prevBtn.disabled = (currentSlideIndex === 0);
-                nextBtn.disabled = (currentSlideIndex === currentSlides.length - 1);
+                prevBtn.classList.toggle('is-disabled', isAtStart);
+                nextBtn.classList.toggle('is-disabled', isAtEnd);
+                prevBtn.setAttribute('aria-disabled', String(isAtStart));
+                nextBtn.setAttribute('aria-disabled', String(isAtEnd));
                 slideCounter.textContent = `[ ${{currentSlideIndex + 1}} / ${{currentSlides.length}} ]`;
                 sliderViewport.classList.add('is-draggable');
             }} else {{
@@ -673,6 +678,7 @@ def build_modal_and_script_html(category, gallery_data_js_str):
         }}
 
         prevBtn.addEventListener('click', (e) => {{
+            e.preventDefault();
             e.stopPropagation();
             if (currentSlideIndex > 0) {{
                 updateSlide(currentSlideIndex - 1);
@@ -680,6 +686,7 @@ def build_modal_and_script_html(category, gallery_data_js_str):
         }});
 
         nextBtn.addEventListener('click', (e) => {{
+            e.preventDefault();
             e.stopPropagation();
             if (currentSlideIndex < currentSlides.length - 1) {{
                 updateSlide(currentSlideIndex + 1);
@@ -832,6 +839,7 @@ def build_modal_and_script_html(category, gallery_data_js_str):
         // Zamknięcie modala po kliknięciu poza obrazek (w tło)
         modal.addEventListener('click', (e) => {{
             if (didDragMove) return;
+            if (e.target.closest('.tape-nav-btn') || e.target.closest('.modal-slide-counter')) return;
             if (e.target === modal || e.target.classList.contains('modal-content') || e.target.classList.contains('modal-slider-row')) {{
                 closeModal();
             }}
@@ -933,9 +941,9 @@ def update_category_index(category, new_items):
     )
     
     # Update version and build metadata
-    html = re.sub(r'data-version="[^"]*"', 'data-version="3.1.3"', html)
-    html = re.sub(r'data-build="\d+"', 'data-build="20261111"', html)
-    html = re.sub(r'style\.css\?v=\d+', 'style.css?v=20261111', html)
+    html = re.sub(r'data-version="[^"]*"', 'data-version="3.1.4"', html)
+    html = re.sub(r'data-build="\d+"', 'data-build="20261115"', html)
+    html = re.sub(r'style\.css\?v=\d+', 'style.css?v=20261115', html)
     
     with open(index_path, 'w', encoding='utf-8') as f:
         f.write(html)
@@ -974,7 +982,7 @@ def cleanup_old_subgalleries_and_metadata(migrated_dirs=None):
             '',
             xml
         )
-        xml = re.sub(r'<lastmod>.*?</lastmod>', '<lastmod>2026-11-11</lastmod>', xml)
+        xml = re.sub(r'<lastmod>.*?</lastmod>', '<lastmod>2026-11-15</lastmod>', xml)
         with open(SITEMAP_PATH, 'w', encoding='utf-8') as f:
             f.write(xml)
         print("Cleaned up and updated sitemap.xml")
@@ -993,9 +1001,9 @@ def cleanup_old_subgalleries_and_metadata(migrated_dirs=None):
         if os.path.exists(hpath):
             with open(hpath, 'r', encoding='utf-8') as f:
                 hcontent = f.read()
-            hcontent = re.sub(r'data-version="[^"]*"', 'data-version="3.1.3"', hcontent)
-            hcontent = re.sub(r'data-build="\d+"', 'data-build="20261111"', hcontent)
-            hcontent = re.sub(r'style\.css\?v=\d+', 'style.css?v=20261111', hcontent)
+            hcontent = re.sub(r'data-version="[^"]*"', 'data-version="3.1.4"', hcontent)
+            hcontent = re.sub(r'data-build="\d+"', 'data-build="20261115"', hcontent)
+            hcontent = re.sub(r'style\.css\?v=\d+', 'style.css?v=20261115', hcontent)
             with open(hpath, 'w', encoding='utf-8') as f:
                 f.write(hcontent)
             gpg_sign_file(hpath)
@@ -1010,9 +1018,9 @@ def cleanup_old_subgalleries_and_metadata(migrated_dirs=None):
         if os.path.exists(mpath):
             with open(mpath, 'r', encoding='utf-8') as f:
                 mcontent = f.read()
-            mcontent = re.sub(r'2026-\d{2}-\d{2}', '2026-11-11', mcontent)
-            mcontent = re.sub(r'2026/\d{2}/\d{2}', '2026/11/11', mcontent)
-            mcontent = re.sub(r'2026\d{4}', '20261111', mcontent)
+            mcontent = re.sub(r'2026-\d{2}-\d{2}', '2026-11-15', mcontent)
+            mcontent = re.sub(r'2026/\d{2}/\d{2}', '2026/11/15', mcontent)
+            mcontent = re.sub(r'2026\d{4}', '20261115', mcontent)
             with open(mpath, 'w', encoding='utf-8') as f:
                 f.write(mcontent)
             gpg_sign_file(mpath)

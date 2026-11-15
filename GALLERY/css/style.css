@@ -1483,23 +1483,27 @@ html:not([lang="en"]) a.content-en {
     order: 3;
 }
 
-.tape-nav-btn:hover:not(:disabled) {
+.tape-nav-btn:hover:not(:disabled):not(.is-disabled) {
     background: #ff007f;
     color: #000000;
     border-color: #ff00ff;
     box-shadow: 0 4px 0 #00ff00, 0 0 14px #ff00ff;
 }
 
-.tape-nav-btn:active:not(:disabled) {
+.tape-nav-btn:active:not(:disabled):not(.is-disabled) {
     transform: translateY(2px);
     box-shadow: 0 2px 0 #4b0082, 0 0 6px #ff00ff;
 }
 
-.tape-nav-btn:disabled {
+.tape-nav-btn:disabled,
+.tape-nav-btn.is-disabled {
     opacity: 0.35;
     transform: translateY(2px);
     box-shadow: 0 1px 0 #2a0046;
     cursor: not-allowed;
+}
+
+.tape-nav-btn svg {
     pointer-events: none;
 }
 

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="pl" data-version="3.1.3" data-build="20261111" data-system="Toxic Echo Studio">
+<html lang="pl" data-version="3.1.4" data-build="20261115" data-system="Toxic Echo Studio">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="preload" as="image" href="/img/bannerM1.webp" fetchpriority="high">
-    <link rel="preload" href="../css/style.css?v=20261111" as="style">
+    <link rel="preload" href="../css/style.css?v=20261115" as="style">
 
     <meta name="theme-color" content="#000000">
 
@@ -36,7 +36,7 @@
     <meta name="twitter:description" content="Kolekcja 'gołębich artów'.">
     <meta name="twitter:image" content="https://gallery.emo-changeling.xyz/img/bannerM1.webp">
 
-    <link rel="stylesheet" href="../css/style.css?v=20261111">
+    <link rel="stylesheet" href="../css/style.css?v=20261115">
 
     <script type="application/ld+json">
         {
@@ -119,7 +119,7 @@
         <button class="modal-close" id="modal-close" aria-label="Zamknij podgląd">✖</button>
 
         <div class="modal-content">
-                                                <div class="modal-image-container" id="modal-image-container">
+                                                            <div class="modal-image-container" id="modal-image-container">
                 <div class="modal-slide-title" id="modal-slide-title"></div>
                 <div class="modal-slider-row" id="modal-slider-row">
                     <button type="button" class="tape-nav-btn tape-prev is-hidden" id="modal-prev-btn" aria-label="Poprzednia grafika">
@@ -155,7 +155,7 @@
         </div>
     </div>
 
-                <script>
+                    <script>
         const galleryData = [
             {
                 id: 1,
@@ -384,11 +384,15 @@
             updateDownloadButton(activeSlide);
 
             if (currentSlides.length > 1) {
+                const isAtStart = (currentSlideIndex === 0);
+                const isAtEnd = (currentSlideIndex === currentSlides.length - 1);
                 prevBtn.classList.remove('is-hidden');
                 nextBtn.classList.remove('is-hidden');
                 slideCounter.classList.remove('is-hidden');
-                prevBtn.disabled = (currentSlideIndex === 0);
-                nextBtn.disabled = (currentSlideIndex === currentSlides.length - 1);
+                prevBtn.classList.toggle('is-disabled', isAtStart);
+                nextBtn.classList.toggle('is-disabled', isAtEnd);
+                prevBtn.setAttribute('aria-disabled', String(isAtStart));
+                nextBtn.setAttribute('aria-disabled', String(isAtEnd));
                 slideCounter.textContent = `[ ${currentSlideIndex + 1} / ${currentSlides.length} ]`;
                 sliderViewport.classList.add('is-draggable');
             } else {
@@ -400,6 +404,7 @@
         }
 
         prevBtn.addEventListener('click', (e) => {
+            e.preventDefault();
             e.stopPropagation();
             if (currentSlideIndex > 0) {
                 updateSlide(currentSlideIndex - 1);
@@ -407,6 +412,7 @@
         });
 
         nextBtn.addEventListener('click', (e) => {
+            e.preventDefault();
             e.stopPropagation();
             if (currentSlideIndex < currentSlides.length - 1) {
                 updateSlide(currentSlideIndex + 1);
@@ -559,6 +565,7 @@
         // Zamknięcie modala po kliknięciu poza obrazek (w tło)
         modal.addEventListener('click', (e) => {
             if (didDragMove) return;
+            if (e.target.closest('.tape-nav-btn') || e.target.closest('.modal-slide-counter')) return;
             if (e.target === modal || e.target.classList.contains('modal-content') || e.target.classList.contains('modal-slider-row')) {
                 closeModal();
             }
