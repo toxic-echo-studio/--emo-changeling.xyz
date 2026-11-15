@@ -1453,9 +1453,18 @@ html:not([lang="en"]) a.content-en {
     width: auto;
     height: auto;
     object-fit: contain;
-    pointer-events: none;
     user-select: none;
     -webkit-user-drag: none;
+}
+
+@media (min-width: 769px) {
+    .modal-slide .modal-image {
+        cursor: zoom-in;
+    }
+
+    .modal-slider-viewport.is-dragging .modal-slide .modal-image {
+        cursor: grabbing;
+    }
 }
 
 .tape-nav-btn {
@@ -1512,16 +1521,56 @@ html:not([lang="en"]) a.content-en {
     display: none !important;
 }
 
-.modal-slide-counter {
+.modal-bottom-controls {
     order: 4;
     flex: 0 0 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 4px;
+}
+
+.modal-zoom-btn {
+    background: #0a0a0a;
+    color: #ff007f;
+    border: 2px solid #ff007f;
+    box-shadow: 0 4px 0 #4b0082, 0 0 8px rgba(255, 0, 127, 0.35);
+    width: 46px;
+    height: 38px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: url('../img/kursor1.cur'), pointer;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease, box-shadow 0.15s ease, opacity 0.2s ease;
+    flex-shrink: 0;
+    border-radius: 3px;
+}
+
+.modal-zoom-btn:hover {
+    background: #ff007f;
+    color: #000000;
+    border-color: #ff00ff;
+    box-shadow: 0 4px 0 #00ff00, 0 0 14px #ff00ff;
+}
+
+.modal-zoom-btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #4b0082, 0 0 6px #ff00ff;
+}
+
+.modal-zoom-btn svg {
+    pointer-events: none;
+}
+
+.modal-slide-counter {
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
     font-size: 0.95rem;
     font-weight: bold;
     color: #00ff00;
     letter-spacing: 2px;
-    margin-top: 4px;
     user-select: none;
 }
 
@@ -1550,13 +1599,148 @@ html:not([lang="en"]) a.content-en {
         order: 2;
     }
 
-    .modal-slide-counter {
+    .modal-bottom-controls {
         order: 3;
         flex: 1 1 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
         margin-top: 0;
+    }
+
+    .modal-bottom-controls .modal-slide-counter {
+        flex: 1 1 auto;
+        text-align: center;
     }
 
     .tape-next {
         order: 4;
+    }
+}
+
+/* ==========================================================================
+   GALERIA - FULLSCREEN ZOOM OVERLAY
+   ========================================================================== */
+.zoom-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    background: rgba(0, 0, 0, 0.97);
+    overflow: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.zoom-overlay.active {
+    display: block;
+}
+
+.zoom-stage {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    touch-action: none;
+    cursor: zoom-in;
+}
+
+.zoom-stage.is-zoomed {
+    cursor: grab;
+}
+
+.zoom-stage.is-panning {
+    cursor: grabbing;
+}
+
+.zoom-image {
+    max-width: 96vw;
+    max-height: 94vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    transform-origin: center center;
+    will-change: transform;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.zoom-image.is-animating {
+    transition: transform 0.22s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.zoom-badge {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 2010;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 14px;
+    background: #0a0a0a;
+    border: 2px solid #ff007f;
+    box-shadow: 0 4px 0 #4b0082, 0 0 15px rgba(255, 0, 127, 0.45);
+    border-radius: 3px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+}
+
+.zoom-scale-btn {
+    background: none;
+    border: none;
+    padding: 2px 4px;
+    margin: 0;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: inherit;
+    color: #00ff00;
+    text-shadow: 0 0 6px rgba(0, 255, 0, 0.5);
+    cursor: url('../img/kursor1.cur'), pointer;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.zoom-scale-btn:hover {
+    color: #aaffaa;
+    text-shadow: 0 0 10px #00ff00;
+}
+
+.zoom-badge-sep {
+    color: #4b0082;
+    user-select: none;
+}
+
+.zoom-exit-btn {
+    background: none;
+    border: none;
+    padding: 2px 4px;
+    margin: 0;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: inherit;
+    color: #ff007f;
+    text-transform: uppercase;
+    cursor: url('../img/kursor1.cur'), pointer;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.zoom-exit-btn:hover {
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff;
+}
+
+@media (max-width: 768px) {
+    .zoom-badge {
+        bottom: calc(18px + env(safe-area-inset-bottom, 0px));
+        left: 50%;
+        transform: translateX(-50%);
+        top: auto;
+        right: auto;
+        white-space: nowrap;
     }
 }
