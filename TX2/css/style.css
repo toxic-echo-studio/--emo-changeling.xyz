@@ -1090,6 +1090,12 @@ s, del {
     color: var(--text-dimmed);
 }
 
+.tag-info {
+    background-color: rgba(56, 189, 248, 0.15);
+    border: 1px solid #38bdf8;
+    color: #38bdf8;
+}
+
 .news-date {
     color: var(--text-dimmed);
     font-size: 0.8rem;
