@@ -6,3 +6,78 @@
 
 # Scratch build scripts
 scratch/
+
+# ==============================================================================
+# Standard Bezpieczenstwa i Kompatybilnosci ANTYGRAVITY (Linux <-> Windows)
+# ==============================================================================
+# SEKRETY I PLIKI POSWIADCZEN
+.env.*
+!.env.example
+!.env.sample
+credentials.json
+client_secret*.json
+secrets.json
+*.pem
+*.key
+*.cert
+*.cer
+*.crt
+*.p12
+*.pfx
+*id_rsa*
+*id_dsa*
+*id_ecdsa*
+*id_ed25519*
+.netrc
+.pgpass
+
+# NARZEDZIA AI I REGULY AGENTA
+.gemini/
+.agents/
+.aider*
+AGENTS.md
+.aider.chat.history.md
+.aider.input.history
+.aider.tags.cache.v*
+backup/
+sensitive_gemini_backup/
+temp_*/
+
+# ARTEFAKTY WINDOWS
+Thumbs.db
+ehthumbs.db
+desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# ARTEFAKTY LINUX I MACOS
+.DS_Store
+.AppleDouble
+.LSOverride
+*~
+*.swp
+*.swo
+
+# IDE I SRODOWISKA PROGRAMISTYCZNE
+.vscode/
+.idea/
+
+# PYTHON, PAMIEC PODRECZNA I SRODOWISKA WIRTUALNE
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+ENV/
+.pytest_cache/
+.mypy_cache/
+
+# PLIKI TYMCZASOWE I LOGI
+*.tmp
+*.temp
+*.log
+*.bak
+*.orig
+*.pid
+
