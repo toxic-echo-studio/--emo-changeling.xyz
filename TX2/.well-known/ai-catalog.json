@@ -17,13 +17,24 @@
     },
     {
       "identifier": "urn:air:tx2:feed:news-rss",
-      "displayName": "TX2 News & Rumors RSS Feed",
+      "displayName": "TX2 News & Rumors RSS Feed (EN)",
       "type": "application/rss+xml",
       "url": "https://tx2.emo-changeling.xyz/news/rss.xml",
       "representativeQueries": [
         "tx2 news",
         "tx2 tour dates and updates",
         "tx2 rumors and leaks"
+      ]
+    },
+    {
+      "identifier": "urn:air:tx2:feed:news-rss-pl",
+      "displayName": "TX2 Unofficial Fansite - Aktualnosci RSS Feed (PL)",
+      "type": "application/rss+xml",
+      "url": "https://tx2.emo-changeling.xyz/news/rss-pl.xml",
+      "representativeQueries": [
+        "tx2 news pl",
+        "tx2 aktualnosci",
+        "tx2 trasa warszawa newsy"
       ]
     },
     {

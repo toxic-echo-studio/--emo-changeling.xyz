@@ -19,7 +19,15 @@
   Cache-Control: public, max-age=3600, must-revalidate
   Content-Type: application/xml; charset=utf-8
 
+/news-sitemap.xml
+  Cache-Control: public, max-age=3600, must-revalidate
+  Content-Type: application/xml; charset=utf-8
+
 /news/rss.xml
+  Cache-Control: public, max-age=3600, must-revalidate
+  Content-Type: application/rss+xml; charset=utf-8
+
+/news/rss-pl.xml
   Cache-Control: public, max-age=3600, must-revalidate
   Content-Type: application/rss+xml; charset=utf-8
 
