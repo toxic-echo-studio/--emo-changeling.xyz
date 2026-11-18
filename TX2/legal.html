@@ -31,6 +31,8 @@
     <meta name="twitter:image" content="https://tx2.emo-changeling.xyz/img/banner-16x9.jpg">
 
     <!-- Stylesheets & Resources -->
+    <link rel="preload" as="font" type="font/woff2" href="assets/fonts/inter-latin.woff2" crossorigin>
+    <link rel="preload" as="image" href="img/banner.webp" fetchpriority="high">
     <link rel="preload" as="style" href="css/style.css?v=1.1.24">
     <link rel="stylesheet" href="css/style.css?v=1.1.24">
     
@@ -49,44 +51,64 @@
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "CreativeWork",
+      "@id": "https://tx2.emo-changeling.xyz/legal#webpage",
+      "url": "https://tx2.emo-changeling.xyz/legal",
+      "name": "Boring Stuff - TX2 Unofficial Fansite",
+      "description": "Boring stuff: Privacy notice, cookie-free declarations, and non-commercial disclaimers for the TX2 Unofficial Fansite.",
+      "dateModified": "2026-11-08",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://tx2.emo-changeling.xyz/#website",
+        "url": "https://tx2.emo-changeling.xyz/",
+        "name": "TX2 Pigeonification Ritual - Unofficial TX2 Fansite & Fan Project"
+      },
+      "inLanguage": [
+        "en",
+        "pl"
+      ],
+      "creator": [
         {
-          "@type": "CreativeWork",
-          "@id": "https://tx2.emo-changeling.xyz/legal#webpage",
-          "url": "https://tx2.emo-changeling.xyz/legal",
-          "name": "Boring Stuff - TX2 Unofficial Fansite",
-          "description": "Boring stuff: Privacy notice, cookie-free declarations, and non-commercial disclaimers for the TX2 Unofficial Fansite.",
-          "dateModified": "2026-10-29",
-          "isPartOf": {
-            "@type": "WebSite",
-            "@id": "https://tx2.emo-changeling.xyz/#website",
-            "url": "https://tx2.emo-changeling.xyz/",
-            "name": "TX2 Pigeonification Ritual - Unofficial TX2 Fansite & Fan Project"
-          },
-          "inLanguage": ["en", "pl"],
-          "creator": [
-            {
-              "@type": "Person",
-              "name": "Nico 'Zebroid' Łach",
-              "alternateName": "Emo Changeling",
-              "url": "https://emo-changeling.xyz/"
-            },
-            {
-              "@type": "Person",
-              "name": "Mighn Taghor"
-            }
-          ],
-          "producer": {
-            "@type": "Organization",
-            "name": "Toxic Echo Studio",
-            "url": "https://toxic-echo.studio/",
-            "description": "Technical infrastructure and voluntary non-commercial support."
-          }
+          "@type": "Person",
+          "name": "Nico 'Zebroid' Łach",
+          "alternateName": "Emo Changeling",
+          "url": "https://emo-changeling.xyz/"
+        },
+        {
+          "@type": "Person",
+          "name": "Mighn Taghor"
+        }
+      ],
+      "producer": {
+        "@type": "Organization",
+        "name": "Toxic Echo Studio",
+        "url": "https://toxic-echo.studio/",
+        "description": "Technical infrastructure and voluntary non-commercial support."
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://tx2.emo-changeling.xyz/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Boring Stuff",
+          "item": "https://tx2.emo-changeling.xyz/legal"
         }
       ]
     }
+  ]
+}
     </script>
 <link rel="ai-catalog" type="application/json" href="/.well-known/ai-catalog.json"/>
 </head>

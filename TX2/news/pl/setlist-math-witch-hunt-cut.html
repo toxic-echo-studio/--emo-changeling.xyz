@@ -31,6 +31,9 @@
     <meta name="twitter:title" content="Matematyka setlisty - który numer wyleci pod &#x27;Witch Hunt&#x27;?">
     <meta name="twitter:description" content="Oczekiwania: Zespół po prostu dokłada nowy singiel do programu koncertów, a publika dostaje pełen przekrój hitów bez żadnych cięć. Rzeczywistość: W slocie supportowym czas mierzy się z dokładnością do minuty. Dodanie &#x27;Witch Hunt&#x27; do 30-minutowego występu wymusza natychmiastowe wyrzucenie z setlisty któregoś ze sprawdzonych numerów z Cruel World lub Ghost of LA. Pytanie do społeczności: z którym kawałkiem fani będą musieli się pożegnać? Sprawdź analizę dotychczasowych setlist i dyskografii.">
     <meta name="twitter:image" content="https://tx2.emo-changeling.xyz/img/banner-16x9.jpg">
+    <link rel="preload" as="font" type="font/woff2" href="../../assets/fonts/inter-latin.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="../../assets/fonts/inter-latin-ext.woff2" crossorigin>
+    <link rel="preload" as="image" href="../../img/banner.webp" fetchpriority="high">
     <link rel="preload" as="style" href="../../css/style.css?v=1.1.24">
     <link rel="stylesheet" href="../../css/style.css?v=1.1.24">
     <link rel="author" href="../../humans.txt">
@@ -47,42 +50,69 @@
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  "@id": "https://tx2.emo-changeling.xyz/news/pl/setlist-math-witch-hunt-cut#article",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://tx2.emo-changeling.xyz/news/pl/setlist-math-witch-hunt-cut"
-  },
-  "headline": "Matematyka setlisty - który numer wyleci pod 'Witch Hunt'?",
-  "description": "Oczekiwania: Zespół po prostu dokłada nowy singiel do programu koncertów, a publika dostaje pełen przekrój hitów bez żadnych cięć. Rzeczywistość: W slocie supportowym czas mierzy się z dokładnością do minuty. Dodanie 'Witch Hunt' do 30-minutowego występu wymusza natychmiastowe wyrzucenie z setlisty któregoś ze sprawdzonych numerów z Cruel World lub Ghost of LA. Pytanie do społeczności: z którym kawałkiem fani będą musieli się pożegnać? Sprawdź analizę dotychczasowych setlist i dyskografii.",
-  "datePublished": "2026-11-01T12:00:00+00:00",
-  "dateModified": "2026-11-01T12:00:00+00:00",
-  "inLanguage": "pl",
-  "image": [
-    "https://tx2.emo-changeling.xyz/img/banner-16x9.jpg",
-    "https://tx2.emo-changeling.xyz/img/banner-4x3.jpg",
-    "https://tx2.emo-changeling.xyz/img/banner-1x1.jpg"
-  ],
-  "author": {
-    "@type": "Person",
-    "name": "Mighn Taghor",
-    "url": "https://reverse.emo-changeling.xyz/pl/team"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "TX2 Unofficial Fansite",
-    "url": "https://tx2.emo-changeling.xyz",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://tx2.emo-changeling.xyz/img/android-chrome-512x512.png"
+  "@graph": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://tx2.emo-changeling.xyz/news/pl/setlist-math-witch-hunt-cut#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://tx2.emo-changeling.xyz/news/pl/setlist-math-witch-hunt-cut"
+      },
+      "headline": "Matematyka setlisty - który numer wyleci pod 'Witch Hunt'?",
+      "description": "Oczekiwania: Zespół po prostu dokłada nowy singiel do programu koncertów, a publika dostaje pełen przekrój hitów bez żadnych cięć. Rzeczywistość: W slocie supportowym czas mierzy się z dokładnością do minuty. Dodanie 'Witch Hunt' do 30-minutowego występu wymusza natychmiastowe wyrzucenie z setlisty któregoś ze sprawdzonych numerów z Cruel World lub Ghost of LA. Pytanie do społeczności: z którym kawałkiem fani będą musieli się pożegnać? Sprawdź analizę dotychczasowych setlist i dyskografii.",
+      "datePublished": "2026-11-01T12:00:00+00:00",
+      "dateModified": "2026-11-01T12:00:00+00:00",
+      "inLanguage": "pl",
+      "image": [
+        "https://tx2.emo-changeling.xyz/img/banner-16x9.jpg",
+        "https://tx2.emo-changeling.xyz/img/banner-4x3.jpg",
+        "https://tx2.emo-changeling.xyz/img/banner-1x1.jpg"
+      ],
+      "author": {
+        "@type": "Person",
+        "name": "Mighn Taghor",
+        "url": "https://reverse.emo-changeling.xyz/pl/team"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "TX2 Unofficial Fansite",
+        "url": "https://tx2.emo-changeling.xyz",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://tx2.emo-changeling.xyz/img/android-chrome-512x512.png"
+        }
+      },
+      "isPartOf": {
+        "@type": "WebPage",
+        "@id": "https://tx2.emo-changeling.xyz/news/#webpage",
+        "url": "https://tx2.emo-changeling.xyz/news/",
+        "name": "TX2 News & Rumors - Unofficial TX2 Fansite"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Strona główna",
+          "item": "https://tx2.emo-changeling.xyz/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Wiadomości TX2",
+          "item": "https://tx2.emo-changeling.xyz/news/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Matematyka setlisty - który numer wyleci pod 'Witch Hunt'?",
+          "item": "https://tx2.emo-changeling.xyz/news/pl/setlist-math-witch-hunt-cut"
+        }
+      ]
     }
-  },
-  "isPartOf": {
-    "@type": "WebPage",
-    "@id": "https://tx2.emo-changeling.xyz/news/#webpage",
-    "url": "https://tx2.emo-changeling.xyz/news/",
-    "name": "TX2 News & Rumors - Unofficial TX2 Fansite"
-  }
+  ]
 }
     </script>
 </head>

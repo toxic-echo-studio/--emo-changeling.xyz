@@ -31,6 +31,9 @@
     <meta name="twitter:title" content="Raport trasowy: Harmonogram bez cięć, konkretna data Rockville i rozjazd w Mediolanie">
     <meta name="twitter:description" content="Sprawdziliśmy najświeższe aktualizacje z oficjalnego widgetu trasy TX2 oraz komunikatu prasowego z 13 listopada: w ostatnim tygodniu nie pojawiły się żadne odwołania, przełożenia ani nowe daty klubowe. Amerykańska trasa &#x27;Not Broken Enough Tour&#x27; z Catch Your Breath (dziś koncert w New Haven, finał 5 grudnia w Oklahoma City) oraz europejsko-brytyjska seria na luty-marzec 2027 - w tym warszawski koncert w Hydrozagadce - idą bez zmian, choć zespół przypomina o końcówkach biletów (low ticket warnings) na większość przystanków w EU i UK. Z ważnych detali: potwierdzono dokładny dzień występu na Welcome to Rockville 2027 (9 maja), natomiast widget Bandsintown nadal wyświetla dla Mediolanu (26.02.2027) klub Santeria Toscana 31 mimo trwającej u włoskiego promotora sprzedaży na Lime Club Milano - aktualny wykaz śledzimy w naszym rozkładzie tras.">
     <meta name="twitter:image" content="https://tx2.emo-changeling.xyz/img/banner-16x9.jpg">
+    <link rel="preload" as="font" type="font/woff2" href="../../assets/fonts/inter-latin.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="../../assets/fonts/inter-latin-ext.woff2" crossorigin>
+    <link rel="preload" as="image" href="../../img/banner.webp" fetchpriority="high">
     <link rel="preload" as="style" href="../../css/style.css?v=1.1.24">
     <link rel="stylesheet" href="../../css/style.css?v=1.1.24">
     <link rel="author" href="../../humans.txt">
@@ -47,42 +50,69 @@
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  "@id": "https://tx2.emo-changeling.xyz/news/pl/november-tour-status-rockville-milan-check#article",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://tx2.emo-changeling.xyz/news/pl/november-tour-status-rockville-milan-check"
-  },
-  "headline": "Raport trasowy: Harmonogram bez cięć, konkretna data Rockville i rozjazd w Mediolanie",
-  "description": "Sprawdziliśmy najświeższe aktualizacje z oficjalnego widgetu trasy TX2 oraz komunikatu prasowego z 13 listopada: w ostatnim tygodniu nie pojawiły się żadne odwołania, przełożenia ani nowe daty klubowe. Amerykańska trasa 'Not Broken Enough Tour' z Catch Your Breath (dziś koncert w New Haven, finał 5 grudnia w Oklahoma City) oraz europejsko-brytyjska seria na luty-marzec 2027 - w tym warszawski koncert w Hydrozagadce - idą bez zmian, choć zespół przypomina o końcówkach biletów (low ticket warnings) na większość przystanków w EU i UK. Z ważnych detali: potwierdzono dokładny dzień występu na Welcome to Rockville 2027 (9 maja), natomiast widget Bandsintown nadal wyświetla dla Mediolanu (26.02.2027) klub Santeria Toscana 31 mimo trwającej u włoskiego promotora sprzedaży na Lime Club Milano - aktualny wykaz śledzimy w naszym rozkładzie tras.",
-  "datePublished": "2026-11-15T12:00:00+00:00",
-  "dateModified": "2026-11-15T12:00:00+00:00",
-  "inLanguage": "pl",
-  "image": [
-    "https://tx2.emo-changeling.xyz/img/banner-16x9.jpg",
-    "https://tx2.emo-changeling.xyz/img/banner-4x3.jpg",
-    "https://tx2.emo-changeling.xyz/img/banner-1x1.jpg"
-  ],
-  "author": {
-    "@type": "Person",
-    "name": "Mighn Taghor",
-    "url": "https://reverse.emo-changeling.xyz/pl/team"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "TX2 Unofficial Fansite",
-    "url": "https://tx2.emo-changeling.xyz",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://tx2.emo-changeling.xyz/img/android-chrome-512x512.png"
+  "@graph": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://tx2.emo-changeling.xyz/news/pl/november-tour-status-rockville-milan-check#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://tx2.emo-changeling.xyz/news/pl/november-tour-status-rockville-milan-check"
+      },
+      "headline": "Raport trasowy: Harmonogram bez cięć, konkretna data Rockville i rozjazd w Mediolanie",
+      "description": "Sprawdziliśmy najświeższe aktualizacje z oficjalnego widgetu trasy TX2 oraz komunikatu prasowego z 13 listopada: w ostatnim tygodniu nie pojawiły się żadne odwołania, przełożenia ani nowe daty klubowe. Amerykańska trasa 'Not Broken Enough Tour' z Catch Your Breath (dziś koncert w New Haven, finał 5 grudnia w Oklahoma City) oraz europejsko-brytyjska seria na luty-marzec 2027 - w tym warszawski koncert w Hydrozagadce - idą bez zmian, choć zespół przypomina o końcówkach biletów (low ticket warnings) na większość przystanków w EU i UK. Z ważnych detali: potwierdzono dokładny dzień występu na Welcome to Rockville 2027 (9 maja), natomiast widget Bandsintown nadal wyświetla dla Mediolanu (26.02.2027) klub Santeria Toscana 31 mimo trwającej u włoskiego promotora sprzedaży na Lime Club Milano - aktualny wykaz śledzimy w naszym rozkładzie tras.",
+      "datePublished": "2026-11-15T12:00:00+00:00",
+      "dateModified": "2026-11-15T12:00:00+00:00",
+      "inLanguage": "pl",
+      "image": [
+        "https://tx2.emo-changeling.xyz/img/banner-16x9.jpg",
+        "https://tx2.emo-changeling.xyz/img/banner-4x3.jpg",
+        "https://tx2.emo-changeling.xyz/img/banner-1x1.jpg"
+      ],
+      "author": {
+        "@type": "Person",
+        "name": "Mighn Taghor",
+        "url": "https://reverse.emo-changeling.xyz/pl/team"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "TX2 Unofficial Fansite",
+        "url": "https://tx2.emo-changeling.xyz",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://tx2.emo-changeling.xyz/img/android-chrome-512x512.png"
+        }
+      },
+      "isPartOf": {
+        "@type": "WebPage",
+        "@id": "https://tx2.emo-changeling.xyz/news/#webpage",
+        "url": "https://tx2.emo-changeling.xyz/news/",
+        "name": "TX2 News & Rumors - Unofficial TX2 Fansite"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Strona główna",
+          "item": "https://tx2.emo-changeling.xyz/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Wiadomości TX2",
+          "item": "https://tx2.emo-changeling.xyz/news/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Raport trasowy: Harmonogram bez cięć, konkretna data Rockville i rozjazd w Mediolanie",
+          "item": "https://tx2.emo-changeling.xyz/news/pl/november-tour-status-rockville-milan-check"
+        }
+      ]
     }
-  },
-  "isPartOf": {
-    "@type": "WebPage",
-    "@id": "https://tx2.emo-changeling.xyz/news/#webpage",
-    "url": "https://tx2.emo-changeling.xyz/news/",
-    "name": "TX2 News & Rumors - Unofficial TX2 Fansite"
-  }
+  ]
 }
     </script>
 </head>

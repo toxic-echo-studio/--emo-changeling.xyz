@@ -31,6 +31,8 @@
     <meta name="twitter:title" content="Tour Check: Zero Cancellations, Locked Rockville Date, and Milan Venue Mismatch">
     <meta name="twitter:description" content="We audited TX2&#x27;s official tour widget alongside the November 13 press routing: zero shows were cancelled, postponed, or newly added over the past week. Both the North American &#x27;Not Broken Enough Tour&#x27; with Catch Your Breath (hitting New Haven tonight through December 5 in Oklahoma City) and the February-March 2027 EU/UK headlining leg - including Warsaw&#x27;s Hydrozagadka stop - remain locked in, with fresh low-ticket warnings flagged across most UK and European dates. Two key details stand out: TX2&#x27;s Welcome to Rockville 2027 slot is now pinned to Sunday, May 9, while the official Bandsintown widget still lists Milan (Feb 26, 2027) at Santeria Toscana 31 despite local promoter ticketing already pointing to Lime Club Milano - track every confirmed stop in our tour schedule and check the Warsaw fan action on our main page.">
     <meta name="twitter:image" content="https://tx2.emo-changeling.xyz/img/banner-16x9.jpg">
+    <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/inter-latin.woff2" crossorigin>
+    <link rel="preload" as="image" href="../img/banner.webp" fetchpriority="high">
     <link rel="preload" as="style" href="../css/style.css?v=1.1.24">
     <link rel="stylesheet" href="../css/style.css?v=1.1.24">
     <link rel="author" href="../humans.txt">
@@ -47,42 +49,69 @@
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  "@id": "https://tx2.emo-changeling.xyz/news/november-tour-status-rockville-milan-check#article",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://tx2.emo-changeling.xyz/news/november-tour-status-rockville-milan-check"
-  },
-  "headline": "Tour Check: Zero Cancellations, Locked Rockville Date, and Milan Venue Mismatch",
-  "description": "We audited TX2's official tour widget alongside the November 13 press routing: zero shows were cancelled, postponed, or newly added over the past week. Both the North American 'Not Broken Enough Tour' with Catch Your Breath (hitting New Haven tonight through December 5 in Oklahoma City) and the February-March 2027 EU/UK headlining leg - including Warsaw's Hydrozagadka stop - remain locked in, with fresh low-ticket warnings flagged across most UK and European dates. Two key details stand out: TX2's Welcome to Rockville 2027 slot is now pinned to Sunday, May 9, while the official Bandsintown widget still lists Milan (Feb 26, 2027) at Santeria Toscana 31 despite local promoter ticketing already pointing to Lime Club Milano - track every confirmed stop in our tour schedule and check the Warsaw fan action on our main page.",
-  "datePublished": "2026-11-15T12:00:00+00:00",
-  "dateModified": "2026-11-15T12:00:00+00:00",
-  "inLanguage": "en",
-  "image": [
-    "https://tx2.emo-changeling.xyz/img/banner-16x9.jpg",
-    "https://tx2.emo-changeling.xyz/img/banner-4x3.jpg",
-    "https://tx2.emo-changeling.xyz/img/banner-1x1.jpg"
-  ],
-  "author": {
-    "@type": "Person",
-    "name": "Mighn Taghor",
-    "url": "https://reverse.emo-changeling.xyz/en/team"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "TX2 Unofficial Fansite",
-    "url": "https://tx2.emo-changeling.xyz",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://tx2.emo-changeling.xyz/img/android-chrome-512x512.png"
+  "@graph": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://tx2.emo-changeling.xyz/news/november-tour-status-rockville-milan-check#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://tx2.emo-changeling.xyz/news/november-tour-status-rockville-milan-check"
+      },
+      "headline": "Tour Check: Zero Cancellations, Locked Rockville Date, and Milan Venue Mismatch",
+      "description": "We audited TX2's official tour widget alongside the November 13 press routing: zero shows were cancelled, postponed, or newly added over the past week. Both the North American 'Not Broken Enough Tour' with Catch Your Breath (hitting New Haven tonight through December 5 in Oklahoma City) and the February-March 2027 EU/UK headlining leg - including Warsaw's Hydrozagadka stop - remain locked in, with fresh low-ticket warnings flagged across most UK and European dates. Two key details stand out: TX2's Welcome to Rockville 2027 slot is now pinned to Sunday, May 9, while the official Bandsintown widget still lists Milan (Feb 26, 2027) at Santeria Toscana 31 despite local promoter ticketing already pointing to Lime Club Milano - track every confirmed stop in our tour schedule and check the Warsaw fan action on our main page.",
+      "datePublished": "2026-11-15T12:00:00+00:00",
+      "dateModified": "2026-11-15T12:00:00+00:00",
+      "inLanguage": "en",
+      "image": [
+        "https://tx2.emo-changeling.xyz/img/banner-16x9.jpg",
+        "https://tx2.emo-changeling.xyz/img/banner-4x3.jpg",
+        "https://tx2.emo-changeling.xyz/img/banner-1x1.jpg"
+      ],
+      "author": {
+        "@type": "Person",
+        "name": "Mighn Taghor",
+        "url": "https://reverse.emo-changeling.xyz/en/team"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "TX2 Unofficial Fansite",
+        "url": "https://tx2.emo-changeling.xyz",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://tx2.emo-changeling.xyz/img/android-chrome-512x512.png"
+        }
+      },
+      "isPartOf": {
+        "@type": "WebPage",
+        "@id": "https://tx2.emo-changeling.xyz/news/#webpage",
+        "url": "https://tx2.emo-changeling.xyz/news/",
+        "name": "TX2 News & Rumors - Unofficial TX2 Fansite"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://tx2.emo-changeling.xyz/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "TX2 News",
+          "item": "https://tx2.emo-changeling.xyz/news/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Tour Check: Zero Cancellations, Locked Rockville Date, and Milan Venue Mismatch",
+          "item": "https://tx2.emo-changeling.xyz/news/november-tour-status-rockville-milan-check"
+        }
+      ]
     }
-  },
-  "isPartOf": {
-    "@type": "WebPage",
-    "@id": "https://tx2.emo-changeling.xyz/news/#webpage",
-    "url": "https://tx2.emo-changeling.xyz/news/",
-    "name": "TX2 News & Rumors - Unofficial TX2 Fansite"
-  }
+  ]
 }
     </script>
 </head>

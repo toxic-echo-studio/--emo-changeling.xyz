@@ -31,6 +31,9 @@
     <meta name="twitter:title" content="Teoria / dyskusja: &#x27;We Need Punk Back&#x27; w &#x27;I AM THE ENEMY&#x27; - szczery manifest czy celowy rage-bait?">
     <meta name="twitter:description" content="Odliczanie do klipu &#x27;I AM THE ENEMY&#x27; z hasłem &#x27;WE NEED PUNK BACK&#x27; oraz seria nowych Shortsów (&#x27;Am I punk or a poser?&#x27;) na nowo rozgrzały dyskusje na Reddicie i TikToku. Krytycy na forach alternatywnych zarzucają TX2 powielanie wytartych sloganów przeciw &#x27;tradycji i autorytetom&#x27; oraz podbijanie zasięgów pod młodych odbiorców kosztem scenowej wiarygodności. Z kolei weterani fanowskiej społeczności przekonują, że Evan świadomie wchodzi w rolę prowokatora i wyprzedza zaczepki hejterów, zamieniając każdy komentarz o &#x27;poserach&#x27; w darmowe paliwo algorytmiczne przed premierą 17 listopada i trasą po Europie - kontekst fenomenu sprawdzisz w wtf TX2.">
     <meta name="twitter:image" content="https://tx2.emo-changeling.xyz/img/banner-16x9.jpg">
+    <link rel="preload" as="font" type="font/woff2" href="../../assets/fonts/inter-latin.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="../../assets/fonts/inter-latin-ext.woff2" crossorigin>
+    <link rel="preload" as="image" href="../../img/banner.webp" fetchpriority="high">
     <link rel="preload" as="style" href="../../css/style.css?v=1.1.24">
     <link rel="stylesheet" href="../../css/style.css?v=1.1.24">
     <link rel="author" href="../../humans.txt">
@@ -47,42 +50,69 @@
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  "@id": "https://tx2.emo-changeling.xyz/news/pl/we-need-punk-back-ragebait-or-manifesto#article",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://tx2.emo-changeling.xyz/news/pl/we-need-punk-back-ragebait-or-manifesto"
-  },
-  "headline": "Teoria / dyskusja: 'We Need Punk Back' w 'I AM THE ENEMY' - szczery manifest czy celowy rage-bait?",
-  "description": "Odliczanie do klipu 'I AM THE ENEMY' z hasłem 'WE NEED PUNK BACK' oraz seria nowych Shortsów ('Am I punk or a poser?') na nowo rozgrzały dyskusje na Reddicie i TikToku. Krytycy na forach alternatywnych zarzucają TX2 powielanie wytartych sloganów przeciw 'tradycji i autorytetom' oraz podbijanie zasięgów pod młodych odbiorców kosztem scenowej wiarygodności. Z kolei weterani fanowskiej społeczności przekonują, że Evan świadomie wchodzi w rolę prowokatora i wyprzedza zaczepki hejterów, zamieniając każdy komentarz o 'poserach' w darmowe paliwo algorytmiczne przed premierą 17 listopada i trasą po Europie - kontekst fenomenu sprawdzisz w wtf TX2.",
-  "datePublished": "2026-11-15T12:00:00+00:00",
-  "dateModified": "2026-11-15T12:00:00+00:00",
-  "inLanguage": "pl",
-  "image": [
-    "https://tx2.emo-changeling.xyz/img/banner-16x9.jpg",
-    "https://tx2.emo-changeling.xyz/img/banner-4x3.jpg",
-    "https://tx2.emo-changeling.xyz/img/banner-1x1.jpg"
-  ],
-  "author": {
-    "@type": "Person",
-    "name": "Mighn Taghor",
-    "url": "https://reverse.emo-changeling.xyz/pl/team"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "TX2 Unofficial Fansite",
-    "url": "https://tx2.emo-changeling.xyz",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://tx2.emo-changeling.xyz/img/android-chrome-512x512.png"
+  "@graph": [
+    {
+      "@type": "NewsArticle",
+      "@id": "https://tx2.emo-changeling.xyz/news/pl/we-need-punk-back-ragebait-or-manifesto#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://tx2.emo-changeling.xyz/news/pl/we-need-punk-back-ragebait-or-manifesto"
+      },
+      "headline": "Teoria / dyskusja: 'We Need Punk Back' w 'I AM THE ENEMY' - szczery manifest czy celowy rage-bait?",
+      "description": "Odliczanie do klipu 'I AM THE ENEMY' z hasłem 'WE NEED PUNK BACK' oraz seria nowych Shortsów ('Am I punk or a poser?') na nowo rozgrzały dyskusje na Reddicie i TikToku. Krytycy na forach alternatywnych zarzucają TX2 powielanie wytartych sloganów przeciw 'tradycji i autorytetom' oraz podbijanie zasięgów pod młodych odbiorców kosztem scenowej wiarygodności. Z kolei weterani fanowskiej społeczności przekonują, że Evan świadomie wchodzi w rolę prowokatora i wyprzedza zaczepki hejterów, zamieniając każdy komentarz o 'poserach' w darmowe paliwo algorytmiczne przed premierą 17 listopada i trasą po Europie - kontekst fenomenu sprawdzisz w wtf TX2.",
+      "datePublished": "2026-11-15T12:00:00+00:00",
+      "dateModified": "2026-11-15T12:00:00+00:00",
+      "inLanguage": "pl",
+      "image": [
+        "https://tx2.emo-changeling.xyz/img/banner-16x9.jpg",
+        "https://tx2.emo-changeling.xyz/img/banner-4x3.jpg",
+        "https://tx2.emo-changeling.xyz/img/banner-1x1.jpg"
+      ],
+      "author": {
+        "@type": "Person",
+        "name": "Mighn Taghor",
+        "url": "https://reverse.emo-changeling.xyz/pl/team"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "TX2 Unofficial Fansite",
+        "url": "https://tx2.emo-changeling.xyz",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://tx2.emo-changeling.xyz/img/android-chrome-512x512.png"
+        }
+      },
+      "isPartOf": {
+        "@type": "WebPage",
+        "@id": "https://tx2.emo-changeling.xyz/news/#webpage",
+        "url": "https://tx2.emo-changeling.xyz/news/",
+        "name": "TX2 News & Rumors - Unofficial TX2 Fansite"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Strona główna",
+          "item": "https://tx2.emo-changeling.xyz/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Wiadomości TX2",
+          "item": "https://tx2.emo-changeling.xyz/news/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Teoria / dyskusja: 'We Need Punk Back' w 'I AM THE ENEMY' - szczery manifest czy celowy rage-bait?",
+          "item": "https://tx2.emo-changeling.xyz/news/pl/we-need-punk-back-ragebait-or-manifesto"
+        }
+      ]
     }
-  },
-  "isPartOf": {
-    "@type": "WebPage",
-    "@id": "https://tx2.emo-changeling.xyz/news/#webpage",
-    "url": "https://tx2.emo-changeling.xyz/news/",
-    "name": "TX2 News & Rumors - Unofficial TX2 Fansite"
-  }
+  ]
 }
     </script>
 </head>
