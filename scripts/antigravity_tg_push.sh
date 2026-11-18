@@ -347,7 +347,7 @@ if c_m:
     canonical_url = c_m.group(1).strip()
 else:
     rel_match = re.search(r"(pl|en)/[0-9]+-[0-9]{4}/[^/]+\.html$", article_path.replace("\\", "/"))
-    rel_path = rel_match.group(0) if rel_match else ""
+    rel_path = re.sub(r"\.html$", "", rel_match.group(0)) if rel_match else ""
     clean_base = default_base.rstrip("/")
     canonical_url = f"{clean_base}/{rel_path}" if rel_path else ""
 

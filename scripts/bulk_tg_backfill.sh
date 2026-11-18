@@ -333,7 +333,7 @@ for k in sorted_keys:
                 sys.stderr.write(
                     f"[CONFLICT_THREAD_ID] Wykryto konflikt ID wątków Telegram dla pary '\''{k}'\'': "
                     f"PL message_id={pl_mid} != EN message_id={en_mid}. "
-                    f"Wymaga ręcznej weryfikacji — pomijam parę bez modyfikacji.\n"
+                    f"Wymaga ręcznej weryfikacji - pomijam parę bez modyfikacji.\n"
                 )
                 continue
 
@@ -403,7 +403,7 @@ COUNT_ORPHANS=$(python3 -c "import json, sys; pkgs = json.loads(sys.argv[1])['pa
 
 echo "=============================================================================="
 echo " RAPORT KWALIFIKACJI DWUJĘZYCZNYCH PAR (BILINGUAL THREAD PAIRING)"
-echo " [TRYB AUDYTU: 100% READ-ONLY — ŻADEN PLIK NIE ZOSTAŁ ZMODYFIKOWANY]"
+echo " [TRYB AUDYTU: 100% READ-ONLY - ŻADEN PLIK NIE ZOSTAŁ ZMODYFIKOWANY]"
 echo "=============================================================================="
 echo " Przeskanowane unikalne klucze wydań: $TOTAL_SCANNED_KEYS"
 echo " Pominięte pełne pary (oba z iframe):  $SKIPPED_PAIRS"
@@ -539,6 +539,7 @@ def parse_article(path, default_base):
     if not canonical_url:
         rel_match = re.search(r"(pl|en)/[0-9]+-[0-9]{4}/[^/]+\.html$", path.replace("\\", "/"))
         rel_path = rel_match.group(0) if rel_match else os.path.basename(path)
+        rel_path = re.sub(r"\.html$", "", rel_path)
         clean_base = default_base.rstrip("/")
         canonical_url = f"{clean_base}/{rel_path}"
 

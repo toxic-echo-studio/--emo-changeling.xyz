@@ -1,7 +1,7 @@
 # ai.txt - global AI access policy for The Reverse Emo Changeling Magazine
 site: https://reverse.emo-changeling.xyz
 contact: mailto:admin@toxic-echo.studio
-version: 1.10.26
+version: 1.10.27
 last_updated: 2026-11-18
 
 [usage]

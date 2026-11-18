@@ -1,4 +1,4 @@
-# llms.txt — global LLM access policy
+# llms.txt - global LLM access policy
 site: https://wiki.emo-changeling.xyz
 contact: mailto:admin@toxic-echo.studio
 

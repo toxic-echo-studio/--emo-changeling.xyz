@@ -50,6 +50,7 @@ def make_absolute(html_content, lang="pl"):
     # Odnośniki do wydań w danym języku
     html_content = re.sub(r'href="(?:\.\./)*(\d+-\d{4}/)', f'href="{DOMAIN}/{lang}/\\1', html_content)
     html_content = re.sub(r'href="/(\d+-\d{4}/)', f'href="{DOMAIN}/{lang}/\\1', html_content)
+    html_content = re.sub(rf'(href="{re.escape(DOMAIN)}/[^"#]*?)\.html(?=#|")', r'\1', html_content)
     
     return html_content
 
@@ -81,7 +82,8 @@ def extract_articles_for_lang(lang):
                     date_str = datetime.date.fromtimestamp(mtime).isoformat()
                 
                 pub_date_rfc = format_rfc822(date_str)
-                article_link = f"{DOMAIN}/{lang}/{entry}/{filename}"
+                slug = filename[:-5] if filename.endswith(".html") else filename
+                article_link = f"{DOMAIN}/{lang}/{entry}/{slug}"
                 
                 # Tytuł
                 t_m = re.search(r'<h1\s+class="article-title">(.*?)</h1>', content, re.DOTALL)

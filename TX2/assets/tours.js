@@ -119,7 +119,7 @@
             }
 
             const href = link.getAttribute('href') || '';
-            if (href === '#upcoming' || /(?:^|\/)tours\.html#upcoming$/.test(href)) {
+            if (href === '#upcoming' || /(?:^|\/)tours(?:\.html)?#upcoming$/.test(href)) {
                 event.preventDefault();
                 requestAnimationFrame(centerNextShow);
             }

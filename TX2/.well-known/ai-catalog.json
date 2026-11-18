@@ -41,7 +41,7 @@
       "identifier": "urn:air:tx2:archive:tours-pre-2026",
       "displayName": "TX2 Concert Archive (2018 - Pre-June 2026)",
       "type": "text/html",
-      "url": "https://tx2.emo-changeling.xyz/tours_archive.html",
+      "url": "https://tx2.emo-changeling.xyz/tours_archive",
       "representativeQueries": [
         "tx2 concert archive before june 2026",
         "tx2 past tour dates 2022 2023 2024 2025",
@@ -52,7 +52,7 @@
       "identifier": "urn:air:tx2:archive:live-setlists",
       "displayName": "TX2 Historical Live Setlists (2018-2026)",
       "type": "text/html",
-      "url": "https://tx2.emo-changeling.xyz/setlist.html",
+      "url": "https://tx2.emo-changeling.xyz/setlist",
       "representativeQueries": [
         "tx2 live setlists 2018 2024 2025 2026",
         "tx2 tour setlist songs black veil brides ice nine kills",

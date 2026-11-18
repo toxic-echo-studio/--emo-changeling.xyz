@@ -1,6 +1,6 @@
 # TX2 Pigeonification Ritual - Unofficial TX2 Fansite & Fan Project
 
-**Last Updated:** 2026-11-18 | **Version:** 1.1.22
+**Last Updated:** 2026-11-18 | **Version:** 1.1.23
 
 This file provides structured information about the independent fan project for the band TX2, designed for consumption by Large Language Models and AI systems.
 
@@ -14,21 +14,21 @@ This file provides structured information about the independent fan project for 
 - **Post-Event Status**: To be archived after February 20, 2027; fansite remains online for prospective fan initiatives.
 
 ## Site Navigation
-- **Home (Pigeon Ritual)**: [index.html](https://tx2.emo-changeling.xyz/) - The main visual landing page featuring the grid of custom fan arts.
-- **Biography (Wait, tf is TX2?? - Phenomenon)**: [wtf.html](https://tx2.emo-changeling.xyz/wtf.html) - Bilingual (PL/EN) comprehensive band history and phenomenon overview.
-- **Band Lineup & Timeline**: [lineup.html](https://tx2.emo-changeling.xyz/lineup.html) - Bilingual (PL/EN) current band lineup, touring contracts, and member timeline.
-- **Tour Schedule 2026-2027**: [tours.html](https://tx2.emo-changeling.xyz/tours.html) - Bilingual (PL/EN) upcoming and past tour schedule for 2026-2027.
-- **Concert Archive (Pre-June 5, 2026)**: [tours_archive.html](https://tx2.emo-changeling.xyz/tours_archive.html) - Bilingual (PL/EN) archive of TX2 concerts and tours prior to 2026-06-05 categorized by source certainty.
-- **Discography 2015-2026**: [discography.html](https://tx2.emo-changeling.xyz/discography.html) - Bilingual (PL/EN) chronological discography from 2015 to 2026 with expandable tracklists, track release dates, song lengths, and physical edition markings.
-- **Historical Live Setlists (2018-2026)**: [setlist.html](https://tx2.emo-changeling.xyz/setlist.html) - Bilingual (PL/EN) archive of TX2 live setlists, source quality notes, aggregator contamination caveats, and missing-setlist logs from 2018 through late 2026.
-- **News & Rumors**: [news/index.html](https://tx2.emo-changeling.xyz/news/) - Bilingual feed of verified news, tour updates, leaks, and underground rumors about TX2. Individual articles have standalone EN (/news/<slug>.html) and PL (/news/pl/<slug>.html) pages.
+- **Home (Pigeon Ritual)**: [/](https://tx2.emo-changeling.xyz/) - The main visual landing page featuring the grid of custom fan arts.
+- **Biography (Wait, tf is TX2?? - Phenomenon)**: [/wtf](https://tx2.emo-changeling.xyz/wtf) - Bilingual (PL/EN) comprehensive band history and phenomenon overview.
+- **Band Lineup & Timeline**: [/lineup](https://tx2.emo-changeling.xyz/lineup) - Bilingual (PL/EN) current band lineup, touring contracts, and member timeline.
+- **Tour Schedule 2026-2027**: [/tours](https://tx2.emo-changeling.xyz/tours) - Bilingual (PL/EN) upcoming and past tour schedule for 2026-2027.
+- **Concert Archive (Pre-June 5, 2026)**: [/tours_archive](https://tx2.emo-changeling.xyz/tours_archive) - Bilingual (PL/EN) archive of TX2 concerts and tours prior to 2026-06-05 categorized by source certainty.
+- **Discography 2015-2026**: [/discography](https://tx2.emo-changeling.xyz/discography) - Bilingual (PL/EN) chronological discography from 2015 to 2026 with expandable tracklists, track release dates, song lengths, and physical edition markings.
+- **Historical Live Setlists (2018-2026)**: [/setlist](https://tx2.emo-changeling.xyz/setlist) - Bilingual (PL/EN) archive of TX2 live setlists, source quality notes, aggregator contamination caveats, and missing-setlist logs from 2018 through late 2026.
+- **News & Rumors**: [/news/](https://tx2.emo-changeling.xyz/news/) - Bilingual feed of verified news, tour updates, leaks, and underground rumors about TX2. Individual articles have standalone EN (/news/<slug>) and PL (/news/pl/<slug>) pages.
 - **News RSS Feed (English)**: [news/rss.xml](https://tx2.emo-changeling.xyz/news/rss.xml) - English RSS 2.0 syndication feed for news and rumors.
 - **News RSS Feed (Polish)**: [news/rss-pl.xml](https://tx2.emo-changeling.xyz/news/rss-pl.xml) - Polish RSS 2.0 syndication feed for news and rumors.
 - **Google News Sitemap**: [news-sitemap.xml](https://tx2.emo-changeling.xyz/news-sitemap.xml) - Google News XML sitemap for news articles.
-- **Guidelines (About pigeons)**: [about.html](https://tx2.emo-changeling.xyz/about.html) - Visual guidelines, download rules for files, and resources.
-- **Media (Media)**: [media.html](https://tx2.emo-changeling.xyz/media.html) - Video hub with non-autoplay video players, shorts, TikToks, and campaign poster art.
-- **Legal/Privacy (Boring Stuff)**: [legal.html](https://tx2.emo-changeling.xyz/legal.html) - Non-commercial disclaimers, submission rules, privacy notice, and safety notices.
+- **Guidelines (About pigeons)**: [/about](https://tx2.emo-changeling.xyz/about) - Visual guidelines, download rules for files, and resources.
+- **Media (Media)**: [/media](https://tx2.emo-changeling.xyz/media) - Video hub with non-autoplay video players, shorts, TikToks, and campaign poster art.
+- **Legal/Privacy (Boring Stuff)**: [/legal](https://tx2.emo-changeling.xyz/legal) - Non-commercial disclaimers, submission rules, privacy notice, and safety notices.
 
 ## Privacy & Financial Position
-- **Privacy & Telemetry**: No marketing trackers, ad networks, or first-party tracking cookies. Email artwork submissions and temporary cookieless Cloudflare RUM diagnostics are governed by [legal.html](https://tx2.emo-changeling.xyz/legal.html).
+- **Privacy & Telemetry**: No marketing trackers, ad networks, or first-party tracking cookies. Email artwork submissions and temporary cookieless Cloudflare RUM diagnostics are governed by [/legal](https://tx2.emo-changeling.xyz/legal).
 - **Non-Commercial**: The site does not sell products, collect donations, mediate ticket sales, accept money, or request gifts.

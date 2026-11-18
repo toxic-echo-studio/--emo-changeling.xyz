@@ -2,7 +2,7 @@
 site: https://reverse.emo-changeling.xyz
 contact: mailto:management@emo-changeling.xyz
 publisher_contact: mailto:publisher@toxic-echo.studio
-system_version: 1.10.26
+system_version: 1.10.27
 last_updated: 2026-11-18
 
 [usage]
@@ -40,16 +40,16 @@ notes: access granted under Creative Commons Attribution-NoDerivatives 4.0 Inter
 - Neutral Language Selector / Root: https://reverse.emo-changeling.xyz/
 - Polish Edition (PL):
   - Catalog / Home: https://reverse.emo-changeling.xyz/pl/
-  - Chronological Archive: https://reverse.emo-changeling.xyz/pl/archive.html
-  - Masthead / Impressum: https://reverse.emo-changeling.xyz/pl/impressum.html
-  - Editorial Team: https://reverse.emo-changeling.xyz/pl/team.html
-  - Legal & Policies: https://reverse.emo-changeling.xyz/pl/legal.html
+  - Chronological Archive: https://reverse.emo-changeling.xyz/pl/archive
+  - Masthead / Impressum: https://reverse.emo-changeling.xyz/pl/impressum
+  - Editorial Team: https://reverse.emo-changeling.xyz/pl/team
+  - Legal & Policies: https://reverse.emo-changeling.xyz/pl/legal
 - English Edition (EN):
   - Catalog / Home: https://reverse.emo-changeling.xyz/en/
-  - Chronological Archive: https://reverse.emo-changeling.xyz/en/archive.html
-  - Masthead / Impressum: https://reverse.emo-changeling.xyz/en/impressum.html
-  - Editorial Team: https://reverse.emo-changeling.xyz/en/team.html
-  - Legal & Policies: https://reverse.emo-changeling.xyz/en/legal.html
+  - Chronological Archive: https://reverse.emo-changeling.xyz/en/archive
+  - Masthead / Impressum: https://reverse.emo-changeling.xyz/en/impressum
+  - Editorial Team: https://reverse.emo-changeling.xyz/en/team
+  - Legal & Policies: https://reverse.emo-changeling.xyz/en/legal
 - Sitemap: https://reverse.emo-changeling.xyz/sitemap.xml
 - RSS Feed (PL): https://reverse.emo-changeling.xyz/rss-pl.xml
 - RSS Feed (EN): https://reverse.emo-changeling.xyz/rss-en.xml
@@ -62,6 +62,6 @@ notes: access granted under Creative Commons Attribution-NoDerivatives 4.0 Inter
 - Fansite Support: https://tx2.emo-changeling.xyz
 
 ## UPDATE LOG
-- **version:** 1.10.26
+- **version:** 1.10.27
 - **last llms.txt update:** 2026-11-18
 - **last website update:** 2026-11-18

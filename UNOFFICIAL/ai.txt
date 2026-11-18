@@ -1,4 +1,4 @@
-# ai.txt — global AI access policy
+# ai.txt - global AI access policy
 site: https://unofficial.emo-changeling.xyz
 contact: mailto:admin@toxic-echo.studio
 

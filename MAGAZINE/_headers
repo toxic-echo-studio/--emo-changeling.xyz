@@ -9,7 +9,7 @@
 /
   Cache-Control: public, max-age=21600, must-revalidate
 
-/impressum.html
+/impressum
   Cache-Control: public, max-age=21600, must-revalidate
 
 /pl/

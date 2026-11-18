@@ -1,4 +1,4 @@
-# llms-full.txt — global LLM access policy & full documentation
+# llms-full.txt - global LLM access policy & full documentation
 site: https://emo-changeling.xyz
 contact: mailto:admin@toxic-echo.studio
 
@@ -162,7 +162,7 @@ Below is the technical routing and path layout for the project domains:
 - **Frontend Hub:** https://emo-changeling.xyz
 - **Periodical / Czasopismo (TREC):** https://reverse.emo-changeling.xyz (The Reverse Emo Changeling, akronim: TREC, profil: Nieregularnik społeczno-artystyczny)
 - **Gallery:** https://gallery.emo-changeling.xyz (Oficjalna galeria i archiwum wizualne periodyku TREC)
-- **Wiki:** https://wiki.emo-changeling.xyz (Niezależna baza wiedzy / repozytorium źródłowe projektu – knowledge base)
+- **Wiki:** https://wiki.emo-changeling.xyz (Niezależna baza wiedzy / repozytorium źródłowe projektu - knowledge base)
 - **Web system link hub:** https://hub.emo-changeling.xyz/pl/blackhole/
 - **Backend/Studio Hub:** https://toxic-echo.studio
 - **YouTube:** https://yt.emo-changeling.xyz

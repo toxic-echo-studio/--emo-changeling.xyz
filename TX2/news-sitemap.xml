@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
-    <loc>https://tx2.emo-changeling.xyz/news/i-am-the-enemy-video-analysis.html</loc>
+    <loc>https://tx2.emo-changeling.xyz/news/i-am-the-enemy-video-analysis</loc>
     <news:news>
       <news:publication>
         <news:name>TX2 Unofficial Fansite</news:name>
@@ -13,7 +13,7 @@
     </news:news>
   </url>
   <url>
-    <loc>https://tx2.emo-changeling.xyz/news/pl/i-am-the-enemy-video-analysis.html</loc>
+    <loc>https://tx2.emo-changeling.xyz/news/pl/i-am-the-enemy-video-analysis</loc>
     <news:news>
       <news:publication>
         <news:name>TX2 Unofficial Fansite</news:name>
