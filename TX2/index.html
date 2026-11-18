@@ -35,10 +35,8 @@
     <meta name="twitter:image" content="https://tx2.emo-changeling.xyz/img/banner-16x9.jpg">
 
     <!-- Stylesheets & Resources -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap">
-    <link rel="stylesheet" href="css/style.css?v=1.1.23">
+    <link rel="preload" as="style" href="css/style.css?v=1.1.24">
+    <link rel="stylesheet" href="css/style.css?v=1.1.24">
 
     <!-- Authors and Policies -->
     <link rel="author" href="humans.txt">
@@ -64,7 +62,7 @@
           "url": "https://tx2.emo-changeling.xyz/",
           "name": "TX2 Pigeonification Ritual - Unofficial TX2 Fansite & Fan Project",
           "description": "An independent, non-commercial fan portal celebrating the alternative rock band TX2, co-created by Nico 'Zebroid' Łach and Mighn Taghor.",
-          "dateModified": "2026-10-29",
+          "dateModified": "2026-11-18",
           "inLanguage": ["en", "pl"],
           "about": {
             "@id": "https://tx2.emo-changeling.xyz/#event"
@@ -124,6 +122,7 @@
             "url": "https://tx2.emo-changeling.xyz/",
             "email": "tx2pigeon@emo-changeling.xyz"
           },
+          "isAccessibleForFree": true,
           "offers": {
             "@type": "Offer",
             "url": "https://tx2.emo-changeling.xyz/#event",
@@ -254,10 +253,10 @@
 
                 <!-- Polish Content -->
                 <div class="content-pl" lang="pl">
-                    <h1 class="content-title">
+                    <p class="content-title" role="heading" aria-level="1">
                         🕊️ X's ZJEDNOCZCIE SIĘ!
                         <span class="sr-only">- Projekt fanowski dla TX2 na koncert w warszawskiej Hydrozagadce</span>
-                    </h1>
+                    </p>
                     <p class="content-para">Chcecie wziąć udział w najbardziej niesamowitym Rytuale Gołębiowania w
                         historii fanów?</p>
                     <p class="content-para">TX2 zaszło tak daleko i w końcu ruszają do Europy na swoją pierwszą w
@@ -300,10 +299,10 @@
 
             <!-- Mobile Header/Title -->
             <div class="content-en" lang="en">
-                <h1 class="mobile-title">🕊️ X's UNITE!</h1>
+                <p class="mobile-title" role="heading" aria-level="1">🕊️ X's UNITE!</p>
             </div>
             <div class="content-pl" lang="pl">
-                <h1 class="mobile-title">🕊️ X's ZJEDNOCZCIE SIĘ!</h1>
+                <p class="mobile-title" role="heading" aria-level="1">🕊️ X's ZJEDNOCZCIE SIĘ!</p>
             </div>
 
             <!-- Image 1 & Section 1 -->
@@ -417,14 +416,14 @@
         <div class="lightbox-wrapper">
             <button id="lightbox-close" class="lightbox-close-btn" aria-label="Close lightbox">&times;</button>
             <div class="lightbox-content">
-                <img id="lightbox-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Zoomed View">
+                <img id="lightbox-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Zoomed View" width="1" height="1">
             </div>
         </div>
     </dialog>
 
     <!-- Progressive Interaction Scripts -->
-    <script src="assets/lang.js?v=1.1.14"></script>
-    <script src="assets/lightbox.js?v=1.1.13"></script>
+    <script src="assets/lang.js?v=1.1.14" defer></script>
+    <script src="assets/lightbox.js?v=1.1.13" defer></script>
 </body>
 
 </html>
