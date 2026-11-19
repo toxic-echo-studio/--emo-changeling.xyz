@@ -1,26 +1,17 @@
-/* METADATA */
-/* Dokumentacja autorstwa i struktury zasobow serwisu */
-Last Updated: 2026-11-18
-Version: 1.1.23
-
 /* TEAM */
-Co-Creator & Content: Nico "Zebroid" Łach (Emo Changeling)
-Co-Creator & Code: Mighn Taghor
-Project Contact: tx2pigeon@emo-changeling.xyz
+Project: TX2 Unofficial Fansite (TX2 Pigeonification Ritual)
+Creators: Nico "Zebroid" Łach, Mighn Taghor
+Technical Infrastructure: Toxic Echo Studio (https://toxic-echo.studio/)
+Contact: tx2pigeon@emo-changeling.xyz, admin@toxic-echo.studio
 
-/* CREDITS & ATTRIBUTION */
-Favicon Artwork: kalashnyk (https://aticon.com/authors/kalashnyk)
+/* CREDITS & ASSETS */
+Favicon Author: kalashnyk (https://aticon.com/authors/kalashnyk)
+Typography: Self-hosted Inter WOFF2 (inter-latin.woff2, inter-latin-ext.woff2)
+Fan Art Contributors: J0n, @kai_tx2, Lena, glam/ray_TX2.fan, Kit Colson
 
-/* SUPPORT */
-Infrastructure & Hosting: Toxic Echo Studio
-System Administrator: admin@toxic-echo.studio
-Note: Technical support is purely non-commercial and voluntary.
-
-/* SITE DETAILS */
-Architecture: Static Monolith, Cloudflare Pages
-Standards: HTML5, CSS3, ES6 Custom Scripts (Vanilla JavaScript)
-Design System: Modern MySpace, CSS Custom Properties, Responsive CSS Grid
-External Resources: Google Fonts (Inter); optional YouTube (youtube-nocookie.com) & TikTok embeds on /media
-Cookies: None (session language state stored only in browser sessionStorage)
-Analytics/Tracking: No ad/marketing trackers; temporary cookieless Cloudflare RUM may be enabled during deployment verification (see /legal)
-Ads: None
+/* SITE */
+Version: 1.2.0
+Last Updated: 2026-11-19
+Languages: English (EN), Polish (PL)
+Architecture: Pure static HTML and CSS with lightweight lightbox.js and tours.js
+Privacy: No cookies, no sessionStorage, no third-party font CDNs

@@ -141,9 +141,6 @@ body.subpage {
 }
 
 /* Responsive Link Text toggles */
-.nav-mobile {
-    display: none;
-}
 
 /* ==========================================================================
    Language Selector (Pure CSS based)
@@ -174,45 +171,22 @@ body.subpage {
     color: var(--border-color);
 }
 
-/* Controlled content blocks */
-.content-en, .content-pl {
-    display: none;
-}
-
-/* Selector state triggers */
-#lang-toggle-en:checked ~ .lang-selector-container .btn-en {
+.lang-label.lang-active,
+.lang-label.active-lang {
     color: var(--accent-red);
     font-weight: bold;
     text-shadow: 0 0 5px var(--accent-red-glow);
+    cursor: default;
 }
 
-#lang-toggle-pl:checked ~ .lang-selector-container .btn-pl {
-    color: var(--accent-red);
-    font-weight: bold;
-    text-shadow: 0 0 5px var(--accent-red-glow);
+a.lang-label {
+    text-decoration: none;
 }
 
-#lang-toggle-en:focus-visible ~ .lang-selector-container .btn-en,
-#lang-toggle-pl:focus-visible ~ .lang-selector-container .btn-pl {
+a.lang-label:focus-visible {
     outline: 2px solid var(--accent-red);
     outline-offset: 2px;
     border-radius: 2px;
-}
-
-#lang-toggle-en:checked ~ * .content-en {
-    display: block;
-}
-
-#lang-toggle-en:checked ~ * .content-pl {
-    display: none;
-}
-
-#lang-toggle-pl:checked ~ * .content-en {
-    display: none;
-}
-
-#lang-toggle-pl:checked ~ * .content-pl {
-    display: block;
 }
 
 /* ==========================================================================
@@ -296,56 +270,8 @@ ul.bullet-list li {
 }
 
 /* ==========================================================================
-   Desktop Ellipse Fanart Gallery
+   Homepage Ritual Grid Gallery
    ========================================================================== */
-.desktop-layout {
-    display: block;
-}
-
-.mobile-layout {
-    display: none;
-}
-
-.ellipse-row {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Symmetrical layouts & positioning adjustments */
-.row-upper {
-    margin-bottom: -15px;
-}
-
-.row-lower {
-    margin-top: -15px;
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Upper row: Left (card-1) and Right (card-3) are shifted DOWN, Middle (card-2) is HIGHER up (0 shift) */
-.row-upper .card-1, 
-.row-upper .card-3 {
-    transform: translateY(35px);
-}
-
-.row-upper .card-2 {
-    transform: translateY(-5px);
-}
-
-/* Lower row: Left (card-4) and Right (card-5) are HIGHER up (0 shift), Middle is empty */
-.row-lower .card-4 {
-    transform: translate(75px, -35px);
-}
-
-.row-lower .card-5 {
-    transform: translate(-75px, -35px);
-}
-
 .fanart-card {
     background-color: var(--card-bg);
     border: 1px solid var(--border-color);
@@ -387,21 +313,140 @@ ul.bullet-list li {
     box-shadow: 0 0 15px var(--accent-red-glow);
 }
 
-.row-upper .card-1:hover,
-.row-upper .card-3:hover {
-    transform: translateY(35px) scale(1.04);
-}
+@media (min-width: 769px) {
+    .ritual-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 40px;
+        row-gap: 0;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 20px;
+        align-items: start;
+    }
 
-.row-upper .card-2:hover {
-    transform: translateY(-5px) scale(1.04);
-}
+    .ritual-grid .mobile-section {
+        display: contents;
+    }
 
-.row-lower .card-4:hover {
-    transform: translate(75px, -35px) scale(1.04);
-}
+    .ritual-grid .fanart-card {
+        position: relative;
+        z-index: 2;
+    }
 
-.row-lower .card-5:hover {
-    transform: translate(-75px, -35px) scale(1.04);
+    .ritual-grid .fanart-card:hover {
+        z-index: 3;
+    }
+
+    .ritual-grid .card-1 {
+        grid-column: 1;
+        grid-row: 1;
+        transform: translateY(35px);
+    }
+
+    .ritual-grid .card-2 {
+        grid-column: 2;
+        grid-row: 1;
+        transform: translateY(-5px);
+    }
+
+    .ritual-grid .card-3 {
+        grid-column: 3;
+        grid-row: 1;
+        transform: translateY(35px);
+    }
+
+    .ritual-grid .card-1:hover,
+    .ritual-grid .card-3:hover {
+        transform: translateY(35px) scale(1.04);
+    }
+
+    .ritual-grid .card-2:hover {
+        transform: translateY(-5px) scale(1.04);
+    }
+
+    .ritual-grid .central-bg {
+        display: block;
+        grid-column: 1 / -1;
+        grid-row: 2 / 9;
+        width: 100%;
+        max-width: 800px;
+        justify-self: center;
+        align-self: stretch;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: var(--card-bg);
+        border: 1px solid var(--border-color);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+        border-radius: 4px;
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    .ritual-grid .content-title,
+    .ritual-grid .ritual-text,
+    .ritual-grid .cta-box {
+        grid-column: 1 / -1;
+        width: min(calc(100% - 72px), 728px);
+        justify-self: center;
+        z-index: 1;
+    }
+
+    .ritual-grid .content-title {
+        grid-row: 2;
+        margin-top: 46px;
+        margin-bottom: 20px;
+    }
+
+    .ritual-grid .txt-1 {
+        grid-row: 3;
+    }
+
+    .ritual-grid .txt-2 {
+        grid-row: 4;
+    }
+
+    .ritual-grid .txt-3 {
+        grid-row: 5;
+    }
+
+    .ritual-grid .txt-4 {
+        grid-row: 6;
+    }
+
+    .ritual-grid .txt-5 {
+        grid-row: 7;
+    }
+
+    .ritual-grid .txt-5 .content-para:last-child {
+        margin-bottom: 0;
+    }
+
+    .ritual-grid .cta-box {
+        grid-row: 8;
+        margin-top: 30px;
+        margin-bottom: 46px;
+    }
+
+    .ritual-grid .card-4 {
+        grid-column: 1;
+        grid-row: 9;
+        transform: translate(75px, -35px);
+    }
+
+    .ritual-grid .card-5 {
+        grid-column: 3;
+        grid-row: 9;
+        transform: translate(-75px, -35px);
+    }
+
+    .ritual-grid .card-4:hover {
+        transform: translate(75px, -35px) scale(1.04);
+    }
+
+    .ritual-grid .card-5:hover {
+        transform: translate(-75px, -35px) scale(1.04);
+    }
 }
 
 /* ==========================================================================
@@ -412,21 +457,16 @@ ul.bullet-list li {
         background-attachment: scroll;
     }
 
-    .desktop-layout {
+    .nav-ext {
         display: none;
     }
 
-    .mobile-layout {
-        display: block;
-        padding: 0 15px;
-    }
-
-    .nav-desktop {
+    .nav-wtf > span {
         display: none;
     }
 
-    .nav-mobile {
-        display: inline;
+    .nav-wtf::after {
+        content: attr(data-short);
     }
 
     .nav-bar {
@@ -464,21 +504,41 @@ ul.bullet-list li {
         padding: 6px 8px;
     }
 
-    /* Mobile image cards: 75% width, stacked, alternating alignment */
-    .card-mobile {
-        width: 75%;
-        margin-top: 25px;
-        margin-bottom: 25px;
+    .ritual-grid {
+        display: block;
+        padding: 0 15px;
     }
 
-    .card-mobile img {
-        aspect-ratio: 1;
+    .ritual-grid .central-bg {
+        display: none;
     }
 
-    .mobile-section {
+    .ritual-grid .content-title {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--accent-red);
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 10px;
+    }
+
+    .ritual-grid .mobile-section {
         display: flex;
         flex-direction: column;
         margin-bottom: 25px;
+    }
+
+    .ritual-grid .fanart-card {
+        width: 75%;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        transform: none;
+    }
+
+    .ritual-grid .fanart-card img {
+        aspect-ratio: 1;
     }
 
     /* Alternate alignments */
@@ -490,24 +550,13 @@ ul.bullet-list li {
         align-self: flex-end;
     }
 
-    /* Mobile Text sections interleaved */
-    .mobile-text-block {
+    .ritual-grid .ritual-text {
         background-color: var(--card-bg);
         border: 1px solid var(--border-color);
         padding: 20px;
         border-radius: 4px;
         width: 100%;
         margin-bottom: 15px;
-    }
-
-    .mobile-title {
-        font-size: 1.8rem;
-        color: var(--accent-red);
-        text-align: center;
-        text-transform: uppercase;
-        margin-bottom: 20px;
-        border-bottom: 1px solid var(--border-color);
-        padding-bottom: 10px;
     }
 }
 
@@ -617,30 +666,6 @@ footer {
     align-self: stretch;
 }
 
-.sidebar-en {
-    display: block;
-}
-
-.sidebar-pl {
-    display: none;
-}
-
-#lang-toggle-en:checked ~ * .sidebar-en {
-    display: block;
-}
-
-#lang-toggle-en:checked ~ * .sidebar-pl {
-    display: none;
-}
-
-#lang-toggle-pl:checked ~ * .sidebar-en {
-    display: none;
-}
-
-#lang-toggle-pl:checked ~ * .sidebar-pl {
-    display: block;
-}
-
 .sidebar-sticky {
     position: sticky;
     top: 20px;
@@ -709,28 +734,18 @@ footer {
         gap: 20px;
     }
     
-    .article-sidebar,
-    .sidebar-en,
-    .sidebar-pl {
+    .article-sidebar {
         display: none !important;
     }
     
     .mobile-toc {
-        display: none;
+        display: block;
         background-color: var(--card-bg);
         border: 1px solid var(--border-color);
         padding: 15px;
         margin-bottom: 20px;
         border-radius: 4px;
         width: 100%;
-    }
-
-    #lang-toggle-en:checked ~ * .mobile-toc-en {
-        display: block;
-    }
-
-    #lang-toggle-pl:checked ~ * .mobile-toc-pl {
-        display: block;
     }
     
     .mobile-toc-summary {
@@ -1200,11 +1215,6 @@ s, del {
     text-decoration: underline;
 }
 
-#lang-toggle-en:checked ~ * .news-archive-link .content-en,
-#lang-toggle-pl:checked ~ * .news-archive-link .content-pl {
-    display: inline;
-}
-
 .news-read-more {
     display: inline-block;
     color: var(--accent-red);
@@ -1230,116 +1240,6 @@ s, del {
     outline: 2px solid var(--accent-red);
     outline-offset: 2px;
     border-radius: 2px;
-}
-
-.news-modal {
-    display: none;
-}
-
-.news-modal:target {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    inset: 0;
-    padding: 20px;
-    z-index: 9999;
-}
-
-.news-modal-backdrop {
-    position: fixed;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.84);
-    z-index: 9999;
-    cursor: default;
-}
-
-.news-modal-dialog {
-    position: relative;
-    z-index: 10000;
-    width: 100%;
-    max-width: 740px;
-    max-height: 88vh;
-    overflow-y: auto;
-    background-color: var(--card-bg);
-    border: 1px solid var(--accent-red);
-    box-shadow: 0 0 28px var(--accent-red-glow);
-    border-radius: 4px;
-    padding: 32px;
-    color: var(--text-color);
-}
-
-.news-modal-close {
-    position: absolute;
-    top: 14px;
-    right: 14px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 36px;
-    min-height: 36px;
-    padding: 4px 10px;
-    background-color: rgba(255, 59, 59, 0.12);
-    border: 1px solid var(--accent-red);
-    border-radius: 4px;
-    color: var(--accent-red);
-    font-size: 1.25rem;
-    font-weight: 700;
-    line-height: 1;
-    text-decoration: none;
-    transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.news-modal-close:hover,
-.news-modal-close:focus-visible {
-    background-color: var(--accent-red);
-    color: var(--bg-color);
-    box-shadow: 0 0 12px var(--accent-red-glow);
-}
-
-.news-modal-close:focus-visible {
-    outline: 2px solid var(--accent-red);
-    outline-offset: 2px;
-}
-
-.news-modal-title {
-    font-size: 1.35rem;
-    font-weight: 700;
-    color: var(--accent-red);
-    text-transform: uppercase;
-    letter-spacing: 0.02em;
-    line-height: 1.3;
-    margin-bottom: 16px;
-    padding-right: 44px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.news-modal-para {
-    font-size: 0.98rem;
-    font-weight: 300;
-    color: var(--text-color);
-    line-height: 1.65;
-    margin-bottom: 14px;
-}
-
-.news-modal-para:last-child {
-    margin-bottom: 0;
-}
-
-.news-modal-para a,
-.news-modal-para a:visited {
-    color: var(--accent-red);
-    text-decoration: underline;
-    text-underline-offset: 2px;
-    font-weight: 500;
-    transition: color 0.2s ease, text-shadow 0.2s ease;
-}
-
-.news-modal-para a:hover,
-.news-modal-para a:focus-visible {
-    color: #ff6b6b;
-    text-shadow: 0 0 8px var(--accent-red-glow);
 }
 
 @media (max-width: 768px) {
@@ -1404,14 +1304,6 @@ s, del {
     font-weight: 700;
 }
 
-#lang-toggle-en:checked ~ * .submenu-pl {
-    display: none !important;
-}
-
-#lang-toggle-pl:checked ~ * .submenu-en {
-    display: none !important;
-}
-
 @media (max-width: 768px) {
     .nav-submenu {
         display: none !important;
@@ -1430,30 +1322,6 @@ s, del {
     padding: 12px 16px;
     max-width: 1000px;
     border-bottom: 1px solid var(--border-color);
-}
-
-.wtf-subnav-en,
-.wtf-subnav-pl {
-    display: none;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-}
-
-#lang-toggle-en:checked ~ * .wtf-subnav-en {
-    display: flex;
-}
-
-#lang-toggle-en:checked ~ * .wtf-subnav-pl {
-    display: none;
-}
-
-#lang-toggle-pl:checked ~ * .wtf-subnav-en {
-    display: none;
-}
-
-#lang-toggle-pl:checked ~ * .wtf-subnav-pl {
-    display: flex;
 }
 
 .wtf-subnav-link {
@@ -1944,17 +1812,6 @@ a[href^=mailto]:focus-visible {
 /* --------------------------------------------------------------------------
    Standalone News Article Pages & Static Language Links
    -------------------------------------------------------------------------- */
-.lang-label.active-lang {
-    color: var(--accent-red);
-    font-weight: bold;
-    text-shadow: 0 0 5px var(--accent-red-glow);
-    cursor: default;
-}
-
-a.lang-label {
-    text-decoration: none;
-}
-
 .news-card-title-link,
 .news-card-title-link:visited {
     color: inherit;
@@ -2036,21 +1893,23 @@ a.lang-label {
         transform: none !important;
     }
 
-    .row-upper .card-1:hover,
-    .row-upper .card-3:hover {
-        transform: translateY(35px) !important;
-    }
+    @media (min-width: 769px) {
+        .ritual-grid .card-1:hover,
+        .ritual-grid .card-3:hover {
+            transform: translateY(35px) !important;
+        }
 
-    .row-upper .card-2:hover {
-        transform: translateY(-5px) !important;
-    }
+        .ritual-grid .card-2:hover {
+            transform: translateY(-5px) !important;
+        }
 
-    .row-lower .card-4:hover {
-        transform: translate(75px, -35px) !important;
-    }
+        .ritual-grid .card-4:hover {
+            transform: translate(75px, -35px) !important;
+        }
 
-    .row-lower .card-5:hover {
-        transform: translate(-75px, -35px) !important;
+        .ritual-grid .card-5:hover {
+            transform: translate(-75px, -35px) !important;
+        }
     }
 }
 

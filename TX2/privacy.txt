@@ -1,27 +1,36 @@
-# ==========================================================================
-# PRIVACY NOTICE & POLICY
-# Project: TX2 Pigeonification Ritual - Unofficial TX2 Fansite & Fan Project
-# Website: https://tx2.emo-changeling.xyz
-# Last Updated: 2026-11-18
-# Version: 1.1.23
-# ==========================================================================
+TX2 Unofficial Fansite - Privacy Notice
+Version: 1.2.0
+Last Updated: 2026-11-19
 
-1. GENERAL DISCLOSURE
-This portal is a fully static, non-commercial, unofficial fan project co-created by Nico "Zebroid" Łach (Emo Changeling) and Mighn Taghor. Technical infrastructure is voluntarily hosted by Toxic Echo Studio.
+Project: TX2 Unofficial Fansite ("TX2 Pigeonification Ritual")
+Co-creators: Nico Łach (Zebroid) and Mighn Taghor
+Voluntary Hosting & Technical Infrastructure: Toxic Echo Studio (non-commercial)
 
-2. WEBSITE BROWSING & EMAIL SUBMISSIONS
-- The website itself does NOT contain sign-up forms, user accounts, or newsletters.
-- If you voluntarily submit fanart via email to tx2pigeon@emo-changeling.xyz, your email address and provided handle/signature are processed solely to organize the project and print the physical fan gift, and by default shared with TX2 for copyright/attribution purposes (with an opt-out option until January 1, 2027), as detailed in §5 and §6 of https://tx2.emo-changeling.xyz/legal. All participant data stored on project resources is deleted after February 21, 2027.
+1. No Accounts, Cookies, or Client-Side Tracking
+This static fansite has no sign-up forms, user accounts, or newsletters.
+It sets zero cookies and uses zero sessionStorage or tracking profiles.
+Language versions are served as separate static HTML documents in English (/) and Polish (/pl/).
 
-3. COOKIES, EMBEDS & TECHNICAL MONITORING
-- This website does NOT set first-party tracking cookies (language preference is kept only in browser sessionStorage).
-- No commercial ad networks or marketing pixels are used.
-- Following major codebase updates, cookieless Cloudflare Real User Measurement (RUM / Web Analytics) may be temporarily enabled under legitimate interest (Art. 6(1)(f) GDPR) strictly to verify deployment stability.
-- The site loads the Inter typeface from Google Fonts, and the /media subpage embeds non-autoplay players from YouTube (youtube-nocookie.com) and TikTok.
+2. Fan Project Artwork Submissions & GDPR Disclosures
+Artwork submissions sent by email to tx2pigeon@emo-changeling.xyz are processed solely for organizing the fan project and producing the physical prints and group poster.
+By default, submission email addresses and submitted artwork are shared with TX2 and their crew solely for copyright, attribution, or direct licensing/official interest inquiries.
+Participants may opt out of sharing their email address with the band before January 1, 2027, as detailed in the project rules at:
+- https://tx2.emo-changeling.xyz/legal
+- https://tx2.emo-changeling.xyz/pl/legal
+All participant personal data stored on website resources will be permanently deleted after the submission phase concludes on February 21, 2027.
 
-4. HOSTING & INFRASTRUCTURE LOGS
-This site is hosted statically on Cloudflare Pages. System logs (e.g., HTTP request headers, IP addresses, request times) may be processed by Cloudflare to ensure security, prevent DDoS attacks, and deliver files.
+3. Hosting Logs & Temporary Technical Monitoring
+The site is hosted on Cloudflare Pages, which processes standard technical server access logs required for delivery and security.
+Following major codebase or structural updates, temporary cookieless Cloudflare Real User Measurement (RUM) may be enabled under legitimate interest (Art. 6(1)(f) GDPR) strictly to gather aggregated performance metrics and debug technical issues without storing or reading cookies or local storage data.
 
-5. CONTACT INFO
-- Project Inquiries: tx2pigeon@emo-changeling.xyz
-- Security & System Admin: admin@toxic-echo.studio
+4. Fonts, UI & Client-Side Scripts
+The interface is built with pure HTML and CSS plus two lightweight optional scripts:
+- lightbox.js (fanart modal preview on the homepage)
+- tours.js (tour status indicators on /tours and /pl/tours)
+Typography is served locally using self-hosted Inter WOFF2 font files (inter-latin.woff2 and inter-latin-ext.woff2), with zero external requests to Google Fonts or third-party font servers.
+
+5. Embedded Third-Party Media
+The /media and /pl/media pages embed external media players from YouTube (via privacy-enhanced youtube-nocookie.com iframes with lazy loading) and TikTok.
+
+6. Contact
+For privacy, opt-out, or content inquiries, contact: tx2pigeon@emo-changeling.xyz, admin@toxic-echo.studio

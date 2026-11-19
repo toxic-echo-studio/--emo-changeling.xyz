@@ -15,59 +15,41 @@
     }
 
     function updateTourItems(todayISO) {
-        const containers = [
-            { selector: '.content-en', badgeText: 'NEXT' },
-            { selector: '.content-pl', badgeText: 'NAJBLIZSZY' }
-        ];
+        const isPl = (document.documentElement.lang || '').toLowerCase().startsWith('pl');
+        const badgeText = isPl ? 'NAJBLIŻSZY' : 'NEXT';
+        const items = document.querySelectorAll('.tour-item[data-date]');
+        let nextEl = null;
 
-        containers.forEach(function (cfg) {
-            const container = document.querySelector(cfg.selector);
-            if (!container) {
-                return;
-            }
-
-            const items = container.querySelectorAll('.tour-item[data-date]');
-            let nextEl = null;
-
-            items.forEach(function (el) {
-                const compareDate = el.dataset.endDate || el.dataset.date;
-                if (compareDate < todayISO) {
-                    el.classList.add('tour-past');
-                    el.classList.remove('tour-next');
-                    const existingBadges = el.querySelectorAll('.tour-next-badge');
-                    existingBadges.forEach(function (badge) {
-                        badge.remove();
-                    });
-                } else {
-                    el.classList.remove('tour-past');
-                    if (!nextEl) {
-                        nextEl = el;
-                    }
-                }
-            });
-
-            if (nextEl) {
-                nextEl.classList.add('tour-next');
-                if (!nextEl.querySelector('.tour-next-badge')) {
-                    const badge = document.createElement('span');
-                    badge.className = 'tour-next-badge';
-                    badge.textContent = cfg.badgeText;
-                    nextEl.prepend(badge);
+        items.forEach(function (el) {
+            const compareDate = el.dataset.endDate || el.dataset.date;
+            if (compareDate < todayISO) {
+                el.classList.add('tour-past');
+                el.classList.remove('tour-next');
+                const existingBadges = el.querySelectorAll('.tour-next-badge');
+                existingBadges.forEach(function (badge) {
+                    badge.remove();
+                });
+            } else {
+                el.classList.remove('tour-past');
+                if (!nextEl) {
+                    nextEl = el;
                 }
             }
         });
+
+        if (nextEl) {
+            nextEl.classList.add('tour-next');
+            if (!nextEl.querySelector('.tour-next-badge')) {
+                const badge = document.createElement('span');
+                badge.className = 'tour-next-badge';
+                badge.textContent = badgeText;
+                nextEl.prepend(badge);
+            }
+        }
     }
 
     function centerNextShow() {
-        const langPl = document.getElementById('lang-toggle-pl');
-        const isPl = Boolean(langPl && langPl.checked);
-        const containerSelector = isPl ? '.content-pl' : '.content-en';
-        const container = document.querySelector(containerSelector);
-        if (!container) {
-            return;
-        }
-
-        const nextEl = container.querySelector('.tour-next');
+        const nextEl = document.querySelector('.tour-next');
         if (!nextEl) {
             return;
         }
@@ -97,21 +79,6 @@
             }, 30);
         }
 
-        const langEn = document.getElementById('lang-toggle-en');
-        const langPl = document.getElementById('lang-toggle-pl');
-
-        if (langEn) {
-            langEn.addEventListener('change', function () {
-                requestAnimationFrame(centerNextShow);
-            });
-        }
-
-        if (langPl) {
-            langPl.addEventListener('change', function () {
-                requestAnimationFrame(centerNextShow);
-            });
-        }
-
         document.addEventListener('click', function (event) {
             const link = event.target.closest('a[href]');
             if (!link) {
@@ -119,7 +86,7 @@
             }
 
             const href = link.getAttribute('href') || '';
-            if (href === '#upcoming' || /(?:^|\/)tours(?:\.html)?#upcoming$/.test(href)) {
+            if (href === '#upcoming' || /(?:^|\/)(?:pl\/)?tours(?:\.html)?#upcoming$/.test(href)) {
                 event.preventDefault();
                 requestAnimationFrame(centerNextShow);
             }

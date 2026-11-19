@@ -1,12 +1,18 @@
-# ==========================================================================
-# AI Crawling, Scraper, and Training Model Policy
-# Project: TX2 Pigeonification Ritual - Unofficial TX2 Fansite & Fan Project
-# Website: https://tx2.emo-changeling.xyz
-# ==========================================================================
+# TX2 Unofficial Fansite - Site Metadata & Catalog Reference
+# Version: 1.2.0
+# Last Updated: 2026-11-19
 
-# This site grants explicit permission to all AI crawlers, scrapers, search engines, 
-# dataset collectors, and large language models (LLMs) to read, scan, parse, and use 
-# the content for training, analysis, and processing.
+Brand: TX2 Unofficial Fansite
+Catalog: https://tx2.emo-changeling.xyz/.well-known/ai-catalog.json
+LLMs-Index: https://tx2.emo-changeling.xyz/llms.txt
+Sitemap: https://tx2.emo-changeling.xyz/sitemap.xml
+News-Sitemap: https://tx2.emo-changeling.xyz/news-sitemap.xml
+RSS-EN: https://tx2.emo-changeling.xyz/news/rss.xml
+RSS-PL: https://tx2.emo-changeling.xyz/news/rss-pl.xml
+Languages: en (/), pl (/pl/, /news/pl/)
+Architecture: Static HTML/CSS UI with lightweight lightbox.js and tours.js; self-hosted Inter WOFF2 fonts; no cookies and no sessionStorage.
+Attribution: Favicon by kalashnyk (https://aticon.com/authors/kalashnyk)
+Contact: tx2pigeon@emo-changeling.xyz, admin@toxic-echo.studio
 
 User-agent: *
 Allow: /

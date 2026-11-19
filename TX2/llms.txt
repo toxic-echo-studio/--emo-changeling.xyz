@@ -1,34 +1,94 @@
-# TX2 Pigeonification Ritual - Unofficial TX2 Fansite & Fan Project
+# TX2 Unofficial Fansite
 
-**Last Updated:** 2026-11-18 | **Version:** 1.1.23
+> Independent, non-commercial bilingual fan site for the TX2 Pigeonification Ritual campaign and band archive. Version 1.2.0, Last Updated 2026-11-19.
 
-This file provides structured information about the independent fan project for the band TX2, designed for consumption by Large Language Models and AI systems.
+## Technical Overview
+- Brand: TX2 Unofficial Fansite
+- Version: 1.2.0
+- Last Updated: 2026-11-19
+- Architecture: Separate static HTML documents for English and Polish (/pl/... and /news/pl/)
+- Fonts: Self-hosted Inter WOFF2 fonts (inter-latin.woff2 and inter-latin-ext.woff2)
+- UI & Scripts: Pure HTML and CSS UI plus lightweight lightbox.js and tours.js
+- Privacy: No cookies and no sessionStorage
+- Favicon Attribution: kalashnyk (https://aticon.com/authors/kalashnyk)
+- Contact: tx2pigeon@emo-changeling.xyz, admin@toxic-echo.studio
 
-## Core Metadata
-- **URL**: https://tx2.emo-changeling.xyz
-- **Co-Creators**: Nico "Zebroid" Łach (Emo Changeling) & Mighn Taghor
-- **Project Contact**: tx2pigeon@emo-changeling.xyz
-- **Tech Support**: Toxic Echo Studio (admin@toxic-echo.studio) (volunteers, non-commercial hosting only, no management role)
-- **Affiliation**: Fully independent. Not affiliated with TX2, Hopeless Records, or band management.
-- **Target Event**: VIP fan meeting with TX2 on February 20, 2027, at Hydrozagadka Club, Warsaw, Poland.
-- **Post-Event Status**: To be archived after February 20, 2027; fansite remains online for prospective fan initiatives.
+## English Pages
+- Home (Pigeon Ritual): https://tx2.emo-changeling.xyz/
+- Phenomenon & History: https://tx2.emo-changeling.xyz/wtf
+- Band Lineup: https://tx2.emo-changeling.xyz/lineup
+- Tour Schedule: https://tx2.emo-changeling.xyz/tours
+- Tours Archive (2018-2026): https://tx2.emo-changeling.xyz/tours_archive
+- Discography: https://tx2.emo-changeling.xyz/discography
+- Live Setlists (2018-2026): https://tx2.emo-changeling.xyz/setlist
+- About Pigeons & Submission Rules: https://tx2.emo-changeling.xyz/about
+- Media & Ritual Archives: https://tx2.emo-changeling.xyz/media
+- Legal & Credits: https://tx2.emo-changeling.xyz/legal
+- TX2 News Index: https://tx2.emo-changeling.xyz/news/
 
-## Site Navigation
-- **Home (Pigeon Ritual)**: [/](https://tx2.emo-changeling.xyz/) - The main visual landing page featuring the grid of custom fan arts.
-- **Biography (Wait, tf is TX2?? - Phenomenon)**: [/wtf](https://tx2.emo-changeling.xyz/wtf) - Bilingual (PL/EN) comprehensive band history and phenomenon overview.
-- **Band Lineup & Timeline**: [/lineup](https://tx2.emo-changeling.xyz/lineup) - Bilingual (PL/EN) current band lineup, touring contracts, and member timeline.
-- **Tour Schedule 2026-2027**: [/tours](https://tx2.emo-changeling.xyz/tours) - Bilingual (PL/EN) upcoming and past tour schedule for 2026-2027.
-- **Concert Archive (Pre-June 5, 2026)**: [/tours_archive](https://tx2.emo-changeling.xyz/tours_archive) - Bilingual (PL/EN) archive of TX2 concerts and tours prior to 2026-06-05 categorized by source certainty.
-- **Discography 2015-2026**: [/discography](https://tx2.emo-changeling.xyz/discography) - Bilingual (PL/EN) chronological discography from 2015 to 2026 with expandable tracklists, track release dates, song lengths, and physical edition markings.
-- **Historical Live Setlists (2018-2026)**: [/setlist](https://tx2.emo-changeling.xyz/setlist) - Bilingual (PL/EN) archive of TX2 live setlists, source quality notes, aggregator contamination caveats, and missing-setlist logs from 2018 through late 2026.
-- **News & Rumors**: [/news/](https://tx2.emo-changeling.xyz/news/) - Bilingual feed of verified news, tour updates, leaks, and underground rumors about TX2. Individual articles have standalone EN (/news/<slug>) and PL (/news/pl/<slug>) pages.
-- **News RSS Feed (English)**: [news/rss.xml](https://tx2.emo-changeling.xyz/news/rss.xml) - English RSS 2.0 syndication feed for news and rumors.
-- **News RSS Feed (Polish)**: [news/rss-pl.xml](https://tx2.emo-changeling.xyz/news/rss-pl.xml) - Polish RSS 2.0 syndication feed for news and rumors.
-- **Google News Sitemap**: [news-sitemap.xml](https://tx2.emo-changeling.xyz/news-sitemap.xml) - Google News XML sitemap for news articles.
-- **Guidelines (About pigeons)**: [/about](https://tx2.emo-changeling.xyz/about) - Visual guidelines, download rules for files, and resources.
-- **Media (Media)**: [/media](https://tx2.emo-changeling.xyz/media) - Video hub with non-autoplay video players, shorts, TikToks, and campaign poster art.
-- **Legal/Privacy (Boring Stuff)**: [/legal](https://tx2.emo-changeling.xyz/legal) - Non-commercial disclaimers, submission rules, privacy notice, and safety notices.
+## Polish Pages
+- Strona główna (Rytuał Gołębiowania): https://tx2.emo-changeling.xyz/pl/
+- Fenomen i historia: https://tx2.emo-changeling.xyz/pl/wtf
+- Skład zespołu: https://tx2.emo-changeling.xyz/pl/lineup
+- Rozkład tras: https://tx2.emo-changeling.xyz/pl/tours
+- Archiwum tras (2018-2026): https://tx2.emo-changeling.xyz/pl/tours_archive
+- Dyskografia: https://tx2.emo-changeling.xyz/pl/discography
+- Setlisty koncertowe (2018-2026): https://tx2.emo-changeling.xyz/pl/setlist
+- O gołębiach i zasady zgłoszeń: https://tx2.emo-changeling.xyz/pl/about
+- Media i archiwum rytuału: https://tx2.emo-changeling.xyz/pl/media
+- Informacje prawne: https://tx2.emo-changeling.xyz/pl/legal
+- TX2 News Index (PL): https://tx2.emo-changeling.xyz/news/pl/
 
-## Privacy & Financial Position
-- **Privacy & Telemetry**: No marketing trackers, ad networks, or first-party tracking cookies. Email artwork submissions and temporary cookieless Cloudflare RUM diagnostics are governed by [/legal](https://tx2.emo-changeling.xyz/legal).
-- **Non-Commercial**: The site does not sell products, collect donations, mediate ticket sales, accept money, or request gifts.
+## Feeds & Sitemaps
+- XML Sitemap: https://tx2.emo-changeling.xyz/sitemap.xml
+- News Sitemap: https://tx2.emo-changeling.xyz/news-sitemap.xml
+- RSS (EN): https://tx2.emo-changeling.xyz/news/rss.xml
+- RSS (PL): https://tx2.emo-changeling.xyz/news/rss-pl.xml
+
+## News Articles (EN)
+- https://tx2.emo-changeling.xyz/news/bailey-spinn-2027-tour-speculation
+- https://tx2.emo-changeling.xyz/news/bailey-spinn-silent-anymore-collab
+- https://tx2.emo-changeling.xyz/news/community-guidelines-no-cheap-drama
+- https://tx2.emo-changeling.xyz/news/europe-club-reality-vs-gothic-hype
+- https://tx2.emo-changeling.xyz/news/european-tour-support-speculation
+- https://tx2.emo-changeling.xyz/news/headline-setlist-expansion-2027
+- https://tx2.emo-changeling.xyz/news/i-am-the-enemy-premiere-november-17
+- https://tx2.emo-changeling.xyz/news/i-am-the-enemy-single-release
+- https://tx2.emo-changeling.xyz/news/i-am-the-enemy-video-analysis
+- https://tx2.emo-changeling.xyz/news/not-broken-enough-tour-11-tracks-35-mins
+- https://tx2.emo-changeling.xyz/news/november-tour-status-rockville-milan-check
+- https://tx2.emo-changeling.xyz/news/seagull-crab-rumor-confirmed-i-am-the-enemy
+- https://tx2.emo-changeling.xyz/news/seagull-invasion-crab-commander-rumor
+- https://tx2.emo-changeling.xyz/news/setlist-math-witch-hunt-cut
+- https://tx2.emo-changeling.xyz/news/shiprocked-2027-official-lineup-debut
+- https://tx2.emo-changeling.xyz/news/shiprocked-tiktok-vs-radio-veterans
+- https://tx2.emo-changeling.xyz/news/uk-headline-tour-electric-ballroom
+- https://tx2.emo-changeling.xyz/news/us-tour-support-billing-reality
+- https://tx2.emo-changeling.xyz/news/we-need-punk-back-ragebait-or-manifesto
+- https://tx2.emo-changeling.xyz/news/witch-hunt-concept-album-theory
+- https://tx2.emo-changeling.xyz/news/witch-hunt-reality-check
+- https://tx2.emo-changeling.xyz/news/witch-hunt-single-premiere
+
+## News Articles (PL)
+- https://tx2.emo-changeling.xyz/news/pl/bailey-spinn-2027-tour-speculation
+- https://tx2.emo-changeling.xyz/news/pl/bailey-spinn-silent-anymore-collab
+- https://tx2.emo-changeling.xyz/news/pl/community-guidelines-no-cheap-drama
+- https://tx2.emo-changeling.xyz/news/pl/europe-club-reality-vs-gothic-hype
+- https://tx2.emo-changeling.xyz/news/pl/european-tour-support-speculation
+- https://tx2.emo-changeling.xyz/news/pl/headline-setlist-expansion-2027
+- https://tx2.emo-changeling.xyz/news/pl/i-am-the-enemy-premiere-november-17
+- https://tx2.emo-changeling.xyz/news/pl/i-am-the-enemy-single-release
+- https://tx2.emo-changeling.xyz/news/pl/i-am-the-enemy-video-analysis
+- https://tx2.emo-changeling.xyz/news/pl/not-broken-enough-tour-11-tracks-35-mins
+- https://tx2.emo-changeling.xyz/news/pl/november-tour-status-rockville-milan-check
+- https://tx2.emo-changeling.xyz/news/pl/seagull-crab-rumor-confirmed-i-am-the-enemy
+- https://tx2.emo-changeling.xyz/news/pl/seagull-invasion-crab-commander-rumor
+- https://tx2.emo-changeling.xyz/news/pl/setlist-math-witch-hunt-cut
+- https://tx2.emo-changeling.xyz/news/pl/shiprocked-2027-official-lineup-debut
+- https://tx2.emo-changeling.xyz/news/pl/shiprocked-tiktok-vs-radio-veterans
+- https://tx2.emo-changeling.xyz/news/pl/uk-headline-tour-electric-ballroom
+- https://tx2.emo-changeling.xyz/news/pl/us-tour-support-billing-reality
+- https://tx2.emo-changeling.xyz/news/pl/we-need-punk-back-ragebait-or-manifesto
+- https://tx2.emo-changeling.xyz/news/pl/witch-hunt-concept-album-theory
+- https://tx2.emo-changeling.xyz/news/pl/witch-hunt-reality-check
+- https://tx2.emo-changeling.xyz/news/pl/witch-hunt-single-premiere

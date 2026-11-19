@@ -1,73 +1,233 @@
 {
-  "specVersion": "1.0",
-  "host": {
-    "displayName": "TX2 Pigeonification Ritual - Unofficial TX2 Fansite"
+  "name": "TX2 Unofficial Fansite",
+  "version": "1.2.0",
+  "lastUpdated": "2026-11-19",
+  "url": "https://tx2.emo-changeling.xyz/",
+  "languages": {
+    "en": "https://tx2.emo-changeling.xyz/",
+    "pl": "https://tx2.emo-changeling.xyz/pl/",
+    "news_en": "https://tx2.emo-changeling.xyz/news/",
+    "news_pl": "https://tx2.emo-changeling.xyz/news/pl/"
   },
-  "entries": [
+  "architecture": {
+    "rendering": "Static bilingual HTML documents with pure HTML/CSS UI",
+    "scripts": [
+      "assets/lightbox.js",
+      "assets/tours.js"
+    ],
+    "fonts": "Self-hosted Inter WOFF2 (assets/fonts/inter-latin.woff2, assets/fonts/inter-latin-ext.woff2)",
+    "storage": "No cookies and no sessionStorage"
+  },
+  "credits": {
+    "creators": [
+      "Nico \"Zebroid\" Łach",
+      "Mighn Taghor"
+    ],
+    "infrastructure": "Toxic Echo Studio (https://toxic-echo.studio/)",
+    "favicon": "kalashnyk (https://aticon.com/authors/kalashnyk)"
+  },
+  "contact": "tx2pigeon@emo-changeling.xyz",
+  "contacts": [
+    "tx2pigeon@emo-changeling.xyz",
+    "admin@toxic-echo.studio"
+  ],
+  "sitemaps": [
+    "https://tx2.emo-changeling.xyz/sitemap.xml",
+    "https://tx2.emo-changeling.xyz/news-sitemap.xml"
+  ],
+  "feeds": {
+    "en": "https://tx2.emo-changeling.xyz/news/rss.xml",
+    "pl": "https://tx2.emo-changeling.xyz/news/rss-pl.xml"
+  },
+  "pages": [
     {
-      "identifier": "urn:air:tx2:knowledge:llms-context",
-      "displayName": "TX2 Pigeonification Ritual Context & Knowledge Base",
-      "type": "text/markdown; profile=\"urn:air:agent-skills\"",
-      "url": "https://tx2.emo-changeling.xyz/llms.txt",
-      "representativeQueries": [
-        "what is tx2 pigeonification ritual fan project",
-        "tx2 warsaw hydrozagadka 2027 concert fan action",
-        "who is tx2 band history lineup and discography"
-      ]
+      "key": "index",
+      "en_url": "https://tx2.emo-changeling.xyz/",
+      "pl_url": "https://tx2.emo-changeling.xyz/pl/",
+      "en_title": "TX2 Pigeonification Ritual - TX2 Unofficial Fansite",
+      "pl_title": "Rytuał Gołębiowania TX2 - TX2 Unofficial Fansite"
     },
     {
-      "identifier": "urn:air:tx2:feed:news-rss",
-      "displayName": "TX2 News & Rumors RSS Feed (EN)",
-      "type": "application/rss+xml",
-      "url": "https://tx2.emo-changeling.xyz/news/rss.xml",
-      "representativeQueries": [
-        "tx2 news",
-        "tx2 tour dates and updates",
-        "tx2 rumors and leaks"
-      ]
+      "key": "wtf",
+      "en_url": "https://tx2.emo-changeling.xyz/wtf",
+      "pl_url": "https://tx2.emo-changeling.xyz/pl/wtf",
+      "en_title": "Wait, tf is TX2?? - Phenomenon & History - TX2 Unofficial Fansite",
+      "pl_title": "Kim jest TX2? - Fenomen i historia zespołu - TX2 Unofficial Fansite"
     },
     {
-      "identifier": "urn:air:tx2:feed:news-rss-pl",
-      "displayName": "TX2 Unofficial Fansite - Aktualnosci RSS Feed (PL)",
-      "type": "application/rss+xml",
-      "url": "https://tx2.emo-changeling.xyz/news/rss-pl.xml",
-      "representativeQueries": [
-        "tx2 news pl",
-        "tx2 aktualnosci",
-        "tx2 trasa warszawa newsy"
-      ]
+      "key": "lineup",
+      "en_url": "https://tx2.emo-changeling.xyz/lineup",
+      "pl_url": "https://tx2.emo-changeling.xyz/pl/lineup",
+      "en_title": "Band Lineup & Members - TX2 Unofficial Fansite",
+      "pl_title": "Skład zespołu i muzycy - TX2 Unofficial Fansite"
     },
     {
-      "identifier": "urn:air:tx2:archive:tours-pre-2026",
-      "displayName": "TX2 Concert Archive (2018 - Pre-June 2026)",
-      "type": "text/html",
-      "url": "https://tx2.emo-changeling.xyz/tours_archive",
-      "representativeQueries": [
-        "tx2 concert archive before june 2026",
-        "tx2 past tour dates 2022 2023 2024 2025",
-        "tx2 touring history and setlist certainty"
-      ]
+      "key": "tours",
+      "en_url": "https://tx2.emo-changeling.xyz/tours",
+      "pl_url": "https://tx2.emo-changeling.xyz/pl/tours",
+      "en_title": "Tour Schedule & European Dates 2027 - TX2 Unofficial Fansite",
+      "pl_title": "Rozkład tras i koncerty w Europie 2027 - TX2 Unofficial Fansite"
     },
     {
-      "identifier": "urn:air:tx2:archive:live-setlists",
-      "displayName": "TX2 Historical Live Setlists (2018-2026)",
-      "type": "text/html",
-      "url": "https://tx2.emo-changeling.xyz/setlist",
-      "representativeQueries": [
-        "tx2 live setlists 2018 2024 2025 2026",
-        "tx2 tour setlist songs black veil brides ice nine kills",
-        "tx2 end of us tour setlist"
-      ]
+      "key": "tours_archive",
+      "en_url": "https://tx2.emo-changeling.xyz/tours_archive",
+      "pl_url": "https://tx2.emo-changeling.xyz/pl/tours_archive",
+      "en_title": "Past Tours Archive (2018-2026) - TX2 Unofficial Fansite",
+      "pl_title": "Archiwum minionych tras (2018-2026) - TX2 Unofficial Fansite"
     },
     {
-      "identifier": "urn:air:tx2:policy:ai-manifest",
-      "displayName": "AI Usage Policy and Permissions",
-      "type": "text/plain",
-      "url": "https://tx2.emo-changeling.xyz/ai.txt",
-      "representativeQueries": [
-        "content licensing and ai permissions",
-        "creative commons cc by-nd"
-      ]
+      "key": "discography",
+      "en_url": "https://tx2.emo-changeling.xyz/discography",
+      "pl_url": "https://tx2.emo-changeling.xyz/pl/discography",
+      "en_title": "Discography - Albums, EPs & Singles - TX2 Unofficial Fansite",
+      "pl_title": "Dyskografia - Albumy, EP i single - TX2 Unofficial Fansite"
+    },
+    {
+      "key": "setlist",
+      "en_url": "https://tx2.emo-changeling.xyz/setlist",
+      "pl_url": "https://tx2.emo-changeling.xyz/pl/setlist",
+      "en_title": "Live Setlists (2018-2026) - TX2 Unofficial Fansite",
+      "pl_title": "Setlisty koncertowe (2018-2026) - TX2 Unofficial Fansite"
+    },
+    {
+      "key": "about",
+      "en_url": "https://tx2.emo-changeling.xyz/about",
+      "pl_url": "https://tx2.emo-changeling.xyz/pl/about",
+      "en_title": "About Pigeons - Submission Rules & FAQ - TX2 Unofficial Fansite",
+      "pl_title": "O gołębiach - Zasady zgłoszeń i FAQ - TX2 Unofficial Fansite"
+    },
+    {
+      "key": "media",
+      "en_url": "https://tx2.emo-changeling.xyz/media",
+      "pl_url": "https://tx2.emo-changeling.xyz/pl/media",
+      "en_title": "Media & Ritual Archives - TX2 Unofficial Fansite",
+      "pl_title": "Media i archiwum rytuału - TX2 Unofficial Fansite"
+    },
+    {
+      "key": "legal",
+      "en_url": "https://tx2.emo-changeling.xyz/legal",
+      "pl_url": "https://tx2.emo-changeling.xyz/pl/legal",
+      "en_title": "Boring Stuff - Legal Notice & Credits - TX2 Unofficial Fansite",
+      "pl_title": "Nudne sprawy - Informacje prawne i autorzy - TX2 Unofficial Fansite"
+    },
+    {
+      "key": "news/index",
+      "en_url": "https://tx2.emo-changeling.xyz/news/",
+      "pl_url": "https://tx2.emo-changeling.xyz/news/pl/",
+      "en_title": "TX2 News - Tour & Ritual Updates - TX2 Unofficial Fansite",
+      "pl_title": "TX2 News - Aktualności z trasy i rytuału - TX2 Unofficial Fansite"
+    }
+  ],
+  "articles": [
+    {
+      "slug": "bailey-spinn-2027-tour-speculation",
+      "en_url": "https://tx2.emo-changeling.xyz/news/bailey-spinn-2027-tour-speculation",
+      "pl_url": "https://tx2.emo-changeling.xyz/news/pl/bailey-spinn-2027-tour-speculation"
+    },
+    {
+      "slug": "bailey-spinn-silent-anymore-collab",
+      "en_url": "https://tx2.emo-changeling.xyz/news/bailey-spinn-silent-anymore-collab",
+      "pl_url": "https://tx2.emo-changeling.xyz/news/pl/bailey-spinn-silent-anymore-collab"
+    },
+    {
+      "slug": "community-guidelines-no-cheap-drama",
+      "en_url": "https://tx2.emo-changeling.xyz/news/community-guidelines-no-cheap-drama",
+      "pl_url": "https://tx2.emo-changeling.xyz/news/pl/community-guidelines-no-cheap-drama"
+    },
+    {
+      "slug": "europe-club-reality-vs-gothic-hype",
+      "en_url": "https://tx2.emo-changeling.xyz/news/europe-club-reality-vs-gothic-hype",
+      "pl_url": "https://tx2.emo-changeling.xyz/news/pl/europe-club-reality-vs-gothic-hype"
+    },
+    {
+      "slug": "european-tour-support-speculation",
+      "en_url": "https://tx2.emo-changeling.xyz/news/european-tour-support-speculation",
+      "pl_url": "https://tx2.emo-changeling.xyz/news/pl/european-tour-support-speculation"
+    },
+    {
+      "slug": "headline-setlist-expansion-2027",
+      "en_url": "https://tx2.emo-changeling.xyz/news/headline-setlist-expansion-2027",
+      "pl_url": "https://tx2.emo-changeling.xyz/news/pl/headline-setlist-expansion-2027"
+    },
+    {
+      "slug": "i-am-the-enemy-premiere-november-17",
+      "en_url": "https://tx2.emo-changeling.xyz/news/i-am-the-enemy-premiere-november-17",
+      "pl_url": "https://tx2.emo-changeling.xyz/news/pl/i-am-the-enemy-premiere-november-17"
+    },
+    {
+      "slug": "i-am-the-enemy-single-release",
+      "en_url": "https://tx2.emo-changeling.xyz/news/i-am-the-enemy-single-release",
+      "pl_url": "https://tx2.emo-changeling.xyz/news/pl/i-am-the-enemy-single-release"
+    },
+    {
+      "slug": "i-am-the-enemy-video-analysis",
+      "en_url": "https://tx2.emo-changeling.xyz/news/i-am-the-enemy-video-analysis",
+      "pl_url": "https://tx2.emo-changeling.xyz/news/pl/i-am-the-enemy-video-analysis"
+    },
+    {
+      "slug": "not-broken-enough-tour-11-tracks-35-mins",
+      "en_url": "https://tx2.emo-changeling.xyz/news/not-broken-enough-tour-11-tracks-35-mins",
+      "pl_url": "https://tx2.emo-changeling.xyz/news/pl/not-broken-enough-tour-11-tracks-35-mins"
+    },
+    {
+      "slug": "november-tour-status-rockville-milan-check",
+      "en_url": "https://tx2.emo-changeling.xyz/news/november-tour-status-rockville-milan-check",
+      "pl_url": "https://tx2.emo-changeling.xyz/news/pl/november-tour-status-rockville-milan-check"
+    },
+    {
+      "slug": "seagull-crab-rumor-confirmed-i-am-the-enemy",
+      "en_url": "https://tx2.emo-changeling.xyz/news/seagull-crab-rumor-confirmed-i-am-the-enemy",
+      "pl_url": "https://tx2.emo-changeling.xyz/news/pl/seagull-crab-rumor-confirmed-i-am-the-enemy"
+    },
+    {
+      "slug": "seagull-invasion-crab-commander-rumor",
+      "en_url": "https://tx2.emo-changeling.xyz/news/seagull-invasion-crab-commander-rumor",
+      "pl_url": "https://tx2.emo-changeling.xyz/news/pl/seagull-invasion-crab-commander-rumor"
+    },
+    {
+      "slug": "setlist-math-witch-hunt-cut",
+      "en_url": "https://tx2.emo-changeling.xyz/news/setlist-math-witch-hunt-cut",
+      "pl_url": "https://tx2.emo-changeling.xyz/news/pl/setlist-math-witch-hunt-cut"
+    },
+    {
+      "slug": "shiprocked-2027-official-lineup-debut",
+      "en_url": "https://tx2.emo-changeling.xyz/news/shiprocked-2027-official-lineup-debut",
+      "pl_url": "https://tx2.emo-changeling.xyz/news/pl/shiprocked-2027-official-lineup-debut"
+    },
+    {
+      "slug": "shiprocked-tiktok-vs-radio-veterans",
+      "en_url": "https://tx2.emo-changeling.xyz/news/shiprocked-tiktok-vs-radio-veterans",
+      "pl_url": "https://tx2.emo-changeling.xyz/news/pl/shiprocked-tiktok-vs-radio-veterans"
+    },
+    {
+      "slug": "uk-headline-tour-electric-ballroom",
+      "en_url": "https://tx2.emo-changeling.xyz/news/uk-headline-tour-electric-ballroom",
+      "pl_url": "https://tx2.emo-changeling.xyz/news/pl/uk-headline-tour-electric-ballroom"
+    },
+    {
+      "slug": "us-tour-support-billing-reality",
+      "en_url": "https://tx2.emo-changeling.xyz/news/us-tour-support-billing-reality",
+      "pl_url": "https://tx2.emo-changeling.xyz/news/pl/us-tour-support-billing-reality"
+    },
+    {
+      "slug": "we-need-punk-back-ragebait-or-manifesto",
+      "en_url": "https://tx2.emo-changeling.xyz/news/we-need-punk-back-ragebait-or-manifesto",
+      "pl_url": "https://tx2.emo-changeling.xyz/news/pl/we-need-punk-back-ragebait-or-manifesto"
+    },
+    {
+      "slug": "witch-hunt-concept-album-theory",
+      "en_url": "https://tx2.emo-changeling.xyz/news/witch-hunt-concept-album-theory",
+      "pl_url": "https://tx2.emo-changeling.xyz/news/pl/witch-hunt-concept-album-theory"
+    },
+    {
+      "slug": "witch-hunt-reality-check",
+      "en_url": "https://tx2.emo-changeling.xyz/news/witch-hunt-reality-check",
+      "pl_url": "https://tx2.emo-changeling.xyz/news/pl/witch-hunt-reality-check"
+    },
+    {
+      "slug": "witch-hunt-single-premiere",
+      "en_url": "https://tx2.emo-changeling.xyz/news/witch-hunt-single-premiere",
+      "pl_url": "https://tx2.emo-changeling.xyz/news/pl/witch-hunt-single-premiere"
     }
   ]
 }
