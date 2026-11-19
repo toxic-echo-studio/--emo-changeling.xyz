@@ -29,6 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const openCardLightbox = (cardImg) => {
+        img.removeAttribute("width");
+        img.removeAttribute("height");
         img.src = cardImg.src;
         img.alt = cardImg.alt;
         resetZoom();
