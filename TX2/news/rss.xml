@@ -7,6 +7,11 @@
     <language>en</language>
     <lastBuildDate>Wed, 18 Nov 2026 16:05:39 +0000</lastBuildDate>
     <atom:link href="https://tx2.emo-changeling.xyz/news/rss.xml" rel="self" type="application/rss+xml"/>
+    <image>
+      <url>https://tx2.emo-changeling.xyz/img/android-chrome-512x512.png</url>
+      <title>TX2 Unofficial Fansite - News</title>
+      <link>https://tx2.emo-changeling.xyz/news/</link>
+    </image>
     <item>
       <title>[NEWS] THE ETERNAL STRUGGLE FOR SURVIVAL IN TX2'S NEW VIDEO - 'I AM THE ENEMY' IS A SURPRISINGLY MATURE TREATISE ON OPPRESSION</title>
       <link>https://tx2.emo-changeling.xyz/news/i-am-the-enemy-video-analysis</link>

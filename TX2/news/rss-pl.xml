@@ -7,6 +7,11 @@
     <language>pl</language>
     <lastBuildDate>Wed, 18 Nov 2026 16:05:39 +0000</lastBuildDate>
     <atom:link href="https://tx2.emo-changeling.xyz/news/rss-pl.xml" rel="self" type="application/rss+xml"/>
+    <image>
+      <url>https://tx2.emo-changeling.xyz/img/android-chrome-512x512.png</url>
+      <title>TX2 Unofficial Fansite - Aktualności</title>
+      <link>https://tx2.emo-changeling.xyz/news/</link>
+    </image>
     <item>
       <title>[NEWS] ODWIECZNA WALKA O PRZETRWANIE W NOWYM TELEDYSKU TX2 - 'I AM THE ENEMY' TO DOJRZAŁY TRAKTAT O OPRESJI</title>
       <link>https://tx2.emo-changeling.xyz/news/pl/i-am-the-enemy-video-analysis</link>
