@@ -1,28 +1,788 @@
 {
-  "specVersion": "1.0",
-  "host": {
-    "displayName": "The Reverse Emo Changeling"
+  "name": "The Reverse Emo Changeling",
+  "description": "Independent bilingual social-artistic magazine and e-zine (PL/EN) published by Toxic Echo Studio.",
+  "version": "1.11.0",
+  "lastUpdated": "2026-11-19",
+  "url": "https://reverse.emo-changeling.xyz/",
+  "languages": [
+    "pl",
+    "en"
+  ],
+  "architecture": {
+    "rendering": "Static bilingual HTML documents with pure HTML5/CSS3 UI",
+    "scripts": [],
+    "fonts": "Self-hosted Inter and Courier New typography",
+    "storage": "No cookies and no sessionStorage"
   },
-  "entries": [
+  "credits": {
+    "creators": [
+      "Nico \"Zebroid\" Łach",
+      "Mighn Taghor"
+    ],
+    "infrastructure": "Toxic Echo Studio (https://toxic-echo.studio/)"
+  },
+  "contacts": [
+    "admin@toxic-echo.studio"
+  ],
+  "sitemaps": [
+    "https://reverse.emo-changeling.xyz/sitemap.xml"
+  ],
+  "feeds": {
+    "pl": "https://reverse.emo-changeling.xyz/rss-pl.xml",
+    "en": "https://reverse.emo-changeling.xyz/rss-en.xml"
+  },
+  "pages": [
     {
-      "identifier": "urn:air:toxic-echo:knowledge:llms-context",
-      "displayName": "LLMs Context & Knowledge Base",
-      "type": "text/markdown; profile=\"urn:air:agent-skills\"",
-      "url": "https://reverse.emo-changeling.xyz/llms.txt",
-      "representativeQueries": [
-        "what is emo changeling project",
-        "toxic echo studio information"
-      ]
+      "key": "index",
+      "en_url": "https://reverse.emo-changeling.xyz/",
+      "pl_url": "https://reverse.emo-changeling.xyz/",
+      "en_title": "The Reverse Emo Changeling | Language Selection (PL/EN)",
+      "pl_title": "The Reverse Emo Changeling | Wybór wydania (PL/EN)",
+      "lastModified": "2026-11-19"
     },
     {
-      "identifier": "urn:air:toxic-echo:policy:ai-manifest",
-      "displayName": "AI Usage Policy and Permissions",
-      "type": "application/agent-card+json",
-      "url": "https://reverse.emo-changeling.xyz/ai.json",
-      "representativeQueries": [
-        "content licensing and ai permissions",
-        "creative commons cc by-nd"
-      ]
+      "key": "portal",
+      "pl_url": "https://reverse.emo-changeling.xyz/pl/",
+      "en_url": "https://reverse.emo-changeling.xyz/en/",
+      "pl_title": "The Reverse Emo Changeling - Wydanie Polskie (PL)",
+      "en_title": "The Reverse Emo Changeling - English Edition (EN)",
+      "lastModified": "2026-11-19"
+    },
+    {
+      "key": "archive",
+      "pl_url": "https://reverse.emo-changeling.xyz/pl/archive",
+      "en_url": "https://reverse.emo-changeling.xyz/en/archive",
+      "pl_title": "Archiwum - The Reverse Emo Changeling",
+      "en_title": "Archive - The Reverse Emo Changeling",
+      "lastModified": "2026-11-19"
+    },
+    {
+      "key": "team",
+      "pl_url": "https://reverse.emo-changeling.xyz/pl/team",
+      "en_url": "https://reverse.emo-changeling.xyz/en/team",
+      "pl_title": "Zespół Redakcyjny - The Reverse Emo Changeling",
+      "en_title": "Editorial Team - The Reverse Emo Changeling",
+      "lastModified": "2026-11-19"
+    },
+    {
+      "key": "impressum",
+      "pl_url": "https://reverse.emo-changeling.xyz/pl/impressum",
+      "en_url": "https://reverse.emo-changeling.xyz/en/impressum",
+      "pl_title": "Impressum - The Reverse Emo Changeling",
+      "en_title": "Impressum - The Reverse Emo Changeling",
+      "lastModified": "2026-11-19"
+    },
+    {
+      "key": "legal",
+      "pl_url": "https://reverse.emo-changeling.xyz/pl/legal",
+      "en_url": "https://reverse.emo-changeling.xyz/en/legal",
+      "pl_title": "Regulamin i Zasady Publikacji - The Reverse Emo Changeling",
+      "en_title": "Legal & Policies - The Reverse Emo Changeling",
+      "lastModified": "2026-11-19"
+    }
+  ],
+  "articles": [
+    {
+      "issue": "25-2026",
+      "lang": "pl",
+      "title": "Hellowen z Temu - Wszyscy chcą być „dziwni”, ale nikt nie ma odwagi. Jak konformizm zabija autentyczność",
+      "url": "https://reverse.emo-changeling.xyz/pl/25-2026/hellowen-z-temu",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/en/25-2026/hellowen-z-temu",
+      "publishDate": "2026-10-31",
+      "lastModified": "2026-10-31"
+    },
+    {
+      "issue": "25-2026",
+      "lang": "pl",
+      "title": "Mój dom to skład dziwnych artefaktów - O traumie okradanych zabawek, neuroatypowości i goblin mode",
+      "url": "https://reverse.emo-changeling.xyz/pl/25-2026/moj-dom-to-sklad-dziwnych-artefaktow",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/en/25-2026/my-house-is-a-storage-of-weird-artifacts",
+      "publishDate": "2026-10-31",
+      "lastModified": "2026-10-31"
+    },
+    {
+      "issue": "25-2026",
+      "lang": "en",
+      "title": "Temu Halloween - Everyone Wants to Be \"Weird,\" but Nobody Has the Guts. How Conformity Kills Authenticity",
+      "url": "https://reverse.emo-changeling.xyz/en/25-2026/hellowen-z-temu",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/pl/25-2026/hellowen-z-temu",
+      "publishDate": "2026-10-31",
+      "lastModified": "2026-10-31"
+    },
+    {
+      "issue": "25-2026",
+      "lang": "en",
+      "title": "My Home Is Basically the Infydel Stash - On Stolen Toy Trauma, Neurodivergence, and Goblin Mode",
+      "url": "https://reverse.emo-changeling.xyz/en/25-2026/my-house-is-a-storage-of-weird-artifacts",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/pl/25-2026/moj-dom-to-sklad-dziwnych-artefaktow",
+      "publishDate": "2026-10-31",
+      "lastModified": "2026-10-31"
+    },
+    {
+      "issue": "24-2026",
+      "lang": "pl",
+      "title": "„Jesteśmy prasą?!” - Jak emo kid został reporterem, a The Reverse Emo Changeling czasopismem",
+      "url": "https://reverse.emo-changeling.xyz/pl/24-2026/jestesmy-prasa-jak-emo-kid",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/en/24-2026/we-are-the-press-how-an-emo-kid",
+      "publishDate": "2026-10-10",
+      "lastModified": "2026-10-13"
+    },
+    {
+      "issue": "24-2026",
+      "lang": "pl",
+      "title": "Nikt nie rysuje TX2 jako gołębi? czyli jak kapitalizm zepsuł internet",
+      "url": "https://reverse.emo-changeling.xyz/pl/24-2026/nikt-nie-rysuje-tx2-jako-golebi",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/en/24-2026/nobody-draws-tx2-as-pigeons",
+      "publishDate": "2026-10-10",
+      "lastModified": "2026-11-19"
+    },
+    {
+      "issue": "24-2026",
+      "lang": "en",
+      "title": "Nobody Draws TX2 as Pigeons? Or How Capitalism Ruined the Internet",
+      "url": "https://reverse.emo-changeling.xyz/en/24-2026/nobody-draws-tx2-as-pigeons",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/pl/24-2026/nikt-nie-rysuje-tx2-jako-golebi",
+      "publishDate": "2026-10-10",
+      "lastModified": "2026-10-13"
+    },
+    {
+      "issue": "24-2026",
+      "lang": "en",
+      "title": "\"We Are the Press?!\" - How an Emo Kid Became a Reporter, and The Reverse Emo Changeling Became an Official Magazine",
+      "url": "https://reverse.emo-changeling.xyz/en/24-2026/we-are-the-press-how-an-emo-kid",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/pl/24-2026/jestesmy-prasa-jak-emo-kid",
+      "publishDate": "2026-10-10",
+      "lastModified": "2026-10-13"
+    },
+    {
+      "issue": "23-2026",
+      "lang": "pl",
+      "title": "Beton, rdza i otwarte stroje: Kiedy melancholia przestaje być towarem",
+      "url": "https://reverse.emo-changeling.xyz/pl/23-2026/beton-rdza-i-otwarte-stroje",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/en/23-2026/beton-rdza-i-otwarte-stroje",
+      "publishDate": "2026-10-01",
+      "lastModified": "2026-10-01"
+    },
+    {
+      "issue": "23-2026",
+      "lang": "pl",
+      "title": "Po co nam jeszcze Marsze Równości? (Oraz czemu kapitalizm i polityka to psują) | Kraków Pride",
+      "url": "https://reverse.emo-changeling.xyz/pl/23-2026/po-co-nam-jeszcze-marsze-rownosci",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/en/23-2026/po-co-nam-jeszcze-marsze-rownosci",
+      "publishDate": "2026-10-01",
+      "lastModified": "2026-10-01"
+    },
+    {
+      "issue": "23-2026",
+      "lang": "en",
+      "title": "Concrete, Rust, and Open Tunings: When Melancholy Stops Being a Commodity",
+      "url": "https://reverse.emo-changeling.xyz/en/23-2026/beton-rdza-i-otwarte-stroje",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/pl/23-2026/beton-rdza-i-otwarte-stroje",
+      "publishDate": "2026-10-01",
+      "lastModified": "2026-10-01"
+    },
+    {
+      "issue": "23-2026",
+      "lang": "en",
+      "title": "Why Do We Even Still Need Pride Marches? (And How Capitalism & Politics Ruin Them) | Kraków Pride",
+      "url": "https://reverse.emo-changeling.xyz/en/23-2026/po-co-nam-jeszcze-marsze-rownosci",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/pl/23-2026/po-co-nam-jeszcze-marsze-rownosci",
+      "publishDate": "2026-10-01",
+      "lastModified": "2026-10-01"
+    },
+    {
+      "issue": "22-2026",
+      "lang": "pl",
+      "title": "„Czemu tak się ubierasz?” - O dysmorfii, subkulturach i kontroli nad własnym „ja”",
+      "url": "https://reverse.emo-changeling.xyz/pl/22-2026/czemu-tak-sie-ubierasz",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/en/22-2026/czemu-tak-sie-ubierasz",
+      "publishDate": "2026-09-24",
+      "lastModified": "2026-09-24"
+    },
+    {
+      "issue": "22-2026",
+      "lang": "en",
+      "title": "\"Why Do You Dress Like That?\" - On Dysmorphia, Subcultures, and Taking Control of Who You Are",
+      "url": "https://reverse.emo-changeling.xyz/en/22-2026/czemu-tak-sie-ubierasz",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/pl/22-2026/czemu-tak-sie-ubierasz",
+      "publishDate": "2026-09-24",
+      "lastModified": "2026-09-24"
+    },
+    {
+      "issue": "21-2026",
+      "lang": "pl",
+      "title": "Cancel culture poszło za daleko. Hipokryzja internetowych sądów",
+      "url": "https://reverse.emo-changeling.xyz/pl/21-2026/cancel-culture-poszlo-za-daleko",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/en/21-2026/cancel-culture-poszlo-za-daleko",
+      "publishDate": "2026-09-17",
+      "lastModified": "2026-09-17"
+    },
+    {
+      "issue": "21-2026",
+      "lang": "en",
+      "title": "Cancel Culture Went Too Far: The Herd Mentality Trap",
+      "url": "https://reverse.emo-changeling.xyz/en/21-2026/cancel-culture-poszlo-za-daleko",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/pl/21-2026/cancel-culture-poszlo-za-daleko",
+      "publishDate": "2026-09-17",
+      "lastModified": "2026-09-17"
+    },
+    {
+      "issue": "20-2026",
+      "lang": "pl",
+      "title": "Gaming z DID: Dlaczego plurality i ranga w grach nigdy nie pójdą w parze?",
+      "url": "https://reverse.emo-changeling.xyz/pl/20-2026/gaming-z-did-dlaczego-plurality-i",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/en/20-2026/gaming-z-did-dlaczego-plurality-i",
+      "publishDate": "2026-09-09",
+      "lastModified": "2026-09-09"
+    },
+    {
+      "issue": "20-2026",
+      "lang": "en",
+      "title": "Gaming With DID: Why Plurality and Competitive Ranks Will Never Mix",
+      "url": "https://reverse.emo-changeling.xyz/en/20-2026/gaming-z-did-dlaczego-plurality-i",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/pl/20-2026/gaming-z-did-dlaczego-plurality-i",
+      "publishDate": "2026-09-09",
+      "lastModified": "2026-09-09"
+    },
+    {
+      "issue": "19-2026",
+      "lang": "pl",
+      "title": "Myślisz, że go ratujesz? O fałszywym miłosierdziu, pseudohodowlach i machinie zoologicznej",
+      "url": "https://reverse.emo-changeling.xyz/pl/19-2026/myslisz-ze-go-ratujesz-o-falszywym",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/en/19-2026/myslisz-ze-go-ratujesz-o-falszywym",
+      "publishDate": "2026-08-27",
+      "lastModified": "2026-08-27"
+    },
+    {
+      "issue": "19-2026",
+      "lang": "pl",
+      "title": "Polskie proto-emo: Jak rodzimy punk zaliczył ten sam emocjonalny zjazd co Zachód (tylko po swojemu)",
+      "url": "https://reverse.emo-changeling.xyz/pl/19-2026/polskie-proto-emo",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/en/19-2026/polskie-proto-emo",
+      "publishDate": "2026-06-17",
+      "lastModified": "2026-09-07"
+    },
+    {
+      "issue": "19-2026",
+      "lang": "en",
+      "title": "You Think You're Saving It? On Fake Mercy, Backyard Mills, and the Pet Store Machine",
+      "url": "https://reverse.emo-changeling.xyz/en/19-2026/myslisz-ze-go-ratujesz-o-falszywym",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/pl/19-2026/myslisz-ze-go-ratujesz-o-falszywym",
+      "publishDate": "2026-08-27",
+      "lastModified": "2026-08-27"
+    },
+    {
+      "issue": "19-2026",
+      "lang": "en",
+      "title": "Polish Proto-Emo: How Local Punk Suffered the Same Emotional Crash as the West (Just in Its Own Way)",
+      "url": "https://reverse.emo-changeling.xyz/en/19-2026/polskie-proto-emo",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/pl/19-2026/polskie-proto-emo",
+      "publishDate": "2026-06-17",
+      "lastModified": "2026-09-07"
+    },
+    {
+      "issue": "18-2026",
+      "lang": "pl",
+      "title": "Od ragebaitu do sztuki: Dlaczego hejtowanie TX2 w 2026 roku jest po prostu nie na czasie?",
+      "url": "https://reverse.emo-changeling.xyz/pl/18-2026/od-ragebaitu-do-sztuki-dlaczego",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/en/18-2026/od-ragebaitu-do-sztuki-dlaczego",
+      "publishDate": "2026-08-20",
+      "lastModified": "2026-08-20"
+    },
+    {
+      "issue": "18-2026",
+      "lang": "pl",
+      "title": "Rytuał Pigeonification: Zmieńmy TX2 w gołębie i zróbmy w Warszawie coś absolutnie unhinged!",
+      "url": "https://reverse.emo-changeling.xyz/pl/18-2026/rytual-pigeonification-zmienmy-tx2",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/en/18-2026/rytual-pigeonification-zmienmy-tx2",
+      "publishDate": "2026-08-20",
+      "lastModified": "2026-08-20"
+    },
+    {
+      "issue": "18-2026",
+      "lang": "en",
+      "title": "From Ragebait to Real Art: Why Hating on TX2 in 2026 Is Completely Outdated",
+      "url": "https://reverse.emo-changeling.xyz/en/18-2026/od-ragebaitu-do-sztuki-dlaczego",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/pl/18-2026/od-ragebaitu-do-sztuki-dlaczego",
+      "publishDate": "2026-08-20",
+      "lastModified": "2026-08-20"
+    },
+    {
+      "issue": "18-2026",
+      "lang": "en",
+      "title": "The Pigeonification Ritual: Turning TX2 into Pigeons with the Most Unhinged Fan Gift in Warsaw",
+      "url": "https://reverse.emo-changeling.xyz/en/18-2026/rytual-pigeonification-zmienmy-tx2",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/pl/18-2026/rytual-pigeonification-zmienmy-tx2",
+      "publishDate": "2026-08-20",
+      "lastModified": "2026-08-20"
+    },
+    {
+      "issue": "17-2026",
+      "lang": "pl",
+      "title": "Od ucieczki w piksele do walki z lękiem: Czy gaming może być terapią, kiedy real przytłacza?",
+      "url": "https://reverse.emo-changeling.xyz/pl/17-2026/od-ucieczki-w-piksele-do-walki-z",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/en/17-2026/od-ucieczki-w-piksele-do-walki-z",
+      "publishDate": "2026-08-13",
+      "lastModified": "2026-08-13"
+    },
+    {
+      "issue": "17-2026",
+      "lang": "en",
+      "title": "From Escapism in Pixels to Fighting Anxiety: Can Gaming Be Therapy When Real Life Gets Heavy?",
+      "url": "https://reverse.emo-changeling.xyz/en/17-2026/od-ucieczki-w-piksele-do-walki-z",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/pl/17-2026/od-ucieczki-w-piksele-do-walki-z",
+      "publishDate": "2026-08-13",
+      "lastModified": "2026-08-13"
+    },
+    {
+      "issue": "16-2026",
+      "lang": "pl",
+      "title": "Nóż z papieru, czyli dlaczego mam w nosie diagnozy z pustych kont",
+      "url": "https://reverse.emo-changeling.xyz/pl/16-2026/noz-z-papieru-czyli-dlaczego-mam-w",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/en/16-2026/noz-z-papieru-czyli-dlaczego-mam-w",
+      "publishDate": "2026-08-06",
+      "lastModified": "2026-08-06"
+    },
+    {
+      "issue": "16-2026",
+      "lang": "en",
+      "title": "A Knife Made of Paper: Why I Don't Give a Damn About Alt-Account Therapists",
+      "url": "https://reverse.emo-changeling.xyz/en/16-2026/noz-z-papieru-czyli-dlaczego-mam-w",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/pl/16-2026/noz-z-papieru-czyli-dlaczego-mam-w",
+      "publishDate": "2026-08-06",
+      "lastModified": "2026-08-06"
+    },
+    {
+      "issue": "15-2026",
+      "lang": "pl",
+      "title": "Zwierzak to NIE twój niewolnik: Patologia w opiece i moje własne błędy",
+      "url": "https://reverse.emo-changeling.xyz/pl/15-2026/zwierzak-to-nie-twoj-niewolnik",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/en/15-2026/zwierzak-to-nie-twoj-niewolnik",
+      "publishDate": "2026-07-30",
+      "lastModified": "2026-07-30"
+    },
+    {
+      "issue": "15-2026",
+      "lang": "en",
+      "title": "Your Pet is NOT Your Slave: Toxic Care and Owning Up to Past Mistakes",
+      "url": "https://reverse.emo-changeling.xyz/en/15-2026/zwierzak-to-nie-twoj-niewolnik",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/pl/15-2026/zwierzak-to-nie-twoj-niewolnik",
+      "publishDate": "2026-07-30",
+      "lastModified": "2026-07-30"
+    },
+    {
+      "issue": "14-2026",
+      "lang": "pl",
+      "title": "Rysuję \"chore rzeczy\", żeby nie zwariować: Puryzm, cenzura i vent art",
+      "url": "https://reverse.emo-changeling.xyz/pl/14-2026/rysuje-chore-rzeczy-zeby-nie",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/en/14-2026/rysuje-chore-rzeczy-zeby-nie",
+      "publishDate": "2026-07-16",
+      "lastModified": "2026-07-16"
+    },
+    {
+      "issue": "14-2026",
+      "lang": "pl",
+      "title": "Sztuka to nie korpo-produkt: Dlaczego uciekam ze sterylnych social mediów",
+      "url": "https://reverse.emo-changeling.xyz/pl/14-2026/sztuka-to-nie-korpo-produkt",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/en/14-2026/sztuka-to-nie-korpo-produkt",
+      "publishDate": "2026-07-16",
+      "lastModified": "2026-07-16"
+    },
+    {
+      "issue": "14-2026",
+      "lang": "en",
+      "title": "Drawing \"Messed Up Stuff\" to Stay Sane: Purism, Censorship & Vent Art",
+      "url": "https://reverse.emo-changeling.xyz/en/14-2026/rysuje-chore-rzeczy-zeby-nie",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/pl/14-2026/rysuje-chore-rzeczy-zeby-nie",
+      "publishDate": "2026-07-16",
+      "lastModified": "2026-07-16"
+    },
+    {
+      "issue": "14-2026",
+      "lang": "en",
+      "title": "Art Isn't a Corporate Product: Why I'm Escaping Sterile Social Media",
+      "url": "https://reverse.emo-changeling.xyz/en/14-2026/sztuka-to-nie-korpo-produkt",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/pl/14-2026/sztuka-to-nie-korpo-produkt",
+      "publishDate": "2026-07-16",
+      "lastModified": "2026-07-16"
+    },
+    {
+      "issue": "13-2026",
+      "lang": "pl",
+      "title": "Agent federalny, atak paniki i zjazd po BMTH",
+      "url": "https://reverse.emo-changeling.xyz/pl/13-2026/agent-federalny-atak-paniki-i-zjazd",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/en/13-2026/agent-federalny-atak-paniki-i-zjazd",
+      "publishDate": "2026-07-09",
+      "lastModified": "2026-07-09"
+    },
+    {
+      "issue": "13-2026",
+      "lang": "en",
+      "title": "Federal Agent, Panic Attacks & BMTH Comedown",
+      "url": "https://reverse.emo-changeling.xyz/en/13-2026/agent-federalny-atak-paniki-i-zjazd",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/pl/13-2026/agent-federalny-atak-paniki-i-zjazd",
+      "publishDate": "2026-07-09",
+      "lastModified": "2026-07-09"
+    },
+    {
+      "issue": "12-2026",
+      "lang": "pl",
+      "title": "Pogo z księżmi, patologia na koncertach i niszowe zespoły",
+      "url": "https://reverse.emo-changeling.xyz/pl/12-2026/pogo-z-ksiezmi-patologia-na",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/en/12-2026/pogo-z-ksiezmi-patologia-na",
+      "publishDate": "2026-06-25",
+      "lastModified": "2026-06-25"
+    },
+    {
+      "issue": "12-2026",
+      "lang": "pl",
+      "title": "Szycie, szczury i poli-radar: Mój mózg to wiewiórka",
+      "url": "https://reverse.emo-changeling.xyz/pl/12-2026/szycie-szczury-i-poli-radar-moj",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/en/12-2026/szycie-szczury-i-poli-radar-moj",
+      "publishDate": "2026-06-25",
+      "lastModified": "2026-06-25"
+    },
+    {
+      "issue": "12-2026",
+      "lang": "en",
+      "title": "Moshing with Priests, Concert Trash & Niche Bands",
+      "url": "https://reverse.emo-changeling.xyz/en/12-2026/pogo-z-ksiezmi-patologia-na",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/pl/12-2026/pogo-z-ksiezmi-patologia-na",
+      "publishDate": "2026-06-25",
+      "lastModified": "2026-06-25"
+    },
+    {
+      "issue": "12-2026",
+      "lang": "en",
+      "title": "Sewing, Rats and Poly-Radars: My Squirrel Brain",
+      "url": "https://reverse.emo-changeling.xyz/en/12-2026/szycie-szczury-i-poli-radar-moj",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/pl/12-2026/szycie-szczury-i-poli-radar-moj",
+      "publishDate": "2026-06-25",
+      "lastModified": "2026-06-25"
+    },
+    {
+      "issue": "11-2026",
+      "lang": "pl",
+      "title": "Jestem tym złym queerem: Zinternalizowana fobia i piekło w innerworldzie",
+      "url": "https://reverse.emo-changeling.xyz/pl/11-2026/jestem-tym-zlym-queerem",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/en/11-2026/jestem-tym-zlym-queerem",
+      "publishDate": "2026-06-11",
+      "lastModified": "2026-06-11"
+    },
+    {
+      "issue": "11-2026",
+      "lang": "en",
+      "title": "I'm That Bad Queer: Internalized Phobia and Innerworld Hell",
+      "url": "https://reverse.emo-changeling.xyz/en/11-2026/jestem-tym-zlym-queerem",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/pl/11-2026/jestem-tym-zlym-queerem",
+      "publishDate": "2026-06-11",
+      "lastModified": "2026-06-11"
+    },
+    {
+      "issue": "10-2026",
+      "lang": "pl",
+      "title": "BMTH w Krakowie i powrót do błota na Woodstocku",
+      "url": "https://reverse.emo-changeling.xyz/pl/10-2026/bmth-w-krakowie-i-powrot-do-blota",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/en/10-2026/bmth-w-krakowie-i-powrot-do-blota",
+      "publishDate": "2026-06-04",
+      "lastModified": "2026-06-04"
+    },
+    {
+      "issue": "10-2026",
+      "lang": "pl",
+      "title": "Friendly fire, chronienie labelek i zinternalizowana fobia: Kiedy LGBT dyskryminuje samo siebie",
+      "url": "https://reverse.emo-changeling.xyz/pl/10-2026/friendly-fire-chronienie-labelek-i",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/en/10-2026/friendly-fire-chronienie-labelek-i",
+      "publishDate": "2026-06-04",
+      "lastModified": "2026-06-04"
+    },
+    {
+      "issue": "10-2026",
+      "lang": "en",
+      "title": "BMTH in Krakow and Throwback to the Woodstock Mud",
+      "url": "https://reverse.emo-changeling.xyz/en/10-2026/bmth-w-krakowie-i-powrot-do-blota",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/pl/10-2026/bmth-w-krakowie-i-powrot-do-blota",
+      "publishDate": "2026-06-04",
+      "lastModified": "2026-06-04"
+    },
+    {
+      "issue": "10-2026",
+      "lang": "en",
+      "title": "Friendly Fire, Label Gatekeeping & Internalized Phobia: When the LGBT Scene Discriminates Against Itself",
+      "url": "https://reverse.emo-changeling.xyz/en/10-2026/friendly-fire-chronienie-labelek-i",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/pl/10-2026/friendly-fire-chronienie-labelek-i",
+      "publishDate": "2026-06-04",
+      "lastModified": "2026-06-04"
+    },
+    {
+      "issue": "9-2026",
+      "lang": "pl",
+      "title": "Magia, otherkin i ghosting: Dlaczego uciekam w świat duchów?",
+      "url": "https://reverse.emo-changeling.xyz/pl/9-2026/magia-otherkin-i-ghosting-dlaczego",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/en/9-2026/magia-otherkin-i-ghosting-dlaczego",
+      "publishDate": "2026-05-28",
+      "lastModified": "2026-05-28"
+    },
+    {
+      "issue": "9-2026",
+      "lang": "en",
+      "title": "Magic, Otherkin & Ghosting: Why I Escape to the Spirit World",
+      "url": "https://reverse.emo-changeling.xyz/en/9-2026/magia-otherkin-i-ghosting-dlaczego",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/pl/9-2026/magia-otherkin-i-ghosting-dlaczego",
+      "publishDate": "2026-05-28",
+      "lastModified": "2026-05-28"
+    },
+    {
+      "issue": "8-2026",
+      "lang": "pl",
+      "title": "Idziemy na Marsz Równości: Ekstremista Zebroid i walka z tłumem",
+      "url": "https://reverse.emo-changeling.xyz/pl/8-2026/idziemy-na-marsz-rownosci",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/en/8-2026/idziemy-na-marsz-rownosci",
+      "publishDate": "2026-05-21",
+      "lastModified": "2026-05-21"
+    },
+    {
+      "issue": "8-2026",
+      "lang": "pl",
+      "title": "Toksyczni przyjaciele, patologia NFZ i czas, który się zatrzymał: Bariery samotności",
+      "url": "https://reverse.emo-changeling.xyz/pl/8-2026/toksyczni-przyjaciele-patologia-nfz",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/en/8-2026/toksyczni-przyjaciele-patologia-nfz",
+      "publishDate": "2026-05-21",
+      "lastModified": "2026-05-21"
+    },
+    {
+      "issue": "8-2026",
+      "lang": "en",
+      "title": "Hitting the Equality March: Extremist Zebroid & Fighting the Crowds",
+      "url": "https://reverse.emo-changeling.xyz/en/8-2026/idziemy-na-marsz-rownosci",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/pl/8-2026/idziemy-na-marsz-rownosci",
+      "publishDate": "2026-05-21",
+      "lastModified": "2026-05-21"
+    },
+    {
+      "issue": "8-2026",
+      "lang": "en",
+      "title": "Toxic Friends, Broken Therapy & Time Blindness: The Barriers of Solitude",
+      "url": "https://reverse.emo-changeling.xyz/en/8-2026/toksyczni-przyjaciele-patologia-nfz",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/pl/8-2026/toksyczni-przyjaciele-patologia-nfz",
+      "publishDate": "2026-05-21",
+      "lastModified": "2026-05-21"
+    },
+    {
+      "issue": "7-2026",
+      "lang": "pl",
+      "title": "W samotności - kosmita",
+      "url": "https://reverse.emo-changeling.xyz/pl/7-2026/w-samotnosci---kosmita",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/en/7-2026/w-samotnosci---kosmita",
+      "publishDate": "2026-05-14",
+      "lastModified": "2026-05-14"
+    },
+    {
+      "issue": "7-2026",
+      "lang": "en",
+      "title": "Alone Inside - alien",
+      "url": "https://reverse.emo-changeling.xyz/en/7-2026/w-samotnosci---kosmita",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/pl/7-2026/w-samotnosci---kosmita",
+      "publishDate": "2026-05-14",
+      "lastModified": "2026-05-14"
+    },
+    {
+      "issue": "6-2026",
+      "lang": "pl",
+      "title": "Smutna historia - \"Cindy\" & TX2 moment",
+      "url": "https://reverse.emo-changeling.xyz/pl/6-2026/smutna-historia---cindy-tx2-moment",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/en/6-2026/smutna-historia---cindy-tx2-moment",
+      "publishDate": "2026-05-07",
+      "lastModified": "2026-05-07"
+    },
+    {
+      "issue": "6-2026",
+      "lang": "en",
+      "title": "Sad story - \"Cindy\" & TX2 moment",
+      "url": "https://reverse.emo-changeling.xyz/en/6-2026/smutna-historia---cindy-tx2-moment",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/pl/6-2026/smutna-historia---cindy-tx2-moment",
+      "publishDate": "2026-05-07",
+      "lastModified": "2026-05-07"
+    },
+    {
+      "issue": "5-2026",
+      "lang": "pl",
+      "title": "Emocjonalny flatline, pęknięty kubek i psychiatryczny efekt domina: Smutna historia (Część 1)",
+      "url": "https://reverse.emo-changeling.xyz/pl/5-2026/emocjonalny-flatline-pekniety-kubek",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/en/5-2026/emocjonalny-flatline-pekniety-kubek",
+      "publishDate": "2026-04-23",
+      "lastModified": "2026-04-23"
+    },
+    {
+      "issue": "5-2026",
+      "lang": "pl",
+      "title": "LARP-owanie płatnych współprac, biżuteria w izopropylu i walka z ostrością: Przerywnik na unboxing",
+      "url": "https://reverse.emo-changeling.xyz/pl/5-2026/larp-owanie-platnych-wspolprac",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/en/5-2026/larp-owanie-platnych-wspolprac",
+      "publishDate": "2026-04-23",
+      "lastModified": "2026-04-23"
+    },
+    {
+      "issue": "5-2026",
+      "lang": "en",
+      "title": "Emotional Flatline, Smashed Mugs & The Psych Ward Domino Effect: A Sad Story (Part 1)",
+      "url": "https://reverse.emo-changeling.xyz/en/5-2026/emocjonalny-flatline-pekniety-kubek",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/pl/5-2026/emocjonalny-flatline-pekniety-kubek",
+      "publishDate": "2026-04-23",
+      "lastModified": "2026-04-23"
+    },
+    {
+      "issue": "5-2026",
+      "lang": "en",
+      "title": "LARPing Paid Collabs, Alcohol-Soaked Hardware & Focus Battles: The Unboxing Interlude",
+      "url": "https://reverse.emo-changeling.xyz/en/5-2026/larp-owanie-platnych-wspolprac",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/pl/5-2026/larp-owanie-platnych-wspolprac",
+      "publishDate": "2026-04-23",
+      "lastModified": "2026-04-23"
+    },
+    {
+      "issue": "4-2026",
+      "lang": "pl",
+      "title": "Emo touching grass, zgubiony telefon i 3 godziny draftów w piach: Dzień totalnego pecha",
+      "url": "https://reverse.emo-changeling.xyz/pl/4-2026/emo-touching-grass-zgubiony-telefon",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/en/4-2026/emo-touching-grass-zgubiony-telefon",
+      "publishDate": "2026-04-09",
+      "lastModified": "2026-04-09"
+    },
+    {
+      "issue": "4-2026",
+      "lang": "pl",
+      "title": "Transpłciowe pawie, \"Kubuś\" znoszący jajka i biologia bez korpo-ściemy",
+      "url": "https://reverse.emo-changeling.xyz/pl/4-2026/transplciowe-pawie-kubus-znoszacy",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/en/4-2026/transplciowe-pawie-kubus-znoszacy",
+      "publishDate": "2026-04-09",
+      "lastModified": "2026-10-04"
+    },
+    {
+      "issue": "4-2026",
+      "lang": "en",
+      "title": "Emo Touching Grass: The Ultimate Outing Sh*tshow",
+      "url": "https://reverse.emo-changeling.xyz/en/4-2026/emo-touching-grass-zgubiony-telefon",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/pl/4-2026/emo-touching-grass-zgubiony-telefon",
+      "publishDate": "2026-04-09",
+      "lastModified": "2026-04-09"
+    },
+    {
+      "issue": "4-2026",
+      "lang": "en",
+      "title": "Trans Peacocks, \"Kevin\" Laying Eggs & Biology Without the Normie Filter",
+      "url": "https://reverse.emo-changeling.xyz/en/4-2026/transplciowe-pawie-kubus-znoszacy",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/pl/4-2026/transplciowe-pawie-kubus-znoszacy",
+      "publishDate": "2026-04-09",
+      "lastModified": "2026-10-04"
+    },
+    {
+      "issue": "3-2026",
+      "lang": "pl",
+      "title": "Wybierasz bycie NPC? Socjologia, pop-psychologiczny ściek i chaos na froncie",
+      "url": "https://reverse.emo-changeling.xyz/pl/3-2026/wybierasz-bycie-npc-socjologia",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/en/3-2026/wybierasz-bycie-npc-socjologia",
+      "publishDate": "2026-04-02",
+      "lastModified": "2026-04-02"
+    },
+    {
+      "issue": "3-2026",
+      "lang": "en",
+      "title": "Do You Choose to Be an NPC? Sociology, Pop-Psychology Trash & Fronting Chaos",
+      "url": "https://reverse.emo-changeling.xyz/en/3-2026/wybierasz-bycie-npc-socjologia",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/pl/3-2026/wybierasz-bycie-npc-socjologia",
+      "publishDate": "2026-04-02",
+      "lastModified": "2026-04-02"
+    },
+    {
+      "issue": "2-2026",
+      "lang": "pl",
+      "title": "Anarcho-komunizm, Silver w LoL-u i kadr pod skosem: Wiktor przejmuje front",
+      "url": "https://reverse.emo-changeling.xyz/pl/2-2026/anarcho-komunizm-silver-w-lol-u-i",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/en/2-2026/anarcho-komunizm-silver-w-lol-u-i",
+      "publishDate": "2026-03-24",
+      "lastModified": "2026-03-24"
+    },
+    {
+      "issue": "2-2026",
+      "lang": "pl",
+      "title": "Twitch Chat w głowie i neurologiczne spaghetti: O co chodzi z byciem systemem DID?",
+      "url": "https://reverse.emo-changeling.xyz/pl/2-2026/twitch-chat-w-glowie-i",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/en/2-2026/twitch-chat-w-glowie-i",
+      "publishDate": "2026-03-24",
+      "lastModified": "2026-03-24"
+    },
+    {
+      "issue": "2-2026",
+      "lang": "en",
+      "title": "Wiktor Takes the Front",
+      "url": "https://reverse.emo-changeling.xyz/en/2-2026/anarcho-komunizm-silver-w-lol-u-i",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/pl/2-2026/anarcho-komunizm-silver-w-lol-u-i",
+      "publishDate": "2026-03-24",
+      "lastModified": "2026-03-24"
+    },
+    {
+      "issue": "2-2026",
+      "lang": "en",
+      "title": "Twitch Chat in the Brain & Neurological Spaghetti: What Living as a DID System Actually Looks Like",
+      "url": "https://reverse.emo-changeling.xyz/en/2-2026/twitch-chat-w-glowie-i",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/pl/2-2026/twitch-chat-w-glowie-i",
+      "publishDate": "2026-03-24",
+      "lastModified": "2026-03-24"
+    },
+    {
+      "issue": "1-2026",
+      "lang": "pl",
+      "title": "Czarna farba, płaska grzywka i kapitalistyczny ściek: O co chodzi w byciu alt w 2026?",
+      "url": "https://reverse.emo-changeling.xyz/pl/1-2026/czarna-farba-plaska-grzywka-i",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/en/1-2026/czarna-farba-plaska-grzywka-i",
+      "publishDate": "2026-03-13",
+      "lastModified": "2026-03-13"
+    },
+    {
+      "issue": "1-2026",
+      "lang": "pl",
+      "title": "Eyeliner w oku, \"Gender Chaos\" i lekcja porażek: Czemu i tak warto robić swoje?",
+      "url": "https://reverse.emo-changeling.xyz/pl/1-2026/eyeliner-w-oku-gender-chaos-i",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/en/1-2026/eyeliner-w-oku-gender-chaos-i",
+      "publishDate": "2026-03-13",
+      "lastModified": "2026-03-13"
+    },
+    {
+      "issue": "1-2026",
+      "lang": "pl",
+      "title": "Od Agresji do Neonu, czyli Jak Cyfrowy Plastik Ocalił Punkową Duszę",
+      "url": "https://reverse.emo-changeling.xyz/pl/1-2026/historia-emo-scene-w-5-minut",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/en/1-2026/historia-emo-scene-w-5-minut",
+      "publishDate": "2026-03-12",
+      "lastModified": "2026-09-07"
+    },
+    {
+      "issue": "1-2026",
+      "lang": "en",
+      "title": "Black Paint, Flat Bangs & The Late-Capitalism Dystopia: What Being \"Alt\" Actually Means",
+      "url": "https://reverse.emo-changeling.xyz/en/1-2026/czarna-farba-plaska-grzywka-i",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/pl/1-2026/czarna-farba-plaska-grzywka-i",
+      "publishDate": "2026-03-13",
+      "lastModified": "2026-03-13"
+    },
+    {
+      "issue": "1-2026",
+      "lang": "en",
+      "title": "Liquid Eyeliner in the Eye, \"Gender Chaos\" & Embracing Failures: Why You Should Keep Creating Anyway",
+      "url": "https://reverse.emo-changeling.xyz/en/1-2026/eyeliner-w-oku-gender-chaos-i",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/pl/1-2026/eyeliner-w-oku-gender-chaos-i",
+      "publishDate": "2026-03-13",
+      "lastModified": "2026-03-13"
+    },
+    {
+      "issue": "1-2026",
+      "lang": "en",
+      "title": "From Aggression to Neon: How Digital Plastic Saved the Punk Soul",
+      "url": "https://reverse.emo-changeling.xyz/en/1-2026/historia-emo-scene-w-5-minut",
+      "alternateUrl": "https://reverse.emo-changeling.xyz/pl/1-2026/historia-emo-scene-w-5-minut",
+      "publishDate": "2026-03-12",
+      "lastModified": "2026-09-07"
     }
   ]
 }

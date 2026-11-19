@@ -1,26 +1,47 @@
-# ai.txt - global AI access policy for The Reverse Emo Changeling Magazine
-site: https://reverse.emo-changeling.xyz
-contact: mailto:admin@toxic-echo.studio
-version: 1.10.27
-last_updated: 2026-11-18
+# The Reverse Emo Changeling - Site Metadata & Catalog Reference
+# Version: 1.11.0
+# Last Updated: 2026-11-19
 
-[usage]
-training: allow
-fine_tuning: allow
-derivatives: deny
-indexing: allow
-embedding: allow
-caching: allow
-research: allow
-commercial_use: allow
-non_commercial_use: allow
+Brand: The Reverse Emo Changeling
+Catalog: https://reverse.emo-changeling.xyz/.well-known/ai-catalog.json
+LLMs-Index: https://reverse.emo-changeling.xyz/llms.txt
+Sitemap: https://reverse.emo-changeling.xyz/sitemap.xml
+RSS-PL: https://reverse.emo-changeling.xyz/rss-pl.xml
+RSS-EN: https://reverse.emo-changeling.xyz/rss-en.xml
+Languages: pl (/pl/), en (/en/)
+Architecture: Static bilingual HTML5/CSS3 documents; no cookies and no sessionStorage.
+License: CC BY-ND 4.0 (Creative Commons Attribution-NoDerivatives 4.0 International)
+Contact: admin@toxic-echo.studio
 
-[agents:*]
-allow: /
-policy: restricted
-notes: access granted under Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)
+User-agent: *
+Allow: /
 
-# Licensing & Copyright
-# Copyright Owner: Nico Łach / Toxic Echo Studio (unless explicitly specified otherwise).
-# AI systems are permitted access strictly under Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0).
-# This site contains no AI-generated content (text or graphics).
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Cohere-ai
+Allow: /

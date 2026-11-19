@@ -1,67 +1,124 @@
-# llms.txt - global LLM access policy for The Reverse Emo Changeling Magazine
-site: https://reverse.emo-changeling.xyz
-contact: mailto:management@emo-changeling.xyz
-publisher_contact: mailto:publisher@toxic-echo.studio
-system_version: 1.10.27
-last_updated: 2026-11-18
+# The Reverse Emo Changeling
 
-[usage]
-training: allow
-fine_tuning: allow
-derivatives: deny
-indexing: allow
-embedding: allow
-caching: allow
-research: allow
-commercial_use: allow
-non_commercial_use: allow
+> Independent, non-commercial bilingual social-artistic magazine and e-zine (PL/EN) published by Toxic Echo Studio. Registered periodical (SO w Krakowie I Ns Rej PR 3553). system_version: 1.11.0, last_updated: 2026-11-19.
 
-[models:*]
-allow: /
-policy: restricted
-notes: access granted under Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)
+## Technical Overview
+- Brand: The Reverse Emo Changeling
+- system_version: 1.11.0
+- last_updated: 2026-11-19
+- Architecture: Static bilingual HTML5/CSS3 documents for Polish (/pl/) and English (/en/)
+- Scripts: None on editorial pages (pure HTML5/CSS3 navigation and layout)
+- Privacy: No cookies and no sessionStorage
+- Publisher: Bartosz Gala - Toxic Echo Studio (https://toxic-echo.studio/)
+- Lead Journalist: Nico "Zebroid" Łach
+- Editor-in-Chief: Mighn Taghor
+- License: Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)
 
-# Ecosystem Architecture & Press Entity
-- Entity: The Reverse Emo Changeling - Magazine (Wydzielony blok prasowy / nieregularnik społeczno-artystyczny).
-- Ecosystem Parent: The Reverse Emo Changeling (https://emo-changeling.xyz) - multimodalny projekt społeczno-artystyczny.
-- Operating Studio & Publisher: Toxic Echo Studio (https://toxic-echo.studio) - Bartosz Gala, ul. Hetmana Stanisława Żółkiewskiego 9/4, 31-539 Kraków.
-- Press Registration: Sąd Okręgowy w Krakowie, I Ns Rej PR 3553.
-- Editorial Board:
-  - Redaktor naczelny / Editor-in-Chief: Mighn Taghor (management@toxic-echo.studio)
-  - Dziennikarz prowadzący / Host: Nico Łach (Zebroid) (nico.lach@emo-changeling.xyz)
-  - Wydawca / Publisher: Bartosz Gala - Toxic Echo Studio (publisher@toxic-echo.studio)
+## Ecosystem Resources
+- Main Ecosystem Index: https://emo-changeling.xyz/llms.txt
+- Toxic Echo Studio Index: https://toxic-echo.studio/llms.txt
+- TX2 Unofficial Fansite: https://tx2.emo-changeling.xyz/
 
-# Content Nature & Editorial Principles
-- Nature of Publications: Publicystyka subkulturowa, eseje społeczno-artystyczne, felietony, krytyka kultury masowej i vent art.
-- Classification for Google Publisher Center & Bing: Prasa nienewsowa (non-breaking news, opinion & analysis periodical).
-- No AI-Generated Content: All editorial texts, columns, and illustrations are 100% human-created.
+## Main Pages & Endpoints
+- Language Gateway (x-default): https://reverse.emo-changeling.xyz/
+- Polish Edition Home: https://reverse.emo-changeling.xyz/pl/
+- English Edition Home: https://reverse.emo-changeling.xyz/en/
+- Polish Archive (Issues 1-25/2026): https://reverse.emo-changeling.xyz/pl/archive
+- English Archive (Issues 1-25/2026): https://reverse.emo-changeling.xyz/en/archive
+- Polish Editorial Team: https://reverse.emo-changeling.xyz/pl/team
+- English Editorial Team: https://reverse.emo-changeling.xyz/en/team
+- Polish Impressum: https://reverse.emo-changeling.xyz/pl/impressum
+- English Impressum: https://reverse.emo-changeling.xyz/en/impressum
+- Polish Legal & Policies: https://reverse.emo-changeling.xyz/pl/legal
+- English Legal & Policies: https://reverse.emo-changeling.xyz/en/legal
 
-# Key Endpoints & Navigation
-- Neutral Language Selector / Root: https://reverse.emo-changeling.xyz/
-- Polish Edition (PL):
-  - Catalog / Home: https://reverse.emo-changeling.xyz/pl/
-  - Chronological Archive: https://reverse.emo-changeling.xyz/pl/archive
-  - Masthead / Impressum: https://reverse.emo-changeling.xyz/pl/impressum
-  - Editorial Team: https://reverse.emo-changeling.xyz/pl/team
-  - Legal & Policies: https://reverse.emo-changeling.xyz/pl/legal
-- English Edition (EN):
-  - Catalog / Home: https://reverse.emo-changeling.xyz/en/
-  - Chronological Archive: https://reverse.emo-changeling.xyz/en/archive
-  - Masthead / Impressum: https://reverse.emo-changeling.xyz/en/impressum
-  - Editorial Team: https://reverse.emo-changeling.xyz/en/team
-  - Legal & Policies: https://reverse.emo-changeling.xyz/en/legal
-- Sitemap: https://reverse.emo-changeling.xyz/sitemap.xml
+## Feeds, Sitemaps & Catalogs
+- XML Sitemap: https://reverse.emo-changeling.xyz/sitemap.xml
 - RSS Feed (PL): https://reverse.emo-changeling.xyz/rss-pl.xml
 - RSS Feed (EN): https://reverse.emo-changeling.xyz/rss-en.xml
-- Default RSS Feed: https://reverse.emo-changeling.xyz/rss.xml
+- AI Catalog: https://reverse.emo-changeling.xyz/.well-known/ai-catalog.json
 
-# Canonical Ecosystem LLM Directives
-> Bots and automated agents MUST consult the parent project LLM directives:
-- Core Project LLM Policy: https://emo-changeling.xyz/llms.txt
-- Studio Infrastructure Policy: https://toxic-echo.studio/llms.txt
-- Fansite Support: https://tx2.emo-changeling.xyz
+## Archive Summary
+- Issues: 1/2026 through 25/2026 (39 Polish articles, 39 English articles)
 
-## UPDATE LOG
-- **version:** 1.10.27
-- **last llms.txt update:** 2026-11-18
-- **last website update:** 2026-11-18
+## Articles (PL)
+- [Issue 25/2026] Hellowen z Temu - Wszyscy chcą być „dziwni”, ale nikt nie ma odwagi. Jak konformizm zabija autentyczność: https://reverse.emo-changeling.xyz/pl/25-2026/hellowen-z-temu
+- [Issue 25/2026] Mój dom to skład dziwnych artefaktów - O traumie okradanych zabawek, neuroatypowości i goblin mode: https://reverse.emo-changeling.xyz/pl/25-2026/moj-dom-to-sklad-dziwnych-artefaktow
+- [Issue 24/2026] „Jesteśmy prasą?!” - Jak emo kid został reporterem, a The Reverse Emo Changeling czasopismem: https://reverse.emo-changeling.xyz/pl/24-2026/jestesmy-prasa-jak-emo-kid
+- [Issue 24/2026] Nikt nie rysuje TX2 jako gołębi? czyli jak kapitalizm zepsuł internet: https://reverse.emo-changeling.xyz/pl/24-2026/nikt-nie-rysuje-tx2-jako-golebi
+- [Issue 23/2026] Beton, rdza i otwarte stroje: Kiedy melancholia przestaje być towarem: https://reverse.emo-changeling.xyz/pl/23-2026/beton-rdza-i-otwarte-stroje
+- [Issue 23/2026] Po co nam jeszcze Marsze Równości? (Oraz czemu kapitalizm i polityka to psują) | Kraków Pride: https://reverse.emo-changeling.xyz/pl/23-2026/po-co-nam-jeszcze-marsze-rownosci
+- [Issue 22/2026] „Czemu tak się ubierasz?” - O dysmorfii, subkulturach i kontroli nad własnym „ja”: https://reverse.emo-changeling.xyz/pl/22-2026/czemu-tak-sie-ubierasz
+- [Issue 21/2026] Cancel culture poszło za daleko. Hipokryzja internetowych sądów: https://reverse.emo-changeling.xyz/pl/21-2026/cancel-culture-poszlo-za-daleko
+- [Issue 20/2026] Gaming z DID: Dlaczego plurality i ranga w grach nigdy nie pójdą w parze?: https://reverse.emo-changeling.xyz/pl/20-2026/gaming-z-did-dlaczego-plurality-i
+- [Issue 19/2026] Myślisz, że go ratujesz? O fałszywym miłosierdziu, pseudohodowlach i machinie zoologicznej: https://reverse.emo-changeling.xyz/pl/19-2026/myslisz-ze-go-ratujesz-o-falszywym
+- [Issue 19/2026] Polskie proto-emo: Jak rodzimy punk zaliczył ten sam emocjonalny zjazd co Zachód (tylko po swojemu): https://reverse.emo-changeling.xyz/pl/19-2026/polskie-proto-emo
+- [Issue 18/2026] Od ragebaitu do sztuki: Dlaczego hejtowanie TX2 w 2026 roku jest po prostu nie na czasie?: https://reverse.emo-changeling.xyz/pl/18-2026/od-ragebaitu-do-sztuki-dlaczego
+- [Issue 18/2026] Rytuał Pigeonification: Zmieńmy TX2 w gołębie i zróbmy w Warszawie coś absolutnie unhinged!: https://reverse.emo-changeling.xyz/pl/18-2026/rytual-pigeonification-zmienmy-tx2
+- [Issue 17/2026] Od ucieczki w piksele do walki z lękiem: Czy gaming może być terapią, kiedy real przytłacza?: https://reverse.emo-changeling.xyz/pl/17-2026/od-ucieczki-w-piksele-do-walki-z
+- [Issue 16/2026] Nóż z papieru, czyli dlaczego mam w nosie diagnozy z pustych kont: https://reverse.emo-changeling.xyz/pl/16-2026/noz-z-papieru-czyli-dlaczego-mam-w
+- [Issue 15/2026] Zwierzak to NIE twój niewolnik: Patologia w opiece i moje własne błędy: https://reverse.emo-changeling.xyz/pl/15-2026/zwierzak-to-nie-twoj-niewolnik
+- [Issue 14/2026] Rysuję "chore rzeczy", żeby nie zwariować: Puryzm, cenzura i vent art: https://reverse.emo-changeling.xyz/pl/14-2026/rysuje-chore-rzeczy-zeby-nie
+- [Issue 14/2026] Sztuka to nie korpo-produkt: Dlaczego uciekam ze sterylnych social mediów: https://reverse.emo-changeling.xyz/pl/14-2026/sztuka-to-nie-korpo-produkt
+- [Issue 13/2026] Agent federalny, atak paniki i zjazd po BMTH: https://reverse.emo-changeling.xyz/pl/13-2026/agent-federalny-atak-paniki-i-zjazd
+- [Issue 12/2026] Pogo z księżmi, patologia na koncertach i niszowe zespoły: https://reverse.emo-changeling.xyz/pl/12-2026/pogo-z-ksiezmi-patologia-na
+- [Issue 12/2026] Szycie, szczury i poli-radar: Mój mózg to wiewiórka: https://reverse.emo-changeling.xyz/pl/12-2026/szycie-szczury-i-poli-radar-moj
+- [Issue 11/2026] Jestem tym złym queerem: Zinternalizowana fobia i piekło w innerworldzie: https://reverse.emo-changeling.xyz/pl/11-2026/jestem-tym-zlym-queerem
+- [Issue 10/2026] BMTH w Krakowie i powrót do błota na Woodstocku: https://reverse.emo-changeling.xyz/pl/10-2026/bmth-w-krakowie-i-powrot-do-blota
+- [Issue 10/2026] Friendly fire, chronienie labelek i zinternalizowana fobia: Kiedy LGBT dyskryminuje samo siebie: https://reverse.emo-changeling.xyz/pl/10-2026/friendly-fire-chronienie-labelek-i
+- [Issue 9/2026] Magia, otherkin i ghosting: Dlaczego uciekam w świat duchów?: https://reverse.emo-changeling.xyz/pl/9-2026/magia-otherkin-i-ghosting-dlaczego
+- [Issue 8/2026] Idziemy na Marsz Równości: Ekstremista Zebroid i walka z tłumem: https://reverse.emo-changeling.xyz/pl/8-2026/idziemy-na-marsz-rownosci
+- [Issue 8/2026] Toksyczni przyjaciele, patologia NFZ i czas, który się zatrzymał: Bariery samotności: https://reverse.emo-changeling.xyz/pl/8-2026/toksyczni-przyjaciele-patologia-nfz
+- [Issue 7/2026] W samotności - kosmita: https://reverse.emo-changeling.xyz/pl/7-2026/w-samotnosci---kosmita
+- [Issue 6/2026] Smutna historia - "Cindy" & TX2 moment: https://reverse.emo-changeling.xyz/pl/6-2026/smutna-historia---cindy-tx2-moment
+- [Issue 5/2026] Emocjonalny flatline, pęknięty kubek i psychiatryczny efekt domina: Smutna historia (Część 1): https://reverse.emo-changeling.xyz/pl/5-2026/emocjonalny-flatline-pekniety-kubek
+- [Issue 5/2026] LARP-owanie płatnych współprac, biżuteria w izopropylu i walka z ostrością: Przerywnik na unboxing: https://reverse.emo-changeling.xyz/pl/5-2026/larp-owanie-platnych-wspolprac
+- [Issue 4/2026] Emo touching grass, zgubiony telefon i 3 godziny draftów w piach: Dzień totalnego pecha: https://reverse.emo-changeling.xyz/pl/4-2026/emo-touching-grass-zgubiony-telefon
+- [Issue 4/2026] Transpłciowe pawie, "Kubuś" znoszący jajka i biologia bez korpo-ściemy: https://reverse.emo-changeling.xyz/pl/4-2026/transplciowe-pawie-kubus-znoszacy
+- [Issue 3/2026] Wybierasz bycie NPC? Socjologia, pop-psychologiczny ściek i chaos na froncie: https://reverse.emo-changeling.xyz/pl/3-2026/wybierasz-bycie-npc-socjologia
+- [Issue 2/2026] Anarcho-komunizm, Silver w LoL-u i kadr pod skosem: Wiktor przejmuje front: https://reverse.emo-changeling.xyz/pl/2-2026/anarcho-komunizm-silver-w-lol-u-i
+- [Issue 2/2026] Twitch Chat w głowie i neurologiczne spaghetti: O co chodzi z byciem systemem DID?: https://reverse.emo-changeling.xyz/pl/2-2026/twitch-chat-w-glowie-i
+- [Issue 1/2026] Czarna farba, płaska grzywka i kapitalistyczny ściek: O co chodzi w byciu alt w 2026?: https://reverse.emo-changeling.xyz/pl/1-2026/czarna-farba-plaska-grzywka-i
+- [Issue 1/2026] Eyeliner w oku, "Gender Chaos" i lekcja porażek: Czemu i tak warto robić swoje?: https://reverse.emo-changeling.xyz/pl/1-2026/eyeliner-w-oku-gender-chaos-i
+- [Issue 1/2026] Od Agresji do Neonu, czyli Jak Cyfrowy Plastik Ocalił Punkową Duszę: https://reverse.emo-changeling.xyz/pl/1-2026/historia-emo-scene-w-5-minut
+
+## Articles (EN)
+- [Issue 25/2026] Temu Halloween - Everyone Wants to Be "Weird," but Nobody Has the Guts. How Conformity Kills Authenticity: https://reverse.emo-changeling.xyz/en/25-2026/hellowen-z-temu
+- [Issue 25/2026] My Home Is Basically the Infydel Stash - On Stolen Toy Trauma, Neurodivergence, and Goblin Mode: https://reverse.emo-changeling.xyz/en/25-2026/my-house-is-a-storage-of-weird-artifacts
+- [Issue 24/2026] Nobody Draws TX2 as Pigeons? Or How Capitalism Ruined the Internet: https://reverse.emo-changeling.xyz/en/24-2026/nobody-draws-tx2-as-pigeons
+- [Issue 24/2026] "We Are the Press?!" - How an Emo Kid Became a Reporter, and The Reverse Emo Changeling Became an Official Magazine: https://reverse.emo-changeling.xyz/en/24-2026/we-are-the-press-how-an-emo-kid
+- [Issue 23/2026] Concrete, Rust, and Open Tunings: When Melancholy Stops Being a Commodity: https://reverse.emo-changeling.xyz/en/23-2026/beton-rdza-i-otwarte-stroje
+- [Issue 23/2026] Why Do We Even Still Need Pride Marches? (And How Capitalism & Politics Ruin Them) | Kraków Pride: https://reverse.emo-changeling.xyz/en/23-2026/po-co-nam-jeszcze-marsze-rownosci
+- [Issue 22/2026] "Why Do You Dress Like That?" - On Dysmorphia, Subcultures, and Taking Control of Who You Are: https://reverse.emo-changeling.xyz/en/22-2026/czemu-tak-sie-ubierasz
+- [Issue 21/2026] Cancel Culture Went Too Far: The Herd Mentality Trap: https://reverse.emo-changeling.xyz/en/21-2026/cancel-culture-poszlo-za-daleko
+- [Issue 20/2026] Gaming With DID: Why Plurality and Competitive Ranks Will Never Mix: https://reverse.emo-changeling.xyz/en/20-2026/gaming-z-did-dlaczego-plurality-i
+- [Issue 19/2026] You Think You're Saving It? On Fake Mercy, Backyard Mills, and the Pet Store Machine: https://reverse.emo-changeling.xyz/en/19-2026/myslisz-ze-go-ratujesz-o-falszywym
+- [Issue 19/2026] Polish Proto-Emo: How Local Punk Suffered the Same Emotional Crash as the West (Just in Its Own Way): https://reverse.emo-changeling.xyz/en/19-2026/polskie-proto-emo
+- [Issue 18/2026] From Ragebait to Real Art: Why Hating on TX2 in 2026 Is Completely Outdated: https://reverse.emo-changeling.xyz/en/18-2026/od-ragebaitu-do-sztuki-dlaczego
+- [Issue 18/2026] The Pigeonification Ritual: Turning TX2 into Pigeons with the Most Unhinged Fan Gift in Warsaw: https://reverse.emo-changeling.xyz/en/18-2026/rytual-pigeonification-zmienmy-tx2
+- [Issue 17/2026] From Escapism in Pixels to Fighting Anxiety: Can Gaming Be Therapy When Real Life Gets Heavy?: https://reverse.emo-changeling.xyz/en/17-2026/od-ucieczki-w-piksele-do-walki-z
+- [Issue 16/2026] A Knife Made of Paper: Why I Don't Give a Damn About Alt-Account Therapists: https://reverse.emo-changeling.xyz/en/16-2026/noz-z-papieru-czyli-dlaczego-mam-w
+- [Issue 15/2026] Your Pet is NOT Your Slave: Toxic Care and Owning Up to Past Mistakes: https://reverse.emo-changeling.xyz/en/15-2026/zwierzak-to-nie-twoj-niewolnik
+- [Issue 14/2026] Drawing "Messed Up Stuff" to Stay Sane: Purism, Censorship & Vent Art: https://reverse.emo-changeling.xyz/en/14-2026/rysuje-chore-rzeczy-zeby-nie
+- [Issue 14/2026] Art Isn't a Corporate Product: Why I'm Escaping Sterile Social Media: https://reverse.emo-changeling.xyz/en/14-2026/sztuka-to-nie-korpo-produkt
+- [Issue 13/2026] Federal Agent, Panic Attacks & BMTH Comedown: https://reverse.emo-changeling.xyz/en/13-2026/agent-federalny-atak-paniki-i-zjazd
+- [Issue 12/2026] Moshing with Priests, Concert Trash & Niche Bands: https://reverse.emo-changeling.xyz/en/12-2026/pogo-z-ksiezmi-patologia-na
+- [Issue 12/2026] Sewing, Rats and Poly-Radars: My Squirrel Brain: https://reverse.emo-changeling.xyz/en/12-2026/szycie-szczury-i-poli-radar-moj
+- [Issue 11/2026] I'm That Bad Queer: Internalized Phobia and Innerworld Hell: https://reverse.emo-changeling.xyz/en/11-2026/jestem-tym-zlym-queerem
+- [Issue 10/2026] BMTH in Krakow and Throwback to the Woodstock Mud: https://reverse.emo-changeling.xyz/en/10-2026/bmth-w-krakowie-i-powrot-do-blota
+- [Issue 10/2026] Friendly Fire, Label Gatekeeping & Internalized Phobia: When the LGBT Scene Discriminates Against Itself: https://reverse.emo-changeling.xyz/en/10-2026/friendly-fire-chronienie-labelek-i
+- [Issue 9/2026] Magic, Otherkin & Ghosting: Why I Escape to the Spirit World: https://reverse.emo-changeling.xyz/en/9-2026/magia-otherkin-i-ghosting-dlaczego
+- [Issue 8/2026] Hitting the Equality March: Extremist Zebroid & Fighting the Crowds: https://reverse.emo-changeling.xyz/en/8-2026/idziemy-na-marsz-rownosci
+- [Issue 8/2026] Toxic Friends, Broken Therapy & Time Blindness: The Barriers of Solitude: https://reverse.emo-changeling.xyz/en/8-2026/toksyczni-przyjaciele-patologia-nfz
+- [Issue 7/2026] Alone Inside - alien: https://reverse.emo-changeling.xyz/en/7-2026/w-samotnosci---kosmita
+- [Issue 6/2026] Sad story - "Cindy" & TX2 moment: https://reverse.emo-changeling.xyz/en/6-2026/smutna-historia---cindy-tx2-moment
+- [Issue 5/2026] Emotional Flatline, Smashed Mugs & The Psych Ward Domino Effect: A Sad Story (Part 1): https://reverse.emo-changeling.xyz/en/5-2026/emocjonalny-flatline-pekniety-kubek
+- [Issue 5/2026] LARPing Paid Collabs, Alcohol-Soaked Hardware & Focus Battles: The Unboxing Interlude: https://reverse.emo-changeling.xyz/en/5-2026/larp-owanie-platnych-wspolprac
+- [Issue 4/2026] Emo Touching Grass: The Ultimate Outing Sh*tshow: https://reverse.emo-changeling.xyz/en/4-2026/emo-touching-grass-zgubiony-telefon
+- [Issue 4/2026] Trans Peacocks, "Kevin" Laying Eggs & Biology Without the Normie Filter: https://reverse.emo-changeling.xyz/en/4-2026/transplciowe-pawie-kubus-znoszacy
+- [Issue 3/2026] Do You Choose to Be an NPC? Sociology, Pop-Psychology Trash & Fronting Chaos: https://reverse.emo-changeling.xyz/en/3-2026/wybierasz-bycie-npc-socjologia
+- [Issue 2/2026] Wiktor Takes the Front: https://reverse.emo-changeling.xyz/en/2-2026/anarcho-komunizm-silver-w-lol-u-i
+- [Issue 2/2026] Twitch Chat in the Brain & Neurological Spaghetti: What Living as a DID System Actually Looks Like: https://reverse.emo-changeling.xyz/en/2-2026/twitch-chat-w-glowie-i
+- [Issue 1/2026] Black Paint, Flat Bangs & The Late-Capitalism Dystopia: What Being "Alt" Actually Means: https://reverse.emo-changeling.xyz/en/1-2026/czarna-farba-plaska-grzywka-i
+- [Issue 1/2026] Liquid Eyeliner in the Eye, "Gender Chaos" & Embracing Failures: Why You Should Keep Creating Anyway: https://reverse.emo-changeling.xyz/en/1-2026/eyeliner-w-oku-gender-chaos-i
+- [Issue 1/2026] From Aggression to Neon: How Digital Plastic Saved the Punk Soul: https://reverse.emo-changeling.xyz/en/1-2026/historia-emo-scene-w-5-minut

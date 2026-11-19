@@ -1,49 +1,38 @@
 <!DOCTYPE html>
-<html lang="pl" data-version="1.10.27" data-build="20261118" data-system="Toxic Echo Studio">
+<html lang="pl" data-version="1.11.0" data-build="20261119" data-system="Toxic Echo Studio">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://reverse.emo-changeling.xyz/impressum">
 
     <link rel="preload" as="image" href="img/bannerM1.webp" fetchpriority="high">
-    <link rel="preload" href="css/style.css?v=20261118" as="style">
-    <link rel="preload" href="css/base-ui.css?v=20261118" as="style">
-    <link rel="preload" href="css/typography.css?v=20261118" as="style">
+    <link rel="preload" href="css/style.css?v=20261119" as="style">
+    <link rel="preload" href="css/base-ui.css?v=20261119" as="style">
+    <link rel="preload" href="css/typography.css?v=20261119" as="style">
 
     <meta name="theme-color" content="#000000">
-    <link rel="canonical" href="https://reverse.emo-changeling.xyz/impressum">
-    <link rel="alternate" hreflang="x-default" href="https://reverse.emo-changeling.xyz/impressum">
-    <link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/impressum">
-    <link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/impressum">
 
     <meta name="description" content="Oficjalne impressum prasowe, stopka redakcyjna oraz wykaz zespołu The Reverse Emo Changeling / Official press masthead &amp; editorial team.">
-    <meta name="keywords" content="Impressum, Redakcja, Zespół, Masthead, Editorial, Emo, Scene, MySpace, Rejestracja prasowa, Kontakt, Toxic Echo Studio">
     <meta name="author" content="Nico Łach (Zebroid) - Lead Journalist">
-    <meta name="version" content="1.10.27">
-    <meta name="revision-date" content="2026-11-18">
+    <meta name="version" content="1.11.0">
+    <meta name="revision-date" content="2026-11-19">
 
     <title>Impressum / Masthead (PL/EN) | The Reverse Emo Changeling</title>
     <meta name="application-name" content="The Reverse Emo Changeling - Impressum">
 
-    <link rel="icon" type="image/png" href="img/emo1ss.webp" sizes="192x192">
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/emo1ss.webp">
+<link rel="icon" type="image/png" sizes="48x48" href="favicon-48x48.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 
-    <meta property="og:title" content="Impressum &amp; Redakcja | The Reverse Emo Changeling">
     <meta property="og:site_name" content="The Reverse Emo Changeling">
-    <meta property="og:description" content="Oficjalna stopka redakcyjna oraz wykaz zespołu redakcyjnego publikacji i materiałów The Reverse Emo Changeling / Toxic Echo studio.">
-    <meta property="og:image" content="https://reverse.emo-changeling.xyz/img/bannerM1.webp">
-    <meta property="og:url" content="https://reverse.emo-changeling.xyz/impressum">
-    <meta property="og:type" content="website">
 <meta content="pl_PL" property="og:locale"/>
 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Impressum &amp; Redakcja | The Reverse Emo Changeling">
-    <meta name="twitter:description" content="Oficjalna stopka redakcyjna oraz wykaz zespołu redakcyjnego The Reverse Emo Changeling.">
-    <meta name="twitter:image" content="https://reverse.emo-changeling.xyz/img/bannerM1.webp">
-
-    <link rel="stylesheet" href="css/base-ui.css?v=20261118">
-    <link rel="stylesheet" href="css/typography.css?v=20261118">
-    <link rel="stylesheet" href="css/style.css?v=20261118">
+    <link rel="stylesheet" href="css/base-ui.css?v=20261119">
+    <link rel="stylesheet" href="css/typography.css?v=20261119">
+    <link rel="stylesheet" href="css/style.css?v=20261119">
 
     <!-- Schema.org Rich Snippet -->
     <script type="application/ld+json">
@@ -58,10 +47,7 @@
         "pl-PL",
         "en-US"
       ],
-      "availableLanguage": [
-        "pl",
-        "en"
-      ]
+      "url": "https://reverse.emo-changeling.xyz/"
     },
     {
       "@type": "AboutPage",
@@ -96,32 +82,15 @@
     }
   ]
 }
-    </script>
+</script>
 
     <!-- Wstępna detekcja preferencji językowej przed renderowaniem -->
     <script>
-    (function() {
-        var s = null;
-        try {
-            var m = document.cookie.match(/(?:^|;\s*)site_lang=([^;]+)/);
-            if (m && m[1]) { s = m[1].toLowerCase(); }
-            else if (window.localStorage) { s = (localStorage.getItem('site_lang') || '').toLowerCase(); }
-        } catch(e) {}
-        if (!s) {
-            var l = (navigator.languages && navigator.languages[0]) || navigator.language || '';
-            if (l && !l.toLowerCase().startsWith('pl')) {
-                s = 'en';
-            } else {
-                s = 'pl';
-            }
-        }
-        if (s === 'en') {
-            document.documentElement.lang = 'en';
-        } else {
-            document.documentElement.lang = 'pl';
-        }
-    })();
-    </script>
+(function() {
+    var l = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+    document.documentElement.lang = (l && !l.toLowerCase().startsWith('pl')) ? 'en' : 'pl';
+})();
+</script>
 
     <style>
         /* Układ sekcji impressum */
@@ -215,20 +184,49 @@
                 text-align: center;
             }
         }
-        /* Domyślne sterowanie widocznością bloków językowych */
-        html:not([lang="en"]) .impressum-lang-block[data-lang="en"] {
-            display: none !important;
-        }
-        html[lang="en"] .impressum-lang-block[data-lang="pl"] {
-            display: none !important;
-        }
-    </style>
+        /* Sterowanie widocznością bloków językowych, stopek i aktywnego przycisku w czystym CSS */
+html:not([lang="en"]) .impressum-lang-block[data-lang="en"],
+html:not([lang="en"]) .footer-nav-en {
+    display: none !important;
+}
+html[lang="en"] .impressum-lang-block[data-lang="pl"],
+html[lang="en"] .footer-nav-pl {
+    display: none !important;
+}
+html:not([lang="en"]) .lang-btn-pl,
+html[lang="en"] .lang-btn-en {
+    color: var(--color-primary-green);
+    font-weight: bold;
+    text-shadow: 0 0 5px var(--color-primary-green);
+}
+html:not([lang="en"]) .lang-btn-en,
+html[lang="en"] .lang-btn-pl {
+    color: var(--color-text-muted);
+    font-weight: normal;
+    text-shadow: none;
+}
+
+</style>
 <link rel="ai-catalog" type="application/json" href="/.well-known/ai-catalog.json"/>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Impressum &amp; Redakcja | The Reverse Emo Changeling">
+<meta property="og:description" content="Oficjalna stopka redakcyjna oraz wykaz zespołu redakcyjnego publikacji i materiałów The Reverse Emo Changeling / Toxic Echo studio.">
+<meta property="og:url" content="https://reverse.emo-changeling.xyz/impressum">
+<meta property="og:image" content="https://reverse.emo-changeling.xyz/img/og-reverse-main.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:alt" content="The Reverse Emo Changeling - Magazine and E-Zine banner (Toxic Echo Studio)">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Impressum &amp; Redakcja | The Reverse Emo Changeling">
+<meta name="twitter:description" content="Oficjalna stopka redakcyjna oraz wykaz zespołu redakcyjnego publikacji i materiałów The Reverse Emo Changeling / Toxic Echo studio.">
+<meta name="twitter:image" content="https://reverse.emo-changeling.xyz/img/og-reverse-main.jpg">
+<meta name="twitter:image:alt" content="The Reverse Emo Changeling - Magazine and E-Zine banner (Toxic Echo Studio)">
 </head>
 
 <body>
     <!-- Skip link -->
-    <a href="#impressum-content-anchor" class="llm-content" style="position: absolute; left: -9999px;">Skip to main content</a>
+    <a class="skip-link" href="#impressum-content-anchor">Przejdź do treści / Skip to main content</a>
 
     <!-- Header Banner Area -->
     <header class="main-header notranslate" translate="no">
@@ -251,9 +249,9 @@
             
             <!-- Widget przełączania języka -->
             <div class="lang-switcher-widget notranslate" translate="no">
-                <a href="pl/impressum" class="lang-btn lang-btn-pl active" aria-current="page" hreflang="pl" lang="pl" onclick="setSiteLang('pl')">PL</a>
+                <a href="pl/impressum" class="lang-btn lang-btn-pl" hreflang="pl" lang="pl">PL</a>
                 <span class="lang-sep">|</span>
-                <a href="en/impressum" class="lang-btn lang-btn-en" hreflang="en" lang="en" onclick="setSiteLang('en')">EN</a>
+                <a href="en/impressum" class="lang-btn lang-btn-en" hreflang="en" lang="en">EN</a>
             </div>
 
             <!-- Blok języka polskiego (PL) -->
@@ -304,7 +302,7 @@
                                 <h3 translate="no" class="notranslate">Mighn Taghor</h3>
                                 <div class="team-role">Editor-in-Chief / Publicist</div>
                                 <p class="team-bio">
-                                    Zajmuje się felietonami subkulturowymi i publicystycznymi, analizą sceny niezależnej oraz dbaniem o to, by słowo pisane miało odpowiedni ciężar i nie podlegało korporacyjnej dewaluacji. Hobbystycznie zajmuje się działem newsów i plotek dla <a href="https://tx2.emo-changeling.xyz/news/">TX2 Unofficial Fansite (tx2.emo-changeling.xyz)</a>.
+                                    Zajmuje się felietonami subkulturowymi i publicystycznymi, analizą sceny niezależnej oraz dbaniem o to, by słowo pisane miało odpowiedni ciężar i nie podlegało korporacyjnej dewaluacji. Hobbystycznie zajmuje się działem newsów i plotek dla <a href="https://tx2.emo-changeling.xyz/news/pl/">TX2 Unofficial Fansite (tx2.emo-changeling.xyz)</a>.
                                 </p>
                                 <p style="margin: 5px 0 0; font-size: 0.8rem; color: var(--color-text-purple);" class="notranslate" translate="no">
                                     Contact: <a href="mailto:eic@emo-changeling.xyz">eic@emo-changeling.xyz</a> &nbsp;|&nbsp; <a href="https://www.linkedin.com/in/mighn" target="_blank" rel="noopener">LinkedIn</a> &nbsp;|&nbsp; <a href="https://github.com/Mighn" target="_blank" rel="noopener">GitHub</a>
@@ -454,7 +452,7 @@
             <a href="pl/legal" class="footer-link">regulamin</a>
         </div>
 
-        <div class="footer-nav footer-nav-en" style="display: none;">
+        <div class="footer-nav footer-nav-en">
             <a href="en/team" class="footer-link">team</a>
             <span class="footer-separator">--</span>
             <a href="impressum" class="footer-link">impressum</a>
@@ -507,51 +505,5 @@
         </div>
     </details>
 
-    <!-- Skrypt przełączania i synchronizacji języka -->
-    <script>
-    function setSiteLang(l) {
-        try {
-            var d = new Date();
-            d.setTime(d.getTime() + 31536000000);
-            var dom = location.hostname.indexOf('emo-changeling.xyz') !== -1 ? '; domain=.emo-changeling.xyz' : '';
-            document.cookie = 'site_lang=' + l + '; expires=' + d.toUTCString() + '; path=/' + dom + '; SameSite=Lax';
-            if (window.localStorage) localStorage.setItem('site_lang', l);
-        } catch(e) {}
-    }
-
-    function switchLang(lang) {
-        setSiteLang(lang);
-        document.documentElement.lang = lang;
-        var plBlocks = document.querySelectorAll('.impressum-lang-block[data-lang="pl"]');
-        var enBlocks = document.querySelectorAll('.impressum-lang-block[data-lang="en"]');
-        var btnPl = document.querySelector('.lang-btn-pl');
-        var btnEn = document.querySelector('.lang-btn-en');
-        var footerPl = document.querySelectorAll('.footer-nav-pl');
-        var footerEn = document.querySelectorAll('.footer-nav-en');
-
-        if (lang === 'en') {
-            plBlocks.forEach(function(el) { el.style.display = 'none'; });
-            enBlocks.forEach(function(el) { el.style.display = 'block'; });
-            footerPl.forEach(function(el) { el.style.display = 'none'; });
-            footerEn.forEach(function(el) { el.style.display = 'block'; });
-            if (btnPl) { btnPl.classList.remove('active'); btnPl.removeAttribute('aria-current'); }
-            if (btnEn) { btnEn.classList.add('active'); btnEn.setAttribute('aria-current', 'page'); }
-            document.title = 'Impressum & Masthead | The Reverse Emo Changeling';
-        } else {
-            enBlocks.forEach(function(el) { el.style.display = 'none'; });
-            plBlocks.forEach(function(el) { el.style.display = 'block'; });
-            footerEn.forEach(function(el) { el.style.display = 'none'; });
-            footerPl.forEach(function(el) { el.style.display = 'block'; });
-            if (btnPl) { btnPl.classList.add('active'); btnPl.setAttribute('aria-current', 'page'); }
-            if (btnEn) { btnEn.classList.remove('active'); btnEn.removeAttribute('aria-current'); }
-            document.title = 'Impressum & Redakcja | The Reverse Emo Changeling';
-        }
-    }
-
-    document.addEventListener('DOMContentLoaded', function() {
-        var initialLang = document.documentElement.lang === 'en' ? 'en' : 'pl';
-        switchLang(initialLang);
-    });
-    </script>
 </body>
 </html>

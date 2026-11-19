@@ -1,99 +1,87 @@
 <!DOCTYPE html>
-<html data-build="20261118" data-system="Toxic Echo Studio" data-version="1.10.27" lang="pl">
+<html data-build="20261119" data-system="Toxic Echo Studio" data-version="1.11.0" lang="pl">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="canonical" href="https://reverse.emo-changeling.xyz/">
+<link rel="alternate" hreflang="x-default" href="https://reverse.emo-changeling.xyz/">
+<link rel="alternate" hreflang="pl" href="https://reverse.emo-changeling.xyz/pl/">
+<link rel="alternate" hreflang="en" href="https://reverse.emo-changeling.xyz/en/">
 <link as="image" fetchpriority="high" href="img/bannerM1.webp" rel="preload"/>
-<link as="style" href="css/style.css?v=20261118" rel="preload"/>
-<link as="style" href="css/base-ui.css?v=20261118" rel="preload"/>
-<link as="style" href="css/typography.css?v=20261118" rel="preload"/>
+<link as="style" href="css/style.css?v=20261119" rel="preload"/>
+<link as="style" href="css/base-ui.css?v=20261119" rel="preload"/>
+<link as="style" href="css/typography.css?v=20261119" rel="preload"/>
 <meta content="#000000" name="theme-color"/>
-<link href="https://reverse.emo-changeling.xyz/" rel="canonical"/>
-<!-- Wzajemne rel="alternate" z x-default wyłącznie w roocie selektora języka -->
-<link href="https://reverse.emo-changeling.xyz/" hreflang="x-default" rel="alternate"/>
-<link href="https://reverse.emo-changeling.xyz/pl/" hreflang="pl" rel="alternate"/>
-<link href="https://reverse.emo-changeling.xyz/en/" hreflang="en" rel="alternate"/>
 <link href="https://reverse.emo-changeling.xyz/rss-pl.xml" rel="alternate" title="The Reverse Emo Changeling (PL) RSS Feed" type="application/rss+xml"/>
 <link href="https://reverse.emo-changeling.xyz/rss-en.xml" rel="alternate" title="The Reverse Emo Changeling (EN) RSS Feed" type="application/rss+xml"/>
 <link href="https://reverse.emo-changeling.xyz/rss.xml" rel="alternate" title="The Reverse Emo Changeling RSS Feed" type="application/rss+xml"/>
-<link href="https://reverse.emo-changeling.xyz/llms.txt" rel="alternate" title="LLM System Instructions" type="text/plain"/>
+<link href="https://reverse.emo-changeling.xyz/llms.txt" rel="alternate" title="llms.txt" type="text/plain"/>
 <link href="https://reverse.emo-changeling.xyz/humans.txt" rel="author" title="Humans" type="text/plain"/>
 <meta content="The Reverse Emo Changeling - dwujęzyczna brama wydawnicza niezależnego czasopisma społeczno-artystycznego (PL/EN). Wybierz edycję językową." name="description"/>
-<meta content="Magazine, E-Zine, Emo, Scene, MySpace, DID, Press, Toxic Echo Studio, Nico Łach, Mighn Taghor, Language Selection" name="keywords"/>
 <meta content="Nico Łach (Zebroid) - Lead Journalist" name="author"/>
-<meta content="1.10.27" name="version"/>
-<meta content="2026-11-18" name="revision-date"/>
+<meta name="version" content="1.11.0">
+<meta name="revision-date" content="2026-11-19">
 <title>The Reverse Emo Changeling | Wybór wydania / Language Selection (PL/EN)</title>
 <meta content="The Reverse Emo Changeling" name="application-name"/>
-<link href="img/emo1ss.webp" rel="icon" sizes="192x192" type="image/png"/>
-<link href="favicon.ico" rel="shortcut icon"/>
-<link href="img/emo1ss.webp" rel="apple-touch-icon" sizes="180x180"/>
-<link href="css/base-ui.css?v=20261118" rel="stylesheet"/>
-<link href="css/typography.css?v=20261118" rel="stylesheet"/>
-<link href="css/style.css?v=20261118" rel="stylesheet"/>
+<link rel="icon" type="image/png" sizes="48x48" href="favicon-48x48.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link href="css/base-ui.css?v=20261119" rel="stylesheet"/>
+<link href="css/typography.css?v=20261119" rel="stylesheet"/>
+<link href="css/style.css?v=20261119" rel="stylesheet"/>
 <!-- Schema.org Rich Snippet -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Periodical",
-  "name": "The Reverse Emo Changeling",
-  "inLanguage": [
-    "pl-PL",
-    "en-US"
-  ],
-  "availableLanguage": [
-    "pl",
-    "en"
+  "@graph": [
+    {
+      "@type": "Periodical",
+      "name": "The Reverse Emo Changeling",
+      "inLanguage": [
+        "pl-PL",
+        "en-US"
+      ],
+      "@id": "https://reverse.emo-changeling.xyz/#periodical",
+      "url": "https://reverse.emo-changeling.xyz/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://reverse.emo-changeling.xyz/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Start",
+          "item": "https://reverse.emo-changeling.xyz/"
+        }
+      ]
+    }
   ]
 }
-    </script>
-<!-- Logika wyboru języka oraz neutralizacja automatycznego przekierowania dla botów (Bot-Shield) -->
-<script>
-    function setSiteLang(l) {
-        try {
-            var d = new Date();
-            d.setTime(d.getTime() + 31536000000);
-            var dom = location.hostname.indexOf('emo-changeling.xyz') !== -1 ? '; domain=.emo-changeling.xyz' : '';
-            document.cookie = 'site_lang=' + l + '; expires=' + d.toUTCString() + '; path=/' + dom + '; SameSite=Lax';
-            if (window.localStorage) localStorage.setItem('site_lang', l);
-        } catch(e) {}
-    }
-    (function() {
-        /* Weryfikacja User-Agenta przed jakąkolwiek logiką przekierowań (ochrona indeksowania Bingbot/Googlebot) */
-        var ua = (navigator.userAgent || '').toLowerCase();
-        var botPattern = /bingbot|googlebot|slurp|duckduckbot|yandex|baiduspider|facebookexternalhit|twitterbot|rogerbot|linkedinbot|embedly|quora link preview|showyoubot|outbrain|pinterest|applebot|semrushbot|ahrefsbot|bytespider|msnbot|crawler|spider|robot|crawling/i;
-        if (botPattern.test(ua)) {
-            /* Crawler pozostaje na stronie głównej (brama x-default), indeksując statyczną treść */
-            return;
-        }
-
-        var s = null;
-        try {
-            var m = document.cookie.match(/(?:^|;\s*)site_lang=([^;]+)/);
-            if (m && m[1]) { s = m[1].toLowerCase(); }
-            else if (window.localStorage) { s = (localStorage.getItem('site_lang') || '').toLowerCase(); }
-        } catch(e) {}
-        if (s === 'pl') { window.location.replace('pl/'); return; }
-        if (s === 'en') { window.location.replace('en/'); return; }
-        var l = (navigator.languages && navigator.languages[0]) || navigator.language || '';
-        if (l.toLowerCase().startsWith('pl')) {
-            window.location.replace('pl/');
-        } else {
-            window.location.replace('en/');
-        }
-    })();
-    </script>
-<meta content="The Reverse Emo Changeling | Magazine &amp; E-Zine" property="og:title"/>
-<meta content="The Reverse Emo Changeling - dwujęzyczna brama wydawnicza niezależnego czasopisma społeczno-artystycznego (PL/EN). Wybierz edycję językową." property="og:description"/>
-<meta content="https://reverse.emo-changeling.xyz/" property="og:url"/>
-<meta content="https://emo-changeling.xyz/img/Nico_Lach_canonical_photo.jpg" property="og:image"/>
-<meta content="website" property="og:type"/>
+</script>
 <meta content="pl_PL" property="og:locale"/>
-<meta content="summary_large_image" name="twitter:card"/><link rel="ai-catalog" type="application/json" href="/.well-known/ai-catalog.json"/>
+<link rel="ai-catalog" type="application/json" href="/.well-known/ai-catalog.json"/>
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Reverse Emo Changeling | Magazine &amp; E-Zine">
+<meta property="og:description" content="The Reverse Emo Changeling - dwujęzyczna brama wydawnicza niezależnego czasopisma społeczno-artystycznego (PL/EN). Wybierz edycję językową.">
+<meta property="og:url" content="https://reverse.emo-changeling.xyz/">
+<meta property="og:image" content="https://reverse.emo-changeling.xyz/img/og-reverse-main.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:alt" content="The Reverse Emo Changeling - Magazine and E-Zine banner (Toxic Echo Studio)">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Reverse Emo Changeling | Magazine &amp; E-Zine">
+<meta name="twitter:description" content="The Reverse Emo Changeling - dwujęzyczna brama wydawnicza niezależnego czasopisma społeczno-artystycznego (PL/EN). Wybierz edycję językową.">
+<meta name="twitter:image" content="https://reverse.emo-changeling.xyz/img/og-reverse-main.jpg">
+<meta name="twitter:image:alt" content="The Reverse Emo Changeling - Magazine and E-Zine banner (Toxic Echo Studio)">
 </head>
 <body>
 <!-- Top Skip Link for Accessibility -->
-<a class="llm-content" href="#lang-select-main" style="position: absolute; left: -9999px;">Skip to language selection</a>
+<a class="skip-link" href="#lang-select-main">Przejdź do wyboru języka / Skip to language selection</a>
 <!-- Header Banner Area -->
 <header class="main-header notranslate" translate="no">
 <div class="banner-container">
@@ -109,16 +97,16 @@
 <!-- Social Links Row -->
 <div class="social-container notranslate" translate="no">
 <a aria-label="DeviantArt Portfolio" href="https://deviantart.emo-changeling.xyz" rel="me">
-<img alt="DeviantArt" class="social-icon" height="48" loading="lazy" src="img/DeviantArt.svg" width="48"/>
+<img alt="DeviantArt" class="social-icon" height="48" src="img/DeviantArt.svg" width="48" decoding="async"/>
 </a>
 <a aria-label="TikTok Channel" href="https://tt.emo-changeling.xyz" rel="me">
-<img alt="TikTok" class="social-icon" height="48" loading="lazy" src="img/tiktok_link.svg" width="48"/>
+<img alt="TikTok" class="social-icon" height="48" src="img/tiktok_link.svg" width="48" decoding="async"/>
 </a>
 <a aria-label="YouTube Channel" href="https://yt.emo-changeling.xyz" rel="me">
-<img alt="YouTube" class="social-icon" height="48" loading="lazy" src="img/YouTube_link.svg" width="48"/>
+<img alt="YouTube" class="social-icon" height="48" src="img/YouTube_link.svg" width="48" decoding="async"/>
 </a>
 <a aria-label="Telegram Channel" href="https://te.emo-changeling.xyz" rel="me">
-<img alt="Telegram" class="social-icon" height="48" loading="lazy" src="img/Telegram.svg" width="48"/>
+<img alt="Telegram" class="social-icon" height="48" src="img/Telegram.svg" width="48" decoding="async"/>
 </a>
 </div>
 <!-- Główna sekcja treści: brama językowa x-default oraz indeksowalna charakterystyka magazynu -->
@@ -147,10 +135,10 @@
                         </p>
 </noscript>
 <div style="display: flex; flex-direction: column; gap: 15px; max-width: 440px; margin: 0 auto;">
-<a class="btn-retro" href="pl/" hreflang="pl" lang="pl" onclick="setSiteLang('pl')" style="font-size: 1.1rem; padding: 14px 20px; text-align: center; text-decoration: none; display: block;">
+<a class="btn-retro" href="pl/" hreflang="pl" lang="pl" style="font-size: 1.1rem; padding: 14px 20px; text-align: center; text-decoration: none; display: block;">
                             🇵🇱  Wydanie Polskie (PL) »
                         </a>
-<a class="btn-retro" href="en/" hreflang="en" lang="en" onclick="setSiteLang('en')" style="font-size: 1.1rem; padding: 14px 20px; text-align: center; text-decoration: none; display: block;">
+<a class="btn-retro" href="en/" hreflang="en" lang="en" style="font-size: 1.1rem; padding: 14px 20px; text-align: center; text-decoration: none; display: block;">
                             🇬🇧  English Edition (EN) »
                         </a>
 </div>
