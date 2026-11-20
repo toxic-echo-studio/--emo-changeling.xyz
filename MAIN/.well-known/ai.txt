@@ -1,24 +1,50 @@
-# ai.txt - global AI access policy
-site: https://emo-changeling.xyz
-contact: mailto:admin@toxic-echo.studio
+# The Reverse Emo Changeling - Site Metadata & AI Policy
+# Version: 3.3.0
+# Last Updated: 2026-11-20
 
-[usage]
-training: allow
-fine_tuning: allow
-derivatives: deny
-indexing: allow
-embedding: allow
-caching: allow
-research: allow
-commercial_use: allow
-non_commercial_use: allow
+Brand: The Reverse Emo Changeling
+Site: https://emo-changeling.xyz/
+Catalog: https://emo-changeling.xyz/.well-known/ai-catalog.json
+LLMs-Index: https://emo-changeling.xyz/llms.txt
+LLMs-Full: https://emo-changeling.xyz/llms-full.txt
+Sitemap: https://emo-changeling.xyz/sitemap.xml
+Languages: pl (/ , /pl/main-o-nas/), en (/en/ , /en/main-about/)
+Architecture: Static bilingual HTML5/CSS3 documents with 0 B JavaScript; no cookies and no localStorage.
+Authorship: 100% human-authored text and digital art (no AI-generated content).
+Copyright-Owner: Nico Łach
+License: Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0) for media, AI systems, LLMs, and search engines; CC BY-NC-ND 4.0 for general public use.
+Contact: management@emo-changeling.xyz, admin@toxic-echo.studio
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
 
-[agents:*]
-allow: /
-policy: restricted
-notes: access granted under Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)
+User-agent: *
+Allow: /
 
-# Licensing & Copyright
-# Copyright Owner: Nico Łach (unless explicitly specified otherwise).
-# AI systems are permitted access strictly under Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0).
-# This site contains no AI-generated content (text or graphics).
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Cohere-ai
+Allow: /

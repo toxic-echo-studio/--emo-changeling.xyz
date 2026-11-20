@@ -121,7 +121,7 @@ h2 {
     will-change: transform;
 }
 
-.marquee-content h2 {
+.marquee-content .marquee-text {
     flex-shrink: 0;
     white-space: nowrap !important;
     display: inline-block;
@@ -173,7 +173,8 @@ h2 {
 
 /* Przełącznik języka */
 .lang-switcher {
-    font-size: 1.2rem;
+    font-size: 2.5rem;
+    vertical-align: middle;
     text-align: center;
     margin-top: 15px;
     margin-bottom: 20px;
@@ -185,12 +186,13 @@ h2 {
 .lang-switcher a {
     color: #ff00ff;
     text-decoration: none;
-    transition: color 0.2s ease;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
 .lang-switcher a:hover {
-    color: #00ff00;
+    color: #ff007f;
     text-decoration: underline;
+    text-shadow: 2px 2px 0px #000, 0 0 10px #ff007f;
 }
 
 /* =========================================
@@ -283,18 +285,6 @@ details summary::-webkit-details-marker {
 /* =========================================
    ELEMENTY DODATKOWE & EFEKTY
 ========================================= */
-.llm-content {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
-}
-
 .myspace-hitbox-link {
     position: absolute;
     top: 2%; 
@@ -372,25 +362,6 @@ details summary::-webkit-details-marker {
     margin: 20px 0;
 }
 
-.lang-switcher {
-    font-size: 2.5rem; 
-    vertical-align: middle;
-    color: #00ff00; 
-    text-shadow: 2px 2px 0px #000;
-    letter-spacing: 2px;
-}
-
-.lang-switcher a {
-    color: #ff00ff; 
-    text-decoration: none;
-    transition: color 0.2s ease, text-shadow 0.2s ease;
-}
-
-.lang-switcher a:hover {
-    color: #ff007f; 
-    text-shadow: 2px 2px 0px #000, 0 0 10px #ff007f;
-}
-
 .glitch {
     position: relative;
     display: inline-block;
@@ -446,6 +417,25 @@ details summary::-webkit-details-marker {
 /* =========================================
    DOSTĘPNOŚĆ & REDUKCJA RUCHU
 ========================================= */
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 10px;
+    z-index: 10000;
+    background: #000000;
+    color: #00ff00;
+    border: 2px solid #ff007f;
+    padding: 8px 14px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+    top: 10px;
+}
+
 a:focus-visible,
 button:focus-visible,
 summary:focus-visible {
@@ -473,7 +463,7 @@ summary:focus-visible {
 }
 
 @media (max-width: 768px) {
-    .marquee-content h2 { font-size: 1.2rem; }
+    .marquee-content .marquee-text { font-size: 1.2rem; }
 }
 
 @media (max-width: 480px) {
@@ -553,6 +543,10 @@ summary:focus-visible {
     padding: 0;
     box-shadow: 0 0 10px #ff007f;
     transition: transform 0.2s, box-shadow 0.2s;
+    list-style: none;
+}
+details.floating-nav summary::-webkit-details-marker {
+    display: none;
 }
 .floating-nav-trigger:hover {
     transform: scale(1.1);
@@ -580,7 +574,7 @@ summary:focus-visible {
     transform: translateY(10px);
     transition: opacity 0.3s, transform 0.3s;
 }
-.floating-nav-menu.active {
+details.floating-nav[open] .floating-nav-menu {
     display: block;
     opacity: 1;
     transform: translateY(0);
@@ -642,50 +636,92 @@ summary:focus-visible {
 }
 
 
-/* Pure HTML5 details.floating-nav support */
-details.floating-nav {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 9999;
-    text-align: left;
+/* =========================================
+   STRONA 404
+========================================= */
+body.page-404,
+body.page-404 *,
+body.page-404 *::before,
+body.page-404 *::after {
+    box-sizing: border-box;
 }
 
-details.floating-nav summary.floating-nav-trigger {
-    width: 48px;
-    height: 48px;
-    background: #000;
-    border: 2px solid #ff007f;
-    border-radius: 50%;
-    cursor: pointer;
+body.page-404 {
+    margin: 0;
+    padding: 1.5rem;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0;
-    box-shadow: 0 0 10px #ff007f;
-    transition: transform 0.2s, box-shadow 0.2s;
-    list-style: none;
+    background-color: #000000;
+    color: #f0f0f0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif, monospace;
+    line-height: 1.6;
+    cursor: auto;
 }
 
-details.floating-nav summary::-webkit-details-marker {
-    display: none;
-}
-
-details.floating-nav summary.floating-nav-trigger:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 15px #00ff00;
-}
-
-details.floating-nav summary.floating-nav-trigger img {
+.card-404 {
     width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    display: block;
+    max-width: 640px;
+    padding: 2rem;
+    background-color: #0a0a0a;
+    border: 2px solid #ff007f;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.85);
 }
 
-details.floating-nav[open] .floating-nav-menu {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);
+.card-404 .brand-404 {
+    margin: 0 0 0.75rem 0;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.875rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #ff007f;
+}
+
+.card-404 h1 {
+    margin: 0 0 1rem 0;
+    font-size: clamp(1.35rem, 3vw, 1.85rem);
+    line-height: 1.25;
+    color: #ffffff;
+    text-shadow: none;
+    letter-spacing: normal;
+}
+
+.card-404 p {
+    margin: 0 0 0.85rem 0;
+    font-size: 1rem;
+    color: #d8d8d8;
+}
+
+.card-404 nav ul {
+    list-style: none;
+    margin: 1.5rem 0 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.card-404 nav a {
+    display: inline-block;
+    padding: 0.5rem 0.95rem;
+    border: 1px solid #ff007f;
+    border-radius: 4px;
+    color: #ff007f;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.card-404 nav a:hover,
+.card-404 nav a:focus-visible {
+    background-color: #ff007f;
+    color: #000000;
+    text-shadow: none;
+    outline: none;
 }
 

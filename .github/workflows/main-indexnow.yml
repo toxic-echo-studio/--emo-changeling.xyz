@@ -1,0 +1,71 @@
+name: MAIN IndexNow Notification
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'MAIN/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  notify-indexnow:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Submit changed MAIN URLs to IndexNow
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if git rev-parse --verify HEAD~1 >/dev/null 2>&1; then
+            changed_files=$(git -c core.quotepath=false diff --name-only --diff-filter=AM HEAD~1 HEAD -- 'MAIN/*.html' 'MAIN/**/*.html')
+          else
+            changed_files=$(git -c core.quotepath=false diff-tree --no-commit-id --name-only -r --diff-filter=AM HEAD -- 'MAIN/*.html' 'MAIN/**/*.html')
+          fi
+
+          urls=()
+          while IFS= read -r file; do
+            [ -z "$file" ] && continue
+            [[ "$file" == *.asc ]] && continue
+            [ "$file" = "MAIN/404.html" ] && continue
+            [[ "$file" == MAIN/admin/* ]] && continue
+            [[ "$file" == MAIN/yandex_*.html ]] && continue
+
+            rel="${file#MAIN/}"
+            if [ "$rel" = "index.html" ]; then
+              path="/"
+            elif [[ "$rel" == */index.html ]]; then
+              path="/${rel%index.html}"
+            else
+              path="/${rel%.html}/"
+            fi
+
+            urls+=("https://emo-changeling.xyz${path}")
+          done <<< "$changed_files"
+
+          if [ "${#urls[@]}" -eq 0 ]; then
+            echo "No changed MAIN URLs to submit."
+            exit 0
+          fi
+
+          sleep 75
+
+          payload=$(printf '%s\n' "${urls[@]}" | jq -R . | jq -s '{
+            host: "emo-changeling.xyz",
+            key: "7f3a9d2b8e1c4f5a6b0d8e2c1f9a4b3d",
+            keyLocation: "https://emo-changeling.xyz/7f3a9d2b8e1c4f5a6b0d8e2c1f9a4b3d.txt",
+            urlList: .
+          }')
+
+          curl -sS -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json" \
+            -d "$payload"

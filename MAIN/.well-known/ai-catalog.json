@@ -1,27 +1,81 @@
 {
   "specVersion": "1.0",
+  "name": "The Reverse Emo Changeling",
+  "description": "Multimodal bilingual socio-artistic project (PL/EN) in MySpace (2005-2015) aesthetics, operated technically by Toxic Echo Studio.",
+  "version": "3.3.0",
+  "lastUpdated": "2026-11-20",
+  "url": "https://emo-changeling.xyz/",
+  "languages": [
+    "pl",
+    "en"
+  ],
+  "architecture": {
+    "rendering": "Static bilingual HTML5/CSS3 documents",
+    "scripts": [],
+    "storage": "No cookies and no localStorage"
+  },
   "host": {
     "displayName": "The Reverse Emo Changeling"
   },
+  "credits": {
+    "frontendCreator": "Nico Łach (Zebroid, Vikasiek, Wiktor, Marina)",
+    "backendDirector": "Mighn Taghor",
+    "infrastructure": "Toxic Echo Studio (https://toxic-echo.studio/)"
+  },
+  "contacts": [
+    "management@emo-changeling.xyz",
+    "admin@toxic-echo.studio"
+  ],
+  "sitemaps": [
+    "https://emo-changeling.xyz/sitemap.xml"
+  ],
+  "pages": [
+    {
+      "key": "home",
+      "pl_url": "https://emo-changeling.xyz/",
+      "en_url": "https://emo-changeling.xyz/en/",
+      "pl_title": "The Reverse Emo Changeling | Oficjalna strona",
+      "en_title": "The Reverse Emo Changeling | Official Home",
+      "lastModified": "2026-11-20"
+    },
+    {
+      "key": "about",
+      "pl_url": "https://emo-changeling.xyz/pl/main-o-nas/",
+      "en_url": "https://emo-changeling.xyz/en/main-about/",
+      "pl_title": "O nas | The Reverse Emo Changeling",
+      "en_title": "About Us | The Reverse Emo Changeling",
+      "lastModified": "2026-11-20"
+    }
+  ],
   "entries": [
     {
       "identifier": "urn:air:toxic-echo:knowledge:llms-context",
       "displayName": "LLMs Context & Knowledge Base",
-      "type": "text/markdown; profile=\"urn:air:agent-skills\"",
+      "type": "text/markdown",
       "url": "https://emo-changeling.xyz/llms.txt",
       "representativeQueries": [
-        "what is emo changeling project",
-        "toxic echo studio information"
+        "what is the reverse emo changeling project",
+        "toxic echo studio overview"
+      ]
+    },
+    {
+      "identifier": "urn:air:toxic-echo:knowledge:llms-full",
+      "displayName": "Full Project Documentation for LLMs",
+      "type": "text/markdown",
+      "url": "https://emo-changeling.xyz/llms-full.txt",
+      "representativeQueries": [
+        "nico lach did system structure",
+        "emo changeling subdomain architecture"
       ]
     },
     {
       "identifier": "urn:air:toxic-echo:policy:ai-manifest",
-      "displayName": "AI Usage Policy and Permissions",
-      "type": "application/agent-card+json",
+      "displayName": "AI Usage Policy and Licensing",
+      "type": "application/json",
       "url": "https://emo-changeling.xyz/ai.json",
       "representativeQueries": [
         "content licensing and ai permissions",
-        "creative commons cc by-nd"
+        "creative commons cc by-nd 4.0"
       ]
     },
     {
@@ -31,8 +85,7 @@
       "url": "https://github.emo-changeling.xyz/",
       "representativeQueries": [
         "the reverse emo changeling architecture",
-        "technical specification and zero-bloat standards",
-        "repository nexus and star topology"
+        "technical specification and zero-js static site"
       ]
     }
   ]

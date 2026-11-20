@@ -9,30 +9,37 @@
     "Nico Łach (główny twórca)",
     "Zebroid (frontman, główny host)",
     "Vikasiek (grafika cyfrowa)",
-    "Wiktor (sporadyczny co-host)",
-    "Marina (sporadyczna co-host)"
+    "Wiktor (okazjonalny co-host)",
+    "Marina (okazjonalna co-host)"
   ],
   "architecture": {
     "apex": {
       "url": "https://emo-changeling.xyz",
       "paths": {
         "/": {
-          "title": "Główny hub / The Reverse Emo Changeling",
-          "description": "Prezencja medialna, manifest artystyczny i sekcje kontaktowe.",
+          "title": "The Reverse Emo Changeling | Oficjalna strona",
+          "description": "Prezencja medialna, manifest artystyczny i sekcje kontaktowe (PL).",
           "languages": [
             "pl"
           ]
         },
+        "/en/": {
+          "title": "The Reverse Emo Changeling | Official Home",
+          "description": "Media presence, artistic manifesto, and contact sections (EN).",
+          "languages": [
+            "en"
+          ]
+        },
         "/pl/main-o-nas/": {
           "title": "O nas",
-          "description": "Szczegółowy opis projektu, tożsamości DID oraz wytycznych dla AI.",
+          "description": "Szczegółowy opis projektu, struktury DID oraz polityki licencyjnej.",
           "languages": [
             "pl"
           ]
         },
         "/en/main-about/": {
           "title": "About Us",
-          "description": "English version of the project overview and AI guidelines.",
+          "description": "English version of the project overview, DID structure, and licensing terms.",
           "languages": [
             "en"
           ]
@@ -41,7 +48,7 @@
           "title": "Admin Space",
           "description": "Pusta strona kontrolna / honeypot.",
           "languages": [
-            "pl"
+            "en"
           ]
         }
       }
@@ -82,6 +89,13 @@
             "description": "Główny indeks galerii z odnośnikami do kategorii.",
             "languages": [
               "pl"
+            ]
+          },
+          "/en/": {
+            "title": "Gallery Hub (EN)",
+            "description": "English gallery index with category links.",
+            "languages": [
+              "en"
             ]
           },
           "/aviary/": {
@@ -131,6 +145,13 @@
               "pl"
             ]
           },
+          "/en/": {
+            "title": "System Hub (EN)",
+            "description": "English index of system links.",
+            "languages": [
+              "en"
+            ]
+          },
           "/pl/blackhole/": {
             "title": "Blackhole Link Hub",
             "description": "Agregator oficjalnych odnośników projektu i profili społecznościowych.",
@@ -155,6 +176,13 @@
             "description": "Główny kanał ekspresji myśli i interakcji kulturowych.",
             "languages": [
               "pl"
+            ]
+          },
+          "/en/": {
+            "title": "Insta Rant (EN)",
+            "description": "English version of the Insta Rant archive.",
+            "languages": [
+              "en"
             ]
           }
         }
@@ -222,7 +250,7 @@
         "paths": {
           "/": {
             "title": "Wiki | The Reverse Emo Changeling",
-            "description": "Centrum wiedzy o subkulturach Emo i Scene. Historia, muzyka i opisy stylówy.",
+            "description": "Centrum wiedzy o subkulturach Emo i Scene. Historia, muzyka i opisy stylu.",
             "languages": [
               "pl"
             ]
@@ -303,6 +331,13 @@
         "paths": {
           "/": {
             "title": "Hall of Shame",
+            "description": "Polska wersja rejestru naruszeń praw autorskich.",
+            "languages": [
+              "pl"
+            ]
+          },
+          "/en/": {
+            "title": "Hall of Shame (EN)",
             "description": "Here rest those who have made themselves an intolerable nuisance to us.",
             "languages": [
               "en"
@@ -313,6 +348,25 @@
             "description": "Detailed case of copyright infringement by Harry Jxye.",
             "languages": [
               "en"
+            ]
+          }
+        }
+      },
+      "tx2.emo-changeling.xyz": {
+        "description": "TX2 Unofficial Fansite - niezależna strona fanowska i archiwum kampanii Pigeonification Ritual.",
+        "paths": {
+          "/": {
+            "title": "TX2 Unofficial Fansite (EN)",
+            "description": "English home page of the TX2 Unofficial Fansite.",
+            "languages": [
+              "en"
+            ]
+          },
+          "/pl/": {
+            "title": "TX2 Unofficial Fansite (PL)",
+            "description": "Polska wersja strony fanowskiej TX2 Unofficial Fansite.",
+            "languages": [
+              "pl"
             ]
           }
         }
