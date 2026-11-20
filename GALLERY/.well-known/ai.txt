@@ -1,24 +1,20 @@
-# ai.txt - global AI access policy
-site: https://gallery.emo-changeling.xyz
-contact: mailto:admin@toxic-echo.studio
+# The Reverse Emo Changeling Gallery - Site Metadata & AI Policy
+# Version: 3.2.0
+# Last Updated: 2026-11-20
 
-[usage]
-training: allow
-fine_tuning: allow
-derivatives: deny
-indexing: allow
-embedding: allow
-caching: allow
-research: allow
-commercial_use: allow
-non_commercial_use: allow
+Brand: The Reverse Emo Changeling (Gallery)
+Site: https://gallery.emo-changeling.xyz/
+Primary-Language: en (/en/)
+Catalog: https://gallery.emo-changeling.xyz/.well-known/ai-catalog.json
+LLMs-Index: https://gallery.emo-changeling.xyz/llms.txt
+Sitemap: https://gallery.emo-changeling.xyz/sitemap.xml
+Languages: en (/en/, /en/aviary/, /en/photo/, /en/digiart/, /en/other/), pl (/, /aviary/, /photo/, /digiart/, /other/)
+Architecture: Static bilingual HTML5/CSS3 documents; 0 B JS on home pages; static SSR gallery cards + deferred /js/gallery.js on category pages.
+Authorship: 100% human-authored digital art, photography, and descriptions (no AI-generated content).
+Copyright-Owner: Nico Łach
+License: Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0) for media, AI systems, LLMs, and search engines; CC BY-NC-ND 4.0 for general public use.
+Contact: management@emo-changeling.xyz, admin@toxic-echo.studio
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
 
-[agents:*]
-allow: /
-policy: restricted
-notes: access granted under Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)
-
-# Licensing & Copyright
-# Copyright Owner: Nico Łach (unless explicitly specified otherwise).
-# AI systems are permitted access strictly under Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0).
-# This site contains no AI-generated content (text or graphics).
+User-agent: *
+Allow: /

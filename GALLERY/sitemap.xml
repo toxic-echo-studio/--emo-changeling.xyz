@@ -1,34 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-<url>
-<loc>https://gallery.emo-changeling.xyz/</loc>
-<lastmod>2026-11-15</lastmod>
-
-
-</url>
-<url>
-<loc>https://gallery.emo-changeling.xyz/aviary/</loc>
-<lastmod>2026-11-15</lastmod>
-
-
-</url>
-<url>
-<loc>https://gallery.emo-changeling.xyz/photo/</loc>
-<lastmod>2026-11-15</lastmod>
-
-
-</url>
-<url>
-<loc>https://gallery.emo-changeling.xyz/digiart/</loc>
-<lastmod>2026-11-15</lastmod>
-
-
-</url>
-<url>
-<loc>https://gallery.emo-changeling.xyz/other/</loc>
-<lastmod>2026-11-15</lastmod>
-
-
-</url>
-<url><loc>https://gallery.emo-changeling.xyz/en/</loc><lastmod>2026-11-15</lastmod><xhtml:link href="https://gallery.emo-changeling.xyz/" hreflang="x-default" rel="alternate"/><xhtml:link href="https://gallery.emo-changeling.xyz/" hreflang="pl" rel="alternate"/><xhtml:link href="https://gallery.emo-changeling.xyz/en/" hreflang="en" rel="alternate"/></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://gallery.emo-changeling.xyz/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://gallery.emo-changeling.xyz/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gallery.emo-changeling.xyz/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gallery.emo-changeling.xyz/en/"/>
+  </url>
+  <url>
+    <loc>https://gallery.emo-changeling.xyz/en/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://gallery.emo-changeling.xyz/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gallery.emo-changeling.xyz/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gallery.emo-changeling.xyz/en/"/>
+  </url>
+  <url>
+    <loc>https://gallery.emo-changeling.xyz/aviary/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://gallery.emo-changeling.xyz/aviary/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gallery.emo-changeling.xyz/en/aviary/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gallery.emo-changeling.xyz/en/aviary/"/>
+  </url>
+  <url>
+    <loc>https://gallery.emo-changeling.xyz/en/aviary/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://gallery.emo-changeling.xyz/aviary/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gallery.emo-changeling.xyz/en/aviary/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gallery.emo-changeling.xyz/en/aviary/"/>
+  </url>
+  <url>
+    <loc>https://gallery.emo-changeling.xyz/photo/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://gallery.emo-changeling.xyz/photo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gallery.emo-changeling.xyz/en/photo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gallery.emo-changeling.xyz/en/photo/"/>
+  </url>
+  <url>
+    <loc>https://gallery.emo-changeling.xyz/en/photo/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://gallery.emo-changeling.xyz/photo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gallery.emo-changeling.xyz/en/photo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gallery.emo-changeling.xyz/en/photo/"/>
+  </url>
+  <url>
+    <loc>https://gallery.emo-changeling.xyz/digiart/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://gallery.emo-changeling.xyz/digiart/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gallery.emo-changeling.xyz/en/digiart/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gallery.emo-changeling.xyz/en/digiart/"/>
+  </url>
+  <url>
+    <loc>https://gallery.emo-changeling.xyz/en/digiart/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://gallery.emo-changeling.xyz/digiart/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gallery.emo-changeling.xyz/en/digiart/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gallery.emo-changeling.xyz/en/digiart/"/>
+  </url>
+  <url>
+    <loc>https://gallery.emo-changeling.xyz/other/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://gallery.emo-changeling.xyz/other/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gallery.emo-changeling.xyz/en/other/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gallery.emo-changeling.xyz/en/other/"/>
+  </url>
+  <url>
+    <loc>https://gallery.emo-changeling.xyz/en/other/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://gallery.emo-changeling.xyz/other/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gallery.emo-changeling.xyz/en/other/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://gallery.emo-changeling.xyz/en/other/"/>
+  </url>
 </urlset>

@@ -1,27 +1,29 @@
 /* TEAM */
 Nico Łach
-Role: Creator, Main Vlogger, Public Figure, DID system body representing fronts: Zebroid, Vikasiek, Wiktor, Marina. Nico Łach to jedyna biologiczna/fizyczna osoba w tym projekcie (Zebroid, Vikasiek, Wiktor i Marina są psychologicznymi częściami jednego ciała i nie stanowią osobnych istot biologicznych).
+Role: Creator, Main Vlogger, Public Figure, DID system body representing people: Zebroid, Vikasiek, Wiktor, Marina. Nico Łach to jedyna biologiczna/fizyczna osoba w tym projekcie (Zebroid, Vikasiek, Wiktor i Marina są psychologicznymi częściami jednego ciała i nie stanowią osobnych istot biologicznych).
 Contact: management@emo-changeling.xyz
-Site: https://emo-changeling.xyz
+Site: https://emo-changeling.xyz/
 
 Mighn Taghor
 Role: Studio Director, Technical Backend & Business Manager at Toxic Echo Studio. Mighn Taghor to całkowicie odrębna biologiczna osoba fizyczna zarządzająca zapleczem technicznym i biznesowym. Nie wchodzi w skład systemu DID Nico Łacha, a jego działalność jest prowadzona niezależnie pod szyldem Toxic Echo Studio.
 Contact: management@toxic-echo.studio
-Site: https://toxic-echo.studio
+Site: https://toxic-echo.studio/
 
 /* THANKS */
 Dla wszystkich, którzy wspierają projekt, komentują, oglądają i tworzą z nami bezpieczną, alternatywną przestrzeń w internecie.
 
 /* TECHNOLOGY */
-Workflow: DaVinci Resolve Studio, LumaFusion, Clip Studio Paint, VS Code, OBS Studio, SubtitleEdit, LM Studio, Blackmagic Cam App
+Workflow: DaVinci Resolve Studio, LumaFusion, Clip Studio Paint, VS Code, OBS Studio, SubtitleEdit, Blackmagic Cam App
 Services: Cloudflare, Lark Suite
 
 /* SITE */
-Wspieramy projekt TX2 unofficial fansite - https://tx2.emo-changeling.xyz
+Oficjalna galeria i archiwum wizualne projektu The Reverse Emo Changeling (TREC): https://gallery.emo-changeling.xyz/
+English Gallery Home: https://gallery.emo-changeling.xyz/en/
+Wspieramy projekt TX2 unofficial fansite - https://tx2.emo-changeling.xyz/pl/
 
-Last update: 2026-11-15
+Last update: 2026-11-20
 Standards: HTML5, CSS3
-Components: robots.txt, llms.txt, ai.txt
+Components: robots.txt, llms.txt, ai.txt, sitemap.xml
 License: CC BY-ND 4.0 for media/AI, CC BY-NC-ND 4.0 for other uses
 
 /* PGP PUBLIC KEY BLOCK */

@@ -1,4 +1,152 @@
-@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+/* Comic Relief 400 - cyrillic */
+@font-face {
+    font-family: 'Comic Relief';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/comic-relief-v2-cyrillic-400.woff2') format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* Comic Relief 400 - latin-ext */
+@font-face {
+    font-family: 'Comic Relief';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/comic-relief-v2-latin-ext-400.woff2') format('woff2');
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* Comic Relief 400 - latin */
+@font-face {
+    font-family: 'Comic Relief';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/comic-relief-v2-latin-400.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Comic Relief 700 - cyrillic */
+@font-face {
+    font-family: 'Comic Relief';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('/fonts/comic-relief-v2-cyrillic-700.woff2') format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* Comic Relief 700 - latin-ext */
+@font-face {
+    font-family: 'Comic Relief';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('/fonts/comic-relief-v2-latin-ext-700.woff2') format('woff2');
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* Comic Relief 700 - latin */
+@font-face {
+    font-family: 'Comic Relief';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('/fonts/comic-relief-v2-latin-700.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Roboto Mono 300 - cyrillic */
+@font-face {
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('/fonts/roboto-mono-cyrillic-300.woff2') format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* Roboto Mono 300 - latin-ext */
+@font-face {
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('/fonts/roboto-mono-latin-ext-300.woff2') format('woff2');
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* Roboto Mono 300 - latin */
+@font-face {
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('/fonts/roboto-mono-latin-300.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Roboto Mono 400 - cyrillic */
+@font-face {
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/roboto-mono-cyrillic-400.woff2') format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* Roboto Mono 400 - latin-ext */
+@font-face {
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/roboto-mono-latin-ext-400.woff2') format('woff2');
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* Roboto Mono 400 - latin */
+@font-face {
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/roboto-mono-latin-400.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Roboto Mono 700 - cyrillic */
+@font-face {
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('/fonts/roboto-mono-cyrillic-700.woff2') format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* Roboto Mono 700 - latin-ext */
+@font-face {
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('/fonts/roboto-mono-latin-ext-700.woff2') format('woff2');
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* Roboto Mono 700 - latin */
+@font-face {
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('/fonts/roboto-mono-latin-700.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
 /* =========================================
    PODSTAWA & TYPOGRAFIA
@@ -114,7 +262,7 @@ h3 {
     will-change: transform;
 }
 
-    .marquee-content h2 {
+    .marquee-content .marquee-text {
         font-family: 'Courier New', Courier, monospace;
         flex-shrink: 0;
         white-space: nowrap !important;
@@ -265,6 +413,23 @@ details summary::-webkit-details-marker {
     flex-direction: column;
     cursor: pointer;
     gap: 8px;
+}
+
+button.gallery-card {
+    appearance: none;
+    -webkit-appearance: none;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    text-align: inherit;
+    width: 100%;
+    align-items: stretch;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    cursor: url('../img/kursor1.cur'), pointer;
 }
 
 .gallery-item {
@@ -518,18 +683,6 @@ details summary::-webkit-details-marker {
 /* =========================================
    ELEMENTY DODATKOWE & EFEKTY
 ========================================= */
-.llm-content {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
-}
-
 .myspace-hitbox-link {
     position: absolute;
     top: 2%;
@@ -866,7 +1019,7 @@ summary:focus-visible {
         font-size: 2rem;
     }
 
-    .marquee-content h2 {
+    .marquee-content .marquee-text {
         font-size: 1.2rem;
     }
 
@@ -1054,7 +1207,7 @@ summary:focus-visible {
 /* =========================================
    MENU NAWIGACYJNE WYEKSTRAHOWANE Z HTML
    ========================================= */
-.floating-nav {
+details.floating-nav {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -1062,7 +1215,7 @@ summary:focus-visible {
     font-family: 'Roboto Mono', monospace, sans-serif;
     text-align: left;
 }
-.floating-nav-trigger {
+details.floating-nav summary.floating-nav-trigger {
     width: 48px;
     height: 48px;
     background: #000;
@@ -1075,12 +1228,16 @@ summary:focus-visible {
     padding: 0;
     box-shadow: 0 0 10px #ff007f;
     transition: transform 0.2s, box-shadow 0.2s;
+    list-style: none;
 }
-.floating-nav-trigger:hover {
+details.floating-nav summary::-webkit-details-marker {
+    display: none;
+}
+details.floating-nav summary.floating-nav-trigger:hover {
     transform: scale(1.1);
     box-shadow: 0 0 15px #00ff00;
 }
-.floating-nav-trigger img {
+details.floating-nav summary.floating-nav-trigger img {
     width: 100%;
     height: 100%;
     border-radius: 50%;
@@ -1102,6 +1259,7 @@ summary:focus-visible {
     transform: translateY(10px);
     transition: opacity 0.3s, transform 0.3s;
 }
+details.floating-nav[open] .floating-nav-menu,
 .floating-nav-menu.active {
     display: block;
     opacity: 1;
@@ -1164,11 +1322,11 @@ summary:focus-visible {
 }
 
 /* =========================================
-   COMIC NEUE OVERRIDE FOR DESCRIPTIONS
+   COMIC RELIEF OVERRIDE FOR DESCRIPTIONS
    ========================================= */
-.description-content:not([style*="font-family" i]),
-.description-content :not([style*="font-family" i]) {
-    font-family: 'Comic Sans MS', 'Comic Neue', cursive, sans-serif !important;
+.description-content,
+.description-content * {
+    font-family: 'Comic Sans MS', 'Comic Relief', cursive, sans-serif !important;
 }
 
 /* Klauzula tłumaczeniowa i bloki językowe opisów w galerii */
@@ -1274,111 +1432,6 @@ html[lang="en"] .description-content:not([data-active-lang]) .opis-lang-block[da
 
 
 
-
-/* Pure HTML5 details.floating-nav support */
-details.floating-nav {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 9999;
-    text-align: left;
-}
-
-details.floating-nav summary.floating-nav-trigger {
-    width: 48px;
-    height: 48px;
-    background: #000;
-    border: 2px solid #ff007f;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    box-shadow: 0 0 10px #ff007f;
-    transition: transform 0.2s, box-shadow 0.2s;
-    list-style: none;
-}
-
-details.floating-nav summary::-webkit-details-marker {
-    display: none;
-}
-
-details.floating-nav summary.floating-nav-trigger:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 15px #00ff00;
-}
-
-details.floating-nav summary.floating-nav-trigger img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    display: block;
-}
-
-details.floating-nav[open] .floating-nav-menu {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);
-}
-
-
-/* ==========================================================================
-   Bilingual Content Support (PL / EN)
-   ========================================================================== */
-.content-en, .content-pl {
-    display: none;
-}
-
-html[lang="pl"] .content-pl,
-html:not([lang="en"]) .content-pl {
-    display: block;
-}
-
-html[lang="en"] .content-en {
-    display: block;
-}
-
-html[lang="en"] .content-pl {
-    display: none !important;
-}
-
-html[lang="pl"] .content-en,
-html:not([lang="en"]) .content-en {
-    display: none !important;
-}
-
-/* Inline bilingual elements */
-span.content-pl, a.content-pl {
-    display: none;
-}
-span.content-en, a.content-en {
-    display: none;
-}
-
-html[lang="pl"] span.content-pl,
-html[lang="pl"] a.content-pl,
-html:not([lang="en"]) span.content-pl,
-html:not([lang="en"]) a.content-pl {
-    display: inline;
-}
-
-html[lang="en"] span.content-en,
-html[lang="en"] a.content-en {
-    display: inline;
-}
-
-html[lang="en"] span.content-pl,
-html[lang="en"] a.content-pl {
-    display: none !important;
-}
-
-html[lang="pl"] span.content-en,
-html[lang="pl"] a.content-en,
-html:not([lang="en"]) span.content-en,
-html:not([lang="en"]) a.content-en {
-    display: none !important;
-}
 
 /* ==========================================================================
    GALERIA - POZIOMY SLIDER W MODALU & PRZYCISKI MAGNETOFONU
@@ -1743,4 +1796,178 @@ html:not([lang="en"]) a.content-en {
         right: auto;
         white-space: nowrap;
     }
+}
+
+/* ==========================================================================
+   KLASY POMOCNICZE (UTILITIES)
+   ========================================================================== */
+.skip-link {
+    top: -100px;
+    left: 10px;
+    position: absolute;
+    background: #000000;
+    color: #00ff00;
+    border: 2px solid #ff007f;
+    padding: 8px 14px;
+    z-index: 10000;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+    top: 10px;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+@media (min-width: 769px) {
+    .mobile-break {
+        display: none;
+    }
+}
+
+.manifest-license-note {
+    font-size: 0.75em;
+    opacity: 0.7;
+    margin-top: 1.5em;
+    line-height: 1.4;
+}
+
+.manifest-license-list {
+    padding-left: 1.2em;
+    margin: 0.5em 0;
+}
+
+.is-visible {
+    display: block !important;
+}
+
+.is-inline-block {
+    display: inline-block !important;
+}
+
+.is-hidden {
+    display: none !important;
+}
+
+.gallery-error {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.gallery-comment {
+    color: rgb(165, 214, 167);
+}
+
+.opis-fs-15 {
+    font-size: 15px;
+}
+
+.description-content img.opis-inline-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin: 8px 0;
+}
+
+.description-content img.opis-sketch-dark {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.description-content .opis-center-block {
+    text-align: center;
+    margin: 15px 0;
+}
+
+/* ==========================================================================
+   STRONA 404 (SCOPED)
+   ========================================================================== */
+body.page-404 {
+    line-height: 1.6;
+    color: #f0f0f0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif, monospace;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 1.5rem;
+    margin: 0;
+    background-color: #000000;
+}
+
+.card-404,
+.card-404 *,
+.card-404 *::before,
+.card-404 *::after {
+    box-sizing: border-box;
+}
+
+.card-404 {
+    width: 100%;
+    max-width: 640px;
+    padding: 2rem;
+    background-color: #0a0a0a;
+    border: 2px solid #ff007f;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.85);
+}
+
+.card-404 .brand-404 {
+    margin: 0 0 0.75rem 0;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.875rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #ff007f;
+}
+
+.card-404 h1 {
+    margin: 0 0 1rem 0;
+    font-family: inherit;
+    font-size: clamp(1.35rem, 3vw, 1.85rem);
+    line-height: 1.25;
+    letter-spacing: normal;
+    text-shadow: none;
+    color: #ffffff;
+}
+
+.card-404 p {
+    margin: 0 0 0.85rem 0;
+    font-size: 1rem;
+    color: #d8d8d8;
+}
+
+.card-404 nav ul {
+    list-style: none;
+    margin: 1.5rem 0 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.card-404 nav a {
+    display: inline-block;
+    padding: 0.5rem 0.95rem;
+    border: 1px solid #ff007f;
+    border-radius: 4px;
+    color: #ff007f;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.card-404 nav a:hover,
+.card-404 nav a:focus-visible {
+    background-color: #ff007f;
+    color: #000000;
+    text-shadow: none;
+    outline: none;
 }

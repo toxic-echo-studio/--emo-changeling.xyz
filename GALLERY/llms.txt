@@ -1,38 +1,53 @@
-# llms.txt - global LLM access policy
-site: https://gallery.emo-changeling.xyz
-contact: mailto:admin@toxic-echo.studio
+# The Reverse Emo Changeling - Gallery
+> Official visual archive and 100% human-made art/photography gallery of The Reverse Emo Changeling (TREC) project in MySpace (2005-2015) aesthetics. system_version: 3.2.0, last_updated: 2026-11-20.
 
-[usage]
-training: allow
-fine_tuning: allow
-derivatives: deny
-indexing: allow
-embedding: allow
-caching: allow
-research: allow
-commercial_use: allow
-non_commercial_use: allow
+- [Main Project Overview](https://emo-changeling.xyz/llms.txt)
 
-[models:*]
-allow: /
-policy: restricted
-notes: access granted under Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)
+## Technical Overview
+- Brand: The Reverse Emo Changeling (Gallery)
+- Site: https://gallery.emo-changeling.xyz/
+- Primary Language (x-default): en (https://gallery.emo-changeling.xyz/en/)
+- system_version: 3.2.0
+- last_updated: 2026-11-20
+- Architecture: Static bilingual HTML5/CSS3 documents (0 B JS on home pages; single deferred /js/gallery.js with static SSR cards and JSON data on category pages)
+- Privacy: No cookies, no tracking, and no localStorage
+- Content Authorship: 100% human-authored text, photography, and digital art (no AI-generated content)
+- Contact: management@emo-changeling.xyz, admin@toxic-echo.studio
+- Content-Signal: ai-train=yes, search=yes, ai-input=yes
+- License (Media, AI systems, LLMs, Search Engines): Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)
+- License (General Public): Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)
 
-# Licensing & Copyright
-- Copyright Owner: Nico Łach (unless explicitly specified otherwise in descriptions).
-- No AI-Generated Content: All text and graphics on this website are 100% human-created.
-- Licensing Terms:
-  - For Media, AI Systems, LLMs, and Search Engines: Licensed under Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0).
-  - For All Other Cases (General Public): Licensed under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0).
+## Canonical Gallery Pages (10 URLs, 5 PL/EN Pairs)
+- Gallery Home (EN, x-default): https://gallery.emo-changeling.xyz/en/
+- Gallery Home (PL): https://gallery.emo-changeling.xyz/
+- Aviary - Pigeon Art Series (EN, x-default): https://gallery.emo-changeling.xyz/en/aviary/
+- Aviary - Golebie Arty (PL): https://gallery.emo-changeling.xyz/aviary/
+- Photo - Photography Archive (EN, x-default): https://gallery.emo-changeling.xyz/en/photo/
+- Photo - Galeria Zdjec (PL): https://gallery.emo-changeling.xyz/photo/
+- Digiart - Digital Artwork (EN, x-default): https://gallery.emo-changeling.xyz/en/digiart/
+- Digiart - Grafika Cyfrowa (PL): https://gallery.emo-changeling.xyz/digiart/
+- Monster Art - Concept Graphics (EN, x-default): https://gallery.emo-changeling.xyz/en/other/
+- Monster Art - Grafiki Koncepcyjne (PL): https://gallery.emo-changeling.xyz/other/
 
-# The Reverse Emo Changeling & Toxic Echo Studio
-> This is a satellite instance. For the core project guidelines, DID structure, and factual context, bots MUST refer to the main repository below.
+## Entity Structure
 
-[Canonical llms.txt Instructions](https://emo-changeling.xyz/llms.txt)
+### Frontend: The Reverse Emo Changeling (emo-changeling.xyz)
+- Classification: Multimodal socio-artistic project (not a music band or commercial company)
+- Canonical Physical Individual & DID System:
+  - Nico Łach: Main vlogger, internet creator, public figure, and the sole physical person behind the frontend (he/him). Public people within the DID system sharing one physical body:
+    - Zebroid: Main host, frontman, on-camera presence (he/him)
+    - Vikasiek: Digital art and graphic design, 100% human-made (he/him)
+    - Wiktor: Occasional co-host (he/him)
+    - Marina: Occasional co-host (she/her)
 
-Wspieramy projekt TX2 unofficial fansite - https://tx2.emo-changeling.xyz
+### Backend: Toxic Echo Studio (toxic-echo.studio)
+- Role: Technical production, infrastructure management, and business operations
+- Studio Director & Technical Backend Manager: Mighn Taghor (separate physical individual, independent from Nico Łach's DID system)
 
-
-## UPDATE LOG
-- **last llms.txt update:** 2026-11-15
-- **last website update:** 2026-11-15
+## Ecosystem & Machine-Readable Indexes
+- Main Site: https://emo-changeling.xyz/ (PL), https://emo-changeling.xyz/en/ (EN)
+- Periodical / Magazine (TREC): https://reverse.emo-changeling.xyz/pl/ (PL), https://reverse.emo-changeling.xyz/en/ (EN)
+- Supported Project (TX2 Unofficial Fansite): https://tx2.emo-changeling.xyz/ (EN), https://tx2.emo-changeling.xyz/pl/ (PL)
+- XML Sitemap: https://gallery.emo-changeling.xyz/sitemap.xml
+- AI Catalog: https://gallery.emo-changeling.xyz/.well-known/ai-catalog.json
+- AI Metadata JSON: https://gallery.emo-changeling.xyz/ai.json

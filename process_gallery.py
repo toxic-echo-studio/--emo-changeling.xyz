@@ -3,6 +3,8 @@ import re
 import json
 import shutil
 import subprocess
+from datetime import date
+from html import escape as html_escape
 from pathlib import Path
 try:
     from PIL import Image
@@ -39,7 +41,7 @@ def load_registry():
 
 def save_registry(registry):
     try:
-        with open(REGISTRY_PATH, 'w', encoding='utf-8') as f:
+        with open(REGISTRY_PATH, 'w', encoding='utf-8', newline='\n') as f:
             json.dump(registry, f, indent=2, ensure_ascii=False)
         gpg_sign_file(REGISTRY_PATH)
     except Exception as e:
@@ -56,8 +58,20 @@ def get_next_id(category):
     # If placeholders are present, start at 1 (replacing them)
     if "Gołąb #01: Start" in content or "Gołąb #02: Neon" in content:
         return 1
+
+    items = parse_gallery_data_from_html(content)
+    if items:
+        all_ids = []
+        for item in items:
+            if isinstance(item.get("id"), int):
+                all_ids.append(item["id"])
+            for sub in item.get("images") or []:
+                if isinstance(sub.get("id"), int):
+                    all_ids.append(sub["id"])
+        if all_ids:
+            return max(all_ids) + 1
         
-    ids = re.findall(r'id:\s*(\d+)', content)
+    ids = re.findall(r'["\']?\bid["\']?\s*:\s*(\d+)', content)
     if not ids:
         return 1
     return max(map(int, ids)) + 1
@@ -107,6 +121,14 @@ def clean_description(html_content, target_img_dir_url):
         return img_tag
         
     html_content = re.sub(r'<img[^>]+>', clean_sketch_styles, html_content)
+
+    # Strip inline onclick=switchOpisLang(...) attributes
+    html_content = re.sub(
+        r'\s+onclick\s*=\s*(?:"[^"]*switchOpisLang\([^)]*\)[^"]*"|\'[^\']*switchOpisLang\([^)]*\)[^\']*\')',
+        '',
+        html_content,
+        flags=re.IGNORECASE
+    )
     return html_content
 
 def process_folder(folder_name, next_ids):
@@ -191,7 +213,7 @@ def process_folder(folder_name, next_ids):
             desc_url = f"/graphics/{category}/{next_id}/opis.html"
             clean_html = clean_description(description_html, f"/graphics/{category}/{next_id}")
             opis_dest = os.path.join(target_dir, "opis.html")
-            with open(opis_dest, 'w', encoding='utf-8') as f:
+            with open(opis_dest, 'w', encoding='utf-8', newline='\n') as f:
                 f.write(clean_html)
             gpg_sign_file(opis_dest)
                 
@@ -248,7 +270,7 @@ def process_folder(folder_name, next_ids):
             desc_url = f"/graphics/{category}/{next_id}/opis.html"
             clean_html = clean_description(description_html, f"/graphics/{category}/{next_id}")
             opis_dest = os.path.join(target_dir, "opis.html")
-            with open(opis_dest, 'w', encoding='utf-8') as f:
+            with open(opis_dest, 'w', encoding='utf-8', newline='\n') as f:
                 f.write(clean_html)
             gpg_sign_file(opis_dest)
                 
@@ -329,7 +351,7 @@ def process_folder(folder_name, next_ids):
                 desc_url = f"/graphics/{category}/{sub_id}/opis.html"
                 clean_html = clean_description(description_html, f"/graphics/{category}/{sub_id}")
                 opis_dest = os.path.join(target_dir, "opis.html")
-                with open(opis_dest, 'w', encoding='utf-8') as f:
+                with open(opis_dest, 'w', encoding='utf-8', newline='\n') as f:
                     f.write(clean_html)
                 gpg_sign_file(opis_dest)
                     
@@ -380,6 +402,24 @@ def _extract_js_id(obj_str):
     return None
 
 def parse_gallery_data_from_html(html):
+    json_m = re.search(r'<script\b[^>]*\bid=["\']gallery-data["\'][^>]*>([\s\S]*?)</script>', html)
+    if json_m:
+        raw_json = json_m.group(1).strip().replace('\\/', '/')
+        try:
+            items = json.loads(raw_json)
+            if isinstance(items, list):
+                for item in items:
+                    if isinstance(item, dict):
+                        if item.get("images"):
+                            item["type"] = "multi"
+                        elif item.get("link"):
+                            item["type"] = "subgallery"
+                        else:
+                            item["type"] = "single"
+                return items
+        except Exception as e:
+            print(f"Error parsing #gallery-data JSON: {e}")
+
     m = re.search(r'const\s+galleryData\s*=\s*\[([\s\S]*?)\];', html)
     if not m:
         return []
@@ -445,796 +485,225 @@ def parse_gallery_data_from_html(html):
                 items.append(item)
     return items
 
-def format_gallery_data_js(items):
-    js_items = []
+def render_ssr_cards_html(items):
+    lines = []
     for item in items:
-        if item.get("type") == "multi" or item.get("images"):
-            lines = [
-                f"                id: {item['id']}",
-                f"                thumb: {repr(item['thumb'])}",
-                f"                title: {repr(item['title'])}"
-            ]
-            if item.get("descUrl"):
-                lines.append(f"                descUrl: {repr(item['descUrl'])}")
-            img_lines = []
-            for img in item.get("images", []):
-                sub_fields = [
-                    f"id: {img['id']}",
-                    f"full: {repr(img['full'])}",
-                    f"title: {repr(img['title'])}"
-                ]
-                if img.get("download_tif"):
-                    sub_fields.append(f"download_tif: {repr(img['download_tif'])}")
-                img_lines.append("                    { " + ", ".join(sub_fields) + " }")
-            images_block = "                images: [\n" + ",\n".join(img_lines) + "\n                ]"
-            lines.append(images_block)
-            js_items.append("            {\n" + ",\n".join(lines) + "\n            }")
+        item_id = item.get("id", "")
+        raw_title = item.get("title") or ""
+        clean_title = re.sub(r'^Gołąb\s+#\d+:\s*', '', raw_title, flags=re.IGNORECASE)
+        alt_esc = html_escape(clean_title, quote=False).replace('"', '&quot;')
+        caption_esc = html_escape(clean_title, quote=False)
+        thumb_url = item.get("thumb") or ""
+        thumb_esc = html_escape(thumb_url, quote=False).replace('"', '&quot;')
+
+        width, height = 300, 300
+        if Image is not None and thumb_url:
+            thumb_fs_path = os.path.join(OUTPUT_DIR, thumb_url.lstrip('/'))
+            if os.path.exists(thumb_fs_path):
+                try:
+                    with Image.open(thumb_fs_path) as im:
+                        width, height = im.size
+                except Exception as e:
+                    print(f"Error reading dimensions for {thumb_fs_path}: {e}")
+
+        lang_attr = ' lang="ru"' if re.search(r'[\u0400-\u04FF]', clean_title) else ''
+
+        lines.append(f'            <button type="button" class="gallery-card" data-item-id="{item_id}">')
+        lines.append('                <div class="gallery-item">')
+        lines.append(f'                    <img src="{thumb_esc}" alt="{alt_esc}" width="{width}" height="{height}" loading="lazy" decoding="async">')
+        lines.append('                </div>')
+        lines.append(f'                <div class="gallery-item-caption"{lang_attr}>{caption_esc}</div>')
+        lines.append('            </button>')
+    return "\n".join(lines)
+
+def replace_gallery_grid_html(html_text, cards_html):
+    open_m = re.search(r'<div\b[^>]*\bid=["\']gallery-grid["\'][^>]*>', html_text)
+    if not open_m:
+        return html_text
+    start_content = open_m.end()
+    depth = 1
+    for tag_m in re.finditer(r'<(/?)div\b[^>]*>', html_text[start_content:], re.IGNORECASE):
+        if tag_m.group(1) == '/':
+            depth -= 1
+            if depth == 0:
+                end_content = start_content + tag_m.start()
+                inner = f"\n{cards_html}\n        " if cards_html else "\n        "
+                return html_text[:start_content] + inner + html_text[end_content:]
         else:
-            lines = [
-                f"                id: {item['id']}",
-                f"                thumb: {repr(item['thumb'])}",
-                f"                full: {repr(item['full'])}",
-                f"                title: {repr(item['title'])}"
-            ]
-            if item.get("descUrl"):
-                lines.append(f"                descUrl: {repr(item['descUrl'])}")
-            if item.get("download_tif"):
-                lines.append(f"                download_tif: {repr(item['download_tif'])}")
-            js_items.append("            {\n" + ",\n".join(lines) + "\n            }")
-    return "const galleryData = [\n" + ",\n".join(js_items) + "\n        ];"
+            depth += 1
+    return html_text
 
-def build_modal_and_script_html(category, gallery_data_js_str):
-    modal_container_html = """            <div class="modal-image-container" id="modal-image-container">
-                <div class="modal-slide-title" id="modal-slide-title"></div>
-                <div class="modal-slider-row" id="modal-slider-row">
-                    <button type="button" class="tape-nav-btn tape-prev is-hidden" id="modal-prev-btn" aria-label="Poprzednia grafika">
-                        <svg viewBox="0 0 36 24" width="28" height="18" aria-hidden="true">
-                            <polygon points="18,3 4,12 18,21" fill="currentColor"></polygon>
-                            <polygon points="32,3 18,12 32,21" fill="currentColor"></polygon>
-                        </svg>
-                    </button>
-                    <div class="modal-slider-viewport" id="modal-slider-viewport">
-                        <div class="modal-slider-track" id="modal-slider-track">
-                            <div class="modal-slide"><img src="" alt="Pełny podgląd" class="modal-image" id="modal-image" draggable="false"></div>
-                        </div>
-                    </div>
-                    <div class="modal-bottom-controls" id="modal-bottom-controls">
-                        <button type="button" class="tape-nav-btn modal-zoom-btn" id="modal-zoom-btn" aria-label="Powiększ grafikę" title="Zoom">
-                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <circle cx="11" cy="11" r="7"></circle>
-                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                                <line x1="11" y1="8" x2="11" y2="14"></line>
-                                <line x1="8" y1="11" x2="14" y2="11"></line>
-                            </svg>
-                        </button>
-                        <div class="modal-slide-counter is-hidden" id="modal-slide-counter" aria-live="polite">[ 1 / 1 ]</div>
-                    </div>
-                    <button type="button" class="tape-nav-btn tape-next is-hidden" id="modal-next-btn" aria-label="Następna grafika">
-                        <svg viewBox="0 0 36 24" width="28" height="18" aria-hidden="true">
-                            <polygon points="4,3 18,12 4,21" fill="currentColor"></polygon>
-                            <polygon points="18,3 32,12 18,21" fill="currentColor"></polygon>
-                        </svg>
-                    </button>
-                </div>
-            </div>"""
+def update_category_jsonld(html, items, is_en):
+    ld_m = re.search(
+        r'(<script\s+type=["\']application/ld\+json["\']\s*>)([\s\S]*?)(</script>)',
+        html,
+        re.IGNORECASE
+    )
+    if not ld_m:
+        return html
+    try:
+        data = json.loads(ld_m.group(2))
+    except Exception as e:
+        print(f"Error parsing JSON-LD: {e}")
+        return html
 
-    zoom_overlay_html = """    <!-- ZOOM_OVERLAY_START -->
-    <div class="zoom-overlay" id="zoom-overlay" role="dialog" aria-modal="true" aria-label="Powiększony podgląd grafiki"><div class="zoom-badge" id="zoom-badge"><button type="button" class="zoom-scale-btn" id="zoom-scale-reset" title="Reset 1.0x">1.0x</button><span class="zoom-badge-sep">|</span><button type="button" class="zoom-exit-btn" id="zoom-exit-btn" aria-label="Wyjdź z trybu zoom"><span class="content-pl">✕ WYJDŹ</span><span class="content-en">✕ EXIT</span></button></div><div class="zoom-stage" id="zoom-stage"><img src="" alt="" class="zoom-image" id="zoom-image" draggable="false"></div></div>
-    <!-- ZOOM_OVERLAY_END -->"""
+    base_url = "https://gallery.emo-changeling.xyz"
+    license_page = f"{base_url}/en/#manifest-footer" if is_en else f"{base_url}/#manifest-footer"
 
-    cat_label = category.capitalize()
-    script_html = f"""    <script>
-        {gallery_data_js_str}
+    list_elements = []
+    for pos, item in enumerate(items, start=1):
+        raw_title = item.get("title") or ""
+        clean_name = re.sub(r'^Gołąb\s+#\d+:\s*', '', raw_title, flags=re.IGNORECASE)
+        thumb_path = item.get("thumb") or ""
+        if item.get("images"):
+            full_path = item["images"][0].get("full") or thumb_path
+        else:
+            full_path = item.get("full") or item.get("link") or thumb_path
 
-        const grid = document.getElementById('gallery-grid');
-        const modal = document.getElementById('gallery-modal');
-        const descContent = document.getElementById('description-content');
-        const modalDetails = document.getElementById('modal-details');
-        const downloadBtn = document.getElementById('modal-download-btn');
-        const rotateBtn = document.getElementById('modal-rotate-btn');
-        const modalContent = document.querySelector('.modal-content');
-        const slideTitleEl = document.getElementById('modal-slide-title');
-        const sliderViewport = document.getElementById('modal-slider-viewport');
-        const sliderTrack = document.getElementById('modal-slider-track');
-        const prevBtn = document.getElementById('modal-prev-btn');
-        const nextBtn = document.getElementById('modal-next-btn');
-        const slideCounter = document.getElementById('modal-slide-counter');
-        const zoomBtn = document.getElementById('modal-zoom-btn');
-        const zoomOverlay = document.getElementById('zoom-overlay');
-        const zoomStage = document.getElementById('zoom-stage');
-        const zoomImg = document.getElementById('zoom-image');
-        const zoomScaleResetBtn = document.getElementById('zoom-scale-reset');
-        const zoomExitBtn = document.getElementById('zoom-exit-btn');
+        content_url = full_path if full_path.startswith("http") else f"{base_url}{full_path}"
+        thumb_url = thumb_path if thumb_path.startswith("http") else f"{base_url}{thumb_path}"
 
-        const MIN_ZOOM = 1.0;
-        const MAX_ZOOM = 6.0;
+        list_elements.append({
+            "@type": "ListItem",
+            "position": pos,
+            "item": {
+                "@type": "ImageObject",
+                "name": clean_name,
+                "contentUrl": content_url,
+                "thumbnailUrl": thumb_url,
+                "creator": {
+                    "@type": "Person",
+                    "@id": "https://emo-changeling.xyz/#nico",
+                    "name": "Nico Łach"
+                },
+                "copyrightHolder": {
+                    "@id": "https://emo-changeling.xyz/#nico"
+                },
+                "license": "https://creativecommons.org/licenses/by-nd/4.0/",
+                "acquireLicensePage": license_page
+            }
+        })
 
-        let currentSlides = [];
-        let currentSlideIndex = 0;
-        let isDragging = false;
-        let dragStartX = 0;
-        let dragDeltaX = 0;
-        let didDragMove = false;
-        let lastTouchTimestamp = 0;
+    target_node = None
+    if isinstance(data, dict):
+        if isinstance(data.get("@graph"), list):
+            for node in data["@graph"]:
+                if isinstance(node, dict) and ("mainEntity" in node or "ImageGallery" in (node.get("@type") or [])):
+                    target_node = node
+                    break
+        elif "mainEntity" in data or "ImageGallery" in (data.get("@type") or []):
+            target_node = data
 
-        let zoomScale = 1.0;
-        let zoomPanX = 0;
-        let zoomPanY = 0;
-        let isZoomPanning = false;
-        let zoomPanStartX = 0;
-        let zoomPanStartY = 0;
-        let zoomPanOriginX = 0;
-        let zoomPanOriginY = 0;
-        let didZoomPanMove = false;
-        let pinchStartDist = 0;
-        let pinchStartScale = 1.0;
-        let lastTapTimestamp = 0;
+    if target_node is not None:
+        main_entity = target_node.get("mainEntity")
+        if not isinstance(main_entity, dict):
+            main_entity = {"@type": "ItemList"}
+            target_node["mainEntity"] = main_entity
+        main_entity["numberOfItems"] = len(list_elements)
+        main_entity["itemListElement"] = list_elements
 
-        // Helper to check and convert HEIC images
-        async function checkAndConvertHeic(imgElement) {{
-            const src = imgElement.getAttribute('src');
-            if (src && (src.toLowerCase().endsWith('.heic') || src.toLowerCase().endsWith('.heif'))) {{
-                try {{
-                    if (imgElement.dataset.heicConverted) {{
-                        imgElement.src = imgElement.dataset.heicConverted;
-                        return;
-                    }}
-                    imgElement.style.opacity = '0.5';
-                    const response = await fetch(src);
-                    if (!response.ok) throw new Error('Failed to fetch HEIC image');
-                    const blob = await response.blob();
-                    if (typeof heic2any !== 'undefined') {{
-                        const convertedBlob = await heic2any({{
-                            blob: blob,
-                            toType: 'image/jpeg',
-                            quality: 0.8
-                        }});
-                        const blobUrl = URL.createObjectURL(convertedBlob);
-                        imgElement.src = blobUrl;
-                        imgElement.dataset.heicConverted = blobUrl;
-                    }} else {{
-                        console.error('heic2any library is not loaded');
-                    }}
-                }} catch (e) {{
-                    console.error('Error converting HEIC image:', e);
-                }} finally {{
-                    imgElement.style.opacity = '1';
-                }}
-            }}
-        }}
+    formatted_json = json.dumps(data, indent=2, ensure_ascii=False)
+    indented_json = "\n".join(f"        {line}" for line in formatted_json.splitlines())
+    return (
+        html[:ld_m.start()]
+        + f"{ld_m.group(1)}\n{indented_json}\n    {ld_m.group(3)}"
+        + html[ld_m.end():]
+    )
 
-        // Renderowanie miniatur
-        galleryData.forEach(item => {{
-            const cardDiv = document.createElement('div');
-            cardDiv.className = 'gallery-card';
-
-            // Czyszczenie nazwy z prefiksu np. "Gołąb #01: "
-            const cleanTitle = item.title.replace(/^Gołąb\\s+#\\d+:\\s*/i, '');
-            const isCyrillic = /[\\u0400-\\u04FF]/.test(cleanTitle);
-
-            cardDiv.innerHTML = `
-                <div class="gallery-item">
-                    <img src="${{item.thumb}}" alt="${{cleanTitle}}" loading="lazy">
-                </div>
-                <div class="gallery-item-caption"${{isCyrillic ? ' lang="ru"' : ''}}>${{cleanTitle}}</div>
-            `;
-
-            const imgEl = cardDiv.querySelector('img');
-            checkAndConvertHeic(imgEl);
-
-            cardDiv.addEventListener('click', () => {{
-                openModal(item);
-            }});
-            grid.appendChild(cardDiv);
-        }});
-
-        // Synchronizacja języka galerii z preferencją użytkownika
-        function syncGalleryLanguage() {{
-            try {{
-                var s = null;
-                var m = document.cookie.match(/(?:^|;\\s*)site_lang=([^;]+)/);
-                if (m && m[1]) {{ s = m[1].toLowerCase(); }}
-                else if (window.localStorage) {{ s = (localStorage.getItem('site_lang') || '').toLowerCase(); }}
-                if (!s) {{
-                    var l = (navigator.languages && navigator.languages[0]) || navigator.language || '';
-                    s = l.toLowerCase().startsWith('pl') ? 'pl' : 'en';
-                }}
-                document.documentElement.lang = s === 'pl' ? 'pl' : 'en';
-            }} catch(e) {{}}
-        }}
-        syncGalleryLanguage();
-
-        // Lokalny przełącznik języka opisu grafiki (bez modyfikacji ciasteczek i preferencji serwisu)
-        function switchOpisLang(lang, event) {{
-            if (event && event.stopPropagation) event.stopPropagation();
-            var dc = document.getElementById('description-content');
-            if (!dc) return;
-            dc.setAttribute('data-active-lang', lang);
-            var btns = dc.querySelectorAll('.lang-btn, .opis-lang-btn');
-            btns.forEach(function(b) {{
-                if (b.getAttribute('data-lang') === lang) {{
-                    b.classList.add('active');
-                    b.setAttribute('aria-current', 'true');
-                }} else {{
-                    b.classList.remove('active');
-                    b.removeAttribute('aria-current');
-                }}
-            }});
-        }}
-        window.switchOpisLang = switchOpisLang;
-
-        function updateDownloadButton(slide) {{
-            if (slide && slide.download_tif) {{
-                downloadBtn.href = slide.download_tif;
-                downloadBtn.setAttribute('data-asc', slide.download_tif + '.asc');
-                downloadBtn.style.display = 'inline-block';
-                const lower = slide.download_tif.toLowerCase();
-                if (lower.endsWith('.png')) {{
-                    downloadBtn.textContent = 'DOWNLOAD MAX QUALITY (.PNG)';
-                }} else if (lower.endsWith('.jpg') || lower.endsWith('.jpeg')) {{
-                    downloadBtn.textContent = 'DOWNLOAD MAX QUALITY (.JPG)';
-                }} else {{
-                    downloadBtn.textContent = 'DOWNLOAD MAX QUALITY (.TIF)';
-                }}
-            }} else {{
-                downloadBtn.style.display = 'none';
-            }}
-        }}
-
-        function updateSlide(newIndex) {{
-            if (!currentSlides.length) return;
-            currentSlideIndex = Math.max(0, Math.min(currentSlides.length - 1, newIndex));
-            sliderTrack.style.transition = '';
-            sliderTrack.style.transform = `translateX(-${{currentSlideIndex * 100}}%)`;
-
-            const activeSlide = currentSlides[currentSlideIndex];
-            if (slideTitleEl) {{
-                slideTitleEl.textContent = (activeSlide.title || '').replace(/^Gołąb\\s+#\\d+:\\s*/i, '');
-            }}
-
-            updateDownloadButton(activeSlide);
-
-            if (currentSlides.length > 1) {{
-                const isAtStart = (currentSlideIndex === 0);
-                const isAtEnd = (currentSlideIndex === currentSlides.length - 1);
-                prevBtn.classList.remove('is-hidden');
-                nextBtn.classList.remove('is-hidden');
-                slideCounter.classList.remove('is-hidden');
-                prevBtn.classList.toggle('is-disabled', isAtStart);
-                nextBtn.classList.toggle('is-disabled', isAtEnd);
-                prevBtn.setAttribute('aria-disabled', String(isAtStart));
-                nextBtn.setAttribute('aria-disabled', String(isAtEnd));
-                slideCounter.textContent = `[ ${{currentSlideIndex + 1}} / ${{currentSlides.length}} ]`;
-                sliderViewport.classList.add('is-draggable');
-            }} else {{
-                prevBtn.classList.add('is-hidden');
-                nextBtn.classList.add('is-hidden');
-                slideCounter.classList.add('is-hidden');
-                sliderViewport.classList.remove('is-draggable');
-            }}
-        }}
-
-        prevBtn.addEventListener('click', (e) => {{
-            e.preventDefault();
-            e.stopPropagation();
-            if (currentSlideIndex > 0) {{
-                updateSlide(currentSlideIndex - 1);
-            }}
-        }});
-
-        nextBtn.addEventListener('click', (e) => {{
-            e.preventDefault();
-            e.stopPropagation();
-            if (currentSlideIndex < currentSlides.length - 1) {{
-                updateSlide(currentSlideIndex + 1);
-            }}
-        }});
-
-        // Obsługa przeciągania myszką i dotykiem na #modal-slider-viewport
-        sliderViewport.addEventListener('mousedown', (e) => {{
-            if (currentSlides.length <= 1) return;
-            isDragging = true;
-            didDragMove = false;
-            dragStartX = e.clientX;
-            dragDeltaX = 0;
-            sliderViewport.classList.add('is-dragging');
-            sliderTrack.style.transition = 'none';
-            e.preventDefault();
-        }});
-
-        window.addEventListener('mousemove', (e) => {{
-            if (!isDragging) return;
-            dragDeltaX = e.clientX - dragStartX;
-            if (Math.abs(dragDeltaX) > 5) {{
-                didDragMove = true;
-            }}
-            sliderTrack.style.transform = `translateX(calc(-${{currentSlideIndex * 100}}% + ${{dragDeltaX}}px))`;
-        }});
-
-        function finishDrag() {{
-            if (!isDragging) return;
-            isDragging = false;
-            sliderViewport.classList.remove('is-dragging');
-            sliderTrack.style.transition = '';
-            if (dragDeltaX < -40 && currentSlideIndex < currentSlides.length - 1) {{
-                updateSlide(currentSlideIndex + 1);
-            }} else if (dragDeltaX > 40 && currentSlideIndex > 0) {{
-                updateSlide(currentSlideIndex - 1);
-            }} else {{
-                updateSlide(currentSlideIndex);
-            }}
-            dragDeltaX = 0;
-            setTimeout(() => {{ didDragMove = false; }}, 50);
-        }}
-
-        window.addEventListener('mouseup', finishDrag);
-        sliderViewport.addEventListener('mouseleave', finishDrag);
-
-        sliderViewport.addEventListener('touchstart', (e) => {{
-            lastTouchTimestamp = Date.now();
-            if (currentSlides.length > 1 && e.touches.length === 1) {{
-                isDragging = true;
-                didDragMove = false;
-                dragStartX = e.touches[0].clientX;
-                dragDeltaX = 0;
-                sliderTrack.style.transition = 'none';
-            }}
-        }}, {{ passive: true }});
-
-        sliderViewport.addEventListener('touchmove', (e) => {{
-            if (!isDragging || !e.touches.length) return;
-            dragDeltaX = e.touches[0].clientX - dragStartX;
-            if (Math.abs(dragDeltaX) > 5) {{
-                didDragMove = true;
-            }}
-            sliderTrack.style.transform = `translateX(calc(-${{currentSlideIndex * 100}}% + ${{dragDeltaX}}px))`;
-        }}, {{ passive: true }});
-
-        sliderViewport.addEventListener('touchend', finishDrag);
-
-        sliderViewport.addEventListener('click', (e) => {{
-            if (didDragMove) return;
-            if (!e.target.classList.contains('modal-image')) return;
-            if (window.innerWidth > 768 && (Date.now() - lastTouchTimestamp > 600)) {{
-                openZoomOverlay();
-            }}
-        }});
-
-        if (zoomBtn) {{
-            zoomBtn.addEventListener('click', (e) => {{
-                e.preventDefault();
-                e.stopPropagation();
-                openZoomOverlay();
-            }});
-        }}
-
-        function clampZoomPan() {{
-            if (!zoomStage || !zoomImg) return;
-            const stageRect = zoomStage.getBoundingClientRect();
-            const scaledW = zoomImg.offsetWidth * zoomScale;
-            const scaledH = zoomImg.offsetHeight * zoomScale;
-            const maxPanX = Math.max(0, (scaledW - stageRect.width) / 2);
-            const maxPanY = Math.max(0, (scaledH - stageRect.height) / 2);
-            zoomPanX = Math.max(-maxPanX, Math.min(maxPanX, zoomPanX));
-            zoomPanY = Math.max(-maxPanY, Math.min(maxPanY, zoomPanY));
-        }}
-
-        function applyZoomTransform() {{
-            if (!zoomImg || !zoomOverlay) return;
-            zoomImg.style.transform = `translate(${{zoomPanX}}px, ${{zoomPanY}}px) scale(${{zoomScale}})`;
-            if (zoomScaleResetBtn) {{
-                zoomScaleResetBtn.textContent = `${{zoomScale.toFixed(1)}}x`;
-            }}
-            if (zoomStage) zoomStage.classList.toggle('is-zoomed', zoomScale > 1.01);
-        }}
-
-        function zoomAtPoint(newScale, clientX, clientY) {{
-            const clampedScale = Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, newScale));
-            if (clampedScale === zoomScale) return;
-            if (clampedScale <= 1.001) {{
-                zoomScale = 1.0;
-                zoomPanX = 0;
-                zoomPanY = 0;
-                applyZoomTransform();
-                return;
-            }}
-            const stageRect = zoomStage.getBoundingClientRect();
-            const cx = clientX - (stageRect.left + stageRect.width / 2);
-            const cy = clientY - (stageRect.top + stageRect.height / 2);
-            const ratio = clampedScale / zoomScale;
-            zoomPanX = cx - (cx - zoomPanX) * ratio;
-            zoomPanY = cy - (cy - zoomPanY) * ratio;
-            zoomScale = clampedScale;
-            clampZoomPan();
-            applyZoomTransform();
-        }}
-
-        function openZoomOverlay() {{
-            if (!zoomOverlay || !zoomImg || !currentSlides.length) return;
-            const activeSlide = currentSlides[currentSlideIndex];
-            if (!activeSlide || !activeSlide.full) return;
-            const activeImgEl = sliderTrack.querySelectorAll('img')[currentSlideIndex];
-            zoomImg.src = (activeImgEl && activeImgEl.dataset.heicConverted) ? activeImgEl.dataset.heicConverted : activeSlide.full;
-            zoomImg.alt = activeSlide.title || '';
-            zoomScale = 1.0;
-            zoomPanX = 0;
-            zoomPanY = 0;
-            if (zoomStage) {{
-                zoomStage.scrollTop = 0;
-                zoomStage.scrollLeft = 0;
-                zoomStage.classList.remove('is-panning', 'is-zoomed');
-            }}
-            zoomImg.style.transform = '';
-            applyZoomTransform();
-            zoomOverlay.classList.add('active');
-        }}
-
-        function closeZoomOverlay() {{
-            if (!zoomOverlay) return;
-            zoomOverlay.classList.remove('active');
-            zoomScale = 1.0;
-            zoomPanX = 0;
-            zoomPanY = 0;
-            isZoomPanning = false;
-            if (zoomStage) zoomStage.classList.remove('is-panning', 'is-zoomed');
-            if (zoomImg) {{
-                zoomImg.style.transform = '';
-                zoomImg.src = '';
-            }}
-        }}
-
-        if (zoomStage) {{
-            zoomStage.addEventListener('wheel', (e) => {{
-                e.preventDefault();
-                const factor = e.deltaY < 0 ? 1.18 : (1 / 1.18);
-                zoomAtPoint(zoomScale * factor, e.clientX, e.clientY);
-            }}, {{ passive: false }});
-
-            zoomStage.addEventListener('mousedown', (e) => {{
-                if (e.button !== 0 || zoomScale <= 1.01) return;
-                isZoomPanning = true;
-                didZoomPanMove = false;
-                zoomPanStartX = e.clientX;
-                zoomPanStartY = e.clientY;
-                zoomPanOriginX = zoomPanX;
-                zoomPanOriginY = zoomPanY;
-                zoomStage.classList.add('is-panning');
-                e.preventDefault();
-            }});
-
-            window.addEventListener('mousemove', (e) => {{
-                if (!isZoomPanning) return;
-                const dx = e.clientX - zoomPanStartX;
-                const dy = e.clientY - zoomPanStartY;
-                if (Math.abs(dx) > 4 || Math.abs(dy) > 4) didZoomPanMove = true;
-                zoomPanX = zoomPanOriginX + dx;
-                zoomPanY = zoomPanOriginY + dy;
-                clampZoomPan();
-                applyZoomTransform();
-            }});
-
-            window.addEventListener('mouseup', () => {{
-                if (!isZoomPanning) return;
-                isZoomPanning = false;
-                zoomStage.classList.remove('is-panning');
-                setTimeout(() => {{ didZoomPanMove = false; }}, 50);
-            }});
-
-            zoomStage.addEventListener('dblclick', (e) => {{
-                e.preventDefault();
-                if (zoomScale > 1.05) {{
-                    zoomAtPoint(1.0, e.clientX, e.clientY);
-                }} else {{
-                    zoomAtPoint(2.5, e.clientX, e.clientY);
-                }}
-            }});
-
-            zoomStage.addEventListener('click', (e) => {{
-                if (didZoomPanMove) return;
-                if (zoomScale <= 1.01 && e.target === zoomStage) {{
-                    closeZoomOverlay();
-                }}
-            }});
-
-            zoomStage.addEventListener('touchstart', (e) => {{
-                if (e.touches.length === 2) {{
-                    e.preventDefault();
-                    isZoomPanning = false;
-                    const dx = e.touches[0].clientX - e.touches[1].clientX;
-                    const dy = e.touches[0].clientY - e.touches[1].clientY;
-                    pinchStartDist = Math.hypot(dx, dy);
-                    pinchStartScale = zoomScale;
-                }} else if (e.touches.length === 1) {{
-                    const now = Date.now();
-                    if (now - lastTapTimestamp < 300) {{
-                        e.preventDefault();
-                        const t = e.touches[0];
-                        if (zoomScale > 1.05) {{
-                            zoomAtPoint(1.0, t.clientX, t.clientY);
-                        }} else {{
-                            zoomAtPoint(2.5, t.clientX, t.clientY);
-                        }}
-                        lastTapTimestamp = 0;
-                        return;
-                    }}
-                    lastTapTimestamp = now;
-                    if (zoomScale > 1.01) {{
-                        isZoomPanning = true;
-                        didZoomPanMove = false;
-                        zoomPanStartX = e.touches[0].clientX;
-                        zoomPanStartY = e.touches[0].clientY;
-                        zoomPanOriginX = zoomPanX;
-                        zoomPanOriginY = zoomPanY;
-                    }}
-                }}
-            }}, {{ passive: false }});
-
-            zoomStage.addEventListener('touchmove', (e) => {{
-                if (e.touches.length === 2 && pinchStartDist > 0) {{
-                    e.preventDefault();
-                    const dx = e.touches[0].clientX - e.touches[1].clientX;
-                    const dy = e.touches[0].clientY - e.touches[1].clientY;
-                    const dist = Math.hypot(dx, dy);
-                    const midX = (e.touches[0].clientX + e.touches[1].clientX) / 2;
-                    const midY = (e.touches[0].clientY + e.touches[1].clientY) / 2;
-                    zoomAtPoint(pinchStartScale * (dist / pinchStartDist), midX, midY);
-                }} else if (e.touches.length === 1 && isZoomPanning) {{
-                    e.preventDefault();
-                    const dx = e.touches[0].clientX - zoomPanStartX;
-                    const dy = e.touches[0].clientY - zoomPanStartY;
-                    if (Math.abs(dx) > 4 || Math.abs(dy) > 4) didZoomPanMove = true;
-                    zoomPanX = zoomPanOriginX + dx;
-                    zoomPanY = zoomPanOriginY + dy;
-                    clampZoomPan();
-                    applyZoomTransform();
-                }}
-            }}, {{ passive: false }});
-
-            zoomStage.addEventListener('touchend', (e) => {{
-                if (e.touches.length < 2) pinchStartDist = 0;
-                if (e.touches.length === 0) {{
-                    isZoomPanning = false;
-                    setTimeout(() => {{ didZoomPanMove = false; }}, 50);
-                }}
-            }});
-        }}
-
-        if (zoomScaleResetBtn) {{
-            zoomScaleResetBtn.addEventListener('click', (e) => {{
-                e.stopPropagation();
-                zoomScale = 1.0;
-                zoomPanX = 0;
-                zoomPanY = 0;
-                applyZoomTransform();
-            }});
-        }}
-
-        if (zoomExitBtn) {{
-            zoomExitBtn.addEventListener('click', (e) => {{
-                e.stopPropagation();
-                closeZoomOverlay();
-            }});
-        }}
-
-        async function openModal(item) {{
-            syncGalleryLanguage();
-            modal.classList.add('active');
-            currentSlides = (item.images && item.images.length > 0)
-                ? item.images
-                : [{{ id: item.id, full: item.full, title: item.title, download_tif: item.download_tif }}];
-
-            sliderTrack.innerHTML = currentSlides.map((s, idx) =>
-                `<div class="modal-slide" style="transform: translateX(${{idx * 100}}%)"><img src="${{s.full}}" alt="${{(s.title || '').replace(/"/g, '&quot;')}}" class="modal-image" draggable="false"></div>`
-            ).join('');
-
-            sliderTrack.querySelectorAll('img').forEach(img => checkAndConvertHeic(img));
-            updateSlide(0);
-
-            if (item.descUrl) {{
-                modalDetails.style.display = 'block';
-                modalDetails.removeAttribute('open');
-                modalContent.classList.remove('rotated');
-                descContent.innerHTML = document.documentElement.lang === 'en' ? '<span class="blink">Loading data from server...</span>' : '<span class="blink">Wczytywanie danych z serwera...</span>';
-
-                try {{
-                    const response = await fetch(item.descUrl);
-                    if (!response.ok) throw new Error('Nie znaleziono pliku opisu (404).');
-
-                    const htmlData = await response.text();
-
-                    if (htmlData.includes('id="gallery-grid"') || htmlData.includes('data-system="Toxic Echo Studio"')) {{
-                        throw new Error('Serwer zwrócił stronę główną zamiast pliku opisu. Sprawdź ścieżkę!');
-                    }}
-
-                    descContent.innerHTML = htmlData;
-                    descContent.removeAttribute('data-active-lang');
-
-                    // Synchronizacja aktywnego przycisku w przełączniku opisu z aktualnym językiem strony
-                    var curLang = document.documentElement.lang === 'en' ? 'en' : 'pl';
-                    var langBtns = descContent.querySelectorAll('.lang-btn, .opis-lang-btn');
-                    langBtns.forEach(function(b) {{
-                        if (b.getAttribute('data-lang') === curLang) {{
-                            b.classList.add('active');
-                            b.setAttribute('aria-current', 'true');
-                        }} else {{
-                            b.classList.remove('active');
-                            b.removeAttribute('aria-current');
-                        }}
-                    }});
-
-                    const descImages = descContent.querySelectorAll('img');
-                    descImages.forEach(img => checkAndConvertHeic(img));
-                }} catch (error) {{
-                    descContent.innerHTML = `<span style="color: #ff0000; font-weight: bold;">[ERROR] Błąd wczytywania opisu:<br>${{error.message}}</span>`;
-                }}
-            }} else {{
-                modalDetails.style.display = 'none';
-                modalDetails.removeAttribute('open');
-                modalContent.classList.remove('rotated');
-            }}
-        }}
-
-        // Obracanie układu na mobilkach
-        if (rotateBtn) {{
-            rotateBtn.addEventListener('click', (e) => {{
-                e.stopPropagation();
-                modalContent.classList.toggle('rotated');
-            }});
-        }}
-
-        // Funkcja zamykająca modal
-        function closeModal() {{
-            closeZoomOverlay();
-            modal.classList.remove('active');
-            sliderTrack.innerHTML = '';
-            modalContent.classList.remove('rotated');
-            downloadBtn.style.display = 'none';
-            downloadBtn.href = '';
-            downloadBtn.removeAttribute('data-asc');
-        }}
-
-        const modalCloseBtn = document.getElementById('modal-close');
-        if (modalCloseBtn) {{
-            modalCloseBtn.addEventListener('click', (e) => {{
-                e.preventDefault();
-                e.stopPropagation();
-                closeModal();
-            }});
-        }}
-
-        // Zamknięcie modala po kliknięciu poza obrazek (w tło)
-        modal.addEventListener('click', (e) => {{
-            if (didDragMove) return;
-            if (e.target.closest('.tape-nav-btn') || e.target.closest('.modal-slide-counter') || e.target.closest('.modal-zoom-btn') || e.target.closest('.zoom-overlay')) return;
-            if (e.target === modal || e.target.classList.contains('modal-content') || e.target.classList.contains('modal-slider-row')) {{
-                closeModal();
-            }}
-        }});
-
-        // Obsługa klawiatury (ArrowLeft, ArrowRight, Escape)
-        document.addEventListener('keydown', (e) => {{
-            if (zoomOverlay && zoomOverlay.classList.contains('active')) {{
-                if (e.key === 'Escape') {{
-                    e.preventDefault();
-                    closeZoomOverlay();
-                }}
-                return;
-            }}
-            if (!modal.classList.contains('active')) return;
-            if (e.key === 'Escape') {{
-                closeModal();
-            }} else if (e.key === 'ArrowLeft' && currentSlides.length > 1) {{
-                if (currentSlideIndex > 0) updateSlide(currentSlideIndex - 1);
-            }} else if (e.key === 'ArrowRight' && currentSlides.length > 1) {{
-                if (currentSlideIndex < currentSlides.length - 1) updateSlide(currentSlideIndex + 1);
-            }}
-        }});
-
-        console.log("%c {cat_label} Initialized - RAWR XD ", "color: #00ff00; background: #000; font-family: monospace; border: 1px solid #ff007f;");
-    </script>"""
-    return modal_container_html, zoom_overlay_html, script_html
+def _strip_internal_item_keys(items):
+    cleaned = []
+    for item in items:
+        clean_item = {
+            k: v for k, v in item.items()
+            if k not in ("category", "type") and v is not None
+        }
+        cleaned.append(clean_item)
+    return cleaned
 
 def update_category_index(category, new_items):
-    index_path = os.path.join(OUTPUT_DIR, category, "index.html")
-    if not os.path.exists(index_path):
-        print(f"Error: {index_path} not found")
-        return []
-        
-    with open(index_path, 'r', encoding='utf-8') as f:
-        html = f.read()
-        
-    # Inject missing download button HTML element if not present
-    if 'id="modal-download-btn"' not in html:
-        html = html.replace(
-            '</details>\n            </div>',
-            '</details>\n                <a href="" id="modal-download-btn" class="main-menu-btn modal-download-btn" download>DOWNLOAD MAX QUALITY (.TIF)</a>\n            </div>'
-        )
-        html = html.replace(
-            '</details>\r\n            </div>',
-            '</details>\r\n                <a href="" id="modal-download-btn" class="main-menu-btn modal-download-btn" download>DOWNLOAD MAX QUALITY (.TIF)</a>\r\n            </div>'
-        )
-        print(f"Injected download button HTML into {index_path}")
-        
-    replace_mockups = "Gołąb #01: Start" in html or "Gołąb #02: Neon" in html
-    
+    targets = [
+        (os.path.join(OUTPUT_DIR, category, "index.html"), False),
+        (os.path.join(OUTPUT_DIR, "en", category, "index.html"), True),
+    ]
     migrated_subgallery_dirs = []
-    existing_items = []
-    if not replace_mockups:
-        parsed_items = parse_gallery_data_from_html(html)
-        for item in parsed_items:
-            if item.get("link"):
-                slug = item["link"].strip("/")
-                sub_index_path = os.path.join(OUTPUT_DIR, category, slug, "index.html")
-                if os.path.exists(sub_index_path):
-                    with open(sub_index_path, 'r', encoding='utf-8') as sf:
-                        sub_html = sf.read()
-                    sub_items = parse_gallery_data_from_html(sub_html)
-                    if sub_items:
-                        migrated_item = {
-                            "type": "multi",
-                            "category": category,
-                            "id": sub_items[0]["id"],
-                            "thumb": item["thumb"],
-                            "title": item["title"],
-                            "descUrl": sub_items[0].get("descUrl"),
-                            "images": [
-                                {
-                                    "id": s["id"],
-                                    "full": s["full"],
-                                    "title": s["title"],
-                                    "download_tif": s.get("download_tif")
-                                }
-                                for s in sub_items
-                            ]
-                        }
-                        existing_items.append(migrated_item)
-                        migrated_subgallery_dirs.append(os.path.join(OUTPUT_DIR, category, slug))
-                        print(f"Migrated subgallery {category}/{slug}/ ({len(sub_items)} slides) into parent modal")
-                        continue
-            item["category"] = category
-            existing_items.append(item)
-            
-    all_items = existing_items + new_items
-    js_array = format_gallery_data_js(all_items)
-    
-    modal_container_html, zoom_overlay_html, script_html = build_modal_and_script_html(category, js_array)
-    
-    # Replace modal-image-container block
-    html = re.sub(
-        r'<div class="modal-image-container"[\s\S]*?</div>\s*(?=<div class="modal-description">)',
-        lambda _: modal_container_html + "\n\n            ",
-        html
-    )
-    
-    # Idempotently inject or replace zoom overlay right before galleryData script block
-    if "<!-- ZOOM_OVERLAY_START -->" in html and "<!-- ZOOM_OVERLAY_END -->" in html:
+    today_compact = date.today().strftime("%Y%m%d")
+
+    for index_path, is_en in targets:
+        if not os.path.exists(index_path):
+            print(f"Error: {index_path} not found")
+            continue
+
+        with open(index_path, 'r', encoding='utf-8') as f:
+            html = f.read()
+
+        replace_mockups = "Gołąb #01: Start" in html or "Gołąb #02: Neon" in html
+
+        existing_items = []
+        if not replace_mockups:
+            parsed_items = parse_gallery_data_from_html(html)
+            for item in parsed_items:
+                if item.get("link"):
+                    slug = item["link"].strip("/")
+                    sub_index_path = os.path.join(OUTPUT_DIR, category, slug, "index.html")
+                    if os.path.exists(sub_index_path):
+                        with open(sub_index_path, 'r', encoding='utf-8') as sf:
+                            sub_html = sf.read()
+                        sub_items = parse_gallery_data_from_html(sub_html)
+                        if sub_items:
+                            migrated_item = {
+                                "type": "multi",
+                                "id": sub_items[0]["id"],
+                                "thumb": item["thumb"],
+                                "title": item["title"],
+                                "descUrl": sub_items[0].get("descUrl"),
+                                "images": [
+                                    {
+                                        "id": s["id"],
+                                        "full": s["full"],
+                                        "title": s["title"],
+                                        "download_tif": s.get("download_tif")
+                                    }
+                                    for s in sub_items
+                                ]
+                            }
+                            existing_items.append(migrated_item)
+                            sub_dir = os.path.join(OUTPUT_DIR, category, slug)
+                            if sub_dir not in migrated_subgallery_dirs:
+                                migrated_subgallery_dirs.append(sub_dir)
+                                print(f"Migrated subgallery {category}/{slug}/ ({len(sub_items)} slides) into parent modal")
+                            continue
+                existing_items.append(item)
+
+        all_items = existing_items + new_items
+
+        # 1. Update SSR gallery grid cards
+        cards_html = render_ssr_cards_html(all_items)
+        html = replace_gallery_grid_html(html, cards_html)
+
+        # 2. Update #gallery-data JSON block (without internal category/type keys)
+        serializable_items = _strip_internal_item_keys(all_items)
+        gallery_json_str = json.dumps(serializable_items, indent=2, ensure_ascii=False)
         html = re.sub(
-            r'<!-- ZOOM_OVERLAY_START -->[\s\S]*?<!-- ZOOM_OVERLAY_END -->',
-            lambda _: zoom_overlay_html.strip(),
-            html
+            r'(<script\b[^>]*\bid=["\']gallery-data["\'][^>]*>)[\s\S]*?(</script>)',
+            lambda m: f"{m.group(1)}\n{gallery_json_str}\n    {m.group(2)}",
+            html,
+            count=1
         )
-        html = re.sub(
-            r'<script>\s*const galleryData\s*=\s*\[[\s\S]*?</script>',
-            lambda _: script_html,
-            html
-        )
-    else:
-        html = re.sub(
-            r'<script>\s*const galleryData\s*=\s*\[[\s\S]*?</script>',
-            lambda _: zoom_overlay_html + "\n\n" + script_html,
-            html
-        )
-    
-    # Update version and build metadata only when new items or migrated subgalleries exist
-    if new_items or migrated_subgallery_dirs:
-        html = re.sub(r'data-version="[^"]*"', 'data-version="3.1.4"', html)
-        html = re.sub(r'data-build="\d+"', 'data-build="20261115"', html)
-        html = re.sub(r'style\.css\?v=\d+', 'style.css?v=20261115', html)
-    
-    with open(index_path, 'w', encoding='utf-8') as f:
-        f.write(html)
-    print(f"Updated index HTML file at {index_path}")
-    gpg_sign_file(index_path)
+
+        # 3. Update JSON-LD ItemList
+        html = update_category_jsonld(html, all_items, is_en)
+
+        # 4. Update build numbers for style.css?v= and gallery.js?v= when new_items exist
+        if new_items:
+            html = re.sub(r'data-build="\d+"', f'data-build="{today_compact}"', html)
+            html = re.sub(r'style\.css\?v=\d+', f'style.css?v={today_compact}', html)
+            html = re.sub(r'gallery\.js\?v=\d+', f'gallery.js?v={today_compact}', html)
+
+        with open(index_path, 'w', encoding='utf-8', newline='\n') as f:
+            f.write(html)
+        print(f"Updated index HTML file at {index_path}")
+        gpg_sign_file(index_path)
+
     return migrated_subgallery_dirs
 
 def cleanup_old_subgalleries_and_metadata(migrated_dirs=None):
@@ -1258,63 +727,79 @@ def cleanup_old_subgalleries_and_metadata(migrated_dirs=None):
             shutil.rmtree(d)
             print(f"Removed old subgallery directory: {d}")
             
-    # Update sitemap.xml
+    today_iso = date.today().strftime("%Y-%m-%d")
+    today_slash = date.today().strftime("%Y/%m/%d")
+    today_compact = date.today().strftime("%Y%m%d")
+
+    # Update sitemap.xml (preserving xhtml:link tags)
     if os.path.exists(SITEMAP_PATH):
         with open(SITEMAP_PATH, 'r', encoding='utf-8') as f:
             xml = f.read()
         # Remove <url> blocks pointing to subgalleries (two segments after domain)
         xml = re.sub(
-            r'\s*<url>\s*<loc>https://gallery\.emo-changeling\.xyz/(?:aviary|digiart|photo|other)/[^/<]+/</loc>[\s\S]*?</url>',
+            r'\s*<url>\s*<loc>https://gallery\.emo-changeling\.xyz/(?:en/)?(?:aviary|digiart|photo|other)/[^/<]+/</loc>[\s\S]*?</url>',
             '',
             xml
         )
-        xml = re.sub(r'<lastmod>.*?</lastmod>', '<lastmod>2026-11-15</lastmod>', xml)
-        with open(SITEMAP_PATH, 'w', encoding='utf-8') as f:
+        xml = re.sub(r'<lastmod>.*?</lastmod>', f'<lastmod>{today_iso}</lastmod>', xml)
+        with open(SITEMAP_PATH, 'w', encoding='utf-8', newline='\n') as f:
             f.write(xml)
         print("Cleaned up and updated sitemap.xml")
         gpg_sign_file(SITEMAP_PATH)
         
-    # Update main index files and category files
+    # Update all 10 index.html files (root PL+EN and 4 category pairs PL+EN)
     html_targets = [
         os.path.join(OUTPUT_DIR, "index.html"),
         os.path.join(OUTPUT_DIR, "en", "index.html"),
         os.path.join(OUTPUT_DIR, "aviary", "index.html"),
+        os.path.join(OUTPUT_DIR, "en", "aviary", "index.html"),
         os.path.join(OUTPUT_DIR, "digiart", "index.html"),
+        os.path.join(OUTPUT_DIR, "en", "digiart", "index.html"),
         os.path.join(OUTPUT_DIR, "photo", "index.html"),
+        os.path.join(OUTPUT_DIR, "en", "photo", "index.html"),
         os.path.join(OUTPUT_DIR, "other", "index.html"),
+        os.path.join(OUTPUT_DIR, "en", "other", "index.html"),
     ]
     for hpath in html_targets:
         if os.path.exists(hpath):
             with open(hpath, 'r', encoding='utf-8') as f:
                 hcontent = f.read()
-            hcontent = re.sub(r'data-version="[^"]*"', 'data-version="3.1.4"', hcontent)
-            hcontent = re.sub(r'data-build="\d+"', 'data-build="20261115"', hcontent)
-            hcontent = re.sub(r'style\.css\?v=\d+', 'style.css?v=20261115', hcontent)
-            with open(hpath, 'w', encoding='utf-8') as f:
+            hcontent = re.sub(r'data-build="\d+"', f'data-build="{today_compact}"', hcontent)
+            hcontent = re.sub(r'style\.css\?v=\d+', f'style.css?v={today_compact}', hcontent)
+            hcontent = re.sub(r'gallery\.js\?v=\d+', f'gallery.js?v={today_compact}', hcontent)
+            with open(hpath, 'w', encoding='utf-8', newline='\n') as f:
                 f.write(hcontent)
             gpg_sign_file(hpath)
             
-    # Update llms.txt, .well-known/llms.txt, humans.txt
+    # Update metadata files
     meta_files = [
         os.path.join(OUTPUT_DIR, "llms.txt"),
         os.path.join(OUTPUT_DIR, ".well-known", "llms.txt"),
         os.path.join(OUTPUT_DIR, "humans.txt"),
+        os.path.join(OUTPUT_DIR, "ai-catalog.json"),
+        os.path.join(OUTPUT_DIR, ".well-known", "ai-catalog.json"),
+        os.path.join(OUTPUT_DIR, "ai.json"),
+        os.path.join(OUTPUT_DIR, ".well-known", "ai.json"),
+        os.path.join(OUTPUT_DIR, ".well-known", "agent.json"),
     ]
     for mpath in meta_files:
         if os.path.exists(mpath):
             with open(mpath, 'r', encoding='utf-8') as f:
                 mcontent = f.read()
-            mcontent = re.sub(r'2026-\d{2}-\d{2}', '2026-11-15', mcontent)
-            mcontent = re.sub(r'2026/\d{2}/\d{2}', '2026/11/15', mcontent)
-            mcontent = re.sub(r'2026\d{4}', '20261115', mcontent)
-            with open(mpath, 'w', encoding='utf-8') as f:
+            mcontent = re.sub(r'20\d{2}-\d{2}-\d{2}', today_iso, mcontent)
+            mcontent = re.sub(r'20\d{2}/\d{2}/\d{2}', today_slash, mcontent)
+            mcontent = re.sub(r'\b20\d{2}(?:0[1-9]|1[0-2])(?:0[1-9]|[12]\d|3[01])\b', today_compact, mcontent)
+            with open(mpath, 'w', encoding='utf-8', newline='\n') as f:
                 f.write(mcontent)
             gpg_sign_file(mpath)
             
-    # Sign style.css if present
+    # Sign style.css and gallery.js if present
     style_css_path = os.path.join(OUTPUT_DIR, "css", "style.css")
     if os.path.exists(style_css_path):
         gpg_sign_file(style_css_path)
+    gallery_js_path = os.path.join(OUTPUT_DIR, "js", "gallery.js")
+    if os.path.exists(gallery_js_path):
+        gpg_sign_file(gallery_js_path)
 
 def main():
     registry = load_registry()
@@ -1367,6 +852,9 @@ def main():
         style_css_path = os.path.join(OUTPUT_DIR, "css", "style.css")
         if os.path.exists(style_css_path):
             gpg_sign_file(style_css_path)
+        gallery_js_path = os.path.join(OUTPUT_DIR, "js", "gallery.js")
+        if os.path.exists(gallery_js_path):
+            gpg_sign_file(gallery_js_path)
         
     # Save registry
     if processed_this_run:

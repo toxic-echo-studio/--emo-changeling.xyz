@@ -1,27 +1,114 @@
 {
   "specVersion": "1.0",
+  "name": "The Reverse Emo Changeling Gallery",
+  "description": "Official bilingual visual archive and 100% human-made art/photography gallery of The Reverse Emo Changeling (TREC), operated technically by Toxic Echo Studio.",
+  "version": "3.2.0",
+  "lastUpdated": "2026-11-20",
+  "url": "https://gallery.emo-changeling.xyz/en/",
+  "languages": [
+    "en",
+    "pl"
+  ],
+  "primaryLanguage": "en",
+  "architecture": {
+    "rendering": "Static bilingual SSR HTML5/CSS3 documents",
+    "homeScripts": [],
+    "categoryScripts": [
+      "/js/gallery.js"
+    ],
+    "storage": "No cookies and no localStorage"
+  },
   "host": {
     "displayName": "The Reverse Emo Changeling"
   },
+  "credits": {
+    "frontendCreator": "Nico Łach (Zebroid, Vikasiek, Wiktor, Marina)",
+    "backendDirector": "Mighn Taghor",
+    "infrastructure": "Toxic Echo Studio (https://toxic-echo.studio/)"
+  },
+  "contacts": [
+    "management@emo-changeling.xyz",
+    "admin@toxic-echo.studio"
+  ],
+  "sitemaps": [
+    "https://gallery.emo-changeling.xyz/sitemap.xml"
+  ],
+  "pages": [
+    {
+      "key": "home",
+      "pl_url": "https://gallery.emo-changeling.xyz/",
+      "en_url": "https://gallery.emo-changeling.xyz/en/",
+      "x_default_url": "https://gallery.emo-changeling.xyz/en/",
+      "pl_title": "Galeria Sztuki i Fotografii | The Reverse Emo Changeling",
+      "en_title": "Art & Photography Gallery | The Reverse Emo Changeling",
+      "lastModified": "2026-11-20"
+    },
+    {
+      "key": "aviary",
+      "pl_url": "https://gallery.emo-changeling.xyz/aviary/",
+      "en_url": "https://gallery.emo-changeling.xyz/en/aviary/",
+      "x_default_url": "https://gallery.emo-changeling.xyz/en/aviary/",
+      "pl_title": "Aviary - Gołębie Arty | Galeria The Reverse Emo Changeling",
+      "en_title": "Aviary - Pigeon Art Series | The Reverse Emo Changeling Gallery",
+      "lastModified": "2026-11-20"
+    },
+    {
+      "key": "photo",
+      "pl_url": "https://gallery.emo-changeling.xyz/photo/",
+      "en_url": "https://gallery.emo-changeling.xyz/en/photo/",
+      "x_default_url": "https://gallery.emo-changeling.xyz/en/photo/",
+      "pl_title": "Photo - Galeria Zdjęć | The Reverse Emo Changeling",
+      "en_title": "Photo - Photography Archive | The Reverse Emo Changeling Gallery",
+      "lastModified": "2026-11-20"
+    },
+    {
+      "key": "digiart",
+      "pl_url": "https://gallery.emo-changeling.xyz/digiart/",
+      "en_url": "https://gallery.emo-changeling.xyz/en/digiart/",
+      "x_default_url": "https://gallery.emo-changeling.xyz/en/digiart/",
+      "pl_title": "Digiart - Grafika Cyfrowa | Galeria The Reverse Emo Changeling",
+      "en_title": "Digiart - Digital Artwork | The Reverse Emo Changeling Gallery",
+      "lastModified": "2026-11-20"
+    },
+    {
+      "key": "other",
+      "pl_url": "https://gallery.emo-changeling.xyz/other/",
+      "en_url": "https://gallery.emo-changeling.xyz/en/other/",
+      "x_default_url": "https://gallery.emo-changeling.xyz/en/other/",
+      "pl_title": "Monster Art - Grafiki Koncepcyjne | Galeria The Reverse Emo Changeling",
+      "en_title": "Monster Art - Concept Graphics | The Reverse Emo Changeling Gallery",
+      "lastModified": "2026-11-20"
+    }
+  ],
   "entries": [
     {
-      "identifier": "urn:air:toxic-echo:knowledge:llms-context",
-      "displayName": "LLMs Context & Knowledge Base",
-      "type": "text/markdown; profile=\"urn:air:agent-skills\"",
+      "identifier": "urn:air:toxic-echo:gallery:llms-context",
+      "displayName": "LLMs Context & Gallery Catalog",
+      "type": "text/markdown",
       "url": "https://gallery.emo-changeling.xyz/llms.txt",
       "representativeQueries": [
-        "what is emo changeling project",
-        "toxic echo studio information"
+        "the reverse emo changeling gallery",
+        "vikasiek digital art aviary monster art"
       ]
     },
     {
-      "identifier": "urn:air:toxic-echo:policy:ai-manifest",
-      "displayName": "AI Usage Policy and Permissions",
-      "type": "application/agent-card+json",
+      "identifier": "urn:air:toxic-echo:gallery:ai-manifest",
+      "displayName": "AI Usage Policy and Licensing",
+      "type": "application/json",
       "url": "https://gallery.emo-changeling.xyz/ai.json",
       "representativeQueries": [
-        "content licensing and ai permissions",
-        "creative commons cc by-nd"
+        "gallery content licensing cc by-nd 4.0",
+        "human-made digital art policy"
+      ]
+    },
+    {
+      "identifier": "urn:air:toxic-echo:knowledge:main-context",
+      "displayName": "Main Project Overview",
+      "type": "text/markdown",
+      "url": "https://emo-changeling.xyz/llms.txt",
+      "representativeQueries": [
+        "what is the reverse emo changeling project",
+        "nico lach toxic echo studio overview"
       ]
     }
   ]
