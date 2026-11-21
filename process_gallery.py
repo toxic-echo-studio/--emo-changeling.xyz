@@ -533,7 +533,7 @@ def replace_gallery_grid_html(html_text, cards_html):
             depth += 1
     return html_text
 
-def update_category_jsonld(html, items, is_en):
+def update_category_jsonld(html, items, is_en, category):
     ld_m = re.search(
         r'(<script\s+type=["\']application/ld\+json["\']\s*>)([\s\S]*?)(</script>)',
         html,
@@ -549,6 +549,7 @@ def update_category_jsonld(html, items, is_en):
 
     base_url = "https://gallery.emo-changeling.xyz"
     license_page = f"{base_url}/en/#manifest-footer" if is_en else f"{base_url}/#manifest-footer"
+    credit_text = "Vikasiek / The Reverse Emo Changeling" if category == "digiart" else "Nico Łach / The Reverse Emo Changeling"
 
     list_elements = []
     for pos, item in enumerate(items, start=1):
@@ -580,7 +581,9 @@ def update_category_jsonld(html, items, is_en):
                     "@id": "https://emo-changeling.xyz/#nico"
                 },
                 "license": "https://creativecommons.org/licenses/by-nd/4.0/",
-                "acquireLicensePage": license_page
+                "acquireLicensePage": license_page,
+                "creditText": credit_text,
+                "copyrightNotice": "© Nico Łach"
             }
         })
 
@@ -691,7 +694,7 @@ def update_category_index(category, new_items):
         )
 
         # 3. Update JSON-LD ItemList
-        html = update_category_jsonld(html, all_items, is_en)
+        html = update_category_jsonld(html, all_items, is_en, category)
 
         # 4. Update build numbers for style.css?v= and gallery.js?v= when new_items exist
         if new_items:
