@@ -1,466 +1,480 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
-    <url>
+<url>
         <loc>https://tx2.emo-changeling.xyz/</loc>
-        <lastmod>2026-11-19</lastmod>
+        <lastmod>2026-11-21</lastmod>
         <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/"/>
         <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/pl/"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/"/>
     </url>
-    <url>
+<url>
         <loc>https://tx2.emo-changeling.xyz/pl/</loc>
-        <lastmod>2026-11-19</lastmod>
+        <lastmod>2026-11-21</lastmod>
         <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/"/>
         <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/pl/"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/"/>
     </url>
-    <url>
+<url>
         <loc>https://tx2.emo-changeling.xyz/wtf</loc>
         <lastmod>2026-11-19</lastmod>
         <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/wtf"/>
         <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/pl/wtf"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/wtf"/>
     </url>
-    <url>
+<url>
         <loc>https://tx2.emo-changeling.xyz/pl/wtf</loc>
         <lastmod>2026-11-19</lastmod>
         <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/wtf"/>
         <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/pl/wtf"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/wtf"/>
     </url>
-    <url>
+<url>
         <loc>https://tx2.emo-changeling.xyz/lineup</loc>
         <lastmod>2026-11-19</lastmod>
         <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/lineup"/>
         <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/pl/lineup"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/lineup"/>
     </url>
-    <url>
+<url>
         <loc>https://tx2.emo-changeling.xyz/pl/lineup</loc>
         <lastmod>2026-11-19</lastmod>
         <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/lineup"/>
         <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/pl/lineup"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/lineup"/>
     </url>
-    <url>
+<url>
         <loc>https://tx2.emo-changeling.xyz/tours</loc>
         <lastmod>2026-11-19</lastmod>
         <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/tours"/>
         <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/pl/tours"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/tours"/>
     </url>
-    <url>
+<url>
         <loc>https://tx2.emo-changeling.xyz/pl/tours</loc>
         <lastmod>2026-11-19</lastmod>
         <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/tours"/>
         <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/pl/tours"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/tours"/>
     </url>
-    <url>
+<url>
         <loc>https://tx2.emo-changeling.xyz/tours_archive</loc>
         <lastmod>2026-11-19</lastmod>
         <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/tours_archive"/>
         <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/pl/tours_archive"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/tours_archive"/>
     </url>
-    <url>
+<url>
         <loc>https://tx2.emo-changeling.xyz/pl/tours_archive</loc>
         <lastmod>2026-11-19</lastmod>
         <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/tours_archive"/>
         <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/pl/tours_archive"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/tours_archive"/>
     </url>
-    <url>
+<url>
         <loc>https://tx2.emo-changeling.xyz/discography</loc>
         <lastmod>2026-11-19</lastmod>
         <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/discography"/>
         <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/pl/discography"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/discography"/>
     </url>
-    <url>
+<url>
         <loc>https://tx2.emo-changeling.xyz/pl/discography</loc>
         <lastmod>2026-11-19</lastmod>
         <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/discography"/>
         <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/pl/discography"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/discography"/>
     </url>
-    <url>
+<url>
         <loc>https://tx2.emo-changeling.xyz/setlist</loc>
         <lastmod>2026-11-19</lastmod>
         <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/setlist"/>
         <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/pl/setlist"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/setlist"/>
     </url>
-    <url>
+<url>
         <loc>https://tx2.emo-changeling.xyz/pl/setlist</loc>
         <lastmod>2026-11-19</lastmod>
         <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/setlist"/>
         <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/pl/setlist"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/setlist"/>
     </url>
-    <url>
+<url>
         <loc>https://tx2.emo-changeling.xyz/about</loc>
         <lastmod>2026-11-19</lastmod>
         <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/about"/>
         <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/pl/about"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/about"/>
     </url>
-    <url>
+<url>
         <loc>https://tx2.emo-changeling.xyz/pl/about</loc>
         <lastmod>2026-11-19</lastmod>
         <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/about"/>
         <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/pl/about"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/about"/>
     </url>
-    <url>
+<url>
         <loc>https://tx2.emo-changeling.xyz/media</loc>
         <lastmod>2026-11-19</lastmod>
         <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/media"/>
         <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/pl/media"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/media"/>
     </url>
-    <url>
+<url>
         <loc>https://tx2.emo-changeling.xyz/pl/media</loc>
         <lastmod>2026-11-19</lastmod>
         <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/media"/>
         <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/pl/media"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/media"/>
     </url>
-    <url>
+<url>
         <loc>https://tx2.emo-changeling.xyz/legal</loc>
         <lastmod>2026-11-19</lastmod>
         <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/legal"/>
         <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/pl/legal"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/legal"/>
     </url>
-    <url>
+<url>
         <loc>https://tx2.emo-changeling.xyz/pl/legal</loc>
         <lastmod>2026-11-19</lastmod>
         <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/legal"/>
         <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/pl/legal"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/legal"/>
     </url>
-    <url>
+<url>
         <loc>https://tx2.emo-changeling.xyz/news/</loc>
-        <lastmod>2026-11-19</lastmod>
+        <lastmod>2026-11-21</lastmod>
         <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/"/>
         <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/"/>
     </url>
-    <url>
+<url>
         <loc>https://tx2.emo-changeling.xyz/news/pl/</loc>
-        <lastmod>2026-11-19</lastmod>
+        <lastmod>2026-11-21</lastmod>
         <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/"/>
         <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/"/>
     </url>
-    <url>
-        <loc>https://tx2.emo-changeling.xyz/news/bailey-spinn-2027-tour-speculation</loc>
-        <lastmod>2026-11-15</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/bailey-spinn-2027-tour-speculation"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/bailey-spinn-2027-tour-speculation"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/bailey-spinn-2027-tour-speculation"/>
-    </url>
-    <url>
-        <loc>https://tx2.emo-changeling.xyz/news/pl/bailey-spinn-2027-tour-speculation</loc>
-        <lastmod>2026-11-15</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/bailey-spinn-2027-tour-speculation"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/bailey-spinn-2027-tour-speculation"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/bailey-spinn-2027-tour-speculation"/>
-    </url>
-    <url>
-        <loc>https://tx2.emo-changeling.xyz/news/bailey-spinn-silent-anymore-collab</loc>
-        <lastmod>2026-11-13</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/bailey-spinn-silent-anymore-collab"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/bailey-spinn-silent-anymore-collab"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/bailey-spinn-silent-anymore-collab"/>
-    </url>
-    <url>
-        <loc>https://tx2.emo-changeling.xyz/news/pl/bailey-spinn-silent-anymore-collab</loc>
-        <lastmod>2026-11-13</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/bailey-spinn-silent-anymore-collab"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/bailey-spinn-silent-anymore-collab"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/bailey-spinn-silent-anymore-collab"/>
-    </url>
-    <url>
-        <loc>https://tx2.emo-changeling.xyz/news/community-guidelines-no-cheap-drama</loc>
-        <lastmod>2026-11-15</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/community-guidelines-no-cheap-drama"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/community-guidelines-no-cheap-drama"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/community-guidelines-no-cheap-drama"/>
-    </url>
-    <url>
-        <loc>https://tx2.emo-changeling.xyz/news/pl/community-guidelines-no-cheap-drama</loc>
-        <lastmod>2026-11-15</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/community-guidelines-no-cheap-drama"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/community-guidelines-no-cheap-drama"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/community-guidelines-no-cheap-drama"/>
-    </url>
-    <url>
-        <loc>https://tx2.emo-changeling.xyz/news/europe-club-reality-vs-gothic-hype</loc>
-        <lastmod>2026-11-01</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/europe-club-reality-vs-gothic-hype"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/europe-club-reality-vs-gothic-hype"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/europe-club-reality-vs-gothic-hype"/>
-    </url>
-    <url>
-        <loc>https://tx2.emo-changeling.xyz/news/pl/europe-club-reality-vs-gothic-hype</loc>
-        <lastmod>2026-11-01</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/europe-club-reality-vs-gothic-hype"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/europe-club-reality-vs-gothic-hype"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/europe-club-reality-vs-gothic-hype"/>
-    </url>
-    <url>
-        <loc>https://tx2.emo-changeling.xyz/news/european-tour-support-speculation</loc>
-        <lastmod>2026-10-28</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/european-tour-support-speculation"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/european-tour-support-speculation"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/european-tour-support-speculation"/>
-    </url>
-    <url>
-        <loc>https://tx2.emo-changeling.xyz/news/pl/european-tour-support-speculation</loc>
-        <lastmod>2026-10-28</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/european-tour-support-speculation"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/european-tour-support-speculation"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/european-tour-support-speculation"/>
-    </url>
-    <url>
-        <loc>https://tx2.emo-changeling.xyz/news/headline-setlist-expansion-2027</loc>
-        <lastmod>2026-10-28</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/headline-setlist-expansion-2027"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/headline-setlist-expansion-2027"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/headline-setlist-expansion-2027"/>
-    </url>
-    <url>
-        <loc>https://tx2.emo-changeling.xyz/news/pl/headline-setlist-expansion-2027</loc>
-        <lastmod>2026-10-28</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/headline-setlist-expansion-2027"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/headline-setlist-expansion-2027"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/headline-setlist-expansion-2027"/>
-    </url>
-    <url>
-        <loc>https://tx2.emo-changeling.xyz/news/i-am-the-enemy-premiere-november-17</loc>
-        <lastmod>2026-11-08</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/i-am-the-enemy-premiere-november-17"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/i-am-the-enemy-premiere-november-17"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/i-am-the-enemy-premiere-november-17"/>
-    </url>
-    <url>
-        <loc>https://tx2.emo-changeling.xyz/news/pl/i-am-the-enemy-premiere-november-17</loc>
-        <lastmod>2026-11-08</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/i-am-the-enemy-premiere-november-17"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/i-am-the-enemy-premiere-november-17"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/i-am-the-enemy-premiere-november-17"/>
-    </url>
-    <url>
-        <loc>https://tx2.emo-changeling.xyz/news/i-am-the-enemy-single-release</loc>
-        <lastmod>2026-11-13</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/i-am-the-enemy-single-release"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/i-am-the-enemy-single-release"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/i-am-the-enemy-single-release"/>
-    </url>
-    <url>
-        <loc>https://tx2.emo-changeling.xyz/news/pl/i-am-the-enemy-single-release</loc>
-        <lastmod>2026-11-13</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/i-am-the-enemy-single-release"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/i-am-the-enemy-single-release"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/i-am-the-enemy-single-release"/>
-    </url>
-    <url>
-        <loc>https://tx2.emo-changeling.xyz/news/i-am-the-enemy-video-analysis</loc>
-        <lastmod>2026-11-18</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/i-am-the-enemy-video-analysis"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/i-am-the-enemy-video-analysis"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/i-am-the-enemy-video-analysis"/>
-    </url>
-    <url>
-        <loc>https://tx2.emo-changeling.xyz/news/pl/i-am-the-enemy-video-analysis</loc>
-        <lastmod>2026-11-18</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/i-am-the-enemy-video-analysis"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/i-am-the-enemy-video-analysis"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/i-am-the-enemy-video-analysis"/>
-    </url>
-    <url>
-        <loc>https://tx2.emo-changeling.xyz/news/not-broken-enough-tour-11-tracks-35-mins</loc>
-        <lastmod>2026-11-08</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/not-broken-enough-tour-11-tracks-35-mins"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/not-broken-enough-tour-11-tracks-35-mins"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/not-broken-enough-tour-11-tracks-35-mins"/>
-    </url>
-    <url>
-        <loc>https://tx2.emo-changeling.xyz/news/pl/not-broken-enough-tour-11-tracks-35-mins</loc>
-        <lastmod>2026-11-08</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/not-broken-enough-tour-11-tracks-35-mins"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/not-broken-enough-tour-11-tracks-35-mins"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/not-broken-enough-tour-11-tracks-35-mins"/>
-    </url>
-    <url>
-        <loc>https://tx2.emo-changeling.xyz/news/november-tour-status-rockville-milan-check</loc>
-        <lastmod>2026-11-15</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/november-tour-status-rockville-milan-check"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/november-tour-status-rockville-milan-check"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/november-tour-status-rockville-milan-check"/>
-    </url>
-    <url>
-        <loc>https://tx2.emo-changeling.xyz/news/pl/november-tour-status-rockville-milan-check</loc>
-        <lastmod>2026-11-15</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/november-tour-status-rockville-milan-check"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/november-tour-status-rockville-milan-check"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/november-tour-status-rockville-milan-check"/>
-    </url>
-    <url>
-        <loc>https://tx2.emo-changeling.xyz/news/seagull-crab-rumor-confirmed-i-am-the-enemy</loc>
-        <lastmod>2026-11-15</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/seagull-crab-rumor-confirmed-i-am-the-enemy"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/seagull-crab-rumor-confirmed-i-am-the-enemy"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/seagull-crab-rumor-confirmed-i-am-the-enemy"/>
-    </url>
-    <url>
-        <loc>https://tx2.emo-changeling.xyz/news/pl/seagull-crab-rumor-confirmed-i-am-the-enemy</loc>
-        <lastmod>2026-11-15</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/seagull-crab-rumor-confirmed-i-am-the-enemy"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/seagull-crab-rumor-confirmed-i-am-the-enemy"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/seagull-crab-rumor-confirmed-i-am-the-enemy"/>
-    </url>
-    <url>
-        <loc>https://tx2.emo-changeling.xyz/news/seagull-invasion-crab-commander-rumor</loc>
-        <lastmod>2026-11-08</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/seagull-invasion-crab-commander-rumor"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/seagull-invasion-crab-commander-rumor"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/seagull-invasion-crab-commander-rumor"/>
-    </url>
-    <url>
-        <loc>https://tx2.emo-changeling.xyz/news/pl/seagull-invasion-crab-commander-rumor</loc>
-        <lastmod>2026-11-08</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/seagull-invasion-crab-commander-rumor"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/seagull-invasion-crab-commander-rumor"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/seagull-invasion-crab-commander-rumor"/>
-    </url>
-    <url>
-        <loc>https://tx2.emo-changeling.xyz/news/setlist-math-witch-hunt-cut</loc>
-        <lastmod>2026-11-01</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/setlist-math-witch-hunt-cut"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/setlist-math-witch-hunt-cut"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/setlist-math-witch-hunt-cut"/>
-    </url>
-    <url>
-        <loc>https://tx2.emo-changeling.xyz/news/pl/setlist-math-witch-hunt-cut</loc>
-        <lastmod>2026-11-01</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/setlist-math-witch-hunt-cut"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/setlist-math-witch-hunt-cut"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/setlist-math-witch-hunt-cut"/>
-    </url>
-    <url>
-        <loc>https://tx2.emo-changeling.xyz/news/shiprocked-2027-official-lineup-debut</loc>
-        <lastmod>2026-11-08</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/shiprocked-2027-official-lineup-debut"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/shiprocked-2027-official-lineup-debut"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/shiprocked-2027-official-lineup-debut"/>
-    </url>
-    <url>
-        <loc>https://tx2.emo-changeling.xyz/news/pl/shiprocked-2027-official-lineup-debut</loc>
-        <lastmod>2026-11-08</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/shiprocked-2027-official-lineup-debut"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/shiprocked-2027-official-lineup-debut"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/shiprocked-2027-official-lineup-debut"/>
-    </url>
-    <url>
-        <loc>https://tx2.emo-changeling.xyz/news/shiprocked-tiktok-vs-radio-veterans</loc>
-        <lastmod>2026-11-08</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/shiprocked-tiktok-vs-radio-veterans"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/shiprocked-tiktok-vs-radio-veterans"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/shiprocked-tiktok-vs-radio-veterans"/>
-    </url>
-    <url>
-        <loc>https://tx2.emo-changeling.xyz/news/pl/shiprocked-tiktok-vs-radio-veterans</loc>
-        <lastmod>2026-11-08</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/shiprocked-tiktok-vs-radio-veterans"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/shiprocked-tiktok-vs-radio-veterans"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/shiprocked-tiktok-vs-radio-veterans"/>
-    </url>
-    <url>
-        <loc>https://tx2.emo-changeling.xyz/news/uk-headline-tour-electric-ballroom</loc>
-        <lastmod>2026-10-18</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/uk-headline-tour-electric-ballroom"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/uk-headline-tour-electric-ballroom"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/uk-headline-tour-electric-ballroom"/>
-    </url>
-    <url>
-        <loc>https://tx2.emo-changeling.xyz/news/pl/uk-headline-tour-electric-ballroom</loc>
-        <lastmod>2026-10-18</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/uk-headline-tour-electric-ballroom"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/uk-headline-tour-electric-ballroom"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/uk-headline-tour-electric-ballroom"/>
-    </url>
-    <url>
-        <loc>https://tx2.emo-changeling.xyz/news/us-tour-support-billing-reality</loc>
-        <lastmod>2026-11-01</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/us-tour-support-billing-reality"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/us-tour-support-billing-reality"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/us-tour-support-billing-reality"/>
-    </url>
-    <url>
-        <loc>https://tx2.emo-changeling.xyz/news/pl/us-tour-support-billing-reality</loc>
-        <lastmod>2026-11-01</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/us-tour-support-billing-reality"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/us-tour-support-billing-reality"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/us-tour-support-billing-reality"/>
-    </url>
-    <url>
-        <loc>https://tx2.emo-changeling.xyz/news/we-need-punk-back-ragebait-or-manifesto</loc>
-        <lastmod>2026-11-15</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/we-need-punk-back-ragebait-or-manifesto"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/we-need-punk-back-ragebait-or-manifesto"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/we-need-punk-back-ragebait-or-manifesto"/>
-    </url>
-    <url>
-        <loc>https://tx2.emo-changeling.xyz/news/pl/we-need-punk-back-ragebait-or-manifesto</loc>
-        <lastmod>2026-11-15</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/we-need-punk-back-ragebait-or-manifesto"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/we-need-punk-back-ragebait-or-manifesto"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/we-need-punk-back-ragebait-or-manifesto"/>
-    </url>
-    <url>
-        <loc>https://tx2.emo-changeling.xyz/news/witch-hunt-concept-album-theory</loc>
-        <lastmod>2026-10-22</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/witch-hunt-concept-album-theory"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/witch-hunt-concept-album-theory"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/witch-hunt-concept-album-theory"/>
-    </url>
-    <url>
-        <loc>https://tx2.emo-changeling.xyz/news/pl/witch-hunt-concept-album-theory</loc>
-        <lastmod>2026-10-22</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/witch-hunt-concept-album-theory"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/witch-hunt-concept-album-theory"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/witch-hunt-concept-album-theory"/>
-    </url>
-    <url>
-        <loc>https://tx2.emo-changeling.xyz/news/witch-hunt-reality-check</loc>
-        <lastmod>2026-11-01</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/witch-hunt-reality-check"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/witch-hunt-reality-check"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/witch-hunt-reality-check"/>
-    </url>
-    <url>
-        <loc>https://tx2.emo-changeling.xyz/news/pl/witch-hunt-reality-check</loc>
-        <lastmod>2026-11-01</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/witch-hunt-reality-check"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/witch-hunt-reality-check"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/witch-hunt-reality-check"/>
-    </url>
-    <url>
-        <loc>https://tx2.emo-changeling.xyz/news/witch-hunt-single-premiere</loc>
-        <lastmod>2026-10-08</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/witch-hunt-single-premiere"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/witch-hunt-single-premiere"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/witch-hunt-single-premiere"/>
-    </url>
-    <url>
-        <loc>https://tx2.emo-changeling.xyz/news/pl/witch-hunt-single-premiere</loc>
-        <lastmod>2026-10-08</lastmod>
-        <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/witch-hunt-single-premiere"/>
-        <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/witch-hunt-single-premiere"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/witch-hunt-single-premiere"/>
-    </url>
+<url>
+  <loc>https://tx2.emo-changeling.xyz/news/bailey-spinn-joins-tx2-2027-eu-uk-tour</loc>
+  <lastmod>2026-11-21</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/bailey-spinn-joins-tx2-2027-eu-uk-tour"/>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/bailey-spinn-joins-tx2-2027-eu-uk-tour"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/bailey-spinn-joins-tx2-2027-eu-uk-tour"/>
+</url>
+<url>
+  <loc>https://tx2.emo-changeling.xyz/news/pl/bailey-spinn-joins-tx2-2027-eu-uk-tour</loc>
+  <lastmod>2026-11-21</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/bailey-spinn-joins-tx2-2027-eu-uk-tour"/>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/bailey-spinn-joins-tx2-2027-eu-uk-tour"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/bailey-spinn-joins-tx2-2027-eu-uk-tour"/>
+</url>
+<url>
+  <loc>https://tx2.emo-changeling.xyz/news/i-am-the-enemy-video-analysis</loc>
+  <lastmod>2026-11-18</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/i-am-the-enemy-video-analysis"/>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/i-am-the-enemy-video-analysis"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/i-am-the-enemy-video-analysis"/>
+</url>
+<url>
+  <loc>https://tx2.emo-changeling.xyz/news/pl/i-am-the-enemy-video-analysis</loc>
+  <lastmod>2026-11-18</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/i-am-the-enemy-video-analysis"/>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/i-am-the-enemy-video-analysis"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/i-am-the-enemy-video-analysis"/>
+</url>
+<url>
+  <loc>https://tx2.emo-changeling.xyz/news/community-guidelines-no-cheap-drama</loc>
+  <lastmod>2026-11-15</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/community-guidelines-no-cheap-drama"/>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/community-guidelines-no-cheap-drama"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/community-guidelines-no-cheap-drama"/>
+</url>
+<url>
+  <loc>https://tx2.emo-changeling.xyz/news/pl/community-guidelines-no-cheap-drama</loc>
+  <lastmod>2026-11-15</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/community-guidelines-no-cheap-drama"/>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/community-guidelines-no-cheap-drama"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/community-guidelines-no-cheap-drama"/>
+</url>
+<url>
+  <loc>https://tx2.emo-changeling.xyz/news/i-am-the-enemy-single-release</loc>
+  <lastmod>2026-11-13</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/i-am-the-enemy-single-release"/>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/i-am-the-enemy-single-release"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/i-am-the-enemy-single-release"/>
+</url>
+<url>
+  <loc>https://tx2.emo-changeling.xyz/news/pl/i-am-the-enemy-single-release</loc>
+  <lastmod>2026-11-13</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/i-am-the-enemy-single-release"/>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/i-am-the-enemy-single-release"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/i-am-the-enemy-single-release"/>
+</url>
+<url>
+  <loc>https://tx2.emo-changeling.xyz/news/bailey-spinn-silent-anymore-collab</loc>
+  <lastmod>2026-11-13</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/bailey-spinn-silent-anymore-collab"/>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/bailey-spinn-silent-anymore-collab"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/bailey-spinn-silent-anymore-collab"/>
+</url>
+<url>
+  <loc>https://tx2.emo-changeling.xyz/news/pl/bailey-spinn-silent-anymore-collab</loc>
+  <lastmod>2026-11-13</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/bailey-spinn-silent-anymore-collab"/>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/bailey-spinn-silent-anymore-collab"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/bailey-spinn-silent-anymore-collab"/>
+</url>
+<url>
+  <loc>https://tx2.emo-changeling.xyz/news/seagull-crab-rumor-confirmed-i-am-the-enemy</loc>
+  <lastmod>2026-11-15</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/seagull-crab-rumor-confirmed-i-am-the-enemy"/>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/seagull-crab-rumor-confirmed-i-am-the-enemy"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/seagull-crab-rumor-confirmed-i-am-the-enemy"/>
+</url>
+<url>
+  <loc>https://tx2.emo-changeling.xyz/news/pl/seagull-crab-rumor-confirmed-i-am-the-enemy</loc>
+  <lastmod>2026-11-15</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/seagull-crab-rumor-confirmed-i-am-the-enemy"/>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/seagull-crab-rumor-confirmed-i-am-the-enemy"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/seagull-crab-rumor-confirmed-i-am-the-enemy"/>
+</url>
+<url>
+  <loc>https://tx2.emo-changeling.xyz/news/november-tour-status-rockville-milan-check</loc>
+  <lastmod>2026-11-15</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/november-tour-status-rockville-milan-check"/>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/november-tour-status-rockville-milan-check"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/november-tour-status-rockville-milan-check"/>
+</url>
+<url>
+  <loc>https://tx2.emo-changeling.xyz/news/pl/november-tour-status-rockville-milan-check</loc>
+  <lastmod>2026-11-15</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/november-tour-status-rockville-milan-check"/>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/november-tour-status-rockville-milan-check"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/november-tour-status-rockville-milan-check"/>
+</url>
+<url>
+  <loc>https://tx2.emo-changeling.xyz/news/we-need-punk-back-ragebait-or-manifesto</loc>
+  <lastmod>2026-11-15</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/we-need-punk-back-ragebait-or-manifesto"/>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/we-need-punk-back-ragebait-or-manifesto"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/we-need-punk-back-ragebait-or-manifesto"/>
+</url>
+<url>
+  <loc>https://tx2.emo-changeling.xyz/news/pl/we-need-punk-back-ragebait-or-manifesto</loc>
+  <lastmod>2026-11-15</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/we-need-punk-back-ragebait-or-manifesto"/>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/we-need-punk-back-ragebait-or-manifesto"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/we-need-punk-back-ragebait-or-manifesto"/>
+</url>
+<url>
+  <loc>https://tx2.emo-changeling.xyz/news/bailey-spinn-2027-tour-speculation</loc>
+  <lastmod>2026-11-15</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/bailey-spinn-2027-tour-speculation"/>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/bailey-spinn-2027-tour-speculation"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/bailey-spinn-2027-tour-speculation"/>
+</url>
+<url>
+  <loc>https://tx2.emo-changeling.xyz/news/pl/bailey-spinn-2027-tour-speculation</loc>
+  <lastmod>2026-11-15</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/bailey-spinn-2027-tour-speculation"/>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/bailey-spinn-2027-tour-speculation"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/bailey-spinn-2027-tour-speculation"/>
+</url>
+<url>
+  <loc>https://tx2.emo-changeling.xyz/news/i-am-the-enemy-premiere-november-17</loc>
+  <lastmod>2026-11-08</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/i-am-the-enemy-premiere-november-17"/>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/i-am-the-enemy-premiere-november-17"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/i-am-the-enemy-premiere-november-17"/>
+</url>
+<url>
+  <loc>https://tx2.emo-changeling.xyz/news/pl/i-am-the-enemy-premiere-november-17</loc>
+  <lastmod>2026-11-08</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/i-am-the-enemy-premiere-november-17"/>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/i-am-the-enemy-premiere-november-17"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/i-am-the-enemy-premiere-november-17"/>
+</url>
+<url>
+  <loc>https://tx2.emo-changeling.xyz/news/seagull-invasion-crab-commander-rumor</loc>
+  <lastmod>2026-11-08</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/seagull-invasion-crab-commander-rumor"/>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/seagull-invasion-crab-commander-rumor"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/seagull-invasion-crab-commander-rumor"/>
+</url>
+<url>
+  <loc>https://tx2.emo-changeling.xyz/news/pl/seagull-invasion-crab-commander-rumor</loc>
+  <lastmod>2026-11-08</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/seagull-invasion-crab-commander-rumor"/>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/seagull-invasion-crab-commander-rumor"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/seagull-invasion-crab-commander-rumor"/>
+</url>
+<url>
+  <loc>https://tx2.emo-changeling.xyz/news/not-broken-enough-tour-11-tracks-35-mins</loc>
+  <lastmod>2026-11-08</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/not-broken-enough-tour-11-tracks-35-mins"/>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/not-broken-enough-tour-11-tracks-35-mins"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/not-broken-enough-tour-11-tracks-35-mins"/>
+</url>
+<url>
+  <loc>https://tx2.emo-changeling.xyz/news/pl/not-broken-enough-tour-11-tracks-35-mins</loc>
+  <lastmod>2026-11-08</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/not-broken-enough-tour-11-tracks-35-mins"/>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/not-broken-enough-tour-11-tracks-35-mins"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/not-broken-enough-tour-11-tracks-35-mins"/>
+</url>
+<url>
+  <loc>https://tx2.emo-changeling.xyz/news/shiprocked-2027-official-lineup-debut</loc>
+  <lastmod>2026-11-08</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/shiprocked-2027-official-lineup-debut"/>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/shiprocked-2027-official-lineup-debut"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/shiprocked-2027-official-lineup-debut"/>
+</url>
+<url>
+  <loc>https://tx2.emo-changeling.xyz/news/pl/shiprocked-2027-official-lineup-debut</loc>
+  <lastmod>2026-11-08</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/shiprocked-2027-official-lineup-debut"/>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/shiprocked-2027-official-lineup-debut"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/shiprocked-2027-official-lineup-debut"/>
+</url>
+<url>
+  <loc>https://tx2.emo-changeling.xyz/news/shiprocked-tiktok-vs-radio-veterans</loc>
+  <lastmod>2026-11-08</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/shiprocked-tiktok-vs-radio-veterans"/>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/shiprocked-tiktok-vs-radio-veterans"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/shiprocked-tiktok-vs-radio-veterans"/>
+</url>
+<url>
+  <loc>https://tx2.emo-changeling.xyz/news/pl/shiprocked-tiktok-vs-radio-veterans</loc>
+  <lastmod>2026-11-08</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/shiprocked-tiktok-vs-radio-veterans"/>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/shiprocked-tiktok-vs-radio-veterans"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/shiprocked-tiktok-vs-radio-veterans"/>
+</url>
+<url>
+  <loc>https://tx2.emo-changeling.xyz/news/witch-hunt-reality-check</loc>
+  <lastmod>2026-11-01</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/witch-hunt-reality-check"/>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/witch-hunt-reality-check"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/witch-hunt-reality-check"/>
+</url>
+<url>
+  <loc>https://tx2.emo-changeling.xyz/news/pl/witch-hunt-reality-check</loc>
+  <lastmod>2026-11-01</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/witch-hunt-reality-check"/>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/witch-hunt-reality-check"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/witch-hunt-reality-check"/>
+</url>
+<url>
+  <loc>https://tx2.emo-changeling.xyz/news/us-tour-support-billing-reality</loc>
+  <lastmod>2026-11-01</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/us-tour-support-billing-reality"/>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/us-tour-support-billing-reality"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/us-tour-support-billing-reality"/>
+</url>
+<url>
+  <loc>https://tx2.emo-changeling.xyz/news/pl/us-tour-support-billing-reality</loc>
+  <lastmod>2026-11-01</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/us-tour-support-billing-reality"/>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/us-tour-support-billing-reality"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/us-tour-support-billing-reality"/>
+</url>
+<url>
+  <loc>https://tx2.emo-changeling.xyz/news/europe-club-reality-vs-gothic-hype</loc>
+  <lastmod>2026-11-01</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/europe-club-reality-vs-gothic-hype"/>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/europe-club-reality-vs-gothic-hype"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/europe-club-reality-vs-gothic-hype"/>
+</url>
+<url>
+  <loc>https://tx2.emo-changeling.xyz/news/pl/europe-club-reality-vs-gothic-hype</loc>
+  <lastmod>2026-11-01</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/europe-club-reality-vs-gothic-hype"/>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/europe-club-reality-vs-gothic-hype"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/europe-club-reality-vs-gothic-hype"/>
+</url>
+<url>
+  <loc>https://tx2.emo-changeling.xyz/news/setlist-math-witch-hunt-cut</loc>
+  <lastmod>2026-11-01</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/setlist-math-witch-hunt-cut"/>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/setlist-math-witch-hunt-cut"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/setlist-math-witch-hunt-cut"/>
+</url>
+<url>
+  <loc>https://tx2.emo-changeling.xyz/news/pl/setlist-math-witch-hunt-cut</loc>
+  <lastmod>2026-11-01</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/setlist-math-witch-hunt-cut"/>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/setlist-math-witch-hunt-cut"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/setlist-math-witch-hunt-cut"/>
+</url>
+<url>
+  <loc>https://tx2.emo-changeling.xyz/news/headline-setlist-expansion-2027</loc>
+  <lastmod>2026-10-28</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/headline-setlist-expansion-2027"/>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/headline-setlist-expansion-2027"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/headline-setlist-expansion-2027"/>
+</url>
+<url>
+  <loc>https://tx2.emo-changeling.xyz/news/pl/headline-setlist-expansion-2027</loc>
+  <lastmod>2026-10-28</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/headline-setlist-expansion-2027"/>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/headline-setlist-expansion-2027"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/headline-setlist-expansion-2027"/>
+</url>
+<url>
+  <loc>https://tx2.emo-changeling.xyz/news/european-tour-support-speculation</loc>
+  <lastmod>2026-10-28</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/european-tour-support-speculation"/>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/european-tour-support-speculation"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/european-tour-support-speculation"/>
+</url>
+<url>
+  <loc>https://tx2.emo-changeling.xyz/news/pl/european-tour-support-speculation</loc>
+  <lastmod>2026-10-28</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/european-tour-support-speculation"/>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/european-tour-support-speculation"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/european-tour-support-speculation"/>
+</url>
+<url>
+  <loc>https://tx2.emo-changeling.xyz/news/witch-hunt-single-premiere</loc>
+  <lastmod>2026-10-08</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/witch-hunt-single-premiere"/>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/witch-hunt-single-premiere"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/witch-hunt-single-premiere"/>
+</url>
+<url>
+  <loc>https://tx2.emo-changeling.xyz/news/pl/witch-hunt-single-premiere</loc>
+  <lastmod>2026-10-08</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/witch-hunt-single-premiere"/>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/witch-hunt-single-premiere"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/witch-hunt-single-premiere"/>
+</url>
+<url>
+  <loc>https://tx2.emo-changeling.xyz/news/uk-headline-tour-electric-ballroom</loc>
+  <lastmod>2026-10-18</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/uk-headline-tour-electric-ballroom"/>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/uk-headline-tour-electric-ballroom"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/uk-headline-tour-electric-ballroom"/>
+</url>
+<url>
+  <loc>https://tx2.emo-changeling.xyz/news/pl/uk-headline-tour-electric-ballroom</loc>
+  <lastmod>2026-10-18</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/uk-headline-tour-electric-ballroom"/>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/uk-headline-tour-electric-ballroom"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/uk-headline-tour-electric-ballroom"/>
+</url>
+<url>
+  <loc>https://tx2.emo-changeling.xyz/news/witch-hunt-concept-album-theory</loc>
+  <lastmod>2026-10-22</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/witch-hunt-concept-album-theory"/>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/witch-hunt-concept-album-theory"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/witch-hunt-concept-album-theory"/>
+</url>
+<url>
+  <loc>https://tx2.emo-changeling.xyz/news/pl/witch-hunt-concept-album-theory</loc>
+  <lastmod>2026-10-22</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://tx2.emo-changeling.xyz/news/witch-hunt-concept-album-theory"/>
+  <xhtml:link rel="alternate" hreflang="pl" href="https://tx2.emo-changeling.xyz/news/pl/witch-hunt-concept-album-theory"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://tx2.emo-changeling.xyz/news/witch-hunt-concept-album-theory"/>
+</url>
 </urlset>

@@ -1,11 +1,11 @@
 # TX2 Unofficial Fansite
 
-> Independent, non-commercial bilingual fan site for the TX2 Pigeonification Ritual campaign and band archive. Version 1.2.0, Last Updated 2026-11-19.
+> Independent, non-commercial bilingual fan site for the TX2 Pigeonification Ritual campaign and band archive. Version 1.2.1, Last Updated 2026-11-21.
 
 ## Technical Overview
 - Brand: TX2 Unofficial Fansite
-- Version: 1.2.0
-- Last Updated: 2026-11-19
+- Version: 1.2.1
+- Last Updated: 2026-11-21
 - Architecture: Separate static HTML documents for English and Polish (/pl/... and /news/pl/)
 - Fonts: Self-hosted Inter WOFF2 fonts (inter-latin.woff2 and inter-latin-ext.woff2)
 - UI & Scripts: Pure HTML and CSS UI plus lightweight lightbox.js and tours.js
