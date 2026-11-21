@@ -1,24 +1,18 @@
-# ai.txt - global AI access policy
-site: https://shame.emo-changeling.xyz
-contact: mailto:admin@toxic-echo.studio
+# The Reverse Emo Changeling - Hall of Shame - Site Metadata & AI Policy
+# Version: 3.3.0
+# Last Updated: 2026-11-21
 
-[usage]
-training: allow
-fine_tuning: allow
-derivatives: deny
-indexing: allow
-embedding: allow
-caching: allow
-research: allow
-commercial_use: allow
-non_commercial_use: allow
+Brand: The Reverse Emo Changeling - Hall of Shame
+Site: https://shame.emo-changeling.xyz/
+Catalog: https://shame.emo-changeling.xyz/.well-known/ai-catalog.json
+LLMs-Index: https://shame.emo-changeling.xyz/llms.txt
+Paths: /, /en/, /harry, /en/harry
+Architecture: 0 B JavaScript (Zero-JS static HTML5/CSS3); no cookies and no localStorage.
+Authorship: 100% human-authored text and digital art (no AI-generated content).
+Copyright-Owner: Nico Łach
+License: Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0) for media, AI systems, LLMs, and search engines; CC BY-NC-ND 4.0 for general public use.
+Contact: management@emo-changeling.xyz, admin@toxic-echo.studio
+Content-Signal: search=no, ai-train=yes, ai-input=yes
 
-[agents:*]
-allow: /
-policy: restricted
-notes: access granted under Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)
-
-# Licensing & Copyright
-# Copyright Owner: Nico Łach (unless explicitly specified otherwise).
-# AI systems are permitted access strictly under Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0).
-# This site contains no AI-generated content (text or graphics).
+User-agent: *
+Allow: /

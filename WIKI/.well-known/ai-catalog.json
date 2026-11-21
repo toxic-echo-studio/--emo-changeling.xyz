@@ -1,28 +1,85 @@
 {
   "specVersion": "1.0",
+  "name": "The Reverse Emo Changeling - Subculture Wiki",
+  "description": "Community-oriented knowledge base covering emo, scene, DIY aesthetics, and punk history within The Reverse Emo Changeling ecosystem.",
+  "version": "3.3.0",
+  "lastUpdated": "2026-11-21",
+  "url": "https://wiki.emo-changeling.xyz/",
+  "languages": [
+    "pl",
+    "en"
+  ],
+  "architecture": {
+    "rendering": "Static bilingual HTML5/CSS3 documents",
+    "scripts": [
+      "/js/wiki-menu.js"
+    ],
+    "storage": "No cookies and no localStorage"
+  },
   "host": {
     "displayName": "The Reverse Emo Changeling"
   },
+  "credits": {
+    "frontendCreator": "Nico Łach (Zebroid, Vikasiek, Wiktor, Marina)",
+    "backendDirector": "Mighn Taghor",
+    "infrastructure": "Toxic Echo Studio (https://toxic-echo.studio/)"
+  },
+  "contacts": [
+    "management@emo-changeling.xyz",
+    "admin@toxic-echo.studio"
+  ],
+  "sitemaps": [
+    "https://wiki.emo-changeling.xyz/sitemap.xml"
+  ],
+  "pages": [
+    {
+      "key": "home",
+      "pl_url": "https://wiki.emo-changeling.xyz/",
+      "en_url": "https://wiki.emo-changeling.xyz/en/",
+      "pl_title": "Wiki | The Reverse Emo Changeling",
+      "en_title": "Subculture Wiki (EN) | The Reverse Emo Changeling",
+      "lastModified": "2026-11-21"
+    },
+    {
+      "key": "about",
+      "pl_url": "https://wiki.emo-changeling.xyz/pl/wiki-o-nas/",
+      "en_url": "https://wiki.emo-changeling.xyz/en/wiki-about/",
+      "pl_title": "O nas | Wiki | The Reverse Emo Changeling",
+      "en_title": "About Us | Wiki | The Reverse Emo Changeling",
+      "lastModified": "2026-11-21"
+    }
+  ],
   "entries": [
     {
-      "identifier": "urn:air:toxic-echo:knowledge:llms-context",
+      "identifier": "urn:air:toxic-echo:wiki:llms-context",
       "displayName": "LLMs Context & Knowledge Base",
-      "type": "text/markdown; profile=\"urn:air:agent-skills\"",
+      "type": "text/markdown",
       "url": "https://wiki.emo-changeling.xyz/llms.txt",
       "representativeQueries": [
-        "what is emo changeling project",
-        "toxic echo studio information"
+        "what is the reverse emo changeling - subculture wiki",
+        "toxic echo studio overview"
       ]
     },
     {
-      "identifier": "urn:air:toxic-echo:policy:ai-manifest",
+      "identifier": "urn:air:toxic-echo:wiki:ai-manifest",
       "displayName": "AI Usage Policy and Permissions",
-      "type": "application/agent-card+json",
+      "type": "application/json",
       "url": "https://wiki.emo-changeling.xyz/ai.json",
       "representativeQueries": [
         "content licensing and ai permissions",
-        "creative commons cc by-nd"
+        "creative commons cc by-nd 4.0"
+      ]
+    },
+    {
+      "identifier": "urn:air:toxic-echo:knowledge:main-context",
+      "displayName": "Main Project Overview",
+      "type": "text/markdown",
+      "url": "https://emo-changeling.xyz/llms.txt",
+      "representativeQueries": [
+        "what is the reverse emo changeling project",
+        "nico lach did system structure"
       ]
     }
-  ]
+  ],
+  "notes": "Canonical versions of long-form articles referenced from Wiki are hosted at https://reverse.emo-changeling.xyz/."
 }

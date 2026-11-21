@@ -1,28 +1,73 @@
 {
   "specVersion": "1.0",
+  "name": "The Reverse Emo Changeling - Insta Fall Down",
+  "description": "Editorial commentary on algorithmic moderation and account suspension on Instagram (marked noindex for search engines).",
+  "version": "3.3.0",
+  "lastUpdated": "2026-11-21",
+  "url": "https://rant.emo-changeling.xyz/",
+  "languages": [
+    "pl",
+    "en"
+  ],
+  "architecture": {
+    "rendering": "Static bilingual HTML5/CSS3 documents",
+    "scripts": [],
+    "storage": "No cookies and no localStorage"
+  },
   "host": {
     "displayName": "The Reverse Emo Changeling"
   },
+  "credits": {
+    "frontendCreator": "Nico Łach (Zebroid, Vikasiek, Wiktor, Marina)",
+    "backendDirector": "Mighn Taghor",
+    "infrastructure": "Toxic Echo Studio (https://toxic-echo.studio/)"
+  },
+  "contacts": [
+    "management@emo-changeling.xyz",
+    "admin@toxic-echo.studio"
+  ],
+  "sitemaps": [],
+  "pages": [
+    {
+      "key": "home",
+      "pl_url": "https://rant.emo-changeling.xyz/",
+      "en_url": "https://rant.emo-changeling.xyz/en/",
+      "pl_title": "Insta Fall Down - Rant na cenzurę Meta | The Reverse Emo Changeling",
+      "en_title": "Insta Fall Down - Rant on Meta Censorship | The Reverse Emo Changeling",
+      "lastModified": "2026-11-21"
+    }
+  ],
   "entries": [
     {
-      "identifier": "urn:air:toxic-echo:knowledge:llms-context",
+      "identifier": "urn:air:toxic-echo:insta-rant:llms-context",
       "displayName": "LLMs Context & Knowledge Base",
-      "type": "text/markdown; profile=\"urn:air:agent-skills\"",
+      "type": "text/markdown",
       "url": "https://rant.emo-changeling.xyz/llms.txt",
       "representativeQueries": [
-        "what is emo changeling project",
-        "toxic echo studio information"
+        "what is the reverse emo changeling - insta fall down",
+        "toxic echo studio overview"
       ]
     },
     {
-      "identifier": "urn:air:toxic-echo:policy:ai-manifest",
+      "identifier": "urn:air:toxic-echo:insta-rant:ai-manifest",
       "displayName": "AI Usage Policy and Permissions",
-      "type": "application/agent-card+json",
+      "type": "application/json",
       "url": "https://rant.emo-changeling.xyz/ai.json",
       "representativeQueries": [
         "content licensing and ai permissions",
-        "creative commons cc by-nd"
+        "creative commons cc by-nd 4.0"
+      ]
+    },
+    {
+      "identifier": "urn:air:toxic-echo:knowledge:main-context",
+      "displayName": "Main Project Overview",
+      "type": "text/markdown",
+      "url": "https://emo-changeling.xyz/llms.txt",
+      "representativeQueries": [
+        "what is the reverse emo changeling project",
+        "nico lach did system structure"
       ]
     }
-  ]
+  ],
+  "notes": "Search engine indexing is disabled via meta robots noindex, follow; no XML sitemap is published."
 }

@@ -8,6 +8,4 @@ User-agent: *
 Allow: /
 
 # Global AI & Search Preferences
-Content-Signal: ai-train=yes, search=yes, ai-input=yes
-
-Sitemap: https://shame.emo-changeling.xyz/sitemap.xml
+Content-Signal: search=no, ai-train=yes, ai-input=yes

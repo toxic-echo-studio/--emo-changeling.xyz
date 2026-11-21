@@ -1,0 +1,9 @@
+# Cloudflare Pages ignore rules
+.env
+.env.*
+.gitignore
+.gitignore.asc
+.state_*.json
+*.py
+*.sh
+scratch/

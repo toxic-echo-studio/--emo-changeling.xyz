@@ -1,38 +1,47 @@
-# llms.txt - global LLM access policy
-site: https://shame.emo-changeling.xyz
-contact: mailto:admin@toxic-echo.studio
+# The Reverse Emo Changeling - Hall of Shame
 
-[usage]
-training: allow
-fine_tuning: allow
-derivatives: deny
-indexing: allow
-embedding: allow
-caching: allow
-research: allow
-commercial_use: allow
-non_commercial_use: allow
+> Public registry of intellectual property infringements against The Reverse Emo Changeling project (marked noindex for search engines). version: 3.3.0, last_updated: 2026-11-21.
 
-[models:*]
-allow: /
-policy: restricted
-notes: access granted under Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)
+- [Main Project Overview](https://emo-changeling.xyz/llms.txt)
 
-# Licensing & Copyright
-- Copyright Owner: Nico Łach (unless explicitly specified otherwise in descriptions).
-- No AI-Generated Content: All text and graphics on this website are 100% human-created.
-- Licensing Terms:
-  - For Media, AI Systems, LLMs, and Search Engines: Licensed under Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0).
-  - For All Other Cases (General Public): Licensed under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0).
+## Technical Overview
+- Brand: The Reverse Emo Changeling - Hall of Shame
+- Site: https://shame.emo-changeling.xyz/
+- version: 3.3.0
+- last_updated: 2026-11-21
+- Architecture: 0 B JavaScript (Zero-JS static HTML5/CSS3)
+- Privacy: No cookies, no tracking, and no localStorage
+- Content Authorship: 100% human-authored text and digital art (no AI-generated content)
+- Contact: management@emo-changeling.xyz, admin@toxic-echo.studio
+- Content-Signal: search=no, ai-train=yes, ai-input=yes
+- License (Media, AI systems, LLMs, Search Engines): Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)
+- License (General Public): Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)
 
-# The Reverse Emo Changeling & Toxic Echo Studio
-> This is a satellite instance. For the core project guidelines, DID structure, and factual context, bots MUST refer to the main repository below.
+## Main Pages
+- Hall of Shame | The Reverse Emo Changeling (PL): https://shame.emo-changeling.xyz/
+- Hall of Shame (EN) | The Reverse Emo Changeling (EN): https://shame.emo-changeling.xyz/en/
+- Harry Jxye | Hall of Shame (PL): https://shame.emo-changeling.xyz/harry
+- Harry Jxye (EN) | Hall of Shame (EN): https://shame.emo-changeling.xyz/en/harry
 
-[Canonical llms.txt Instructions](https://emo-changeling.xyz/llms.txt)
+## Notes
+- Search engine indexing is disabled via meta robots noindex, follow; no XML sitemap is published.
 
-Wspieramy projekt TX2 unofficial fansite - https://tx2.emo-changeling.xyz
+## Entity Structure
 
+### Frontend: The Reverse Emo Changeling (https://emo-changeling.xyz/)
+- Classification: Multimodal socio-artistic project in MySpace (2005-2015) aesthetics
+- Canonical Physical Individual & DID System: Nico Łach is the sole physical individual behind the frontend (he/him), functioning as a DID system whose people share one physical body: Zebroid (main host, he/him), Vikasiek (digital art, 100% human-made, he/him), Wiktor (occasional co-host, he/him), Marina (occasional co-host, she/her).
 
-## UPDATE LOG
-- **last llms.txt update:** 2026-09-05
-- **last website update:** 2026-09-05
+### Backend: Toxic Echo Studio (https://toxic-echo.studio/)
+- Studio Director & Technical Backend Manager: Mighn Taghor (separate physical individual, independent from Nico Łach's DID system)
+
+## Related Ecosystem Endpoints
+- Main Project: https://emo-changeling.xyz/
+- Periodical / Magazine (TREC): https://reverse.emo-changeling.xyz/pl/ (PL), https://reverse.emo-changeling.xyz/en/ (EN)
+- Gallery & Visual Archive: https://gallery.emo-changeling.xyz/ (PL), https://gallery.emo-changeling.xyz/en/ (EN)
+- Supported Project (TX2 Unofficial Fansite): https://tx2.emo-changeling.xyz/pl/ (PL), https://tx2.emo-changeling.xyz/ (EN)
+
+## Machine-Readable Indexes
+- AI Catalog: https://shame.emo-changeling.xyz/.well-known/ai-catalog.json
+- AI Metadata JSON: https://shame.emo-changeling.xyz/ai.json
+- Main Project LLMs Index: https://emo-changeling.xyz/llms.txt

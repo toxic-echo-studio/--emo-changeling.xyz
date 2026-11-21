@@ -626,21 +626,6 @@ details.floating-nav[open] .floating-nav-menu {
 }
 
 /* Dostępność WCAG 2.2 AA: widoczny focus dla skip-linków oraz redukcja animacji */
-.llm-content:focus,
-.llm-content:focus-visible {
-    left: 10px !important;
-    top: 10px !important;
-    width: auto !important;
-    height: auto !important;
-    clip: auto !important;
-    z-index: 10000 !important;
-    background: #000000;
-    color: #00ff66;
-    padding: 8px 14px;
-    border: 2px solid #ff007f;
-    text-decoration: none;
-    font-weight: bold;
-}
 
 :focus-visible {
     outline: 2px solid #00ff66;
@@ -654,4 +639,93 @@ details.floating-nav[open] .floating-nav-menu {
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
     }
+}
+
+/* =========================================
+   STRONA 404
+========================================= */
+body.page-404,
+body.page-404 *,
+body.page-404 *::before,
+body.page-404 *::after {
+    box-sizing: border-box;
+}
+
+body.page-404 {
+    margin: 0;
+    padding: 1.5rem;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    color: #f0f0f0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif, monospace;
+    line-height: 1.6;
+    cursor: auto;
+}
+
+.card-404 {
+    width: 100%;
+    max-width: 640px;
+    padding: 2rem;
+    background-color: #0a0a0a;
+    border: 2px solid #cccccc;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.85);
+}
+
+.card-404 .brand-404 {
+    margin: 0 0 0.75rem 0;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.875rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #cccccc;
+}
+
+.card-404 h1 {
+    margin: 0 0 1rem 0;
+    font-size: clamp(1.35rem, 3vw, 1.85rem);
+    line-height: 1.25;
+    color: #ffffff;
+    text-shadow: none;
+    letter-spacing: normal;
+}
+
+.card-404 p {
+    margin: 0 0 0.85rem 0;
+    font-size: 1rem;
+    color: #d8d8d8;
+}
+
+.card-404 nav ul {
+    list-style: none;
+    margin: 1.5rem 0 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.card-404 nav a {
+    display: inline-block;
+    padding: 0.5rem 0.95rem;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    color: #cccccc;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.card-404 nav a:hover,
+.card-404 nav a:focus-visible {
+    background-color: #cccccc;
+    color: #000000;
+    text-shadow: none;
+    outline: none;
 }

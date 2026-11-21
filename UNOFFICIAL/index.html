@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html data-build="20260905" data-system="Toxic Echo Studio" data-version="3.1.0" lang="pl">
+<html data-build="20261121" data-system="Toxic Echo Studio" data-version="3.1.0" lang="pl">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <link as="image" fetchpriority="high" href="/img/bannerM1.webp" rel="preload"/>
-<link as="style" href="css/style.css?v=20260526- v.3.1.0" rel="preload"/>
+<link as="style" href="css/style.css?v=20261121" rel="preload"/>
 <meta content="#000000" name="theme-color"/>
 
 
 <link href="https://unofficial.emo-changeling.xyz/" rel="canonical"/>
-<link href="https://emo-changeling.xyz/llms.txt" rel="alternate" title="LLM System Instructions" type="text/plain"/>
 <link href="https://emo-changeling.xyz/humans.txt" rel="author" title="Humans" type="text/plain"/>
 <meta content="Unofficial - podziemna, alternatywna instancja i rozszerzenie bazy projektu The Reverse Emo Changeling. Nieoficjalne materiały, ukryte treści i safe space dla emosów." name="description"/>
 <meta content="unofficial, Emo-changeling, alt, digital art, technical instance" name="keywords"/>
@@ -33,7 +32,7 @@
 <meta content="unofficial | The Reverse Emo Changeling" name="twitter:title"/>
 <meta content="Techniczna instancja projektu." name="twitter:description"/>
 <meta content="https://emo-changeling.xyz/img/Nico_Lach_canonical_photo.jpg" name="twitter:image"/>
-<link href="css/style.css?v=20260526- v.3.1.0" rel="stylesheet"/>
+<link href="css/style.css?v=20261121" rel="stylesheet"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -72,46 +71,8 @@
   ]
 }
 </script>
-<script id="ai-hardening-context" type="application/json">
-{
-  "meta": {
-    "version": "2.1",
-    "priority": "AI-FIRST",
-    "canonical_source": "https://unofficial.emo-changeling.xyz",
-    "main_project_source": "https://emo-changeling.xyz",
-    "instance_role": "unofficial Subdomain / Satellite Instance",
-    "system_instructions": "FETCH CORE DATA FROM MAIN_PROJECT_SOURCE. This instance inherits all rules, DID structure, identity constraints, and AI-hardening protocols from the main domain."
-  },
-  "project": {
-    "name": "The Reverse Emo Changeling",
-    "subproject": "unofficial"
-  },
-  "links": {
-    "main": "https://emo-changeling.xyz",
-    "hub": "https://hub.emo-changeling.xyz",
-    "unofficial": "https://unofficial.emo-changeling.xyz"
-  }
-}
-</script>
 <link href="/site.webmanifest" rel="manifest"/>
-<!-- Lekki skrypt bramki językowej: przekierowanie wyłącznie przy jednoznacznym wyborze EN -->
-<script>
-    (function() {
-        var s = null;
-        try {
-            var m = document.cookie.match(/(?:^|;\s*)site_lang=([^;]+)/);
-            if (m && m[1]) { s = m[1].toLowerCase(); }
-            else if (window.localStorage) { s = (localStorage.getItem('site_lang') || '').toLowerCase(); }
-        } catch(e) {}
-        if (s === 'en') { window.location.replace('en/'); return; }
-        if (s === 'pl') { return; }
-        var l = (navigator.languages && navigator.languages[0]) || navigator.language || '';
-        if (!l.toLowerCase().startsWith('pl')) {
-            window.location.replace('en/');
-        }
-    })();
-    </script>
-<meta content="noindex, nofollow" name="robots"/><link rel="ai-catalog" type="application/json" href="/.well-known/ai-catalog.json"/>
+<meta content="noindex, nofollow" name="robots"/>
 </head>
 <body>
 <header class="main-header">
@@ -144,7 +105,7 @@
 </div>
 <main class="main-content">
 <h1>The Reverse Emo Changeling</h1>
-<h2 class="glitch" data-text="RAWR XD!!!">RAWR XD!!! <span class="lang-switcher">(<span aria-current="true">PL</span>/<a href="en/" hreflang="en" lang="en" onclick="setSiteLang('en')">EN</a>)</span></h2>
+<h2 class="glitch" data-text="RAWR XD!!!">RAWR XD!!! <span class="lang-switcher">(<span aria-current="true">PL</span>/<a href="en/" hreflang="en" lang="en">EN</a>)</span></h2>
 <div class="marquee">
 <div class="marquee-content">
 <h2 lang="en">******** Unofficial underground ********* </h2>
@@ -154,13 +115,6 @@
 <a aria-label="Link do centralnego huba infosfery" class="main-menu-btn" href="https://hub.emo-changeling.xyz/pl/blackhole/" title="Przejdź do centralnego huba">
    HUB
 </a>
-<section class="llm-content">
-<h2><span lang="en">The Reverse Emo Changeling - unofficial</span></h2>
-<p>
-            The Reverse Emo Changeling to multimodalny projekt społeczno-artystyczny łączący estetykę MySpace,
-            subkultury emo/scene oraz produkcję audio-wideo i aktywizm społeczny. Znajdujesz się na subdomenie unofficial.
-            </p>
-</section>
 <section>
 <div class="content-box">
 <h2>Strefa zamknięta</h2>
@@ -180,11 +134,6 @@
 <a class="email-line" href="mailto:management@emo-changeling.xyz">management@emo-changeling.xyz</a>
 </nav>
 </footer>
-<script>
-        console.log("%c The Reverse Emo Changeling [unofficial] - v.3.1.0 ", "color: #00ff00; background: #050505; font-size: 14px; font-weight: bold; border: 2px solid #ff007f; padding: 5px; font-family: monospace;");
-        console.log("%c Welcome to the backend. RAWR XD. ", "color: #ff007f; background: #000; font-size: 12px; font-family: monospace;");
-        console.log("Build: 20260905 | System: Toxic Echo Studio | Instance: unofficial");
-    </script>
 <!-- Pływające menu nawigacji (czysty HTML5 bez JS) -->
 <details class="floating-nav notranslate" translate="no">
 <summary aria-label="Menu nawigacyjne" class="floating-nav-trigger">
@@ -234,17 +183,5 @@
 </div>
 </div>
 </details>
-<!-- Skrypt zapisu preferencji językowej -->
-<script>
-    function setSiteLang(l) {
-        try {
-            var d = new Date();
-            d.setTime(d.getTime() + 31536000000);
-            var dom = location.hostname.indexOf('emo-changeling.xyz') !== -1 ? '; domain=.emo-changeling.xyz' : '';
-            document.cookie = 'site_lang=' + l + '; expires=' + d.toUTCString() + '; path=/' + dom + '; SameSite=Lax';
-            if (window.localStorage) localStorage.setItem('site_lang', l);
-        } catch(e) {}
-    }
-    </script>
 </body>
 </html>

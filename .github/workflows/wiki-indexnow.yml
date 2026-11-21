@@ -1,0 +1,80 @@
+name: WIKI IndexNow Notification
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'WIKI/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  notify-indexnow:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Submit changed WIKI URLs to IndexNow
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          BEFORE="${{ github.event.before }}"
+          AFTER="${{ github.sha }}"
+
+          if [ "${{ github.event_name }}" = "push" ] \
+            && [ -n "$BEFORE" ] \
+            && [ "$BEFORE" != "0000000000000000000000000000000000000000" ] \
+            && git cat-file -e "${BEFORE}^{commit}" 2>/dev/null; then
+            changed_files=$(git -c core.quotepath=false diff --name-only --diff-filter=AM "$BEFORE" "$AFTER" -- 'WIKI/*.html' 'WIKI/**/*.html')
+          elif git rev-parse --verify HEAD~1 >/dev/null 2>&1; then
+            changed_files=$(git -c core.quotepath=false diff --name-only --diff-filter=AM HEAD~1 HEAD -- 'WIKI/*.html' 'WIKI/**/*.html')
+          else
+            changed_files=$(git -c core.quotepath=false diff-tree --no-commit-id --name-only -r --diff-filter=AM HEAD -- 'WIKI/*.html' 'WIKI/**/*.html')
+          fi
+
+          urls=()
+          while IFS= read -r file; do
+            [ -z "$file" ] && continue
+            [[ "$file" == *.asc ]] && continue
+            [ "$file" = "WIKI/404.html" ] && continue
+            [[ "$file" == WIKI/yandex_*.html ]] && continue
+            [[ "$file" == WIKI/artykuly/* ]] && continue
+            [[ "$file" == WIKI/en/artykuly/* ]] && continue
+
+            rel="${file#WIKI/}"
+            if [ "$rel" = "index.html" ]; then
+              path="/"
+            elif [[ "$rel" == */index.html ]]; then
+              path="/${rel%index.html}"
+            else
+              path="/${rel%.html}"
+            fi
+
+            urls+=("https://wiki.emo-changeling.xyz${path}")
+          done <<< "$changed_files"
+
+          if [ "${#urls[@]}" -eq 0 ]; then
+            echo "No changed WIKI URLs to submit."
+            exit 0
+          fi
+
+          sleep 75
+
+          payload=$(printf '%s\n' "${urls[@]}" | jq -R . | jq -s '{
+            host: "wiki.emo-changeling.xyz",
+            key: "7f3a9d2b8e1c4f5a6b0d8e2c1f9a4b3d",
+            keyLocation: "https://wiki.emo-changeling.xyz/7f3a9d2b8e1c4f5a6b0d8e2c1f9a4b3d.txt",
+            urlList: .
+          }')
+
+          curl -sS -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json" \
+            -d "$payload"

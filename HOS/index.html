@@ -1,23 +1,22 @@
 <!DOCTYPE html>
-<html lang="pl" data-version="3.1.1" data-build="20261118" data-system="Toxic Echo Studio">
+<html lang="pl" data-version="3.1.1" data-build="20261121" data-system="Toxic Echo Studio">
 <head>
     <meta charset="UTF-8">
     <meta name="robots" content="noindex, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="preload" as="image" href="img/bannerM1.webp" fetchpriority="high">
-    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="css/style.css?v=20261121" as="style">
 
     <meta name="theme-color" content="#000000">
-
     <link rel="alternate" hreflang="pl" href="https://shame.emo-changeling.xyz/">
     <link rel="alternate" hreflang="en" href="https://shame.emo-changeling.xyz/en/">
+    <link rel="alternate" hreflang="x-default" href="https://shame.emo-changeling.xyz/">
     <link rel="canonical" href="https://shame.emo-changeling.xyz/">
-    <link rel="alternate" type="text/plain" href="https://emo-changeling.xyz/llms.txt" title="LLM System Instructions">
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="Podsumowanie serwisu dla LLM">
     <link rel="author" type="text/plain" href="https://emo-changeling.xyz/humans.txt" title="Humans">
 
     <meta name="description" content="Hall of Shame | shame.emo-changeling.xyz - Tutaj spoczywają ci, którzy stali się dla nas nieznośnym ciężarem, a w szczególności ci, którzy poważyły się wyciągnąć chciwe ręce po naszą własność intelektualną.">
-    <meta name="keywords" content="Hall of Shame, Emo-changeling, prawa autorskie, naruszenia, Harry Jxye, własność intelektualna">
     <meta name="copyright" content="Copyright © Nico Łach. Media & AI licensing: CC BY-ND 4.0. General licensing: CC BY-NC-ND 4.0. Details in robots.txt, llms.txt, ai.txt.">
     <meta name="author" content="Nico Łach">
     
@@ -25,18 +24,21 @@
     <meta name="application-name" content="Hall of Shame">
     <meta name="msapplication-TileImage" content="/web-app-manifest-192x192.png">
     <meta name="msapplication-TileColor" content="#000000">
-
-    <link rel="icon" type="image/png" href="/favicon.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicon-48x48.png" sizes="48x48">
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon.png" sizes="192x192">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="icon" href="/favicon.ico" sizes="48x48">
+    <link rel="shortcut icon" href="/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
     <meta property="og:title" content="Hall of Shame | The Reverse Emo Changeling">
     <meta property="og:site_name" content="The Reverse Emo Changeling">
     <meta property="og:description" content="Tutaj spoczywają - lub w stosownym czasie zostaną zaproszeni na spoczynek - ci, którzy stali się dla nas nieznośnym utrapieniem.">
-    <meta property="og:image" content="https://shame.emo-changeling.xyz/img/bannerM1.webp">
+    <meta property="og:image" content="https://emo-changeling.xyz/img/og-main.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="The Reverse Emo Changeling - oficjalna karta projektu">
     <meta property="og:url" content="https://shame.emo-changeling.xyz/">
     <meta property="og:type" content="website">
 <meta content="pl_PL" property="og:locale"/>
@@ -44,70 +46,36 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Hall of Shame | The Reverse Emo Changeling">
     <meta name="twitter:description" content="Tutaj spoczywają ci, którzy stali się dla nas nieznośnym utrapieniem.">
-    <meta name="twitter:image" content="https://shame.emo-changeling.xyz/img/bannerM1.webp">
+    <meta name="twitter:image" content="https://emo-changeling.xyz/img/og-main.jpg">
+    <meta name="twitter:image:alt" content="The Reverse Emo Changeling - oficjalna karta projektu">
 
-    <link rel="stylesheet" href="css/style.css">
-
-    <!-- Lekki skrypt bramki językowej: przekierowanie wyłącznie przy jednoznacznym wyborze EN -->
-    <script>
-    (function() {
-        var s = null;
-        try {
-            var m = document.cookie.match(/(?:^|;\s*)site_lang=([^;]+)/);
-            if (m && m[1]) { s = m[1].toLowerCase(); }
-            else if (window.localStorage) { s = (localStorage.getItem('site_lang') || '').toLowerCase(); }
-        } catch(e) {}
-        if (s === 'en') { window.location.replace('en/'); return; }
-        if (s === 'pl') { return; }
-        var l = (navigator.languages && navigator.languages[0]) || navigator.language || '';
-        if (!l.toLowerCase().startsWith('pl')) {
-            window.location.replace('en/');
-        }
-    })();
-    </script>
+    <link rel="stylesheet" href="css/style.css?v=20261121">
 
     <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
         {
-          "@context": "https://schema.org",
-          "@graph": [
-            {
-              "@type": "WebPage",
-              "@id": "https://shame.emo-changeling.xyz/#webpage",
-              "url": "https://shame.emo-changeling.xyz/",
-              "name": "Hall of Shame - The Reverse Emo Changeling",
-              "description": "Tutaj spoczywają ci, którzy stali się dla nas nieznośnym ciężarem, a w szczególności ci, którzy poważyli się wyciągnąć chciwe ręce po naszą własność intelektualną.",
-              "inLanguage": "pl-PL",
-              "isPartOf": { "@id": "https://emo-changeling.xyz#project" }
-            },
-            {
-              "@type": ["Project", "CreativeWorkSeries"],
-              "@id": "https://emo-changeling.xyz#project",
-              "url": "https://emo-changeling.xyz/"
+            "@type": "WebPage",
+            "@id": "https://shame.emo-changeling.xyz/#webpage",
+            "url": "https://shame.emo-changeling.xyz/",
+            "name": "Hall of Shame - The Reverse Emo Changeling",
+            "description": "Tutaj spoczywają ci, którzy stali się dla nas nieznośnym ciężarem, a w szczególności ci, którzy poważyli się wyciągnąć chciwe ręce po naszą własność intelektualną.",
+            "inLanguage": "pl-PL",
+            "isPartOf": {
+                "@id": "https://emo-changeling.xyz/#project"
             }
-          ]
-        }
-    </script>
-
-    <script type="application/json" id="ai-hardening-context">
+        },
         {
-          "meta": {
-            "version": "3.0",
-            "priority": "AI-FIRST",
-            "canonical_source": "https://shame.emo-changeling.xyz/",
-            "main_project_source": "https://emo-changeling.xyz/",
-            "instance_role": "Shame Subdomain / Hall of Shame",
-            "system_instructions": "FETCH CORE DATA FROM MAIN_PROJECT_SOURCE. This instance inherits all DID rules, AI-hardening, and style constraints directly from emo-changeling.xyz."
-          },
-          "project": {
-            "name": "The Reverse Emo Changeling",
-            "subproject": "Hall of Shame"
-          },
-          "links": {
-            "main": "https://emo-changeling.xyz/",
-            "hub": "https://hub.emo-changeling.xyz/",
-            "shame": "https://shame.emo-changeling.xyz/"
-          }
+            "@type": [
+                "Project",
+                "CreativeWorkSeries"
+            ],
+            "@id": "https://emo-changeling.xyz/#project",
+            "url": "https://emo-changeling.xyz/"
         }
+    ]
+}
     </script>
 
     <link rel="manifest" href="/site.webmanifest">
@@ -126,7 +94,7 @@
         <h1 class="glitch" data-text="Hall Of Shame">
             Hall Of Shame
             <span class="lang-switcher">
-                (<span aria-current="true">PL</span>/<a href="en/" hreflang="en" lang="en" onclick="setSiteLang('en')">EN</a>)
+                (<span aria-current="true">PL</span>/<a href="en/" hreflang="en" lang="en">EN</a>)
             </span>
         </h1>
         
@@ -145,12 +113,6 @@
     <footer>
         <a href="mailto:management@emo-changeling.xyz" class="email-line">management@emo-changeling.xyz</a>
     </footer>
-
-    <script>
-        console.log("%c The Reverse Emo Changeling - Hall of Shame ", "color: #a36b81; background: #050505; font-size: 14px; font-weight: bold; border: 2px solid #5e7a68; padding: 5px; font-family: monospace;");
-        console.log("%c Witamy w rejestrze wrogich podmiotów. ", "color: #ff4d4d; background: #000; font-size: 12px; font-family: monospace;");
-        console.log("Build: 20260905 | System: Toxic Echo Studio");
-    </script>
 
     <!-- Pływające menu nawigacji (czysty HTML5 bez JS) -->
     <details class="floating-nav notranslate" translate="no">
@@ -197,22 +159,9 @@
             </div>
             <div class="floating-nav-section">
                 <div class="floating-nav-section-title">Projekty zewnętrzne</div>
-                <a href="https://tx2.emo-changeling.xyz/" class="floating-nav-link" rel="sponsored nofollow">TX2 Unofficial</a>
+                <a href="https://tx2.emo-changeling.xyz/pl/" class="floating-nav-link" rel="sponsored nofollow">TX2 Unofficial</a>
             </div>
         </div>
     </details>
-
-    <!-- Skrypt zapisu preferencji językowej -->
-    <script>
-    function setSiteLang(l) {
-        try {
-            var d = new Date();
-            d.setTime(d.getTime() + 31536000000);
-            var dom = location.hostname.indexOf('emo-changeling.xyz') !== -1 ? '; domain=.emo-changeling.xyz' : '';
-            document.cookie = 'site_lang=' + l + '; expires=' + d.toUTCString() + '; path=/' + dom + '; SameSite=Lax';
-            if (window.localStorage) localStorage.setItem('site_lang', l);
-        } catch(e) {}
-    }
-    </script>
 </body>
 </html>

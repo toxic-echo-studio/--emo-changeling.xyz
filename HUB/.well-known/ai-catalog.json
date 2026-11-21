@@ -1,27 +1,81 @@
 {
   "specVersion": "1.0",
+  "name": "The Reverse Emo Changeling - Central Hub",
+  "description": "Central navigation hub and link directory connecting all subdomains and official channels of The Reverse Emo Changeling project.",
+  "version": "3.3.0",
+  "lastUpdated": "2026-11-21",
+  "url": "https://hub.emo-changeling.xyz/",
+  "languages": [
+    "pl",
+    "en"
+  ],
+  "architecture": {
+    "rendering": "Static bilingual HTML5/CSS3 documents",
+    "scripts": [],
+    "storage": "No cookies and no localStorage"
+  },
   "host": {
     "displayName": "The Reverse Emo Changeling"
   },
+  "credits": {
+    "frontendCreator": "Nico Łach (Zebroid, Vikasiek, Wiktor, Marina)",
+    "backendDirector": "Mighn Taghor",
+    "infrastructure": "Toxic Echo Studio (https://toxic-echo.studio/)"
+  },
+  "contacts": [
+    "management@emo-changeling.xyz",
+    "admin@toxic-echo.studio"
+  ],
+  "sitemaps": [
+    "https://hub.emo-changeling.xyz/sitemap.xml"
+  ],
+  "pages": [
+    {
+      "key": "home",
+      "pl_url": "https://hub.emo-changeling.xyz/",
+      "en_url": "https://hub.emo-changeling.xyz/en/",
+      "pl_title": "HUB | The Reverse Emo Changeling",
+      "en_title": "System Hub (EN) | The Reverse Emo Changeling",
+      "lastModified": "2026-11-21"
+    },
+    {
+      "key": "blackhole",
+      "pl_url": "https://hub.emo-changeling.xyz/pl/blackhole/",
+      "en_url": "https://hub.emo-changeling.xyz/en/blackhole/",
+      "pl_title": "Centrum Galaktyki | HUB | The Reverse Emo Changeling",
+      "en_title": "Center of the Galaxy | HUB | The Reverse Emo Changeling",
+      "lastModified": "2026-11-21"
+    }
+  ],
   "entries": [
     {
-      "identifier": "urn:air:toxic-echo:knowledge:llms-context",
+      "identifier": "urn:air:toxic-echo:hub:llms-context",
       "displayName": "LLMs Context & Knowledge Base",
-      "type": "text/markdown; profile=\"urn:air:agent-skills\"",
+      "type": "text/markdown",
       "url": "https://hub.emo-changeling.xyz/llms.txt",
       "representativeQueries": [
-        "what is emo changeling project",
-        "toxic echo studio information"
+        "what is the reverse emo changeling - central hub",
+        "toxic echo studio overview"
       ]
     },
     {
-      "identifier": "urn:air:toxic-echo:policy:ai-manifest",
+      "identifier": "urn:air:toxic-echo:hub:ai-manifest",
       "displayName": "AI Usage Policy and Permissions",
-      "type": "application/agent-card+json",
+      "type": "application/json",
       "url": "https://hub.emo-changeling.xyz/ai.json",
       "representativeQueries": [
         "content licensing and ai permissions",
-        "creative commons cc by-nd"
+        "creative commons cc by-nd 4.0"
+      ]
+    },
+    {
+      "identifier": "urn:air:toxic-echo:knowledge:main-context",
+      "displayName": "Main Project Overview",
+      "type": "text/markdown",
+      "url": "https://emo-changeling.xyz/llms.txt",
+      "representativeQueries": [
+        "what is the reverse emo changeling project",
+        "nico lach did system structure"
       ]
     }
   ]

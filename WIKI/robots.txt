@@ -5,7 +5,6 @@
 # AI Declaration: This website contains no AI-generated content (text or graphics).
 
 User-agent: *
-Content-Signal: search=yes, ai-train=yes, ai-input=yes
 Allow: /
 
 # Global AI & Search Preferences
