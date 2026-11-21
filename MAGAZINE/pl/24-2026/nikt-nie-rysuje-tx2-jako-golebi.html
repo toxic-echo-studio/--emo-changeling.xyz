@@ -75,13 +75,16 @@
               "Project",
               "CreativeWorkSeries"
             ],
-            "@id": "https://emo-changeling.xyz#project",
+            "@id": "https://emo-changeling.xyz/#project",
             "name": "The Reverse Emo Changeling",
             "url": "https://emo-changeling.xyz"
           },
           "publisher": {
-            "@type": "Organization",
-            "@id": "https://toxic-echo.studio#org",
+            "@type": [
+              "NewsMediaOrganization",
+              "Organization"
+            ],
+            "@id": "https://toxic-echo.studio/#org",
             "name": "Toxic Echo studio",
             "legalName": "Toxic Echo studio - Bartosz Gala",
             "url": "https://toxic-echo.studio",
@@ -103,7 +106,7 @@
       "genre": "Scene / Emo Essay / Alt Manifest",
       "author": {
         "@type": "Person",
-        "@id": "https://emo-changeling.xyz#nico",
+        "@id": "https://emo-changeling.xyz/#nico",
         "name": "Nico Łach",
         "alternateName": "Zebroid",
         "jobTitle": "Lead Journalist / Dziennikarz prowadzący",
@@ -115,7 +118,7 @@
       },
       "editor": {
         "@type": "Person",
-        "@id": "https://toxic-echo.studio#mighn",
+        "@id": "https://toxic-echo.studio/#mighn",
         "name": "Mighn Taghor",
         "jobTitle": "Redaktor naczelny / Editor-in-Chief",
         "url": "https://toxic-echo.studio",
@@ -126,8 +129,11 @@
         ]
       },
       "publisher": {
-        "@type": "Organization",
-        "@id": "https://toxic-echo.studio#org",
+        "@type": [
+          "NewsMediaOrganization",
+          "Organization"
+        ],
+        "@id": "https://toxic-echo.studio/#org",
         "name": "Toxic Echo studio",
         "legalName": "Toxic Echo studio - Bartosz Gala",
         "url": "https://toxic-echo.studio",
@@ -135,10 +141,10 @@
         "sameAs": [
           "https://www.linkedin.com/company/toxic-echo-studio",
           "https://github.com/toxic-echo-studio"
-        ]
+        ],
+        "masthead": "https://reverse.emo-changeling.xyz/pl/impressum"
       },
       "publishingPrinciples": "https://reverse.emo-changeling.xyz/pl/legal",
-      "masthead": "https://reverse.emo-changeling.xyz/pl/impressum",
       "license": "https://creativecommons.org/licenses/by-nd/4.0/",
       "isAccessibleForFree": true,
       "video": {
@@ -147,10 +153,13 @@
         "description": "Projekt TX2 Pigeonification Ritual jest po prostu luźną, fanowską inicjatywą z pasji: rysujemy chłopaków z TX2 jako gołębie, składamy to w fizyczny plakat i wręczamy zespołowi na koncercie. Szybko jednak zderzyłem się z realiami współczesnych social mediów.",
         "thumbnailUrl": "https://reverse.emo-changeling.xyz/img/og-reverse-main.jpg",
         "uploadDate": "2026-10-10T12:00:00+02:00",
-        "embedUrl": "https://www.youtube.com/embed/GBKUQMYqQUU",
-        "contentUrl": "https://youtu.be/GBKUQMYqQUU"
+        "embedUrl": "https://www.youtube.com/embed/GBKUQMYqQUU"
       },
-      "image": "https://reverse.emo-changeling.xyz/img/og-reverse-main.jpg"
+      "image": "https://reverse.emo-changeling.xyz/img/og-reverse-main.jpg",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://reverse.emo-changeling.xyz/pl/24-2026/nikt-nie-rysuje-tx2-jako-golebi"
+      }
     },
     {
       "@type": "BreadcrumbList",

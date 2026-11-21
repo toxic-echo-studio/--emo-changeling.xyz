@@ -95,6 +95,14 @@ def convert_to_webp(src, dest, quality=85):
     print(f"Converted {os.path.basename(src)} -> {os.path.basename(dest)}")
     gpg_sign_file(dest)
 
+def create_thumbnail_webp(src, dest, max_size=600, quality=80):
+    os.makedirs(os.path.dirname(dest), exist_ok=True)
+    with Image.open(src) as img:
+        img.thumbnail((max_size, max_size), Image.Resampling.LANCZOS)
+        img.save(dest, "WEBP", quality=quality, method=6)
+    print(f"Created thumbnail {os.path.basename(src)} -> {os.path.basename(dest)}")
+    gpg_sign_file(dest)
+
 def clean_description(html_content, target_img_dir_url):
     # Strip Polish comment from Emo shrimp gallery helper
     html_content = re.sub(r'\[Dwie grafiki[\s\S]*?$', '', html_content)
@@ -201,16 +209,15 @@ def process_folder(folder_name, next_ids):
         full_dest = os.path.join(target_dir, "full.webp")
         
         if os.path.exists(image_jpg):
-            convert_to_webp(image_jpg, thumb_dest)
-            shutil.copy(thumb_dest, full_dest)
-            gpg_sign_file(full_dest)
+            convert_to_webp(image_jpg, full_dest, quality=85)
+            create_thumbnail_webp(image_jpg, thumb_dest, max_size=600, quality=80)
         else:
             print(f"Error: no image.jpg in {folder_name} and no media files.")
             return None
             
         desc_url = None
         if has_description:
-            desc_url = f"/graphics/{category}/{next_id}/opis.html"
+            desc_url = f"/graphics/{category}/{next_id}/opis"
             clean_html = clean_description(description_html, f"/graphics/{category}/{next_id}")
             opis_dest = os.path.join(target_dir, "opis.html")
             with open(opis_dest, 'w', encoding='utf-8', newline='\n') as f:
@@ -244,9 +251,9 @@ def process_folder(folder_name, next_ids):
         
         # 1. Generate thumbnail
         if os.path.exists(image_jpg):
-            convert_to_webp(image_jpg, thumb_dest)
+            create_thumbnail_webp(image_jpg, thumb_dest, max_size=600, quality=80)
         else:
-            convert_to_webp(src_media, thumb_dest)
+            create_thumbnail_webp(src_media, thumb_dest, max_size=600, quality=80)
             
         # 2. Generate full (lossy webp 85% compression)
         convert_to_webp(src_media, full_dest, quality=85)
@@ -267,7 +274,7 @@ def process_folder(folder_name, next_ids):
             
         desc_url = None
         if has_description:
-            desc_url = f"/graphics/{category}/{next_id}/opis.html"
+            desc_url = f"/graphics/{category}/{next_id}/opis"
             clean_html = clean_description(description_html, f"/graphics/{category}/{next_id}")
             opis_dest = os.path.join(target_dir, "opis.html")
             with open(opis_dest, 'w', encoding='utf-8', newline='\n') as f:
@@ -308,9 +315,9 @@ def process_folder(folder_name, next_ids):
             
             # Thumbnail
             if i == 0 and os.path.exists(image_jpg):
-                convert_to_webp(image_jpg, thumb_dest)
+                create_thumbnail_webp(image_jpg, thumb_dest, max_size=600, quality=80)
             else:
-                convert_to_webp(src_media, thumb_dest)
+                create_thumbnail_webp(src_media, thumb_dest, max_size=600, quality=80)
                 
             # Full webp lossy 85%
             convert_to_webp(src_media, full_dest, quality=85)
@@ -348,7 +355,7 @@ def process_folder(folder_name, next_ids):
             
             desc_url = None
             if has_description:
-                desc_url = f"/graphics/{category}/{sub_id}/opis.html"
+                desc_url = f"/graphics/{category}/{sub_id}/opis"
                 clean_html = clean_description(description_html, f"/graphics/{category}/{sub_id}")
                 opis_dest = os.path.join(target_dir, "opis.html")
                 with open(opis_dest, 'w', encoding='utf-8', newline='\n') as f:
@@ -490,7 +497,7 @@ def render_ssr_cards_html(items):
     for item in items:
         item_id = item.get("id", "")
         raw_title = item.get("title") or ""
-        clean_title = re.sub(r'^Gołąb\s+#\d+:\s*', '', raw_title, flags=re.IGNORECASE)
+        clean_title = re.sub(r'^(?:Gołąb|Pigeon)\s+#\d+:\s*', '', raw_title, flags=re.IGNORECASE)
         alt_esc = html_escape(clean_title, quote=False).replace('"', '&quot;')
         caption_esc = html_escape(clean_title, quote=False)
         thumb_url = item.get("thumb") or ""
@@ -554,7 +561,7 @@ def update_category_jsonld(html, items, is_en, category):
     list_elements = []
     for pos, item in enumerate(items, start=1):
         raw_title = item.get("title") or ""
-        clean_name = re.sub(r'^Gołąb\s+#\d+:\s*', '', raw_title, flags=re.IGNORECASE)
+        clean_name = re.sub(r'^(?:Gołąb|Pigeon)\s+#\d+:\s*', '', raw_title, flags=re.IGNORECASE)
         thumb_path = item.get("thumb") or ""
         if item.get("images"):
             full_path = item["images"][0].get("full") or thumb_path
@@ -604,6 +611,22 @@ def update_category_jsonld(html, items, is_en, category):
             target_node["mainEntity"] = main_entity
         main_entity["numberOfItems"] = len(list_elements)
         main_entity["itemListElement"] = list_elements
+
+        if isinstance(data, dict) and isinstance(data.get("@graph"), list):
+            is_part_of = target_node.get("isPartOf")
+            parent_id = is_part_of.get("@id") if isinstance(is_part_of, dict) else None
+            if isinstance(parent_id, str) and parent_id:
+                has_parent = any(
+                    isinstance(node, dict) and node.get("@id") == parent_id
+                    for node in data["@graph"]
+                )
+                if not has_parent:
+                    data["@graph"].append({
+                        "@type": ["CollectionPage", "ImageGallery"],
+                        "@id": parent_id,
+                        "url": parent_id.split("#")[0],
+                        "name": "The Reverse Emo Changeling Gallery" if is_en else "Galeria The Reverse Emo Changeling"
+                    })
 
     formatted_json = json.dumps(data, indent=2, ensure_ascii=False)
     indented_json = "\n".join(f"        {line}" for line in formatted_json.splitlines())

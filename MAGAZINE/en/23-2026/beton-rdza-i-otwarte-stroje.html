@@ -75,13 +75,16 @@
               "Project",
               "CreativeWorkSeries"
             ],
-            "@id": "https://emo-changeling.xyz#project",
+            "@id": "https://emo-changeling.xyz/#project",
             "name": "The Reverse Emo Changeling",
             "url": "https://emo-changeling.xyz"
           },
           "publisher": {
-            "@type": "Organization",
-            "@id": "https://toxic-echo.studio#org",
+            "@type": [
+              "NewsMediaOrganization",
+              "Organization"
+            ],
+            "@id": "https://toxic-echo.studio/#org",
             "name": "Toxic Echo studio",
             "legalName": "Toxic Echo studio - Bartosz Gala",
             "url": "https://toxic-echo.studio",
@@ -103,7 +106,7 @@
       "genre": "Scene / Emo Essay / Subcultural Column",
       "author": {
         "@type": "Person",
-        "@id": "https://toxic-echo.studio#mighn",
+        "@id": "https://toxic-echo.studio/#mighn",
         "name": "Mighn Taghor",
         "jobTitle": "Editor-in-Chief",
         "url": "https://reverse.emo-changeling.xyz/en/team",
@@ -115,7 +118,7 @@
       },
       "editor": {
         "@type": "Person",
-        "@id": "https://toxic-echo.studio#mighn",
+        "@id": "https://toxic-echo.studio/#mighn",
         "name": "Mighn Taghor",
         "jobTitle": "Editor-in-Chief",
         "url": "https://toxic-echo.studio",
@@ -126,8 +129,11 @@
         ]
       },
       "publisher": {
-        "@type": "Organization",
-        "@id": "https://toxic-echo.studio#org",
+        "@type": [
+          "NewsMediaOrganization",
+          "Organization"
+        ],
+        "@id": "https://toxic-echo.studio/#org",
         "name": "Toxic Echo studio",
         "legalName": "Toxic Echo studio - Bartosz Gala",
         "url": "https://toxic-echo.studio",
@@ -135,13 +141,17 @@
         "sameAs": [
           "https://www.linkedin.com/company/toxic-echo-studio",
           "https://github.com/toxic-echo-studio"
-        ]
+        ],
+        "masthead": "https://reverse.emo-changeling.xyz/en/impressum"
       },
       "publishingPrinciples": "https://reverse.emo-changeling.xyz/en/legal",
-      "masthead": "https://reverse.emo-changeling.xyz/en/impressum",
       "license": "https://creativecommons.org/licenses/by-nd/4.0/",
       "isAccessibleForFree": true,
-      "image": "https://reverse.emo-changeling.xyz/img/og-reverse-main.jpg"
+      "image": "https://reverse.emo-changeling.xyz/img/og-reverse-main.jpg",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://reverse.emo-changeling.xyz/en/23-2026/beton-rdza-i-otwarte-stroje"
+      }
     },
     {
       "@type": "BreadcrumbList",

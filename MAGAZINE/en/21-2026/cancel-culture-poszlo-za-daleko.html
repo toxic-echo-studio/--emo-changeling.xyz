@@ -75,13 +75,16 @@
               "Project",
               "CreativeWorkSeries"
             ],
-            "@id": "https://emo-changeling.xyz#project",
+            "@id": "https://emo-changeling.xyz/#project",
             "name": "The Reverse Emo Changeling",
             "url": "https://emo-changeling.xyz"
           },
           "publisher": {
-            "@type": "Organization",
-            "@id": "https://toxic-echo.studio#org",
+            "@type": [
+              "NewsMediaOrganization",
+              "Organization"
+            ],
+            "@id": "https://toxic-echo.studio/#org",
             "name": "Toxic Echo studio",
             "legalName": "Toxic Echo studio - Bartosz Gala",
             "url": "https://toxic-echo.studio",
@@ -103,7 +106,7 @@
       "genre": "Rant",
       "author": {
         "@type": "Person",
-        "@id": "https://emo-changeling.xyz#nico",
+        "@id": "https://emo-changeling.xyz/#nico",
         "name": "Nico Łach",
         "alternateName": "Zebroid",
         "jobTitle": "Lead Journalist / Dziennikarz prowadzący",
@@ -115,7 +118,7 @@
       },
       "editor": {
         "@type": "Person",
-        "@id": "https://toxic-echo.studio#mighn",
+        "@id": "https://toxic-echo.studio/#mighn",
         "name": "Mighn Taghor",
         "jobTitle": "Redaktor naczelny / Editor-in-Chief",
         "url": "https://toxic-echo.studio",
@@ -126,8 +129,11 @@
         ]
       },
       "publisher": {
-        "@type": "Organization",
-        "@id": "https://toxic-echo.studio#org",
+        "@type": [
+          "NewsMediaOrganization",
+          "Organization"
+        ],
+        "@id": "https://toxic-echo.studio/#org",
         "name": "Toxic Echo studio",
         "legalName": "Toxic Echo studio - Bartosz Gala",
         "url": "https://toxic-echo.studio",
@@ -135,10 +141,10 @@
         "sameAs": [
           "https://www.linkedin.com/company/toxic-echo-studio",
           "https://github.com/toxic-echo-studio"
-        ]
+        ],
+        "masthead": "https://reverse.emo-changeling.xyz/en/impressum"
       },
       "publishingPrinciples": "https://reverse.emo-changeling.xyz/en/legal",
-      "masthead": "https://reverse.emo-changeling.xyz/en/impressum",
       "license": "https://creativecommons.org/licenses/by-nd/4.0/",
       "isAccessibleForFree": true,
       "video": {
@@ -147,10 +153,13 @@
         "description": "Scroll through your feed for five minutes and it feels like everyone completely tossed their critical thinking in the trash, turning into a rabid mob just waiting for the next target to rip apart. Everyone online is suddenly cosplaying as a moral compass, turning nuclear-level accusations into the internet’s favorite bloodsport.",
         "thumbnailUrl": "https://reverse.emo-changeling.xyz/img/og-reverse-main.jpg",
         "uploadDate": "2026-09-17T12:00:00+02:00",
-        "embedUrl": "https://www.youtube.com/embed/0PzBCapxbn8",
-        "contentUrl": "https://youtu.be/0PzBCapxbn8"
+        "embedUrl": "https://www.youtube.com/embed/0PzBCapxbn8"
       },
-      "image": "https://reverse.emo-changeling.xyz/img/og-reverse-main.jpg"
+      "image": "https://reverse.emo-changeling.xyz/img/og-reverse-main.jpg",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://reverse.emo-changeling.xyz/en/21-2026/cancel-culture-poszlo-za-daleko"
+      }
     },
     {
       "@type": "BreadcrumbList",

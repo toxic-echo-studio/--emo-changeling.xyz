@@ -19,14 +19,22 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 2
+          fetch-depth: 0
 
       - name: Submit changed MAIN URLs to IndexNow
         shell: bash
         run: |
           set -euo pipefail
 
-          if git rev-parse --verify HEAD~1 >/dev/null 2>&1; then
+          BEFORE="${{ github.event.before }}"
+          AFTER="${{ github.sha }}"
+
+          if [ "${{ github.event_name }}" = "push" ] \
+            && [ -n "$BEFORE" ] \
+            && [ "$BEFORE" != "0000000000000000000000000000000000000000" ] \
+            && git cat-file -e "${BEFORE}^{commit}" 2>/dev/null; then
+            changed_files=$(git -c core.quotepath=false diff --name-only --diff-filter=AM "$BEFORE" "$AFTER" -- 'MAIN/*.html' 'MAIN/**/*.html')
+          elif git rev-parse --verify HEAD~1 >/dev/null 2>&1; then
             changed_files=$(git -c core.quotepath=false diff --name-only --diff-filter=AM HEAD~1 HEAD -- 'MAIN/*.html' 'MAIN/**/*.html')
           else
             changed_files=$(git -c core.quotepath=false diff-tree --no-commit-id --name-only -r --diff-filter=AM HEAD -- 'MAIN/*.html' 'MAIN/**/*.html')
@@ -46,7 +54,7 @@ jobs:
             elif [[ "$rel" == */index.html ]]; then
               path="/${rel%index.html}"
             else
-              path="/${rel%.html}/"
+              path="/${rel%.html}"
             fi
 
             urls+=("https://emo-changeling.xyz${path}")

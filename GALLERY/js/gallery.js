@@ -24,6 +24,7 @@
 
     const MIN_ZOOM = 1.0;
     const MAX_ZOOM = 6.0;
+    const BLANK_GIF = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
 
     const galleryMap = new Map();
     let galleryItems = [];
@@ -72,7 +73,7 @@
     }
 
     function cleanArtworkTitle(title) {
-        return String(title || '').replace(/^Go\u0142\u0105b\s+#\d+:\s*/i, '');
+        return String(title || '').replace(/^(?:Go\u0142\u0105b|Pigeon)\s+#\d+:\s*/i, '');
     }
 
     function renderCardsFallback() {
@@ -168,7 +169,7 @@
             }
         } else {
             downloadBtn.classList.remove('is-inline-block');
-            downloadBtn.href = '';
+            downloadBtn.removeAttribute('href');
             downloadBtn.removeAttribute('data-asc');
         }
     }
@@ -390,7 +391,7 @@
         }
         if (zoomImg) {
             zoomImg.style.transform = '';
-            zoomImg.src = '';
+            zoomImg.src = BLANK_GIF;
         }
     }
 
@@ -674,7 +675,7 @@
         if (modalContent) modalContent.classList.remove('rotated');
         if (downloadBtn) {
             downloadBtn.classList.remove('is-inline-block');
-            downloadBtn.href = '';
+            downloadBtn.removeAttribute('href');
             downloadBtn.removeAttribute('data-asc');
         }
         if (lastFocusedCard && typeof lastFocusedCard.focus === 'function') {

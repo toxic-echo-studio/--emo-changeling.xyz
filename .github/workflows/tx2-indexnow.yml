@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - 'TX2/**'
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -18,14 +19,19 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 2
+          fetch-depth: 0
 
       - name: Submit changed TX2 URLs to IndexNow
         shell: bash
         run: |
           set -euo pipefail
 
-          if git rev-parse --verify HEAD~1 >/dev/null 2>&1; then
+          BEFORE="${{ github.event.before }}"
+          AFTER="${{ github.sha }}"
+
+          if [ "${{ github.event_name }}" = "push" ] && [ -n "$BEFORE" ] && [ "$BEFORE" != "0000000000000000000000000000000000000000" ] && git cat-file -e "${BEFORE}^{commit}" 2>/dev/null; then
+            changed_files=$(git -c core.quotepath=false diff --name-only --diff-filter=AM "$BEFORE" "$AFTER" -- 'TX2/*.html' 'TX2/**/*.html')
+          elif git rev-parse --verify HEAD~1 >/dev/null 2>&1; then
             changed_files=$(git -c core.quotepath=false diff --name-only --diff-filter=AM HEAD~1 HEAD -- 'TX2/*.html' 'TX2/**/*.html')
           else
             changed_files=$(git -c core.quotepath=false diff-tree --no-commit-id --name-only -r --diff-filter=AM HEAD -- 'TX2/*.html' 'TX2/**/*.html')

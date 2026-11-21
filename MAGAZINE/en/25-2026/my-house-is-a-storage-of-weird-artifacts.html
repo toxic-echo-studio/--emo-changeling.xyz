@@ -75,13 +75,16 @@
               "Project",
               "CreativeWorkSeries"
             ],
-            "@id": "https://emo-changeling.xyz#project",
+            "@id": "https://emo-changeling.xyz/#project",
             "name": "The Reverse Emo Changeling",
             "url": "https://emo-changeling.xyz"
           },
           "publisher": {
-            "@type": "Organization",
-            "@id": "https://toxic-echo.studio#org",
+            "@type": [
+              "NewsMediaOrganization",
+              "Organization"
+            ],
+            "@id": "https://toxic-echo.studio/#org",
             "name": "Toxic Echo studio",
             "legalName": "Toxic Echo studio - Bartosz Gala",
             "url": "https://toxic-echo.studio",
@@ -103,7 +106,7 @@
       "genre": "Neurodivergent Infodump / Personal Lore",
       "author": {
         "@type": "Person",
-        "@id": "https://emo-changeling.xyz#nico",
+        "@id": "https://emo-changeling.xyz/#nico",
         "name": "Nico Łach",
         "alternateName": "Zebroid",
         "jobTitle": "Lead Journalist / Dziennikarz prowadzący",
@@ -115,7 +118,7 @@
       },
       "editor": {
         "@type": "Person",
-        "@id": "https://toxic-echo.studio#mighn",
+        "@id": "https://toxic-echo.studio/#mighn",
         "name": "Mighn Taghor",
         "jobTitle": "Redaktor naczelny / Editor-in-Chief",
         "url": "https://toxic-echo.studio",
@@ -126,8 +129,11 @@
         ]
       },
       "publisher": {
-        "@type": "Organization",
-        "@id": "https://toxic-echo.studio#org",
+        "@type": [
+          "NewsMediaOrganization",
+          "Organization"
+        ],
+        "@id": "https://toxic-echo.studio/#org",
         "name": "Toxic Echo studio",
         "legalName": "Toxic Echo studio - Bartosz Gala",
         "url": "https://toxic-echo.studio",
@@ -135,10 +141,10 @@
         "sameAs": [
           "https://www.linkedin.com/company/toxic-echo-studio",
           "https://github.com/toxic-echo-studio"
-        ]
+        ],
+        "masthead": "https://reverse.emo-changeling.xyz/en/impressum"
       },
       "publishingPrinciples": "https://reverse.emo-changeling.xyz/en/legal",
-      "masthead": "https://reverse.emo-changeling.xyz/en/impressum",
       "license": "https://creativecommons.org/licenses/by-nd/4.0/",
       "isAccessibleForFree": true,
       "video": {
@@ -147,10 +153,13 @@
         "description": "If an average neurotypical normie walked straight off the street into my room or down into our basement, their brain would probably suffer an instantaneous blue screen. Through the eyes of someone raised on sterile flat-pack furniture catalogs and minimalist decluttering tutorials, my personal space looks like an unmitigated disaster zone.",
         "thumbnailUrl": "https://reverse.emo-changeling.xyz/img/og-reverse-main.jpg",
         "uploadDate": "2026-10-31T12:00:00+01:00",
-        "embedUrl": "https://www.youtube.com/embed/njfqTwvoWf4",
-        "contentUrl": "https://youtu.be/njfqTwvoWf4"
+        "embedUrl": "https://www.youtube.com/embed/njfqTwvoWf4"
       },
-      "image": "https://reverse.emo-changeling.xyz/img/og-reverse-main.jpg"
+      "image": "https://reverse.emo-changeling.xyz/img/og-reverse-main.jpg",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://reverse.emo-changeling.xyz/en/25-2026/my-house-is-a-storage-of-weird-artifacts"
+      }
     },
     {
       "@type": "BreadcrumbList",
