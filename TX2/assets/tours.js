@@ -79,6 +79,12 @@
             }, 30);
         }
 
+        window.addEventListener('pageshow', function (event) {
+            if (event.persisted) {
+                window.location.reload();
+            }
+        });
+
         document.addEventListener('click', function (event) {
             const link = event.target.closest('a[href]');
             if (!link) {
@@ -86,9 +92,12 @@
             }
 
             const href = link.getAttribute('href') || '';
-            if (href === '#upcoming' || /(?:^|\/)(?:pl\/)?tours(?:\.html)?#upcoming$/.test(href)) {
+            if (href === '#upcoming') {
                 event.preventDefault();
                 requestAnimationFrame(centerNextShow);
+            } else if (/(?:^|\/)(?:pl\/)?tours(?:\.html)?#upcoming$/.test(href)) {
+                event.preventDefault();
+                window.location.reload();
             }
         });
     }
