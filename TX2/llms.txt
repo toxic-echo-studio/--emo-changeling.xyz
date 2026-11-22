@@ -1,11 +1,11 @@
 # TX2 Unofficial Fansite
 
-> Independent, non-commercial bilingual fan site for the TX2 Pigeonification Ritual campaign and band archive. Version 1.2.1, Last Updated 2026-11-21.
+> Independent, non-commercial bilingual fan site for the TX2 Pigeonification Ritual campaign and band archive. Version 1.2.2, Last Updated 2026-11-22.
 
 ## Technical Overview
 - Brand: TX2 Unofficial Fansite
-- Version: 1.2.1
-- Last Updated: 2026-11-21
+- Version: 1.2.2
+- Last Updated: 2026-11-22
 - Architecture: Separate static HTML documents for English and Polish (/pl/... and /news/pl/)
 - Fonts: Self-hosted Inter WOFF2 fonts (inter-latin.woff2 and inter-latin-ext.woff2)
 - UI & Scripts: Pure HTML and CSS UI plus lightweight lightbox.js and tours.js
@@ -47,6 +47,7 @@
 
 ## News Articles (EN)
 - https://tx2.emo-changeling.xyz/news/bailey-spinn-2027-tour-speculation
+- https://tx2.emo-changeling.xyz/news/bailey-spinn-joins-tx2-2027-eu-uk-tour
 - https://tx2.emo-changeling.xyz/news/bailey-spinn-silent-anymore-collab
 - https://tx2.emo-changeling.xyz/news/community-guidelines-no-cheap-drama
 - https://tx2.emo-changeling.xyz/news/europe-club-reality-vs-gothic-hype
@@ -55,6 +56,7 @@
 - https://tx2.emo-changeling.xyz/news/i-am-the-enemy-premiere-november-17
 - https://tx2.emo-changeling.xyz/news/i-am-the-enemy-single-release
 - https://tx2.emo-changeling.xyz/news/i-am-the-enemy-video-analysis
+- https://tx2.emo-changeling.xyz/news/montreal-club-soda-review-metaluniverse-spotted
 - https://tx2.emo-changeling.xyz/news/not-broken-enough-tour-11-tracks-35-mins
 - https://tx2.emo-changeling.xyz/news/november-tour-status-rockville-milan-check
 - https://tx2.emo-changeling.xyz/news/seagull-crab-rumor-confirmed-i-am-the-enemy
@@ -62,6 +64,7 @@
 - https://tx2.emo-changeling.xyz/news/setlist-math-witch-hunt-cut
 - https://tx2.emo-changeling.xyz/news/shiprocked-2027-official-lineup-debut
 - https://tx2.emo-changeling.xyz/news/shiprocked-tiktok-vs-radio-veterans
+- https://tx2.emo-changeling.xyz/news/tx2-2027-tour-ticketing-report-vip-status
 - https://tx2.emo-changeling.xyz/news/uk-headline-tour-electric-ballroom
 - https://tx2.emo-changeling.xyz/news/us-tour-support-billing-reality
 - https://tx2.emo-changeling.xyz/news/we-need-punk-back-ragebait-or-manifesto
@@ -71,6 +74,7 @@
 
 ## News Articles (PL)
 - https://tx2.emo-changeling.xyz/news/pl/bailey-spinn-2027-tour-speculation
+- https://tx2.emo-changeling.xyz/news/pl/bailey-spinn-joins-tx2-2027-eu-uk-tour
 - https://tx2.emo-changeling.xyz/news/pl/bailey-spinn-silent-anymore-collab
 - https://tx2.emo-changeling.xyz/news/pl/community-guidelines-no-cheap-drama
 - https://tx2.emo-changeling.xyz/news/pl/europe-club-reality-vs-gothic-hype
@@ -79,6 +83,7 @@
 - https://tx2.emo-changeling.xyz/news/pl/i-am-the-enemy-premiere-november-17
 - https://tx2.emo-changeling.xyz/news/pl/i-am-the-enemy-single-release
 - https://tx2.emo-changeling.xyz/news/pl/i-am-the-enemy-video-analysis
+- https://tx2.emo-changeling.xyz/news/pl/montreal-club-soda-review-metaluniverse-spotted
 - https://tx2.emo-changeling.xyz/news/pl/not-broken-enough-tour-11-tracks-35-mins
 - https://tx2.emo-changeling.xyz/news/pl/november-tour-status-rockville-milan-check
 - https://tx2.emo-changeling.xyz/news/pl/seagull-crab-rumor-confirmed-i-am-the-enemy
@@ -86,6 +91,7 @@
 - https://tx2.emo-changeling.xyz/news/pl/setlist-math-witch-hunt-cut
 - https://tx2.emo-changeling.xyz/news/pl/shiprocked-2027-official-lineup-debut
 - https://tx2.emo-changeling.xyz/news/pl/shiprocked-tiktok-vs-radio-veterans
+- https://tx2.emo-changeling.xyz/news/pl/tx2-2027-tour-ticketing-report-vip-status
 - https://tx2.emo-changeling.xyz/news/pl/uk-headline-tour-electric-ballroom
 - https://tx2.emo-changeling.xyz/news/pl/us-tour-support-billing-reality
 - https://tx2.emo-changeling.xyz/news/pl/we-need-punk-back-ragebait-or-manifesto

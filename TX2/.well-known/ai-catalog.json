@@ -1,7 +1,7 @@
 {
   "name": "TX2 Unofficial Fansite",
-  "version": "1.2.1",
-  "lastUpdated": "2026-11-21",
+  "version": "1.2.2",
+  "lastUpdated": "2026-11-22",
   "url": "https://tx2.emo-changeling.xyz/",
   "languages": {
     "en": "https://tx2.emo-changeling.xyz/",
@@ -125,6 +125,11 @@
       "pl_url": "https://tx2.emo-changeling.xyz/news/pl/bailey-spinn-2027-tour-speculation"
     },
     {
+      "slug": "bailey-spinn-joins-tx2-2027-eu-uk-tour",
+      "en_url": "https://tx2.emo-changeling.xyz/news/bailey-spinn-joins-tx2-2027-eu-uk-tour",
+      "pl_url": "https://tx2.emo-changeling.xyz/news/pl/bailey-spinn-joins-tx2-2027-eu-uk-tour"
+    },
+    {
       "slug": "bailey-spinn-silent-anymore-collab",
       "en_url": "https://tx2.emo-changeling.xyz/news/bailey-spinn-silent-anymore-collab",
       "pl_url": "https://tx2.emo-changeling.xyz/news/pl/bailey-spinn-silent-anymore-collab"
@@ -165,6 +170,11 @@
       "pl_url": "https://tx2.emo-changeling.xyz/news/pl/i-am-the-enemy-video-analysis"
     },
     {
+      "slug": "montreal-club-soda-review-metaluniverse-spotted",
+      "en_url": "https://tx2.emo-changeling.xyz/news/montreal-club-soda-review-metaluniverse-spotted",
+      "pl_url": "https://tx2.emo-changeling.xyz/news/pl/montreal-club-soda-review-metaluniverse-spotted"
+    },
+    {
       "slug": "not-broken-enough-tour-11-tracks-35-mins",
       "en_url": "https://tx2.emo-changeling.xyz/news/not-broken-enough-tour-11-tracks-35-mins",
       "pl_url": "https://tx2.emo-changeling.xyz/news/pl/not-broken-enough-tour-11-tracks-35-mins"
@@ -198,6 +208,11 @@
       "slug": "shiprocked-tiktok-vs-radio-veterans",
       "en_url": "https://tx2.emo-changeling.xyz/news/shiprocked-tiktok-vs-radio-veterans",
       "pl_url": "https://tx2.emo-changeling.xyz/news/pl/shiprocked-tiktok-vs-radio-veterans"
+    },
+    {
+      "slug": "tx2-2027-tour-ticketing-report-vip-status",
+      "en_url": "https://tx2.emo-changeling.xyz/news/tx2-2027-tour-ticketing-report-vip-status",
+      "pl_url": "https://tx2.emo-changeling.xyz/news/pl/tx2-2027-tour-ticketing-report-vip-status"
     },
     {
       "slug": "uk-headline-tour-electric-ballroom",

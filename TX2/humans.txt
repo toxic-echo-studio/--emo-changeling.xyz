@@ -10,8 +10,8 @@ Typography: Self-hosted Inter WOFF2 (inter-latin.woff2, inter-latin-ext.woff2)
 Fan Art Contributors: J0n, @kai_tx2, Lena, glam/ray_TX2.fan, Kit Colson
 
 /* SITE */
-Version: 1.2.1
-Last Updated: 2026-11-21
+Version: 1.2.2
+Last Updated: 2026-11-22
 Languages: English (EN), Polish (PL)
 Architecture: Pure static HTML and CSS with lightweight lightbox.js and tours.js
 Privacy: No cookies, no sessionStorage, no third-party font CDNs

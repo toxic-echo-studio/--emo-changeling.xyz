@@ -1,6 +1,6 @@
 TX2 Unofficial Fansite - Privacy Notice
-Version: 1.2.1
-Last Updated: 2026-11-21
+Version: 1.2.2
+Last Updated: 2026-11-22
 
 Project: TX2 Unofficial Fansite ("TX2 Pigeonification Ritual")
 Co-creators: Nico Łach (Zebroid) and Mighn Taghor

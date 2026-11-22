@@ -2,6 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://tx2.emo-changeling.xyz/news/tx2-2027-tour-ticketing-report-vip-status</loc>
+    <news:news>
+      <news:publication>
+        <news:name>TX2 Unofficial Fansite</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-22T12:00:00+00:00</news:publication_date>
+      <news:title>Race Against the Clock or Ticketing Smoke &amp; Mirrors? What’s Actually Disappearing Ahead of TX2’s 2027 Tour</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://tx2.emo-changeling.xyz/news/pl/tx2-2027-tour-ticketing-report-vip-status</loc>
+    <news:news>
+      <news:publication>
+        <news:name>TX2 Unofficial Fansite</news:name>
+        <news:language>pl</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-22T12:00:00+00:00</news:publication_date>
+      <news:title>Wyścig z czasem czy ściema bileterii? Co naprawdę znika przed trasą TX2 2027</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://tx2.emo-changeling.xyz/news/montreal-club-soda-review-metaluniverse-spotted</loc>
+    <news:news>
+      <news:publication>
+        <news:name>TX2 Unofficial Fansite</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-22T12:00:00+00:00</news:publication_date>
+      <news:title>Found Online: Even Montreal Skeptics Couldn’t Look Away (And Yes, Part of the Crowd Bounced Right After TX2)</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://tx2.emo-changeling.xyz/news/pl/montreal-club-soda-review-metaluniverse-spotted</loc>
+    <news:news>
+      <news:publication>
+        <news:name>TX2 Unofficial Fansite</news:name>
+        <news:language>pl</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-22T12:00:00+00:00</news:publication_date>
+      <news:title>Znalezione w sieci: Nawet sceptycy z Montrealu nie mogli oderwać wzroku (i tak, część sali wyszła zaraz po TX2)</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://tx2.emo-changeling.xyz/news/bailey-spinn-joins-tx2-2027-eu-uk-tour</loc>
     <news:news>
       <news:publication>
